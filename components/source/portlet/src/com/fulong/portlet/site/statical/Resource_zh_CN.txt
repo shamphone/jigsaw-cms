@@ -1,0 +1,6 @@
+#/site/portlet/statical/edit.jsp
+
+com.fulong.site.portlet.statical.edit.option0.baseSet=基本设置
+com.fulong.site.portlet.statical.edit.pageSegment=页面片段
+com.fulong.site.portlet.statical.edit.toolbar.submit.save=保存
+com.fulong.site.portlet.statical.edit.toolbar.button.cancel=取消

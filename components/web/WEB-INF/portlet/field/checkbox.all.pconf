@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">全选checkbox占位符使用在表格重复器占位符当中使用，用于全部选择或取消全部选择页面中的所有checkbox控件，无需配置。</description>
+		<portlet-name>checkboxAllButton</portlet-name>
+		<display-name xml:lang="zh">全选checkbox占位符</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+		<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/field/checkbox.all.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.field.checkbox.all.Resource</resource-bundle>
+		<portlet-preferences>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

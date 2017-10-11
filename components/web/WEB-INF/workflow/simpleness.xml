@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="emptyForm" type="com.fulong.common.PagerForm"/>
+    <form-bean name="attrMatchForm" type="com.fulong.repository.form.AttrMatchForm"/>
+  </form-beans>
+  <global-forwards>
+    <forward name="login" path="/logon.jsp"/>
+    <forward name="error" path="/common/attention.jsp"/>
+    <forward name="forbidden" path="/common/forbidden.jsp"/>
+  </global-forwards>
+  <action-mappings type="com.fulong.longcon.workflow.impl.WorkflowActionMapping">
+    <!-- 关于activity的配置-->
+    <action path="/edit" type="com.fulong.repository.activity.EditSimpleActivity" scope="request">
+      <set-property property="name" value="修改"/>
+      <set-property property="multiple" value="false"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../editContent.jsp"/>
+      <forward name="noSelection" path="/../jsp1.jsp"/>
+    </action>
+    <action path="/create" type="com.fulong.repository.activity.CreateSimpleActivity" scope="request">
+      <set-property property="name" value="创建"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <forward name="success" path="/../editContent.jsp"/>
+      <forward name="nonpro" path="/../nonpro.jsp" />
+      <forward name="no.quota" path="/../noQuota.jsp"/>
+    </action>
+    <action path="/delete" type="com.fulong.repository.activity.DeleteContentConfirmActivity" scope="request">
+      <set-property property="name" value="删除"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../deleteContentConfirm.jsp"/>
+      <forward name="noSelection" path="/../jsp1.jsp"/>
+    </action>
+    <action path="/send" type="com.fulong.repository.activity.SendContentActivity" scope="request">
+      <set-property property="name" value="发送"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../sendContent.jsp"/>
+      <forward name="noSelection" path="/../jsp1.jsp"/>
+    </action>
+    <action path="/download" type="com.fulong.repository.activity.DownloadContentActivity" scope="request">
+      <set-property property="name" value="接收"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="false"/>
+      <forward name="success" path="/../downloadContent.jsp"/>
+    </action>
+    <action path="/recommand" type="com.fulong.repository.activity.RecommandContentActivity" scope="request">
+      <set-property property="name" value="推荐"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../recommandContent.jsp"/>
+    </action>
+    <action path="/copy" type="com.fulong.repository.activity.CopyContentActivity" scope="request">
+      <set-property property="name" value="复制"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../copyContent.jsp"/>
+      <forward name="noSelection" path="/../jsp1.jsp"/>
+    </action>
+    <action path="/move" type="com.fulong.repository.activity.MoveContentActivity" scope="request">
+      <set-property property="name" value="移动"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../moveContent.jsp"/>
+      <forward name="noSelection" path="/../jsp1.jsp"/>
+    </action>
+    <!-- 关于Transition的配置-->
+    <action name="emptyForm" path="/save" type="com.fulong.repository.transition.SaveSimpleTransition" scope="request">
+      <set-property property="name" value="提交"/>
+      <set-property property="fromID" value="create"/>
+      <forward name="success" path="/../createSuccess.jsp?contentID={0}" redirect="true"/>
+       <forward name="failed" path="/../datadouble.jsp" />
+    </action>
+    <action name="emptyForm" path="/editSave" type="com.fulong.repository.transition.SaveSimpleTransition" scope="request">
+      <set-property property="name" value="提交"/>
+      <set-property property="fromID" value="edit"/>
+      <forward name="success" path="/../createSuccess.jsp?contentID={0}" redirect="true"/>
+       <forward name="failed" path="/../datadouble.jsp" />
+    </action>
+    <action name="emptyForm" path="/deleteContent" type="com.fulong.repository.transition.DeleteContentTransition" scope="request">
+      <set-property property="name" value="删除"/>
+      <set-property property="fromID" value="delete"/>
+      <forward name="success" path="/../deleteSuccess.jsp" redirect="true"/>
+    </action>
+    <action name="emptyForm" path="/saveSendContent" type="com.fulong.repository.transition.SaveSendContentTransition" scope="request">
+      <set-property property="name" value="发送"/>
+      <forward name="success" path="/../sendSuccess.jsp" redirect="true"/>
+    </action>
+    <action name="attrMatchForm" path="/saveCopyContent" type="com.fulong.repository.transition.SaveCopyContentTransition" scope="request">
+      <set-property property="name" value="确定"/>
+      <forward name="success" path="/../copySuccess.jsp" redirect="true"/>
+    </action>
+    <action name="emptyForm" path="/saveMoveContent" type="com.fulong.repository.transition.SaveMoveContentTransition" scope="request">
+      <set-property property="name" value="确定"/>
+      <forward name="success" path="/../moveSuccess.jsp" redirect="true"/>
+    </action>
+  </action-mappings>
+  <controller className="com.fulong.longcon.workflow.impl.ProcessDefinitionProcessorConfig" processorClass="com.fulong.longcon.workflow.impl.ProcessDefinitionProcessor">
+    <set-property property="ID" value="simpleness"/>
+    <set-property property="name" value="简单工作流"/>
+    <set-property property="description" value="简单工作流"/>
+  </controller>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+</struts-config>

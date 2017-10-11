@@ -1,0 +1,3 @@
+<%@page contentType="text/html; charset=UTF-8"%><%@taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%><%@taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<input	id="<bean:write name="javax.portlet.id"/>"	type="radio"	value="<bean:write name="preferences" property="value(value)"/>" name="<bean:write name="preferences" property="value(propertyId)"/>"<logic:present name="checked"> checked="checked"</logic:present>/>
+	<logic:notEmpty  name="preferences" property="value(label)"><label for="<bean:write name="javax.portlet.id"/>"><bean:write name="preferences" property="value(label)" filter="false"/></label></logic:notEmpty>

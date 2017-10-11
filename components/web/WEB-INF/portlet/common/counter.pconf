@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">计数器占位符用于记录网站系统中的各类点击情况，展示网站系统中各种访问量信息。</description>
+		<portlet-name>counter</portlet-name>
+		<display-name xml:lang="zh">计数器</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+                <init-param>
+                          <name>config-file</name>
+                          <value>/WEB-INF/portlet/common/counter.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.common.counter.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>font_style</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>type</name>
+				<value>site-counter</value>
+			</preference>
+			<preference>
+				<name>noIncrease</name>
+				<value>false</value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

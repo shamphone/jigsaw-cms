@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="configForm" type="com.fulong.portlet.PortletPreferencesForm"/>
+	</form-beans>
+	<action-mappings>
+		<action name="configForm" path="/save" type="com.fulong.portlet.field.highlighter.SaveAction"/>
+		<action name="configForm" path="/edit" type="com.fulong.portlet.field.highlighter.EditRender">
+			<forward name="success" path="/portlet/field/highlighter/edit.jsp"/>
+		</action>
+		<action path="/view" type="com.fulong.portlet.field.highlighter.ViewRender">
+			<forward name="success" path="/portlet/field/highlighter/view.jsp"/>
+		</action>
+		<action path="/final" type="com.fulong.portlet.field.highlighter.FinalRender">
+			<forward name="success" path="/portlet/field/highlighter/final.jsp"/>
+			<forward name="noNode" path="/portlet/field/highlighter/noNode.jsp"/>
+		</action>
+	</action-mappings>
+	<message-resources null="false" parameter="com.fulong.portlet.field.highlighter.Resource"/>
+</struts-config>

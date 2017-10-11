@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                        http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+	<portlet>
+	    <description xml:lang="zh">用户根据设定好的条件统计内容数量并输出数值。一般用于栏目页中，统计该栏目中共有多少条内容。</description>
+		<portlet-name>countNode</portlet-name>
+		<display-name xml:lang="ZH">内容计数器</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+		<expiration-cache>-1</expiration-cache>
+                <init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/count/node.xml</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.count.node.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>global</name>
+				<value>false</value>
+			</preference>
+                        <preference>
+				<name>recursive</name>
+				<value>false</value>
+			</preference>
+                        <preference>
+                                <name>lucene</name>
+                                <value>false</value>
+			</preference>
+			<preference>
+				<name>category</name>
+                                <value>no-properties-scheme</value>
+			</preference>
+			<preference>
+				<name>filter-patterns</name>
+			</preference>
+			<preference>
+				<name>filterByParamet</name>
+				<value>false</value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

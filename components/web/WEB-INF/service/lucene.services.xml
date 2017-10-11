@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean id="categoryInfo" class="com.fulong.service.container.ServiceCategoryInfo">
+		<property name="name">
+			<value>lucene索引服务（请单独使用）</value>
+		</property>
+		<property name="description">
+			<value>提供给系统使用索引维护服务</value>
+		</property>
+	</bean>
+	<bean id="analyzer" class="org.wltea.analyzer.lucene.IKAnalyzer">
+	</bean>
+	<bean id="indexManager" class="com.fulong.lucene.core.LuceneIndexManager"
+		init-method="init">
+		<!-- 全文检索目录，相对于components的web应用的目录 -->
+		<property name="searchDirectory" value="/WEB-INF/search" />
+		<property name="repository">
+			<ref bean="repository"></ref>
+		</property>
+		<property name="mergeRamToFs">
+			<value>500</value>
+		</property>
+		<property name="threadNum">
+			<value>10</value>
+		</property>
+		<property name="analyzer">
+			<ref bean="analyzer"></ref>
+		</property>
+	</bean>
+
+	<bean id="pdfConverter" class="com.fulong.lucene.converter.PDFConverter">
+	</bean>
+	<bean id="htmlConverter" class="com.fulong.lucene.converter.HtmlConverter">
+	</bean>
+	<bean id="excelConverter" class="com.fulong.lucene.converter.ExcelConverter">
+	</bean>
+	<bean id="wordConverter" class="com.fulong.lucene.converter.WordConverter">
+	</bean>
+	<bean id="txtConverter" class="com.fulong.lucene.converter.TxtConverter">
+	</bean>
+
+	<bean id="resourceConverter" class="com.fulong.lucene.converter.ResourceNodeConverter">
+		<property name="mime" value="mime" />
+		<property name="content" value="resource-content" />
+	</bean>
+	<bean id="converters" class="com.fulong.lucene.core.BaseConverterFactory">
+		<property name="binaryConverters">
+			<map>
+				<entry key="application/pdf" value-ref="pdfConverter" />
+				<entry key="text/html" value-ref="htmlConverter" />
+				<entry key="application/vnd.ms-excel" value-ref="excelConverter" />
+				<entry key="application/msword" value-ref="wordConverter" />
+				<entry key="text/plain" value-ref="txtConverter" />
+			</map>
+		</property>
+		<property name="nodeConverters">
+			<map>
+				<entry key="resource-scheme" value-ref="resourceConverter" />
+			</map>
+		</property>
+	</bean>
+	<!--
+		<bean id="createLuceneIndex"
+		class="com.fulong.lucene.service.CreateLuceneIndexService" name="创建索引"
+		parent="nodeService"> <property name="indexManager"> <ref
+		bean="indexManager"></ref> </property> <property name="editorPath">
+		<value>/service/lucene/submit.jsp</value> </property> </bean>
+	-->
+	<bean id="updateLuceneIndex" class="com.fulong.lucene.service.UpdateLuceneIndexService"
+		name="更新索引" parent="nodeService">
+		<description>更新所选节点索引
+			（对勾选节点有效）</description>
+		<property name="indexManager">
+			<ref bean="indexManager"></ref>
+		</property>
+		<property name="editorPath">
+			<value>/service/lucene/submit.jsp</value>
+		</property>
+	</bean>
+
+	<bean id="deleteLuceneIndex" class="com.fulong.lucene.service.DeleteLuceneIndexService"
+		name="删除索引" parent="nodeService">
+		<description>删除所选节点索引
+			（对勾选节点有效）</description>
+		<property name="indexManager">
+			<ref bean="indexManager"></ref>
+		</property>
+		<property name="editorPath">
+			<value>/service/lucene/submit.jsp</value>
+		</property>
+	</bean>
+
+	<bean id="batchCreateLuceneIndex" class="com.fulong.lucene.service.BatchCreateLuceneIndexService"
+		name="批量创建索引" parent="nodeService">
+		<description>递归的为大纲下的所有节点建立索引
+			（对整个分类有效，单独勾选节点无效）</description>
+		<property name="indexManager">
+			<ref bean="indexManager"></ref>
+		</property>
+		<property name="repository">
+			<ref bean="repository" />
+		</property>
+		<property name="editorPath">
+			<value>/service/lucene/submit.jsp</value>
+		</property>
+	</bean>
+
+	<bean id="batchDeleteLuceneIndex" class="com.fulong.lucene.service.BatchDeleteLuceneIndexService"
+		name="批量删除索引" parent="nodeService">
+		<description>递归的删除大纲下的所有节点的索引
+			（对整个分类有效，单独勾选节点无效）</description>
+		<property name="indexManager">
+			<ref bean="indexManager"></ref>
+		</property>
+		<property name="editorPath">
+			<value>/service/lucene/submit.jsp</value>
+		</property>
+	</bean>
+
+	<bean id="rebuildLuceneIndex" class="com.fulong.lucene.service.RebuildLuceneIndexService"
+		name="重建索引" parent="nodeService">
+		<description>递归的更新大纲下的所有节点的索引</description>
+		<property name="repository">
+			<ref bean="repository" />
+		</property>
+		<property name="indexManager" ref="indexManager" />
+		<property name="editorPath">
+			<value>/service/lucene/submit.jsp</value>
+		</property>
+	</bean>
+</beans>

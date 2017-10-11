@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app>
+	<portlet>
+		<description xml:lang="zh">设计页面按钮用于跳转到当前页面的设计页面。</description>
+		<portlet-name>page_editor</portlet-name>
+		<display-name xml:lang="zh">设计页面按钮</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+     <init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/site/pageEditor.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.site.edit.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>style</name>
+				<value></value>
+                                <description>样式</description>
+			</preference>
+			<preference>
+				<name>value</name>
+				<value>设计页面</value>
+                                <description>显示文字</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">活动调用占位符是用来在页面渲染的过程中自动执行某一个流程中的某一个活动的。</description>
+		<portlet-name>startActivity</portlet-name>
+		<display-name xml:lang="zh">活动调用</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+	<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/form/startActivity.xml</value>
+		</init-param>
+
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.button.submit.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>contentType</name>
+				<value>default</value>
+			</preference>
+			<preference>
+                <name>process</name>
+				<value>blank</value>
+                <description>对应的流程</description>
+			</preference>
+            <preference>
+                <name>activity</name>
+				<value>begin</value>
+                <description>对应的活动</description>
+			</preference>
+			
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

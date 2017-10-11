@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd portlet.xsd">
+    <portlet>
+        <description xml:lang="zh">多文件上载可以从已经上传到服务器的文件中选择文件，或从本地计算机选择并上传文件。可以同时上传多个文件。</description>
+        <portlet-name>fileMultipleUploader</portlet-name>
+        <display-name xml:lang="zh">多文件上载</display-name>
+        <portlet-class>com.fulong.portlet.component.file.multiple.TextInputComponent</portlet-class>
+        <init-param>
+            <name>config-file</name>
+            <value>/WEB-INF/portlet/form/fileMultipleUploader.xml</value>
+        </init-param>
+        <expiration-cache>-1</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <resource-bundle>com.fulong.portlet.component.file.multiple.Resource</resource-bundle>
+        <portlet-preferences>
+            <preference>
+                <name>propertyId</name>
+                <value></value>
+                <description>关联属性标识符</description>
+            </preference>
+            <preference>
+                <name>size</name>
+                <value></value>
+                <description>字符宽度</description>
+            </preference>
+            <preference>
+                <name>fileCount</name>
+                <value>2</value>
+                <description>上传文件个数</description>
+            </preference>
+            <preference>
+                <name>fileStyle</name>
+                <value></value>
+                <description>上传控件样式</description>
+            </preference>
+            <preference>
+                <name>maxSize</name>
+                <value>250</value>
+                <description>上传文件大小</description>
+            </preference>
+            <preference>
+                <name>listStyle</name>
+                <value></value>
+                <description>列表样式</description>
+            </preference>
+        </portlet-preferences>
+    </portlet>
+</portlet-app>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean id="categoryInfo" class="com.fulong.service.container.ServiceCategoryInfo">
+		<property name="name">
+			<value>属性值操作服务</value>
+		</property>
+		<property name="description">
+			<value>提供给各系统使用的基础服务</value>
+		</property>
+	</bean>
+	<bean id="resetPasswordAndSendMail" class="com.fulong.service.property.ResetPasswordAndSendMailService" name="重置密码并发送邮件" parent="nodeService">
+		<property name="editorPath">
+			<value>/service/property/resetPasswordAndSendMail.jsp</value>
+		</property>
+	</bean>
+	<bean id="encpassword" class="com.fulong.service.property.EncryptService" name="属性加密" parent="nodeService">
+	<description>提供对如用户密码等属性加密功能。</description>
+		<property name="editorPath">
+			<value>/service/property/encrypt.jsp</value>
+		</property>
+	</bean>
+	<bean id="compareProp" class="com.fulong.service.property.compare.CompareService" name="日期属性值比较服务"  parent="nodeService">
+		<property name="repository">
+			<ref bean="repository" />
+		</property>
+		<property name="editorPath">
+			<value>/service/property/compare.jsp</value>
+		</property>
+	</bean>
+	<bean id="copyProp" class="com.fulong.service.property.copy.CopyService" name="属性值拷贝服务" parent="nodeService">
+		<property name="editorPath">
+			<value>/service/property/copy.jsp</value>
+		</property>
+	</bean>
+	<bean id="refProp" class="com.fulong.service.property.reference.ReferenceService" name="引用属性大纲名称提取服务" parent="nodeService">
+		<property name="editorPath">
+			<value>/service/property/reference.jsp</value>
+		</property>
+	</bean>
+	<bean id="refSend" class="com.fulong.service.property.send.SendService" name="内容属性值发送至引用属性对应节点服务" parent="nodeService">
+	
+		<property name="editorPath">
+			<value>/service/property/send.jsp</value>
+		</property>
+	</bean>
+	<bean id="addSuggestKeywords" class="com.fulong.service.property.keywords.AddSuggestKeywordsService" name="自动添加关键字服务" parent="nodeService">
+		<property name="editorPath">
+			<value>/service/property/keywords.jsp</value>
+		</property>
+		<property name="repository">
+			<ref bean="repository" />
+		</property>
+		<property name="passportProvider">
+			<ref bean="passport" />
+		</property>
+	</bean>
+	<bean id="propCompute" class="com.fulong.service.property.PropComputeService" name="属性值计算" parent="nodeService">
+		<description>提供属性值的加减平均等算术计算。</description>	
+		<property name="editorPath">
+			<value>/service/property/propCompute.jsp</value>
+		</property>
+	</bean>
+	<bean id="nodeCounter" class="com.fulong.service.property.NodeCounterService" name="结点访问计数" parent="nodeService">
+		<description>提供节点的按年、月、周和日等的访问计数。</description>	
+		<property name="counterRepository" ref="acccessCounterRepository" />
+		<property name="editorPath">
+			<value>/service/property/nodeCounter.jsp</value>
+		</property>
+	</bean>
+	<bean id="refNodesOption" class="com.fulong.service.property.RefNodesOptionService" name="引用属性节点集增删改操作" parent="nodeService">
+		<description>提供特定节点的引用属性节点集的增删改操作。</description>	
+		<property name="editorPath">
+			<value>/service/property/refNodesOption.jsp</value>
+		</property>
+	</bean>
+	<bean id="bothwayQuoted" class="com.fulong.service.property.BothwayQuotedService"
+		name="双向引用服务" parent="nodeService">
+		<description>双向引用服务</description>
+		<property name="editorPath">
+			<value>/service/property/bothwayQuoted.jsp</value>
+		</property>
+	</bean>
+	<bean id="removeRef" class="com.fulong.service.property.RemoveRefService"
+		name="解除引用关系服务" parent="nodeService">
+		<description>解除引用关系服务</description>
+		<property name="editorPath">
+			<value>/service/property/removeRef.jsp</value>
+		</property>
+	</bean>
+</beans>

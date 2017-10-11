@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd portlet.xsd">
+    <portlet>
+        <description xml:lang="zh">多格式文本编辑器常用来编辑内容中的大文本属性，功能同word文本编辑器相同。</description>
+        <portlet-name>richtext</portlet-name>
+        <display-name xml:lang="zh">多格式文本编辑器</display-name>
+        <portlet-class>com.fulong.portlet.component.richtext.TextInputComponent</portlet-class>
+        <init-param>
+            <name>config-file</name>
+            <value>/WEB-INF/portlet/form/richtext.xml</value>
+        </init-param>
+        <expiration-cache>-1</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <resource-bundle>com.fulong.portlet.component.richtext.Resource</resource-bundle>
+        <portlet-preferences>
+            <preference>
+                <name>width</name>
+                <value>500</value>
+                <description>宽度</description>
+            </preference>
+            <preference>
+                <name>height</name>
+                <value>500</value>
+                <description>高度</description>
+            </preference>
+            <preference>
+                <name>propertyId</name>
+                <value></value>
+                <description>关联属性标识符</description>
+            </preference>
+            <preference>
+                <name>tabindex</name>
+                <value></value>
+                <description>tab键顺序</description>
+            </preference>
+            <preference>
+                <name>style</name>
+                <value></value>
+                <description>样式</description>
+            </preference>
+            <preference>
+                <name>value</name>
+                <value></value>
+                <description>缺省值</description>
+            </preference>
+        </portlet-preferences>
+    </portlet>
+</portlet-app>

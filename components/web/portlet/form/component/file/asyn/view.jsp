@@ -1,0 +1,4 @@
+<%@page contentType="text/html; charset=UTF-8"%><%@taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%><%@taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%><%@taglib uri="/WEB-INF/struts-html.tld" prefix="html"%><%@page import="javax.portlet.PortletPreferences" %>
+<input type="file"  disabled="true" name="<bean:write name="preferences" property="value(propertyId)" ignore="true"/>废弃" />&nbsp;&nbsp;<button style="font-size:12px;width:55px;height:23px;margin-left:5px;line-height:18px;">添加</button><br />
+<select name="<bean:write name="preferences" property="value(propertyId)" ignore="true"/>" multiple="multiple" <logic:notEmpty name="preferences" property="value(listStyle)">class="<bean:write name="preferences" property="value(listStyle)"/>"</logic:notEmpty>>
+</select>&nbsp;&nbsp;<button  style="font-size:12px;width:55px;height:23px;margin-left:5px;line-height:18px;">删除</button>

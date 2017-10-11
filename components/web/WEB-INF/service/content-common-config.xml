@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="emptyForm" type="com.fulong.common.PagerForm" />
+		<form-bean name="serviceForm" type="com.fulong.service.container.ServiceForm" />
+		<form-bean name="attrMatchForm" type="com.fulong.cms.share.form.AttrMatchForm" />
+	</form-beans>
+	<global-forwards>
+		<forward name="login" path="/logon.jsp" />
+		<forward name="error" path="/common/attention.jsp" />
+		<forward name="forbidden" path="/common/forbidden.jsp" />
+	</global-forwards>
+	<action-mappings>
+		<action name="serviceForm" path="/insertSite"
+			type="com.fulong.service.content.share.common.InsertSiteAction"
+			scope="request">
+			<forward name="success" path="/redirectRemote.jsp" />
+		</action>
+		<action path="/listCategory"
+			type="com.fulong.service.content.share.common.ListCategoryAction"
+			scope="request">
+			<forward name="success" path="/listCategory.jsp" />
+		</action>
+		<action path="/addRemoteCategory"
+			type="com.fulong.service.content.share.common.AddRemoteCategoryAction">
+			<forward name="SENDER" path="/attrMatch.jsp" />
+			<forward name="RECEIVER" path="/downloadAttrMatch.jsp" />
+			<forward name="failed" path="/categoryExists.jsp" />
+			<forward name="success" path="/addsuccess.jsp" />
+		</action>
+		<action path="/addRemoteSite"
+			type="com.fulong.service.content.share.common.AddRemoteSiteAction"
+			scope="request">
+			<forward name="success" path="/addRemoteSite.jsp" />
+		</action>
+		<action name="attrMatchForm" path="/saveAttrMatch"
+			type="com.fulong.service.content.share.common.SaveAttrMatchAction"
+			scope="request">
+			<forward name="success" path="/addsuccess.jsp" />
+		</action>
+		<action path="/getAttrMch"
+			type="com.fulong.service.content.share.common.GetAttrMchAction" />
+		<action path="/getProperty"
+			type="com.fulong.service.content.share.common.GetPropertyAction" />
+		<action path="/getRemoteProperty"
+			type="com.fulong.service.content.share.common.GetRemotePropertyAction" >
+			<forward name="success" path="/attrMatch.jsp" />
+			</action>
+		<action path="/getRemoteCategories"
+			type="com.fulong.service.content.share.common.GetRemoteCategoriesAction">
+			<forward name="success" path="/redirectRemote.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources null="false" parameter="com.fulong.cms.Common" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/site/validator-rules.xml,/WEB-INF/site/validation.xml" />
+	</plug-in>
+</struts-config>

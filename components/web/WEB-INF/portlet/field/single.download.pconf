@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd portlet.xsd">
+    <portlet>
+        <description xml:lang="zh">文件下载内容域用来渲染某条内容中可用于下载的属性类型（路径类型）的值。</description>
+        <portlet-name>singleDownload</portlet-name>
+        <display-name xml:lang="zh">文件下载内容域</display-name>
+        <portlet-class>com.fulong.portlet.field.download.single.DownloadField</portlet-class>
+        <init-param>
+            <name>config-file</name>
+            <value>/WEB-INF/portlet/field/single.download.xml</value>
+        </init-param>
+        <expiration-cache>-1</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <resource-bundle>com.fulong.portlet.field.download.single.Resource</resource-bundle>
+        <portlet-preferences>
+            <preference>
+                <name>category-id</name>
+                <value/>
+            </preference>
+            <preference>
+                <name>content-id</name>
+                <value/>
+            </preference>
+            <preference>
+                <name>definitionType</name>
+                <value>default</value>
+            </preference>
+            <preference>
+                <name>contentType</name>
+                <value>default</value>
+            </preference>
+            <preference>
+                <name>identifier</name>
+                <value/>
+            </preference>
+            <preference>
+                <name>field</name>
+                <value/>
+            </preference>
+            <preference>
+                <name>showWhat</name>
+                <value>name</value>
+                <description>显示选项</description>
+            </preference>
+            <preference>
+                <name>text</name>
+                <value></value>
+                <description>显示文字</description>
+            </preference>
+            <preference>
+                <name>siteType</name>
+                <value>default</value>
+                <description>域名来源</description>
+            </preference>
+        </portlet-preferences>
+    </portlet>
+</portlet-app>

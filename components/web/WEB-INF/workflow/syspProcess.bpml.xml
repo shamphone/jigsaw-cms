@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkflowProcesses xmlns="http://www.wfmc.org/2008/XPDL2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 bpmnxpdl_31.xsd">
+    <WorkflowProcess DefaultStartActivityId="begin" Id="syspProcess" Name="沈阳行政审批新增办件流程" Module="components">
+        <VMLProperties actionFocusedStrokeColor="green"
+            actionStrokeColor="#000000" actionTextColor=""
+            isStep3D="false" isStepShadow="T" sStepStrokeColor="#EFF2F5"
+            sStepTextColor="white" step3DDepth="20" stepColor1="#FFFFFF"
+            stepColor2="#EDEDED" stepFocusedStrokeColor="green"
+            stepShadowColor="#C0C0C0" stepStrokeColor="black" stepTextColor="black"/>
+        <FlowProperties activeForm="" autoExe="" endTime="" flowMode=""
+            ifMonitor="" noteMode="" runMode="" startTime=""/>
+        <ProcessHeader>
+            <Description/>
+        </ProcessHeader>
+        <Activities>
+            <Activity Id="begin" Name="起始活动" StartMode="Automatic">
+                <Description>起始活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="100" Width="80">
+                        <Coordinates XCoordinate="327px" YCoordinate="1041px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="end" Name="结束活动" StartMode="Automatic">
+                <Description>结束活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="100" Width="80">
+                        <Coordinates XCoordinate="1989px" YCoordinate="1045px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="insertItem" Name="新增办件" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="1344px" YCoordinate="984px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="insertItem">
+                            <ActualParameters/>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+            <Activity Id="setNo" Name="设置办件编号" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="816px" YCoordinate="994px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="copyProp">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>sourcePropName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>copyCategoryName</name>
+                                    <value>办件管理</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>copyCategoryID</name>
+                                    <value>2502195527125</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>destinationPropID</name>
+                                    <value>number</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>IDprop</name>
+                                    <value>on</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>destinationPropName</name>
+                                    <value>办件编号</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>sourcePropID</name>
+                                    <value>ID</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+        </Activities>
+        <Transitions>
+            <Transition From="begin" Id="newaction0" Name="新转移0"
+                To="setNo" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="setNo" Id="newaction1" Name="新转移1"
+                To="insertItem" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="insertItem" Id="newaction2" Name="新转移2"
+                To="end" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+        </Transitions>
+    </WorkflowProcess>
+</WorkflowProcesses>

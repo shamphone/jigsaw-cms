@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkflowProcesses xmlns="http://www.wfmc.org/2008/XPDL2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 bpmnxpdl_31.xsd">
+    <WorkflowProcess DefaultStartActivityId="begin" Id="syspCreateUser" Name="沈阳行政审批创建用户流程" Module="components">
+        <VMLProperties actionFocusedStrokeColor="yellow"
+            actionStrokeColor="#0269D0" actionTextColor=""
+            isStep3D="false" isStepShadow="T" sStepStrokeColor="#EFF2F5"
+            sStepTextColor="white" step3DDepth="20" stepColor1="#FFFFFF"
+            stepColor2="#EDEDED" stepFocusedStrokeColor="yellow"
+            stepShadowColor="#C0C0C0" stepStrokeColor="#CDCDCD" stepTextColor="black"/>
+        <FlowProperties activeForm="" autoExe="" endTime="" flowMode=""
+            ifMonitor="" noteMode="" runMode="" startTime=""/>
+        <ProcessHeader>
+            <Description><![CDATA[用于创建用户时，对密码属性进行加密]]></Description>
+        </ProcessHeader>
+        <Activities>
+            <Activity Id="begin" Name="起始活动" StartMode="Automatic">
+                <Description>起始活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="120" Width="180">
+                        <Coordinates XCoordinate="28px" YCoordinate="423px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="end" Name="结束活动" StartMode="Automatic">
+                <Description>结束活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="120" Width="180">
+                        <Coordinates XCoordinate="2522px" YCoordinate="1206px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="createUser" Name="创建用户" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="514px" YCoordinate="625px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="encryptPassword" Name="密码加密"
+                StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="1070px" YCoordinate="728px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="encpassword">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>encCategoryID</name>
+                                    <value>principal-scheme</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>propertyName</name>
+                                    <value>密码</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>encCategoryName</name>
+                                    <value>会员库</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>property</name>
+                                    <value>user-password</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+            <Activity Id="encryptOldPWD" Name="旧密码加密" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="1589px" YCoordinate="883px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="encpassword">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>encCategoryID</name>
+                                    <value>principal-scheme</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>propertyName</name>
+                                    <value>旧密码</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>encCategoryName</name>
+                                    <value>会员库</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>property</name>
+                                    <value>oldPassword</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+            <Activity Id="encryptConfPWD" Name="确认密码加密"
+                StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="2094px" YCoordinate="1070px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="encpassword">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>encCategoryID</name>
+                                    <value>principal-scheme</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>propertyName</name>
+                                    <value>确认密码</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>encCategoryName</name>
+                                    <value>会员库</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>property</name>
+                                    <value>confirmPassword</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+        </Activities>
+        <Transitions>
+            <Transition From="begin" Id="newaction0" Name="创建用户"
+                To="createUser" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="createUser" Id="newaction1" Name="密码加密"
+                To="encryptPassword" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="encryptPassword" Id="newaction2"
+                Name="旧密码加密" To="encryptOldPWD" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="encryptOldPWD" Id="newaction3"
+                Name="确认密码加密" To="encryptConfPWD" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="encryptConfPWD" Id="newaction4" Name="结束"
+                To="end" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+        </Transitions>
+    </WorkflowProcess>
+</WorkflowProcesses>

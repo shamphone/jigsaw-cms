@@ -1,0 +1,8 @@
+#/site/portlet/visitor/edit.jsp
+
+com.fulong.site.portlet.visitor.edit.option0.baseSet=基本设置
+com.fulong.site.portlet.visitor.edit.formTitle1.rowNum=行数
+com.fulong.site.portlet.visitor.edit.formTitle2.Style=样式
+com.fulong.site.portlet.visitor.edit.formTitle2.Style.choose=选择...
+com.fulong.site.portlet.visitor.edit.toolbar.submit.save=保存
+com.fulong.site.portlet.visitor.edit.toolbar.button.cancel=取消

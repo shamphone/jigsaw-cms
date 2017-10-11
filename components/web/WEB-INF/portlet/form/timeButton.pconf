@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">间跳转按钮是根据用户的配置及页面选择进行页面重定向并且加上时间参数。</description>
+		<portlet-name>timebutton</portlet-name>
+		<display-name xml:lang="zh">时间跳转按钮</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+	<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/form/timeButton.xml</value>
+		</init-param>
+
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.button.time.Resource</resource-bundle>
+		<portlet-preferences>
+            <preference>
+                <name>propertyId</name>
+                <description>关联属性标识符</description>
+            </preference>
+            <preference>
+                <name>category</name>
+                <description>关联分类</description>
+            </preference>
+			<preference>
+				<name>tabindex</name>
+				<value></value>
+                                <description>tab键顺序</description>
+			</preference>
+			<preference>
+				<name>style</name>
+				<value></value>
+                                <description>样式</description>
+			</preference>
+			<preference>
+				<name>value</name>
+				<value>提交</value>
+                                <description>显示文字</description>
+			</preference>
+			<preference>
+				<name>size</name>
+                                <description>长度</description>
+			</preference>
+            <preference>
+                <name>defaultMode</name>
+                <value>none</value>
+                <description>缺省值模式</description>
+            </preference>
+            <preference>
+                <name>defaultValue</name>
+                <value></value>
+                <description>缺省值</description>
+            </preference>
+            <preference>
+                <name>offset</name>
+                <value>0</value>
+                <description>偏移量</description>
+            </preference>
+            <preference>
+                <name>unit</name>
+                <value></value>
+                <description>偏移量单位</description>
+            </preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

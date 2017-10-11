@@ -1,0 +1,16 @@
+#/cms/portlet/field/edit.jsp
+
+com.fulong.cms.portlet.field.edit.option0.baseSet=基本设置
+com.fulong.cms.portlet.field.edit.formTitle1.contentSort=内容分类
+com.fulong.cms.portlet.field.edit.formTitle1.option.bundleContentSort=使用当前栏目绑定的内容分类
+com.fulong.cms.portlet.field.edit.formTitle2.content=内容
+com.fulong.cms.portlet.field.edit.formTitle2.option.defaultValue=使用缺省内容
+com.fulong.cms.portlet.field.edit.formTitle3.type=类型
+com.fulong.cms.portlet.field.edit.formTitle3.option.item=简单属性块
+com.fulong.cms.portlet.field.edit.formTitle4.attrubiteShow=显示属性
+com.fulong.cms.portlet.field.edit.formTitle4.option1.choose=请选择
+com.fulong.cms.portlet.field.edit.formTitle5.formatShow=显示格式
+com.fulong.cms.portlet.field.edit.formTitle6.style=样式
+com.fulong.cms.portlet.field.edit.formTitle7.button=选择...
+com.fulong.cms.portlet.field.edit.toolbar.submit.save=保存
+com.fulong.cms.portlet.field.edit.toolbar.button.cancel=取消

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">条件占位符根据设定条件搜索并展示出需要的结果。</description>
+		<portlet-name>conditions</portlet-name>
+		<display-name xml:lang="zh">条件占位符</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+		<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/field/conditions.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.field.conditions.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>contentType</name>
+				<value>default</value>
+			</preference>
+			<preference>
+				<name>category</name>
+			</preference>
+			<preference>
+				<name>conditions</name>
+                                <description>条件</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

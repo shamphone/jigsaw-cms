@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkflowProcesses xmlns="http://www.wfmc.org/2008/XPDL2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 bpmnxpdl_31.xsd">
+    <WorkflowProcess DefaultStartActivityId="begin" Id="sendLeiXing" Name="向子站同步文件类型" Module="components">
+        <VMLProperties actionFocusedStrokeColor="yellow"
+            actionStrokeColor="#0269D0" actionTextColor=""
+            isStep3D="false" isStepShadow="T" sStepStrokeColor="#EFF2F5"
+            sStepTextColor="white" step3DDepth="20" stepColor1="#FFFFFF"
+            stepColor2="#EDEDED" stepFocusedStrokeColor="yellow"
+            stepShadowColor="#C0C0C0" stepStrokeColor="#CDCDCD" stepTextColor="black"/>
+        <FlowProperties activeForm="" autoExe="" endTime="" flowMode=""
+            ifMonitor="" noteMode="" runMode="" startTime=""/>
+        <ProcessHeader>
+            <Description><![CDATA[向子站同步文件类型]]></Description>
+            <FormalParameters>
+                <FormalParameter xmlns="">
+                    <name>definitionID</name>
+                    <value>2485767062280</value>
+                </FormalParameter>
+            </FormalParameters>
+        </ProcessHeader>
+        <Activities>
+            <Activity Id="begin" Name="起始活动" StartMode="Automatic">
+                <Description>起始活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="120" Width="180">
+                        <Coordinates XCoordinate="266px" YCoordinate="834px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="end" Name="结束活动" StartMode="Automatic">
+                <Description>结束活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="120" Width="180">
+                        <Coordinates XCoordinate="3601px" YCoordinate="704px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="sendLeiXing" Name="自动共享" StartMode="Manual" xmlns="">
+                <Description>自动共享</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="1827px" YCoordinate="635px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="sendNodes">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>remote5CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryID</name>
+                                    <value>2485767062280</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1URL</name>
+                                    <value>policy.smeln.gov.cn/longcon</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localTemplateID</name>
+                                    <value>zhengcefagui</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2URL</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryName</name>
+                                    <value>文件分类</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3URL</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4URL</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localDomain</name>
+                                    <value>policy.sme.gov.cn/longcon</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5URL</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryName</name>
+                                    <value>文件分类</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localDomainName</name>
+                                    <value>www.smezcfg.com</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryID</name>
+                                    <value>2485767062280</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2485767062280.title</name>
+                                    <value>title</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2485767062280.prop968</name>
+                                    <value>$</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localURL</name>
+                                    <value>http://policy.sme.gov.cn/longcon/</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remoteURL</name>
+                                    <value>http://policy.smeln.gov.cn/longcon</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remoteCategoryID</name>
+                                    <value>2485767062280</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remoteCategoryName</name>
+                                    <value>文件分类</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>mapping</name>
+                                    <value>prop968=</value>
+                                    <value>title=title</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+            <Activity Id="deleteLeiXing" Name="删除文件类型"
+                StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="1924px" YCoordinate="1304px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="deleteContent">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>remote4CategoryIDDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5CategoryNameDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2URLDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryNameDel</name>
+                                    <value>文件分类</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryIDDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4URLDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryIDDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1URLDel</name>
+                                    <value>policy.smeln.gov.cn/longcon</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3URLDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryIDDel</name>
+                                    <value>2485767062280</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5URLDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryNameDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryNameDel</name>
+                                    <value>文件分类</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5CategoryIDDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryNameDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryIDDel</name>
+                                    <value>2485767062280</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4CategoryNameDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryID</name>
+                                    <value>2485767062280</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryName</name>
+                                    <value>文件分类</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1Domain</name>
+                                    <value>policy.smeln.gov.cn/longcon</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryID</name>
+                                    <value>2485767062280</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryName</name>
+                                    <value>文件分类</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2Domain</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3Domain</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4Domain</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5Domain</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+        </Activities>
+        <Transitions>
+            <Transition From="begin" Id="newaction0" Name="自动共享"
+                To="sendLeiXing" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="sendLeiXing" Id="newaction1" Name="共享结束"
+                To="end" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="begin" Id="newaction2" Name="自动删除"
+                To="deleteLeiXing" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="deleteLeiXing" Id="newaction3" Name="删除结束"
+                To="end" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+        </Transitions>
+    </WorkflowProcess>
+</WorkflowProcesses>

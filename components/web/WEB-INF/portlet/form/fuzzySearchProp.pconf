@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">文本框用于需要对某个属性做基于数据库的模糊搜索的场合。</description>
+		<portlet-name>fuzzySearchProp</portlet-name>
+		<display-name xml:lang="zh">属性模糊搜索文本框</display-name>
+		<portlet-class>com.fulong.portlet.component.text.fuzzySearchProp.FuzzySearchPropComponent</portlet-class>
+	<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/form/fuzzySearchProp.xml</value>
+		</init-param>
+
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.component.text.fuzzySearchProp.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>propertyId</name>
+				<value></value>
+                <description>关联属性标识符</description>
+			</preference>
+			<preference>
+				<name>size</name>
+				<value></value>
+                <description>长度</description>
+			</preference>
+			<preference>
+				<name>size</name>
+				<value></value>
+                <description>长度</description>
+			</preference>
+			<preference>
+				<name>maxLength</name>
+				<value></value>
+                <description>最多字符数</description>
+			</preference>
+			<preference>
+				<name>tabindex</name>
+				<value></value>
+                <description>tab键顺序</description>
+			</preference>
+			<preference>
+				<name>style</name>
+				<value></value>
+                <description>样式</description>
+			</preference>
+			<preference>
+				<name>value</name>
+				<value></value>
+                <description>缺省值</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

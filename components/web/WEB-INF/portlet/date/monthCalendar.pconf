@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                        http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+	<portlet>
+	    <description xml:lang="zh">月历重复器用于展示当天或者某个特定日期所在的当月的内容，以表格的形式来展示，表格分为6行7列，每一列对应一周中的一天，从周日开始，周六结束。每一个重复规则为一个页面片段。页面片段中可以插入日历相关重复器专属占位符，例如日期域占位符。</description>
+		<portlet-name>monthCalendar</portlet-name>
+		<display-name xml:lang="ZH">月历重复器</display-name>
+		<portlet-class>com.fulong.portlet.date.monthCalendar.XRepeaterPortlet</portlet-class>
+		<expiration-cache>-1</expiration-cache>
+                <init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/date/monthCalendar.xml</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.date.monthCalendar.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>width</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>height</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>cellspacing</name>
+				<value>0</value>
+			</preference>
+			<preference>
+				<name>cellpadding</name>
+				<value>0</value>
+			</preference>
+			<preference>
+				<name>border</name>
+				<value>0</value>
+			</preference>
+			<preference>
+				<name>row</name>
+				<value>6</value>
+			</preference>
+			<preference>
+				<name>column</name>
+				<value>7</value>
+			</preference>
+			<preference>
+				<name>blankDate</name>
+				<value>false</value>
+			</preference>
+			<preference>
+				<name>contextName</name>
+				<value></value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

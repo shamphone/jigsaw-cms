@@ -1,0 +1,12 @@
+#/portal/portlet/url/edit.jsp
+
+com.fulong.portal.portlet.url.edit.option0.baseSet=基本设置
+com.fulong.portal.portlet.url.edit.formTitle1.pageAddress=页面地址：
+com.fulong.portal.portlet.url.edit.formTitle1.em.notice=注意：对页面地址的修改生效有一定的延迟。
+com.fulong.portal.portlet.url.edit.formTitle2.code=编码：
+com.fulong.portal.portlet.url.edit.formTitle2.auto=自动选择
+com.fulong.portal.portlet.url.edit.formTitle3.waitTime=延迟时间：
+com.fulong.portal.portlet.url.edit.formTitle3.second=秒
+com.fulong.portal.portlet.url.edit.toolbar.submit.save=保存
+com.fulong.portal.portlet.url.edit.toolbar.button.cancel=取消
+

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkflowProcesses xmlns="http://www.wfmc.org/2008/XPDL2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 bpmnxpdl_31.xsd">
+    <WorkflowProcess DefaultStartActivityId="begin" Id="syspCreateItem" Name="沈阳审批创建办件流程" Module="components">
+        <VMLProperties actionFocusedStrokeColor="green"
+            actionStrokeColor="#000000" actionTextColor=""
+            isStep3D="false" isStepShadow="T" sStepStrokeColor="#EFF2F5"
+            sStepTextColor="white" step3DDepth="20" stepColor1="#FFFFFF"
+            stepColor2="#EDEDED" stepFocusedStrokeColor="green"
+            stepShadowColor="#C0C0C0" stepStrokeColor="black" stepTextColor="black"/>
+        <FlowProperties activeForm="" autoExe="" endTime="" flowMode=""
+            ifMonitor="" noteMode="" runMode="" startTime=""/>
+        <ProcessHeader>
+            <Description><![CDATA[创建办件]]></Description>
+        </ProcessHeader>
+        <Activities>
+            <Activity Id="begin" Name="开始活动" StartMode="Automatic">
+                <Description> 开始</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="100" Width="80">
+                        <Coordinates XCoordinate="93px" YCoordinate="143px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="end" Name="结束活动" StartMode="Automatic">
+                <Description>结束</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="100" Width="80">
+                        <Coordinates XCoordinate="2751px" YCoordinate="1903px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="createItem" Name="创建办件" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="300px" YCoordinate="325px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="setNo" Name="设置办件编号" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="606px" YCoordinate="648px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="copyProp">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>sourcePropName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>copyCategoryName</name>
+                                    <value>办件管理</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>copyCategoryID</name>
+                                    <value>2502195527125</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>destinationPropID</name>
+                                    <value>number</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>IDprop</name>
+                                    <value>on</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>destinationPropName</name>
+                                    <value>办件编号</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>sourcePropID</name>
+                                    <value>ID</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+            <Activity Id="setType" Name="设置办件分类" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="1224px" YCoordinate="1105px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="refProp">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>refCategoryName</name>
+                                    <value>办件管理</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>refPropName</name>
+                                    <value>创建人</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>refCategoryID</name>
+                                    <value>2502195527125</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>stringPropID</name>
+                                    <value>creator-type</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>refPropID</name>
+                                    <value>creator</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>stringPropName</name>
+                                    <value>创建人类型</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+            <Activity Id="setState" Name="设置办结状态" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="2448px" YCoordinate="1350px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="compareProp">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>prop1ID</name>
+                                    <value>finish-time</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>compareCategoryID</name>
+                                    <value>2502195527125</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>time</name>
+                                    <value>1</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>reducePropName</name>
+                                    <value>承诺剩余时间</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>prop2ID</name>
+                                    <value>deadline</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>resultMore</name>
+                                    <value>延时</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>compareCategoryName</name>
+                                    <value>办件管理</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>resultLess</name>
+                                    <value>按时</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>prop2Name</name>
+                                    <value>最后期限</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>resultPropID</name>
+                                    <value>state</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>prop1Name</name>
+                                    <value>办结时间</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>reducePropID</name>
+                                    <value>remaining-time</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>resultPropName</name>
+                                    <value>办件状态</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+            <Activity Id="isChengNuo" Name="是否承诺件" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="1560px" YCoordinate="1374px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Route/>
+            </Activity>
+            <Activity Id="setOrgInfo" Name="同步用户信息" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="918px" YCoordinate="887px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="refSend">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>refSendPropName</name>
+                                    <value>创建人</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>refSendPropID</name>
+                                    <value>creator</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>refsendCategoryName</name>
+                                    <value>办件管理</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>refsendCategoryID</name>
+                                    <value>2502195527125</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+            <Activity Id="setDeadline" Name="设置承诺最后期限"
+                StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="2046px" YCoordinate="1349px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="deadline">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>deadreducepropName</name>
+                                    <value>承诺剩余时间</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>deadlinetime</name>
+                                    <value>1</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>deadlineCategoryName</name>
+                                    <value>办件管理</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>deadlineCategoryID</name>
+                                    <value>2502195527125</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>startpropID</name>
+                                    <value>declare-time</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>deadlinepropName</name>
+                                    <value>最后期限</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>deadreducepropID</name>
+                                    <value>remaining-time</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>startpropName</name>
+                                    <value>申报时间</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>deadlinepropID</name>
+                                    <value>deadline</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+        </Activities>
+        <Transitions>
+            <Transition From="begin" Id="newaction0" Name="创建办件"
+                To="createItem" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="createItem" Id="newaction1" Name="设置办件编号"
+                To="setNo" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="setType" Id="newaction3" Name="是否承诺件"
+                To="isChengNuo" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="setState" Id="newaction5" Name="承诺件结束"
+                To="end" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="isChengNuo" Id="newaction6" Name="非承诺件结束"
+                To="end" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="setNo" Id="newaction2" Name="同步用户信息"
+                To="setOrgInfo" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="setOrgInfo" Id="newaction7" Name="设置办件分类"
+                To="setType" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="isChengNuo" Id="newaction4" Name="设置期限"
+                To="setDeadline" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="setDeadline" Id="newaction8" Name="设置办结状态"
+                To="setState" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+        </Transitions>
+    </WorkflowProcess>
+</WorkflowProcesses>

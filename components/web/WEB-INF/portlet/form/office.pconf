@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd portlet.xsd">
+    <portlet>
+        <description xml:lang="zh">office</description>
+        <portlet-name>office</portlet-name>
+        <display-name xml:lang="zh">word在线编辑</display-name>
+        <portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+        <init-param>
+            <name>config-file</name>
+            <value>/WEB-INF/portlet/form/office.xml</value>
+        </init-param>
+        <init-param>
+            <name>script-file</name>
+            <value>/components/portlet/form/component/office/script.js</value>
+        </init-param>
+        <expiration-cache>-1</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <resource-bundle>com.fulong.portlet.component.office.Resource</resource-bundle>
+        <portlet-preferences>
+            <preference>
+                <name>width</name>
+                <value>500</value>
+                <description>宽度</description>
+            </preference>
+            <preference>
+                <name>height</name>
+                <value>500</value>
+                <description>高度</description>
+            </preference>
+            <preference>
+                <name>propertyId</name>
+                <value></value>
+                <description>关联属性标识符</description>
+            </preference>
+            <preference>
+                <name>Toolbars</name>
+                <value>on</value>
+                <description>显示工具栏</description>
+            </preference>
+            <preference>
+                <name>Menubar</name>
+                <value></value>
+                <description>显示菜单</description>
+            </preference>
+        </portlet-preferences>
+    </portlet>
+</portlet-app>

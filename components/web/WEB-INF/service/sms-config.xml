@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="emptyForm" type="com.fulong.common.PagerForm"/>
+    <form-bean name="serviceForm" type="com.fulong.service.container.ServiceForm"/>
+  </form-beans>
+  <global-forwards>
+    <forward name="login" path="/logon.jsp"/>
+    <forward name="error" path="/common/attention.jsp"/>
+    <forward name="forbidden" path="/common/forbidden.jsp"/>
+  </global-forwards>
+  <action-mappings>
+    <action path="/left" type="com.fulong.service.sms.LeftAction" scope="request">
+    <forward name="success" path="/left.jsp"></forward>
+    </action>
+    <action path="/service" type="com.fulong.service.sms.ServiceAction" scope="request">
+    <forward name="success" path="/service.jsp"></forward>
+    </action>
+    <action path="/list" type="com.fulong.service.sms.ServiceListAction" scope="request">
+    <forward name="success" path="/list.jsp"></forward>
+    </action>
+    <action path="/suspend" type="com.fulong.service.sms.SuspendAction" scope="request">
+    <forward name="success" path="/state.jsp"></forward>
+    </action>
+    <action path="/activate" type="com.fulong.service.sms.ActivateAction" scope="request">
+    <forward name="success" path="/state.jsp"></forward>
+    </action>
+  </action-mappings>
+<message-resources null="false" parameter="com.fulong.service.sms.Resources"/>  
+</struts-config>

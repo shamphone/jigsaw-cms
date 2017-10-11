@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkflowProcesses xmlns="http://www.wfmc.org/2008/XPDL2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 bpmnxpdl_31.xsd">
+    <WorkflowProcess DefaultStartActivityId="begin" Id="process2" Name="流程名称2">
+        <ProcessHeader>
+            <Description><![CDATA[这里是流程介绍。]]></Description>
+            <FormalParameters/>
+        </ProcessHeader>
+        <Activities>
+            <Activity Id="begin" Name="起始活动" StartMode="Automatic">
+                <Description>起始活动的描述</Description>
+            </Activity>
+            <Activity Id="end" Name="结束活动">
+                <Description>结束活动的描述</Description>
+            </Activity>
+        </Activities>
+        <Transitions>
+            <Transition From="begin" Id="trans1" Name="连接" To="end">
+                <Description><![CDATA[这里是转移的描述信息。]]></Description>
+            </Transition>
+        </Transitions>
+    </WorkflowProcess>
+</WorkflowProcesses>

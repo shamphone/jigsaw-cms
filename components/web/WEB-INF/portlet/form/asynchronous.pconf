@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd portlet.xsd">
+    <portlet>
+        <description xml:lang="zh">异步文件上传同多文件上载功能基本相同，区别于多文件上载的是，多文件上载是在点击表单中的保存按钮时才将多个文件上传到服务器，而异步文件上载时在点【添加】按钮时将所选文件上传到服务器，而在点击保存按钮时不再做上传操作，以提高保存表单的速度。</description>
+        <portlet-name>asynUploader</portlet-name>
+        <display-name xml:lang="zh">异步文件上传</display-name>
+        <portlet-class>com.fulong.portlet.component.file.asyn.AsynComponent</portlet-class>
+        <init-param>
+            <name>config-file</name>
+            <value>/WEB-INF/portlet/form/asynchronous.xml</value>
+        </init-param>
+        <init-param>
+            <name>script-file</name>
+            <value>/components/portlet/form/component/file/asyn/script.js</value>
+        </init-param>
+        <expiration-cache>-1</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <resource-bundle>com.fulong.portlet.component.file.asyn.Resource</resource-bundle>
+        <portlet-preferences>
+            <preference>
+                <name>propertyId</name>
+                <value></value>
+                <description>关联属性标识符</description>
+            </preference>
+            <preference>
+                <name>width</name>
+                <value>300</value>
+                <description>宽度</description>
+            </preference>
+            <preference>
+                <name>owner</name>
+                <value>site</value>
+                <description>内容保存到</description>
+            </preference>
+            <preference>
+				<name>echo</name>
+				<value>nodeEcho</value>
+                                <description>是否回显</description>
+			</preference>
+        </portlet-preferences>
+    </portlet>
+</portlet-app>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">radio占位符在重复器占位符当中使用，配合批量操作按钮，渲染出radio控件。插入占位符即可使用，无需配置。</description>
+		<portlet-name>radioButton</portlet-name>
+		<display-name xml:lang="zh">radio占位符</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+		<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/field/radio.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.field.radio.Resource</resource-bundle>
+		<portlet-preferences>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

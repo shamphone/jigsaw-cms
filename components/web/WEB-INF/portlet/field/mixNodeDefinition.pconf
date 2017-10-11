@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">辅内容分类列表占位符用于内容页中，显示当前内容从属于哪些辅分类，并展示其辅分类名称。当前展示内容本身所属的内容分类为该内容的主分类，如果将该条内容推荐到另外的分类中，那么被推荐到的内容分类称为该内容的辅内容分类。</description>
+		<portlet-name>mixNodeDefinition-list</portlet-name>
+		<display-name xml:lang="zh">辅内容分类列表占位符</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+		<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/field/mixNodeDefinition.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.field.mixNodeDefinition.Resource</resource-bundle>
+		<portlet-preferences>
+            <preference>
+            	<name>contentType</name>
+            	<value>default</value>
+			</preference>
+			<preference>
+				<name>style</name>
+			</preference>
+			<preference>
+				<name>contextName</name>
+				<value></value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

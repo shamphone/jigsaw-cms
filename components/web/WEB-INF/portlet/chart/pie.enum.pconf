@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">用户根据自己设定好的条件显示出该属性值的枚举类饼图。</description>
+		<portlet-name>enumpie</portlet-name>
+		<display-name xml:lang="zh">枚举类饼图</display-name>
+		<portlet-class>com.fulong.portlet.chart.ChartPortlet</portlet-class>
+		<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/chart/pie.enum.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.chart.pie.enumeration.Resource</resource-bundle>
+		<portlet-preferences>
+		<preference>
+				<name>definition</name>				
+				<value/>
+			</preference>
+		<preference>
+				<name>property</name>
+				<value/>
+			</preference>
+		<preference>
+		<!--标题 -->
+				<name>title</name>
+				<value>标题</value>
+			</preference>
+		<preference>
+		<!--是否显示图例 -->
+				<name>legend</name>
+				<value>true</value>
+		</preference>
+		<preference>
+				<name>width</name>
+				<value>100</value>
+			</preference>
+		<preference>
+				<name>height</name>
+				<value>100</value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

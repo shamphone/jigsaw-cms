@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="emptyForm" type="com.fulong.common.PagerForm"/>
+  </form-beans>
+  <global-forwards>
+    <forward name="login" path="/logon.jsp"/>
+    <forward name="error" path="/common/attention.jsp"/>
+    <forward name="forbidden" path="/common/forbidden.jsp"/>
+  </global-forwards>
+  <action-mappings type="com.fulong.longcon.workflow.impl.WorkflowActionMapping">
+    <!-- 关于activity的配置-->
+    <action path="/edit" type="com.fulong.repository.activity.EditUserActivity" scope="request">
+      <set-property property="name" value="修改"/>
+      <set-property property="multiple" value="false"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../editUser.jsp"/>
+    </action>
+    <action path="/create" type="com.fulong.repository.activity.CreateUserActivity" scope="request">
+      <set-property property="name" value="创建"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <forward name="success" path="/../editUser.jsp"/>
+      <forward name="no.quota" path="/../noQuota.jsp"/>
+    </action>
+    <action path="/delete" type="com.fulong.repository.activity.DeleteContentConfirmActivity" scope="request">
+      <set-property property="name" value="删除"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../deleteContentConfirm.jsp"/>
+    </action>
+    <action path="/recommand" type="com.fulong.repository.activity.RecommandContentActivity" scope="request">
+      <set-property property="name" value="推荐"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../recommandContent.jsp"/>
+    </action>
+    <action path="/copy" type="com.fulong.repository.activity.CopyContentActivity" scope="request">
+      <set-property property="name" value="复制"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../copyContent.jsp"/>
+    </action>
+    <action path="/move" type="com.fulong.repository.activity.MoveContentActivity" scope="request">
+      <set-property property="name" value="移动"/>
+      <set-property property="multiple" value="true"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../moveContent.jsp"/>
+    </action>
+    <action path="/password" type="com.fulong.repository.activity.ChangePasswordActivity" scope="request">
+      <set-property property="name" value="修改密码"/>
+      <set-property property="multiple" value="false"/>
+      <set-property property="visible" value="true"/>
+      <set-property property="defaultDisabled" value="true"/>
+      <forward name="success" path="/../changePassword.jsp"/>
+    </action>
+    <!-- 关于Transition的配置-->
+    <action name="emptyForm" path="/save" type="com.fulong.repository.transition.SaveUserTransition" scope="request">
+      <set-property property="name" value="提交"/>
+      <set-property property="fromID" value="create"/>
+      <forward name="success" path="/../createSuccess.jsp?contentID={0}" redirect="true"/>
+    </action>
+    <action name="emptyForm" path="/editSave" type="com.fulong.repository.transition.SaveUserTransition" scope="request">
+      <set-property property="name" value="提交"/>
+      <set-property property="fromID" value="edit"/>
+      <forward name="success" path="/../createSuccess.jsp?contentID={0}" redirect="true"/>
+    </action>
+    <action name="emptyForm" path="/deleteContent" type="com.fulong.repository.transition.DeleteContentTransition" scope="request">
+      <set-property property="name" value="删除"/>
+      <set-property property="fromID" value="delete"/>
+      <forward name="success" path="/../deleteSuccess.jsp" redirect="true"/>
+    </action>
+    <action name="emptyForm" path="/saveSendContent" type="com.fulong.repository.transition.SaveSendContentTransition" scope="request">
+      <set-property property="name" value="发送"/>
+      <forward name="success" path="/../sendSuccess.jsp" redirect="true"/>
+    </action>
+    <action name="emptyForm" path="/saveCopyContent" type="com.fulong.repository.transition.SaveCopyContentTransition" scope="request">
+      <set-property property="name" value="确定"/>
+      <forward name="success" path="/../copySuccess.jsp" redirect="true"/>
+    </action>
+    <action name="emptyForm" path="/saveMoveContent" type="com.fulong.repository.transition.SaveMoveContentTransition" scope="request">
+      <set-property property="name" value="确定"/>
+      <forward name="success" path="/../moveSuccess.jsp" redirect="true"/>
+    </action>
+    <action name="emptyForm" path="/updatePassword" type="com.fulong.repository.transition.UpdatePasswordAction" scope="request">
+      <forward name="success" path="/../passwordUpdated.jsp"  />
+      <forward name="failed"  path="/../changePassword.jsp" />
+    </action>
+  </action-mappings>
+  <controller className="com.fulong.longcon.workflow.impl.ProcessDefinitionProcessorConfig" processorClass="com.fulong.longcon.workflow.impl.ProcessDefinitionProcessor">
+    <set-property property="ID" value="user"/>
+    <set-property property="name" value="使用会员管理操作流程"/>
+    <set-property property="description" value="会员工作流"/>
+  </controller>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+  </plug-in>
+</struts-config>

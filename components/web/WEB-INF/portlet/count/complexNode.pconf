@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                        http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+	<portlet>
+	    <description xml:lang="zh">根据用户设定好的条件统计内容库中复合内容数量并输出其名称和值。一般用于栏目页中统计引用内容数量并输出其值。</description>
+		<portlet-name>countComplexNode</portlet-name>
+		<display-name xml:lang="ZH">复合内容计数器</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+		<expiration-cache>-1</expiration-cache>
+                <init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/count/complexNode.xml</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.count.refNode.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>category</name>
+                <value>no-properties-scheme</value>
+			</preference>
+			<preference>
+				<name>complexField</name>
+			</preference>
+			<preference>
+				<name>complexDefinition</name>
+				<value>no-properties-scheme</value>
+			</preference>
+			<preference>
+				<name>filter-patterns</name>
+			</preference>
+            <preference>
+            	<name>contentType</name>
+           		<value>default</value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+   <form-beans>
+	<form-bean name="configForm" type="com.fulong.portlet.PortletPreferencesForm"/>
+  </form-beans>
+  <action-mappings>
+    <action name="configForm" path="/save" type="com.fulong.portlet.site.channelNavigation.SaveAction"/>
+
+    <action  name="configForm"  path="/edit" type="com.fulong.portlet.site.channelNavigation.EditRender">
+      <forward name="success" path="/portlet/site/channelNavigation/edit.jsp"/>
+    </action>
+    <action path="/view" type="com.fulong.portlet.site.channelNavigation.ViewRender">
+      <forward name="success" path="/portlet/site/channelNavigation/view.jsp"/>
+    </action>
+    <action  path="/preview" type="com.fulong.portlet.site.channelNavigation.PreviewRender">
+      <forward name="success" path="/portlet/site/channelNavigation/preview.jsp"/>
+    </action>
+    <action path="/final" type="com.fulong.portlet.site.channelNavigation.FinalRender">
+     <forward name="success" path="/portlet/site/channelNavigation/final.jsp"/>
+    </action>
+    <action path="/help" type="com.fulong.portlet.site.channelNavigation.HelpRender">
+      <forward name="success" path="/portlet/site/channelNavigation/help.jsp"/>
+    </action>
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.portlet.site.channelNavigation.Resource" key="siteChannelNavigation"/>
+</struts-config>

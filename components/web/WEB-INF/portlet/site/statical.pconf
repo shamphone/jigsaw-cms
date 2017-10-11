@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app>
+	<portlet>
+		<description xml:lang="zh">页面片断占位符是一个实现多页面中公用页面片段的占位符，例如网站中的头部和底部，或者栏目导航，这些在各个栏目页面都需要设计的片段，就可以用页面片段占位符来实现，从而达到重复使用的目的。此外，页面片断支持根据拥有不同权限的用户群显示不同的片断，部分集成权限的功能。</description>
+		<portlet-name>page_clip</portlet-name>
+		<display-name xml:lang="zh">页面片断占位符</display-name>
+		<portlet-class>com.fulong.portlet.site.statical.StaticalPortlet</portlet-class>
+                <init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/site/statical.xml</value>
+		</init-param>
+        <expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.site.statical.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>source</name>
+				<value/>
+                        </preference>
+                        <preference>
+				<name>clip-paths</name>
+                        </preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

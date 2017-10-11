@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">表格整个滚动特效用于整个表格重复器内容的滚动播放。</description>
+		<portlet-name>overallSlide</portlet-name>
+		<display-name xml:lang="zh">表格整个滚动特效</display-name>
+		<portlet-class>com.fulong.portlet.effects.EffectsPortlet</portlet-class>
+	<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/effects/overallSlide.xml</value>
+		</init-param>
+
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.effects.overallSlide.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>component</name>
+                <description>搭配占位符</description>
+			</preference>
+			<preference>
+				<name>direction</name>
+				<value>left</value>
+				<description>滚动方向</description>
+			</preference>
+            <preference>
+				<name>behavior</name>
+				<value>scroll</value>
+				<description>滚动方式</description>
+			</preference>
+            <preference>
+				<name>loop</name>
+				<value></value>
+				<description>循环次数</description>
+			</preference>
+            <preference>
+				<name>scrollamount</name>
+				<value>6</value>
+				<description>滚动速度</description>
+			</preference>
+			<preference>
+				<name>scrolldelay</name>
+				<value>200</value>
+				<description>停顿时间</description>
+			</preference>
+            <preference>
+				<name>rollheight</name>
+				<value></value>
+				<description>滚动区域高度</description>
+			</preference>
+            <preference>
+				<name>rollwidth</name>
+				<value></value>
+				<description>滚动区域宽度</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

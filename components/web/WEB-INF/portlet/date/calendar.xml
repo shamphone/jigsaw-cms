@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+   <form-beans>
+     <form-bean name="configForm" type="com.fulong.portlet.PortletPreferencesForm"/>
+  </form-beans>
+  <action-mappings>
+    <action name="configForm" path="/save" type="com.fulong.portlet.date.calendar.SaveAction"/>
+    <action  name="configForm"  path="/edit" type="com.fulong.portlet.date.calendar.EditRender">
+      <forward name="success" path="/portlet/date/calendar/edit.jsp"/>
+    </action>
+    <action path="/view" type="com.fulong.portlet.date.calendar.ViewRender">
+      <forward name="success" path="/portlet/date/calendar/view.jsp"/>
+    </action>
+    <action path="/final" type="com.fulong.portlet.date.calendar.FinalRender">
+      <forward name="success" path="/portlet/date/calendar/final.jsp"/>
+    </action>
+  </action-mappings>
+</struts-config>

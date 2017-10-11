@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkflowProcesses xmlns="http://www.wfmc.org/2008/XPDL2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 bpmnxpdl_31.xsd">
+    <WorkflowProcess DefaultStartActivityId="begin" Id="createEditor" Name="创建编辑用户流程" Module="components">
+        <VMLProperties actionFocusedStrokeColor="yellow"
+            actionStrokeColor="#0269D0" actionTextColor=""
+            isStep3D="false" isStepShadow="T" sStepStrokeColor="#EFF2F5"
+            sStepTextColor="white" step3DDepth="20" stepColor1="#FFFFFF"
+            stepColor2="#EDEDED" stepFocusedStrokeColor="yellow"
+            stepShadowColor="#C0C0C0" stepStrokeColor="#CDCDCD" stepTextColor="black"/>
+        <FlowProperties activeForm="" autoExe="" endTime="" flowMode=""
+            ifMonitor="" noteMode="" runMode="" startTime=""/>
+        <ProcessHeader>
+            <Description><![CDATA[创建编辑用户时使用，主要用于密码加密]]></Description>
+            <FormalParameters>
+                <FormalParameter xmlns="">
+                    <name>definitionID</name>
+                    <value>principal-scheme</value>
+                </FormalParameter>
+            </FormalParameters>
+        </ProcessHeader>
+        <Activities>
+            <Activity Id="begin" Name="起始活动" StartMode="Automatic">
+                <Description>起始活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="120" Width="180">
+                        <Coordinates XCoordinate="336px" YCoordinate="822px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="end" Name="结束活动" StartMode="Automatic">
+                <Description>结束活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="120" Width="180">
+                        <Coordinates XCoordinate="3802px" YCoordinate="840px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="createEditor" Name="创建用户" StartMode="Manual" xmlns="">
+                <Description>创建用户</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="858px" YCoordinate="796px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="encrypPassword" Name="登录密码加密"
+                StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="2471px" YCoordinate="542px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="encpassword">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>property</name>
+                                    <value>user-password</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+        </Activities>
+        <Transitions>
+            <Transition From="begin" Id="newaction0" Name="创建用户"
+                To="createEditor" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="createEditor" Id="newaction1" Name="密码加密"
+                To="encrypPassword" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="encrypPassword" Id="newaction2" Name="结束"
+                To="end" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+        </Transitions>
+    </WorkflowProcess>
+</WorkflowProcesses>

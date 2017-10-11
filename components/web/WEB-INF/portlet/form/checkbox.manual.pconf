@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd portlet.xsd">
+    <portlet>
+        <description xml:lang="zh">复选框(自定义)用来在页面上渲染多选框控件，由用户自定义选项值。</description>
+        <portlet-name>checkboxManual</portlet-name>
+        <display-name xml:lang="zh">复选框(自定义)</display-name>
+        <portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+        <init-param>
+            <name>config-file</name>
+            <value>/WEB-INF/portlet/form/checkbox.manual.xml</value>
+        </init-param>
+        <expiration-cache>-1</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <resource-bundle>com.fulong.portlet.component.checkbox.manual.Resource</resource-bundle>
+        <portlet-preferences>
+            <preference>
+                <name>contentType</name>
+                <value>default</value>
+			</preference>
+            <preference>
+                <name>propertyId</name>
+                <description>关联属性标识符</description>
+            </preference>
+            <preference>
+                <name>category-id</name>
+                <description>关联分类</description>
+            </preference>
+            <preference>
+                <name>value</name>
+                <value>on</value>
+                <description>值</description>
+            </preference>
+            <preference>
+                <name>label</name>
+                <description>标签，为空则不产生label标签。</description>
+            </preference>
+            <preference>
+                <name>checked</name>
+                <value>false</value>
+                <description>是否选中</description>
+            </preference>
+            <preference>
+				<name>echo</name>
+				<value>nodeEcho</value>
+                                <description>是否回显</description>
+			</preference>
+        </portlet-preferences>
+    </portlet>
+</portlet-app>

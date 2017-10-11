@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">内容分类名称占位符用来输出当前内容分类的名字。在其名称上可以设置链接，链接到其它页面上去。</description>
+		<portlet-name>nodeDefinition-name</portlet-name>
+		<display-name xml:lang="zh">内容分类名称占位符</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+		<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/field/nodeDefinition.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.field.nodeDefinition.Resource</resource-bundle>
+		<portlet-preferences>
+                        <preference>
+				<name>newWindows</name>
+				<value>_blank</value>
+			</preference>
+			<preference>
+				<name>channel</name>
+			</preference>
+			<preference>
+				<name>contentType</name>
+				<value>default</value>
+			</preference>
+			<preference>
+				<name>style</name>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

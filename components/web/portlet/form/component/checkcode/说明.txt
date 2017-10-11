@@ -1,0 +1,1 @@
+﻿这三个页面组合为验证码输入功能，主页面为authCodeInput.jsp，生成验证码图片的页面为authCodeImage.jsp,authCodeReturn.jsp为实时返回当前验证码的页面。

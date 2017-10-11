@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">文本框用于需要使用文本框进行文字输入的场合。</description>
+		<portlet-name>textinput</portlet-name>
+		<display-name xml:lang="zh">文本框</display-name>
+		<portlet-class>com.fulong.portlet.component.text.simple.TextInputComponent</portlet-class>
+	<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/form/text.xml</value>
+		</init-param>
+
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.component.text.simple.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>size</name>
+				<value></value>
+                                <description>长度</description>
+			</preference>
+                        <preference>
+                                <name>contentType</name>
+                                <value>default</value>
+			</preference>
+			<preference>
+				<name>maxLength</name>
+				<value></value>
+                                <description>最多字符数</description>
+			</preference>
+			<preference>
+				<name>propertyId</name>
+				<value></value>
+                                <description>关联属性标识符</description>
+			</preference>
+			<preference>
+				<name>tabindex</name>
+				<value></value>
+                                <description>tab键顺序</description>
+			</preference>
+			<preference>
+				<name>password</name>
+				<value>false</value>
+                                <description>密码域</description>
+			</preference>
+			<preference>
+				<name>style</name>
+				<value></value>
+                                <description>样式</description>
+			</preference>
+			<preference>
+				<name>value</name>
+				<value></value>
+                                <description>缺省值</description>
+			</preference>
+			<preference>
+				<name>vcard</name>
+				<value></value>
+                                <description>自动完成</description>
+			</preference>
+			<preference>
+				<name>propertyWhich</name>
+				<value>1</value>
+                                <description>多值属性的第几个属性</description>
+			</preference>
+			<preference>
+				<name>echo</name>
+				<value>nodeEcho</value>
+                                <description>是否回显</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

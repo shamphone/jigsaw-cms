@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">上移按钮对一条内容进行上移操作，也就是把内容的序号置成前一个内容的序号。</description>
+		<portlet-name>shiftButton</portlet-name>
+		<display-name xml:lang="zh">上移按钮</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+	        <init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/form/shift.xml</value>
+		</init-param>
+                <init-param>
+			<name>script-file</name>
+			<value>/components/portlet/form/button/sort/script.js.jsp</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.button.sort.shift.Resource</resource-bundle>
+                  <portlet-preferences>
+			<preference>
+				<name>style</name>
+				<value></value>
+                                <description>样式</description>
+			</preference>
+			<preference>
+				<name>value</name>
+				<value>上移</value>
+                                <description>显示文字</description>
+			</preference>
+                          <preference>
+                                  <name>channel</name>
+                                  <value></value>
+                                  <description>跳转到的栏目ID</description>
+                          </preference>
+            <preference>
+                <name>contentType</name>
+                <value>default</value>
+            </preference>
+            <preference>
+                <name>process</name>
+                <value>blank</value>
+            </preference>
+            <preference>
+                <name>activity</name>
+                <value>begin</value>
+            </preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

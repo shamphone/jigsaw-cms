@@ -1,0 +1,17 @@
+#/portal/portlet/timer/edit.jsp
+
+com.fulong.portal.portlet.timer.edit.option0.baseSet=基本设置
+com.fulong.portal.portlet.timer.edit.formTitle1.baseTime=基准时间
+com.fulong.portal.portlet.timer.edit.formTitle2.format=展示形式
+com.fulong.portal.portlet.timer.edit.formTitle2.option.default=默认
+com.fulong.portal.portlet.timer.edit.formTitle2.option.simple=简易
+com.fulong.portal.portlet.timer.edit.toolbar.submit.save=保存
+com.fulong.portal.portlet.timer.edit.toolbar.button.cancel=取消
+
+#/portal/portlet/timer/finalNormal.jsp
+
+com.fulong.portal.portlet.timer.finalNormal.day=天
+com.fulong.portal.portlet.timer.finalNormal.hour=小时
+com.fulong.portal.portlet.timer.finalNormal.minute=分钟
+com.fulong.portal.portlet.timer.finalNormal.second=秒
+

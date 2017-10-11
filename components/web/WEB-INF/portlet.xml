@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd" version="">
+	<custom-portlet-mode>
+	<description xml:lang="zh">预览</description>
+		<portlet-mode>PREVIEW</portlet-mode>		
+	</custom-portlet-mode>
+	<custom-portlet-mode>
+	<description xml:lang="zh">效果</description>
+		<portlet-mode>FINAL</portlet-mode>		
+	</custom-portlet-mode>
+</portlet-app>

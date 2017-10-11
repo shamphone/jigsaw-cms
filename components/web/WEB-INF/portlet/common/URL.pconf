@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+	    <description xml:lang="zh">远程资源占位符，将动态的网站页面转为静态的html页面进行展示，以达到快速渲染的目的。在“页面地址”框中输入的地址应该是http://xxx.xxx.xxx/xxx形式的，但为了避免循环嵌套，不能设置为当前装配页面的地址。</description>
+		<portlet-name>urlPortlet</portlet-name>
+		<display-name xml:lang="zh">远程资源占位符</display-name>
+		<portlet-class>com.fulong.portlet.common.url.URLPortlet</portlet-class>
+                <init-param>
+                          <name>config-file</name>
+                          <value>/WEB-INF/portlet/common/URL.xml</value>
+		</init-param>
+		<init-param>
+			<name>period</name>
+			<value>60000</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.common.url.Resources</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>url</name>
+				<value>http://www.fulong.com.cn</value>
+			</preference>
+			<preference>
+				<name>timeout</name>
+				<value>3</value>
+			</preference>
+			<preference>
+				<name>encoding</name>
+				<value></value>
+			</preference>
+			<preference>
+				<name>method</name>
+				<value>GET</value>
+			</preference>
+			<preference>
+				<name>parameters</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>values</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>contextName</name>
+				<value></value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

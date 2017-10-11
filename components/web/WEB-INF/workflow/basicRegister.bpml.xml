@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkflowProcesses xmlns="http://www.wfmc.org/2008/XPDL2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 bpmnxpdl_31.xsd">
+    <WorkflowProcess DefaultStartActivityId="begin" Id="basicRegister" Name="基本用户注册流程" Module="components">
+        <VMLProperties actionFocusedStrokeColor="yellow"
+            actionStrokeColor="#0269D0" actionTextColor=""
+            isStep3D="false" isStepShadow="T" sStepStrokeColor="#EFF2F5"
+            sStepTextColor="white" step3DDepth="20" stepColor1="#FFFFFF"
+            stepColor2="#EDEDED" stepFocusedStrokeColor="yellow"
+            stepShadowColor="#C0C0C0" stepStrokeColor="#CDCDCD" stepTextColor="black"/>
+        <FlowProperties activeForm="" autoExe="" endTime="" flowMode=""
+            ifMonitor="" noteMode="" runMode="" startTime=""/>
+        <ProcessHeader>
+            <Description><![CDATA[基本用户注册流程。]]></Description>
+        </ProcessHeader>
+        <Activities>
+            <Activity Id="begin" Name="起始活动" StartMode="Automatic">
+                <Description>起始活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="120" Width="180">
+                        <Coordinates XCoordinate="319px" YCoordinate="927px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="end" Name="结束活动" StartMode="Automatic">
+                <Description>结束活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="120" Width="180">
+                        <Coordinates XCoordinate="1920px" YCoordinate="916px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="register" Name="用户注册" StartMode="Manual" xmlns="">
+                <Description>用户填写注册信息并保存</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="760px" YCoordinate="837px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="encpassword" Name="加密密码" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="1254px" YCoordinate="847px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="encpassword">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>encCategoryID</name>
+                                    <value>principal-scheme</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>propertyName</name>
+                                    <value>密码</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>encCategoryName</name>
+                                    <value>会员库</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>property</name>
+                                    <value>user-password</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+        </Activities>
+        <Transitions>
+            <Transition From="begin" Id="newaction0" Name="用户注册"
+                To="register" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="register" Id="newaction1" Name="加密密码"
+                To="encpassword" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="encpassword" Id="newaction2" Name="结束"
+                To="end" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+        </Transitions>
+    </WorkflowProcess>
+</WorkflowProcesses>

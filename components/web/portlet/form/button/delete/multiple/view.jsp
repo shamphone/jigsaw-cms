@@ -1,0 +1,7 @@
+<%@page contentType="text/html; charset=UTF-8"%>
+<%@taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%>
+<%@taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@taglib uri="/WEB-INF/struts-html.tld" prefix="html"%>
+<logic:empty name="preferences" property="value(imgsrc)"><button <logic:notEmpty name="preferences" property="value(style)">class="<bean:write name="preferences" property="value(style)"/>"</logic:notEmpty>		<logic:notEmpty name="preferences" property="value(tabindex)">tabindex="<bean:write name="preferences" property="value(tabindex)"/>"</logic:notEmpty>		<logic:notEmpty name="preferences" property="value(size)">size="<bean:write name="preferences" property="value(size)"/>"</logic:notEmpty>		<logic:notEmpty name="preferences" property="value(size)">size="<bean:write name="preferences" property="value(size)"/>"</logic:notEmpty>		><bean:write name="preferences"		property="value(value)" /></button></logic:empty><logic:notEmpty name="preferences" property="value(imgsrc)">	<image  src="<bean:write name="preferences" property="value(imgsrc)"/>" 		<logic:notEmpty name="preferences" property="value(imgstyle)">class="<bean:write name="preferences" property="value(imgstyle)"/>"</logic:notEmpty>		<logic:notEmpty name="preferences" property="value(tabindex)">tabindex="<bean:write name="preferences" property="value(tabindex)"/>"</logic:notEmpty>		style="width:<bean:write name="preferences" property="value(imgwidth)" ignore="true"/>; height:<bean:write name="preferences" property="value(imgheight)" ignore="true"/>"		></logic:notEmpty>
+
+

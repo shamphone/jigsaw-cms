@@ -1,0 +1,5 @@
+<%@page contentType="text/html; charset=UTF-8"%>
+<%@taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%>
+<%@taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<input type="text" <logic:notEmpty name="preferences" property="value(inputStyle)">class="<bean:write name="preferences" property="value(inputStyle)"/>"</logic:notEmpty> id='Input' value=''/>
+<button  <logic:notEmpty name="preferences" property="value(buttonStyle)">class="<bean:write name="preferences" property="value(buttonStyle)"/>"</logic:notEmpty><logic:notEmpty name="preferences" property="value(tabindex)">tabindex="<bean:write name="preferences" property="value(tabindex)"/>"</logic:notEmpty> <logic:notEmpty name="preferences" property="value(size)">size="<bean:write name="preferences" property="value(size)"/>"</logic:notEmpty> <logic:notEmpty name="preferences" property="value(size)">size="<bean:write name="preferences" property="value(size)"/>"</logic:notEmpty>><bean:write name="preferences" property="value(buttonWord)"/></button>

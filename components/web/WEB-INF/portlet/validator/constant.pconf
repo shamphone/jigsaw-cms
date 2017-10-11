@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">常量校验为表单控件产生的实时数据进行校验的控件。在正常情况下显示提示信息，在用户输入值有误时，显示错误信息。</description>
+		<portlet-name>constant</portlet-name>
+		<display-name xml:lang="zh">常量校验</display-name>
+		<portlet-class>com.fulong.portlet.validator.ValidatorPortlet</portlet-class>
+	<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/validator/constant.xml</value>
+		</init-param>
+	<init-param>
+			<name>script-file</name>
+			<value>/components/portlet/validator/constant/script.js.jsp</value>
+		</init-param>
+
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.validator.constant.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>component</name>
+                                <description>校验对象</description>
+			</preference>
+			<preference>
+				<name>required</name>
+				<value>false</value>
+                                <description>必填</description>
+			</preference>
+			<preference>
+				<name>唯一</name>
+				<value>unique</value>
+                                <description>唯一，在该分类中唯一</description>
+			</preference>
+			<preference>
+				<name>conditions</name>
+				<value></value>
+                                <description>校验条件，多个，和校验值相对应</description>
+			</preference>
+			<preference>
+				<name>values</name>
+				<value></value>
+                                <description>校验值，多个，和校验值相对应</description>
+			</preference>
+			<preference>
+				<name>tips</name>
+				<value></value>
+                                <description>正常显示的文字，可以为多格式文本</description>
+			</preference>
+			<preference>
+				<name>tips-style</name>
+				<value></value>
+                                <description>正常提示的文字格式</description>
+			</preference>
+			<preference>
+				<name>error-tips</name>
+				<value></value>
+                                <description>错误提示的文字，可以为多格式文本</description>
+			</preference>
+			<preference>
+				<name>error-style</name>
+				<value></value>
+                                <description>错误提示的文字格式</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

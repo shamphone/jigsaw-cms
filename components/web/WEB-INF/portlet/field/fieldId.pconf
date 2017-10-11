@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">ID内容域占位符是用于显示当前内容的ID号。</description>
+		<portlet-name>fieldId</portlet-name>
+		<display-name xml:lang="zh">ID内容域占位符</display-name>
+		<portlet-class>com.fulong.portlet.field.fieldId.ContentField</portlet-class>
+		<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/field/fieldId.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.field.fieldId.Resource</resource-bundle>
+		<portlet-preferences>
+                        <preference>
+				<name>newWindows</name>
+				<value>_blank</value>
+			</preference>
+			<preference>
+				<name>target</name>
+				<value></value>
+			</preference>
+             <preference>
+                                <name>definitionType</name>
+                                <value>default</value>
+			</preference>
+                        <preference>
+                                <name>contentType</name>
+                                <value>default</value>
+			</preference>
+			<preference>
+				<name>font_style</name>
+				<value/>
+			</preference>
+                        <preference>
+				<name>fieldStyle</name>
+				<value/>
+			</preference>
+                        <preference>
+				<name>length</name>
+			</preference>
+			<preference>
+				<name>type</name>
+				<value>item</value>
+			</preference>
+            <preference>
+				<name>suffix</name>
+				<value>...</value>
+			</preference>
+			<preference>
+				<name>url</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>channel</name>
+				<value/>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<bean id="categoryInfo" class="com.fulong.service.container.ServiceCategoryInfo">
+		<property name="name">
+			<value>基本内容操作服务</value>
+		</property>
+		<property name="description">
+			<value>提供给各系统使用的基础服务</value>
+		</property>
+	</bean>
+
+	<bean id="copyContent" class="com.fulong.service.content.CopyMoveRecommendService" name="内容复制转移推荐服务" parent="nodeService">
+		<description>自动将内容复制或转移或推荐到另一个分类中。</description>	
+		<property name="editorPath">
+			<value>/service/content/edit.copyMoveRecommend.jsp</value>
+		</property>
+	</bean>
+	<bean id="deliverContent" class="com.fulong.service.content.RecNodeService" name="内容投递服务" parent="nodeService">
+		<description>自动将内容投递到另一个分类中。</description>
+				<property name="editorPath">
+			<value>/service/content/edit.rec.jsp</value>
+		</property>
+	</bean>
+	<bean id="sendNodes" class="com.fulong.service.content.SendNodesService" name="发送内容服务"  parent="nodeService">
+	<description>将内容发送到远程分类。</description>
+		<property name="editorPath">
+			<value>/service/content/edit.send.jsp</value>
+		</property>
+	</bean>
+	<bean id="receiveNodes" class="com.fulong.service.content.ReceiveNodesService" name="接收内容服务"  parent="nodeService">
+		<description>从远程分类接收内容到本地分类。</description>
+		<property name="editorPath">
+			<value>/service/content/edit.receive.jsp</value>
+		</property>
+	</bean>	
+	<bean id="deleteContent" class="com.fulong.service.content.delete.SynDeleteService" name="删除内容服务" parent="nodeService">
+		<description>将内容从分类中删除。</description>
+				<property name="editorPath">
+			<value>/service/content/deleteContent.jsp</value>
+		</property>
+	</bean>
+	<bean id="mail" class="com.fulong.service.content.SendMailService" name="邮件发送服务" parent="nodeService">
+		<description>邮件发送服务</description>
+				<property name="editorPath">
+			<value>/service/content/sendMail.jsp</value>
+		</property>
+	</bean>
+	<bean id="imageCompress" class="com.fulong.service.content.ImageCompressService" name="图片压缩服务" parent="nodeService">
+		<description>图片压缩服务</description>
+		<property name="editorPath">
+			<value>/service/content/imageCompress.jsp</value>
+		</property>
+		<property name="siteFactory" ref="siteFactory">
+		</property>
+	</bean>
+	<bean id="processSensitiveWords" class="com.fulong.service.content.ProcessSensitiveWordsService" name="内容属性中敏感词处理服务" parent="nodeService">
+		<description>内容属性中敏感词处理服务</description>
+		<property name="editorPath">
+			<value>/service/content/processSensitiveWords.jsp</value>
+		</property>
+	</bean>
+</beans>

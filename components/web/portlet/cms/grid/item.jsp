@@ -1,0 +1,1 @@
+<%@ page contentType="text/html; charset=UTF-8" %><%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean" %><%@ taglib uri="/WEB-INF/fulong-cms.tld" prefix="cms" %> <bean:define id="propertyName" name="propertyName" type="String"/><cms:node name="com.fulong.longcon.Content" propertyName='<%=propertyName%>' format="#" ignore="true"/>

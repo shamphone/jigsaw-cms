@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkflowProcesses xmlns="http://www.wfmc.org/2008/XPDL2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 bpmnxpdl_31.xsd">
+    <WorkflowProcess DefaultStartActivityId="begin" Id="smeDeleteNode" Name="政策法规频道删除节点流程" Module="components">
+        <VMLProperties actionFocusedStrokeColor="yellow"
+            actionStrokeColor="#0269D0" actionTextColor=""
+            isStep3D="false" isStepShadow="T" sStepStrokeColor="#EFF2F5"
+            sStepTextColor="white" step3DDepth="20" stepColor1="#FFFFFF"
+            stepColor2="#EDEDED" stepFocusedStrokeColor="yellow"
+            stepShadowColor="#C0C0C0" stepStrokeColor="#CDCDCD" stepTextColor="black"/>
+        <FlowProperties activeForm="" autoExe="" endTime="" flowMode=""
+            ifMonitor="" noteMode="" runMode="" startTime=""/>
+        <ProcessHeader>
+            <Description><![CDATA[用于政策法规频道中删除节点，包括删除远程共享节点]]></Description>
+            <FormalParameters>
+                <FormalParameter xmlns="">
+                    <name>definitionID</name>
+                    <value>2485924315812</value>
+                </FormalParameter>
+            </FormalParameters>
+        </ProcessHeader>
+        <Activities>
+            <Activity Id="begin" Name="起始活动" StartMode="Automatic">
+                <Description>起始活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="120" Width="180">
+                        <Coordinates XCoordinate="309px" YCoordinate="968px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="end" Name="结束活动" StartMode="Automatic">
+                <Description>结束活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="120" Width="180">
+                        <Coordinates XCoordinate="3890px" YCoordinate="919px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="deleteNode" Name="删除节点" StartMode="Manual" xmlns="">
+                <Description>删除一个大纲下的内容节点</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="880px" YCoordinate="905px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="deleteShareNode" Name="删除远程共享节点"
+                StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="2365px" YCoordinate="909px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="deleteContent">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>remote4CategoryIDDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5CategoryNameDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2URLDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryNameDel</name>
+                                    <value>总站</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryIDDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4URLDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryIDDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1URLDel</name>
+                                    <value>policy.smeln.gov.cn/longcon</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3URLDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryIDDel</name>
+                                    <value>2485924315812</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5URLDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryNameDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryNameDel</name>
+                                    <value>远程内容</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5CategoryIDDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryNameDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryIDDel</name>
+                                    <value>2491647219660</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4CategoryNameDel</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryID</name>
+                                    <value>2485924315812</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryName</name>
+                                    <value>总站</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1Domain</name>
+                                    <value>policy.smeln.gov.cn/longcon</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryID</name>
+                                    <value>2491647219660</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryName</name>
+                                    <value>远程内容</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2Domain</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3Domain</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4Domain</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5Domain</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+        </Activities>
+        <Transitions>
+            <Transition From="begin" Id="newaction0" Name="删除节点"
+                To="deleteNode" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="deleteNode" Id="newaction1" Name="删除远程节点"
+                To="deleteShareNode" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="deleteShareNode" Id="newaction2" Name="结束"
+                To="end" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+        </Transitions>
+    </WorkflowProcess>
+</WorkflowProcesses>

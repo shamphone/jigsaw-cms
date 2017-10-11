@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">幻灯片特效用来播放幻灯片。一般用于多张新闻图片的滚动播放。</description>
+		<portlet-name>lantern</portlet-name>
+		<display-name xml:lang="zh">多屏切换焦点图片特效</display-name>
+		<portlet-class>com.fulong.portlet.effects.EffectsPortlet</portlet-class>
+	<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/effects/lantern.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-preferences>
+			<preference>
+				<name>component</name>
+                <description>搭配占位符</description>
+			</preference>
+			<preference>
+				<name>height</name>
+                <description>高度</description>
+			</preference>
+			<preference>
+				<name>width</name>
+                <description>宽度</description>
+			</preference>
+			<preference>
+				<name>title_height</name>
+				<value>16</value>
+                <description>高度</description>
+			</preference>
+			<preference>
+				<name>time</name>
+				<value>7000</value>
+                <description>变幻延迟时间</description>
+			</preference>
+			<preference>
+				<name>speed</name>
+				<value>22</value>
+                <description>图片切换速度</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

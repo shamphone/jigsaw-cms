@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">跳转搭配日历重复器使用，给日历重复器提供特定的初始时间参数，类似于对日历重复器列表做翻页操作，以按钮、链接或图片的形式展示。</description>
+		<portlet-name>forward</portlet-name>
+		<display-name xml:lang="zh">跳转</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+	        <init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/date/forward.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.date.forward.Resource</resource-bundle>
+                  <portlet-preferences>
+            <preference>
+				<name>channel</name>
+				<value/>
+                <description>跳转到</description>
+			</preference>
+			<preference>
+				<name>style</name>
+				<value></value>
+                <description>样式</description>
+			</preference>
+			<preference>
+				<name>value</name>
+				<value>今天</value>
+                <description>显示文字</description>
+			</preference>
+            <preference>
+                 <name>showHref</name>
+                 <value>false</value>
+                 <description>是否以超链接展示</description>
+            </preference>
+            <preference>
+                 <name>openInNewWindow</name>
+                 <value>false</value>
+                 <description>是否在新窗口打开</description>
+            </preference>
+            <preference>
+            	<name>imgsrc</name>
+                <description>图片地址</description>
+			</preference>
+						<preference>
+            	<name>imgheight</name>
+                <description>图片高度</description>
+			</preference>
+						<preference>
+            	<name>imgwidth</name>
+                <description>图片宽度</description>
+			</preference>
+						<preference>
+            	<name>imgstyle</name>
+                <description>图片样式</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

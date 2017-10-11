@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+   <form-beans>
+	<form-bean name="configForm" type="com.fulong.portlet.PortletPreferencesForm"/>
+  </form-beans>
+  <action-mappings>
+    <action name="configForm" path="/deleteNode" type="com.fulong.portlet.button.delete.multiple.DeleteNodeAction"/>
+    <action name="configForm" path="/save" type="com.fulong.portlet.button.delete.multiple.SaveAction"/>
+    <action  name="configForm"  path="/edit" type="com.fulong.portlet.button.delete.multiple.EditRender">
+      <forward name="success" path="/portlet/form/button/delete/multiple/edit.jsp"/>
+      <forward name="noForm" path="/portlet/form/noForm.jsp"/>
+    </action>
+    <action path="/view" type="com.fulong.portlet.button.delete.multiple.ViewRender">
+      <forward name="success" path="/portlet/form/button/delete/multiple/view.jsp"/>
+    </action>
+    <action path="/final" type="com.fulong.portlet.button.delete.multiple.FinalRender">
+      <forward name="success" path="/portlet/form/button/delete/multiple/final.jsp"/>
+    </action>
+  </action-mappings>
+</struts-config>

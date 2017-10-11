@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">二级多选复选框</description>
+		<portlet-name>checkboxTwo</portlet-name>
+		<display-name xml:lang="zh">二级多选复选框</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+	<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/form/checkbox.two.xml</value>
+		</init-param>
+
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.component.checkbox.two.Resource</resource-bundle>
+		<portlet-preferences>
+            <preference>
+                <name>contentType</name>
+                <value>default</value>
+			</preference>
+			<preference>
+				<name>maxLength</name>
+				<value></value>
+                <description>最多字符数</description>
+			</preference>
+			<preference>
+				<name>filter-patterns</name>
+				<value></value>
+                <description>关联属性</description>
+			</preference>
+			<preference>
+				<name>category</name>
+				<value></value>
+                <description>提示字库</description>
+			</preference>
+			<preference>
+				<name>firstStyle</name>
+				<value></value>
+                <description>一级样式</description>
+			</preference>
+			<preference>
+				<name>secondStyle</name>
+				<value></value>
+                <description>二级样式</description>
+			</preference>
+			<preference>
+				<name>tabindex</name>
+				<value></value>
+                <description>tab键顺序</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

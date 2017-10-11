@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">自定义排序按钮根据用户输入的数值（只能是正整数），设置内容的序号，排序按钮即保存内容序号值。</description>
+		<portlet-name>sortButton</portlet-name>
+		<display-name xml:lang="zh">自定义排序按钮</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+	        <init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/form/sort.xml</value>
+		</init-param>
+                <init-param>
+			<name>script-file</name>
+			<value>/components/portlet/form/button/sort/script.js.jsp</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.button.sort.sort.Resource</resource-bundle>
+                  <portlet-preferences>
+			<preference>
+				<name>inputStyle</name>
+				<value></value>
+                                <description>文本框样式</description>
+			</preference>
+			<preference>
+				<name>buttonStyle</name>
+				<value></value>
+                                <description>按钮样式</description>
+			</preference>
+			<preference>
+                <name>process</name>
+                <value>blank</value>
+            </preference>
+            <preference>
+                <name>activity</name>
+                <value>begin</value>
+            </preference>
+			<preference>
+				<name>buttonWord</name>
+				<value>排序</value>
+                                <description>显示文字</description>
+			</preference>
+                          <preference>
+                                  <name>channel</name>
+                                  <value></value>
+                                  <description>跳转到的栏目ID</description>
+                          </preference>
+            <preference>
+                <name>contentType</name>
+                <value>default</value>
+            </preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">数据内容域占位符用于展示一些数字类型属性值字段，它可以展示整数，浮点数等等。</description>
+		<portlet-name>numeral</portlet-name>
+		<display-name xml:lang="zh">数据内容域占位符</display-name>
+		<portlet-class>com.fulong.portlet.field.numeral.NumberField</portlet-class>
+		<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/field/numeral.xml</value>
+		</init-param>
+		<init-param>
+            <name>numberFormat</name>
+            <value>####.000,####.00,####.0,####,0.000E00,00.0000%,00.00%,00%</value>
+        </init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.field.string.Resource</resource-bundle>
+		<portlet-preferences>
+            <preference>
+				<name>newWindows</name>
+				<value>_blank</value>
+			</preference>
+			<preference>
+				<name>category</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>content-id</name>
+				<value/>
+            </preference>
+            <preference>
+                <name>definitionType</name>
+                <value>default</value>
+			</preference>
+            <preference>
+                <name>contentType</name>
+                <value>default</value>
+			</preference>
+			<preference>
+				<name>field</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>format</name>
+				<value>#</value>
+			</preference>
+			<preference>
+				<name>font_style</name>
+				<value/>
+			</preference>
+            <preference>
+				<name>fieldStyle</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>type</name>
+				<value>item</value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

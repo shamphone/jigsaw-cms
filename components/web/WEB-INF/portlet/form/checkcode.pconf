@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">验证码是在用户登录时使用，与密码输入框结合使用，以便于提高用户登录安全性。</description>
+		<portlet-name>checkcode</portlet-name>
+		<display-name xml:lang="zh">验证码占位符</display-name>
+		<portlet-class>com.fulong.portlet.component.checkcode.CheckCodePortlet</portlet-class>
+        <init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/form/checkcode.xml</value>
+		</init-param>
+		<init-param>
+			<name>script-file</name>
+			<value>/components/portlet/form/component/checkcode/script.js.jsp</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<portlet-preferences>
+			<preference>
+				<name>height</name>
+				<value></value>
+                <description>图片高度</description>
+			</preference>
+			<preference>
+				<name>width</name>
+				<value></value>
+                <description>图片宽度</description>
+			</preference>
+			<preference>
+				<name>inputStyle</name>
+				<value></value>
+                <description>输入框样式</description>
+			</preference>
+			<preference>
+				<name>ULStyle</name>
+				<value></value>
+                <description>列表样式</description>
+			</preference>
+			<preference>
+				<name>tips</name>
+				<value></value>
+                <description>正常显示的文字，可以为多格式文本</description>
+			</preference>
+			<preference>
+				<name>tips-style</name>
+				<value></value>
+                                <description>正常提示的文字格式</description>
+			</preference>
+			<preference>
+				<name>error-tips</name>
+				<value></value>
+                                <description>错误提示的文字，可以为多格式文本</description>
+			</preference>
+			<preference>
+				<name>error-style</name>
+				<value></value>
+                                <description>错误提示的文字格式</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkflowProcesses xmlns="http://www.wfmc.org/2008/XPDL2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 bpmnxpdl_31.xsd">
+    <WorkflowProcess DefaultStartActivityId="begin" Id="smeSaveNode" Name="政策法规后台编辑流程" Module="components">
+        <VMLProperties actionFocusedStrokeColor="green"
+            actionStrokeColor="#000000" actionTextColor=""
+            isStep3D="false" isStepShadow="T" sStepStrokeColor="#EFF2F5"
+            sStepTextColor="white" step3DDepth="20" stepColor1="#FFFFFF"
+            stepColor2="#EDEDED" stepFocusedStrokeColor="green"
+            stepShadowColor="#C0C0C0" stepStrokeColor="black" stepTextColor="black"/>
+        <FlowProperties activeForm="" autoExe="" endTime="" flowMode=""
+            ifMonitor="" noteMode="" runMode="" startTime=""/>
+        <ProcessHeader>
+            <Description><![CDATA[用于政策法规频道后台编辑录入时使用的流程]]></Description>
+            <FormalParameters>
+                <FormalParameter xmlns="">
+                    <name>definitionID</name>
+                    <value>2485924315812</value>
+                </FormalParameter>
+            </FormalParameters>
+        </ProcessHeader>
+        <Activities>
+            <Activity Id="saveNode" Name="保存内容" StartMode="Manual" xmlns="">
+                <Description>保存内容</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="493px" YCoordinate="854px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="addKeywords" Name="添加新关键字" StartMode="Manual" xmlns="">
+                <Description>往关键字内容分类中自动添加新的关键字</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="1353px" YCoordinate="892px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="addSuggestKeywords">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>dictDisplayName</name>
+                                    <value>title</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>contentDef</name>
+                                    <value>2485924315812</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>contentDefName</name>
+                                    <value>总站</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>keywordsProp</name>
+                                    <value>keywords</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>keywordsPropName</name>
+                                    <value>关键词</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>dictDef</name>
+                                    <value>2484195392471</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>dictDefName</name>
+                                    <value>关键字</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>dictDisplayProp</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>dictDisplayPropName</name>
+                                    <value>名称</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+            <Activity Id="editNode" Name="修改内容" StartMode="Manual" xmlns="">
+                <Description>修改内容</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="1196px" YCoordinate="1932px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="check" Name="是否发布" StartMode="Manual" xmlns="">
+                <Description>是否发布</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="2264px" YCoordinate="941px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Route/>
+            </Activity>
+            <Activity Id="begin" Name="起始活动" StartMode="Manual" xmlns="">
+                <Description>起始活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="100" Width="80">
+                        <Coordinates XCoordinate="18px" YCoordinate="843px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="end" Name="结束活动" StartMode="Manual" xmlns="">
+                <Description>结束活动的描述</Description>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="100" Width="80">
+                        <Coordinates XCoordinate="3945px" YCoordinate="957px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+            </Activity>
+            <Activity Id="sendContent" Name="发送共享" StartMode="Manual" xmlns="">
+                <Description/>
+                <NodeGraphicsInfos>
+                    <NodeGraphicsInfo Height="200" Width="200">
+                        <Coordinates XCoordinate="2961px" YCoordinate="934px"/>
+                    </NodeGraphicsInfo>
+                </NodeGraphicsInfos>
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="sendNodes">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>remote5CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryID</name>
+                                    <value>2491647219660</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1URL</name>
+                                    <value>policy.smeln.gov.cn/longcon</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localTemplateID</name>
+                                    <value>zhengcefagui</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2URL</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote1CategoryName</name>
+                                    <value>远程内容</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3URL</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4URL</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localDomain</name>
+                                    <value>policy.sme.gov.cn/longcon</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote5URL</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote2CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryName</name>
+                                    <value>总站</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localDomainName</name>
+                                    <value>www.smezcfg.com</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localCategoryID</name>
+                                    <value>2485924315812</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote4CategoryName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remote3CategoryID</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop500</name>
+                                    <value>$未发布</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.title</name>
+                                    <value>title</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.sourceDomain</name>
+                                    <value>sourceDomain</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop781</name>
+                                    <value>prop781</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop688</name>
+                                    <value>prop688</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop687</name>
+                                    <value>prop687</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop35</name>
+                                    <value>prop35</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop62</name>
+                                    <value>prop62</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop203</name>
+                                    <value>prop203</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop843</name>
+                                    <value>prop843</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop718</name>
+                                    <value>$未发布</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop937</name>
+                                    <value>prop937</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop968</name>
+                                    <value>prop968</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop359</name>
+                                    <value>prop359</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.senderURL</name>
+                                    <value>senderURL</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop515</name>
+                                    <value>prop515</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop0</name>
+                                    <value>prop0</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.sourceID</name>
+                                    <value>sourceID</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop578</name>
+                                    <value>prop578</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop250</name>
+                                    <value>prop250</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop127</name>
+                                    <value>$</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop703</name>
+                                    <value>prop703</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop734</name>
+                                    <value>prop734</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop157</name>
+                                    <value>prop157</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop796</name>
+                                    <value>prop796</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.keywords</name>
+                                    <value>keywords</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop48</name>
+                                    <value>prop48</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop921</name>
+                                    <value>prop921</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop953</name>
+                                    <value>prop953</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop984</name>
+                                    <value>prop984</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop78</name>
+                                    <value>prop78</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop343</name>
+                                    <value>prop343</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop859</name>
+                                    <value>prop859</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>2491647219660.prop218</name>
+                                    <value>prop218</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>localURL</name>
+                                    <value>http://policy.sme.gov.cn/longcon/</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remoteURL</name>
+                                    <value>http://policy.smeln.gov.cn/longcon</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remoteCategoryID</name>
+                                    <value>2491647219660</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>remoteCategoryName</name>
+                                    <value>远程内容</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>mapping</name>
+                                    <value>title=title</value>
+                                    <value>prop250=prop250</value>
+                                    <value>prop781=prop781</value>
+                                    <value>prop984=prop984</value>
+                                    <value>keywords=keywords</value>
+                                    <value>prop703=prop703</value>
+                                    <value>prop953=prop953</value>
+                                    <value>prop62=prop62</value>
+                                    <value>prop796=prop796</value>
+                                    <value>prop0=prop0</value>
+                                    <value>prop688=prop688</value>
+                                    <value>prop78=prop78</value>
+                                    <value>prop687=prop687</value>
+                                    <value>prop218=prop218</value>
+                                    <value>prop343=prop343</value>
+                                    <value>prop359=prop359</value>
+                                    <value>prop578=prop578</value>
+                                    <value>prop515=prop515</value>
+                                    <value>prop921=prop921</value>
+                                    <value>prop968=prop968</value>
+                                    <value>prop203=prop203</value>
+                                    <value>prop843=prop843</value>
+                                    <value>prop734=prop734</value>
+                                    <value>prop937=prop937</value>
+                                    <value>prop157=prop157</value>
+                                    <value>prop48=prop48</value>
+                                    <value>prop35=prop35</value>
+                                    <value>sourceID=sourceID</value>
+                                    <value>senderURL=senderURL</value>
+                                    <value>prop718=&quot;未发布&quot;</value>
+                                    <value>prop127=</value>
+                                    <value>prop859=prop859</value>
+                                    <value>prop500=&quot;未发布&quot;</value>
+                                    <value>sourceDomain=&quot;&quot;</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+            </Activity>
+        </Activities>
+        <Transitions>
+            <Transition From="saveNode" Id="newaction0" Name="添加关键词"
+                To="addKeywords" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="begin" Id="newaction2" Name="保存节点"
+                To="saveNode" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="sendContent" Id="newaction5" Name="结束"
+                To="end" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="editNode" Id="newaction6" Name="保存修改"
+                To="saveNode" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+            <Transition From="check" Id="newaction8" Name="未发布"
+                To="editNode" xmlns="">
+                <BindingCategory Id="2485924315812" Name="总站"/>
+                <Condition Type="CONDITION">prop718 equal 未发布</Condition>
+            </Transition>
+            <Transition From="check" Id="newaction9" Name="已发布"
+                To="sendContent" xmlns="">
+                <BindingCategory Id="2485924315812" Name="总站"/>
+                <Condition Type="CONDITION">prop718 equal 已发布</Condition>
+            </Transition>
+            <Transition From="addKeywords" Id="newaction1" Name="是否发布"
+                To="check" xmlns="">
+                <BindingCategory Id="" Name=""/>
+                <Condition Type="NONE"/>
+            </Transition>
+        </Transitions>
+    </WorkflowProcess>
+</WorkflowProcesses>

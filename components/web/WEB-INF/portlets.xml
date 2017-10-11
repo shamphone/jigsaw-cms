@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<longcon-portlets>
+  
+  <portlet-category>
+    <name>common</name>
+    <display-name lang="zh">通用类</display-name>
+    <description lang="zh">通用类</description>
+    <portlet-config>/WEB-INF/portlet/common/counter.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/common/URL.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/common/timer.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/forward.pconf</portlet-config> 
+    <portlet-config>/WEB-INF/portlet/common/ajaxGetClip.pconf</portlet-config>    
+
+  </portlet-category>
+  <portlet-category>
+    <name>security</name>
+    <display-name lang="zh">安全类</display-name>
+    <description lang="zh">安全类</description>
+    <portlet-config>/WEB-INF/portlet/form/login.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/logout.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/autoLogin.pconf</portlet-config>    
+    <portlet-config>/WEB-INF/portlet/validator/login.pconf</portlet-config>
+  </portlet-category>
+  <portlet-category>
+    <name>site</name>
+    <display-name lang="zh">网站类</display-name>
+    <description lang="zh">网站类</description>
+    <portlet-config>/WEB-INF/portlet/site/statical.pconf</portlet-config>
+    <!--<portlet-config>/WEB-INF/portlet/site/visitor.pconf</portlet-config>-->
+  </portlet-category>
+  <portlet-category>
+    <name>list</name>
+    <display-name lang="zh">列表展示类</display-name>
+    <description lang="zh">用来显示多条内容的占位符</description>
+    <portlet-config>/WEB-INF/portlet/cms/xrepeater.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/listXrepeater.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/tableXrepeater.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/nodeDefinitionRepeater.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/nodeTree.pconf</portlet-config>
+  </portlet-category>
+  <portlet-category>
+    <name>date</name>
+    <display-name lang="zh">日历类</display-name>
+    <description lang="zh">日历类</description>
+    <portlet-config>/WEB-INF/portlet/date/calendar.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/date/forward.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/date/weekCalendar.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/date/monthCalendar.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/date/yearCalendar.pconf</portlet-config>
+  </portlet-category>
+  <portlet-category>
+    <name>field</name>
+    <display-name lang="zh">内容域类</display-name>
+    <description lang="zh">用来显示内容属性的占位符</description> 
+    <portlet-config>/WEB-INF/portlet/field/string.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/fieldId.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/date.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/pagination.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/single.download.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/multiple.download.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/image.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/video.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/flash.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/No.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/radio.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/checkbox.single.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/checkbox.all.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/child.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/parent.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/reference.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/nodeDefinition.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/mixNodeDefinition.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/conditions.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/url.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/highlighter.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/common/qq.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/numeral.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/field/parentNodes.pconf</portlet-config>
+  </portlet-category>
+   <portlet-category>
+    <name>validator</name>
+    <display-name lang="zh">数据校验</display-name>
+    <description lang="zh">数据校验，用来验证表单内容</description>
+    <portlet-config>/WEB-INF/portlet/validator/constant.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/validator/field.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/validator/unique.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/validator/calendar.pconf</portlet-config>    
+    <portlet-config>/WEB-INF/portlet/validator/property.pconf</portlet-config>    
+  </portlet-category>
+  <portlet-category>
+    <name>form</name>
+    <display-name lang="zh">编辑类(普通)</display-name>
+    <description lang="zh">表单组件，用来编辑单条内容</description>
+    <portlet-config>/WEB-INF/portlet/form/text.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/textarea.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/calendar.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/radio.manual.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/radio.repeat.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/checkbox.repeat.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/checkbox.manual.pconf</portlet-config>
+
+    <portlet-config>/WEB-INF/portlet/form/select.manual.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/select.cascade.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/select.propsCascade.pconf</portlet-config>
+
+    <portlet-config>/WEB-INF/portlet/form/select.anyProp.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/richtext.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/password.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/keyword.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/startActivity.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/nodeSelector.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/nodeMultipleSelector.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/definition.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/nodeSelection.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/suggest.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/composite.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/unchange.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/fuzzySearchProp.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/checkcode.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/office.pconf</portlet-config>
+  </portlet-category>
+  <portlet-category>
+    <name>upload</name>
+    <display-name lang="zh">编辑类(上传)</display-name>
+    <description lang="zh">表单组件，用来编辑单条内容</description>
+    <portlet-config>/WEB-INF/portlet/form/imageUploader.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/imageSelector.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/imageMultipleUploader.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/fileUploader.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/fileSelector.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/fileMultipleUploader.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/asynchronous.pconf</portlet-config>
+  </portlet-category>
+ 
+  <portlet-category>
+    <name>contentoperation</name>
+    <display-name lang="zh">按钮类</display-name>
+    <description lang="zh">针对单条内容的操作</description>
+    <portlet-config>/WEB-INF/portlet/form/edit.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/single.copy.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/single.move.pconf</portlet-config>
+    
+    <portlet-config>/WEB-INF/portlet/form/single.recommend.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/single.delete.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/single.save.pconf</portlet-config>
+    
+    <portlet-config>/WEB-INF/portlet/form/reset.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/search.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/timeButton.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/site/pageEditor.pconf</portlet-config>    
+    <portlet-config>/WEB-INF/portlet/form/shift.pconf</portlet-config> 
+    <portlet-config>/WEB-INF/portlet/form/down.pconf</portlet-config> 
+    <portlet-config>/WEB-INF/portlet/form/sort.pconf</portlet-config> 
+	<portlet-config>/WEB-INF/portlet/form/nextNode.forward.pconf</portlet-config> 
+  </portlet-category>
+  <portlet-category>
+    <name>listoperation</name>
+    <display-name lang="zh">列表按钮类</display-name>
+    <description lang="zh">针对多条内容的批量操作</description>
+    <portlet-config>/WEB-INF/portlet/form/multiple.copy.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/multiple.move.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/multiple.recommend.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/multiple.delete.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/multiple.save.pconf</portlet-config>
+  </portlet-category>
+  <portlet-category>
+    <name>counter</name>
+    <display-name lang="zh">统计类</display-name>
+    <description lang="zh">根据条件进行统计</description>
+    <portlet-config>/WEB-INF/portlet/chart/pie.enum.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/chart/bar.enum.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/count/node.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/count/refNode.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/count/complexNode.pconf</portlet-config>
+  </portlet-category>
+  <portlet-category>
+    <name>effects</name>
+    <display-name lang="zh">特效类</display-name>
+    <description lang="zh">用于渲染各种特效的占位符</description>
+    <portlet-config>/WEB-INF/portlet/effects/slide.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/effects/lantern.pconf</portlet-config>
+    <!-- <portlet-config>/WEB-INF/portlet/effects/buttonSlide.pconf</portlet-config> -->
+    <portlet-config>/WEB-INF/portlet/effects/transit.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/effects/imageWeave.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/effects/singleUp.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/effects/singleLeft.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/effects/overallSlide.pconf</portlet-config>
+  </portlet-category>
+  <portlet-category>
+    <name>other</name>
+    <display-name lang="zh">其他类</display-name>
+    <description lang="zh">不再使用的占位符</description>
+    <portlet-config>/WEB-INF/portlet/google/search.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/grid.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/list.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/radio.ref.h.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/radio.ref.v.pconf</portlet-config>
+	<portlet-config>/WEB-INF/portlet/form/checkbox.ref.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/checkbox.two.pconf</portlet-config>
+	<portlet-config>/WEB-INF/portlet/form/select.common.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/select.ref.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/submit.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/site/channel.horizonal.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/site/channel.vertical.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/site/channelNavigation.pconf</portlet-config>
+    <!--portlet-config>/WEB-INF/portlet/form/single.send.pconf</portlet-config-->
+    <!--portlet-config>/WEB-INF/portlet/form/download.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/form/multiple.send.pconf</portlet-config-->
+  </portlet-category>
+
+
+
+  <!--
+  <portlet-category>
+    <name>cms</name>
+    <display-name lang="zh">内容类</display-name>
+    <description lang="zh">遗留占位符</description>
+    <portlet-config>/WEB-INF/portlet/cms/repeater.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/resource.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/message.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/survey.board.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/survey.list.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/editor.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/ad.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/relative.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/fixPropertyRepeater.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/search.form.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/search.result.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/search.grid.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/pictext.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/favourite.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/ordering.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/navigation.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/categoryTree.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/postContent.pconf</portlet-config>
+  </portlet-category>
+  <portlet-category>
+    <name>customer</name>
+    <display-name lang="zh">其他类</display-name>
+    <description lang="zh">其他类</description>
+    
+    <portlet-config>/WEB-INF/portlet/cms/service.search.form.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/service.search.result.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/coursewareGrid.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/rollMessageList.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/onlineCoursePlay.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/downloadList.pconf</portlet-config>
+    <portlet-config>/WEB-INF/portlet/cms/liveImages.pconf</portlet-config>
+  </portlet-category>
+  -->
+</longcon-portlets>

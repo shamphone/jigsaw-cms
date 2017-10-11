@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">搜索按钮用来提交当前搜索表单到指定页面。</description>
+		<portlet-name>searchbutton</portlet-name>
+		<display-name xml:lang="zh">搜索按钮</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+	        <init-param>
+		  <name>config-file</name>
+		  <value>/WEB-INF/portlet/form/search.xml</value>
+                </init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.button.search.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>size</name>
+				<value></value>
+                                <description>长度</description>
+			</preference>
+			<preference>
+				<name>tabindex</name>
+				<value></value>
+                                <description>tab键顺序</description>
+			</preference>
+			<preference>
+				<name>style</name>
+				<value></value>
+                                <description>样式</description>
+			</preference>
+			<preference>
+				<name>value</name>
+				<value>搜索</value>
+                                <description>显示文字</description>
+			</preference>
+			<preference>
+				<name>channnel</name>
+				<value></value>
+                                <description>提交到的栏目</description>
+			</preference>
+			 <preference>
+                  <name>forwardSelf</name>
+                  <value>false</value>
+                  <description>跳转到原页面</description>
+          </preference>
+			<preference>
+				<name>conditions</name>
+                                <description>条件</description>
+			</preference>
+			<preference>
+				<name>category</name>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

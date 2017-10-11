@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">提交按钮</description>
+		<portlet-name>submitbutton</portlet-name>
+		<display-name xml:lang="zh">提交按钮</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+	<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/form/submit.xml</value>
+		</init-param>
+
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.button.submit.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>contentType</name>
+				<value>default</value>
+			</preference>
+			<preference>
+				<name>category</name>
+				<value>no-properties-scheme</value>
+			</preference>
+			<preference>
+				<name>tabindex</name>
+				<value></value>
+                                <description>tab键顺序</description>
+			</preference>
+			<preference>
+				<name>style</name>
+				<value></value>
+                                <description>样式</description>
+			</preference>
+			<preference>
+				<name>value</name>
+				<value>提交</value>
+                                <description>显示文字</description>
+			</preference>
+			<preference>
+				<name>channel</name>
+				<value></value>
+                                <description>重定向到的栏目ID</description>
+			</preference>
+			<preference>
+				<name>size</name>
+                                <description>长度</description>
+			</preference>
+			<preference>
+				<name>principals</name>
+                                <description>授权对象</description>
+			</preference>
+			<preference>
+				<name>default-values</name>
+                                <description>默认值</description>
+			</preference>
+			<preference>
+				<name>copyTo</name>
+                                <description>将内容复制到某分类</description>
+                        </preference>
+                        <preference>
+                                <name>moveTo</name>
+                                <description>将内容移动到某分类</description>
+			</preference>
+                        <preference>
+                                <name>recommendTo</name>
+                                <description>将内容推荐到某分类</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

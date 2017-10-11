@@ -1,0 +1,17 @@
+#/portal/portlet/serviceOnline/edit.jsp
+
+com.fulong.portal.portlet.serviceOnline.edit.option0.baseSet=基本设置
+com.fulong.portal.portlet.serviceOnline.edit.formTitle1.relativeQQ=关联QQ
+com.fulong.portal.portlet.serviceOnline.edit.formTitle1.radio.contentRelative=与内容关联
+com.fulong.portal.portlet.serviceOnline.edit.formTitle1.radio.siteRelative=与网站关联
+com.fulong.portal.portlet.serviceOnline.edit.formTitle2.showWord=显示文字
+com.fulong.portal.portlet.serviceOnline.edit.formTitle3.style=样式
+com.fulong.portal.portlet.serviceOnline.edit.toolbar.submit.save=保存
+com.fulong.portal.portlet.serviceOnline.edit.toolbar.button.cancel=取消
+
+#/portal/portlet/serviceOnline/final.jsp
+
+com.fulong.portal.portlet.serviceOnline.final.talkOnline1=在线咨询
+com.fulong.portal.portlet.serviceOnline.final.noServer=客服不在线，请留言
+com.fulong.portal.portlet.serviceOnline.final.talkOnline2=在线咨询
+com.fulong.portal.portlet.serviceOnline.final.talk=在线即时交谈

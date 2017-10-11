@@ -1,0 +1,12 @@
+#/portal/portlet/counter/edit.jsp
+
+com.fulong.portal.portlet.counter.edit.option0.baseSet=基本设置
+com.fulong.portal.portlet.counter.edit.formTitle1.type=类别
+com.fulong.portal.portlet.counter.edit.formTitle1.option1.system=系统计数器
+com.fulong.portal.portlet.counter.edit.formTitle1.option2.site=网站计数器
+com.fulong.portal.portlet.counter.edit.formTitle1.option3.channel=栏目计数器
+com.fulong.portal.portlet.counter.edit.formTitle1.option4.content=内容计数器
+com.fulong.portal.portlet.counter.edit.formTitle2.font=字体
+com.fulong.portal.portlet.counter.edit.formTitle2.font.choose=选择..
+com.fulong.portal.portlet.counter.edit.toolbar.submit.save=保存
+com.fulong.portal.portlet.counter.edit.toolbar.button.cancel=取消

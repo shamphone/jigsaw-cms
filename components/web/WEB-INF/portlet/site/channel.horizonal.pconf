@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+	    <description xml:lang="zh">水平页面列表用来实现水平栏目导航功能。</description>
+		<portlet-name>transverse</portlet-name>
+		<display-name xml:lang="ZH">水平页面列表</display-name>
+		<portlet-class>com.fulong.portlet.site.horizonal.NavigatorPortlet</portlet-class>
+<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/site/channel.horizonal.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.site.horizonal.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>channels</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>seperator</name>
+				<value>|</value>
+			</preference>
+			<preference>
+				<name>target</name>
+				<value>_blank</value>
+			</preference>
+			<preference>
+				<name>list-style</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>page-style</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>page-style-selected</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>seperator-style</name>
+				<value/>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

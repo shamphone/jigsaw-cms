@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkflowProcesses xmlns="http://www.wfmc.org/2008/XPDL2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 bpmnxpdl_31.xsd">
+    <WorkflowProcess DefaultStartActivityId="begin" Id="process5" Name="担保机构汇总流程">
+        <ProcessHeader>
+            <Description><![CDATA[这里是流程介绍。]]></Description>
+            <FormalParameters/>
+        </ProcessHeader>
+        <Activities>
+            <Activity Id="begin" Name="起始活动" StartMode="Automatic">
+                <Description>起始活动的描述</Description>
+                <NodeGraphicsInfo xmlns="">
+                    <Coordinates XCoordinate="100px" YCoordinate="100px"/>
+                </NodeGraphicsInfo>
+            </Activity>
+            <Activity Id="end" Name="结束活动">
+                <Description>结束活动的描述</Description>
+                <NodeGraphicsInfo xmlns="">
+                    <Coordinates XCoordinate="1890px" YCoordinate="950px"/>
+                </NodeGraphicsInfo>
+            </Activity>
+            <Activity Id="activity1" Name="汇总活动" StartMode="Auto" xmlns="">
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="gather">
+                            <ActualParameters/>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+                <NodeGraphicsInfo>
+                    <Coordinates XCoordinate="980px" YCoordinate="550px"/>
+                </NodeGraphicsInfo>
+            </Activity>
+        </Activities>
+        <Transitions>
+            <Transition From="begin" Id="trans1" Name="连接" To="activity1">
+                <Description><![CDATA[这里是转移的描述信息。]]></Description>
+            </Transition>
+            <Transition From="activity1" Id="transition1" Name="转移1"
+                To="end" xmlns=""/>
+        </Transitions>
+    </WorkflowProcess>
+</WorkflowProcesses>

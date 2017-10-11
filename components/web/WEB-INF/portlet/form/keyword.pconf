@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">自定义输入框用来在页面上渲染输入框，可以用来输入关键字或旧密码。控件名称应该和对应的属性名称保持一致。</description>
+		<portlet-name>keyword</portlet-name>
+		<display-name xml:lang="zh">自定义输入框</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+		<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/form/keyword.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.component.keyword.Resource</resource-bundle>
+		<portlet-preferences>
+					<preference>
+				<name>type</name>
+				<value>keyword</value>
+                                <description>自定义属性</description>
+			</preference>
+								<preference>
+				<name>showpassword</name>
+				<value>false</value>
+                                <description>显示为密码框</description>
+			</preference>
+						<preference>
+				<name>size</name>
+				<value></value>
+                                <description>长度</description>
+			</preference>
+			<preference>
+				<name>size</name>
+				<value></value>
+                                <description>长度</description>
+			</preference>
+			<preference>
+				<name>maxLength</name>
+				<value></value>
+                                <description>最多字符数</description>
+			</preference>
+			<preference>
+				<name>tabindex</name>
+				<value></value>
+                                <description>tab键顺序</description>
+			</preference>
+			<preference>
+				<name>style</name>
+				<value></value>
+                                <description>样式</description>
+			</preference>
+			<preference>
+				<name>value</name>
+				<value></value>
+                                <description>缺省值</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

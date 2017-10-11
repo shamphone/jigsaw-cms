@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkflowProcesses xmlns="http://www.wfmc.org/2008/XPDL2.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wfmc.org/2008/XPDL2.1 bpmnxpdl_31.xsd">
+    <WorkflowProcess DefaultStartActivityId="begin" Id="process1" Name="沈阳行政审批企业注册流程" Module="components">
+        <ProcessHeader>
+            <Description><![CDATA[这里是流程介绍。]]></Description>
+        </ProcessHeader>
+        <Activities>
+            <Activity Id="begin" Name="起始活动" StartMode="Automatic">
+                <Description>起始活动的描述</Description>
+                <NodeGraphicsInfo xmlns="">
+                    <Coordinates XCoordinate="315px" YCoordinate="1415px"/>
+                </NodeGraphicsInfo>
+            </Activity>
+            <Activity Id="end" Name="结束活动">
+                <Description>结束活动的描述</Description>
+                <NodeGraphicsInfo xmlns="">
+                    <Coordinates XCoordinate="4280px" YCoordinate="1340px"/>
+                </NodeGraphicsInfo>
+            </Activity>
+            <Activity Id="activity1" Name="加密密码" StartMode="Auto" xmlns="">
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="encpassword">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>encCategoryID</name>
+                                    <value>principal-scheme</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>propertyName</name>
+                                    <value>密码</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>encCategoryName</name>
+                                    <value>会员库</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>property</name>
+                                    <value>user-password</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+                <NodeGraphicsInfo>
+                    <Coordinates XCoordinate="635px" YCoordinate="1345px"/>
+                </NodeGraphicsInfo>
+            </Activity>
+            <Activity Id="activity2" Name="加密旧密码" StartMode="Auto" xmlns="">
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="encpassword">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>encCategoryID</name>
+                                    <value>principal-scheme</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>propertyName</name>
+                                    <value>旧密码</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>encCategoryName</name>
+                                    <value>会员库</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>property</name>
+                                    <value>oldPassword</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+                <NodeGraphicsInfo>
+                    <Coordinates XCoordinate="1460px" YCoordinate="1395px"/>
+                </NodeGraphicsInfo>
+            </Activity>
+            <Activity Id="activity3" Name="加密确认密码" StartMode="Auto" xmlns="">
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="encpassword">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>encCategoryID</name>
+                                    <value>principal-scheme</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>propertyName</name>
+                                    <value>确认密码</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>encCategoryName</name>
+                                    <value>会员库</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>property</name>
+                                    <value>confirmPassword</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+                <NodeGraphicsInfo>
+                    <Coordinates XCoordinate="2065px" YCoordinate="1325px"/>
+                </NodeGraphicsInfo>
+            </Activity>
+            <Activity Id="activity4" Name="复制match_id属性"
+                StartMode="Auto" xmlns="">
+                <Implementation>
+                    <Task>
+                        <TaskApplication Id="copyProp">
+                            <ActualParameters>
+                                <ActualParameter>
+                                    <name>sourcePropName</name>
+                                    <value/>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>copyCategoryName</name>
+                                    <value>企业用户</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>copyCategoryID</name>
+                                    <value>org-scheme</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>destinationPropID</name>
+                                    <value>match_id</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>IDprop</name>
+                                    <value>on</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>destinationPropName</name>
+                                    <value>match_id</value>
+                                </ActualParameter>
+                                <ActualParameter>
+                                    <name>sourcePropID</name>
+                                    <value>ID</value>
+                                </ActualParameter>
+                            </ActualParameters>
+                        </TaskApplication>
+                    </Task>
+                </Implementation>
+                <NodeGraphicsInfo>
+                    <Coordinates XCoordinate="2735px" YCoordinate="1325px"/>
+                </NodeGraphicsInfo>
+            </Activity>
+        </Activities>
+        <Transitions>
+            <Transition From="begin" Id="trans1" Name="连接" To="activity1">
+                <Description><![CDATA[这里是转移的描述信息。]]></Description>
+            </Transition>
+            <Transition From="activity1" Id="transition1" Name="转移1"
+                To="activity2" xmlns=""/>
+            <Transition From="activity2" Id="transition2" Name="转移2"
+                To="activity3" xmlns=""/>
+            <Transition From="activity3" Id="transition3" Name="转移3"
+                To="activity4" xmlns=""/>
+            <Transition From="activity4" Id="transition4" Name="转移4"
+                To="end" xmlns=""/>
+        </Transitions>
+    </WorkflowProcess>
+</WorkflowProcesses>

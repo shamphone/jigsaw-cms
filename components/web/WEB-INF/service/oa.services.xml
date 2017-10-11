@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd" >
+
+    <bean id="repeaterDate" class="com.fulong.service.oa.RepeatDateService" name="重复器服务">   
+    <property name="property1"><value>prop234</value></property>
+    <property name="property2"><value>prop531</value></property>
+    <property name="property3"><value>prop93</value></property>
+    <property name="property4"><value>prop109</value></property>
+    <property name="property5"><value>prop937</value></property>
+    <property name="property6"><value>prop906</value></property>
+    <property name="property7"><value>prop703</value></property>
+    </bean>
+    <bean id="fileCirculation" class="com.fulong.service.oa.WorkflowService" name="文件传阅服务">
+    </bean>
+    <bean id="setAddressBook" class="com.fulong.service.oa.SetAddressBookService" name="填写通讯簿属性服务">
+    <property name="property1"><value>prop273</value></property>
+    <property name="property2"><value>prop890</value></property>
+    <property name="property3"><value>prop781</value></property>
+    </bean>
+    <bean id="reply" class="com.fulong.service.oa.ReplyService" name="传阅回复处理">
+    </bean>
+     <!--bean id="indexBuilder" class="com.fulong.service.search.ThreadIndexBuilder">
+        <property name="indexManager"><ref bean="indexManager"/></property>
+        <property name="threadName"><value>索引线程</value></property>
+        <property name="daemon"><value>false</value></property>
+    </bean-->
+    </beans>

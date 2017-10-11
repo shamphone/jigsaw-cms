@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">装配于一个内容页或重复器占位符中，通过重复器节点或地址栏节点参数获取父节点，并可选择展示父节点的其他属性。</description>
+		<portlet-name>parent</portlet-name>
+		<display-name xml:lang="zh">父节点内容域</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+		<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/field/parent.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.field.comRepeater.Resource</resource-bundle>
+		<portlet-preferences>
+		<preference>
+				<name>contentType</name>
+				<value>default</value>
+			</preference>
+			<preference>
+				<name>style</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>contextName</name>
+				<value></value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

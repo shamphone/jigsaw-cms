@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                        http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd">
+	<portlet>
+	    <description xml:lang="zh">周历重复器用于展示从每周周一开始或者从某个特定日期开始，往后七天之内的内容。每一个重复规则为一个页面片段。页面片段中可以插入日历相关重复器专属占位符，例如日期域占位符。</description>
+		<portlet-name>weekCalendar</portlet-name>
+		<display-name xml:lang="ZH">周历重复器</display-name>
+		<portlet-class>com.fulong.portlet.date.weekCalendar.XRepeaterPortlet</portlet-class>
+		<expiration-cache>-1</expiration-cache>
+                <init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/date/weekCalendar.xml</value>
+		</init-param>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.date.weekCalendar.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>width</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>height</name>
+				<value/>
+			</preference>
+			<preference>
+				<name>cellspacing</name>
+				<value>0</value>
+			</preference>
+			<preference>
+				<name>cellpadding</name>
+				<value>0</value>
+			</preference>
+			<preference>
+				<name>border</name>
+				<value>0</value>
+			</preference>
+			<preference>
+				<name>row</name>
+				<value></value>
+			</preference>
+			<preference>
+				<name>column</name>
+				<value></value>
+			</preference>
+			<preference>
+				<name>startloc</name>
+				<value>1</value>
+			</preference>
+			<preference>
+				<name>contextName</name>
+				<value></value>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

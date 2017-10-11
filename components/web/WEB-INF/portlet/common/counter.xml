@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+   <form-bean name="configForm" type="com.fulong.portlet.PortletPreferencesForm"/>
+  </form-beans>
+  <action-mappings>
+    <action name="configForm" path="/save" type="com.fulong.portlet.common.counter.SaveAction"/>
+    <action name="configForm"   path="/edit" type="com.fulong.portlet.common.counter.EditRender">
+      <forward name="success" path="/portlet/common/counter/edit.jsp"/>
+    </action>
+    <action path="/view" type="com.fulong.portlet.common.counter.ViewRender">
+      <forward name="success" path="/portlet/common/counter/view.jsp"/>
+    </action>
+    <action path="/final" type="com.fulong.portlet.common.counter.FinalRender">
+      <forward name="success" path="/portlet/common/counter/final.jsp"/>
+    </action>
+    <action path="/help" type="com.fulong.portlet.common.counter.HelpRender">
+      <forward name="success" path="/portlet/common/counter/help.jsp"/>
+    </action>
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.portlet.common.counter.Resource" key="portalCounter"/>
+</struts-config>

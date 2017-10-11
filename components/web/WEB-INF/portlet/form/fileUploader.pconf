@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd portlet.xsd">
+    <portlet>
+        <description xml:lang="zh">文件上载是将本地的文件上传到服务器上。</description>
+        <portlet-name>fileUploader</portlet-name>
+        <display-name xml:lang="zh">文件上载</display-name>
+        <portlet-class>com.fulong.portlet.component.file.uploader.TextInputComponent</portlet-class>
+        <init-param>
+            <name>config-file</name>
+            <value>/WEB-INF/portlet/form/fileUploader.xml</value>
+        </init-param>
+        <expiration-cache>-1</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <resource-bundle>com.fulong.portlet.component.file.uploader.Resource</resource-bundle>
+        <portlet-preferences>
+            <preference>
+                <name>propertyId</name>
+                <value></value>
+                <description>关联属性标识符</description>
+            </preference>
+            <preference>
+                <name>size</name>
+                <value></value>
+                <description>字符宽度</description>
+            </preference>
+            <preference>
+                <name>tabindex</name>
+                <value></value>
+                <description>tab键顺序</description>
+            </preference>
+            <preference>
+                <name>style</name>
+                <value></value>
+                <description>样式</description>
+            </preference>
+            <preference>
+                <name>maxSize</name>
+                <value>250</value>
+                <description>上传文件大小</description>
+            </preference>
+        </portlet-preferences>
+    </portlet>
+</portlet-app>

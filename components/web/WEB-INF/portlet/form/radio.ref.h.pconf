@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd portlet.xsd">
+    <portlet>
+        <description xml:lang="zh">选项按钮(横排引用)</description>
+        <portlet-name>radioRefH</portlet-name>
+        <display-name xml:lang="zh">选项按钮(横排引用)</display-name>
+        <portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+        <init-param>
+            <name>config-file</name>
+            <value>/WEB-INF/portlet/form/radio.ref.h.xml</value>
+        </init-param>
+        <expiration-cache>-1</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <resource-bundle>com.fulong.portlet.component.radio.ref.h.Resource</resource-bundle>
+        <portlet-preferences>
+            <preference>
+                <name>referenceId</name>
+                <value></value>
+                <description>关联引用对象</description>
+            </preference>
+            <preference>
+                <name>referenceType</name>
+                <value></value>
+                <description>关联引用对象对应的的NodeDefinition的ID</description>
+            </preference>
+            <preference>
+                <name>propertyId</name>
+                <value></value>
+                <description>关联属性标识符</description>
+            </preference>
+            <preference>
+                <name>style</name>
+                <value></value>
+                <description>样式</description>
+            </preference>
+            <preference>
+                <name>arrangement</name>
+                <value>horizontal</value>
+                <description>排列方式</description>
+            </preference>
+            <preference>
+                <name>definitionId</name>
+                <value></value>
+                <description>definitionId</description>
+            </preference>
+            <preference>
+                <name>defaultValue</name>
+                <description>默认值</description>
+            </preference>
+        </portlet-preferences>
+    </portlet>
+</portlet-app>

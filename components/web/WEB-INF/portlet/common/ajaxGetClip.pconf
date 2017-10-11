@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app>
+	<portlet>
+		<description xml:lang="zh">ajax加载片段占位符是一个实现动态获取页面片段，并且将之显示在其它页面中的占位符。</description>
+		<portlet-name>ajaxGetClip</portlet-name>
+		<display-name xml:lang="zh">ajax加载片断占位符</display-name>
+		<portlet-class>com.fulong.portlet.common.ajaxGetClip.AjaxGetClipPortlet</portlet-class>
+                <init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/common/ajaxGetClip.xml</value>
+		</init-param>
+		<init-param>
+			<name>script-file</name>
+			<value>/components/portlet/common/ajaxGetClip/ajaxGetClip.js</value>
+		</init-param>
+        <expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.common.ajaxGetClip.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>source</name>
+				<value/>
+                        </preference>
+                        <preference>
+				<name>clip-paths</name>
+                        </preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

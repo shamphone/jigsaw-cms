@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">复选框(支持重复器)在重复器占位符当中使用，渲染出checkbox控件，name为指定属性的ID，value为当前内容属性值。</description>
+		<portlet-name>checkboxRepeater</portlet-name>
+		<display-name xml:lang="zh">复选框(支持重复器)</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+		<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/form/checkbox.repeat.xml</value>
+		</init-param>
+		<init-param>
+            <name>script-file</name>
+            <value>/components/portlet/form/component/checkbox/repeat/repeatCheckBox.js</value>
+        </init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.form.checkbox.repeat.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+                <name>userID</name>
+                <value>false</value>
+                <description>节点ID</description>
+            </preference>
+            <preference>
+				<name>echo</name>
+				<value>nodeEcho</value>
+                                <description>是否回显</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

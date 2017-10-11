@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">登入提示是为了给表单中的输入控件产生的实时数据进行校验的控件。在正常情况下显示提示信息，在用户输入有误时，显示错误提示信息。</description>
+		<portlet-name>logintips</portlet-name>
+		<display-name xml:lang="zh">登入提示</display-name>
+		<portlet-class>com.fulong.portlet.validator.ValidatorPortlet</portlet-class>
+	<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/validator/login.xml</value>
+		</init-param>
+
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.validator.constant.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>tips</name>
+				<value>请输入用户名和密码：</value>
+                                <description>正常显示的文字，可以为多格式文本</description>
+			</preference>
+			<preference>
+				<name>tips-style</name>
+				<value></value>
+                                <description>正常提示的文字格式</description>
+			</preference>
+			<preference>
+				<name>error-tips</name>
+				<value>用户名或密码有误，请重新输入：</value>
+                                <description>错误提示的文字，可以为多格式文本</description>
+			</preference>
+			<preference>
+				<name>error-style</name>
+				<value></value>
+                                <description>错误提示的文字格式</description>
+			</preference>
+			<preference>
+				<name>isAlert</name>
+				<value>false</value>
+				<description>是否以弹出的方式进行错误提示</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

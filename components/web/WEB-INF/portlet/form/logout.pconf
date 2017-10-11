@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">登出按钮用来提供登出系统的功能。</description>
+		<portlet-name>logoutbutton</portlet-name>
+		<display-name xml:lang="zh">登出按钮</display-name>
+		<portlet-class>com.fulong.portlet.component.ComponentPortlet</portlet-class>
+	        <init-param>
+		  <name>config-file</name>
+		  <value>/WEB-INF/portlet/form/logout.xml</value>
+                </init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.button.login.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>size</name>
+				<value></value>
+                                <description>长度</description>
+			</preference>
+			<preference>
+				<name>tabindex</name>
+				<value></value>
+                                <description>tab键顺序</description>
+			</preference>
+			<preference>
+				<name>style</name>
+				<value></value>
+                                <description>样式</description>
+			</preference>
+			<preference>
+				<name>value</name>
+				<value>退出</value>
+                                <description>显示文字</description>
+			</preference>
+			<preference>
+				<name>channnel</name>
+				<value></value>
+                                <description>重定向到的栏目ID</description>
+			</preference>
+			<preference>
+            	<name>imgsrc</name>
+                <description>图片地址</description>
+			</preference>
+						<preference>
+            	<name>imgheight</name>
+                <description>图片高度</description>
+			</preference>
+						<preference>
+            	<name>imgwidth</name>
+                <description>图片宽度</description>
+			</preference>
+						<preference>
+            	<name>imgstyle</name>
+                <description>图片样式</description>
+			</preference>
+		</portlet-preferences>
+	</portlet>
+</portlet-app>

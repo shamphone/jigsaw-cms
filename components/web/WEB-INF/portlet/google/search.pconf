@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd
+                       portlet.xsd">
+	<portlet>
+		<description xml:lang="zh">google站内搜索</description>
+		<portlet-name>google-search</portlet-name>
+		<display-name xml:lang="zh">google站内搜索</display-name>
+		<portlet-class>com.fulong.portlet.google.GooglePortlet</portlet-class>
+	<init-param>
+			<name>config-file</name>
+			<value>/WEB-INF/portlet/google/search.xml</value>
+		</init-param>
+		<expiration-cache>-1</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+		</supports>
+		<resource-bundle>com.fulong.portlet.google.search.Resource</resource-bundle>
+		<portlet-preferences>
+			<preference>
+				<name>fieldName</name>
+                                <description>网站地址</description>
+			</preference>
+			<preference>
+				<name>textStyle</name>
+                                <description>文本框样式</description>
+			</preference>
+			<preference>
+				<name>textSize</name>
+				<value>31</value>
+                                <description>文本框长度</description>
+			</preference>
+			<preference>
+				<name>textMaxLength</name>
+				<value>255</value>
+                                <description>最多字符数</description>
+			</preference>
+			<preference>
+				<name>buttonStyle</name>
+                                <description>按钮样式</description>
+			</preference>
+			<preference>
+				<name>buttonName</name>
+				<value>google 搜索</value>
+                                <description>按钮文字</description>
+			</preference>
+			</portlet-preferences>
+	</portlet>
+</portlet-app>

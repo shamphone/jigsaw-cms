@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd" version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd portlet.xsd">
+    <portlet>
+        <description xml:lang="zh">日期域以字符串的形式展示多种格式的日期信息。可以用来搭配日历重复器使用。</description>
+        <portlet-name>calendardate</portlet-name>
+        <display-name xml:lang="zh">日期域</display-name>
+        <portlet-class>com.fulong.portlet.date.calendar.DateFormat</portlet-class>
+        <init-param>
+            <name>config-file</name>
+            <value>/WEB-INF/portlet/date/calendar.xml</value>
+        </init-param>
+        <init-param>
+			<name>script-file</name>
+			<value>/components/portlet/date/calendar/script.js</value>
+		</init-param>
+        <init-param>
+            <name>dateFormat</name>
+            <value>yyyy年MM月dd日 EEE HH:mm:ss,h:mm a,h:mm:ss a,HH:mm:ss,yyyy-MM-dd,yyyy-M-d,yyyy年MM月dd日,yyyy年M月d日,yyyy/MM/dd,yyyy/M/d,yyyy年MM月,yyyy年M月,MM月dd日,M月d日,EE,yy-M-d,M-d,M-d-yy,MM-dd-yy,yyyy年,MM月,M月,dd,d</value>
+        </init-param>
+        <expiration-cache>-1</expiration-cache>
+        <supports>
+            <mime-type>text/html</mime-type>
+        </supports>
+        <resource-bundle>com.fulong.portlet.date.calendar.Resource</resource-bundle>
+        <portlet-preferences>
+            <preference>
+                <name>dateFormat</name>
+                <value>yyyy-MM-dd</value>
+                <description>日期格式</description>
+            </preference>
+            <preference>
+                <name>timeSource</name>
+                <value>calendar</value>
+			</preference>
+			<preference>
+                 <name>openInNewWindow</name>
+                 <value>false</value>
+                 <description>是否在新窗口打开</description>
+            </preference>
+            <preference>
+                 <name>type</name>
+                 <value>item</value>
+                 <description>类型</description>
+            </preference>
+        </portlet-preferences>
+    </portlet>
+</portlet-app>
