@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>ConferenceModelRoleTableItem</name>
+    <desc>会议模式角色表中的一项</desc>
+	<i8>modelId</i8>
+	<i8>roleId</i8>
+	<string>roleName</string>
+	<string>rights</string>
+</lyvcmessage>

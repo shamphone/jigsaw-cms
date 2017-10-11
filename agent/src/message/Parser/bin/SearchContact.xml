@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>SearchContact</name>
+    <desc>客户端通知服务器，按照指定的Email搜索联系人</desc>
+	<string>email</string>
+</lyvcmessage>

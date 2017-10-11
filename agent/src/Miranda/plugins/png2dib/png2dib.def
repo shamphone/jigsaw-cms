@@ -1,0 +1,10 @@
+LIBRARY png2dib
+EXPORTS
+
+mempng2dib	@1
+dib2mempng	@2
+getver		@3
+
+Load        @4
+Unload      @5
+MirandaPluginInfo	@6

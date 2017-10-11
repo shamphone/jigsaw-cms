@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>QuitConference</name>
+    <desc>客户端发送给服务器，要求退出某个会议</desc>
+	<i8>conId</i8>
+</lyvcmessage>

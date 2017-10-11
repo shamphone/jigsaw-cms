@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>ConferenceFinish</name>
+    <desc>服务器告诉客户端某个会议结束了</desc>
+	<i8>conId</i8>
+</lyvcmessage>

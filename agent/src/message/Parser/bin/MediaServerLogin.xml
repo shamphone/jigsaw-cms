@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>MediaServerLogin</name>
+    <desc>媒体服务器发送给会议服务器，向其注册</desc>
+    <i4>udpPort</i4>
+    <i4>tcpPort</i4>
+    <string>ip</string>
+</lyvcmessage>

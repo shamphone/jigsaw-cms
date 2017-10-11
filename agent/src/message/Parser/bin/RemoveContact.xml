@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>RemoveContact</name>
+    <desc>客户端通知服务器，删除自己的某个联系人</desc>
+    <i8>contactId</i8>
+    <i8>groupId</i8>
+</lyvcmessage>

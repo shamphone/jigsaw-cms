@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>AddContact</name>
+    <desc>服务器发送给客户端，增加一个联系人</desc>
+	<boolean>isCommon</boolean>
+	<i4>status</i4>     
+    <i8>groupId</i8>
+	<i8>contactId</i8>
+	<string>name</string>
+	<string>email</string>
+	<string>firstName</string>
+	<string>lastName</string>
+</lyvcmessage>

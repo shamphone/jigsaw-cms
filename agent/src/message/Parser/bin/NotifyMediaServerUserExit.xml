@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>NotifyMediaServerUserExit</name>
+    <desc>会议服务器通知媒体服务器，某个用户退出</desc>
+    <i8>userId</i8>
+</lyvcmessage>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>MediaServerAddress</name>
+    <desc>服务器发送给客户端，告诉其媒体服务器的地址</desc>
+	<i4>tcpport</i4>
+	<i4>udpport</i4>
+	<string>host</string>
+</lyvcmessage>
+

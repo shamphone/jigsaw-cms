@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>WatchUser</name>
+    <desc>指定观看某人的视频</desc>
+    <i4>viewMode</i4>
+    <i8>receiverId</i8>
+		<string>beWatchedIds</string>
+</lyvcmessage>

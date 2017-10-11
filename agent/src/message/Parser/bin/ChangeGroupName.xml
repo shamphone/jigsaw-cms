@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>ChangeGroupName</name>
+    <desc>修改自己的联系人组名</desc>
+    <i8>groupId</i8>
+    <string>newName</string>
+</lyvcmessage>

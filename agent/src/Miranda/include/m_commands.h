@@ -1,0 +1,67 @@
+#ifndef _M_COMMANDS_H
+#define _M_COMMANDS_H
+
+#define MIRANDA_EXIT							0x00
+
+#define MIRANDA_MSN_LOGIN						0x01
+#define MIRANDA_MSN_LOGOUT						0x02
+#define MIRANDA_MSN_SET_ACCOUNT_AND_PASSWORD	0x03
+#define MIRANDA_MSN_ADDCONTACT					0x04
+#define MIRANDA_MSN_UPDATECONTACT				0x05
+#define MIRANDA_MSN_FINDCONTACT					0x06
+#define MIRANDA_MSN_GETCONTACTS					0x07
+#define MIRANDA_MSN_SENDMSG						0x08
+#define MIRANDA_MSN_DELCONTACT					0x09
+#define MIRANDA_MSN_ADDGROUP					0x0A
+#define MIRANDA_MSN_DELGROUP					0x0B
+#define MIRANDA_MSN_RENAMEGROUP					0x0C
+#define MIRANDA_MSN_REBUILDCONTACTLIST			0x0D
+#define MIRANDA_MSN_MOVECONTACT					0x0E
+#define MIRANDA_MSN_CONNECTING					0x0F
+#define MIRANDA_MSN_VIEWHISTORY					0x10
+#define MIRANDA_MSN_HIDECONTACT					0x11
+#define MIRANDA_MSN_AUTHREQUEST					0x12
+#define MIRANDA_MSN_AUTHACCEPTED				0x13
+#define MIRANDA_MSN_AUTHDENYED					0x14
+
+typedef struct tagAUTH_REQUEST
+{
+	char szNick[128];
+	char szEmail[128];
+	HANDLE hDBEvent;
+	HANDLE hContact;
+} AUTH_REQUEST, *PAUTH_REQUEST;
+
+typedef struct tagCONTACT_HANDLE
+{
+	HANDLE handle;
+} CONTACT_HANDLE, *PCONTACT_HANDLE;
+
+typedef struct tagACCOUNT_AND_PASSWORD
+{
+	char szAccount[128];
+	char szPassword[128];
+} ACCOUNT_AND_PASSWORD, *PACCOUNT_AND_PASSWORD;
+
+typedef struct tagMIRANDA_CONTACT
+{
+	int nStatus;
+	char szNick[128];
+	char szEmail[128];
+	char szGroup[128];
+	HANDLE handle;
+} MIRANDA_CONTACT, *PMIRANDA_CONTACT;
+
+typedef struct tagMIRANDA_GROUP
+{
+	int nId;
+	char szName[128];
+} MIRANDA_GROUP, *PMIRANDA_GROUP;
+
+typedef struct tagMOVE_CONTACT
+{
+	HANDLE handle;
+	char szNewGroup[128];
+} MOVE_CONTACT, *PMOVE_CONTACT;
+
+#endif

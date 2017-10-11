@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>RegisterUserResponse</name>
+    <desc>服务器发送给客户端，注册新用户的反馈</desc>
+	<boolean>bSuccessful</boolean>
+	<string>message</string>
+</lyvcmessage>

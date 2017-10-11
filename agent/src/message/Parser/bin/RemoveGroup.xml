@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>RemoveGroup</name>
+    <desc>客户端通知服务器，删除自己的某个联系人组</desc>
+    <i8>groupId</i8>
+</lyvcmessage>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>CameraZoomIn</name>
+    <desc>要求对方的摄像机放大画面</desc>
+	<i4>commPort</i4>
+    <i8>receiverId</i8>
+</lyvcmessage>

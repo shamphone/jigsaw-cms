@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<!--
+isAgreeInvite 用来标识增加转发的原因，是邀请同意还是申请同意
+-->
+<lyvcmessage>
+    <name>NotifyMediaServerAddDesktop</name>
+    <desc>会议服务器通知媒体服务器，增加一路桌面信号转发</desc>
+    <boolean>isAgreeInvite</boolean>
+    <i8>fromUserId</i8>
+    <i8>toUserId</i8>
+</lyvcmessage>

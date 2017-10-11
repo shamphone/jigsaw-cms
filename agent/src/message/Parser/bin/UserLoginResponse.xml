@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>UserLoginResponse</name>
+    <desc>服务器发送给客户端，告诉其登录成功，以及相应的用户ID</desc>
+    <i8>userId</i8>
+    <string>message</string>
+</lyvcmessage>

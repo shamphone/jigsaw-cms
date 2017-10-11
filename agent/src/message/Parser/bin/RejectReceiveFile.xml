@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>RejectReceiveFile</name>
+    <desc>拒绝接受某个用户发送给自己的文件</desc>
+    <i8>receiverId</i8>
+    <string>fullFileName</string>
+</lyvcmessage>

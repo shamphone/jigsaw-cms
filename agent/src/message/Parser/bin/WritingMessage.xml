@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>WritingMessage</name>
+    <desc>在会议中广播是否正在输入文字的消息</desc>
+    <boolean>bIsWriting</boolean> 
+    <i8>receiverId</i8>
+</lyvcmessage>

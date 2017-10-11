@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>AppointSpeaker</name>
+    <desc>指定某人发言</desc>
+		<i8>speakerId</i8>
+</lyvcmessage>

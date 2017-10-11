@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>AddGroup</name>
+    <desc>服务器发送给客户端，增加一个联系人组</desc>
+	<boolean>isCommon</boolean>
+    <i8>groupId</i8>
+	<i8>parentGroupId</i8>
+	<string>name</string>
+</lyvcmessage>

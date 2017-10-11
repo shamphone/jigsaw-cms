@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>JoinConference</name>
+    <desc>通知服务器要求加入某个会议</desc>
+	<i4>avCompressionCardChannelNumber</i4>
+	<i8>conId</i8>
+</lyvcmessage>

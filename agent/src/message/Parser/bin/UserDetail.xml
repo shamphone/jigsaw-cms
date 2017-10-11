@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>UserDetail</name>
+    <desc>服务器发送给客户端，告诉登录用户自己的详细信息</desc>
+    <i4>userRole</i4>
+    <i8>userId</i8>
+    <string>userName</string>
+    <string>firstName</string>
+    <string>lastName</string>
+    <string>email</string>
+</lyvcmessage>

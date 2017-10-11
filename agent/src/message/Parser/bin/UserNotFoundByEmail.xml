@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>UserNotFoundByEmail</name>
+    <desc>服务器发送给客户端，告诉用户找不到用户，其Email与给出的Email相同</desc>
+	<string>email</string>
+</lyvcmessage>

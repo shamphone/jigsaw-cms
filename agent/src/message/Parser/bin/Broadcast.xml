@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>Broadcast</name>
+    <desc>在会议中广播文字消息</desc>
+	<i8>senderId</i8>
+	<i8>conId</i8>
+	<string>content</string>
+</lyvcmessage>

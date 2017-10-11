@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>DesktopClientKeyEvent</name>
+    <desc>桌面共享的数据，将被移出</desc>
+	<boolean>downFlag</boolean>
+	<i4>key</i4>
+	<i8>receiverId</i8>
+</lyvcmessage>

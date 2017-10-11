@@ -1,0 +1,1828 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <windows.h>
+#include <winres.h>
+#include "../include/statusmodes.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AUTHREQ DIALOGEX 0, 0, 242, 107
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | 
+    DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Authorization Request"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Authorize",IDOK,66,88,50,14
+    PUSHBUTTON      "&Deny",IDCANCEL,132,88,50,14
+    CONTROL         "&U",IDC_ADD,"MButtonClass",WS_TABSTOP,201,4,16,14,
+                    0x18000000L
+    CONTROL         "&I",IDC_DETAILS,"MButtonClass",WS_TABSTOP,219,4,16,14,
+                    0x18000000L
+    LTEXT           "",IDC_NAME,53,24,134,10,SS_CENTERIMAGE
+    LTEXT           "",IDC_MAIL,53,39,110,10,SS_CENTERIMAGE
+    LTEXT           "",IDC_UIN,20,7,178,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_REASON,53,58,182,26,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | WS_VSCROLL,
+                    WS_EX_STATICEDGE
+    LTEXT           "Nick:",IDC_STATIC,7,24,40,10,SS_CENTERIMAGE
+    LTEXT           "E-mail:",IDC_STATIC,7,39,40,10,SS_CENTERIMAGE
+    LTEXT           "Reason:",IDC_STATIC,7,55,40,10,SS_CENTERIMAGE
+    CONTROL         "",IDC_PROTOCOL,"Button",BS_OWNERDRAW | WS_TABSTOP,4,6,
+                    12,12
+END
+
+IDD_DENYREASON DIALOGEX 0, 0, 172, 70
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | 
+    DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Enter a reason for denial"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_REASON,6,6,160,36,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN
+    DEFPUSHBUTTON   "&Send",IDOK,61,50,50,14
+END
+
+IDD_ADDCONTACT DIALOGEX 0, 0, 230, 151
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | 
+    DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Add %s"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Add",IDOK,20,130,72,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,139,130,71,14
+    EDITTEXT        IDC_MYHANDLE,6,16,90,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_GROUP,112,16,110,60,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Send ""You were added""",IDC_ADDED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,46,204,10
+    CONTROL         "Send authorization request",IDC_AUTH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,11,60,204,10
+    LTEXT           "Custom name:",IDC_STATIC,6,4,70,10
+    LTEXT           "Group:",IDC_STATIC,112,4,70,10
+    GROUPBOX        "Options",IDC_STATIC,7,33,216,43
+    GROUPBOX        "Authorization Request",IDC_AUTHGB,7,79,216,45
+    EDITTEXT        IDC_AUTHREQ,13,89,204,29,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_ADDED DIALOGEX 0, 0, 225, 57
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | 
+    DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "You Were Added"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Close",IDCANCEL,83,38,60,14
+    CTEXT           "You were added to this user's contact list.",IDC_STATIC,
+                    7,19,210,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_NAME,17,5,160,12,ES_READONLY | NOT WS_BORDER
+    CONTROL         "&I",IDC_DETAILS,"MButtonClass",WS_TABSTOP,201,3,16,14,
+                    0x18000000L
+    CONTROL         "&U",IDC_ADD,"MButtonClass",WS_TABSTOP,183,3,16,14,
+                    0x18000000L
+    CONTROL         "",IDC_PROTOCOL,"Button",BS_OWNERDRAW | WS_TABSTOP,4,4,
+                    12,12
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 212, 131
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
+    WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "About Miranda IM"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_WHITERECT,0,0,213,105
+    DEFPUSHBUTTON   "OK",IDOK,152,112,55,14
+    LTEXT           "Miranda IM",IDC_MIRANDA,5,7,150,15
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,106,213,1
+    LTEXT           "",IDC_DEVS,5,44,202,42
+    ICON            IDI_MIRANDA,IDC_LOGO,187,2,20,20
+    EDITTEXT        IDC_BUILDTIME,4,91,146,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    PUSHBUTTON      "Credits >",IDC_CONTRIBLINK,5,112,55,14
+    LTEXT           "Version",IDC_VERSION,5,25,150,15
+    EDITTEXT        IDC_CREDITSFILE,4,44,202,56,ES_CENTER | ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER | WS_VSCROLL
+END
+
+IDD_DELETECONTACT DIALOGEX 0, 0, 284, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | 
+    DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Delete Contact"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "No",IDNO,162,38,65,14
+    PUSHBUTTON      "Yes",IDYES,54,38,65,14
+    CONTROL         "Hide from list only, in order to keep their history and ignore/visibility settings",
+                    IDC_HIDE,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | 
+                    WS_TABSTOP,7,65,270,9
+    LTEXT           "Use Options->Ignore (expert mode) to unhide contacts.",
+                    IDC_STATIC,20,78,257,8
+    CONTROL         "Are you sure you want to delete %s?",IDC_TOPLINE,"Static",
+                    SS_SIMPLE | SS_NOPREFIX | WS_GROUP,7,7,270,8
+    LTEXT           "This will erase all history and settings for this contact!",
+                    IDC_STATIC,7,18,239,14
+END
+
+IDD_OPT_CONTACT DIALOGEX 0, 0, 199, 144
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Contact Display Options",IDC_STATIC,13,7,176,127
+    LTEXT           "Instead of displaying contacts by their nickname, drag to choose another order:",
+                    IDC_STATIC,19,17,165,23
+    CONTROL         "Tree1",IDC_NAMEORDER,"SysTreeView32",TVS_NOTOOLTIPS | 
+                    TVS_FULLROWSELECT | WS_BORDER | WS_TABSTOP,19,43,164,86
+END
+
+IDD_PROFILEMANAGER DIALOGEX 0, 0, 400, 211
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | 
+    DS_CENTER | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Miranda IM Profile Manager"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Tab1",IDC_TABS,"SysTabControl32",TCS_HOTTRACK | 
+                    WS_TABSTOP,4,31,393,160
+    PUSHBUTTON      "&Run",IDOK,298,194,48,14
+    PUSHBUTTON      "&Exit",IDCANCEL,348,194,48,14
+    LTEXT           "",IDC_WHITERECT,0,0,400,26
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,25,410,1
+    ICON            IDI_DETAILSLOGO,IDC_LOGO,7,3,20,20
+    LTEXT           "Miranda",IDC_NAME,35,4,360,8,0,WS_EX_TRANSPARENT
+    LTEXT           "Select and/or create your Miranda IM user profile",
+                    IDC_DESCRIPTION,45,14,349,8,0,WS_EX_TRANSPARENT
+END
+
+IDD_FINDADD DIALOGEX 0, 0, 427, 232
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Find/Add Contacts"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Search:",IDC_STATIC,5,7,37,8
+    CONTROL         "",IDC_PROTOLIST,"ComboBoxEx32",CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,42,5,80,88
+    GROUPBOX        "",IDC_PROTOIDGROUP,5,21,117,32
+    CONTROL         "",IDC_BYPROTOID,"Button",BS_AUTORADIOBUTTON,11,21,85,10
+    EDITTEXT        IDC_PROTOID,11,34,105,12,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_EMAILGROUP,5,58,117,32
+    CONTROL         "E-mail address",IDC_BYEMAIL,"Button",BS_AUTORADIOBUTTON,
+                    11,58,80,10
+    EDITTEXT        IDC_EMAIL,11,71,105,12,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_NAMEGROUP,5,95,117,59
+    CONTROL         "Name",IDC_BYNAME,"Button",BS_AUTORADIOBUTTON,11,95,49,
+                    10
+    LTEXT           "Nick:",IDC_STNAMENICK,11,110,31,8,NOT WS_GROUP
+    EDITTEXT        IDC_NAMENICK,42,108,74,12,ES_AUTOHSCROLL
+    LTEXT           "First:",IDC_STNAMEFIRST,11,124,31,8,NOT WS_GROUP
+    EDITTEXT        IDC_NAMEFIRST,42,122,74,12,ES_AUTOHSCROLL
+    LTEXT           "Last:",IDC_STNAMELAST,11,138,31,8,NOT WS_GROUP
+    EDITTEXT        IDC_NAMELAST,42,136,74,12,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_ADVANCEDGROUP,5,159,117,32
+    CONTROL         "Advanced",IDC_BYADVANCED,"Button",BS_AUTORADIOBUTTON,11,
+                    159,62,10
+    CONTROL         "Advanced >>",IDC_ADVANCED,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,11,171,105,14
+    DEFPUSHBUTTON   "&Search",IDOK,5,197,117,17
+    CONTROL         "List1",IDC_RESULTS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_AUTOARRANGE | 
+                    WS_BORDER | WS_TABSTOP,129,5,293,191
+    CONTROL         "More options",IDC_MOREOPTIONS,"MButtonClass",
+                    WS_DISABLED | WS_TABSTOP,272,200,77,14,0x18000000L
+    PUSHBUTTON      "Add to list",IDC_ADD,354,200,68,14,WS_DISABLED
+    CONTROL         "",IDC_STATUSBAR,"msctls_statusbar32",WS_TABSTOP | 0x100,
+                    0,220,427,10
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 428, 271
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
+    WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CLIPCHILDREN | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,266,253,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,320,253,50,14
+    PUSHBUTTON      "Apply",IDC_APPLY,374,253,50,14
+    CONTROL         "Tree1",IDC_PAGETREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_TRACKSELECT | WS_TABSTOP,4,4,102,
+                    247,WS_EX_STATICEDGE
+    CONTROL         "",IDC_TAB,"SysTabControl32",NOT WS_VISIBLE | WS_TABSTOP,
+                    111,4,313,247
+    CONTROL         "Show expert options",IDC_EXPERT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,257,102,10
+    CTEXT           "Please select a subentry from the list",IDC_STNOPAGE,
+                    111,4,313,240,SS_CENTERIMAGE
+END
+
+IDD_READAWAYMSG DIALOGEX 0, 0, 187, 72
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | 
+    DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "%s Message for %s"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&Cancel",IDOK,69,53,50,14
+    CTEXT           "Retrieving %s message...",IDC_RETRIEVING,5,21,177,8,
+                    SS_NOPREFIX
+    EDITTEXT        IDC_MSG,5,5,177,43,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | NOT WS_VISIBLE | WS_VSCROLL
+END
+
+IDD_SETAWAYMSG DIALOGEX 0, 0, 187, 72
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | 
+    DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Change %s Message"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Closing in %d",IDOK,61,53,65,14
+    EDITTEXT        IDC_MSG,5,5,177,43,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_DETAILS DIALOGEX 0, 0, 318, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | 
+    DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "%s: User Details"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,263,191,50,14
+    LTEXT           "",IDC_WHITERECT,0,0,318,26
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,26,320,1
+    ICON            IDI_DETAILSLOGO,IDC_LOGO,7,4,20,20
+    LTEXT           "",IDC_NAME,33,5,200,8,0,WS_EX_TRANSPARENT
+    CONTROL         "",IDC_PAGETREE,"SysTreeView32",TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_NOTOOLTIPS | TVS_TRACKSELECT | 
+                    TVS_FULLROWSELECT | WS_TABSTOP | 0x4000,3,30,76,176,
+                    WS_EX_STATICEDGE
+    CONTROL         "Tab1",IDC_TABS,"SysTabControl32",TCS_HOTTRACK | 
+                    TCS_MULTILINE | WS_TABSTOP,85,29,228,158
+    LTEXT           "View personal user details and more.",IDC_STATIC,44,13,
+                    189,8,0,WS_EX_TRANSPARENT
+    CTEXT           "Updating",IDC_UPDATING,145,194,113,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "Update Now",IDC_UPDATE,85,191,55,14,WS_DISABLED
+END
+
+IDD_INFO_SUMMARY DIALOGEX 0, 0, 222, 132
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Nickname:",IDC_STATIC,5,5,46,8
+    EDITTEXT        IDC_NICK,51,5,166,8,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "First name:",IDC_STATIC,5,18,46,8
+    EDITTEXT        IDC_FIRSTNAME,51,18,74,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Gender:",IDC_STATIC,126,18,44,8
+    EDITTEXT        IDC_GENDER,170,18,47,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Last name:",IDC_STATIC,5,31,46,8
+    EDITTEXT        IDC_LASTNAME,51,31,74,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Age:",IDC_STATIC,126,31,44,8
+    EDITTEXT        IDC_AGE,170,31,47,8,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "E-mail:",IDC_STATIC,5,44,46,8
+    CONTROL         "",IDC_EMAIL,"Hyperlink",WS_TABSTOP,51,44,166,8
+    LTEXT           "Date of birth:",IDC_STATIC,5,58,46,8
+    EDITTEXT        IDC_DOBDAY,51,58,17,8,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_DOBMONTH,68,58,40,8,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_DOBYEAR,107,58,25,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+END
+
+IDD_INFO_CONTACT DIALOGEX 0, 0, 222, 132
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "E-mail:",IDC_STATIC,5,5,212,8
+    CONTROL         "List1",IDC_EMAILS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOLABELWRAP | LVS_AUTOARRANGE | 
+                    LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,5,14,212,50
+    LTEXT           "Phone:",IDC_STATIC,5,68,212,8
+    CONTROL         "List1",IDC_PHONES,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOLABELWRAP | LVS_AUTOARRANGE | 
+                    LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,5,77,212,50
+END
+
+IDD_INFO_BACKGROUND DIALOGEX 0, 0, 222, 132
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Web page:",IDC_STATIC,5,5,44,8
+    CONTROL         "",IDC_WEBPAGE,"Hyperlink",WS_TABSTOP,49,5,168,8
+    LTEXT           "Past background:",IDC_STATIC,5,18,212,8
+    CONTROL         "List1",IDC_PAST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOLABELWRAP | LVS_AUTOARRANGE | 
+                    LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,5,27,212,44
+    LTEXT           "Interests:",IDC_STATIC,5,74,212,8
+    CONTROL         "List1",IDC_INTERESTS,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_NOLABELWRAP | LVS_AUTOARRANGE | 
+                    LVS_NOCOLUMNHEADER | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,5,83,212,44
+END
+
+IDD_INFO_NOTES DIALOGEX 0, 0, 222, 132
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "About:",IDC_STATIC,5,5,212,8
+    EDITTEXT        IDC_ABOUT,5,13,212,45,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    LTEXT           "My notes:",IDC_STATIC,5,61,212,8
+    EDITTEXT        IDC_MYNOTES,5,69,212,58,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+END
+
+IDD_INFO_LOCATION DIALOGEX 0, 0, 222, 132
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Street:",IDC_STATIC,5,5,51,8
+    EDITTEXT        IDC_STREET,56,5,161,16,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "City:",IDC_STATIC,5,22,51,8
+    EDITTEXT        IDC_CITY,56,22,161,8,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "State:",IDC_STATIC,5,33,51,8
+    EDITTEXT        IDC_STATE,56,33,161,8,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "Postal code:",IDC_STATIC,5,44,51,8
+    EDITTEXT        IDC_ZIP,56,44,161,8,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "Country:",IDC_STATIC,5,55,51,8
+    EDITTEXT        IDC_COUNTRY,56,55,161,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Spoken languages:",IDC_STATIC,5,70,51,16
+    EDITTEXT        IDC_LANGUAGE1,56,70,161,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    EDITTEXT        IDC_LANGUAGE2,56,78,161,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    EDITTEXT        IDC_LANGUAGE3,56,86,161,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Timezone:",IDC_STATIC,5,97,51,8
+    EDITTEXT        IDC_TIMEZONE,56,97,161,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Local time:",IDC_STATIC,5,108,51,8
+    EDITTEXT        IDC_LOCALTIME,56,108,161,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+END
+
+IDD_INFO_WORK DIALOGEX 0, 0, 222, 132
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Company:",IDC_STATIC,5,5,51,8
+    EDITTEXT        IDC_COMPANY,56,5,161,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Department:",IDC_STATIC,5,17,51,8
+    EDITTEXT        IDC_DEPARTMENT,56,17,161,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Position:",IDC_STATIC,5,28,51,8
+    EDITTEXT        IDC_POSITION,56,28,161,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Street:",IDC_STATIC,5,48,51,8
+    EDITTEXT        IDC_STREET,56,48,161,16,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "City:",IDC_STATIC,5,65,51,8
+    EDITTEXT        IDC_CITY,56,65,161,8,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "State:",IDC_STATIC,5,76,51,8
+    EDITTEXT        IDC_STATE,56,76,161,8,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "Postal code:",IDC_STATIC,5,87,51,8
+    EDITTEXT        IDC_ZIP,56,87,161,8,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "Country:",IDC_STATIC,5,98,51,8
+    EDITTEXT        IDC_COUNTRY,56,98,161,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "Website:",IDC_STATIC,5,109,51,8
+    CONTROL         "",IDC_WEBPAGE,"Hyperlink",WS_TABSTOP,57,109,160,8
+END
+
+IDD_ADDEMAIL DIALOGEX 0, 0, 187, 42
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Add E-Mail Address"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EMAIL,5,5,177,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,36,23,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,102,23,50,14
+END
+
+IDD_ADDPHONE DIALOGEX 0, 0, 210, 91
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Add Phone Number"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Enter country, area code and phone number:",IDC_STATIC,
+                    5,5,200,8
+    COMBOBOX        IDC_COUNTRY,21,15,66,120,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_AREA,91,15,36,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_NUMBER,131,15,74,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Or enter a full international number:",IDC_STATIC,5,30,
+                    200,8
+    EDITTEXT        IDC_PHONE,21,40,184,12,ES_AUTOHSCROLL
+    CONTROL         "Phone can receive SMS text messages",IDC_SMS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,56,200,10
+    DEFPUSHBUTTON   "OK",IDOK,47,72,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,113,72,50,14
+END
+
+IDD_INSTALLINI DIALOGEX 0, 0, 213, 103
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | 
+    DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Install Database Settings"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDOK,26,84,50,14
+    PUSHBUTTON      "No",IDCANCEL,81,84,50,14
+    LTEXT           "A file containing new database settings has been placed in the Miranda IM directory.",
+                    IDC_STATIC,5,5,203,16
+    LTEXT           "Do you want to import the settings now?",IDC_STATIC,5,
+                    69,203,8
+    PUSHBUTTON      "No to all",IDC_NOTOALL,136,84,50,14
+    LTEXT           "",IDC_ININAME,5,24,143,16,SS_NOPREFIX | SS_CENTERIMAGE
+    PUSHBUTTON      "&View contents",IDC_VIEWINI,150,25,58,14
+    LTEXT           "Security systems to prevent malicious changes are in place and you will be warned before changes that are not known to be safe.",
+                    IDC_SECURITYINFO,5,43,203,24
+END
+
+IDD_WARNINICHANGE DIALOGEX 0, 0, 187, 113
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | 
+    DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Database Setting Change"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Database settings are being imported from",IDC_STATIC,5,
+                    5,177,8
+    CONTROL         "",IDC_ININAME,"Static",SS_SIMPLE | SS_NOPREFIX | 
+                    WS_GROUP,5,13,177,8
+    LTEXT           "This file wishes to change the setting",IDC_STATIC,5,24,
+                    177,8
+    CONTROL         "",IDC_SETTINGNAME,"Static",SS_SIMPLE | SS_NOPREFIX | 
+                    WS_GROUP,12,33,170,8
+    LTEXT           "to the value",IDC_STATIC,5,42,177,8
+    CONTROL         "",IDC_NEWVALUE,"Static",SS_SIMPLE | SS_NOPREFIX | 
+                    WS_GROUP,12,51,170,8
+    LTEXT           "",IDC_SECURITYINFO,5,60,177,8
+    LTEXT           "Do you want to allow this change?",IDC_STATIC,5,71,177,
+                    8
+    CONTROL         "&Allow all further changes to this section",
+                    IDC_WARNNOMORE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,
+                    80,169,10
+    DEFPUSHBUTTON   "&Yes",IDYES,5,94,50,14
+    PUSHBUTTON      "&No",IDNO,59,94,50,14
+    PUSHBUTTON      "Cancel Import",IDCANCEL,123,94,59,14
+END
+
+IDD_INIIMPORTDONE DIALOGEX 0, 0, 186, 73
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | 
+    DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Database Import Complete"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "The import has completed from",IDC_STATIC,5,5,176,8
+    CONTROL         "",IDC_ININAME,"Static",SS_SIMPLE | SS_NOPREFIX | 
+                    WS_GROUP,5,13,176,8
+    LTEXT           "What do you want to do with the file now?",IDC_STATIC,5,
+                    24,176,8
+    PUSHBUTTON      "&Recycle",IDC_RECYCLE,5,36,50,14
+    PUSHBUTTON      "&Delete",IDC_DELETE,68,36,50,14
+    EDITTEXT        IDC_NEWNAME,5,55,117,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Move/Rename",IDC_MOVE,124,54,57,14
+    PUSHBUTTON      "&Leave",IDC_LEAVE,131,36,50,14
+END
+
+IDD_NETLIBLOGOPTS DIALOGEX 0, 0, 261, 201
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CENTER | 
+    WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Netlib Log Options"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Show",IDC_STATIC,5,5,250,78
+    CONTROL         "Sent bytes",IDC_DUMPSENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,148,17,65,10
+    CONTROL         "Received bytes",IDC_DUMPRECV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,17,133,10
+    CONTROL         "Additional data due to proxy communication",
+                    IDC_DUMPPROXY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,
+                    28,234,10
+    CONTROL         "Text dumps where available",IDC_TEXTDUMPS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,39,133,10
+    CONTROL         "Auto-detect text",IDC_AUTODETECTTEXT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,148,39,99,10
+    COMBOBOX        IDC_TIMEFORMAT,13,52,164,69,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Calling modules' names",IDC_SHOWNAMES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,66,234,10
+    GROUPBOX        "Log to",IDC_STATIC,5,87,250,43
+    CONTROL         "OutputDebugString()",IDC_TOOUTPUTDEBUGSTRING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,100,122,10
+    CONTROL         "File",IDC_TOFILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    13,113,42,10
+    EDITTEXT        IDC_FILENAME,56,112,173,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_FILENAMEBROWSE,232,112,15,12
+    CONTROL         "Show this dialog box when Miranda IM starts",
+                    IDC_SHOWTHISDLGATSTART,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,135,250,10
+    LTEXT           "Run programme when Miranda IM starts (eg tail -f, dbgview, etc):",
+                    IDC_STATIC,5,147,250,8
+    EDITTEXT        IDC_RUNATSTART,13,158,170,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_RUNATSTARTBROWSE,186,158,15,12
+    PUSHBUTTON      "Run now",IDC_RUNNOW,205,158,42,12
+    PUSHBUTTON      "Save as default",IDC_SAVE,5,182,77,14
+    DEFPUSHBUTTON   "Close",IDOK,205,182,50,14
+END
+
+IDD_HISTORY_FIND DIALOGEX 0, 0, 230, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Find"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FINDWHAT,48,11,115,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Find Next",IDOK,173,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,173,24,50,14
+    LTEXT           "Find What:",IDC_STATIC,7,13,39,9
+END
+
+IDD_FILESEND DIALOGEX 0, 0, 256, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | 
+    DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
+    WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Send File(s)"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_MSG,6,102,245,46,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "&Send",IDOK,67,157,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,140,157,50,15
+    LTEXT           "To:",IDC_STATIC,6,23,24,9,SS_CENTERIMAGE
+    LTEXT           "",IDC_TO,43,24,159,9
+    LTEXT           "File(s):",IDC_STATIC,7,39,30,8
+    EDITTEXT        IDC_FILE,38,38,213,31,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "&Choose Again...",IDC_CHOOSE,39,74,77,14
+    RTEXT           "Total size:",IDC_STATIC,119,76,68,8
+    LTEXT           "",IDC_TOTALSIZE,191,76,58,8
+    LTEXT           "Description:",IDC_STATIC,6,93,96,8
+    CONTROL         "6",IDC_USERMENU,"MButtonClass",WS_TABSTOP,195,5,16,14,
+                    0x18000000L
+    CONTROL         "&D",IDC_DETAILS,"MButtonClass",WS_TABSTOP,213,5,16,14,
+                    0x18000000L
+    CONTROL         "&H",IDC_HISTORY,"MButtonClass",WS_TABSTOP,231,5,16,14,
+                    0x18000000L
+    CONTROL         "",IDC_PROTOCOL,"Button",BS_OWNERDRAW | WS_TABSTOP,5,7,
+                    12,12
+    LTEXT           "",IDC_NAME,19,7,151,9,SS_NOPREFIX | SS_CENTERIMAGE
+END
+
+IDD_FILERECV DIALOGEX 0, 0, 256, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | 
+    DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CLIPCHILDREN | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Incoming File Transfer"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "A&ccept",IDOK,68,155,50,14
+    PUSHBUTTON      "&Decline",IDCANCEL,138,155,50,14
+    LTEXT           "From:",IDC_STATIC,6,20,24,9,SS_CENTERIMAGE
+    LTEXT           "",IDC_FROM,39,21,159,9
+    LTEXT           "Date:",IDC_STATIC,6,35,28,9,SS_CENTERIMAGE
+    LTEXT           "",IDC_DATE,39,34,159,9
+    LTEXT           "Files:",IDC_STATIC,6,50,28,8
+    EDITTEXT        IDC_FILENAMES,39,50,210,16,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    LTEXT           "Description:",IDC_STATIC,6,69,64,8
+    EDITTEXT        IDC_MSG,6,79,243,45,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY
+    LTEXT           "Save to:",IDC_STATIC,6,131,34,8
+    PUSHBUTTON      "...",IDC_FILEDIRBROWSE,235,130,14,10
+    COMBOBOX        IDC_FILEDIR,45,129,187,108,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "&A",IDC_ADD,"MButtonClass",WS_TABSTOP,177,5,16,14,
+                    0x18000000L
+    CONTROL         "6",IDC_USERMENU,"MButtonClass",WS_TABSTOP,195,5,16,14,
+                    0x18000000L
+    CONTROL         "&D",IDC_DETAILS,"MButtonClass",WS_TABSTOP,213,5,16,14,
+                    0x18000000L
+    CONTROL         "&H",IDC_HISTORY,"MButtonClass",WS_TABSTOP,231,5,16,14,
+                    0x18000000L
+    CONTROL         "",IDC_PROTOCOL,"Button",BS_OWNERDRAW | WS_TABSTOP,5,7,
+                    12,12
+    LTEXT           "",IDC_NAME,19,7,151,9,SS_NOPREFIX | SS_CENTERIMAGE
+END
+
+IDD_FILETRANSFERINFO DIALOGEX 0, 0, 256, 155
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,162,136,89,14
+    LTEXT           "Status:",IDC_STATIC,9,0,31,9,SS_CENTERIMAGE
+    LTEXT           "",IDC_STATUS,41,0,210,9
+    GROUPBOX        "Current file",IDC_CURRENTFILEGROUP,5,13,246,62
+    CONTROL         "",IDC_FILENAME,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,11,25,234,8
+    CONTROL         "Transferred:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX,11,36,58,8
+    CONTROL         "",IDC_CURRENTTRANSFERRED,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,69,36,176,8
+    CONTROL         "Speed:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX,11,47,58,8
+    CONTROL         "",IDC_CURRENTSPEED,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,69,47,176,8
+    CONTROL         "Progress1",IDC_CURRENTFILEPROGRESS,"msctls_progress32",
+                    WS_DISABLED | 0x1,11,59,234,8
+    GROUPBOX        "All files",IDC_ALLFILESGROUP,5,79,246,51
+    CONTROL         "Transferred:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX,11,91,58,8
+    CONTROL         "",IDC_ALLTRANSFERRED,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,69,91,176,8
+    CONTROL         "Speed:",IDC_STATIC,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX,11,102,58,8
+    CONTROL         "",IDC_ALLSPEED,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,69,102,176,8
+    CONTROL         "Progress1",IDC_ALLFILESPROGRESS,"msctls_progress32",
+                    WS_DISABLED | 0x1,11,114,234,8
+    PUSHBUTTON      "Open folder",IDC_OPENFOLDER,5,136,64,14
+    CONTROL         "Open file",IDC_OPENFILE,"MButtonClass",WS_DISABLED | 
+                    WS_TABSTOP,75,136,66,14,0x18000000L
+END
+
+IDD_FILEEXISTS DIALOGEX 0, 0, 288, 181
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | 
+    DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "File Already Exists"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Resume",IDC_RESUME,5,144,65,14
+    PUSHBUTTON      "Resume all",IDC_RESUMEALL,5,162,65,14
+    PUSHBUTTON      "Overwrite",IDC_OVERWRITE,76,144,65,14
+    PUSHBUTTON      "Overwrite all",IDC_OVERWRITEALL,76,162,65,14
+    PUSHBUTTON      "Save as...",IDC_SAVEAS,147,144,65,14
+    PUSHBUTTON      "Skip",IDC_SKIP,218,144,65,14
+    PUSHBUTTON      "Cancel transfer",IDCANCEL,218,162,65,14
+    LTEXT           "You are about to receive the file",IDC_STATIC,5,5,278,8
+    EDITTEXT        IDC_FILENAME,15,16,268,8,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    GROUPBOX        "Existing file",IDC_STATIC,5,29,278,61
+    ICON            "",IDC_EXISTINGICON,14,45,20,20,SS_NOTIFY
+    LTEXT           "Size:",IDC_STATIC,40,42,27,8
+    LTEXT           "",IDC_EXISTINGSIZE,67,42,35,8
+    RTEXT           "Last modified:",IDC_STATIC,103,42,58,8
+    LTEXT           "",IDC_EXISTINGDATE,166,42,115,8
+    LTEXT           "Type:",IDC_STATIC,40,55,27,8
+    LTEXT           "",IDC_EXISTINGTYPE,67,55,214,8
+    PUSHBUTTON      "Open file",IDC_OPENFILE,12,70,62,13
+    PUSHBUTTON      "Open folder",IDC_OPENFOLDER,82,70,62,13
+    PUSHBUTTON      "File properties",IDC_PROPERTIES,201,70,74,13
+    GROUPBOX        "File being received",IDC_STATIC,5,95,278,42
+    ICON            "",IDC_NEWICON,14,110,20,20,SS_NOTIFY
+    LTEXT           "Size:",IDC_STATIC,40,108,27,8
+    LTEXT           "",IDC_NEWSIZE,67,108,35,8
+    RTEXT           "Last modified:",IDC_STATIC,103,108,58,8
+    LTEXT           "",IDC_NEWDATE,166,108,115,8
+    LTEXT           "Type:",IDC_STATIC,40,121,27,8
+    LTEXT           "",IDC_NEWTYPE,67,121,214,8
+END
+
+IDD_URLSEND DIALOGEX 0, 0, 215, 126
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | 
+    WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_URLS,5,30,205,92,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_MESSAGE,5,57,205,44,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    DEFPUSHBUTTON   "&Send",IDOK,54,107,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,113,107,50,14
+    CONTROL         "",IDC_PROTOCOL,"Button",BS_OWNERDRAW | WS_TABSTOP,5,7,
+                    12,12
+    LTEXT           "",IDC_NAME,19,7,118,9,SS_NOPREFIX | SS_CENTERIMAGE
+    CONTROL         "&A",IDC_ADD,"MButtonClass",WS_TABSTOP,140,5,16,14,
+                    0x18000000L
+    CONTROL         "6",IDC_USERMENU,"MButtonClass",WS_TABSTOP,158,5,16,14,
+                    0x18000000L
+    CONTROL         "&D",IDC_DETAILS,"MButtonClass",WS_TABSTOP,176,5,16,14,
+                    0x18000000L
+    CONTROL         "&H",IDC_HISTORY,"MButtonClass",WS_TABSTOP,194,5,16,14,
+                    0x18000000L
+    LTEXT           "Enter URL:",IDC_ST_ENTERURL,5,20,205,8
+    LTEXT           "Enter description:",IDC_ST_ENTERMSG,5,47,205,8
+END
+
+IDD_URLRECV DIALOGEX 0, 0, 215, 140
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | 
+    DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "URL Recieved"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "&Open URL",IDOK,"MButtonClass",WS_TABSTOP,11,120,57,14,
+                    0x18000000L
+    PUSHBUTTON      "&Reply",IDC_REPLY,82,120,50,14
+    PUSHBUTTON      "&Close",IDCANCEL,148,120,50,14
+    CONTROL         "",IDC_PROTOCOL,"Button",BS_OWNERDRAW | WS_TABSTOP,5,7,
+                    12,12
+    LTEXT           "",IDC_NAME,19,7,118,9,SS_NOPREFIX | SS_CENTERIMAGE
+    CONTROL         "&A",IDC_ADD,"MButtonClass",WS_TABSTOP,140,5,16,14,
+                    0x18000000L
+    CONTROL         "6",IDC_USERMENU,"MButtonClass",WS_TABSTOP,158,5,16,14,
+                    0x18000000L
+    CONTROL         "&D",IDC_DETAILS,"MButtonClass",WS_TABSTOP,176,5,16,14,
+                    0x18000000L
+    CONTROL         "&H",IDC_HISTORY,"MButtonClass",WS_TABSTOP,194,5,16,14,
+                    0x18000000L
+    LTEXT           "Date:",IDC_STATIC,5,21,29,8
+    EDITTEXT        IDC_DATE,34,21,176,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER
+    LTEXT           "URL:",IDC_STATIC,5,33,205,8
+    EDITTEXT        IDC_URL,5,43,205,12,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Description:",IDC_ST_ENTERMSG,5,60,205,8
+    EDITTEXT        IDC_MSG,5,70,205,44,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+END
+
+IDD_HISTORY DIALOGEX 0, 0, 296, 166
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Message History"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,239,144,50,14
+    EDITTEXT        IDC_EDIT,7,83,282,52,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    LISTBOX         IDC_LIST,7,7,282,72,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Find...",IDC_FIND,7,144,50,14
+    PUSHBUTTON      "Delete",IDC_DELETEHISTORY,66,144,50,14
+END
+
+IDD_OPT_SOUND DIALOGEX 0, 0, 285, 240
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Sounds",IDC_STATIC,4,4,277,154
+    PUSHBUTTON      "&Change...",IDC_CHANGE,16,213,50,14
+    PUSHBUTTON      "&Preview",IDC_PREVIEW,70,213,50,14
+    CONTROL         "Download more sounds",IDC_GETMORE,"Hyperlink",
+                    WS_TABSTOP | 0x2,127,216,137,8
+    CONTROL         "Tree1",IDC_SOUNDTREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_BORDER | 
+                    WS_TABSTOP,12,33,261,119
+    GROUPBOX        "Sound Information",IDC_SGROUP,4,162,277,71
+    LTEXT           "Location:",IDC_SLOC,17,190,40,9
+    EDITTEXT        IDC_LOCATION,65,190,208,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Name:",IDC_NAME,17,174,39,9
+    LTEXT           "",IDC_NAMEVAL,64,174,209,9
+    CONTROL         "Enable sound events",IDC_ENABLESOUNDS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,17,261,10
+END
+
+IDD_OPT_ICONS DIALOGEX 0, 0, 257, 193
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Icons",IDC_STICONSGROUP,4,4,248,185
+    LTEXT           "Show category:",IDC_STATIC,12,18,66,16
+    LISTBOX         IDC_CATEGORYLIST,114,17,129,41,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List1",IDC_PREVIEW,"SysListView32",LVS_SINGLESEL | 
+                    LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,12,66,231,83
+    PUSHBUTTON      "&Load icon set...",IDC_LOADICONS,12,158,94,13
+    PUSHBUTTON      "&Import icons >>",IDC_IMPORT,154,158,89,13
+    CONTROL         "Download more icons",IDC_GETMORE,"Hyperlink",WS_TABSTOP | 
+                    0x1,12,178,232,8
+    LTEXT           "",IDC_STSIMPLERIGHT,200,104,8,32,NOT WS_VISIBLE
+END
+
+IDD_OPT_IGNORE DIALOGEX 0, 0, 313, 240
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "The following events are being ignored:",IDC_STATIC,8,
+                    14,297,8
+    ICON            IDI_RECVMSG,IDC_MSGICON,8,172,20,20,SS_CENTERIMAGE
+    LTEXT           "Ignore messages",IDC_STATIC,26,178,70,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    ICON            IDI_URL,IDC_URLICON,8,187,20,20,SS_CENTERIMAGE
+    LTEXT           "Ignore URLs",IDC_STATIC,26,193,70,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    ICON            IDI_FILE,IDC_FILEICON,8,202,20,20,SS_CENTERIMAGE
+    LTEXT           "Ignore files",IDC_STATIC,26,208,70,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    ICON            IDI_MIRANDA,IDC_AUTHICON,96,172,20,20,SS_CENTERIMAGE
+    LTEXT           "Suppress auth requests",IDC_STATIC,114,178,107,8,
+                    SS_NOPREFIX | SS_CENTERIMAGE
+    ICON            IDI_USERONLINE,IDC_ONLINEICON,96,187,20,20,
+                    SS_CENTERIMAGE
+    LTEXT           "Suppress online notification",IDC_STATIC,114,193,107,8,
+                    SS_NOPREFIX | SS_CENTERIMAGE
+    ICON            IDI_FILLEDBLOB,IDC_ALLICON,221,172,20,20,SS_CENTERIMAGE
+    LTEXT           "Ignore all",IDC_STATIC,239,178,66,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    ICON            IDI_EMPTYBLOB,IDC_NONEICON,221,187,20,20,SS_CENTERIMAGE
+    LTEXT           "Ignore none",IDC_STATIC,239,193,66,8,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    CTEXT           "Only the ticked contacts will be shown on the main contact list",
+                    IDC_STCHECKMARKS,8,227,297,8
+    CONTROL         "",IDC_LIST,"CListControl",WS_TABSTOP | 0x3da,8,26,297,
+                    146,WS_EX_CLIENTEDGE
+    GROUPBOX        "Ignore",IDC_STATIC,0,0,313,240
+    ICON            IDI_ADDCONTACT,IDC_ADDED,96,202,20,20,SS_CENTERIMAGE
+    LTEXT           "Suppress added notification",IDC_STATIC,114,208,107,8,
+                    SS_NOPREFIX | SS_CENTERIMAGE
+END
+
+IDD_OPT_VISIBILITY DIALOGEX 0, 0, 313, 240
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDI_ONLINE,IDC_VISIBLEICON,8,203,12,12,SS_CENTERIMAGE
+    LTEXT           "You are visible to this person even when in invisible mode",
+                    IDC_STATIC,26,205,279,8,SS_NOPREFIX | SS_CENTERIMAGE
+    ICON            IDI_INVISIBLE,IDC_INVISIBLEICON,8,218,12,12,
+                    SS_CENTERIMAGE
+    LTEXT           "You are never visible to this person",IDC_STATIC,26,220,
+                    279,8,SS_NOPREFIX | SS_CENTERIMAGE
+    GROUPBOX        "Visibility",IDC_STATIC,0,0,313,240
+    CONTROL         "",IDC_LIST,"CListControl",WS_TABSTOP | 0x1d0,8,14,297,
+                    183,WS_EX_CLIENTEDGE
+END
+
+IDD_OPT_AWAYMSG DIALOGEX 0, 0, 263, 151
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Status Messages",IDC_STATIC,4,5,255,142
+    COMBOBOX        IDC_STATUS,12,19,240,97,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Do not reply to requests for this message",
+                    IDC_DONTREPLY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,
+                    37,227,10
+    CONTROL         "Do not pop up dialog asking for new message",
+                    IDC_NODIALOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,50,
+                    227,10
+    CONTROL         "By default, use the same message as last time",
+                    IDC_USEPREVIOUS,"Button",BS_AUTORADIOBUTTON,23,65,227,10
+    CONTROL         "By default, use this message:",IDC_USESPECIFIC,"Button",
+                    BS_AUTORADIOBUTTON,23,78,227,10
+    EDITTEXT        IDC_MSG,33,91,219,38,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "Use %time% for the current time, %date% for the current date",
+                    IDC_STATIC,33,131,219,8
+END
+
+IDD_ICONINDEX DIALOGEX 0, 0, 219, 197
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTROLPARENT
+CAPTION "Icon Index"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    RTEXT           "Icon library:",IDC_STATIC,4,6,54,8
+    EDITTEXT        IDC_ICONSET,60,4,139,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,201,5,14,10
+    LTEXT           "Drag icons to main list to assign them:",IDC_STATIC,4,
+                    18,211,8
+    CONTROL         "List1",IDC_PREVIEW,"SysListView32",LVS_SINGLESEL | 
+                    LVS_AUTOARRANGE | WS_BORDER | WS_TABSTOP,4,27,211,82
+    GROUPBOX        "Import multiple",IDC_IMPORTMULTI,4,122,211,61
+    CONTROL         "To main icons",IDC_TOMAIN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,132,74,12
+    CONTROL         "To",IDC_TOPROTO,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,
+                    165,25,12
+    COMBOBOX        IDC_PROTOLIST,34,164,79,58,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "<< &Import",IDC_IMPORT,164,164,48,14,WS_DISABLED
+    CONTROL         "Download more icons",IDC_GETMORE,"Hyperlink",WS_TABSTOP | 
+                    0x1,4,185,211,8
+    CONTROL         "To default status icons",IDC_TODEFICON,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,148,123,12
+END
+
+IDD_OPT_NETLIB DIALOGEX 0, 0, 313, 228
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Incoming Connections",IDC_STATIC43,0,160,313,52
+    COMBOBOX        IDC_NETLIBUSERS,0,1,231,110,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Logging...",IDC_LOGOPTIONS,241,1,60,13
+    CONTROL         "Use proxy server",IDC_USEPROXY,"Button",BS_3STATE | 
+                    WS_TABSTOP,7,29,90,9
+    LTEXT           "Type:",IDC_STATIC21,19,43,57,8,WS_DISABLED
+    COMBOBOX        IDC_PROXYTYPE,80,40,86,62,CBS_DROPDOWNLIST | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Host:",IDC_STATIC22,19,58,57,8,WS_DISABLED
+    EDITTEXT        IDC_PROXYHOST,80,56,86,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Port:",IDC_STATIC23,177,58,35,8,WS_DISABLED
+    EDITTEXT        IDC_PROXYPORT,213,56,35,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    WS_DISABLED
+    LTEXT           "(often %d)",IDC_STOFTENPORT,258,57,48,8,WS_DISABLED
+    CONTROL         "Enable authentication",IDC_PROXYAUTH,"Button",BS_3STATE | 
+                    WS_DISABLED | WS_TABSTOP,20,73,154,10
+    LTEXT           "Username:",IDC_STATIC31,32,87,47,8,WS_DISABLED
+    EDITTEXT        IDC_PROXYUSER,80,85,86,12,ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "Password:",IDC_STATIC32,177,87,49,8,WS_DISABLED
+    EDITTEXT        IDC_PROXYPASS,232,85,74,12,ES_PASSWORD | ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    CONTROL         "Resolve hostnames through proxy",IDC_PROXYDNS,"Button",
+                    BS_3STATE | WS_DISABLED | WS_TABSTOP,20,115,154,10
+    CONTROL         "Port Range:",IDC_SPECIFYPORTS,"Button",BS_3STATE | 
+                    BS_TOP | BS_MULTILINE | WS_TABSTOP,7,172,72,9
+    EDITTEXT        IDC_PORTSRANGE,80,171,142,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "Example: 1050-1070, 2000-2010, 2500",IDC_STATIC52,80,
+                    186,196,8,WS_DISABLED
+    CTEXT           "You will need to reconnect for the changes you have made on this page to take effect.",
+                    IDC_RECONNECTREQD,4,217,307,8,NOT WS_VISIBLE
+    CONTROL         "Use NTLM authentication",IDC_PROXYAUTHNTLM,"Button",
+                    BS_3STATE | WS_DISABLED | WS_TABSTOP,32,101,154,10
+    GROUPBOX        "Outgoing Connections",IDC_STATIC12,0,18,313,139
+    CONTROL         "Port Range:",IDC_SPECIFYPORTSO,"Button",BS_3STATE | 
+                    BS_TOP | BS_MULTILINE | WS_TABSTOP,7,130,72,9
+    EDITTEXT        IDC_PORTSRANGEO,80,129,142,12,ES_AUTOHSCROLL | 
+                    WS_DISABLED
+    LTEXT           "Example: 1050-1070, 2000-2010, 2500",IDC_STATIC54,80,
+                    144,196,8,WS_DISABLED
+    CONTROL         "Enable UPnP port mapping",IDC_ENABLEUPNP,"Button",
+                    BS_3STATE | BS_TOP | BS_MULTILINE | WS_TABSTOP,7,197,299,
+                    9
+END
+
+IDD_OPT_FILETRANSFER DIALOGEX 0, 0, 313, 228
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Receiving files",IDC_STATIC,0,0,313,80
+    LTEXT           "Received files folder:",IDC_STATIC,8,15,82,8
+    EDITTEXT        IDC_FILEDIR,92,13,190,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_FILEDIRBROWSE,287,14,15,11
+    CONTROL         "Auto-accept incoming files from people on my contact list",
+                    IDC_AUTOACCEPT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,
+                    39,294,10
+    CONTROL         "Minimize the file transfer window",IDC_AUTOMIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,52,285,10
+    CONTROL         "Close window when transfer completes",IDC_AUTOCLOSE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,65,294,10
+    GROUPBOX        "Virus scanner",IDC_VIRUSSCANNERGROUP,0,85,313,93
+    LTEXT           "Scan files:",IDC_STATIC,8,97,43,9,SS_CENTERIMAGE
+    CONTROL         "Never, do not use virus scanning",IDC_NOSCANNER,"Button",
+                    BS_AUTORADIOBUTTON,52,97,250,10
+    CONTROL         "When all files have been downloaded",IDC_SCANAFTERDL,
+                    "Button",BS_AUTORADIOBUTTON,52,109,250,10
+    CONTROL         "As each file finishes downloading",IDC_SCANDURINGDL,
+                    "Button",BS_AUTORADIOBUTTON,52,121,250,10
+    LTEXT           "Command line:",IDC_ST_CMDLINE,7,137,62,8
+    COMBOBOX        IDC_SCANCMDLINE,70,136,213,71,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "...",IDC_SCANCMDLINEBROWSE,287,137,15,11
+    LTEXT           "%f will be replaced by the file or folder name to be scanned",
+                    IDC_ST_CMDLINEHELP,70,150,232,8
+    CONTROL         "Warn me before opening a file that has not been scanned",
+                    IDC_WARNBEFOREOPENING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,163,294,10
+    GROUPBOX        "If incoming files already exist",IDC_STATIC,0,183,313,
+                    43
+    CONTROL         "Ask me",IDC_ASK,"Button",BS_AUTORADIOBUTTON,8,197,73,10
+    CONTROL         "Resume",IDC_RESUME,"Button",BS_AUTORADIOBUTTON,82,197,
+                    125,10
+    CONTROL         "Overwrite",IDC_OVERWRITE,"Button",BS_AUTORADIOBUTTON,8,
+                    209,73,10
+    CONTROL         "Rename (append "" (1)"", etc.)",IDC_RENAME,"Button",
+                    BS_AUTORADIOBUTTON,82,209,125,10
+    LTEXT           "You will always be asked about files from people not on your contact list",
+                    IDC_STATIC,212,195,90,24
+    LTEXT           "Variables Allowed: %userid%, %nick%, %proto%",
+                    IDC_STATIC,93,27,167,11,WS_DISABLED
+END
+
+IDD_OPT_IDLE DIALOGEX 0, 0, 312, 190
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "Become idle if the following is left unattended:",
+                    IDC_IDLESHORT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,
+                    18,259,9
+    CONTROL         "Windows",IDC_IDLEONWINDOWS,"Button",BS_AUTORADIOBUTTON,
+                    45,31,104,9
+    CONTROL         "Miranda",IDC_IDLEONMIRANDA,"Button",BS_AUTORADIOBUTTON,
+                    45,43,103,9
+    EDITTEXT        IDC_IDLE1STTIME,59,59,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_IDLESPIN,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS | UDS_HOTTRACK,71,55,12,23
+    CONTROL         "Become idle if the screen saver is active",
+                    IDC_SCREENSAVER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,
+                    83,268,9
+    CONTROL         "Become idle if the computer is locked (2000/XP+ only)",
+                    IDC_LOCKED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,99,
+                    249,9
+    CONTROL         "Become idle if a terminal session is disconnected",
+                    IDC_IDLETERMINAL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    25,115,265,10
+    CONTROL         "Do not let protocols report any idle information",
+                    IDC_IDLEPRIVATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,25,
+                    131,251,9
+    LTEXT           "minute(s)",IDC_STATIC,91,61,76,9
+    RTEXT           "for",IDC_STATIC,12,59,41,9
+    COMBOBOX        IDC_AASTATUS,128,146,64,50,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Change my status mode to:",IDC_AASHORTIDLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,25,147,101,11
+    CONTROL         "Do not set status back to online when returning from idle",
+                    IDC_IDLESTATUSLOCK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    35,164,246,10
+    GROUPBOX        "Idle Options",IDC_STATIC,3,3,304,182
+END
+
+IDD_PROFILE_SELECTION DIALOGEX 0, 0, 386, 142
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_PROFILELIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_TABSTOP,3,2,382,137
+END
+
+IDD_PROFILE_NEW DIALOGEX 0, 0, 386, 142
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPSIBLINGS | 
+    WS_CLIPCHILDREN
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Please complete the following form to create a new user profile",
+                    IDC_STATIC,7,7,372,10
+    EDITTEXT        IDC_PROFILENAME,49,27,75,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_PROFILEDRIVERS,49,72,75,56,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Profile",IDC_STATIC,20,28,26,9
+    LTEXT           "e.g. Workplace",IDC_STATIC,131,28,77,11
+    LTEXT           "You can select a different profile driver from the default, it may offer more features or abilities, if in doubt use the default.",
+                    IDC_STATIC,7,49,372,17
+    LTEXT           "e.g. Miranda Database",IDC_STATIC,131,73,84,11
+    LTEXT           "Driver",IDC_STATIC,20,74,23,9
+    LTEXT           "Problem: Unable to find any database drivers, this means you can not create a new profile, you need to get dbx_3x.dll",
+                    IDC_NODBDRIVERS,7,113,372,22,NOT WS_VISIBLE
+END
+
+IDD_OPT_PLUGINS DIALOGEX 0, 0, 315, 247
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_PLUGLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | 
+                    LVS_AUTOARRANGE | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,4,0,306,145
+    EDITTEXT        IDC_PLUGINLONGINFO,50,159,253,19,ES_MULTILINE | 
+                    ES_READONLY | ES_WANTRETURN | NOT WS_BORDER | WS_VSCROLL
+    GROUPBOX        "",IDC_PLUGININFOFRAME,4,148,307,80,BS_RIGHT
+    EDITTEXT        IDC_PLUGINAUTHOR,50,178,253,12,ES_READONLY | 
+                    ES_WANTRETURN | NOT WS_BORDER
+    EDITTEXT        IDC_PLUGINCPYR,50,190,249,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | ES_WANTRETURN | NOT WS_BORDER
+    CONTROL         "",IDC_PLUGINURL,"Hyperlink",WS_TABSTOP,50,213,254,10
+    CONTROL         "",IDC_PLUGINEMAIL,"Hyperlink",WS_TABSTOP,50,201,208,10
+    RTEXT           "Description:",IDC_STATIC,8,158,38,10
+    RTEXT           "Author(s):",IDC_STATIC,8,177,38,9
+    RTEXT           "Copyright:",IDC_STATIC,8,190,38,9
+    RTEXT           "E-mail:",IDC_STATIC,8,202,38,8
+    RTEXT           "Homepage:",IDC_STATIC,7,213,38,8
+    CTEXT           "Please restart Miranda IM for your changes to take effect.",
+                    IDC_RESTART,5,233,305,11,NOT WS_VISIBLE
+END
+
+IDD_UPDATE_NOTIFY DIALOG  0, 0, 259, 103
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Miranda IM v%s Now Available"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "A new version of Miranda IM is now available.  Click the download button to download this new update.",
+                    IDC_STATIC,7,7,245,21
+    LTEXT           "New Version:",IDC_NEWVERSIONLABEL,7,47,65,8
+    LTEXT           "Current Version:",IDC_STATIC,7,32,65,8
+    LTEXT           "",IDC_CURRENTVERSION,77,32,87,8
+    LTEXT           "",IDC_VERSION,77,47,87,8
+    PUSHBUTTON      "&Download Now",IDC_DOWNLOAD,7,61,66,15
+    DEFPUSHBUTTON   "&Close",IDOK,202,84,50,15
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,80,245,1
+END
+
+IDD_OPT_UPDATENOTIFY DIALOGEX 0, 0, 238, 49
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Update Notification Options",IDC_STATIC,2,4,233,40
+    CONTROL         "Check for new versions of Miranda IM periodically.",
+                    IDC_ENABLEUPDATES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    11,22,212,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_AUTHREQ, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_DENYREASON, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 165
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_ADDCONTACT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 144
+    END
+
+    IDD_ADDED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 217
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 126
+    END
+
+    IDD_DELETECONTACT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_OPT_CONTACT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_FINDADD, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 422
+        VERTGUIDE, 11
+        VERTGUIDE, 42
+        VERTGUIDE, 53
+        VERTGUIDE, 116
+        VERTGUIDE, 122
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 424
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 267
+    END
+
+    IDD_READAWAYMSG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 182
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_SETAWAYMSG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 182
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 67
+    END
+
+    IDD_DETAILS, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 233
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 205
+    END
+
+    IDD_INFO_SUMMARY, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 217
+        VERTGUIDE, 51
+        VERTGUIDE, 126
+        VERTGUIDE, 170
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 127
+        HORZGUIDE, 22
+        HORZGUIDE, 35
+        HORZGUIDE, 48
+        HORZGUIDE, 62
+    END
+
+    IDD_INFO_CONTACT, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 217
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_INFO_BACKGROUND, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 217
+        VERTGUIDE, 49
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_INFO_NOTES, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 217
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_INFO_LOCATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 217
+        VERTGUIDE, 56
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 127
+        HORZGUIDE, 22
+        HORZGUIDE, 33
+        HORZGUIDE, 45
+        HORZGUIDE, 56
+        HORZGUIDE, 70
+        HORZGUIDE, 95
+        HORZGUIDE, 106
+    END
+
+    IDD_INFO_WORK, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 217
+        VERTGUIDE, 56
+        VERTGUIDE, 126
+        VERTGUIDE, 170
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 127
+        HORZGUIDE, 16
+        HORZGUIDE, 27
+        HORZGUIDE, 44
+        HORZGUIDE, 61
+        HORZGUIDE, 72
+        HORZGUIDE, 83
+        HORZGUIDE, 94
+        HORZGUIDE, 105
+    END
+
+    IDD_ADDEMAIL, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 182
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_ADDPHONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 205
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 86
+    END
+
+    IDD_INSTALLINI, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 208
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_WARNINICHANGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 182
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_INIIMPORTDONE, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 181
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 68
+    END
+
+    IDD_NETLIBLOGOPTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 255
+        VERTGUIDE, 13
+        VERTGUIDE, 148
+        VERTGUIDE, 247
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 196
+    END
+
+    IDD_HISTORY_FIND, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+        HORZGUIDE, 17
+    END
+
+    IDD_FILESEND, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 251
+        VERTGUIDE, 7
+        VERTGUIDE, 249
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 172
+    END
+
+    IDD_FILERECV, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 249
+        VERTGUIDE, 7
+        VERTGUIDE, 249
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 169
+    END
+
+    IDD_FILETRANSFERINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 251
+        VERTGUIDE, 11
+        VERTGUIDE, 69
+        VERTGUIDE, 245
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_FILEEXISTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 283
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_URLSEND, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 210
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 121
+    END
+
+    IDD_URLRECV, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 210
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_HISTORY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_OPT_SOUND, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 281
+        VERTGUIDE, 12
+        VERTGUIDE, 273
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 236
+    END
+
+    IDD_OPT_ICONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 253
+        VERTGUIDE, 12
+        VERTGUIDE, 200
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_OPT_IGNORE, DIALOG
+    BEGIN
+        VERTGUIDE, 8
+        VERTGUIDE, 96
+        VERTGUIDE, 221
+        VERTGUIDE, 305
+    END
+
+    IDD_OPT_VISIBILITY, DIALOG
+    BEGIN
+        VERTGUIDE, 8
+        VERTGUIDE, 305
+    END
+
+    IDD_OPT_AWAYMSG, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 259
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_ICONINDEX, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 215
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_OPT_NETLIB, DIALOG
+    BEGIN
+        VERTGUIDE, 7
+        VERTGUIDE, 20
+        VERTGUIDE, 80
+        VERTGUIDE, 166
+        VERTGUIDE, 177
+        VERTGUIDE, 306
+        BOTTOMMARGIN, 225
+        HORZGUIDE, 80
+        HORZGUIDE, 113
+    END
+
+    IDD_OPT_FILETRANSFER, DIALOG
+    BEGIN
+        VERTGUIDE, 8
+        VERTGUIDE, 302
+    END
+
+    IDD_PROFILE_SELECTION, DIALOG
+    BEGIN
+        RIGHTMARGIN, 225
+        BOTTOMMARGIN, 141
+    END
+
+    IDD_PROFILE_NEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 219
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_OPT_PLUGINS, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 235
+    END
+
+    IDD_UPDATE_NOTIFY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 97
+    END
+
+    IDD_OPT_UPDATENOTIFY, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 235
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 44
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include <windows.h>\r\n"
+    "#include <winres.h>\r\n"
+    "#include ""../include/statusmodes.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MIRANDA             ICON                    "res/miranda.ico"
+IDI_SEARCHALL           ICON                    "res/searchal.ico"
+IDI_SMS                 ICON                    "res/sms.ico"
+IDI_BLANK               ICON                    "res/blank.ico"
+IDI_NOTICK              ICON                    "res/notick.ico"
+IDI_TICK                ICON                    "res/notick1.ico"
+IDI_FILE                ICON                    "res/file.ico"
+IDI_TIMESTAMP           ICON                    "res/timestamp.ico"
+IDI_CHANGEFONT          ICON                    "res/changefont.ico"
+IDI_ADDCONTACT          ICON                    "res/addcontact.ico"
+IDI_USERDETAILS         ICON                    "res/viewdetails.ico"
+IDI_SMALLDOT            ICON                    "res/smalldot.ico"
+IDI_FILLEDBLOB          ICON                    "res/filledbl.ico"
+IDI_EMPTYBLOB           ICON                    "res/emptyblo.ico"
+IDI_DETAILSLOGO         ICON                    "res/detailsl.ico"
+IDI_RECVMSG             ICON                    "res/message.ico"
+IDI_SENDMSG             ICON                    "res/reply.ico"
+IDI_URL                 ICON                    "res/url.ico"
+IDI_NA                  ICON                    "res/na2.ico"
+IDI_AWAY                ICON                    "res/away.ico"
+IDI_FREE4CHAT           ICON                    "res/freechat.ico"
+IDI_ONLINE              ICON                    "res/online2.ico"
+IDI_OFFLINE             ICON                    "res/offline2.ico"
+IDI_DND                 ICON                    "res/dnd.ico"
+IDI_OCCUPIED            ICON                    "res/occupied.ico"
+IDI_FINDUSER            ICON                    "res/finduser.ico"
+IDI_HELP                ICON                    "res/help.ico"
+IDI_OPTIONS             ICON                    "res/options.ico"
+IDI_MIRANDAWEBSITE      ICON                    "res/mirandaw.ico"
+IDI_RENAME              ICON                    "res/rename.ico"
+IDI_HISTORY             ICON                    "res/history.ico"
+IDI_DELETE              ICON                    "res/delete.ico"
+IDI_SENDEMAIL           ICON                    "res/sendmail.ico"
+IDI_USERONLINE          ICON                    "res/useronli.ico"
+IDI_GROUPSHUT           ICON                    "res/groupshu.ico"
+IDI_GROUPOPEN           ICON                    "res/groupope.ico"
+IDI_ONTHEPHONE          ICON                    "res/onthepho.ico"
+IDI_OUTTOLUNCH          ICON                    "res/outtolun.ico"
+IDI_INVISIBLE           ICON                    "res/invisible.ico"
+IDI_MULTISEND           ICON                    "res/multisend.ico"
+IDI_DOWNARROW           ICON                    "res/downarrow.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HYPERLINKHAND       CURSOR                  "res/hyperlin.cur"
+IDC_DROP                CURSOR                  "res/dragcopy.cur"
+IDC_DROPUSER            CURSOR                  "res/dropuser.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_CLISTMENU MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_ICQ_EXIT
+    END
+    POPUP "&Status"
+    BEGIN
+        MENUITEM "&Offline\tCtrl+0",            ID_STATUS_OFFLINE, CHECKED
+        MENUITEM "On&line\tCtrl+1",             ID_STATUS_ONLINE
+        MENUITEM "&Away\tCtrl+2",               ID_STATUS_AWAY
+        MENUITEM "&NA\tCtrl+3",                 ID_STATUS_NA
+        MENUITEM "Occ&upied\tCtrl+4",           ID_STATUS_OCCUPIED
+        MENUITEM "&DND\tCtrl+5",                ID_STATUS_DND
+        MENUITEM "&Free for chat\tCtrl+6",      ID_STATUS_FREECHAT
+        MENUITEM "&Invisible\tCtrl+7",          ID_STATUS_INVISIBLE
+        MENUITEM "On the &Phone\tCtrl+8",       ID_STATUS_ONTHEPHONE
+        MENUITEM "Out to &Lunch\tCtrl+9",       ID_STATUS_OUTTOLUNCH
+    END
+END
+
+IDR_CONTEXT MENU 
+BEGIN
+    POPUP "Tray"
+    BEGIN
+        MENUITEM "&Hide/Show",                  ID_TRAY_HIDE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_TRAY_EXIT
+    END
+    POPUP "Nowhere"
+    BEGIN
+        MENUITEM "&New Group",                  POPUP_NEWGROUP
+        MENUITEM SEPARATOR
+        MENUITEM "&Hide Offline Users",         POPUP_HIDEOFFLINE
+        MENUITEM "Hide &Offline Users out here", POPUP_HIDEOFFLINEROOT
+        MENUITEM "Hide &Empty Groups",          POPUP_HIDEEMPTYGROUPS
+        MENUITEM "Disable &Groups",             POPUP_DISABLEGROUPS
+        MENUITEM SEPARATOR
+        MENUITEM "Hide Miranda",                POPUP_HIDEMIRANDA
+    END
+    POPUP "Group"
+    BEGIN
+        MENUITEM "&New Subgroup",               POPUP_NEWSUBGROUP
+        MENUITEM "&Hide Offline Users in here", POPUP_GROUPHIDEOFFLINE
+        MENUITEM SEPARATOR
+        MENUITEM "&Rename Group",               POPUP_RENAMEGROUP
+        MENUITEM "&Delete Group",               POPUP_DELETEGROUP
+    END
+    POPUP "IconOptions"
+    BEGIN
+        MENUITEM "&Reset to default",           ID_RESET
+    END
+    POPUP "find/add"
+    BEGIN
+        MENUITEM "&Add to List",                IDC_ADD
+        MENUITEM SEPARATOR
+        MENUITEM "User &Details",               IDC_DETAILS
+        MENUITEM "Send &Message",               IDC_SENDMESSAGE
+    END
+    POPUP "Log"
+    BEGIN
+        MENUITEM "&Copy",                       IDM_COPY
+        MENUITEM "Co&py All",                   IDM_COPYALL
+        MENUITEM "Select &All",                 IDM_SELECTALL
+        MENUITEM SEPARATOR
+        MENUITEM "C&lear Log",                  IDM_CLEAR
+    END
+    POPUP "LogLink"
+    BEGIN
+        MENUITEM "Open in &new window",         IDM_OPENNEW
+        MENUITEM "&Open in existing window",    IDM_OPENEXISTING
+        MENUITEM "&Copy link",                  IDM_COPYLINK
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXT
+//
+
+IDR_CREDITS             TEXT                    "../docs/contributors.txt"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SORTCOLUP           BITMAP                  "res/sortcolu.bmp"
+IDB_SORTCOLDOWN         BITMAP                  "res/sortcold.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "miranda32.exe.manifest"
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "version.rc"
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

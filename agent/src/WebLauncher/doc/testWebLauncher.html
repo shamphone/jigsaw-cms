@@ -1,0 +1,39 @@
+<html>
+
+<Script Language="JavaScript">
+function start(){
+		// 服务器地址和端口
+    ctrl1.ServerIP = "192.168.0.174";    
+    ctrl1.Port = 4000;
+    // 自己的用户名和密码
+    ctrl1.UserName = "user1";
+    ctrl1.Password = "";
+    
+    //下面的会议id和专家id二选一
+    // 要参加会议的id
+    ctrl1.ConferenceId = 0;
+    // 网上咨询时专家的id
+    ctrl1.ExpertId = 180;
+    
+    var n = ctrl1.startConference(); 
+    if (n == -1)//没有安装客户端程序
+    {
+    	alert("no client");
+    }
+    window.location.reload(true);
+
+}
+</Script>
+
+<body>
+<OBJECT
+CLASSID="clsid:A566201E-E4AA-4628-A662-98D20517EC47"
+CODEBASE="..\WebLauncher\Debug\WebLauncher.ocx" 
+ID=ctrl1
+>
+
+</OBJECT>
+<br>
+<a href="JavaScript:start()">start</a>
+</body>
+</html>

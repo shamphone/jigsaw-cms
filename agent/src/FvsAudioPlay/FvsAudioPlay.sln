@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FvsAudioPlay", "FvsAudioPlay.vcproj", "{1C3FF594-E94B-471E-AC16-7AA4DE88BAD9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F5DCA2A-C4AB-4DB9-B7C6-9FE316B1A504} = {2F5DCA2A-C4AB-4DB9-B7C6-9FE316B1A504}
+		{D56DDB48-5920-4189-962B-7E1475D1DC29} = {D56DDB48-5920-4189-962B-7E1475D1DC29}
+		{3D6E3E68-41DE-47BC-86EA-C176A1DB0DCD} = {3D6E3E68-41DE-47BC-86EA-C176A1DB0DCD}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AudioCodec", "..\Audio\AudioCodec\AudioCodec.vcproj", "{2F5DCA2A-C4AB-4DB9-B7C6-9FE316B1A504}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AudioPlayback", "..\Audio\AudioPlayback\AudioPlayback.vcproj", "{3D6E3E68-41DE-47BC-86EA-C176A1DB0DCD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "..\Common\Common\Common.vcproj", "{D56DDB48-5920-4189-962B-7E1475D1DC29}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1C3FF594-E94B-471E-AC16-7AA4DE88BAD9}.Debug.ActiveCfg = Debug|Win32
+		{1C3FF594-E94B-471E-AC16-7AA4DE88BAD9}.Debug.Build.0 = Debug|Win32
+		{1C3FF594-E94B-471E-AC16-7AA4DE88BAD9}.Release.ActiveCfg = Release|Win32
+		{1C3FF594-E94B-471E-AC16-7AA4DE88BAD9}.Release.Build.0 = Release|Win32
+		{2F5DCA2A-C4AB-4DB9-B7C6-9FE316B1A504}.Debug.ActiveCfg = Debug|Win32
+		{2F5DCA2A-C4AB-4DB9-B7C6-9FE316B1A504}.Debug.Build.0 = Debug|Win32
+		{2F5DCA2A-C4AB-4DB9-B7C6-9FE316B1A504}.Release.ActiveCfg = Release|Win32
+		{2F5DCA2A-C4AB-4DB9-B7C6-9FE316B1A504}.Release.Build.0 = Release|Win32
+		{3D6E3E68-41DE-47BC-86EA-C176A1DB0DCD}.Debug.ActiveCfg = Debug|Win32
+		{3D6E3E68-41DE-47BC-86EA-C176A1DB0DCD}.Debug.Build.0 = Debug|Win32
+		{3D6E3E68-41DE-47BC-86EA-C176A1DB0DCD}.Release.ActiveCfg = Release|Win32
+		{3D6E3E68-41DE-47BC-86EA-C176A1DB0DCD}.Release.Build.0 = Release|Win32
+		{D56DDB48-5920-4189-962B-7E1475D1DC29}.Debug.ActiveCfg = Debug|Win32
+		{D56DDB48-5920-4189-962B-7E1475D1DC29}.Debug.Build.0 = Debug|Win32
+		{D56DDB48-5920-4189-962B-7E1475D1DC29}.Release.ActiveCfg = Release|Win32
+		{D56DDB48-5920-4189-962B-7E1475D1DC29}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

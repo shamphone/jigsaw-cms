@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>NotifyMediaServerRemoveVideo</name>
+    <desc>会议服务器通知媒体服务器，删除一路视频信号转发</desc>
+    <i8>fromUserId</i8>
+    <i8>toUserId</i8>
+</lyvcmessage>

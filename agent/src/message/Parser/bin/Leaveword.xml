@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>Leaveword</name>
+    <desc>留言</desc>
+    <date>sendDate</date>
+    <i8>receiverId</i8>
+    <string>content</string>
+    <string>senderName</string>
+</lyvcmessage>

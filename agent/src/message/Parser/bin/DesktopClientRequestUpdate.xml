@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>DesktopClientRequestUpdate</name>
+    <desc>桌面共享的数据</desc>
+	  <i8>receiverId</i8>
+</lyvcmessage>

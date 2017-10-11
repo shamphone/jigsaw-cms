@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>RegisterUser</name>
+    <desc>客户端发送给服务器，注册一个新用户</desc>
+	<string>userName</string>
+	<string>password</string>
+	<string>lastName</string>
+	<string>firstName</string>
+	<string>email</string>
+</lyvcmessage>

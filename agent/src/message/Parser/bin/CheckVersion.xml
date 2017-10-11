@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>CheckVersion</name>
+    <desc>客户端版本比较</desc>
+    <boolean>bHasNewVersion</boolean>
+    <boolean>bNeedUpdate</boolean>
+    <i4>version</i4>
+</lyvcmessage>

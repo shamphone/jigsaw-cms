@@ -1,0 +1,6 @@
+LIBRARY MSN.DLL
+EXPORTS
+
+Load				@1
+Unload				@2
+MirandaPluginInfo	@3

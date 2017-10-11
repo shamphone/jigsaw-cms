@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>Advertizement</name>
+    <desc>服务器发送给客户端，广告的网址</desc>
+	<string>homepage</string>
+	<string>mainframe</string>
+	<string>roomframe</string>
+</lyvcmessage>

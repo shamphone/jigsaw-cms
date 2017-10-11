@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>CopyContact</name>
+    <desc>客户端发送给服务器，表示将自己的联系人复制到其他人</desc> 
+	<boolean>bIsGroupId</boolean>
+    <i8>receiverId</i8>
+</lyvcmessage>

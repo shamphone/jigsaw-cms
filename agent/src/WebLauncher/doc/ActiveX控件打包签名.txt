@@ -1,0 +1,77 @@
+1、如果需要创建cab文件，首先需要Cabarc或者Makecab，它们随着Cabinet SDK的安装就有了，Cabinet SDK的下载地址是http://msdn.microsoft.com/workshop/management/cab/cabdl.asp。
+Cabarc可以创建、查看或者解出cab里面的文件，而Makecab则只可以用来创建cab文件。
+2、制作cab文件时需要将所有的相关文件都包含进去，可以通过Depends（VC自带的）检查需要的文件。使用inf文件将这些东西都写进去。
+3、inf搞法：inf文件描述cab中所有的ocx及dll文件，inf通过一些命名区域来提供需要的信息。
+
+怎么写inf
+最开始一般是[Version]区：
+eg: [Version]
+    signature="$XXXX$"
+    AdvancedINF=2.0
+接下来就是最重要的[Add.Code]区：
+eg: [Add.Code]
+    Ctrl1.dll=C1Section
+    Ctrl2.dll=Ctrl2.dll
+前面是要下载的文件名，后面是对应这个文件的区域名，可以是任何名字，不过一般都是和文件的名字相同，这样方便维护。还有需要注意是在[Add.Code]区出现的文件要根据依赖性进行排序，例如前面说的ctrl1.dll要依赖于ctrl2.dll，则ctrl2.dll要出现在ctrl1.dll的前面。因为安装时是按照相反的顺序进行的，也就是说先安装ctrl2.dll，然后才是ctrl1.dll，哧哧，记清楚了，不要搞反了。
+再接下来是各个文件的区域了
+[Ctrl1.dll]
+file-win32-x86=thiscab
+RegisterServer=yes
+clsid={.....}
+DestDir= 
+FileVersion=1,0,0,0
+[Ctrl1.dll]区域中的第一个file值告诉ie到哪里去得到这个dll，file一共包括三个部分，第一部分是file，这个永远都是这样的（至少目前来说）；第二部分告诉声明支持的OS，win32表示windows，mac就是苹果MAC OX了；第三部分是CPU类型，比如说x86、 ppc (Power PC)、 mips或者alpha了。
+file的值可以取三个一个URL、ignore和thiscab，如果是URL则说明到URL所在的位置去下；如果是ignore说明对于这种OS和CPU，不需要下载这个文件(ctrl1.dll)；如果是thiscab很明显就在当前的cab文件中了。
+接下来是RegisterServer，可以取两个值yes和no，如果为yes则说明ie要注册该dll，如果是no就不必了；
+再下来是DestDir，它的值是dll将要存到本地硬盘的位置，如果它的值是10，则将dll放到\Windows或者\WinNT下；如果是11，则放到\Windows\System或者
+\WinNT\System32下；如果是空（就是没有值）则会放到\Windows或者\WinNT下的Downloaded Program Files目录下；
+最后是FileVersion，这个就比较明显了，说明了ctrl1.dll的版本号。
+有时候我们使用VB来开发控件的时候，需要将VB的虚拟机装上去，它需要一些其它的说明的，简单地讲一下吧：
+在[Add.Code]中增加一项MSVBVM60.DLL=MSVBVM60.DLL（以VB6为例）下面是
+MSVBVM60.DLL区域：
+[MSVBVM60.DLL]
+	hook=MSVBVM60.cab_Installer
+	FileVersion=6,0,81,76
+FileVersion很明显，是版本号，就不再说发，就说说hook吧。
+hook区域是在安装的时候需要执行的区域，它分为两种，一种是有条件的，另外一种是无条件的，无条件的hook区域是必须执行的，反之则根据条件判断是否执行。以[Setup Hooks]标记的区域是无条件区域，如下所示
+[Setup Hooks]
+    hookname=section-name
+
+[section-name]
+run=%EXTRACT_DIR%\setup.exe
+无条件区域常用来通过一个inf文件执行一个安装程序，这就是我们在资源管理器右键点击一个inf文件时在执行安装这样的菜单的原因了
+当ie下载了一个cab文件，如果文件中没有[Add.Code]，则处理[Setup Hooks]区域，运行run所指定程序，哧哧，上面就是setup.exe；
+条件区域则为在一定条件下执行，前面为MSVBVM60.DLL指定的hook区域就是一个条件区域，如果在MSVBVM60.DLL指定的CLSID或者version不能满足需要而且没有file这个命名值，则执行hook所指定的区域。
+[MSVBVM60.cab_Installer]
+file-win32-x86=http://activex.microsoft.com/controls/vb6/VBRun60.cab
+run=%EXTRACT_DIR%\VBRun60.exe
+上面[MSVBVM60.cab_Installer]是一个hook区域，它也包含了一个file值,指定一个URL，表示MSVBVM60.DLL可以从这个URL下载得到；run则说明了执行哪一个文件
+这里有必要说明一下的是，MS对一些常用的Redistributable Microsoft DLLs
+可以通过指定CODEBASE属性为http://activex.microsoft.com/controls，这样在cab文件中就中需要包含这些文件，在计算机上有一个文件redist.txt上面的dll就是Redistributable Microsoft DLLs
+
+
+创建一个cab文件：
+cabarc N ctrl1.cab ctrl1.inf ctrl1.dll
+N表示要创建一个新的文件，ctrl1.cab是创建的文件名，ctrl1.inf是cab的inf，后而是需要加到cab里的文件，可以使用通配符。
+然后就可以将cab文件放到网页上了
+<OBJECT ID="Ctrl1Obj"
+        CLASSID="clsid:....................................."
+        CODEBASE="http://server.com/ctrl1.cab#version=8,0,0,5007">
+</OBJECT>
+这里也在一个version，不过这里的version是指控件的version，而inf里的是文件的version。
+
+
+制作电子签名：
+首先从下面的网址下载制作签名的工具SignCode，地址是
+http://msdn.microsoft.com/workshop/gallery/tools/authenticode/authcode.asp
+从签名授权中心如VeriSign或者你的局域网上运行的Microsoft Certificate 
+Server授权服务器得到一个certificate，在申请授权的过程你会得到一个私钥。
+也可以使用MakeCert.exe和Cert2Spc.exe创建的私钥进行测试，方法是首先使用MakeCert创建一个X.509的certificate（.cer文件）
+    MakeCert -sv MyKey.pvk n "CN=My Software Company" MyCert.cer
+然后利用Cert2Spc将.cer文件转换成为PKCS #7软件发布Certificate(.spc文件)，
+    Cert2Spc MyCert.cer MyCert.spc
+利用你下载的SignCode对你的cab文件进行电子签名
+    SignCode -spc MyCert.spc -v MyKey.pvk -t http://
+        timestamp.verisign.com/scripts/timstamp.dll ctrl1.cab
+SignCode还可以指定一些其它的参数，就不说了，太长了，哧哧。
+虽然可以利用测试的.cer和.spc文件，但是在发布的时候，必须申请。

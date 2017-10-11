@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>StopSendDesktop</name>
+    <desc>停止共享自己的桌面</desc>
+	<i8>conferenceId</i8>
+	<i8>senderId</i8>
+	<i8>receiverId</i8>
+</lyvcmessage>

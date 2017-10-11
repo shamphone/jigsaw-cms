@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>MoveContactToGroup</name>
+    <desc>将联系人移动到某个组中</desc>
+	<i8>oldGroupId</i8>
+	<i8>newGroupId</i8>
+    <i8>contactId</i8>
+</lyvcmessage>

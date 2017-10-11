@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <!--JBuilder Library Definition File-->
+  <fullname>PostgreSQL-JDBC</fullname>
+  <class>
+    <path>[../../javalib/postgres-8.0-JDBC/postgresql-8.0-310.jdbc3.jar]</path>
+  </class>
+  <lastmodsaved>1129282107421</lastmodsaved>
+</library>

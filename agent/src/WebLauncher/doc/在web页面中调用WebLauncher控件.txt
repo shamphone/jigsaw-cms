@@ -1,0 +1,43 @@
+在web页面中用<OBJECT></OBJECT>标签嵌入控件。
+如下：
+<html>
+<body>
+<OBJECT
+CLASSID="clsid:A566201E-E4AA-4628-A662-98D20517EC47"
+CODEBASE="/WebLauncher.cab#version=1,0,0,1" 
+ID=ctrl1
+>
+</OBJECT>
+</body>
+</html>
+CODEBASE指定了控件包WebLauncher.cab的url和版本号，如果版本升级了，客户端会自动更新。
+页面脚本通过ID指定的名字来调用控件的方法和属性。
+脚本调用方法示例：
+<Script Language="JavaScript">
+function start(){
+    ctrl1.ServerIP = "192.168.0.174";
+    ctrl1.Port = 4000;
+    ctrl1.UserName = "wangxiaoliang";
+    ctrl1.Password = "123456";
+    ctrl1.ConferenceId = 1123;
+    var n = ctrl1.startConference(); 
+    if (n == -1)//没有安装客户端程序
+    {
+    	//转到客户端安装程序下载页面
+    }
+}
+
+WebLauncher控件共有5个属性和1个方法
+
+属性名		类型		说明
+ServerIP	字符串		要连接的会议服务器IP地址
+Port		4字节整型	会议服务器端口
+UserName	字符串		登录用户名
+Password	字符串		密码
+ConferenceId	4字节整型	要加入会议的id
+
+方法名		参数		返回值		说明
+startConference	无		4字节整型	返回-1表示没有安装客户端软件
+
+完整的使用示例见testWebLauncher.html文件
+

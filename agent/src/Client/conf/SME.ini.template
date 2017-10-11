@@ -1,0 +1,69 @@
+;会议服务器地址
+[CONFERENCE_SERVER]
+name=
+address=video.sme.gov.cn
+port=4000
+
+;培训服务器地址
+[TRAINING_SERVER]
+address=192.168.0.88
+port=4000
+mmc_login=http://192.168.0.88/wbt/login/LoginAction.do?Longcon_User_ID=
+mmc_not_login=http://192.168.0.88/wbt
+user_register=http://192.168.0.88/gtp/login/register_stu.jsp?fromwbt=true
+update=
+
+;咨询服务器地址
+[CONSULTING_SERVER]
+address=192.168.0.88
+port=4001
+mmc_login=http://192.168.0.88/consult/login/LoginAction.do?Longcon_User_ID=
+mmc_not_login=http://192.168.0.88/consult
+user_register=http://192.168.0.88/consult/register.do
+update=
+
+;上次关闭时的窗口位置
+[WINDOW]
+top=0
+left=0
+width=300
+height=520
+
+;媒体设备配置
+[MEDIA_CONFIG]
+;关键帧的发送间隔
+max_key_interval=20
+;每秒发送的视频帧数
+video_quality=10
+;是否使用文件作音频输入, 以及文件名
+use_audio_file=0
+audio_file=..\AVClips\example.wav
+;是否使用文件作视频输入, 以及文件名
+use_video_file=0
+video_file=..\AVClips\video.dat
+;使用的音频播放设备编号
+audio_play_device=
+;使用的音频录音设备编号
+audio_record_device=
+;使用的视频设备名称
+video_device=
+
+;最大视频宽度
+video_width
+;最大视频高度
+video_height
+
+;杂项选项
+[OPTION]
+auto_login=0
+recv_path=
+
+;传输模型选项(Don't change this unless you EXACTLY know what you are doing)
+[TRANSMODEL]
+;udp keepalive packet interval, in seconds
+udp_keepalive_interval=30  
+;split key frame according ethernet MTU
+split_key_frame=1
+;xvid bitrate, bigger number results bigger video UDP package
+bitrate=50000
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>AgreeVideo</name>
+    <desc>同意将自己的图像发送给对方</desc>
+	<i4>width</i4>
+	<i4>height</i4>
+	<i8>conferenceId</i8>
+	<i8>senderId</i8>
+	<i8>receiverId</i8>
+	<i8>videoSenderId</i8>
+	<string>TKLHead</string>
+</lyvcmessage>

@@ -1,0 +1,62 @@
+<!--
+     DTD for the LongCon Video Conference message definition file, Version 1.0
+-->
+
+
+<!-- ========== Top Level Elements ======================================== -->
+
+<!-- 
+    The "lyvcmessage" element is the root of the configuration file
+    hierarchy, and contains nested elements for all of the other
+    configuration settings.
+-->
+
+    <!ELEMENT lyvcmessage (name, desc, boolean*, date*, double*, float*, i4*, i8*, string*) >
+
+<!-- 
+    The "name" element gives the message name, this name should be unique, and be same
+    with the message definition file name.
+-->
+        <!ELEMENT name (#PCDATA) >
+
+<!-- 
+    The "desc" element describe the function of the message, ie, in which situation, this
+    message will be sent, and what action will be taken.
+-->
+        <!ELEMENT desc (#PCDATA) >
+
+<!-- 
+    The "boolean" element stands for a boolean attribute of the message.
+-->
+        <!ELEMENT boolean (#PCDATA) >
+
+<!-- 
+    The "date" element stands for a date attribute of the message.
+-->
+        <!ELEMENT date (#PCDATA) >
+
+<!-- 
+    The "double" element stands for a double attribute of the message.
+-->
+        <!ELEMENT double (#PCDATA) >
+
+<!-- 
+    The "float" element stands for a float attribute of the message.
+-->
+        <!ELEMENT float (#PCDATA) >
+
+<!-- 
+    The "i4" element stands for an integer attribute of the message, the size is 4 bytes.
+-->
+        <!ELEMENT i4 (#PCDATA) >
+
+<!-- 
+    The "i8" element stands for an integer attribute of the message, the size is 8 bytes.
+-->
+        <!ELEMENT i8 (#PCDATA) >
+
+<!-- 
+    The "string" element stands for an string attribute of the message.
+-->
+        <!ELEMENT string (#PCDATA) >
+

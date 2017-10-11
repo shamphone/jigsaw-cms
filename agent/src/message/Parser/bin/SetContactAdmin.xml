@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>SetContactAdmin</name>
+    <desc>服务器发送给客户端，表示该用户是联系人管理员</desc> 
+</lyvcmessage>

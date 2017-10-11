@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>KickDuplicateLogin</name>
+    <desc>服务器发送给客户端，踢掉重复登录的用户</desc>
+</lyvcmessage>

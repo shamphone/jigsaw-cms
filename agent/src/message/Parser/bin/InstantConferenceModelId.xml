@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>InstantConferenceModelId</name>
+    <desc>服务器发送给客户端，告诉其临时会议的会议模式ID（由会议库动态生成）</desc>
+    <i8>instantConferenceModelId</i8>
+</lyvcmessage>

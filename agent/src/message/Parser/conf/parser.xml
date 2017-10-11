@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+
+    <java>
+        <output-path>../../MatrixJ/src/com/fulong/lyvc/message</output-path>
+        <package>com.fulong.lyvc.message</package>
+        <message-factory-file>../../MatrixJ/src/com/fulong/lyvc/message/MessageFactory.java</message-factory-file>
+    </java>
+    <cplusplus>
+        <output-path>../../MatrixC/MatrixCLib/Message</output-path>
+        <namespace>LyvcMessage</namespace>
+        <message-factory-file>../../MatrixC/MatrixCLib/Message/MessageFactory.cpp</message-factory-file>
+    </cplusplus>
+
+    <database>
+        <url>jdbc:postgresql://localhost:5432/lyvcmessage</url>
+        <username>lyvcmessage</username>
+        <password>lyvcmessage</password>
+    </database>
+
+</config>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>ListenToUser</name>
+    <desc>指定收听某人的声音</desc>
+    <i8>receiverId</i8>
+		<string>beListenedIds</string>
+</lyvcmessage>

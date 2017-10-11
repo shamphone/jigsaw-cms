@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>WebDeleteConference</name>
+    <desc>会议管理Web系统发送给会议服务器，删除了一个会议</desc>
+	<i8>conId</i8>
+</lyvcmessage>

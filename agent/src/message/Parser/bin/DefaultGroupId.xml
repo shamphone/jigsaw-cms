@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>DefaultGroupId</name>
+    <desc>服务器告诉客户端其默认的联系人组ID（在该组中的联系人显示为不在任何组中）</desc>
+    <i8>defaultGroupId</i8>
+</lyvcmessage>

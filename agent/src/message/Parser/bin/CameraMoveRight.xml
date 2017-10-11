@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>CameraMoveRight</name>
+    <desc>要求对方的摄像机向右移动</desc>
+    <i4>commPort</i4>
+	<i8>receiverId</i8>
+</lyvcmessage>

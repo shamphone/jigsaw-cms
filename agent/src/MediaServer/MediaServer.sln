@@ -1,0 +1,48 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixC", "..\message\MatrixC\MatrixCLib\MatrixC.vcproj", "{F1CAD832-6730-4FAE-B51F-1F20085DDA91}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MediaServer", "MediaServer.vcproj", "{22F4C6EE-F55B-40F6-865A-AA656F8F3D0C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F1CAD832-6730-4FAE-B51F-1F20085DDA91} = {F1CAD832-6730-4FAE-B51F-1F20085DDA91}
+		{D56DDB48-5920-4189-962B-7E1475D1DC29} = {D56DDB48-5920-4189-962B-7E1475D1DC29}
+		{27EA7798-9A12-4EB5-ACC7-0F1BDF1DBE7C} = {27EA7798-9A12-4EB5-ACC7-0F1BDF1DBE7C}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "..\common\Common\Common.vcproj", "{D56DDB48-5920-4189-962B-7E1475D1DC29}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinsockWrapper", "..\WinsockWrapper\WinsockWrapper\WinsockWrapper.vcproj", "{27EA7798-9A12-4EB5-ACC7-0F1BDF1DBE7C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F1CAD832-6730-4FAE-B51F-1F20085DDA91}.Debug.ActiveCfg = Debug|Win32
+		{F1CAD832-6730-4FAE-B51F-1F20085DDA91}.Debug.Build.0 = Debug|Win32
+		{F1CAD832-6730-4FAE-B51F-1F20085DDA91}.Release.ActiveCfg = Release|Win32
+		{F1CAD832-6730-4FAE-B51F-1F20085DDA91}.Release.Build.0 = Release|Win32
+		{22F4C6EE-F55B-40F6-865A-AA656F8F3D0C}.Debug.ActiveCfg = Debug|Win32
+		{22F4C6EE-F55B-40F6-865A-AA656F8F3D0C}.Debug.Build.0 = Debug|Win32
+		{22F4C6EE-F55B-40F6-865A-AA656F8F3D0C}.Release.ActiveCfg = Release|Win32
+		{22F4C6EE-F55B-40F6-865A-AA656F8F3D0C}.Release.Build.0 = Release|Win32
+		{D56DDB48-5920-4189-962B-7E1475D1DC29}.Debug.ActiveCfg = Debug|Win32
+		{D56DDB48-5920-4189-962B-7E1475D1DC29}.Debug.Build.0 = Debug|Win32
+		{D56DDB48-5920-4189-962B-7E1475D1DC29}.Release.ActiveCfg = Release|Win32
+		{D56DDB48-5920-4189-962B-7E1475D1DC29}.Release.Build.0 = Release|Win32
+		{27EA7798-9A12-4EB5-ACC7-0F1BDF1DBE7C}.Debug.ActiveCfg = Debug|Win32
+		{27EA7798-9A12-4EB5-ACC7-0F1BDF1DBE7C}.Debug.Build.0 = Debug|Win32
+		{27EA7798-9A12-4EB5-ACC7-0F1BDF1DBE7C}.Release.ActiveCfg = Release|Win32
+		{27EA7798-9A12-4EB5-ACC7-0F1BDF1DBE7C}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

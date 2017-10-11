@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>InviteDesktop</name>
+    <desc>邀请某人观看自己的桌面</desc>
+	<i8>conferenceId</i8>
+	<i8>senderId</i8>
+	<i8>receiverId</i8>
+</lyvcmessage>

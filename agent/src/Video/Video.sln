@@ -1,0 +1,102 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoCapture", "VideoCapture\VideoCapture.vcproj", "{99968D91-197B-4308-B72B-B6968C33FA43}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCapture", "TestCapture\TestCapture.vcproj", "{CB15A1E4-810A-4CBB-AADA-0E056DD46AB6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF799704-726F-4241-9AAA-946EA2867E59} = {CF799704-726F-4241-9AAA-946EA2867E59}
+		{EC3F7E3D-77A9-4EF8-B50C-9444A5BA39DB} = {EC3F7E3D-77A9-4EF8-B50C-9444A5BA39DB}
+		{99968D91-197B-4308-B72B-B6968C33FA43} = {99968D91-197B-4308-B72B-B6968C33FA43}
+		{F666FAB2-7B8D-40F4-8D65-AABC00DB6AD5} = {F666FAB2-7B8D-40F4-8D65-AABC00DB6AD5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dump", "Dump\dump.vcproj", "{CF799704-726F-4241-9AAA-946EA2867E59}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TimeFileReader", "..\TimeFileReader\TimeFileReader.vcproj", "{EC3F7E3D-77A9-4EF8-B50C-9444A5BA39DB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoCodecXvid", "VideoCodecXvid\VideoCodecXvid.vcproj", "{698A64EC-9002-4668-B9E4-6DAEAC94D8DE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D2B2C1CA-ABD7-4C83-A766-54F4A229BEE2} = {D2B2C1CA-ABD7-4C83-A766-54F4A229BEE2}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestVideoCodecXvid", "TestVideoCodecXvid\TestVideoCodecXvid.vcproj", "{04B59344-D140-48C8-B350-363C6611DDEB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EC3F7E3D-77A9-4EF8-B50C-9444A5BA39DB} = {EC3F7E3D-77A9-4EF8-B50C-9444A5BA39DB}
+		{F2F58D4C-B9A8-41D4-9510-70A37DF08E5F} = {F2F58D4C-B9A8-41D4-9510-70A37DF08E5F}
+		{99968D91-197B-4308-B72B-B6968C33FA43} = {99968D91-197B-4308-B72B-B6968C33FA43}
+		{F666FAB2-7B8D-40F4-8D65-AABC00DB6AD5} = {F666FAB2-7B8D-40F4-8D65-AABC00DB6AD5}
+		{698A64EC-9002-4668-B9E4-6DAEAC94D8DE} = {698A64EC-9002-4668-B9E4-6DAEAC94D8DE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DrawDIB", "DrawDIB\DrawDIB.vcproj", "{F2F58D4C-B9A8-41D4-9510-70A37DF08E5F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestVideoCodec", "TestVideoCodec\TestVideoCodec.vcproj", "{2AA9D0DF-17CB-4334-9D04-E67F4CD908AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF799704-726F-4241-9AAA-946EA2867E59} = {CF799704-726F-4241-9AAA-946EA2867E59}
+		{EC3F7E3D-77A9-4EF8-B50C-9444A5BA39DB} = {EC3F7E3D-77A9-4EF8-B50C-9444A5BA39DB}
+		{F2F58D4C-B9A8-41D4-9510-70A37DF08E5F} = {F2F58D4C-B9A8-41D4-9510-70A37DF08E5F}
+		{99968D91-197B-4308-B72B-B6968C33FA43} = {99968D91-197B-4308-B72B-B6968C33FA43}
+		{F666FAB2-7B8D-40F4-8D65-AABC00DB6AD5} = {F666FAB2-7B8D-40F4-8D65-AABC00DB6AD5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VideoConfig", "VideoConfig\VideoConfig.vcproj", "{F666FAB2-7B8D-40F4-8D65-AABC00DB6AD5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libxvidcore_static", "..\xvid\xvidcore-1.1.0\build\win32\libxvidcore_static.vcproj", "{D2B2C1CA-ABD7-4C83-A766-54F4A229BEE2}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{99968D91-197B-4308-B72B-B6968C33FA43}.Debug.ActiveCfg = Debug|Win32
+		{99968D91-197B-4308-B72B-B6968C33FA43}.Debug.Build.0 = Debug|Win32
+		{99968D91-197B-4308-B72B-B6968C33FA43}.Release.ActiveCfg = Release|Win32
+		{99968D91-197B-4308-B72B-B6968C33FA43}.Release.Build.0 = Release|Win32
+		{CB15A1E4-810A-4CBB-AADA-0E056DD46AB6}.Debug.ActiveCfg = Debug|Win32
+		{CB15A1E4-810A-4CBB-AADA-0E056DD46AB6}.Release.ActiveCfg = Release|Win32
+		{CF799704-726F-4241-9AAA-946EA2867E59}.Debug.ActiveCfg = Debug|Win32
+		{CF799704-726F-4241-9AAA-946EA2867E59}.Debug.Build.0 = Debug|Win32
+		{CF799704-726F-4241-9AAA-946EA2867E59}.Release.ActiveCfg = Release|Win32
+		{CF799704-726F-4241-9AAA-946EA2867E59}.Release.Build.0 = Release|Win32
+		{EC3F7E3D-77A9-4EF8-B50C-9444A5BA39DB}.Debug.ActiveCfg = Debug|Win32
+		{EC3F7E3D-77A9-4EF8-B50C-9444A5BA39DB}.Debug.Build.0 = Debug|Win32
+		{EC3F7E3D-77A9-4EF8-B50C-9444A5BA39DB}.Release.ActiveCfg = Release|Win32
+		{EC3F7E3D-77A9-4EF8-B50C-9444A5BA39DB}.Release.Build.0 = Release|Win32
+		{698A64EC-9002-4668-B9E4-6DAEAC94D8DE}.Debug.ActiveCfg = Debug|Win32
+		{698A64EC-9002-4668-B9E4-6DAEAC94D8DE}.Debug.Build.0 = Debug|Win32
+		{698A64EC-9002-4668-B9E4-6DAEAC94D8DE}.Release.ActiveCfg = Release|Win32
+		{698A64EC-9002-4668-B9E4-6DAEAC94D8DE}.Release.Build.0 = Release|Win32
+		{04B59344-D140-48C8-B350-363C6611DDEB}.Debug.ActiveCfg = Debug|Win32
+		{04B59344-D140-48C8-B350-363C6611DDEB}.Release.ActiveCfg = Release|Win32
+		{F2F58D4C-B9A8-41D4-9510-70A37DF08E5F}.Debug.ActiveCfg = Debug|Win32
+		{F2F58D4C-B9A8-41D4-9510-70A37DF08E5F}.Debug.Build.0 = Debug|Win32
+		{F2F58D4C-B9A8-41D4-9510-70A37DF08E5F}.Release.ActiveCfg = Release|Win32
+		{F2F58D4C-B9A8-41D4-9510-70A37DF08E5F}.Release.Build.0 = Release|Win32
+		{2AA9D0DF-17CB-4334-9D04-E67F4CD908AE}.Debug.ActiveCfg = Debug|Win32
+		{2AA9D0DF-17CB-4334-9D04-E67F4CD908AE}.Release.ActiveCfg = Release|Win32
+		{F666FAB2-7B8D-40F4-8D65-AABC00DB6AD5}.Debug.ActiveCfg = Debug|Win32
+		{F666FAB2-7B8D-40F4-8D65-AABC00DB6AD5}.Debug.Build.0 = Debug|Win32
+		{F666FAB2-7B8D-40F4-8D65-AABC00DB6AD5}.Release.ActiveCfg = Release|Win32
+		{F666FAB2-7B8D-40F4-8D65-AABC00DB6AD5}.Release.Build.0 = Release|Win32
+		{D2B2C1CA-ABD7-4C83-A766-54F4A229BEE2}.Debug.ActiveCfg = Debug|Win32
+		{D2B2C1CA-ABD7-4C83-A766-54F4A229BEE2}.Debug.Build.0 = Debug|Win32
+		{D2B2C1CA-ABD7-4C83-A766-54F4A229BEE2}.Release.ActiveCfg = Release|Win32
+		{D2B2C1CA-ABD7-4C83-A766-54F4A229BEE2}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

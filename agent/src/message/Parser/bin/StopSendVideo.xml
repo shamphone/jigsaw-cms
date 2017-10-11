@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>StopSendVideo</name>
+    <desc>停止发送视频信号</desc>
+	<i8>conferenceId</i8>
+	<i8>senderId</i8>
+	<i8>receiverId</i8>
+</lyvcmessage>

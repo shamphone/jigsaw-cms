@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>RejectContact</name>
+    <desc>拒绝将某个用户设为自己的联系人</desc>
+    <i8>receiverId</i8>
+    <string>name</string>
+</lyvcmessage>

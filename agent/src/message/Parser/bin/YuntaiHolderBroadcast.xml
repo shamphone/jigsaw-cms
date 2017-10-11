@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>YuntaiHolderBroadcast</name>
+    <desc>告诉会议中的其他用户，自己的摄像头可以进行云台控制</desc>
+	<i4>commPort</i4>
+	<i8>holderId</i8>
+	<i8>receiverId</i8>
+</lyvcmessage>

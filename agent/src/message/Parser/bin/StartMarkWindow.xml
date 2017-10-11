@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>StartMarkWindow</name>
+    <desc>在桌面共享中，通知对方自己开始标注</desc>
+    <i8>receiverId</i8>
+</lyvcmessage>

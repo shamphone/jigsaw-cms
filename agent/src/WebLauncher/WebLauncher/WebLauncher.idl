@@ -1,0 +1,58 @@
+// WebLauncher.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+//产生类型库(WebLauncher.tlb)，该类型库将成为 
+// WebLauncher.ocx 中的资源。
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(F3EB9427-8DC6-4F71-82EC-1C3E72020E58), version(1.0),
+  helpfile("WebLauncher.hlp"),
+  helpstring("WebLauncher ActiveX 控件模块"),
+  control ]
+library WebLauncherLib
+{
+	importlib(STDOLE_TLB);
+
+	//  CWebLauncherCtrl 的主调度接口
+
+	[ uuid(65C853C0-7F4C-4B36-A02E-34FFCD9815A6),
+	  helpstring("WebLauncher Control 的调度接口")]
+	dispinterface _DWebLauncher
+	{
+		properties:
+		[id(2), helpstring("属性 ConferenceId")]LONG ConferenceId;
+		[id(3), helpstring("属性 UserName")] BSTR UserName;
+		[id(4), helpstring("属性 Password")] BSTR Password;
+		[id(5), helpstring("属性 ServerIP")] BSTR ServerIP;
+		[id(6), helpstring("属性 Port")] LONG Port;
+		[id(7), helpstring("属性 ConferenceMode")] LONG ConferenceMode;
+		[id(8), helpstring("属性 ExpertId")] LONG ExpertId;
+methods:
+		[id(1), helpstring("方法startConference")] LONG startConference(void);
+	};
+
+	//  CWebLauncherCtrl 的事件调度接口
+
+	[ uuid(C12194B7-9FFA-429B-B447-6FFF01563E3C),
+	  helpstring("WebLauncher Control 的事件接口") ]
+	dispinterface _DWebLauncherEvents
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+	};
+
+	//  CWebLauncherCtrl 的类信息
+
+	[ uuid(A566201E-E4AA-4628-A662-98D20517EC47),
+	  helpstring("WebLauncher Control"), control ]
+	coclass WebLauncher
+	{
+		[default] dispinterface _DWebLauncher;
+		[default, source] dispinterface _DWebLauncherEvents;
+	};
+
+};

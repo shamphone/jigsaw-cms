@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>SendFileData</name>
+    <desc>文件传输的数据</desc>
+    <boolean>isFirstSend</boolean>
+    <boolean>isFinished</boolean>
+    <i4>dataLength</i4>
+    <i4>compressedLength</i4>
+    <i8>receiverId</i8>
+    <string>fullFileName</string>
+    <string>fileData</string>
+</lyvcmessage>

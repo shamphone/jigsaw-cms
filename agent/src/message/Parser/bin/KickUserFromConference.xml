@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>KickUserFromConference</name>
+    <desc>从会议中驱逐某人</desc>
+    <i8>confUserId</i8>
+    <i8>confId</i8>
+</lyvcmessage>

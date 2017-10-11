@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>InviteConference</name>
+    <desc>邀请某人参加会议</desc>
+    <i8>conferenceId</i8>
+    <i8>contactId</i8>
+	<i8>holderId</i8>
+</lyvcmessage>

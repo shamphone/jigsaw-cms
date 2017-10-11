@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="deploy" name="Longcon Video Conference Build">
+
+  <property file="build.properties"/>
+
+  <property name="deploy" value="../../deploy"/>
+  <property name="Tomcat.home" value="${jbuilder.home}/thirdparty/jakarta-tomcat-4.1.30"/>
+  <property name="jdk.home" value="${jbuilder.home}/jdk1.4"/>
+
+  <property name="WebManager.jpx.home" value="../../src/WebManager"/>
+  <property name="ConferenceServer.jpx.home" value="../../src/ConferenceServer"/>
+  <property name="MatrixJ.jpx.home" value="../../src/message/MatrixJ"/>
+  <property name="LicenseMaker.jpx.home" value="../../src/LicenseMaker"/>
+  <property name="ConferenceLibrary.jpx.home" value="../../src/ConferenceLibrary"/>
+  <property name="UserLibrary.jpx.home" value="../../src/UserLibrary"/>
+  <property name="ContactLibrary.jpx.home" value="../../src/ContactLibrary"/>
+  <property name="PendingMessageLibrary.jpx.home" value="../../src/PendingMessageLibrary"/>
+
+  <property name="log4j.home" value="../../src/javalib/log4j-1.2.11"/>
+  <property name="JUnit.home" value="${jbuilder.home}/thirdparty/junit3.8"/>
+  <property name="Unit.Test.home" value="${jbuilder.home}/lib"/>
+  <property name="PostgreSQL-8.0-JDBC.home" value="../../src/javalib/postgres-8.0-JDBC"/>
+  <property name="Xerces-2.6.2.home" value="../../src/javalib/xerces-2.6.2"/>
+  <property name="JakartaCommon.home" value="../../src/javalib/jakarta-common"/>
+  <property name="passport.home" value="../../src/javalib/passport"/>
+  <property name="mail.home" value="../../src/javalib/mail"/>
+  <property name="fulong-tree.home" value="../../src/javalib/fulong-tree"/>
+  <property name="struts-1.1.home" value="../../src/javalib/struts-1.1"/>
+  <property name="servlet.home" value="${jbuilder.home}/thirdparty/jakarta-tomcat-4.1.30/common/lib"/>
+  <property name="wrapper.home" value="../../src/javalib/wrapper"/>
+
+  <property name="GetSourcePY" location="../GetSource/GetSource.py"/>
+  <property name="GetRevisionPY" location="../GetRevision/GetRevision.py"/>
+  <property name="VCProjectBuilderPY" location="../VCProjectBuilder/BuildVCForDeploy.py"/>
+  <property name="SignPY" location="../../src/WebLauncher/doc/CreateCab/sign.py"/>
+
+  <path id="project.class.path">
+    <pathelement location="${mail.home}/activation.jar"/>
+    <pathelement location="${mail.home}/mail.jar"/>
+    <pathelement location="${fulong-tree.home}/FulongTree.jar"/>
+    <pathelement location="${struts-1.1.home}/commons-beanutils.jar"/>
+    <pathelement location="${struts-1.1.home}/commons-collections.jar"/>
+    <pathelement location="${struts-1.1.home}/commons-digester.jar"/>
+    <pathelement location="${struts-1.1.home}/commons-fileupload.jar"/>
+    <pathelement location="${struts-1.1.home}/commons-lang.jar"/>
+    <pathelement location="${struts-1.1.home}/commons-logging.jar"/>
+    <pathelement location="${struts-1.1.home}/commons-validator.jar"/>
+    <pathelement location="${struts-1.1.home}/jakarta-oro.jar"/>
+    <pathelement location="${struts-1.1.home}/struts.jar"/>
+    <pathelement location="${servlet.home}/servlet.jar"/>
+    <pathelement location="${MatrixJ.jpx.home}/classes"/>
+    <pathelement location="${log4j.home}/log4j-1.2.11.jar"/>
+    <pathelement location="${JUnit.home}/junit.jar"/>
+    <pathelement location="${Unit.Test.home}/unittest.jar"/>
+    <pathelement location="${ConferenceServer.jpx.home}/classes"/>
+    <pathelement location="${ConferenceLibrary.jpx.home}/classes"/>
+    <pathelement location="${LicenseMaker.jpx.home}/classes"/>
+    <pathelement location="${PostgreSQL-8.0-JDBC.home}/postgresql-8.0-310.jdbc3.jar"/>
+    <pathelement location="${Xerces-2.6.2.home}/resolver.jar"/>
+    <pathelement location="${Xerces-2.6.2.home}/xercesImpl.jar"/>
+    <pathelement location="${Xerces-2.6.2.home}/xml-apis.jar"/>
+    <pathelement location="${JakartaCommon.home}/commons-collections.jar"/>
+    <pathelement location="${JakartaCommon.home}/commons-dbcp-1.1.jar"/>
+    <pathelement location="${JakartaCommon.home}/commons-discovery.jar"/>
+    <pathelement location="${JakartaCommon.home}/commons-lang.jar"/>
+    <pathelement location="${JakartaCommon.home}/commons-logging.jar"/>
+    <pathelement location="${JakartaCommon.home}/commons-pool-1.1.jar"/>
+    <pathelement location="${JakartaCommon.home}/commons-beanutils.jar"/>
+    <pathelement location="${UserLibrary.jpx.home}/classes"/>
+    <pathelement location="${passport.home}/axis.jar"/>
+    <pathelement location="${passport.home}/jaxrpc.jar"/>
+    <pathelement location="${passport.home}/Passport.jar"/>
+    <pathelement location="${passport.home}/saaj.jar"/>
+    <pathelement location="${passport.home}/wsdl4j.jar"/>
+    <pathelement location="${ContactLibrary.jpx.home}/classes"/>
+    <pathelement location="${PendingMessageLibrary.jpx.home}/classes"/>
+    <pathelement location="${jdk.home}/jre/javaws/javaws.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/charsets.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/ext/dnsns.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/ext/ldapsec.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/ext/localedata.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/ext/sunjce_provider.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/im/indicim.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/im/thaiim.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/jce.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/jsse.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/plugin.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/rt.jar"/>
+    <pathelement location="${jdk.home}/jre/lib/sunrsasign.jar"/>
+    <pathelement location="${jdk.home}/lib/dt.jar"/>
+    <pathelement location="${jdk.home}/lib/htmlconverter.jar"/>
+    <pathelement location="${jdk.home}/lib/tools.jar"/>
+  </path>
+
+  <!--Patternset to exclude files from the output directory:-->
+  <patternset id="dest.exclude">
+    <exclude name="Temporary_Files/"/>
+    <exclude name="Generated Source/"/>
+    <exclude name="package cache/"/>
+    <exclude name="dependency cache/"/>
+    <exclude name="jsp cache/"/>
+    <exclude name="cache files/"/>
+  </patternset>
+
+  <target name="buildconferenceserver">
+
+		<echo message="--------- Compiling LicenseMaker...... ---------"/>
+        <mkdir dir="${LicenseMaker.jpx.home}/classes"/>
+        <javac srcdir="${LicenseMaker.jpx.home}/src"
+            destdir="${LicenseMaker.jpx.home}/classes"
+            debug="true"
+            optimize="true"
+            deprecation="false">
+          <classpath refid="project.class.path"/>
+        </javac>
+
+		<echo message="--------- Compiling ConferenceLibrary...... ---------"/>
+        <mkdir dir="${ConferenceLibrary.jpx.home}/classes"/>
+        <javac srcdir="${ConferenceLibrary.jpx.home}/src"
+            destdir="${ConferenceLibrary.jpx.home}/classes"
+            debug="true"
+            optimize="true"
+            deprecation="false">
+          <classpath refid="project.class.path"/>
+        </javac>
+
+        <echo message="--------- Compiling UserLibrary...... ---------"/>
+        <mkdir dir="${UserLibrary.jpx.home}/classes"/>
+        <javac srcdir="${UserLibrary.jpx.home}/src"
+            destdir="${UserLibrary.jpx.home}/classes"
+            debug="true"
+            optimize="true"
+            deprecation="false">
+          <classpath refid="project.class.path"/>
+        </javac>
+
+        <echo message="--------- Compiling ContactLibrary...... ---------"/>
+        <mkdir dir="${ContactLibrary.jpx.home}/classes"/>
+        <javac srcdir="${ContactLibrary.jpx.home}/src"
+            destdir="${ContactLibrary.jpx.home}/classes"
+            debug="true"
+            optimize="true"
+            deprecation="false">
+          <classpath refid="project.class.path"/>
+        </javac>
+
+        <echo message="--------- Compiling MatrixJ...... ---------"/>
+        <mkdir dir="${MatrixJ.jpx.home}/classes"/>
+        <javac srcdir="${MatrixJ.jpx.home}/src"
+            destdir="${MatrixJ.jpx.home}/classes"
+            debug="true"
+            optimize="true"
+            deprecation="false">
+          <classpath refid="project.class.path"/>
+        </javac>
+
+        <echo message="--------- Compiling PendingMessageLibrary...... ---------"/>
+        <mkdir dir="${PendingMessageLibrary.jpx.home}/classes"/>
+        <javac srcdir="${PendingMessageLibrary.jpx.home}/src"
+            destdir="${PendingMessageLibrary.jpx.home}/classes"
+            debug="true"
+            optimize="true"
+            deprecation="false">
+          <classpath refid="project.class.path"/>
+        </javac>
+
+        <echo message="--------- Compiling ConferenceServer...... ---------"/>
+        <mkdir dir="${ConferenceServer.jpx.home}/classes"/>
+        <javac srcdir="${ConferenceServer.jpx.home}/src"
+            destdir="${ConferenceServer.jpx.home}/classes"
+            debug="true"
+			source="1.4"
+            optimize="true"
+            deprecation="false">
+          <classpath refid="project.class.path"/>
+        </javac>
+  </target>
+
+  <target name="jarconferenceserver" depends="buildconferenceserver">
+        <jar jarfile="${LicenseMaker.jpx.home}/LicenseMaker.jar">
+            <fileset dir="${LicenseMaker.jpx.home}/classes">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </jar>
+
+        <jar jarfile="${ConferenceLibrary.jpx.home}/ConferenceLibrary.jar">
+            <fileset dir="${ConferenceLibrary.jpx.home}/classes">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </jar>
+
+        <jar jarfile="${UserLibrary.jpx.home}/UserLibrary.jar">
+            <fileset dir="${UserLibrary.jpx.home}/classes">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </jar>
+
+        <jar jarfile="${ContactLibrary.jpx.home}/ContactLibrary.jar">
+            <fileset dir="${ContactLibrary.jpx.home}/classes">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </jar>
+
+        <jar jarfile="${PendingMessageLibrary.jpx.home}/PendingMessageLibrary.jar">
+            <fileset dir="${PendingMessageLibrary.jpx.home}/classes">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </jar>
+
+        <jar jarfile="${MatrixJ.jpx.home}/MatrixJ.jar">
+            <fileset dir="${MatrixJ.jpx.home}/classes">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </jar>
+
+        <jar jarfile="${ConferenceServer.jpx.home}/ConferenceServer.jar">
+            <fileset dir="${ConferenceServer.jpx.home}/classes">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </jar>
+  </target>
+
+  <target name="server" depends="jarconferenceserver">
+	   <copy file="${ConferenceLibrary.jpx.home}/ConferenceLibrary.jar"
+            tofile="ConferenceLibrary.jar"/>
+       <copy file="${UserLibrary.jpx.home}/UserLibrary.jar"
+            tofile="UserLibrary.jar"/>
+       <copy file="${ContactLibrary.jpx.home}/ContactLibrary.jar"
+            tofile="ContactLibrary.jar"/>
+       <copy file="${PendingMessageLibrary.jpx.home}/PendingMessageLibrary.jar"
+            tofile="PendingMessageLibrary.jar"/>
+       <copy file="${MatrixJ.jpx.home}/MatrixJ.jar"
+            tofile="MatrixJ.jar"/>
+       <copy file="${ConferenceServer.jpx.home}/ConferenceServer.jar"
+            tofile="ConferenceServer.jar"/>
+       <copy file="${LicenseMaker.jpx.home}/LicenseMaker.jar"
+            tofile="LicenseMaker.jar"/>
+  </target>
+
+  <target name="deploy" depends="jarconferenceserver">
+
+        <echo message="--------- Cleanup deploy directory...... ---------"/>
+        <delete failonerror="false" includeemptydirs="true">
+            <fileset dir="${deploy}"/>
+        </delete>
+
+        <echo message="--------- Making deploy directories...... ---------"/>
+        <mkdir dir="${deploy}"/>
+        <mkdir dir="${deploy}/bin"/>
+        <mkdir dir="${deploy}/conf"/>
+        <mkdir dir="${deploy}/lib"/>
+        <mkdir dir="${deploy}/log"/>
+        <mkdir dir="${deploy}/MediaServer"/>
+        <mkdir dir="${deploy}/sql"/>
+        <mkdir dir="${deploy}/webapps/webmanager"/>
+        <mkdir dir="${deploy}/webapps/webmanager/docs"/>
+        <mkdir dir="${deploy}/webapps/webmanager/download"/>
+        <mkdir dir="${deploy}/webapps/webmanager/help"/>
+        <mkdir dir="${deploy}/webapps/webmanager/images"/>
+        <mkdir dir="${deploy}/webapps/webmanager/pages"/>
+        <mkdir dir="${deploy}/webapps/webmanager/public"/>
+        <mkdir dir="${deploy}/webapps/webmanager/WEB-INF"/>
+        <mkdir dir="${deploy}/webapps/webmanager/WEB-INF/classes"/>
+        <mkdir dir="${deploy}/webapps/webmanager/WEB-INF/lib"/>
+
+        <exec executable="${PythonEXE}">
+            <arg value="${GetRevisionPY}"/>
+        </exec>
+        <move file="version.dat" tofile="${deploy}/version.dat"/>
+        <copy file="Install.txt" tofile="${deploy}/Install.txt"/>
+
+		<echo message="--------- Building VC Project...... ---------"/>
+        <exec executable="${PythonEXE}" failonerror="true">
+            <arg value="${VCProjectBuilderPY}"/>
+        </exec>
+
+        <echo message="--------- Copy LongConVCS_Setup.exe...... ---------"/>
+        <copy file="../../install/client/LongConVCS_Setup.exe"
+            tofile="${deploy}/webapps/webmanager/download/LongConVCS_Setup.exe"/>
+
+        <echo message="--------- Copy WebLauncher.cab...... ---------"/>
+        <exec executable="${PythonEXE}" failonerror="true" dir="../../src/WebLauncher/doc/CreateCab">
+            <arg value="${SignPY}"/>
+        </exec>
+        <copy file="../../src/WebLauncher/doc/CreateCab/WebLauncher.cab"
+            tofile="${deploy}/webapps/webmanager/pages/conferencelist/WebLauncher.cab"/>
+
+        <echo message="--------- Compiling WebManager...... ---------"/>
+        <mkdir dir="${WebManager.jpx.home}/classes"/>
+        <javac srcdir="${WebManager.jpx.home}/src"
+            destdir="${WebManager.jpx.home}/classes"
+            debug="true"
+            optimize="true"
+            deprecation="false">
+          <classpath refid="project.class.path"/>
+        </javac>
+
+        <copy file="${WebManager.jpx.home}/web/index.jsp"
+            tofile="${deploy}/webapps/webmanager/index.jsp"/>
+        <copy todir="${deploy}/webapps/webmanager/WEB-INF/classes">
+            <fileset dir="${WebManager.jpx.home}/classes">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${deploy}/webapps/webmanager/WEB-INF/">
+            <fileset dir="${WebManager.jpx.home}/web/WEB-INF">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.tld"/>
+                <include name="**/*.xml"/>
+            </fileset>
+        </copy>
+        <move file="${deploy}/webapps/webmanager/WEB-INF/system.template.xml"
+            tofile="${deploy}/webapps/webmanager/WEB-INF/system.xml"/>
+        <copy todir="${deploy}/webapps/webmanager/help">
+            <fileset dir="${WebManager.jpx.home}/web/help">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${deploy}/webapps/webmanager/images">
+            <fileset dir="${WebManager.jpx.home}/web/images">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${deploy}/webapps/webmanager/pages">
+            <fileset dir="${WebManager.jpx.home}/web/pages">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${deploy}/webapps/webmanager/public">
+            <fileset dir="${WebManager.jpx.home}/web/public">
+                <patternset refid="dest.exclude"/>
+                <include name="**/*.*"/>
+            </fileset>
+        </copy>
+        <copy todir="${deploy}/webapps/webmanager/WEB-INF/lib">
+            <fileset dir="${mail.home}" includes="**/*.jar"/>
+            <fileset dir="${fulong-tree.home}" includes="**/*.jar"/>
+            <fileset dir="${passport.home}" includes="**/*.jar"/>
+            <fileset dir="${PostgreSQL-8.0-JDBC.home}" includes="**/*.jar*"/>
+            <fileset dir="${struts-1.1.home}" includes="**/*.jar"/>
+            <fileset dir="${log4j.home}" includes="**/*.jar"/>
+            <fileset dir="${Xerces-2.6.2.home}" includes="**/*.jar"/>
+            <fileset dir="${JakartaCommon.home}" includes="**/*.jar"/>
+            <fileset dir="${wrapper.home}" includes="**/*.jar"/>
+        </copy>
+
+       <copy file="${ConferenceLibrary.jpx.home}/ConferenceLibrary.jar"
+            tofile="${deploy}/webapps/webmanager/WEB-INF/lib/ConferenceLibrary.jar"/>
+       <copy file="${UserLibrary.jpx.home}/UserLibrary.jar"
+            tofile="${deploy}/webapps/webmanager/WEB-INF/lib/UserLibrary.jar"/>
+       <copy file="${ContactLibrary.jpx.home}/ContactLibrary.jar"
+            tofile="${deploy}/webapps/webmanager/WEB-INF/lib/ContactLibrary.jar"/>
+
+	   <copy file="${ConferenceLibrary.jpx.home}/ConferenceLibrary.jar"
+            tofile="${deploy}/lib/ConferenceLibrary.jar"/>
+       <copy file="${UserLibrary.jpx.home}/UserLibrary.jar"
+            tofile="${deploy}/lib/UserLibrary.jar"/>
+       <copy file="${ContactLibrary.jpx.home}/ContactLibrary.jar"
+            tofile="${deploy}/lib/ContactLibrary.jar"/>
+       <copy file="${PendingMessageLibrary.jpx.home}/PendingMessageLibrary.jar"
+            tofile="${deploy}/lib/PendingMessageLibrary.jar"/>
+       <copy file="${MatrixJ.jpx.home}/MatrixJ.jar"
+            tofile="${deploy}/lib/MatrixJ.jar"/>
+       <copy file="${ConferenceServer.jpx.home}/ConferenceServer.jar"
+            tofile="${deploy}/lib/ConferenceServer.jar"/>
+
+       <copy file="${deploy}/lib/ConferenceLibrary.jar"
+            tofile="${deploy}/webapps/webmanager/WEB-INF/lib/ConferenceLibrary.jar"/>
+       <copy file="${deploy}/lib/UserLibrary.jar"
+            tofile="${deploy}/webapps/webmanager/WEB-INF/lib/UserLibrary.jar"/>
+
+    	<copy todir="${deploy}/lib">
+            <fileset dir="${mail.home}" includes="**/*.jar"/>
+            <fileset dir="${fulong-tree.home}" includes="**/*.jar"/>
+            <fileset dir="${passport.home}" includes="**/*.jar"/>
+            <fileset dir="${PostgreSQL-8.0-JDBC.home}" includes="**/*.jar*"/>
+            <fileset dir="${struts-1.1.home}" includes="**/*.jar"/>
+            <fileset dir="${log4j.home}" includes="**/*.jar"/>
+            <fileset dir="${Xerces-2.6.2.home}" includes="**/*.jar"/>
+            <fileset dir="${JakartaCommon.home}" includes="**/*.jar"/>
+            <fileset dir="${wrapper.home}" includes="**/*.jar"/>
+        </copy>
+
+        <copy file="${ConferenceServer.jpx.home}/conf/configuration.template.xml" tofile="${deploy}/conf/configuration.xml"/>
+        <copy file="${ConferenceServer.jpx.home}/conf/log4j.properties" tofile="${deploy}/conf/log4j.properties"/>
+        <copy file="${ConferenceServer.jpx.home}/conf/deploy_wrapper.conf" tofile="${deploy}/conf/wrapper.conf"/>
+        <copy file="${wrapper.home}/wrapper.dll" tofile="${deploy}/lib/wrapper.dll"/>
+        <copy todir="${deploy}/bin">
+            <fileset dir="${ConferenceServer.jpx.home}/bin" includes="**/*.*"/>
+        </copy>
+    	<copy file="../DatabaseBackup/init.sql" tofile="${deploy}/sql/init.sql"/>
+
+        <zip zipfile="lyvc.zip" basedir="${deploy}"/>
+
+        <echo message="--------- Cleanup deploy directory...... ---------"/>
+        <delete failonerror="false" includeemptydirs="true">
+            <fileset dir="${deploy}"/>
+        </delete>
+
+  </target>
+
+</project>

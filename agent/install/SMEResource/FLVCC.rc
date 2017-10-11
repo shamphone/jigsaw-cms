@@ -1,0 +1,2147 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\FLVCC.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\flvcc.ico"
+IDI_LOGOUT              ICON                    "res\\logout.ico"
+IDI_MEETING             ICON                    "res\\meeting.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "登录",                        ID_LOGIN
+        MENUITEM "注销",                        ID_LOGOUT
+        MENUITEM SEPARATOR
+        MENUITEM "添加服务器...",               ID_ADDSERVER
+        MENUITEM SEPARATOR
+        MENUITEM "打开接收的文件",              ID_OPEN_RECEIVED
+        MENUITEM SEPARATOR
+        MENUITEM "关闭",                        ID_CLOSE
+    END
+    POPUP "联系人(&C)"
+    BEGIN
+        MENUITEM "查找/添加联系人...",          ID_SEARCH_CONTACT
+        MENUITEM "发送邮件...",                 ID_SEND_EMAIL
+        MENUITEM "发送留言...",                 ID_SEND_LEAVEWORD
+        MENUITEM "查看留言...",                 ID_LOOK_LEAVEWORDS
+        MENUITEM SEPARATOR
+        POPUP "管理我的联系人"
+        BEGIN
+            MENUITEM "删除联系人...",               ID_DEL_CONTACT
+            MENUITEM "联系人信息...",               ID_PROPERTY_CONTACT
+        END
+        POPUP "管理我的联系人组"
+        BEGIN
+            MENUITEM "添加组...",                   ID_CREATE_CONTACT_GROUP
+            MENUITEM "删除组",                      ID_DEL_CONTACT_GROUP
+            MENUITEM "重命名组...",                 ID_RENAME_CONTACT_GROUP
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "管理公共联系人...",           ID_COMMONCONTACTMGR
+        MENUITEM "管理用户角色...",             ID_SYSTEMROLEMGR
+    END
+    POPUP "会议(&M)"
+    BEGIN
+        MENUITEM "创建即时会议...",             ID_CREATE_INSTANTCONF
+        MENUITEM "创建正式会议...",             ID_CREATEFORMALCONF
+        MENUITEM SEPARATOR
+        MENUITEM "加入会议",                    ID_JOIN_CONFERENCE
+        MENUITEM "退出会议",                    ID_QUIT_CONFERENCE
+        MENUITEM SEPARATOR
+        MENUITEM "查看会议信息...",             ID_LOOK_CONFERENCE
+        MENUITEM "查看会议记录...",             ID_VIEW_CONFHISTORY
+        MENUITEM SEPARATOR
+        MENUITEM "管理会议模式...",             ID_CONFMODEMGR
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "总在最前面",                  ID_ALWAYS_TOP
+        MENUITEM SEPARATOR
+        MENUITEM "设置个性图片...",             ID_SETPICTURE
+        MENUITEM "查看/修改个人信息...",        ID_SELFINFOMGR
+        MENUITEM SEPARATOR
+        MENUITEM "发送系统公告...",             ID_SENDSYSTEMMSG
+        MENUITEM SEPARATOR
+        MENUITEM "视音频调节向导...",           ID_AV_WIZARD
+        MENUITEM "选项...",                     ID_OPTION
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "帮助主题...",                 ID_HELP_CONTENT
+        MENUITEM "关于...",                     ID_ABOUT
+    END
+END
+
+IDR_MENU_TRAY MENU 
+BEGIN
+    POPUP "menu"
+    BEGIN
+        MENUITEM "登录",                        ID_LOGIN
+        MENUITEM "注销",                        ID_LOGOUT
+        MENUITEM SEPARATOR
+        MENUITEM "显示主窗口",                  ID_MENU_SHOW
+        MENUITEM "退出",                        ID_EXIT
+    END
+END
+
+IDR_MAINFRAME_MEET MENU 
+BEGIN
+    POPUP "会议(&M)"
+    BEGIN
+        MENUITEM "会议信息...",                 ID_CONFERENCE_INFO
+        MENUITEM "查看会议记录",                ID_VIEWCONFHISTORY
+        MENUITEM SEPARATOR
+        MENUITEM "邀请加入会议...",             ID_INVITE_CONFERENCE
+        MENUITEM "驱逐人员...",                 ID_KICK_USER
+        MENUITEM "集中控制...",                 ID_CENTER_CONTROL
+        MENUITEM SEPARATOR
+        MENUITEM "文件传输...",                 ID_SEND_FILE
+        MENUITEM "打开接收的文件",              ID_OPEN_RECEIVED
+        MENUITEM SEPARATOR
+        MENUITEM "退出会议",                    ID_EXIT
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "人员列表",                    ID_VIEW_CONFUSERLIST
+        MENUITEM "调整人员顺序...",             ID_SORTATTENDERS
+        MENUITEM SEPARATOR
+        POPUP "视频布局        "
+        BEGIN
+            MENUITEM "默认模式",                    ID_VIEW_NORMAL
+            MENUITEM "大窗口模式",                  ID_VIEW_ONE_VGA
+            MENUITEM "2窗口模式",                   ID_VIEW_DIALOG
+            MENUITEM "4窗口模式",                   ID_VIEW_FOUR_CIF
+            MENUITEM "16窗口模式",                  ID_VIEW_SIXTEEN_QCIF
+        END
+        MENUITEM "视频显示到副显示器",          ID_SEPRATE_VIDEO
+    END
+    POPUP "视音频(&A)"
+    BEGIN
+        MENUITEM "观看图像...",                 ID_APPLY_VIDEO
+        MENUITEM "停止观看...",                 ID_STOP_RECEIVE_VIDEO
+        MENUITEM SEPARATOR
+        MENUITEM "收听声音...",                 ID_START_LISTEN
+        MENUITEM "停止收听...",                 ID_STOP_LISTEN
+        MENUITEM SEPARATOR
+        MENUITEM "云台控制",                    ID_YUNTAICONTROL
+        MENUITEM "视频质量调节",                ID_CHANGEVIDEOQUALITY
+    END
+    POPUP "远程共享与控制(&D)"
+    BEGIN
+        MENUITEM "邀请观看我的屏幕...",         ID_START_DESKTOP_SERVER
+        MENUITEM "停止屏幕共享...",             ID_STOP_DESKTOP_SERVER
+        MENUITEM "申请观看屏幕...",             ID_APPLY_DESKTOP_SHARE
+        MENUITEM "停止观看屏幕...",             ID_STOP_DESKTOP_SHARE
+        MENUITEM "申请控制对方计算机...",       ID_APPLY_DESKTOP_CONTROL
+        MENUITEM "停止控制...",                 ID_STOP_DESKTOP_CONTROL
+        MENUITEM "停止接受控制",                ID_STOP_RECEIVE_DESKTOP_CONTROL
+
+        MENUITEM SEPARATOR
+        MENUITEM "启用标注",                    ID_MARK
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "帮助主题",                    ID_HELP_CONTENT
+    END
+END
+
+IDR_ATTENDERDLG_POPUP MENU 
+BEGIN
+    POPUP "menu"
+    BEGIN
+        MENUITEM "申请加为联系人",              ID_APPLY_CONTACT
+        MENUITEM SEPARATOR
+        MENUITEM "收听声音",                    ID_RECEIVE_AUDIO
+        MENUITEM "停止收听",                    ID_STOP_AUDIO
+        MENUITEM "观看图像",                    ID_LOOKVIDEO
+        MENUITEM "停止观看",                    ID_STOPLOOKVIDEO
+        MENUITEM "云台控制",                    ID_YUNTAICONTROL
+        MENUITEM SEPARATOR
+        MENUITEM "发送消息",                    ID_CHAT
+        MENUITEM "传送文件",                    ID_SEND_FILE
+        MENUITEM SEPARATOR
+        POPUP "桌面共享"
+        BEGIN
+            MENUITEM "邀请观看我的屏幕",            ID_INVITE_DESKTOP
+            MENUITEM "停止屏幕共享",                ID_STOP_DESKTOP_SEND
+            MENUITEM "申请观看屏幕",                ID_APPLY_DESKTOP
+            MENUITEM "停止观看屏幕",                ID_STOP_DESKTOP_RECEIVE
+            MENUITEM "申请控制对方计算机",          ID_APPLY_CONTROL
+            MENUITEM "停止控制",                    ID_STOP_CONTROL
+            MENUITEM "停止接受控制",                ID_STOP_RECEIVE_CONTROL
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "弹出显示视频",                ID_VIEW_POPUP
+        MENUITEM "窗口总在最前",                ID_TOPMOST
+        MENUITEM "全屏显示",                    ID_FULLSCREEN
+        POPUP "窗口大小"
+        BEGIN
+            MENUITEM "176x144",                     ID_QCIF
+            MENUITEM "352x288",                     ID_CIF
+            MENUITEM "640x480",                     ID_VGA
+        END
+        POPUP "发送视频质量评价"
+        BEGIN
+            MENUITEM "好",                          ID_VIDEOQUALITY_GOOD
+            MENUITEM "一般",                        ID_VIDEOQUALITY_NORMAL
+            MENUITEM "差",                          ID_VIDEOQUALITY_BAD
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "驱逐此人出会议室",            ID_KICKUSER
+        MENUITEM "禁止此人参加此会议",          ID_DELETECONFUSER
+    END
+END
+
+IDR_MARK MENU 
+BEGIN
+    POPUP "menu"
+    BEGIN
+        POPUP "画笔颜色"
+        BEGIN
+            MENUITEM "蓝色",                        ID_PEN_BLUE
+            MENUITEM "红色",                        ID_PEN_RED
+            MENUITEM "绿色",                        ID_PEN_GREEN
+        END
+        POPUP "画笔大小"
+        BEGIN
+            MENUITEM "粗",                          ID_PEN_L
+            MENUITEM "中",                          ID_PEN_M
+            MENUITEM "细",                          ID_PEN_S
+        END
+        MENUITEM "退出标注",                    ID_MARK_EXIT
+    END
+END
+
+IDR_CONTACTDLG MENU 
+BEGIN
+    POPUP "contact"
+    BEGIN
+        MENUITEM "添加联系人",                  ID_ADDCONTACT
+        MENUITEM "添加组",                      ID_ADDGROUP
+        MENUITEM SEPARATOR
+        MENUITEM "开始即时会议",                ID_BEGINCONF
+        MENUITEM "查看联系人信息",              ID_CHECKCONTACTINFO
+        MENUITEM "查看聊天记录",                ID_VIEW_CHATLOG
+        MENUITEM "发送留言",                    ID_SEND_LEAVEWORD
+        MENUITEM "发送电子邮件",                ID_SEND_EMAIL
+        MENUITEM SEPARATOR
+        POPUP "移动联系人到组"
+        BEGIN
+            MENUITEM "组一",                        ID_MOVE_CONTACT_TO_GROUP
+        END
+        MENUITEM "删除联系人",                  ID_DELETECONTACT
+        POPUP "添加到我的联系人组"
+        BEGIN
+            MENUITEM "我的联系人",                  ID_ADDFROMCOMMON
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "重命名组",                    ID_RENAMEGROUP
+        MENUITEM "删除该组",                    ID_DELGROUP
+        MENUITEM SEPARATOR
+        MENUITEM "复制联系人到此用户",          ID_COPYCONTACTTOUSER
+        MENUITEM "复制联系人到此组用户",        ID_COPYCONTACTTOGROUP
+        MENUITEM "复制联系人到所有用户",        ID_COPYCONTACTTOALL
+    END
+END
+
+IDR_LOGOUT MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "登录",                        ID_LOGIN
+        MENUITEM "注销",                        ID_LOGOUT
+        MENUITEM SEPARATOR
+        MENUITEM "添加服务器...",               ID_ADDSERVER2
+        MENUITEM SEPARATOR
+        MENUITEM "打开接收的文件",              ID_OPEN_RECEIVED
+        MENUITEM SEPARATOR
+        MENUITEM "关闭",                        ID_CLOSE
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "总在最前面",                  ID_ALWAYS_TOP
+        MENUITEM SEPARATOR
+        MENUITEM "视音频调节向导...",           ID_AV_WIZARD
+        MENUITEM "选项...",                     ID_OPTION
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "帮助主题",                    ID_HELP_CONTENT
+        MENUITEM "关于...",                     ID_ABOUT
+    END
+END
+
+IDR_TRAINING MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "登录...",                     ID_LOGIN
+        MENUITEM "注销",                        ID_LOGOUT
+        MENUITEM SEPARATOR
+        MENUITEM "打开接收的文件",              ID_OPEN_RECEIVED
+        MENUITEM "转到课程管理系统",            ID_GOTO_CONF_WEBSERVER
+        MENUITEM SEPARATOR
+        MENUITEM "关闭",                        ID_CLOSE
+    END
+    POPUP "课程(&M)"
+    BEGIN
+        MENUITEM "进入教室",                    ID_JOIN_CONFERENCE
+        MENUITEM "退出教室",                    ID_QUIT_CONFERENCE
+        MENUITEM "查看课程信息...",             ID_LOOK_CONFERENCE
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "总在最前面",                  ID_ALWAYS_TOP
+        MENUITEM SEPARATOR
+        MENUITEM "视音频调节向导...",           ID_AV_WIZARD
+        MENUITEM SEPARATOR
+        MENUITEM "选项...",                     ID_OPTION
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "帮助主题",                    ID_HELP_CONTENT
+        MENUITEM "关于...",                     ID_ABOUT
+    END
+END
+
+IDR_TRAININGROOM MENU 
+BEGIN
+    POPUP "文件(&M)"
+    BEGIN
+        MENUITEM "驱逐人员...",                 ID_KICK_USER
+        MENUITEM SEPARATOR
+        MENUITEM "文件传输...",                 ID_SEND_FILE
+        MENUITEM "打开接收的文件",              ID_OPEN_RECEIVED
+        MENUITEM SEPARATOR
+        MENUITEM "申请发言",                    ID_APPLYSPEAK
+        MENUITEM "控制发言",                    ID_CONTROLSPEAK
+        MENUITEM SEPARATOR
+        MENUITEM "退出教室",                    ID_EXIT
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "人员列表",                    ID_VIEW_CONFUSERLIST
+        MENUITEM "调整人员顺序...",             ID_SORTATTENDERS
+        MENUITEM SEPARATOR
+        POPUP "视频布局        "
+        BEGIN
+            MENUITEM "默认模式",                    ID_VIEW_NORMAL
+            MENUITEM "大窗口模式",                  ID_VIEW_ONE_VGA
+            MENUITEM "2窗口模式",                   ID_VIEW_DIALOG
+            MENUITEM "4窗口模式",                   ID_VIEW_FOUR_CIF
+            MENUITEM "16窗口模式",                  ID_VIEW_SIXTEEN_QCIF
+        END
+    END
+    POPUP "桌面共享(&D)"
+    BEGIN
+        MENUITEM "邀请观看我的屏幕...",         ID_START_DESKTOP_SERVER
+        MENUITEM "停止屏幕共享...",             ID_STOP_DESKTOP_SERVER
+        MENUITEM "申请观看屏幕...",             ID_APPLY_DESKTOP_SHARE
+        MENUITEM "停止观看屏幕...",             ID_STOP_DESKTOP_SHARE
+        MENUITEM SEPARATOR
+        MENUITEM "启用标注",                    ID_MARK
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "帮助主题",                    ID_HELP_CONTENT
+    END
+END
+
+IDR_CONSULTING MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "登录...",                     ID_LOGIN
+        MENUITEM "注销",                        ID_LOGOUT
+        MENUITEM SEPARATOR
+        MENUITEM "打开接收的文件",              ID_OPEN_RECEIVED
+        MENUITEM SEPARATOR
+        MENUITEM "关闭",                        ID_CLOSE
+    END
+    POPUP "咨询室(&M)"
+    BEGIN
+        MENUITEM "进入咨询室",                  ID_JOIN_CONFERENCE
+        MENUITEM "退出咨询室",                  ID_QUIT_CONFERENCE
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "总在最前面",                  ID_ALWAYS_TOP
+        MENUITEM SEPARATOR
+        MENUITEM "视音频调节向导...",           ID_AV_WIZARD
+        MENUITEM SEPARATOR
+        MENUITEM "选项...",                     ID_OPTION
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "帮助主题",                    ID_HELP_CONTENT
+        MENUITEM "关于...",                     ID_ABOUT
+    END
+END
+
+IDR_CONSULTINGROOM MENU 
+BEGIN
+    POPUP "文件(&M)"
+    BEGIN
+        MENUITEM "驱逐人员...",                 ID_KICK_USER
+        MENUITEM "回答问题...",                 ID_CENTER_CONTROL
+        MENUITEM SEPARATOR
+        MENUITEM "文件传输...",                 ID_SEND_FILE
+        MENUITEM "打开接收的文件",              ID_OPEN_RECEIVED
+        MENUITEM SEPARATOR
+        MENUITEM "退出咨询室",                  ID_EXIT
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "人员列表",                    ID_VIEW_CONFUSERLIST
+        MENUITEM "调整人员顺序...",             ID_SORTATTENDERS
+    END
+    POPUP "远程共享与控制(&D)"
+    BEGIN
+        MENUITEM "邀请观看我的屏幕...",         ID_START_DESKTOP_SERVER
+        MENUITEM "停止屏幕共享...",             ID_STOP_DESKTOP_SERVER
+        MENUITEM "申请观看屏幕...",             ID_APPLY_DESKTOP_SHARE
+        MENUITEM "停止观看屏幕...",             ID_STOP_DESKTOP_SHARE
+        MENUITEM "申请控制对方计算机...",       ID_APPLY_DESKTOP_CONTROL
+        MENUITEM "停止控制...",                 ID_STOP_DESKTOP_CONTROL
+        MENUITEM "停止接受控制",                ID_STOP_RECEIVE_DESKTOP_CONTROL
+
+        MENUITEM SEPARATOR
+        MENUITEM "启用标注",                    ID_MARK
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "帮助主题",                    ID_HELP_CONTENT
+    END
+END
+
+IDR_SERVER MENU 
+BEGIN
+    POPUP "server"
+    BEGIN
+        MENUITEM "登录",                        ID_LOGINSERVER
+        MENUITEM "取消登录",                    ID_CANCELLOGINSERVER
+        MENUITEM "注销",                        ID_LOGOUTSERVER
+        MENUITEM SEPARATOR
+        MENUITEM "注册新帐号",                  ID_REGISTERNEW
+        MENUITEM "用另一个帐号登录",            ID_LOGINANOTHER
+        MENUITEM SEPARATOR
+        MENUITEM "添加服务器",                  ID_ADDSERVER
+        MENUITEM "查看/修改服务器信息",         ID_CHECKSERVER
+        MENUITEM "删除服务器",                  ID_REMOVESERVER
+    END
+END
+
+IDR_CONFERENCEDLG MENU 
+BEGIN
+    POPUP "conference"
+    BEGIN
+        MENUITEM "加入会议室",                  ID_JOIN_CONFERENCE
+        MENUITEM "退出会议室",                  ID_QUIT_CONFERENCE
+        MENUITEM "查看会议信息...",             ID_LOOK_CONFERENCE
+        MENUITEM SEPARATOR
+        MENUITEM "编辑会议信息...",             ID_EDITCONFERENCE
+        MENUITEM "删除会议...",                 ID_DELETECONFERENCE
+        MENUITEM SEPARATOR
+        MENUITEM "查看会议通知...",             ID_LOOKCONFERENCENOTICE
+        MENUITEM "发送会议通知...",             ID_EDITCONFERENCENOTICE
+    END
+END
+
+IDR_SYSMSG MENU 
+BEGIN
+    POPUP "sysmsg"
+    BEGIN
+        MENUITEM "查看详细内容",                ID_LOOKMESSAGE
+        MENUITEM "删除此项",                    ID_DELMESSAGE
+        MENUITEM "清空所有项",                  ID_DELALLMESSAGE
+    END
+END
+
+IDR_ATTENDERDLG_SELF MENU 
+BEGIN
+    POPUP "menu"
+    BEGIN
+        MENUITEM "设置我的图片",                ID_SETMYPICTURE
+        MENUITEM SEPARATOR
+        MENUITEM "观看图像",                    ID_LOOKVIDEO
+        MENUITEM "停止观看",                    ID_STOPLOOKVIDEO
+        MENUITEM "云台控制",                    ID_YUNTAICONTROL
+        MENUITEM SEPARATOR
+        MENUITEM "弹出显示视频",                ID_VIEW_POPUP
+        MENUITEM "窗口总在最前",                ID_TOPMOST
+        MENUITEM "全屏显示",                    ID_FULLSCREEN
+        POPUP "窗口大小"
+        BEGIN
+            MENUITEM "176x144",                     ID_QCIF
+            MENUITEM "352x288",                     ID_CIF
+            MENUITEM "640x480",                     ID_VGA
+        END
+    END
+END
+
+IDR_MSN_MENU MENU 
+BEGIN
+    POPUP "msnserver"
+    BEGIN
+        MENUITEM "登录",                        ID_MSN_LOGIN
+        MENUITEM "注销",                        ID_MSN_LOGOUT
+        POPUP "我的状态"
+        BEGIN
+            MENUITEM "联机",                        ID_MSN_ONLINE
+            MENUITEM "忙碌",                        ID_MSN_BUSY
+            MENUITEM "马上回来",                    ID_MSN_BERIGHTBACK
+            MENUITEM "离开",                        ID_MSN_AWAY
+            MENUITEM "电话中",                      ID_MSN_ONTHEPHONE
+            MENUITEM "外出就餐",                    ID_MSN_OUTTOLUNCH
+            MENUITEM "显示为脱机",                  ID_MSN_APPEAROFFLINE
+        END
+        MENUITEM "查看/修改帐号",               ID_MSN_ACCOUNT
+        MENUITEM SEPARATOR
+        MENUITEM "查找/添加联系人",             ID_MSN_FINDADD
+        MENUITEM "创建联系人组",                ID_MSN_ADDGROUP
+    END
+    POPUP "msncontact"
+    BEGIN
+        MENUITEM "发送消息",                    ID_MSN_SENDMSG
+        MENUITEM "删除联系人",                  ID_MSN_DELCONTACT
+        POPUP "移动联系人到组"
+        BEGIN
+            MENUITEM "组1",                         ID_MSN_MOVECONTACT
+        END
+        MENUITEM "查看聊天记录",                ID_MSN_VIEWHISTORY
+        MENUITEM "查看联系人信息",              ID_MSN_CONTACTINFO
+    END
+    POPUP "msngroup"
+    BEGIN
+        MENUITEM "删除组",                      ID_MSN_DELGROUP
+        MENUITEM "修改组名",                    ID_MSN_RENAMEGROUP
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SYSINFO_DLG DIALOGEX 0, 0, 141, 164
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_SYSINFO_TREE,"SysTreeView32",TVS_SHOWSELALWAYS | 
+                    WS_TABSTOP,7,7,127,150
+END
+
+IDD_CONTACT_DLG DIALOGEX 0, 0, 138, 142
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "Tree1",IDC_CONTACT_TREE,"SysTreeView32",
+                    TVS_SHOWSELALWAYS | WS_TABSTOP,0,33,121,102
+END
+
+IDD_CONFERENCE_DLG DIALOGEX 0, 0, 138, 158
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN
+FONT 9, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_CONFERENCE_TREE,"SysTreeView32",TVS_SHOWSELALWAYS | 
+                    WS_TABSTOP,7,14,124,137
+END
+
+IDD_CHAT_DLG DIALOGEX 0, 0, 247, 111
+STYLE DS_SETFONT | WS_CHILD | WS_CLIPCHILDREN
+FONT 9, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_SENDMSG,"RichEdit20A",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | WS_VSCROLL | WS_TABSTOP,7,89,76,15,
+                    WS_EX_ACCEPTFILES
+    CONTROL         "发 送",IDC_SEND,"Button",BS_OWNERDRAW | BS_FLAT | 
+                    WS_TABSTOP,217,79,23,16
+    CONTROL         "",IDC_CHATMSG,"RichEdit20A",ES_MULTILINE | ES_READONLY | 
+                    WS_VSCROLL | WS_TABSTOP,7,7,79,23
+    CONTROL         "",IDC_FONT,"Button",BS_OWNERDRAW | BS_FLAT | WS_TABSTOP,
+                    30,58,23,14
+    CONTROL         " 在下面框中输入文字, 按回车发送, Ctrl+回车换行",
+                    IDC_SENDTO,"Static",SS_LEFTNOWORDWRAP | SS_ENDELLIPSIS | 
+                    NOT WS_VISIBLE | WS_GROUP,14,39,192,8
+    LTEXT           "",IDC_WRITINGMSG,107,81,74,8
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 246, 129
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    CONTROL         235,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,0,0,
+                    253,46
+    LTEXT           "中小在线视频会议系统 [SME Video Conference System] v2.0",
+                    IDC_STATIC,10,57,228,8
+    LTEXT           "版权所有: 北京中小在线信息服务有限公司",IDC_STATIC,10,
+                    89,170,8
+    LTEXT           "更多内容请访问: www.sme.gov.cn",IDC_STATIC,10,99,156,8
+    LTEXT           "Build 1247",IDC_STATIC_REVISION,10,67,97,8
+    PUSHBUTTON      "确定",IDOK,183,115,50,14
+END
+
+IDD_ATTENDER_DLG DIALOGEX 0, 0, 164, 149
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "",IDC_LISTEN_BTN,46,4,9,10
+    LTEXT           "",IDC_LOCAL_VIRTUAL_VIDEO,63,62,41,37,NOT WS_VISIBLE
+END
+
+IDD_LOGIN_DIALOG DIALOGEX 0, 0, 215, 232
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_SERVERLIST,70,35,94,58,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_USERNAME,51,110,97,70,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_PASSWORD,50,137,94,12,ES_PASSWORD | ES_AUTOHSCROLL | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "保存我的信息",IDC_REMEMBERUSERNAME,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,47,162,64,10
+    CONTROL         "记住我的密码",IDC_REMEMBERPASSWORD,"Button",
+                    BS_AUTOCHECKBOX | BS_FLAT | WS_DISABLED | WS_TABSTOP,47,
+                    174,64,10
+    CONTROL         "注册一个新帐号",IDC_REGISTER_BTN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,46,188,87,13
+    CONTROL         "",IDC_LOGIN_BTN,"Button",BS_OWNERDRAW | WS_TABSTOP,75,
+                    209,56,16
+    LTEXT           "请选择登录服务器:",IDC_SELECTSERVER,7,36,52,8
+    LTEXT           "请输入您的用户名:",IDC_ENTERUSERNAME,52,102,100,8
+    LTEXT           "请输入您的密码:",IDC_ENTERPASSWORD,51,130,109,8
+END
+
+IDD_CONF_INFO_DLG DIALOGEX 0, 0, 287, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "查看会议信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    RTEXT           "会议名称：",IDC_STATIC1,11,35,42,8
+    RTEXT           "会议描述：",IDC_STATIC2,11,58,42,8
+    RTEXT           "开始时间：",IDC_STATIC,11,91,42,8
+    RTEXT           "结束时间：",IDC_STATIC,11,103,42,8
+    LTEXT           "",IDC_CONF_DESC,61,58,204,24
+    LTEXT           "",IDC_CONF_NAME,61,35,204,16
+    LTEXT           "",IDC_CONF_END,61,103,204,8
+    LTEXT           "",IDC_CONF_START,61,91,204,8
+    PUSHBUTTON      "确定",IDOK,173,173,50,14
+    RTEXT           "会议资料：\n(点击下载)",IDC_STATIC,11,115,43,19
+    CONTROL         "",IDC_CONF_DOCS,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_TABSTOP,61,116,
+                    198,43,WS_EX_STATICEDGE
+    PUSHBUTTON      "取消",IDCANCEL,229,173,50,14
+END
+
+IDD_OPTION_GENERAL_DLG DIALOGEX 0, 0, 274, 191
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "程序启动时自动登录",IDC_AUTOLOGIN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,37,152,8
+    CONTROL         "Windows启动时自动运行",IDC_AUTORUN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,23,153,8
+    GROUPBOX        "启动",IDC_STATIC,7,7,257,52
+    LTEXT           "收到的文件保存在：",IDC_STATIC,12,71,155,8
+    PUSHBUTTON      "...",IDC_SELECT_RECEIVE_PATH,232,83,20,12,BS_FLAT
+    LTEXT           "退出全屏桌面共享的热键(如果要设置其它组合键，请点击下面的文本框，然后按下所需的快捷键)",
+                    IDC_STATIC,12,104,211,19
+    EDITTEXT        IDC_QUITFULLSCREENDESKTOP,12,126,118,12,ES_AUTOHSCROLL
+    LTEXT           "静态",IDC_RECEIVE_PATH,12,83,215,13,0,WS_EX_STATICEDGE
+END
+
+IDD_DIR_DLG DIALOGEX 0, 0, 245, 204
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,125,185,50,14
+    PUSHBUTTON      "取消",IDCANCEL,188,185,50,14
+    CONTROL         "",IDC_DIR_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,
+                    7,19,231,162
+    LTEXT           "请选择一个文件夹以保存收到的文件",IDC_STATIC,7,7,231,8
+END
+
+IDD_CONTACT_LIST_DLG DIALOGEX 0, 0, 320, 217
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "选择用户"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,201,197,55,17
+    PUSHBUTTON      "取消",IDCANCEL,262,197,55,17
+    CONTROL         "",IDC_CONTACT_LIST,"SysListView32",LVS_LIST | 
+                    LVS_ALIGNLEFT | WS_TABSTOP,2,34,316,156,WS_EX_STATICEDGE
+    CONTROL         "全选/全不选",IDC_CHECKALL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,196,59,10
+END
+
+IDD_CONTACT_INFO_DLG DIALOGEX 0, 0, 250, 140
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "查看联系人信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "静态",IDC_CONTACT_PROPERTY_NAME,51,46,173,8
+    RTEXT           "E-Mail：",IDC_STATIC,4,62,36,8
+    RTEXT           "状态：",IDC_STATIC,4,78,36,8
+    LTEXT           "静态",IDC_CONTACT_PROPERTY_EMAIL,51,62,173,8
+    LTEXT           "静态",IDC_CONTACT_PROPERTY_STATUS,51,78,173,8
+    LTEXT           "静态",IDC_CONTACT_PROPERTY_GROUP,51,94,173,8
+    RTEXT           "组：",IDC_STATIC,4,94,36,8
+    RTEXT           "姓名：",IDC_STATIC,5,46,35,8
+    PUSHBUTTON      "确定",IDOK,195,126,50,14
+    PUSHBUTTON      "取消",IDCANCEL,145,126,50,14
+END
+
+IDD_ADDCONTACTGROUP DIALOGEX 0, 0, 240, 110
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_GROUPNAME,23,44,170,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,129,87,50,16
+    PUSHBUTTON      "取消",IDCANCEL,183,87,50,16
+    LTEXT           "",IDC_STATIC,7,7,226,8,NOT WS_VISIBLE
+END
+
+IDD_FILE_TRANSFER_DLG DIALOGEX 0, 0, 320, 188
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_CURRENTTRANSFER,9,5,294,8
+    CONTROL         "",IDC_FILETRANSFER_PROGRESS,"msctls_progress32",
+                    WS_BORDER,22,18,265,8
+    CONTROL         "",IDC_SENDLIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_TABSTOP,1,30,318,131
+    CONTROL         "全选/全不选",IDC_SELECTALL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,168,59,8
+    PUSHBUTTON      "清除选中任务",IDC_CANCEL_SELECTEDTASK_BTN,249,168,67,13
+    PUSHBUTTON      "打开接收文件",IDC_OPEN_RECEIVED,92,169,90,13
+    PUSHBUTTON      "新建任务",IDC_ADDTASK_BTN,197,168,46,13
+END
+
+IDD_LEAVEWORD_DLG DIALOGEX 0, 0, 320, 217
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "发送留言"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_LEAVEWORD,2,34,316,156,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_WANTRETURN | NOT WS_BORDER | WS_VSCROLL,
+                    WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "确定",IDOK,179,195,55,17
+    PUSHBUTTON      "取消",IDCANCEL,254,195,55,17
+END
+
+IDD_ADD_CONTACT_STEP1_DLG DIALOGEX 0, 0, 260, 125
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EMAIL,18,48,185,12,ES_AUTOHSCROLL
+    LTEXT           "请在下面的输入框中输入您要添加的联系人的电子邮件：",
+                    IDC_STATIC,7,13,245,8,NOT WS_VISIBLE
+END
+
+IDD_ADD_CONTACT_STEP2_DLG DIALOGEX 0, 0, 260, 125
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    RTEXT           "姓名：",IDC_STATIC1,9,40,49,8,NOT WS_VISIBLE
+    RTEXT           "电子邮件：",IDC_STATIC2,9,53,49,8,NOT WS_VISIBLE
+    RTEXT           "状态：",IDC_STATIC3,9,67,49,8,NOT WS_VISIBLE
+    LTEXT           " ",IDC_SEARCH_RESULT,7,14,246,19,NOT WS_VISIBLE
+    LTEXT           "静态",IDC_NAME,78,40,57,8,NOT WS_VISIBLE
+    LTEXT           "静态",IDC_EMAIL,78,53,157,8,NOT WS_VISIBLE
+    LTEXT           "静态",IDC_STATUS,78,67,78,8,NOT WS_VISIBLE
+END
+
+IDD_STATUS_DLG DIALOGEX 0, 0, 186, 49
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_ADDCONTACT_BTN,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    104,14,75,14
+END
+
+IDD_SHOWXML_DLG DIALOGEX 0, 0, 184, 94
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_ADD_CONTACT_STEP3_DLG DIALOGEX 0, 0, 260, 125
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "已发送请求，等待对方回应。\n您可以继续添加或按“完成”退出。",
+                    IDC_STATIC,20,47,223,46
+END
+
+IDD_ROOM_VIEW DIALOGEX 0, 0, 287, 187
+STYLE DS_SETFONT | WS_CHILD
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_CHAT_TAB,"SysTabControl32",TCS_FOCUSNEVER,3,23,
+                    139,134
+    CONTROL         "",IDC_SHOWATTENDERLIST_BTN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,166,0,22,16
+    CONTROL         "",IDC_SCROLLDOWN_BTN,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    241,175,21,12
+    CONTROL         "",IDC_SCROLLUP_BTN,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    266,175,21,12
+    CONTROL         "",IDC_VOLUME_MIC,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,206,177,28,9
+    CONTROL         "",IDC_VOLUME_WAVEOUT,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,167,178,26,7
+    LTEXT           " 人员列表",IDC_ATTENDERS,206,3,81,8,NOT WS_VISIBLE
+    CONTROL         "",IDC_INVITE,"Button",BS_OWNERDRAW | WS_TABSTOP,6,5,18,
+                    13
+    CONTROL         "",IDC_SENDFILE,"Button",BS_OWNERDRAW | WS_TABSTOP,32,5,
+                    18,13
+    CONTROL         "",IDC_SENDVIDEO,"Button",BS_OWNERDRAW | WS_TABSTOP,54,5,
+                    18,13
+    CONTROL         "",IDC_APPLYDESKTOP,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    78,3,18,13
+    CONTROL         "",IDC_WAVEOUT_MUTE,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    151,175,14,11
+    CONTROL         "",IDC_MIC_MUTE,"Button",BS_OWNERDRAW | WS_TABSTOP,191,
+                    173,13,12
+    CONTROL         "排序",IDC_SORT_BTN,"Button",BS_OWNERDRAW | NOT 
+                    WS_VISIBLE | WS_TABSTOP,247,19,32,10
+    PUSHBUTTON      "",IDC_WHITEBOARD_BTN,105,3,22,14
+END
+
+IDD_PROPPAGE_INTRO DIALOGEX 0, 0, 300, 231
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "视音频设置向导"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    LTEXT           "这个向导帮助您选择合适的扬声器、麦克风和摄像机。\r\n\r\n注意：\r\n\r\n     1：关闭所有播放声音或者显示视频的其他程序。\r\n     2：确认您的扬声器、麦克风和摄像机已经插好并已经打开，并且没有设置为静音。",
+                    IDC_STATIC,43,75,200,81
+END
+
+IDD_PROPPAGE_AUDIO_PLAY DIALOGEX 0, 0, 300, 231
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "视音频设置向导"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    LTEXT           "步骤1：设置扬声器",IDC_STATIC,11,10,137,8,NOT 
+                    WS_VISIBLE
+    LTEXT           "选择您需要使用的耳机或者扬声器",IDC_STATIC,24,49,125,12
+    COMBOBOX        IDC_COMBO_AUDIO_PLAY_DEVICE,24,65,113,45,
+                    CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "播放测试",IDC_BUTTON_PLAY_SAMPLE,49,103,72,15
+    LTEXT           "如果您听不到声音，请检查扬声器是否已经插好和打开，并调整到合适的音量",
+                    IDC_STATIC,27,135,114,31
+    CONTROL         "",IDC_SLIDER_AUDIO_PLAY_VOLUME,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | WS_TABSTOP,232,50,
+                    22,105
+    LTEXT           "扬声器音量",IDC_STATIC,189,157,48,15
+END
+
+IDD_PROPPAGE_AUDIO_RECORD DIALOGEX 0, 0, 300, 231
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "视音频设置向导"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    LTEXT           "步骤2：设置麦克风",IDC_STATIC,11,11,90,8,NOT WS_VISIBLE
+    LTEXT           "选择您需要使用的麦克风",IDC_STATIC,24,49,105,12
+    COMBOBOX        IDC_COMBO_AUDIO_RECORD_DEVICE,24,66,117,50,
+                    CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SLIDER_AUDIO_RECORD_VOLUME,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | WS_TABSTOP,232,50,
+                    22,105
+    LTEXT           "麦克风音量",IDC_STATIC,220,159,48,15
+    LTEXT           "如果有问题，请检查麦克风已经插好并打开，并且没有设置为静音。",
+                    IDC_STATIC,23,109,158,20
+END
+
+IDD_PROPPAGE_VIDEO DIALOGEX 0, 0, 300, 231
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "视音频设置向导"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+    LTEXT           "步骤3：设置摄像机",IDC_STATIC,11,10,137,8,NOT 
+                    WS_VISIBLE
+    LTEXT           "选择您需要使用的摄像机",IDC_STATIC,25,41,120,14
+    COMBOBOX        IDC_COMBO_VIDEO_DEVICE,24,58,117,50,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "",IDC_VIDEO,24,100,123,108,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "高级属性...",IDC_PROPERTY,181,77,65,20
+END
+
+IDD_ATTENDERLIST_DLG DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_SORTATTENDERS_DLG DIALOGEX 0, 0, 320, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "人员排序"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,217,202,45,14
+    PUSHBUTTON      "上  移",IDC_UP_BTN,51,203,40,13
+    PUSHBUTTON      "下  移",IDC_DOWN_BTN,96,203,36,13
+    LISTBOX         IDC_ATTENDERS,2,32,316,164,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    LTEXT           "选中参会人员，按“上移”，“下移”按钮进行排序。",
+                    IDC_STATIC,2,7,316,8,NOT WS_VISIBLE
+    PUSHBUTTON      "按名字顺序",IDC_SORTBYNAME_BTN,2,203,47,13
+    PUSHBUTTON      "取消",IDCANCEL,268,202,50,14
+END
+
+IDD_FILETRANSFERMGRDLG DIALOGEX 0, 0, 322, 229
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "文件传输"
+FONT 9, "宋体", 0, 0, 0x0
+BEGIN
+END
+
+IDD_VIDEO_BG_DLG DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_CONTROL_DLG DIALOGEX 0, 0, 366, 266
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "视音频集中控制"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_USER_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,44,84,184
+    CONTROL         "全选/全不选",IDC_SELECT_ALL_CHK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,9,230,59,10
+    CONTROL         "默认布局",IDC_VIEW_NORMAL,"Button",BS_AUTORADIOBUTTON,
+                    106,53,56,8
+    CONTROL         "大窗口",IDC_VIEW_VGA,"Button",BS_AUTORADIOBUTTON,106,76,
+                    56,8
+    CONTROL         "2窗口",IDC_VIEW_TWO,"Button",BS_AUTORADIOBUTTON,106,100,
+                    56,8
+    CONTROL         "4窗口",IDC_VIEW_CIF,"Button",BS_AUTORADIOBUTTON,106,124,
+                    56,8
+    CONTROL         "16窗口",IDC_VIEW_QCIF,"Button",BS_AUTORADIOBUTTON,106,
+                    147,56,8
+    CONTROL         "",IDC_LOOKVIDEO_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,178,44,84,184
+    CONTROL         "全选/全不选",IDC_SELECT_ALL_CHK2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,177,230,59,10
+    CONTROL         "",IDC_LISTEN_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,275,44,84,184
+    CONTROL         "全选/全不选",IDC_SELECT_ALL_CHK3,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,274,230,59,10
+    PUSHBUTTON      "确定",IDOK,205,245,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,245,50,14
+    PUSHBUTTON      "应用",IDC_BTN_APPLY,309,245,50,14
+    PUSHBUTTON      "开始回答",IDC_BTN_ANSWER,100,245,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "结束回答",IDC_BTN_STOPANSWER,154,245,50,14,NOT 
+                    WS_VISIBLE
+    LTEXT           "选择要控制的用户",IDC_STATIC_USERLIST,9,34,67,8
+    LTEXT           "选择收看的视频",IDC_STATIC_VIDEO,178,34,57,8
+    LTEXT           "选择收听的声音",IDC_STATIC_AUDIO,275,34,67,8
+    GROUPBOX        "",IDC_STATIC_FRAME,99,42,71,187
+    LTEXT           "选择观看模式",IDC_STATIC_VIEWMODE,100,34,67,8
+    LTEXT           "",IDC_NUMBEROFVIDEO,235,34,37,8
+END
+
+IDD_CONTROLSPEAK_DLG DIALOGEX 0, 0, 191, 214
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "控制发言"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "关闭",IDCANCEL,145,193,44,14
+    CONTROL         "",IDC_CONTROLSPEAK_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | 
+                    WS_TABSTOP,2,7,135,200
+    PUSHBUTTON      "指定发言",IDC_APPOINTSPEAKER_BTN,145,7,44,14
+    PUSHBUTTON      "停止发言",IDC_STOPSPEAKER_BTN,145,31,44,14
+END
+
+IDD_YUNTAI_DLG DIALOGEX 0, 0, 248, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "一体球云台控制"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "向上",IDC_BTN_UP,105,91,28,14,BS_FLAT
+    PUSHBUTTON      "向左",IDC_BTN_LEFT,67,120,28,14,BS_FLAT
+    PUSHBUTTON      "向右",IDC_BTN_RIGHT,146,120,28,14,BS_FLAT
+    PUSHBUTTON      "向下",IDC_BTN_DOWN,105,150,28,14,BS_FLAT
+    LTEXT           "焦距调整：",IDC_STATIC,44,181,41,8
+    PUSHBUTTON      "变小",IDC_BTN_ZOOMIN,91,178,28,14,BS_FLAT
+    PUSHBUTTON      "变大",IDC_BTN_ZOOMOUT,133,178,28,14,BS_FLAT
+    GROUPBOX        "摄像头方向调整",IDC_STATIC,45,77,159,95
+    LTEXT           "球机地址：",IDC_STATIC,46,45,79,8
+    LTEXT           "选择串口：",IDC_STATIC,145,45,42,8
+    COMBOBOX        IDC_COMBO_SERIALPORT,144,57,61,42,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_CONTROLLIST,46,57,61,101,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "协议设置：派尔高(PELCO)-D型协议",IDC_STATIC,47,33,123,8
+    PUSHBUTTON      "确定",IDOK,54,199,50,14
+    PUSHBUTTON      "取消",IDCANCEL,191,199,50,14
+END
+
+IDD_OPTION_VIDEOCONFIG_DLG DIALOGEX 0, 0, 273, 191
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FPS,133,20,26,12,ES_AUTOHSCROLL | ES_NUMBER | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_KEYFRAME,133,38,26,12,ES_AUTOHSCROLL | ES_NUMBER | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    COMBOBOX        IDC_COMBO_VIDEOSIZE,133,56,70,67,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "默认设置",IDC_DEFAULT_BTN,216,90,50,14
+    RTEXT           "每秒发送的视频帧数（1-25）：",IDC_STATIC,15,22,115,8
+    RTEXT           "关键帧间隔（1-500）：",IDC_STATIC,15,40,115,8
+    RTEXT           "我的视频大小：",IDC_STATIC,15,59,115,8
+    GROUPBOX        "",IDC_STATIC,7,7,259,74
+    LTEXT           "提示：\n    在网络状况较差的情况下，应减小帧率或关键帧发送间隔以获得较好的视频质量。取值范围帧率1--25，关键帧间隔1-500。",
+                    IDC_STATIC,7,108,259,31
+END
+
+IDD_VIDEOQUALITY_DLG DIALOGEX 0, 0, 280, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "设置视频质量"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FRAMERATE,95,62,26,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_KEYFRAME,95,101,26,12,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "确定",IDOK,169,138,50,14
+    LTEXT           "提示：\n    在网络状况较差的情况下，应减小帧率或关键帧发送间隔以获得较好的视频质量。取值范围帧率1--25，关键帧间隔1-500。",
+                    IDC_STATIC,16,16,220,31,NOT WS_VISIBLE
+    RTEXT           "当前发送的帧率：",IDC_STATIC,19,65,70,8
+    LTEXT           "帧/每秒",IDC_STATIC,125,65,28,8
+    RTEXT           "关键帧发送间隔：",IDC_STATIC,24,103,65,8
+    LTEXT           "帧",IDC_STATIC,125,103,9,8
+    LTEXT           "",IDC_ERRORNUMBER,93,83,59,8
+    PUSHBUTTON      "取消",IDCANCEL,223,138,50,14
+    PUSHBUTTON      "应用",IDC_APPLY,116,138,50,14
+END
+
+IDD_SETMYPICTURE_DLG DIALOGEX 0, 0, 300, 199
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "个人图片设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,192,178,50,14
+    PUSHBUTTON      "浏览...",IDC_SELECTFILE_BTN,11,37,34,12,BS_FLAT
+    LTEXT           "预览：",IDC_STATIC,20,60,25,8
+    LTEXT           "设置你的个性化图片，会议中其他人将看到。\n目前支持大小不超过45KB的BMP，JPG，GIF格式的图形文件。\n建议用176*144大小的JPG或GIf文件。",
+                    IDC_STATIC,10,7,239,26,NOT WS_VISIBLE
+    CONTROL         "显示我的图片,不发送我的视频",IDC_DISPLAYMYPICTURE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,50,153,156,10
+    GROUPBOX        "",IDC_PREVIEW,50,54,119,85,BS_FLAT
+    PUSHBUTTON      "取消",IDCANCEL,248,178,50,14
+    PUSHBUTTON      "取消设置",IDC_RESET,13,178,50,14
+    LTEXT           "",IDC_PICTUREPATH,50,37,205,12,0,WS_EX_STATICEDGE
+END
+
+IDD_OPTION_DLG DIALOGEX 0, 0, 274, 226
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "选项"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "应用",IDC_APPLY_BTN,217,205,50,14
+    PUSHBUTTON      "取消",IDC_CLOSE_BTN,163,205,50,14
+    PUSHBUTTON      "确定",IDOK,110,205,50,14
+END
+
+IDD_SERVER_DLG DIALOGEX 0, 0, 261, 146
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_FIXEDSYS | WS_POPUP | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_SERVERNAME,103,42,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SERVERIP,103,70,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SERVERPORT,103,98,40,12,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "确定",IDOK,149,125,50,14
+    PUSHBUTTON      "取消",IDCANCEL,204,125,50,14
+    RTEXT           "服务器名称：",IDC_STATIC,33,42,49,8
+    RTEXT           "地址：",IDC_STATIC,57,70,25,8
+    RTEXT           "端口：",IDC_STATIC,57,98,25,8
+END
+
+IDD_GETNAMEPASSWORD_DLG DIALOGEX 0, 0, 245, 135
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "登录"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_USERNAME,88,43,84,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PASSWORD,88,65,84,12,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "记住我的用户名和密码",IDC_REMEMBERME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,88,85,96,10
+    DEFPUSHBUTTON   "确定",IDOK,94,114,50,14
+    PUSHBUTTON      "取消",IDCANCEL,188,114,50,14
+    RTEXT           "用户名：",IDC_STATIC,37,43,33,8
+    RTEXT           "密    码：",IDC_STATIC,37,65,33,8
+END
+
+IDD_ADVERTIZEBG_DLG DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         376,IDC_STATIC,"Static",SS_BITMAP,7,36,160,37
+END
+
+IDD_ADVERTIZE_DLG DIALOGEX 0, 0, 186, 60
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_STATUSBAR_DLG DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "停留时间:",IDC_STATIC,19,64,36,8
+    LTEXT           "当前人数:",IDC_STATIC1,98,63,36,8
+    LTEXT           "00::00::00",IDC_STAYTIME,65,63,36,8
+    LTEXT           "",IDC_CONFUSERNUM,149,63,8,8
+END
+
+IDD_USERINFO_DLG DIALOGEX 0, 0, 282, 185
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "查看/修改个人信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_LASTNAME,138,54,110,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_FIRSTNAME,138,72,110,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EMAIL,138,90,110,12,ES_AUTOHSCROLL | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    CONTROL         "修改密码",IDC_CHANGEPASSWORD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,49,110,48,10
+    EDITTEXT        IDC_PASSWORD,138,108,110,12,ES_PASSWORD | ES_AUTOHSCROLL | 
+                    NOT WS_VISIBLE | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_NEWPASSWORD,138,126,110,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_CONFIRMNEWPASSWORD,138,144,110,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | NOT WS_VISIBLE | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "确定",IDOK,117,164,50,14
+    PUSHBUTTON      "取消",IDCANCEL,171,164,50,14
+    PUSHBUTTON      "应用",IDC_APPLY_BTN,225,164,50,14
+    LTEXT           "姓      氏：",IDC_STATIC,49,56,37,8
+    LTEXT           "名      字：",IDC_STATIC,49,74,37,8
+    LTEXT           "电子邮件：",IDC_STATIC,49,92,41,8
+    LTEXT           "旧密码：",IDC_STATIC_PWD,101,110,33,8,NOT WS_VISIBLE
+    LTEXT           "新密码：",IDC_STATIC_NEWPWD,101,128,33,8,NOT WS_VISIBLE
+    LTEXT           "确认新密码：",IDC_STATIC_CONFIRMPWD,85,146,49,8,NOT 
+                    WS_VISIBLE
+    LTEXT           "登 录 名：",IDC_STATIC,49,38,37,8
+    LTEXT           "静态",IDC_USERNAME,138,36,110,12,0,WS_EX_STATICEDGE
+END
+
+IDD_USERREGISTER_DLG DIALOGEX 0, 0, 314, 234
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "注册新用户"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_USERNAME,72,36,110,12,ES_AUTOHSCROLL | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_PASSWORD,72,60,72,12,ES_PASSWORD | ES_AUTOHSCROLL | 
+                    NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_CONFIRMPASSWORD,72,84,72,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_LASTNAME,72,108,72,12,ES_AUTOHSCROLL | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_FIRSTNAME,72,132,72,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EMAIL,72,156,130,12,ES_AUTOHSCROLL | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+    CONTROL         "注册成功后立即用此用户登录",IDC_LOGIN_AFTER_REGISTER,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,71,184,120,10
+    DEFPUSHBUTTON   "确定",IDOK,170,213,50,14
+    PUSHBUTTON      "取消",IDCANCEL,257,213,50,14
+    RTEXT           "姓        氏：",IDC_STATIC,13,110,41,8
+    RTEXT           "名        字：",IDC_STATIC,13,134,41,8
+    RTEXT           "电子邮件：",IDC_STATIC,13,158,41,8
+    RTEXT           "密        码：",IDC_STATIC,13,62,41,8
+    RTEXT           "确认密码：",IDC_STATIC,13,86,41,8
+    RTEXT           "用  户  名：",IDC_STATIC,13,38,41,8
+    LTEXT           "必须由小写英文字母或者阿拉伯数字组成， 4-16位长度。",
+                    IDC_STATIC,190,35,114,21
+    LTEXT           "6-16位长度。为了保证您的密码安全，请妥善保管好您的密码。",
+                    IDC_STATIC,150,60,157,17
+    LTEXT           "再输入一遍密码",IDC_STATIC,150,87,57,8
+END
+
+IDD_WHITEBOARD DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_WHITEBOARDDLG DIALOGEX 0, 0, 186, 95
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "<<",IDC_PREVBOARD_BTN,53,74,50,14
+    PUSHBUTTON      ">>",IDC_NEXTBOARD_BTN,129,74,50,14
+    CTEXT           "1",IDC_CURRENTBOARD,109,79,17,9
+END
+
+IDD_MSNACCOUNT_DLG DIALOGEX 0, 0, 243, 127
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "设置帐号密码"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_MSNACCOUNT,88,47,110,12,ES_AUTOHSCROLL | NOT 
+                    WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_MSNPASSWORD,88,76,110,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "确定",IDOK,25,106,50,14
+    PUSHBUTTON      "取消",IDCANCEL,99,106,50,14
+    LTEXT           "MSN帐号：",IDC_STATIC,47,49,39,8
+    LTEXT           "密码：",IDC_STATIC,61,78,25,8
+END
+
+IDD_MSN_DELCONTACT_DLG DIALOGEX 0, 0, 221, 146
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "删除联系人"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,49,125,50,14
+    PUSHBUTTON      "取消",IDCANCEL,127,125,50,14
+    CONTROL         "从我的联系人列表中删除，该联系人仍能看到我的状态和给我发信息。",
+                    IDC_MSN_HIDECONTACT,"Button",BS_AUTORADIOBUTTON | 
+                    BS_MULTILINE,7,44,207,24
+    CONTROL         "从我的联系人列表中删除，并阻止此人看到我的状态和给我发信息。",
+                    IDC_MSN_DELCONTACT,"Button",BS_AUTORADIOBUTTON | 
+                    BS_MULTILINE,7,73,207,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "FLVCC Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "FLVCC"
+            VALUE "LegalCopyright", "版权所有 (C) 2004"
+            VALUE "OriginalFilename", "FLVCC.EXE"
+            VALUE "ProductName", "FLVCC 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SYSINFO_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 157
+    END
+
+    IDD_CONTACT_DLG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_CONFERENCE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 131
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_CHAT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_ATTENDER_DLG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 148
+    END
+
+    IDD_LOGIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 208
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 225
+    END
+
+    IDD_CONF_INFO_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_OPTION_GENERAL_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 264
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_DIR_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_CONTACT_LIST_DLG, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 214
+        HORZGUIDE, 120
+    END
+
+    IDD_CONTACT_INFO_DLG, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 133
+    END
+
+    IDD_ADDCONTACTGROUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_LEAVEWORD_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 319
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 212
+    END
+
+    IDD_ADD_CONTACT_STEP1_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 252
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_ADD_CONTACT_STEP2_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_STATUS_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_SHOWXML_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_ADD_CONTACT_STEP3_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_ROOM_VIEW, DIALOG
+    BEGIN
+        RIGHTMARGIN, 226
+    END
+
+    IDD_PROPPAGE_INTRO, DIALOG
+    BEGIN
+        RIGHTMARGIN, 299
+    END
+
+    IDD_ATTENDERLIST_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_SORTATTENDERS_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 318
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 216
+    END
+
+    IDD_FILETRANSFERMGRDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 315
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 222
+    END
+
+    IDD_VIDEO_BG_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_CONTROL_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 359
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 259
+    END
+
+    IDD_CONTROLSPEAK_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 189
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 207
+    END
+
+    IDD_YUNTAI_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+
+    IDD_OPTION_VIDEOCONFIG_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 266
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+
+    IDD_VIDEOQUALITY_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_SETMYPICTURE_DLG, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_OPTION_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 267
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_SERVER_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 254
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+
+    IDD_GETNAMEPASSWORD_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_ADVERTIZEBG_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_ADVERTIZE_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    IDD_STATUSBAR_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_USERINFO_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_USERREGISTER_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 227
+    END
+
+    IDD_WHITEBOARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_WHITEBOARDDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_MSNACCOUNT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 236
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_MSN_DELCONTACT_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 214
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 139
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CONTACT             BITMAP                  "res\\contact.bmp"
+IDB_CONFERENCE          BITMAP                  "res\\conference.bmp"
+IDB_SYSMSG              BITMAP                  "res\\sysmsg.bmp"
+IDB_TOP                 BITMAP                  "res\\top.bmp"
+IDB_CONF_TREE           BITMAP                  "res\\conf.bmp"
+IDB_SYSMSG_TREE         BITMAP                  "res\\sysmsg1.bmp"
+IDB_CONTACT_TREE        BITMAP                  "res\\contacttree.bmp"
+IDB_MSG                 BITMAP                  "res\\msgalert.bmp"
+IDB_ABOUT               BITMAP                  "res\\aboutsoftware.bmp"
+IDB_CONTACTLIST         BITMAP                  "res\\contactlist.bmp"
+IDB_CONTACTLISTBK       BITMAP                  "res\\contactlistbk.bmp"
+IDB_ADDCONTACT          BITMAP                  "res\\addcontact.bmp"
+IDB_CORNER              BITMAP                  "res\\corner.bmp"
+IDB_LOGINBK             BITMAP                  "res\\loginbk.bmp"
+IDB_LOGINLOGO           BITMAP                  "res\\loginlogo.bmp"
+IDB_LOGIN1              BITMAP                  "res\\login1.bmp"
+IDB_LOGIN2              BITMAP                  "res\\login2.bmp"
+IDB_FONT                BITMAP                  "res\\font.bmp"
+IDB_SENDMSG             BITMAP                  "res\\sendmsg.bmp"
+IDB_SHOWATTENDERLIST    BITMAP                  "res\\showattenderlist.bmp"
+IDB_HIDEATTENDERLIST    BITMAP                  "res\\hideattenderlist.bmp"
+IDB_SCROLLDOWN          BITMAP                  "res\\scrolldown.bmp"
+IDB_SCROLLUP            BITMAP                  "res\\scrollup.bmp"
+IDB_ATTENDERDLG         BITMAP                  "res\\attenderdlg.bmp"
+IDB_APPLYDESKTOP        BITMAP                  "res\\applydesktop.bmp"
+IDB_SENDFILE            BITMAP                  "res\\sendfile.bmp"
+IDB_SENDVIDEO           BITMAP                  "res\\sendvideo.bmp"
+IDB_INVITE              BITMAP                  "res\\invite.bmp"
+IDB_HEADPHONE           BITMAP                  "res\\headphone.bmp"
+IDB_MIC                 BITMAP                  "res\\mic.bmp"
+IDB_INTRODUCTION        BITMAP                  "res\\introduction.bmp"
+IDB_HEADPHONEMUTE       BITMAP                  "res\\headphonemute.bmp"
+IDB_MICMUTE             BITMAP                  "res\\micmute.bmp"
+IDB_LISTEN              BITMAP                  "res\\listen.bmp"
+IDB_NOTLISTEN           BITMAP                  "res\\notlisten.bmp"
+IDB_SENDVIDEO2          BITMAP                  "res\\sendvideo2.bmp"
+IDB_INVITE2             BITMAP                  "res\\invite2.bmp"
+IDB_SENDFILE2           BITMAP                  "res\\sendfile2.bmp"
+IDB_APPLYDESKTOP2       BITMAP                  "res\\applydesktop2.bmp"
+IDB_SENDVIDEO3          BITMAP                  "res\\sendvideo3.bmp"
+IDB_INVITE3             BITMAP                  "res\\invite3.bmp"
+IDB_SENDFILE3           BITMAP                  "res\\sendfile3.bmp"
+IDB_APPLYDESKTOP3       BITMAP                  "res\\applydesktop3.bmp"
+IDB_NOTSENDVIDEO3       BITMAP                  "res\\notsendvideo3.bmp"
+IDB_NOTSENDVIDEO2       BITMAP                  "res\\notsendvideo2.bmp"
+IDB_NOTSENDVIDEO        BITMAP                  "res\\notsendvideo.bmp"
+IDB_RECVFILETAB         BITMAP                  "res\\recvfiletab.bmp"
+IDB_SENDFILETAB         BITMAP                  "res\\sendfiletab.bmp"
+IDB_SENDFILETABTOP      BITMAP                  "res\\sendfiletabtop.bmp"
+IDB_VIDEOBG             BITMAP                  "res\\videobg.bmp"
+IDB_CONTROLSPEAK        BITMAP                  "res\\controlspeak.bmp"
+IDB_LOGIN3              BITMAP                  "res\\login3.bmp"
+IDB_ADDCONTACT2         BITMAP                  "res\\addcontact2.bmp"
+IDB_ADDCONTACT3         BITMAP                  "res\\addcontact3.bmp"
+IDB_STATUSBK            BITMAP                  "res\\statusbk.bmp"
+IDB_SCROLLBAR           BITMAP                  "res\\scrollbar.bmp"
+IDB_SHOWATTENDERLIST2   BITMAP                  "res\\showattenderlist2.bmp"
+IDB_HIDEATTENDERLIST2   BITMAP                  "res\\hideattenderlist2.bmp"
+IDB_FONT2               BITMAP                  "res\\font2.bmp"
+IDB_FONT3               BITMAP                  "res\\font3.bmp"
+IDB_ROOMTOPBG           BITMAP                  "res\\roomtopbg.bmp"
+IDB_INVITE4             BITMAP                  "res\\invite4.bmp"
+IDB_SENDFILE4           BITMAP                  "res\\sendfile4.bmp"
+IDB_APPLYDESKTOP4       BITMAP                  "res\\applydesktop4.bmp"
+IDB_SENDVIDEO4          BITMAP                  "res\\sendvideo4.bmp"
+IDB_SCROLLUP2           BITMAP                  "res\\scrollup2.bmp"
+IDB_SCROLLDOWN2         BITMAP                  "res\\scrolldown2.bmp"
+IDB_TASKBARNOTIFIER     BITMAP                  "res\\taskbarnotifier.bmp"
+IDB_BUTTON              BITMAP                  "res\\button.bmp"
+IDB_BUTTONDISABLE       BITMAP                  "res\\buttondisable.bmp"
+IDB_CHATDLGBG           BITMAP                  "res\\chatdlgbg.bmp"
+IDB_GENERALOPTION       BITMAP                  "res\\generaloptiontab.bmp"
+IDB_VIDEOOPTION         BITMAP                  "res\\videooptiontab.bmp"
+IDB_ADBG                BITMAP                  "res\\adbg.bmp"
+IDR_WB_TOOLBAR          BITMAP                  "res\\wbtoolbar.bmp"
+IDR_COLORTOOLBAR        BITMAP                  "res\\colortoolbar.bmp"
+IDB_WHITEBOARD          BITMAP                  "res\\whiteboard.bmp"
+IDB_WHITEBOARD2         BITMAP                  "res\\whiteboard2.bmp"
+IDB_WHITEBOARD3         BITMAP                  "res\\whiteboard3.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_LINK                CURSOR                  "res\\linkhand.cur"
+IDC_RUBBER              CURSOR                  "res\\rubber.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// WAVE
+//
+
+IDR_RINGIN              WAVE                    "res\\ringin.wav"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// GIF
+//
+
+IDR_GIF1                GIF                     "res\\gif1.bin"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_SHOWXMLDLG     HTML                    "res\\ShowXMLDlg.htm"
+IDR_HTML_ADVERTIZEDLG   HTML                    "res\\AdvertizeDlg.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_WB_TOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_SAVE_WHITEBOARD
+    SEPARATOR
+    BUTTON      ID_RUBBER
+    BUTTON      IDT_SELECT
+    BUTTON      IDT_LINE
+    BUTTON      IDT_RECTANGLE
+    BUTTON      IDT_ELLIPSE
+    BUTTON      IDT_CIRCLE
+    BUTTON      IDT_POLY
+    BUTTON      IDT_CURVE
+    SEPARATOR
+    BUTTON      ID_WIDTH_THIN
+    BUTTON      ID_WIDTH_NORMAL
+    BUTTON      ID_WIDTH_WIDE
+    SEPARATOR
+    BUTTON      ID_FILL_FALSE
+    BUTTON      ID_FILL_TRUE
+    SEPARATOR
+    BUTTON      IDT_TEXT
+    BUTTON      ID_SMALL_TEXT
+    BUTTON      ID_NORMAL_TEXT
+    BUTTON      ID_BIG_TEXT
+END
+
+IDR_COLORTOOLBAR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_COLOR_BLACK
+    BUTTON      ID_COLOR_WHITE
+    BUTTON      ID_COLOR_GRAY
+    BUTTON      ID_COLOR_RED
+    BUTTON      ID_COLOR_GREEN
+    BUTTON      ID_COLOR_BLUE
+    BUTTON      ID_COLOR_PINK
+    BUTTON      ID_COLOR_YELLOW
+    BUTTON      ID_COLOR_CYAN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "新建"
+    ID_FILE_OPEN            "打开"
+    ID_FILE_SAVE            "保存"
+    ID_FILE_PRINT           "打印"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "把窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务表"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "改变窗口大小"
+    AFX_IDS_SCMOVE          "改变窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "把窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到先前的文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动的窗口并提示保存所有文档"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "删除被选对象\n删除"
+    ID_EDIT_CLEAR_ALL       "全部删除\n全部删除"
+    ID_EDIT_COPY            "复制被选对象并将其置于剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切被选对象并将其置于剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的正文\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一步操作\n重复"
+    ID_EDIT_REPLACE         "用不同的正文替换指定的正文\n替换"
+    ID_EDIT_SELECT_ALL      "选择整个文档\n选择全部"
+    ID_EDIT_UNDO            "撤消最后一步操作\n撤消"
+    ID_EDIT_REDO            "重新执行先前已撤消的操作\n重新执行"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "将活动的窗口分隔成窗格\n分隔"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回前一个窗格\n前一窗格"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "显示程序信息，版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "扩展名"
+    ID_INDICATOR_CAPS       "大写"
+    ID_INDICATOR_NUM        "数字"
+    ID_INDICATOR_SCRL       "滚动"
+    ID_INDICATOR_OVR        "改写"
+    ID_INDICATOR_REC        "记录"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "中小在线视频会议系统"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "中小在线视频会议系统"
+    IDS_QUIT                "查找尚未完成，\n确定退出吗？"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_CONFUSERLIST    "显示或隐藏参会人员列表"
+    ID_ADD_CONTACT          "搜索并添加联系人\n添加联系人"
+    ID_DEL_CONTACT          "删除联系人"
+    ID_PROPERTY_CONTACT     "查看联系人信息"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_STOP_RECEIVE_DESKTOP_CONTROL "停止接收控制"
+    ID_SENDFILE             "发送文件到指定的人员"
+    ID_OPEN_RECEIVEDFILE    "打开接收文件的文件夹"
+    ID_CONFERENCE_INFO      "查看会议信息"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CREATE_INSTANTCONF   "创建即时会议"
+    ID_ABOUT                "关于"
+    ID_EXIT                 "退出会议"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INVITE_CONFERENCE    "邀请我的联系人加入会议"
+    ID_SEND_FILE            "发送文件到参会人员"
+    ID_OPEN_RECEIVED        "打开接收文件夹"
+    ID_MARK                 "启用标注"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_KICK_USER            "从会议室驱逐人员"
+    ID_SORTATTENDERS        "调整参会人员顺序"
+    ID_LOCALVIDEO           "显示或隐藏本地视频"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SHOW_FILETRANSFERMGR "打开文件传输管理器"
+    ID_VIEW_NORMAL          "默认模式"
+    ID_VIEW_FOUR_CIF        "CIF模式"
+    ID_VIEW_ONE_VGA         "VGA模式"
+    ID_VIEW_SIXTEEN_QCIF    "QCIF模式"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APPLY_VIDEO          "观看参会人员视频"
+    ID_STOP_RECEIVE_VIDEO   "停止观看参会人员视频"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_STOP_LISTEN          "停止收听参会人员声音"
+    ID_START_LISTEN         "收听参会人员声音"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_LOGIN                "登录"
+    ID_LOGOUT               "注销"
+    ID_CLOSE                "隐藏本窗口"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_LOOK_LEAVEWORDS      "查看收到的联系人留言"
+    ID_LOOK_SYSMSG          "查看收到的系统消息"
+    ID_GOTO_CONF_WEBSERVER  "转到会议管理系统"
+    ID_HISTORY_CONF         "查看已结束的会议"
+    ID_AV_WIZARD            "视音频调节向导"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SEARCH_CONTACT       "添加联系人"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SEND_LEAVEWORD       "发送留言"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SEND_EMAIL           "发送电子邮件"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CREATE_CONTACT_GROUP "创建联系人组"
+    ID_DEL_CONTACT_GROUP    "删除联系人组"
+    ID_RENAME_CONTACT_GROUP "重命名联系人组"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_JOIN_CONFERENCE      "加入会议"
+    ID_LOOK_CONFERENCE      "查看会议信息"
+    ID_ALWAYS_TOP           "窗口总在最前"
+    ID_OPTION               "选项"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_QUIT_CONFERENCE      "退出会议"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_HELP_CONTENT         "帮助"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_START_DESKTOP_SERVER "邀请观看我的桌面"
+    ID_STOP_DESKTOP_SERVER  "停止共享我的桌面"
+    ID_APPLY_DESKTOP_SHARE  "申请观看桌面"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_STOP_DESKTOP_SHARE   "停止观看桌面"
+    ID_APPLY_DESKTOP_CONTROL "申请控制对方计算机"
+    ID_STOP_DESKTOP_CONTROL "停止控制"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TWO             "对话模式"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEW_WHITEBOARD       "新建"
+    ID_SAVE_WHITEBOARD      "保存到文件"
+    IDT_DELETE              "删除"
+END
+
+STRINGTABLE 
+BEGIN
+    IDT_LINE                "直线"
+    IDT_RECTANGLE           "矩形"
+    IDT_ELLIPSE             "椭圆"
+    IDT_CIRCLE              "圆"
+    IDT_POLY                "多边形"
+    IDT_CURVE               "曲线"
+    IDT_TEXT                "文字"
+    ID_WIDTH_THIN           "细线"
+    ID_WIDTH_NORMAL         "中线"
+    ID_WIDTH_WIDE           "粗线"
+    ID_FILL_FALSE           "空心"
+    ID_FILL_TRUE            "实心"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_SMALL_TEXT           "小字"
+    ID_NORMAL_TEXT          "中字"
+    ID_BIG_TEXT             "大字"
+    ID_RUBBER               "橡皮擦"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\FLVCC.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

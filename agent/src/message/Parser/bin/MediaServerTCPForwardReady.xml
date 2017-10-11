@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<!--
+isAgreeInvite 用来标识增加转发的原因，是邀请同意还是申请同意
+-->
+<lyvcmessage>
+    <name>MediaServerTCPForwardReady</name>
+    <desc>媒体服务器转发TCP数据的路由已经准备好</desc>
+    <boolean>isAgreeInvite</boolean>
+	<i8>fromUserId</i8>
+	<i8>toUserId</i8>
+</lyvcmessage>
+

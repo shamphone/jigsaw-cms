@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>UserQuitConference</name>
+    <desc>服务器发送给客户端，通知用户某个用户退出了会议</desc>
+	<i8>userId</i8>
+	<i8>conferenceId</i8>
+</lyvcmessage>

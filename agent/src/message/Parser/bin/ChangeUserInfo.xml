@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>ChangeUserInfo</name>
+    <desc>客户端发送给服务器，修改用户自己的信息</desc>
+    <i8>userId</i8>
+    <string>userName</string>
+    <string>password</string>
+    <string>firstName</string>
+    <string>lastName</string>
+    <string>email</string>
+</lyvcmessage>

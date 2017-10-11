@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>SearchContactResult</name>
+    <desc>服务器发送给客户端，找到的将要添加的联系人的信息</desc>
+    <i4>status</i4>
+  	<i8>contactId</i8>
+	  <string>email</string>
+	  <string>firstName</string>
+	  <string>lastName</string>
+</lyvcmessage>

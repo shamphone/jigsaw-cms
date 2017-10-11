@@ -1,0 +1,340 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <windows.h>
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETAVATAR DIALOGEX 0, 0, 222, 131
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_AVATAR,"Static",SS_BITMAP | SS_CENTERIMAGE | SS_SUNKEN,9,11,96,96
+    PUSHBUTTON      "Set",IDC_SETAVATAR,9,112,45,13
+    PUSHBUTTON      "Delete",IDC_DELETEAVATAR,61,112,41,13
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SETAVATAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_OPT_MSN DIALOGEX 0, 0, 304, 207
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "MSN",IDC_STMSNGROUP,4,0,298,84,WS_GROUP
+    RTEXT           "Full e-mail:",IDC_STATIC,16,20,52,8
+    EDITTEXT        IDC_HANDLE,72,18,100,12,ES_AUTOHSCROLL
+    RTEXT           "Password:",IDC_STATIC,16,36,52,8
+    EDITTEXT        IDC_PASSWORD,72,34,100,12,ES_PASSWORD | ES_AUTOHSCROLL
+    RTEXT           "Nickname:",IDC_STATIC,16,52,52,8
+    EDITTEXT        IDC_HANDLE2,72,50,100,12,ES_AUTOHSCROLL
+    CONTROL         "Create a new MSN messenger account using the MSN website",IDC_NEWMSNACCOUNTLINK,
+                    "Hyperlink",WS_TABSTOP,21,68,208,8
+    GROUPBOX        "Expert",IDC_STATIC,4,84,298,119,WS_GROUP
+    CONTROL         "Disable main menu",IDC_DISABLE_MAIN_MENU,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,96,288,10
+    CONTROL         "Send message font color/size info inside messages",IDC_SENDFONTINFO,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,107,288,10
+    CONTROL         "Disable all contacts not included into my contact list",IDC_DISABLE_ANOTHER_CONTACTS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,118,288,10
+    CONTROL         "Never update your nickname from server",IDC_USE_OWN_NICKNAME,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,129,288,10
+    CONTROL         "Treat Away status as 'Be Right Back'",IDC_AWAY_AS_BRB,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,140,288,10
+    CONTROL         "Manage server groups",IDC_MANAGEGROUPS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,151,288,10
+    CONTROL         "Run the following application when new Hotmail arrives",IDC_RUN_APP_ON_HOTMAIL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,173,288,10
+    EDITTEXT        IDC_MAILER_APP,23,184,161,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_ENTER_MAILER_APP,189,184,15,12
+    CONTROL         "Enable avatars",IDC_ENABLE_AVATARS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,162,288,10
+END
+
+IDD_OPT_MSN_CONN DIALOGEX 0, 0, 304, 175
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Connection settings",IDC_STATIC,4,0,298,120
+    LTEXT           "Login server:",IDC_STATIC,16,18,44,8
+    EDITTEXT        IDC_LOGINSERVER,68,16,168,12,ES_AUTOHSCROLL
+    LTEXT           "Port:",IDC_STATIC,16,32,48,8
+    EDITTEXT        IDC_MSNPORT,68,30,44,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Use HTTP gateway mode (incompatible with MSN Gateway plugin)",IDC_USEGATEWAY,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,46,264,8
+    CONTROL         "Use IE proxy settings",IDC_USEIEPROXY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,58,264,8
+    CONTROL         "Keep connection alive (send a ping packet every minute)",IDC_KEEPALIVE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,70,264,8
+    CONTROL         "Notify me when a message delivery has failed",IDC_SLOWSEND,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,82,263,8
+    CONTROL         "Use MSN Messenger 7 protocol",IDC_USEMSNP11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,94,262,8
+    CONTROL         "Use OpenSSL encryption (requires LIBSSL32.DLL)",IDC_USEOPENSSL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,106,263,8
+    GROUPBOX        "Incoming file transfers",IDC_STATIC,4,124,298,48
+    CONTROL         "Automatically obtain host/port for incoming file transfers",IDC_AUTOGETHOST,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,136,264,10
+    LTEXT           "Your host (or router):",IDC_STATIC,12,152,72,8
+    EDITTEXT        IDC_YOURHOST,90,151,184,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Reset",IDC_RESETSERVER,244,16,34,12
+END
+
+IDD_LISTSMGR DIALOGEX 0, 0, 304, 228
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Server List Manager",IDC_STATIC,4,0,298,224
+    CONTROL         "",IDC_LIST,"CListControl",WS_TABSTOP | 0x190,9,12,287,180,WS_EX_CLIENTEDGE
+    ICON            IDI_LIST_FL,IDC_ICON_FL,10,196,21,20,SS_REALSIZEIMAGE
+    LTEXT           "Contact is included into your server list",IDC_STATIC,28,196,144,8
+    ICON            IDI_LIST_AL,IDC_ICON_AL,187,196,21,20,SS_REALSIZEIMAGE
+    LTEXT           "Somebody included you in his/her server list",IDC_STATIC,28,208,144,8
+    ICON            IDI_LIST_BL,IDC_ICON_BL,187,208,21,20,SS_REALSIZEIMAGE
+    LTEXT           "Allowed (active) contact",IDC_STATIC,204,196,82,8
+    ICON            IDI_LIST_RL,IDC_ICON_RL,10,208,21,20,SS_REALSIZEIMAGE
+    LTEXT           "Blocked contact",IDC_STATIC,204,208,82,8
+END
+
+IDD_HOTMAIL_OPT_POPUP DIALOGEX 0, 0, 238, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Colours",IDC_STATIC,4,0,232,59
+    CONTROL         "",IDC_BGCOLOUR,"ColourPicker",WS_TABSTOP,12,12,39,12
+    LTEXT           "Background colour",IDC_STATIC,56,14,176,8,SS_CENTERIMAGE
+    CONTROL         "",IDC_TEXTCOLOUR,"ColourPicker",WS_TABSTOP,12,28,39,12
+    LTEXT           "Text colour",IDC_STATIC,56,30,176,8,SS_CENTERIMAGE
+    CONTROL         "&Use Windows colours",IDC_USEWINCOLORS,"Button",BS_AUTOCHECKBOX | BS_NOTIFY | BS_FLAT | WS_TABSTOP,12,44,220,8
+    GROUPBOX        "Hotmail",IDC_STATIC,4,61,232,59
+    CONTROL         "Disable receiving Hotmail notifications",IDC_DISABLEHOTMAIL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,72,220,10
+    CONTROL         "Ignore new messages in 'Junk Mail' folder only (at startup)",IDC_DISABLEHOTJUNK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,84,202,10
+    LTEXT           "Timeout (*)",IDC_STATIC,12,102,52,8
+    EDITTEXT        IDC_POPUP_TIMEOUT,72,100,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "sec.",IDC_STATIC,100,102,30,8
+    DEFPUSHBUTTON   "Previe&w",IDC_PREVIEW,176,100,52,12
+    GROUPBOX        "Other",IDC_STATIC,3,122,232,81
+    CONTROL         "Display popups when user is typing",IDC_NOTIFY_USERTYPE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,135,216,10
+    CONTROL         "Display errors using popups",IDC_ERRORS_USING_POPUPS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,147,216,10
+    CONTROL         "Enable 'First message delivered' popup",IDC_NOTIFY_FIRSTMSG,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,159,216,10
+    LTEXT           "Timeout (*)",IDC_STATIC,10,186,60,8
+    EDITTEXT        IDC_POPUP_TIMEOUT2,70,183,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "sec.",IDC_STATIC,98,186,30,8
+    DEFPUSHBUTTON   "Previe&w",IDC_PREVIEW2,174,183,52,12
+    LTEXT           "(*) Timeouts require Popup v. 1.0.1.9 or later",IDC_STATIC,4,207,232,8
+    CONTROL         "Enable 'User left channel' popup",IDC_NOTIFY_ENDSESSION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,172,218,8
+END
+
+IDD_SETNICKNAME DIALOGEX 0, 0, 187, 42
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set Nickname"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_NICKNAME,5,5,177,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,36,23,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,102,23,50,14
+END
+
+IDD_USEROPTS DIALOGEX 0, 0, 224, 132
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "Avatar",IDC_STATIC,8,8,100,10
+    CONTROL         "",IDC_MSN_PICT,"Static",SS_BITMAP,8,18,64,64
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,8,18,64,60
+    LTEXT           "Running on a mobile device",IDC_STATIC,8,82,100,8
+    LTEXT           "",IDC_MOBILE,108,82,10,8
+    LTEXT           "Running on a MSN mobile device",IDC_STATIC,8,92,100,8
+    LTEXT           "",IDC_MSN_MOBILE,108,92,10,8
+    LTEXT           "Using MSN Webmessenger",IDC_STATIC,8,102,100,8
+    LTEXT           "",IDC_WEBMESSENGER,108,102,10,8
+END
+
+IDD_GET_PNG2DIB DIALOGEX 0, 0, 276, 101
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "png2lib download"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "To enable the avatar support, you must obtain the valid copy of the png2dib.dll. Choose one of the following:",IDC_STATIC,8,8,256,16
+    LTEXT           "[Install] - install a png2lib plugin using Miranda Installer",IDC_STATIC,16,32,248,8
+    LTEXT           "[Download] - manually download a zipped DLL and then unzip it to the plugins folder",IDC_STATIC,16,44,248,16
+    LTEXT           "[Cancel] - disable the avatar support",IDC_STATIC,16,64,248,8
+    PUSHBUTTON      "Install",IDC_BTN_INSTALL,37,80,68,16
+    PUSHBUTTON      "Download",IDC_BTN_DOWNLOAD,113,80,60,16
+    PUSHBUTTON      "Cancel",IDC_BTN_CANCEL,181,80,56,16
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_OPT_MSN, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 304
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_OPT_MSN_CONN, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 163
+    END
+
+    IDD_HOTMAIL_OPT_POPUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 236
+    END
+
+    IDD_SETNICKNAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 182
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_LISTSMGR, DIALOG
+    BEGIN
+        LEFTMARGIN, 4
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 240
+    END
+
+    IDD_OPT_MSN_EXTRAS, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 303
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 202
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MSN                 ICON                    "Icos\\msn.ico"
+IDI_LIST_FL             ICON                    "Icos\\list_fl.ico"
+IDI_LIST_AL             ICON                    "Icos\\list_al.ico"
+IDI_LIST_BL             ICON                    "Icos\\list_bl.ico"
+IDI_LIST_RL             ICON                    "Icos\\list_rl.ico"
+IDI_MSNBLOCK            ICON                    "Icos\\msnblock.ico"
+IDI_INBOX               ICON                    "Icos\\inbox.ico"
+IDI_INVITE              ICON                    "Icos\\invite.ico"
+IDI_PROFILE             ICON                    "Icos\\profile.ico"
+IDI_NETMEETING          ICON                    "Icos\\netmeeting.ico"
+IDI_SERVICES            ICON                    "Icos\\services.ico"
+IDI_AVATAR              ICON                    "Icos\\avatar.ico"
+IDI_NUDGE               ICON                    "Icos\\nudge.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include <windows.h>\r\n"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

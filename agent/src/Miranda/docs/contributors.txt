@@ -1,0 +1,36 @@
+Miranda IM is brought to you by:
+Martin Öberg
+George Hazan
+Robert Rainwater
+Lyon Lim
+Gennady Feldman
+Joe Kucera
+Adam Strzelecki
+Piotr Piastucki
+Alex Sanda
+Aaron Myles Landwehr
+
+Retired Members:
+Richard Hughes
+Emostar
+Esnow
+Figbug
+Tristan_VdV
+Crypt0gl
+Lowspirit
+Glutnix
+Santithorn Bunchua
+Sam K
+Jörgen Persson
+
+All the plugin developers, who are too multitudinous to name individually, but you can find out who they are when you download their work from the website.
+
+The translators, who have done great things for increasing Miranda IM's user base, and who will be infuriated that I won't let them change this text.
+
+The media developers, who made the icons, sounds and skins you see on the website. A special thanks to Filip Muskalski (a0x), Faith Healer, Quadrone, and Valkyre for their work on the application icons.  Be sure to check out their other creations as well.
+
+The bug reporters, who give Miranda IM its quality. Extra special mention to those who helped with the really difficult ones and went a long way out of their way to help me fix them.
+
+The web forum residents, who discover new and exciting ways to break Miranda IM daily and who are the gestalt that shapes how Miranda IM works.
+
+The users, who...er...use it.

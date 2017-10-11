@@ -1,0 +1,134 @@
+我们在编写ActiveX控件时，如果用在浏览器中，经常都会弹出现在运行的脚本不安全的提示， 如果给客户使用，将会带来极大不便。按照MSDN的介绍通常有两种一种是实现IObjectSafe接口，一种是通过修改注册表的方法。一般如果用ATL开发ActiveX控件，就用实现ObjectSafe接口的方法。如果用MFC开发，我觉得还是用修改注册表的方法比较方便。下面我们将第二种方法：
+
+要包括两个文件
+
+#include "comcat.h"
+#include "Objsafe.h"
+// 本控件的CLSID,注册表用 const GUID CDECL CLSID_SafeItem =
+		{ 0x7AE7497B, 0xCAD8, 0x4E66, { 0xA5,0x8B,0xDD,0xE9,0xBC,0xAF,0x6B,0x61 } };
+// 创建组件种类 HRESULT CreateComponentCategory(CATID catid, WCHAR* catDescription)
+{
+    ICatRegister* pcr = NULL ;
+    HRESULT hr = S_OK ;
+
+    hr = CoCreateInstance(CLSID_StdComponentCategoriesMgr, 
+            NULL, CLSCTX_INPROC_SERVER, IID_ICatRegister, (void**)&pcr);
+    if (FAILED(hr))
+        return hr;
+
+    // Make sure the HKCR\Component Categories\{..catid...}
+    // key is registered.
+    CATEGORYINFO catinfo;
+    catinfo.catid = catid;
+    catinfo.lcid = 0x0409 ; // english
+
+    // Make sure the provided description is not too long.
+    // Only copy the first 127 characters if it is.
+    int len = wcslen(catDescription);
+    if (len>127)
+        len = 127;
+    wcsncpy(catinfo.szDescription, catDescription, len);
+    // Make sure the description is null terminated.
+    catinfo.szDescription[len] = ''\0'';
+
+    hr = pcr->RegisterCategories(1, &catinfo);
+        pcr->Release();
+
+    return hr;
+}
+// 注册组件种类HRESULT RegisterCLSIDInCategory(REFCLSID clsid, CATID catid)
+{
+    // Register your component categories information.
+    ICatRegister* pcr = NULL ;
+    HRESULT hr = S_OK ;
+    hr = CoCreateInstance(CLSID_StdComponentCategoriesMgr, 
+                NULL, CLSCTX_INPROC_SERVER, IID_ICatRegister, (void**)&pcr);
+    if (SUCCEEDED(hr))
+    {
+       // Register this category as being "implemented" by the class.
+       CATID rgcatid[1] ;
+       rgcatid[0] = catid;
+       hr = pcr->RegisterClassImplCategories(clsid, 1, rgcatid);
+    }
+    if (pcr != NULL)
+        pcr->Release();
+    return hr;
+}
+// 卸载组件种类HRESULT UnRegisterCLSIDInCategory(REFCLSID clsid, CATID catid)
+{
+    ICatRegister* pcr = NULL ;
+    HRESULT hr = S_OK ;
+
+    hr = CoCreateInstance(CLSID_StdComponentCategoriesMgr, 
+            NULL, CLSCTX_INPROC_SERVER, IID_ICatRegister, (void**)&pcr);
+    if (SUCCEEDED(hr))
+    {
+       // Unregister this category as being "implemented" by the class.
+       CATID rgcatid[1] ;
+       rgcatid[0] = catid;
+       hr = pcr->UnRegisterClassImplCategories(clsid, 1, rgcatid);
+    }
+
+    if (pcr != NULL)
+        pcr->Release();
+
+    return hr;
+}
+// DllRegisterServer - Adds entries to the system registry STDAPI DllRegisterServer(void)
+{
+	HRESULT hr;
+
+	AFX_MANAGE_STATE(_afxModuleAddrThis);
+
+	if (!AfxOleRegisterTypeLib(AfxGetInstanceHandle(), _tlid))
+		return ResultFromScode(SELFREG_E_TYPELIB);
+
+	if (!COleObjectFactoryEx::UpdateRegistryAll(TRUE))
+		return ResultFromScode(SELFREG_E_CLASS);
+
+    // 标记控件初始化安全.
+    // 创建初始化安全组件种类
+    hr = CreateComponentCategory(CATID_SafeForInitializing, L"Controls safely initializable from persistent data!");
+    if (FAILED(hr))
+        return hr;
+    // 注册初始化安全
+    hr = RegisterCLSIDInCategory(CLSID_SafeItem, CATID_SafeForInitializing);
+    if (FAILED(hr))
+        return hr;
+
+    // 标记控件脚本安全
+    // 创建脚本安全组件种类 
+    hr = CreateComponentCategory(CATID_SafeForScripting, L"Controls safely scriptable!");
+    if (FAILED(hr))
+        return hr;
+    // 注册脚本安全组件种类
+    hr = RegisterCLSIDInCategory(CLSID_SafeItem, CATID_SafeForScripting);
+    if (FAILED(hr))
+        return hr;
+
+	return NOERROR;
+}
+// DllUnregisterServer - Removes entries from the system registrySTDAPI DllUnregisterServer(void)
+{
+	HRESULT hr;
+
+	AFX_MANAGE_STATE(_afxModuleAddrThis);
+
+	if (!AfxOleUnregisterTypeLib(_tlid, _wVerMajor, _wVerMinor))
+		return ResultFromScode(SELFREG_E_TYPELIB);
+
+	if (!COleObjectFactoryEx::UpdateRegistryAll(FALSE))
+		return ResultFromScode(SELFREG_E_CLASS);
+
+    // 删除控件初始化安全入口.
+    hr=UnRegisterCLSIDInCategory(CLSID_SafeItem, CATID_SafeForInitializing);
+    if (FAILED(hr))
+        return hr;
+    // 删除控件脚本安全入口
+    hr=UnRegisterCLSIDInCategory(CLSID_SafeItem, CATID_SafeForScripting);
+    if (FAILED(hr))
+        return hr;
+
+//////////////////////////
+	return NOERROR;
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>ConferenceModelTableItem</name>
+    <desc>会议模式表中的一项</desc>
+	<i8>modelId</i8>
+	<string>modelName</string>
+</lyvcmessage>

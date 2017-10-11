@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>GetConferenceList</name>
+    <desc>客户端发送给服务器，要求获得会议列表</desc>
+</lyvcmessage>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>ServerInfo</name>
+    <desc>服务器发送给客户端，客户端用到的服务器网址</desc>
+    <string>DeleteConferenceURL</string>
+    <string>CreateConferenceNoticeURL</string>
+    <string>CreateBulletinURL</string>
+    <string>EditConferenceURL</string>
+    <string>CommonContactMgrURL</string>
+    <string>ConferenceModeMgrURL</string>
+    <string>SystemRoleMgrURL</string>
+    <string>CreateFormalConferenceURL</string>
+    <string>SelfInfoMgrURL</string>
+    <string>UserRegisterURL</string>
+    <string>ClientDownloadURL</string>
+</lyvcmessage>

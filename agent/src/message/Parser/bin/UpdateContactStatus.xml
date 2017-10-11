@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>UpdateContactStatus</name>
+    <desc>服务器发送给客户端，修改其联系人的状态</desc>
+	<boolean>bIsCommon</boolean>
+	<i4>status</i4>
+    <i8>contactId</i8>
+</lyvcmessage>

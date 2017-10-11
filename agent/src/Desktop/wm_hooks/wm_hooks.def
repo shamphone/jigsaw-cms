@@ -1,0 +1,5 @@
+LIBRARY      "wm_hooks"
+
+;Shared section between DLL instance
+SECTIONS
+	.WM_Hooks_Shared read write shared

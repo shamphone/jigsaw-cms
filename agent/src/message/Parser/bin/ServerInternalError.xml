@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>ServerInternalError</name>
+    <desc>服务器发生内部错误</desc>
+    <string>description</string>
+</lyvcmessage>

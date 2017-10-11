@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>RequestSendFile</name>
+    <desc>请求开始发送文件数据</desc>
+    <i8>receiverId</i8>
+    <string>fullFileName</string>
+</lyvcmessage>

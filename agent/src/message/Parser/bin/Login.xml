@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>Login</name>
+    <desc>客户端发送给服务器，要求登录服务器</desc>
+	<i4>avCompressionCardChannelNumber</i4>
+    <string>username</string>
+    <string>password</string>
+    <string>serverName</string>
+</lyvcmessage>
+

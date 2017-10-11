@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>SetUserPicture</name>
+    <desc>会议室中用户显示的图片</desc> 
+	<i4>fileLength</i4>
+	<i8>receiverId</i8>
+	<string>extendFileName</string>
+	<string>fileData</string>
+</lyvcmessage>

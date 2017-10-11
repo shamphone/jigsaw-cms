@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>DeleteConferenceUser</name>
+    <desc>客户端发送给服务器，从会议中删除一个人员</desc>
+	<i8>userId</i8>
+</lyvcmessage>

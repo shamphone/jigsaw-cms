@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>AgreeReceiveFile</name>
+    <desc>同意接受对方发送过来的文件</desc>
+    <i8>receiverId</i8>
+    <string>fullFileName</string>
+</lyvcmessage>

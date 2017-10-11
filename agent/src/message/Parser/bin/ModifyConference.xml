@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>ModifyConference</name>
+    <desc>服务器发送给客户端，修改某个会议的信息</desc>
+	<date>startTime</date>
+	<date>endTime</date>
+	<i8>conId</i8>
+	<i8>conModelId</i8>
+	<string>conName</string>
+	<string>conDesc</string>
+</lyvcmessage>

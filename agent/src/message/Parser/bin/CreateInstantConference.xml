@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE lyvcmessage SYSTEM "lyvcmessage.dtd">
+
+<lyvcmessage>
+    <name>CreateInstantConference</name>
+    <desc>客户端请求创建临时会议</desc>
+	<string>participants</string>
+</lyvcmessage>
