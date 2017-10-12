@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context  crossContext="true" debug="0" docBase="Coolink" path="" privileged="true" reloadable="true">
+<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/oracle" password="%dbPassword%" type="javax.sql.DataSource" url="jdbc:oracle:thin:@%dbAddress%:%dbPort%:%dbServiceName%" username="%dbUsername%"/>
+</Context>

@@ -1,0 +1,12 @@
+
+.blueButton{
+	color: #173891;
+	background: url('../images/lbl.gif');
+	border: none;
+	width: 96px;
+	height: 22px;
+}
+
+td{
+	font-size:13px;
+}

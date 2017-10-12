@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<!-- 主页 -->
+		<form-bean name="indexForm" type="com.fulong.lyvc.manage.form.IndexForm" />
+		
+		<!-- 创建会议 -->
+		<form-bean name="createForm" type="com.fulong.lyvc.manage.form.CreateConferenceForm" />
+		
+		<!-- 修改会议 -->
+		<form-bean name="editForm" type="com.fulong.lyvc.manage.form.EditConferenceForm" />
+		
+		<!-- 删除会议 -->
+		<form-bean name="deleteForm" type="com.fulong.lyvc.manage.form.DeleteConferenceForm" />
+		
+		<!-- 会议通知 -->
+		<form-bean name="sendNoticeForm" type="com.fulong.lyvc.manage.form.SendNoticeForm" />
+  	</form-beans>
+  	
+  	<global-forwards>
+		<forward name="error" path="/error.jsp" />
+	</global-forwards>
+	
+   	<action-mappings>
+		<!-- 主页  -->
+		<action path="/index" name="indexForm" scope="request" type="com.fulong.lyvc.manage.conference.IndexAction">
+			<forward name="index" path="/index.jsp" />
+		</action>
+		
+		<!-- 创建普通会议 -->
+		<action path="/create" name="createForm" input="/create.jsp" scope="request" type="com.fulong.lyvc.manage.conference.CreateAction" validate="true">
+			<forward name="success" path="/create.jsp" />
+		</action>
+		
+		<action path="/save" name="createForm" input="/create.jsp" scope="request" type="com.fulong.lyvc.manage.conference.SaveAction" validate="true">
+			<forward name="success" path="/createSuccess.jsp" />
+		</action>
+		
+		<!-- 修改普通会议 -->
+		<action path="/edit" name="editForm" input="/edit.jsp" scope="request" type="com.fulong.lyvc.manage.conference.EditAction" validate="false">
+			<forward name="success" path="/edit.jsp" />
+		</action>
+		
+		<action path="/modify" name="editForm" input="/edit.jsp" scope="request" type="com.fulong.lyvc.manage.conference.ModifyAction" validate="true">
+			<forward name="success" path="/editSuccess.jsp" />
+		</action>
+		
+		<!-- 删除普通会议 -->
+		<action path="/delete" name="deleteForm" input="/deleteSuccess.jsp" scope="request" type="com.fulong.lyvc.manage.conference.DeleteAction" validate="false">
+			<forward name="success" path="/deleteSuccess.jsp" />
+		</action>
+		
+		<!-- 发送会议通知 -->
+		<action path="/createNotice" name="sendNoticeForm" input="/sendNotice.jsp" scope="request" type="com.fulong.lyvc.manage.conference.CreateNoticeAction" validate="false">
+			<forward name="success" path="/sendNotice.jsp" />
+		</action>
+		
+		<action path="/sendNotice" name="sendNoticeForm" input="/sendNotice.jsp" scope="request" type="com.fulong.lyvc.manage.conference.SendNoticeAction" validate="true">
+			<forward name="success" path="/sendNoticeSuccess.jsp" />
+		</action>
+  	</action-mappings>
+
+  	<message-resources parameter="com.fulong.lyvc.manage.conference.Resources" />
+
+  	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/conference-validation.xml" />
+  	</plug-in>
+</struts-config>

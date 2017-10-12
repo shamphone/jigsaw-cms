@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- quartz 配置  update-->
+	<bean name="updateIndexJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+
+		<property name="jobClass">
+			<value>com.fulong.longcon.lucene.db.LuceneIndexUpdate</value>
+		</property>
+
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="timeout">
+					<value>5</value>
+				</entry>
+				<entry key="manager" value-ref="indexManager"></entry>
+			</map>
+		</property>
+
+	</bean>
+
+	<bean id="updateIndexTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+
+		<property name="jobDetail">
+			<ref bean="updateIndexJob" />
+		</property>
+		<property name="cronExpression">
+			<value>/5 * * * * ? </value>
+		</property>
+	</bean>
+
+	<!-- quartz 配置  rebulid-->
+	<bean name="rebuildIndexJob" class="org.springframework.scheduling.quartz.JobDetailBean">
+
+		<property name="jobClass">
+			<value>com.fulong.longcon.lucene.db.LuceneIndexRebuilder</value>
+		</property>
+
+		<property name="jobDataAsMap">
+			<map>
+				<entry key="days">
+					<value>7</value>
+				</entry>
+				<entry key="manager" value-ref="indexManager"></entry>
+			</map>
+		</property>
+
+	</bean>
+
+	<bean id="rebuildIndexTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+
+		<property name="jobDetail">
+			<ref bean="rebuildIndexJob" />
+		</property>
+		<property name="cronExpression">
+			<value>0 /1 * * * ?</value>
+		</property>
+	</bean>
+
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref local="updateIndexTrigger" />
+				<ref local="rebuildIndexTrigger" />
+			</list>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,20 @@
+	.listDiv tr
+	{
+		background-color:expression((this.sectionRowIndex%2==0)?"f0f0f0":"white")
+	}
+	.listDiv td
+	{
+		font-size: 14px;
+		font-family: "ËÎÌו";
+		padding: 2px 3px;
+		border: solid 1px Gray;
+	}
+	.listDiv th
+	{
+		border: solid 1px Gray;
+		font-size:14px;
+		font-family:"ËÎÌו";
+		color:black;
+		background: #54b4f9;
+		padding: 2px 3px;
+	}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <global-forwards>
+    <forward name="login" path="/logon.jsp"/>
+    <forward name="error" path="/common/attention.jsp"/>
+    <forward name="forbidden" path="/common/forbidden.jsp"/>
+  </global-forwards>
+  <action-mappings>
+    <action path="/index" type="com.fulong.site.LookupSiteAction" scope="request"/>
+    <action path="/portalLoginFailed" type="com.fulong.site.PortalLoginFailedAction" scope="request">
+    <forward name="success" path="/sites/{0}/{1}.jsp?loginerror=1" redirect="true"/>     
+    </action>
+    <action path="/portalLogin" type="com.fulong.site.PortalLoginAction" scope="request">
+    <forward name="success" path="/sites/{0}/{1}.jsp" redirect="true"/>    
+    </action>
+  </action-mappings>
+  <message-resources null="false" parameter="Resources"/>
+  <plug-in className="org.apache.struts.tiles.TilesPlugin">
+    <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+  </plug-in>
+
+</struts-config>

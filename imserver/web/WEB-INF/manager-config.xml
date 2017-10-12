@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="mainForm" type="com.fulong.lyvc.webmanager.form.MainForm" />
+		<form-bean name="roleForm" type="com.fulong.lyvc.webmanager.form.RoleForm" />
+		<form-bean name="roleMemberManageForm"
+			type="com.fulong.lyvc.webmanager.form.RoleMemberManageForm" />
+		<form-bean name="conferenceModelManageForm"
+			type="com.fulong.lyvc.webmanager.form.ConferenceModelManageForm" />
+		<form-bean name="identityForm"
+			type="com.fulong.lyvc.webmanager.form.IdentityForm" />
+		<form-bean name="conferenceCreateForm"
+			type="com.fulong.lyvc.webmanager.form.ConferenceCreateForm" />
+		<form-bean name="bulletinForm"
+			type="com.fulong.lyvc.webmanager.form.BulletinForm" />
+		<form-bean name="memberListForm"
+			type="com.fulong.lyvc.webmanager.form.MemberListForm" />
+		<form-bean name="addGroupForm"
+			type="com.fulong.lyvc.webmanager.form.AddGroupForm" />
+		<form-bean name="registerForm"
+			type="com.fulong.lyvc.webmanager.form.RegisterForm" />
+		<form-bean name="setUserPasswordForm"
+			type="com.fulong.lyvc.webmanager.form.SetUserPasswordForm" />
+		<form-bean name="conferenceNoticeForm"
+			type="com.fulong.lyvc.webmanager.form.ConferenceNoticeForm" />
+	</form-beans>
+
+	<global-forwards>
+		<forward name="over" path="/common/over.jsp" />
+		<forward name="error" path="/common/error.jsp" />
+	</global-forwards>
+
+	<action-mappings>
+
+		<!-- 会议管理客户端访问 -->
+		<action path="/createBulletin" name="bulletinForm"
+			input="/client/create_bulletin.jsp" scope="request"
+			type="com.fulong.lyvc.webmanager.action.client.CreateBulletinAction">
+			<forward name="bulletin_page" path="/client/create_bulletin.jsp" />
+		</action>
+		<action path="/createNotice" name="conferenceNoticeForm" input="/client/create_notice.jsp"
+			scope="request" type="com.fulong.lyvc.webmanager.action.client.CreateNoticeAction">
+			<forward name="notice_page" path="/client/create_notice.jsp" />
+		</action>
+
+
+		<!-- 内置用户管理 -->
+		<action path="/usermanage/index" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.IndexAction">
+			<forward name="success" path="/usermanage/listTheGroup.do" />
+		</action>
+		<action path="/usermanage/viewInfo" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.ViewInfoAction">
+			<forward name="user" path="/usermanage/userInfo.do" />
+			<forward name="group" path="/usermanage/modifyGroup.do" />
+			<forward name="return" path="/usermanage/index.do" />
+		</action>
+		<action path="/usermanage/listGroup" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.MainAction">
+			<forward name="success" path="/usermanage/tree.jsp" />
+		</action>
+		<action path="/usermanage/listTheGroup" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.ListTheGroupAction">
+			<forward name="manage" path="/usermanage/manageUsers.jsp" />
+			<forward name="select" path="/usermanage/selectUsers.jsp" />
+		</action>
+		<action path="/usermanage/memberList" name="memberListForm"
+			scope="request" type="com.fulong.lyvc.webmanager.action.usermanage.MemberListAction">
+			<forward name="finduser" path="/usermanage/resourceFileList.jsp" />
+			<forward name="usermanage" path="/usermanage/groupedusers.jsp" />
+		</action>
+		<action path="/usermanage/pasteMember" input="/usermanage/resourceFileList.jsp"
+			name="memberListForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.PasteMemberAction">
+			<forward name="success" path="/usermanage/reload.jsp" />
+			<forward name="failed"
+				path="/usermanage/memberList.do?currentGroupId={0}&amp;errors={1}" />
+		</action>
+		<action path="/usermanage/addGroup" name="addGroupForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.AddGroupAction">
+			<forward name="success" path="/usermanage/addGroup.jsp" />
+		</action>
+		<action path="/usermanage/groupAdded" name="addGroupForm"
+			scope="request" type="com.fulong.lyvc.webmanager.action.usermanage.GroupAddedAction">
+			<forward name="success" path="/usermanage/index.do" />
+		</action>
+		<action path="/usermanage/userInfo" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.UserInfoAction">
+			<forward name="user_detail" path="/usermanage/userinfo.jsp" />
+		</action>
+		<action path="/usermanage/modifyGroup" name="addGroupForm"
+			scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.ModifyGroupAction">
+			<forward name="success" path="/usermanage/addGroup.jsp" />
+		</action>
+		<action path="/usermanage/groupModified" name="addGroupForm"
+			scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.GroupModifiedAction">
+			<forward name="success" path="/usermanage/index.do" />
+		</action>
+		<action path="/usermanage/delMember" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.DelMemberAction">
+			<forward name="success" path="/usermanage/ok.jsp" />
+			<forward name="fail" path="/usermanage/notok.jsp" />
+		</action>
+		<action path="/usermanage/addMember" name="registerForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.AddMemberAction">
+			<forward name="success" path="/usermanage/addMember.jsp" />
+		</action>
+		<action path="/usermanage/memberAdded" input="/usermanage/addMember.jsp"
+			name="registerForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.MemberAddedAction">
+			<forward name="success" path="/usermanage/index.do" />
+		</action>
+		<action path="/usermanage/setUserPasswordPage" name="setUserPasswordForm"
+			scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.SetUserPasswordPageAction">
+			<forward name="success" path="/usermanage/setuserpassword.jsp" />
+			<forward name="return" path="/usermanage/index.do" />
+		</action>
+		<action path="/usermanage/setUserPassword" name="setUserPasswordForm"
+			scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.SetUserPasswordAction">
+			<forward name="success" path="/usermanage/setUserPasswordPage.do" />
+		</action>
+		<action path="/usermanage/selectGroupManager" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.SelectGroupManagerAction">
+			<forward name="success" path="/usermanage/reload.jsp" />
+		</action>
+		<action path="/usermanage/reload" scope="request"
+			type="com.fulong.lyvc.webmanager.action.usermanage.ReloadAction">
+			<forward name="success" path="/usermanage/reload.jsp" />
+		</action>
+
+		<action path="/main/userDetail" name="mainForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.main.UserDetailAction">
+			<forward name="user_detail" path="/usermanage/user_detail.jsp" />
+		</action>
+		<action path="/main/geneGroup" name="mainForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.main.GeneGroupAction">
+			<forward name="group_query_page" path="/usermanage/finduser.jsp" />
+		</action>
+
+		<!-- 系统权限管理 -->
+		<action path="/role/detail" input="/role/role_manage.jsp" name="roleForm"
+			scope="request" type="com.fulong.lyvc.webmanager.action.rolemanage.RoleDetailAction">
+			<forward name="role_detail" path="/role/role_detail.jsp" />
+		</action>
+		<action path="/role/ManageMember" input="/role/role_manage.jsp"
+			name="roleMemberManageForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.rolemanage.ManageMemberAction">
+			<forward name="member_manage_page" path="/role/role_member_manage.jsp" />
+		</action>
+		<action path="/role/addMember" input="/role/role_manage.jsp"
+			name="roleMemberManageForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.rolemanage.AddMemberAction">
+			<forward name="role_member_manage" path="/role/ManageMember.do" />
+		</action>
+		<action path="/role/delMember" input="/role/role_manage.jsp"
+			name="roleMemberManageForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.rolemanage.DelMemberAction">
+			<forward name="role_member_manage" path="/role/ManageMember.do" />
+		</action>
+
+		<!-- 会议模式 -->
+		<action path="/conferenceModel/index" input="/conferencemodel/conference_model_manage.jsp"
+			name="conferenceModelManageForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.IndexAction">
+			<forward name="manage_page" path="/conferencemodel/conference_model_manage.jsp" />
+		</action>
+		<action path="/conferenceModel/add" input="/conferencemodel/conference_model_manage.jsp"
+			name="conferenceModelManageForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.AddAction">
+			<forward name="conference_model_manager_add" path="/conferencemodel/conference_model_add.jsp" />
+		</action>
+		<action path="/conferenceModel/added" input="/conferencemodel/conference_model_manage.jsp"
+			name="conferenceModelManageForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.AddedAction">
+			<forward name="index_page"
+				path="/conferenceModel/index.do?conferenceModelIdManage={0}" />
+			<forward name="add_page" path="/conferenceModel/add.do" />
+		</action>
+		<action path="/conferenceModel/edit" input="/conferencemodel/conference_model_manage.jsp"
+			name="conferenceModelManageForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.EditAction">
+			<forward name="conference_model_manager_add" path="/conferencemodel/conference_model_add.jsp" />
+		</action>
+		<action path="/conferenceModel/edited" input="/conferencemodel/conference_model_manage.jsp"
+			name="conferenceModelManageForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.EditedAction">
+			<forward name="index_page"
+				path="/conferenceModel/index.do?conferenceModelIdManage={0}" />
+		</action>
+		<action path="/conferenceModel/del" input="/conferencemodel/conference_model_manage.jsp"
+			name="conferenceModelManageForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.DelAction">
+			<forward name="index_page" path="/conferenceModel/index.do" />
+		</action>
+		<action path="/conferenceModel/detail" input="/conferencemodel/conference_model_manage.jsp"
+			name="conferenceModelManageForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.DetailAction">
+			<forward name="detail_page" path="/conferencemodel/conference_model_detail.jsp" />
+		</action>
+
+		<!-- 会议模式角色 -->
+		<action path="/conferenceModel/role/add" input="/conferencemodel/identity_add.jsp"
+			name="identityForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.role.AddAction">
+			<forward name="add_page" path="/conferencemodel/identity_add.jsp" />
+		</action>
+		<action path="/conferenceModel/role/added" input="/conferencemodel/identity_add.jsp"
+			name="identityForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.role.AddedAction">
+			<forward name="model_index_page"
+				path="/conferenceModel/index.do?conferenceModelIdManage={0}" />
+		</action>
+		<action path="/conferenceModel/role/edit" input="/conferencemodel/identity_add.jsp"
+			name="identityForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.role.EditAction">
+			<forward name="add_page" path="/conferencemodel/identity_add.jsp" />
+		</action>
+		<action path="/conferenceModel/role/edited" input="/conferencemodel/identity_add.jsp"
+			name="identityForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.role.EditedAction">
+			<forward name="model_index_page"
+				path="/conferenceModel/index.do?conferenceModelIdManage={0}" />
+		</action>
+		<action path="/conferenceModel/role/detail" name="identityForm"
+			scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.role.DetailAction">
+			<forward name="detail_page" path="/conferencemodel/identity_detail.jsp" />
+		</action>
+		<action path="/conferenceModel/role/del" input="/conferencemodel/identity_add.jsp"
+			name="identityForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conferencemodel.role.DelAction">
+			<forward name="model_index_page"
+				path="/conferenceModel/index.do?conferenceModelIdManage={0}" />
+		</action>
+
+		<action path="/conference/del" name="conferenceListForm" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conference.DelAction">
+			<forward name="success" path="/conferenceCreate/mainPage.do" />
+		</action>
+
+		<action path="/conferenceCreate/enter" name="conferenceCreateForm"
+			scope="session"
+			type="com.fulong.lyvc.webmanager.action.conference.ConferenceCreateEnterAction">
+			<forward name="success" path="/conferenceCreate/mainPage.do" />
+		</action>
+		<!-- 会议创建基本信息页 -->
+		<action path="/conferenceCreate/mainPage" name="conferenceCreateForm"
+			scope="session" type="com.fulong.lyvc.webmanager.action.conference.MainPageAction">
+			<forward name="success" path="/conferencecreate/conference_create_main.jsp" />
+		</action>
+		<!-- 会议创建成员管理页 -->
+		<action path="/conferenceCreate/joinConference" scope="session"
+			type="com.fulong.lyvc.webmanager.action.conference.JoinConferenceAction">
+			<forward name="success" path="/conferencecreate/selectedUserList.jsp" />
+		</action>
+		<!-- 会议创建资料管理页 -->
+		<action path="/conferenceCreate/docPage/addDoc" name="conferenceCreateForm"
+			scope="session" type="com.fulong.lyvc.webmanager.action.conference.AddDocAction">
+			<forward name="success"
+				path="/conferenceCreate/mainPage.do?page=2&amp;mode=reenter" />
+		</action>
+		<action path="/conferenceCreate/docPage/delDoc" name="conferenceCreateForm"
+			scope="session" type="com.fulong.lyvc.webmanager.action.conference.DelDocAction">
+			<forward name="success"
+				path="/conferenceCreate/mainPage.do?page=2&amp;mode=reenter" />
+		</action>
+
+		<action path="/conferenceCreate" name="conferenceCreateForm"
+			scope="session"
+			type="com.fulong.lyvc.webmanager.action.conference.ConferenceCreateAction">
+			<forward name="main_page" path="/conferencecreate/conference_create_main.jsp" />
+		</action>
+		<action path="/conferenceCreate/getRoles" scope="request"
+			type="com.fulong.lyvc.webmanager.action.conference.GetRolesAction">
+			<forward name="success" path="/conferencecreate/rolesByMode.jsp" />
+		</action>
+
+	</action-mappings>
+
+	<controller bufferSize="4096" debug="0" />
+
+	<message-resources parameter="ApplicationResources" />
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml,/WEB-INF/manager-validation.xml" />
+	</plug-in>
+</struts-config>

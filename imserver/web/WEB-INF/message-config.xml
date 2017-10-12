@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="eventDispatcher" class="com.fulong.lyvc.server.LyvcEventDispatcher" init-method="init">
+  		<constructor-arg ref="lyvcServer" index="0"/>
+		<constructor-arg ref="mediaServer" index="1"/>
+  		<constructor-arg ref="conferenceRepository" index="2"/>	
+		<property name="timerDelay" value="10000" />
+		<property name="timerPeriod" value="60000" />
+		<property name="messageTypeMap">
+			<map>
+				<entry key="199" value="com.fulong.lyvc.message.LoginSuccessfully" />
+				<entry key="198" value="com.fulong.lyvc.message.KeepAlive" />
+				<entry key="197" value="com.fulong.lyvc.message.NotifyMediaServerUserQuitConference" />
+				<entry key="196" value="com.fulong.lyvc.message.NotifyMediaServerUserJoinConference" />
+				<entry key="195" value="com.fulong.lyvc.message.RegisterUserResponse" />
+				<entry key="194" value="com.fulong.lyvc.message.RegisterUser" />
+				<entry key="193" value="com.fulong.lyvc.message.ChangeUserInfo" />
+				<entry key="192" value="com.fulong.lyvc.message.SystemMessage" />
+				<entry key="191" value="com.fulong.lyvc.message.ConferenceNotice" />
+				<entry key="190" value="com.fulong.lyvc.message.DeleteConferenceUser" />
+				<entry key="189" value="com.fulong.lyvc.message.KickDuplicateLogin" />
+				<entry key="188" value="com.fulong.lyvc.message.ServerInfo" />
+				<entry key="187" value="com.fulong.lyvc.message.Advertizement" />
+				<entry key="186" value="com.fulong.lyvc.message.CopyContact" />
+				<entry key="185" value="com.fulong.lyvc.message.SetContactAdmin" />
+				<entry key="184" value="com.fulong.lyvc.message.SetUserPicture" />
+				<entry key="183" value="com.fulong.lyvc.message.EvaluateVideoQuality" />
+				<entry key="182" value="com.fulong.lyvc.message.CheckVersion" />
+				<entry key="181" value="com.fulong.lyvc.message.WritingMessage" />
+				<entry key="180" value="com.fulong.lyvc.message.YuntaiHolderBroadcast" />
+				<entry key="179" value="com.fulong.lyvc.message.CameraZoomOut" />
+				<entry key="178" value="com.fulong.lyvc.message.CameraZoomIn" />
+				<entry key="177" value="com.fulong.lyvc.message.CameraMoveDown" />
+				<entry key="176" value="com.fulong.lyvc.message.CameraMoveUp" />
+				<entry key="175" value="com.fulong.lyvc.message.CameraMoveRight" />
+				<entry key="174" value="com.fulong.lyvc.message.CameraMoveLeft" />
+				<entry key="173" value="com.fulong.lyvc.message.StopSpeak" />
+				<entry key="172" value="com.fulong.lyvc.message.AppointSpeaker" />
+				<entry key="171" value="com.fulong.lyvc.message.ApplySpeak" />
+				<entry key="170" value="com.fulong.lyvc.message.ListenToUser" />
+				<entry key="169" value="com.fulong.lyvc.message.WatchUser" />
+				<entry key="168" value="com.fulong.lyvc.message.RequestSendFile" />
+				<entry key="167" value="com.fulong.lyvc.message.StopReceiveFile" />
+				<entry key="166" value="com.fulong.lyvc.message.StopSendFile" />
+				<entry key="165" value="com.fulong.lyvc.message.SendFileData" />
+				<entry key="164" value="com.fulong.lyvc.message.ApplySendFile" />
+				<entry key="163" value="com.fulong.lyvc.message.RejectReceiveFile" />
+				<entry key="162" value="com.fulong.lyvc.message.AgreeReceiveFile" />
+				<entry key="157" value="com.fulong.lyvc.message.ConferenceFinish" />
+				<entry key="156" value="com.fulong.lyvc.message.ModifyConference" />
+				<entry key="155" value="com.fulong.lyvc.message.GetPendingMessageList" />
+				<entry key="154" value="com.fulong.lyvc.message.InstantConferenceModelId" />
+				<entry key="153" value="com.fulong.lyvc.message.MediaServerTCPForwardReady" />
+				<entry key="149" value="com.fulong.lyvc.message.KickUserFromConference" />
+				<entry key="148" value="com.fulong.lyvc.message.NotifyMediaServerRemoveDesktop" />
+				<entry key="147" value="com.fulong.lyvc.message.NotifyMediaServerAddDesktop" />
+				<entry key="146" value="com.fulong.lyvc.message.SearchContactResult" />
+				<entry key="144" value="com.fulong.lyvc.message.Leaveword" />
+				<entry key="142" value="com.fulong.lyvc.message.StartMarkWindow" />
+				<entry key="134" value="com.fulong.lyvc.message.CreateInstantConference" />
+				<entry key="133" value="com.fulong.lyvc.message.NotifyMediaServerUserJoin" />
+				<entry key="127" value="com.fulong.lyvc.message.InviteConference" />
+				<entry key="126" value="com.fulong.lyvc.message.UserDetail" />
+				<entry key="125" value="com.fulong.lyvc.message.DefaultGroupId" />
+				<entry key="123" value="com.fulong.lyvc.message.ChangeGroupName" />
+				<entry key="122" value="com.fulong.lyvc.message.UserNotFoundByEmail" />
+				<entry key="121" value="com.fulong.lyvc.message.AddContact" />
+				<entry key="120" value="com.fulong.lyvc.message.SearchContact" />
+				<entry key="119" value="com.fulong.lyvc.message.RemoveGroup" />
+				<entry key="118" value="com.fulong.lyvc.message.RemoveContact" />
+				<entry key="117" value="com.fulong.lyvc.message.RejectContact" />
+				<entry key="116" value="com.fulong.lyvc.message.MoveContactToGroup" />
+				<entry key="115" value="com.fulong.lyvc.message.ApplyContact" />
+				<entry key="114" value="com.fulong.lyvc.message.AgreeContact" />
+				<entry key="113" value="com.fulong.lyvc.message.AddGroup" />
+				<entry key="112" value="com.fulong.lyvc.message.UpdateContactStatus" />
+				<entry key="111" value="com.fulong.lyvc.message.UserChannelBroken" />
+				<entry key="110" value="com.fulong.lyvc.message.StopSendDesktop" />
+				<entry key="109" value="com.fulong.lyvc.message.StopSendControlDesktop" />
+				<entry key="108" value="com.fulong.lyvc.message.StopReceiveDesktop" />
+				<entry key="107" value="com.fulong.lyvc.message.StopReceiveControlDesktop" />
+				<entry key="106" value="com.fulong.lyvc.message.RejectInviteDesktop" />
+				<entry key="105" value="com.fulong.lyvc.message.RejectDesktop" />
+				<entry key="104" value="com.fulong.lyvc.message.RejectControlDesktop" />
+				<entry key="103" value="com.fulong.lyvc.message.InviteDesktop" />
+				<entry key="102" value="com.fulong.lyvc.message.ApplyDesktop" />
+				<entry key="101" value="com.fulong.lyvc.message.ApplyControlDesktop" />
+				<entry key="100" value="com.fulong.lyvc.message.AgreeInviteDesktop" />
+				<entry key="99" value="com.fulong.lyvc.message.AgreeDesktop" />
+				<entry key="98" value="com.fulong.lyvc.message.AgreeControlDesktop" />
+				<entry key="94" value="com.fulong.lyvc.message.DesktopClientKeyEvent" />
+				<entry key="88" value="com.fulong.lyvc.message.DesktopClientRequestUpdate" />
+				<entry key="86" value="com.fulong.lyvc.message.DesktopClientMouseEvent" />
+				<entry key="82" value="com.fulong.lyvc.message.ServerInternalError" />
+				<entry key="81" value="com.fulong.lyvc.message.StopReceiveVideo" />
+				<entry key="80" value="com.fulong.lyvc.message.StopSendVideo" />
+				<entry key="79" value="com.fulong.lyvc.message.RejectVideo" />
+				<entry key="78" value="com.fulong.lyvc.message.AgreeVideo" />
+				<entry key="77" value="com.fulong.lyvc.message.ApplyVideo" />
+				<entry key="76" value="com.fulong.lyvc.message.StopReceiveAudio" />
+				<entry key="75" value="com.fulong.lyvc.message.StopSendAudio" />
+				<entry key="74" value="com.fulong.lyvc.message.RejectAudio" />
+				<entry key="73" value="com.fulong.lyvc.message.AgreeAudio" />
+				<entry key="72" value="com.fulong.lyvc.message.ApplyAudio" />
+				<entry key="71" value="com.fulong.lyvc.message.MediaServerAddress" />
+				<entry key="70" value="com.fulong.lyvc.message.GetMediaServerAddress" />
+				<entry key="69" value="com.fulong.lyvc.message.UserJoinConference" />
+				<entry key="68" value="com.fulong.lyvc.message.Broadcast" />
+				<entry key="67" value="com.fulong.lyvc.message.Chat" />
+				<entry key="65" value="com.fulong.lyvc.message.AddConference" />
+				<entry key="64" value="com.fulong.lyvc.message.JoinConferenceResponse" />
+				<entry key="63" value="com.fulong.lyvc.message.JoinConference" />
+				<entry key="62" value="com.fulong.lyvc.message.QuitConference" />
+				<entry key="61" value="com.fulong.lyvc.message.DeleteConference" />
+				<entry key="60" value="com.fulong.lyvc.message.WebDeleteConference" />
+				<entry key="58" value="com.fulong.lyvc.message.WebAddConference" />
+				<entry key="55" value="com.fulong.lyvc.message.GetConferenceModelRoleTable" />
+				<entry key="54" value="com.fulong.lyvc.message.ConferenceModelRoleTableItem" />
+				<entry key="53" value="com.fulong.lyvc.message.ConferenceModelTableItem" />
+				<entry key="52" value="com.fulong.lyvc.message.GetConferenceModelTable" />
+				<entry key="51" value="com.fulong.lyvc.message.GetConferenceList" />
+				<entry key="50" value="com.fulong.lyvc.message.UserLoginResponse" />
+				<entry key="48" value="com.fulong.lyvc.message.UserQuitConference" />
+				<entry key="45" value="com.fulong.lyvc.message.NotifyMediaServerRemoveVideo" />
+				<entry key="44" value="com.fulong.lyvc.message.NotifyMediaServerAddVideo" />
+				<entry key="43" value="com.fulong.lyvc.message.NotifyMediaServerRemoveAudio" />
+				<entry key="42" value="com.fulong.lyvc.message.NotifyMediaServerAddAudio" />
+				<entry key="41" value="com.fulong.lyvc.message.NotifyMediaServerUserExit" />
+				<entry key="38" value="com.fulong.lyvc.message.MediaServerLogin" />
+				<entry key="37" value="com.fulong.lyvc.message.StartConference" />
+				<entry key="35" value="com.fulong.lyvc.message.Login" />
+			</map>
+		</property>
+		<property name="eventHandlerMap">
+			<map>
+				<entry key="35">
+					<bean class="com.fulong.lyvc.handler.server.LoginHandler">
+						<property name="adURLs">
+							<props>
+								<prop key="adHomepage"></prop>
+								<prop key="adMainframe"></prop>
+								<prop key="adRoomframe"></prop>
+							</props>
+						</property>
+					</bean>
+				</entry>
+				<entry key="51">
+					<bean class="com.fulong.lyvc.handler.server.GetConferenceListHandler"></bean>
+				</entry>
+				<entry key="52">
+					<bean class="com.fulong.lyvc.handler.server.GetConferenceModelTableHandler"></bean>
+				</entry>
+				<entry key="55">
+					<bean class="com.fulong.lyvc.handler.server.GetConferenceModelRoleTableHandler"></bean>
+				</entry>
+				<entry key="127">
+					<bean class="com.fulong.lyvc.handler.server.InviteConferenceHandler"></bean>
+				</entry>
+				<entry key="134">
+					<bean class="com.fulong.lyvc.handler.server.CreateInstantConferenceHandler"></bean>
+				</entry>
+				<entry key="182">
+					<bean class="com.fulong.lyvc.handler.server.CheckVersionHandler">
+						<property name="urls">
+							<props>
+								<prop key="CreateConferenceURL">/imserver/conference/create.do</prop>
+								<prop key="EditConferenceURL">/imserver/conference/edit.do</prop>
+								<prop key="DeleteConferenceURL">/imserver/conference/delete.do</prop>
+								<prop key="CreateNoticeURL">/imserver/conference/createNotice.do</prop>
+								<prop key="CreateBulletinURL">/imserver/user/createBulletin.do</prop>
+								<prop key="CommonContactMgrURL">/imserver/user/index.do</prop>
+								<prop key="SystemRoleMgrURL">/Webmanager/role/ManageMember.do</prop>
+								<prop key="SelfInfoMgrURL">/Webmanager</prop>
+								<prop key="UserRegisterURL">/Webmanager</prop>
+								<prop key="ClientDownloadURL">/download/LongConVCS_Setup.exe</prop>
+							</props>
+						</property>
+					</bean>
+				</entry>
+				<entry key="193">
+					<bean class="com.fulong.lyvc.handler.server.ChangeUserInfoHandler"></bean>
+				</entry>
+				<entry key="194">
+					<bean class="com.fulong.lyvc.handler.server.RegisterUserHandler"></bean>
+				</entry>
+				<entry key="198">
+					<bean class="com.fulong.lyvc.handler.server.KeepAliveHandler"></bean>
+				</entry>
+				<entry key="155">
+					<bean class="com.fulong.lyvc.handler.contact.GetPendingMessageListHandler"></bean>
+				</entry>
+				<entry key="120">
+					<bean class="com.fulong.lyvc.handler.contact.SearchContactHandler"></bean>
+				</entry>
+				<entry key="114">
+					<bean class="com.fulong.lyvc.handler.contact.AgreeContactHandler"></bean>
+				</entry>
+				<entry key="117">
+					<bean class="com.fulong.lyvc.handler.contact.RejectContactHandler"></bean>
+				</entry>
+				<entry key="118">
+					<bean class="com.fulong.lyvc.handler.contact.RemoveContactHandler"></bean>
+				</entry>
+				<entry key="113">
+					<bean class="com.fulong.lyvc.handler.contact.AddGroupHandler"></bean>
+				</entry>
+				<entry key="119">
+					<bean class="com.fulong.lyvc.handler.contact.RemoveGroupHandler"></bean>
+				</entry>
+				<entry key="123">
+					<bean class="com.fulong.lyvc.handler.contact.ChangeGroupNameHandler"></bean>
+				</entry>
+				<entry key="116">
+					<bean class="com.fulong.lyvc.handler.contact.MoveContactToGroupHandler"></bean>
+				</entry>
+				<entry key="144">
+					<bean class="com.fulong.lyvc.handler.contact.LeavewordHandler"></bean>
+				</entry>
+				<entry key="115">
+					<bean class="com.fulong.lyvc.handler.contact.ApplyContactHandler"></bean>
+				</entry>
+				<entry key="186">
+					<bean class="com.fulong.lyvc.handler.contact.CopyContactHandler"></bean>
+				</entry>
+				<entry key="121">
+					<bean class="com.fulong.lyvc.handler.contact.AddContactHandler"></bean>
+				</entry>
+				<entry key="38">
+					<bean class="com.fulong.lyvc.handler.media.LoginHandler"></bean>
+				</entry>
+				<entry key="70">
+					<bean class="com.fulong.lyvc.handler.media.GetMediaServerAddressHandler"></bean>
+				</entry>
+				<entry key="63">
+					<bean class="com.fulong.lyvc.handler.conference.JoinConferenceHandler"></bean>
+				</entry>
+				<entry key="62">
+					<bean class="com.fulong.lyvc.handler.conference.QuitConferenceHandler"></bean>
+				</entry>
+				<entry key="67">
+					<bean class="com.fulong.lyvc.handler.conference.ChatHandler"></bean>
+				</entry>
+				<entry key="68">
+					<bean class="com.fulong.lyvc.handler.conference.BroadcastHandler"></bean>
+				</entry>
+				<entry key="142">
+					<bean class="com.fulong.lyvc.handler.conference.StartMarkWindowHandler"></bean>
+				</entry>
+				<entry key="149">
+					<bean class="com.fulong.lyvc.handler.conference.KickUserFromConferenceHandler"></bean>
+				</entry>
+				<entry key="169">
+					<bean class="com.fulong.lyvc.handler.conference.WatchUserHandler"></bean>
+				</entry>
+				<entry key="170">
+					<bean class="com.fulong.lyvc.handler.conference.ListenToUserHandler"></bean>
+				</entry>
+				<entry key="171">
+					<bean class="com.fulong.lyvc.handler.conference.ApplySpeakHandler"></bean>
+				</entry>
+				<entry key="172">
+					<bean class="com.fulong.lyvc.handler.conference.AppointSpeakerHandler"></bean>
+				</entry>
+				<entry key="173">
+					<bean class="com.fulong.lyvc.handler.conference.StopSpeakHandler"></bean>
+				</entry>
+				<entry key="181">
+					<bean class="com.fulong.lyvc.handler.conference.WritingMessageHandler"></bean>
+				</entry>
+				<entry key="183">
+					<bean class="com.fulong.lyvc.handler.conference.EvaluateVideoQualityHandler"></bean>
+				</entry>
+				<entry key="184">
+					<bean class="com.fulong.lyvc.handler.conference.SetUserPictureHandler"></bean>
+				</entry>
+				<entry key="190">
+					<bean class="com.fulong.lyvc.handler.conference.DeleteConferenceUserHandler"></bean>
+				</entry>
+				<entry key="72">
+					<bean class="com.fulong.lyvc.handler.media.ApplyAudioHandler"></bean>
+				</entry>
+				<entry key="77">
+					<bean class="com.fulong.lyvc.handler.media.ApplyVideoHandler"></bean>
+				</entry>
+				<entry key="73">
+					<bean class="com.fulong.lyvc.handler.media.AgreeAudioHandler"></bean>
+				</entry>
+				<entry key="78">
+					<bean class="com.fulong.lyvc.handler.media.AgreeVideoHandler"></bean>
+				</entry>
+				<entry key="74">
+					<bean class="com.fulong.lyvc.handler.media.RejectAudioHandler"></bean>
+				</entry>
+				<entry key="79">
+					<bean class="com.fulong.lyvc.handler.media.RejectVideoHandler"></bean>
+				</entry>
+				<entry key="75">
+					<bean class="com.fulong.lyvc.handler.media.StopSendAudioHandler"></bean>
+				</entry>
+				<entry key="80">
+					<bean class="com.fulong.lyvc.handler.media.StopSendVideoHandler"></bean>
+				</entry>
+				<entry key="76">
+					<bean class="com.fulong.lyvc.handler.media.StopReceiveAudioHandler"></bean>
+				</entry>
+				<entry key="81">
+					<bean class="com.fulong.lyvc.handler.media.StopReceiveVideoHandler"></bean>
+				</entry>
+				<entry key="102">
+					<bean class="com.fulong.lyvc.handler.desktop.ApplyDesktopHandler"></bean>
+				</entry>
+				<entry key="99">
+					<bean class="com.fulong.lyvc.handler.desktop.AgreeDesktopHandler"></bean>
+				</entry>
+				<entry key="105">
+					<bean class="com.fulong.lyvc.handler.desktop.RejectDesktopHandler"></bean>
+				</entry>
+				<entry key="103">
+					<bean class="com.fulong.lyvc.handler.desktop.InviteDesktopHandler"></bean>
+				</entry>
+				<entry key="100">
+					<bean class="com.fulong.lyvc.handler.desktop.AgreeInviteDesktopHandler"></bean>
+				</entry>
+				<entry key="106">
+					<bean class="com.fulong.lyvc.handler.desktop.RejectInviteDesktopHandler"></bean>
+				</entry>
+				<entry key="110">
+					<bean class="com.fulong.lyvc.handler.desktop.StopSendDesktopHandler"></bean>
+				</entry>
+				<entry key="108">
+					<bean class="com.fulong.lyvc.handler.desktop.StopReceiveDesktopHandler"></bean>
+				</entry>
+				<entry key="101">
+					<bean class="com.fulong.lyvc.handler.desktop.ApplyControlDesktopHandler"></bean>
+				</entry>
+				<entry key="98">
+					<bean class="com.fulong.lyvc.handler.desktop.AgreeControlDesktopHandler"></bean>
+				</entry>
+				<entry key="104">
+					<bean class="com.fulong.lyvc.handler.desktop.RejectControlDesktopHandler"></bean>
+				</entry>
+				<entry key="109">
+					<bean class="com.fulong.lyvc.handler.desktop.StopSendControlDesktopHandler"></bean>
+				</entry>
+				<entry key="107">
+					<bean class="com.fulong.lyvc.handler.desktop.StopReceiveControlDesktopHandler"></bean>
+				</entry>
+				<entry key="88">
+					<bean class="com.fulong.lyvc.handler.desktop.DesktopClientRequestUpdateHandler"></bean>
+				</entry>
+				<entry key="153">
+					<bean class="com.fulong.lyvc.handler.desktop.MediaServerTCPForwardReadyHandler"></bean>
+				</entry>
+				<entry key="94">
+					<bean class="com.fulong.lyvc.handler.desktop.DesktopClientKeyEventHandler"></bean>
+				</entry>
+				<entry key="86">
+					<bean class="com.fulong.lyvc.handler.desktop.DesktopClientMouseEventHandler"></bean>
+				</entry>
+				<entry key="164">
+					<bean class="com.fulong.lyvc.handler.file.ApplySendFileHandler"></bean>
+				</entry>
+				<entry key="163">
+					<bean class="com.fulong.lyvc.handler.file.RejectReceiveFileHandler"></bean>
+				</entry>
+				<entry key="162">
+					<bean class="com.fulong.lyvc.handler.file.AgreeReceiveFileHandler"></bean>
+				</entry>
+				<entry key="166">
+					<bean class="com.fulong.lyvc.handler.file.StopSendFileHandler"></bean>
+				</entry>
+				<entry key="167">
+					<bean class="com.fulong.lyvc.handler.file.StopReceiveFileHandler"></bean>
+				</entry>
+				<entry key="165">
+					<bean class="com.fulong.lyvc.handler.file.SendFileDataHandler"></bean>
+				</entry>
+				<entry key="168">
+					<bean class="com.fulong.lyvc.handler.file.RequestSendFileHandler"></bean>
+				</entry>
+				<entry key="176">
+					<bean class="com.fulong.lyvc.handler.yuntai.CameraMoveUpHandler"></bean>
+				</entry>
+				<entry key="177">
+					<bean class="com.fulong.lyvc.handler.yuntai.CameraMoveDownHandler"></bean>
+				</entry>
+				<entry key="174">
+					<bean class="com.fulong.lyvc.handler.yuntai.CameraMoveLeftHandler"></bean>
+				</entry>
+				<entry key="175">
+					<bean class="com.fulong.lyvc.handler.yuntai.CameraMoveRightHandler"></bean>
+				</entry>
+				<entry key="178">
+					<bean class="com.fulong.lyvc.handler.yuntai.CameraZoomInHandler"></bean>
+				</entry>
+				<entry key="179">
+					<bean class="com.fulong.lyvc.handler.yuntai.CameraZoomOutHandler"></bean>
+				</entry>
+				<entry key="180">
+					<bean class="com.fulong.lyvc.handler.yuntai.YuntaiHolderBroadcastHandler"></bean>
+				</entry>			
+			</map>
+		</property>
+		<property name="conferenceLibraryMessageHandlerList">
+			<list>
+				<bean class="com.fulong.lyvc.handler.server.ConferenceLibraryMessageHandler" />
+			</list>
+		</property>
+		<property name="channelBrokenHandlerList">
+			<list>
+				<bean class="com.fulong.lyvc.handler.media.MediaChannelBrokenHandler" />
+			</list>
+		</property>
+		<property name="timerTaskHandlerList">
+			<list>
+				<bean class="com.fulong.lyvc.handler.conference.TimerTaskHandler" />
+			</list>
+		</property>
+	</bean>
+	
+</beans>

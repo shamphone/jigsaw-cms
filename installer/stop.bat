@@ -1,0 +1,2 @@
+Net stop "Coolink"
+exit

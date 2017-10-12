@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-lazy-init="false">
+	<bean id="portalContext" class="com.fulong.portal.core.LongconPortalContext">
+		<property name="portalInfo" value="Coolink Portal Server 1.0.0" />
+		<property name="properties">
+			<props>
+				<prop key="container.name">CooLink Portal Server</prop>
+				<prop key="javax.portlet.version.major">1</prop>
+				<prop key="javax.portlet.version.minor">0</prop>
+				<prop key="container.name">Coolink Portal Server</prop>
+			</props>
+		</property>
+		<property name="portletModeList">
+			<list>
+				<value>view</value>
+				<value>edit</value>
+				<value>final</value>
+			</list>
+		</property>
+		<property name="windowStateList">
+			<list>
+				<value>normal</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="portletContainer" class="com.fulong.portal.model.impl.PortletContainerImpl">
+		<property name="name" value="Coolink Portlet Container" />
+		<property name="portalContext" ref="portalContext" />
+	</bean>
+</beans>

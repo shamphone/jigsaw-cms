@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-lazy-init="false">
+    <!-- 缓存设置，和Tomcat服务器相关：
+    1G及其以上：cache.security.max.properties
+    512m-1G:cache.security.normal.properties
+    512m以下:cache.security.min.properties
+    -->
+    <bean id="cacheFactory" class="com.fulong.common.cache.BasicCacheFactory">
+        <property name="config">
+            <value>cache.max.properties</value>
+        </property>
+    </bean>
+   
+  
+
+    <!--
+    *dataSource:要连接的 datasource (通常我们不会定义在 server.xml)
+    *defaultAutoCommit:对于事务是否 autoCommit, 默认值为 true
+    *defaultReadOnly:对于数据库是否只能读取, 默认值为 false
+    *driverClassName:连接数据库所用的 JDBC Driver Class,
+    *maxActive:最大连接数据库连接数,设 0 为没有限制
+    *maxIdle:最大等待连接中的数量,设 0 为没有限制
+    *maxWait:最大等待秒数, 单位为 ms, 超过时间会丟出错误信息 设 -1 为没有限制
+    *password:登陆数据库所用的密码
+    *url:连接数据库的 URL
+    *username:登陆数据库所用的帐号
+    *validationQuery:验证连接是否成功, SQL select 指令至少要返回一行
+    *removeAbandoned:是否自我中断, 默认是 false
+    *removeAbandonedTimeout:几秒后会自我中断, removeAbandoned 必须为 true
+    *logAbandoned:是否记录中断事件, 默认为 false
+    -->
+
+    <!--bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="url">
+            <value>jdbc:oracle:thin:@192.168.0.81:1522:orcl</value>            
+        </property>
+        <property name="username">
+            <value>cl</value>
+        </property>
+        <property name="password">
+            <value>fulong</value>
+        </property>
+        <property name="driverClassName">
+            <value>oracle.jdbc.driver.OracleDriver</value>
+        </property>
+        <property name="maxActive">
+            <value>20</value>
+        </property>
+        <property name="maxWait">
+            <value>100</value>
+        </property>
+        <property name="maxIdle">
+            <value>10</value>
+        </property>
+        <property name="minIdle">
+            <value>6</value>
+        </property>
+        <property name="initialSize">
+            <value>10</value>
+        </property>
+        <property name="removeAbandoned">
+            <value>true</value>
+        </property>
+        <property name="removeAbandonedTimeout">
+            <value>15</value>
+        </property>
+        <property name="logAbandoned">
+            <value>true</value>
+        </property>
+    </bean-->
+
+    <!-- 搜索引擎的配置 -->
+   
+    <!-- bean id="indexManager" class="com.fulong.longcon.repository.search.impl.LuceneIndexManager" init-method="init">        
+        <property name="directoryPath">
+        <description>目录,必须保证这个目录由足够的空间</description>
+        <value>d:/search</value></property>
+
+        <property name="analyzerClass">
+        <description>        分析器,使用标准的分析器,请勿修改</description>        
+        <value>org.apache.lucene.analysis.standard.StandardAnalyzer</value></property>
+    </bean>
+    <bean id="indexRebulder" class="com.fulong.longcon.repository.search.impl.LuceneIndexRebuilder" init-method="init">
+        <property name="indexManager"><ref bean="indexManager"/></property>
+        <property name="threadName"><value>重建索引线程</value></property>
+    </bean-->
+
+  
+
+<bean id="siteFactory" class="com.fulong.longcon.site.impl.SiteFactoryImpl" init-method="init">
+    <!-- 预留域名-->
+    <property name="reservedDomains">
+      <value>mail,null,member,passport,cms,root,site</value>
+    </property>
+    <!-- 最大站点数，加密，不要修改 -->
+    <property name="encMaxSiteNum">
+      <value>FeZlcewlDFw=</value>
+    </property>
+        <property name="directory">
+      <value>file:D:\coolink\default</value>
+    </property>
+    <!-- property name="directory" value="/sites"/-->   
+   
+    <property name="channelTypeFile" value="classpath:channel.type.xml"/>
+  </bean>
+</beans>

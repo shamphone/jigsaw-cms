@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<longcon-workflow xmlns="http://tempuri.org/XMLSchema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://tempuri.org/XMLSchema.xsd">
+	<Process id="simpleness" name="直接加入" >
+		<Activities>
+			<Activity id="begin" name="正在申请" StartActivity="true"/>
+			<Activity id="end" name="正式成员" TerminalActivity="true"/>
+		</Activities>
+		<Transitions>
+			<Transition id="transferr" name="确认"  from="begin" to="end"/>
+		</Transitions>
+        </Process>
+        <Process id="standard" name="需要审核一次" >
+                <Activities>
+                        <Activity id="begin" name="正在申请" StartActivity="true"/>
+                        <Activity id="audit" name="正在审批"/>
+                        <Activity id="refused" name="被拒绝"/>
+                        <Activity id="end" name="正式成员" TerminalActivity="true"/>
+                </Activities>
+                <Transitions>
+                    <Transition id="submit" name="提交申请"  from="begin" to="audit"/>
+                    <Transition id="pass" name="审核通过"  from="audit" to="end"/>
+                    <Transition id="refuse" name="拒绝加入"  from="audit" to="refused"/>
+                </Transitions>
+	</Process>
+</longcon-workflow>

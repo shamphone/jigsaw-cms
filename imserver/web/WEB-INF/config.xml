@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 
+	<bean id="manager" class="com.fulong.lyvc.jcr.JCRConferenceManager" init-method="init">
+		<property name="repository" ref="repository" />
+	</bean>
+	 -->
+	 	
+	<bean id="conferenceRepository" class="com.fulong.lyvc.jcr.JCRConferenceRepository" init-method="init">
+		<property name="repository" ref="repository" />
+	</bean>
+
+	<bean id="lyvcServer" class="com.fulong.lyvc.server.LyvcServerImpl" init-method="start">
+		<property name="mainClientVersion" value="2769" />
+		<property name="minClientVersion" value="2656" />
+		<property name="name" value="龙驭视频会议系统" />
+		<property name="maxConnections" value="1000" />
+		<property name="port" value="4000" />
+		<property name="conferenceRepository" ref="conferenceRepository" />
+	</bean>
+	
+	<bean id="shutdown" class="com.fulong.lyvc.ShutdownServer" init-method="start">
+		<property name="command" value="shutdown" />
+		<property name="port" value="4001" />
+		<property name="target" ref="lyvcServer" />
+		<property name="name" value="视频服务关闭侦听器" />
+		<property name="daemon" value="true" />
+	</bean>
+
+	<bean id="mediaServer" class="com.fulong.lyvc.server.MediaServerImpl" init-method="start">
+		<property name="auto" value="true" />
+		<property name="command" value="WEB-INF/media/bin/MediaServer.exe" />
+		<property name="args" value="/console" />
+	</bean>
+	
+	<!--
+		bean id="server"
+		class="com.fulong.lyvc.servermonitor.logic.ServerLogic"> <property
+		name="serverMonitorSession"><ref
+		bean="ServerMonitorSession"/></property> <property name="properties">
+		<props> <prop key="title">视频会议后台管理</prop> <prop
+		key="backup.info">系统尚未进行备份。</prop> <prop key="ip">192.168.0.208</prop>
+		<prop key="dns">219.235.229.2</prop> <prop
+		key="gateway">192.168.0.1</prop> <prop key="mask">255.255.255.0</prop>
+		<prop key="net.config.file">192.168.0.3</prop> <prop
+		key="user.page.count">15</prop> <prop key="python.path">"D:\Program
+		Files\Python\Python.exe"</prop> </props> </property> </bean
+	-->	
+	
+	<import resource="message-config.xml" />
+	<import resource="security-config.xml" />
+
+</beans>

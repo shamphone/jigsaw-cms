@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="index" class="com.fulong.longcon.site.impl.ChannelTypeSupport">
+		<property name="postfix" value="jsp" />
+		<property name="prefix" value="channel" />
+		<property name="className" value="com.fulong.longcon.site.channel.JspChannel" />
+		<property name="displayName" value="普通页面" />
+	</bean>
+	<bean name="word" class="com.fulong.longcon.site.impl.ChannelTypeSupport">
+		<property name="postfix" value="jdoc" />
+		<property name="prefix" value="word" />
+		<property name="className" value="com.fulong.longcon.site.channel.WordChannel" />
+		<property name="displayName" value="word页面" />
+	</bean>
+	<bean name="excel" class="com.fulong.longcon.site.impl.ChannelTypeSupport">
+		<property name="postfix" value="jxls" />
+		<property name="prefix" value="excel" />
+		<property name="className" value="com.fulong.longcon.site.channel.ExcelChannel" />
+		<property name="displayName" value="excel页面" />
+	</bean>
+	<!-- 
+	<bean name="pdf" class="com.fulong.longcon.site.impl.ChannelTypeSupport">
+		<property name="postfix" value="jpdf" />
+		<property name="prefix" value="pdf" />
+		<property name="className" value="com.fulong.longcon.site.channel.PdfChannel" />
+		<property name="displayName" value="pdf页面" />
+	</bean>
+	 -->
+	<bean name="rss" class="com.fulong.longcon.site.impl.ChannelTypeSupport">
+		<property name="postfix" value="rss" />
+		<property name="prefix" value="rss" />
+		<property name="className" value="com.fulong.longcon.site.channel.RssChannel" />
+		<property name="displayName" value="rss页面" />
+	</bean>
+	
+	<bean name="clip" class="com.fulong.longcon.site.impl.ChannelTypeSupport">
+		<property name="postfix" value="jspf" />
+		<property name="prefix" value="clip" />		
+		<property name="className" value="com.fulong.longcon.site.channel.ClipChannel" />		
+		<property name="displayName" value="页面片断" />
+	</bean>
+	<bean name="script" class="com.fulong.longcon.site.impl.ChannelTypeSupport">
+		<property name="postfix" value="js" />	
+		<property name="prefix" value="script" />	
+		<property name="className" value="com.fulong.longcon.site.channel.JsChannel" />		
+		<property name="displayName" value="脚本文件" />
+	</bean>
+	<bean name="style" class="com.fulong.longcon.site.impl.ChannelTypeSupport">
+		<property name="postfix" value="css" />
+		<property name="prefix" value="style" />
+		<property name="className" value="com.fulong.longcon.site.channel.CssChannel" />		
+		<property name="displayName" value="样式文件" />
+	</bean>
+
+</beans>

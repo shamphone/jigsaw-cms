@@ -1,0 +1,13 @@
+日历的包，是各种涉及到日程的应用中常常需要的基础类。
+特别是在沈阳的在线办事系统中，体现尤其明显，因此，抽象出calendar的这个包，这个包的设计思路主要是：
+CalendarRepository作为该包的入口，能够通过接口获得两种系统初始的假期；能创建假期；能通过ID获得
+假期；
+Holidays的设计是有继承关系的，NoHolidays是根，StandardHolidays是NoHolidays的子；用户创建的任何的
+Holidays都是StandardHolidays的子。
+这个父子关系的主要用途是：判断某个Date是否是假日，如果在当前的假期中没有设置该天为假日，则通过当前假期
+的父假期来判断，依次上溯。如果在当前有设置，则可以判断这个Date是假日。
+
+ public boolean isHoliday(Calendar day)；
+ public void setHoliday(Calendar day)；
+ public void setWorkingDay(Calendar day)；
+

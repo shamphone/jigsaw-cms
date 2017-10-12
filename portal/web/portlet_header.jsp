@@ -1,0 +1,7 @@
+<%@page contentType="text/html; charset=UTF-8"%>
+<%@taglib uri="/WEB-INF/fulong.tld" prefix="fulong"%>
+<%@taglib uri="/WEB-INF/fulong-portal.tld" prefix="portlet"%>
+<%@taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%>
+<portlet:defineObjects/><% String portlet_mode=renderRequest.getPortletMode().toString(); %><% if(portlet_mode.equals("view")||portlet_mode.equals("edit")||portlet_mode.equals("help")) {%><div class="portalTable">
+<div class="portletHeader"><% if(!portlet_mode.equals("view")) {%><a href="<portlet:renderURL portletMode="view"/>" ><img border="0" alt="浏览" src="/site/images/browse_2.gif"/></a><%}else {%><img border="0" alt="浏览" src="/site/images/browse.gif"/><% }%><% if(!portlet_mode.equals("edit")) {%><a href="<portlet:renderURL portletMode="edit"/>" ><img border="0" alt="编辑" src="/site/images/edit_2.gif"/></a><%}else {%><img border="0" alt="编辑" src="/site/images/edit.gif"/><% }%><% if(!portlet_mode.equals("help")) {%><a href="<portlet:renderURL portletMode="help"/>" ><img border="0" alt="帮助" src="/site/images/help_2.gif"/></a><%}else {%><img border="0" alt="帮助" src="/site/images/help.gif"/><% }%><span id='portletName'><bean:write name='portletConfig' property='displayName(zh)'/></span></div>
+<div class="portletBody"><% }else if(portlet_mode.equals("preview")){ %><div id="<%= request.getAttribute("javax.portlet.id") %>" title="占位符,请勿编辑或者删除" contentEditable="false" style="border:1px dotted #808080;display:inline;" class="longcon.portlet"><%} %>

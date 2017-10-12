@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+	<display-name>Coolink 监控系统</display-name>
+
+<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/app-context.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>parentContextJndiName</param-name>
+		<param-value>java:comp/env/coolink/root</param-value>
+	</context-param>
+	<listener>
+		<listener-class>com.fulong.longcon.context.JndiContextLoaderListener</listener-class>
+	</listener>
+	<filter>
+		<filter-name>sitemesh</filter-name>
+		<filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>/system/probe/*</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>ERROR</dispatcher>
+	</filter-mapping>
+
+
+	<servlet>
+		<servlet-name>uptime</servlet-name>
+		<servlet-class>org.jstripe.tomcat.probe.UptimeServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+
+	<!--
+        Core dispatcher servlet
+    -->
+	<servlet>
+		<servlet-name>probe</servlet-name>
+		<servlet-class>org.jstripe.tomcat.probe.ProbeServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring-*</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<servlet-name>cgi</servlet-name>
+		<servlet-class>org.apache.catalina.servlets.CGIServlet</servlet-class>
+		<init-param>
+			<param-name>clientInputTimeout</param-name>
+			<param-value>100</param-value>
+		</init-param>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>6</param-value>
+		</init-param>
+		<init-param>
+			<param-name>cgiPathPrefix</param-name>
+			<param-value>WEB-INF/cgi</param-value>
+		</init-param>
+		<init-param>
+			<param-name>;executable</param-name>
+			<param-value>;cmd /c</param-value>
+		</init-param>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cgi</servlet-name>
+		<url-pattern>/cgi-bin/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>probe</servlet-name>
+		<url-pattern>/system/probe/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>probe</servlet-name>
+		<url-pattern>/system/logs/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>probe</servlet-name>
+		<url-pattern>/system/chart.png</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

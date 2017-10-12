@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="filterChainProxy" class="org.springframework.security.util.FilterChainProxy">
+		<property name="filterInvocationDefinitionSource">
+			<value><![CDATA[
+				PATTERN_TYPE_APACHE_ANT
+				/**/*.js.jsp=httpSessionContextIntegrationFilter,logoutFilter,authenticationProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,anonymousProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor				
+				/cms/manage/**=httpSessionContextIntegrationFilter,digestProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,digestExceptionTranslationFilter,cmsFilterInvocationInterceptor				
+				/system/**=httpSessionContextIntegrationFilter,digestProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,digestExceptionTranslationFilter,filterInvocationInterceptor
+				/process/visual/**=httpSessionContextIntegrationFilter,digestProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,digestExceptionTranslationFilter,filterInvocationInterceptor
+				/cgi-bin/**=httpSessionContextIntegrationFilter,digestProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,digestExceptionTranslationFilter,filterInvocationInterceptor
+				/awstats/**=httpSessionContextIntegrationFilter,digestProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,digestExceptionTranslationFilter,filterInvocationInterceptor
+				/site/name.do=#NONE#
+				/site/dialog.js=#NONE#
+				/site/**=httpSessionContextIntegrationFilter,digestProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,digestExceptionTranslationFilter,smsFilterInvocationInterceptor
+				/sites/**=siteLifeCircleFilter,accessCounterFilter,httpSessionContextIntegrationFilter,logoutFilter,portalAuthenticationProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,anonymousProcessingFilter,portalExceptionTranslationFilter,portletLoginFilter,portalFilterInvocationInterceptor				
+				/**=httpSessionContextIntegrationFilter,logoutFilter,authenticationProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,anonymousProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor				
+			]]></value>
+		</property>
+	</bean>
+	<bean id="basePortletFilter" abstract="true" class="com.fulong.portlet.filter.BasePortletFilter">
+		<property name="siteFactory" ref="siteFactory" />
+		<property name="repository" ref="repository" />
+	</bean>
+	<bean id="siteLifeCircleFilter" parent="basePortletFilter" class="com.fulong.portlet.filter.SiteLifeCircleFilter">
+		<property name="siteStopPrompt" value="/site/siteStopPrompt.jsp" />	
+	</bean>
+	<bean id="accessCounterFilter" parent="basePortletFilter" class="com.fulong.portlet.filter.AccessCounterFilter">
+		<property name="counterRepository" ref="acccessCounterRepository" />
+		<property name="properties" value="counter,accessCount" />	
+	</bean>
+	<bean id="portletLoginFilter" parent="basePortletFilter" class="com.fulong.portlet.filter.LoginFilter">		
+	</bean>
+	<!-- 初始化和清除缓存中的用户凭证-->
+	<bean id="httpSessionContextIntegrationFilter"
+		class="org.springframework.security.context.HttpSessionContextIntegrationFilter" />
+
+	<bean id="logoutFilter" class="org.springframework.security.ui.logout.LogoutFilter">
+		<!--
+			URL redirected to after
+			logout,也可以在/j_spring_security_logout?logoutSuccessUrl=登出地址 来配置
+		-->
+		<constructor-arg value="/cms/" />
+		<constructor-arg>
+			<list>
+				<!-- 登出时清理coolink中的用户信息 -->
+				<ref bean="rememberMeServices" />
+				<!-- 登出时清理session的用户信息 -->
+				<bean
+					class="org.springframework.security.ui.logout.SecurityContextLogoutHandler" />
+			</list>
+		</constructor-arg>
+		<!-- logout url name -->
+		<property name="filterProcessesUrl" value="/security/j_spring_security_logout" />
+	</bean>
+
+	<bean id="digestProcessingFilter" 
+    class="org.springframework.security.ui.digestauth.DigestProcessingFilter"> 
+  <property name="userDetailsService" ref="passport"/> 
+  <property name="authenticationEntryPoint" ref="digestProcessingFilterEntryPoint"/> 
+  <!-- property name="userCache" ref="userCache"/--> 
+</bean> 
+
+<bean id="digestProcessingFilterEntryPoint" 
+    class="org.springframework.security.ui.digestauth.DigestProcessingFilterEntryPoint"> 
+  <property name="realmName" value="Coolink"/> 
+  <property name="key" value="fulong"/> 
+  <property name="nonceValiditySeconds" value="360000"/> 
+</bean> 
+
+<bean id="digestExceptionTranslationFilter" 
+        class="org.springframework.security.ui.ExceptionTranslationFilter"> 
+        <property name="authenticationEntryPoint" ref="digestProcessingFilterEntryPoint"/> 
+        <property name="accessDeniedHandler">
+                 <bean class="org.springframework.security.ui.AccessDeniedHandlerImpl">
+				<property name="errorPage" value="/accessDenied.jsp" />
+			</bean>
+		</property>
+    </bean> 
+	
+	
+	<!--
+		处理登入请求 可配置参数： 
+		1. filterProcessesUrl	登入请求的form表单的action地址，缺省的为/j_spring_security_check 
+		2. usernameParameter	登入请求的form表单的username字段 表单域名称，缺省的为j_username 
+		3。passwordParameter		登入请求的form表单的password字段 表单域名称，缺省的为j_password 
+		4. authenticationManager 真正执行验证操作的bean 
+		5. defaultTargetUrl indicates the URL that should be used for redirection if the HttpSession attribute named SPRING_SECURITY_SAVED_REQUEST_KEY does not indicate the target URL	once authentication is completed successfully. eg: /. The	defaultTargetUrl will be treated as relative to the web-app's context	path, and should include the leading /. Alternatively, inclusion of a	scheme name (eg http:// or https://) as the prefix will denote a fully-qualified URL and this is also supported. More complex behaviour	can be implemented by using a customised TargetUrlResolver.
+		6.authenticationFailureUrl (optional) 验证失败后的地址，如:/login.jsp?login_error=1. 如果未指明，则将发送SC_UNAUTHORIZED到客户端。 
+		8.alwaysUseDefaultTargetUrl causes successful authentication to always	redirect to the defaultTargetUrl, even if the HttpSession attribute		named SPRING_SECURITY_SAVED_REQUEST_KEY defines the intended target		URL.
+	-->
+	<bean id="authenticationProcessingFilter"
+		class="org.springframework.security.ui.webapp.AuthenticationProcessingFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="authenticationFailureUrl" value="/portalLoginFailed.do" />
+		<property name="serverSideRedirect" value="true" />
+		<property name="defaultTargetUrl" value="/" />
+		<property name="usernameParameter" value="user-username" />
+		<property name="passwordParameter" value="user-password" />
+		<!-- 缺省的登入表单的URL地址-->
+		<property name="filterProcessesUrl" value="/security/j_spring_security_check" />
+		<property name="rememberMeServices" ref="rememberMeServices" />
+		<property name="targetUrlResolver" ref="targetUrlResolver"/>		
+	</bean>
+	
+	
+	<!--
+		登入成功后，处理ServletRequest，特别是处理ServletRequest.getUserPrincipal()和isUserinRole()方法
+	-->
+	<bean id="securityContextHolderAwareRequestFilter"
+		class="org.springframework.security.wrapper.SecurityContextHolderAwareRequestFilter">
+		<property name="wrapperClass"
+			value="com.fulong.portlet.acegi.AgeciSavedRequestAwareWrapper" />
+	</bean>
+	<!-- 处理Cookie-->
+	<bean id="rememberMeProcessingFilter"
+		class="org.springframework.security.ui.rememberme.RememberMeProcessingFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="rememberMeServices" ref="rememberMeServices" />
+	</bean>
+	<!-- 如果用户没有登入，则使用这个过滤器来提供一个匿名用户-->
+	<bean id="anonymousProcessingFilter"
+		class="org.springframework.security.providers.anonymous.AnonymousProcessingFilter">
+		<property name="key" value="fulong" />
+		<property name="userAttribute" value="anonymousUser,ROLE_ANONYMOUS" />
+	</bean>
+	<!--
+		处理登入和授权出错的情况 This filter is necessary because it provides the bridge
+		between Java exceptions and HTTP responses. It is solely concerned
+		with maintaining the user interface. This filter does not do any
+		actual security enforcement. 1. loginFormUrl 登入页面地址。 2. forceHttps
+		强制使用https 3. serverSideRedirect 服务器端重定向 4. errorPage 无权访问处理页面
+	-->
+	<bean id="exceptionTranslationFilter"
+		class="org.springframework.security.ui.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint">
+			<bean
+				class="org.springframework.security.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+				<property name="loginFormUrl" value="/acegilogin.jsp" />
+				<property name="forceHttps" value="true" />
+				<property name="serverSideRedirect" value="false" />
+				<property name="portMapper" ref="portMapper" />
+			</bean>
+		</property>
+		<property name="accessDeniedHandler">
+			<bean class="org.springframework.security.ui.AccessDeniedHandlerImpl">
+				<property name="errorPage" value="/accessDenied.jsp" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="accessDecisionManager" class="org.springframework.security.vote.AffirmativeBased">
+		<property name="allowIfAllAbstainDecisions" value="false" />
+		<property name="decisionVoters">
+			<list>
+				<bean class="org.springframework.security.vote.RoleVoter" />
+				<bean class="org.springframework.security.vote.AuthenticatedVoter" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="cmsFilterInvocationInterceptor"
+		class="org.springframework.security.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="accessDecisionManager" ref="accessDecisionManager" />
+		<property name="objectDefinitionSource">
+			<value><![CDATA[
+                PATTERN_TYPE_APACHE_ANT
+      /cms/manage/**=ROLE_ADMIN
+      ]]></value>
+		</property>
+	</bean>
+
+	<bean id="filterInvocationInterceptor"
+		class="org.springframework.security.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="accessDecisionManager" ref="accessDecisionManager" />
+		<property name="objectDefinitionSource">
+			<value><![CDATA[
+                PATTERN_TYPE_APACHE_ANT
+      /login.jsp=IS_AUTHENTICATED_REMEMBERED
+      /system/**=ROLE_ADMIN
+      /cgi-bin/**=ROLE_ADMIN
+      /awstats/**=ROLE_ADMIN
+      /process/visual/**=ROLE_ADMIN
+      ]]></value>
+		</property>
+	</bean>
+
+
+	<!--
+		Implement by a class that is capable of providing a remember-me
+		service. Spring Security filters (namely AbstractProcessingFilter and
+		RememberMeProcessingFilter will call the methods provided by an
+		implementation of this interface. Implementations may implement any
+		type of remember-me capability they wish. Rolling cookies (as per
+		http://fishbowl.pastiche.org/2004/01/19/persistent_login_cookie_best_practice)
+		can be used, as can simple implementations that don't require a
+		persistent store. Implementations also determine the validity period
+		of a remember-me cookie. This interface has been designed to
+		accommodate any of these remember-me models. This interface does not
+		define how remember-me services should offer a "cancel all remember-me
+		tokens" type capability, as this will be implementation specific and
+		requires no hooks into Spring Security. 
+		1. parameter:	request参数，用来指示是否使用cookie来做自动登入，这个参数应该在登入框中设置。
+		 2. key : 用来加密cookie的密钥
+		3. cookieName ： 保存的cookie名称
+		4. alwaysRemember ： 是否一直都自动登入，缺省为false. 
+		5.tokenValiditySeconds ： cookie保存时间，以秒计算，缺省 1209600（ 14 days）
+	-->
+	<bean id="rememberMeServices"
+		class="org.springframework.security.ui.rememberme.TokenBasedRememberMeServices">
+		<property name="userDetailsService" ref="passport" />
+		<property name="key" value="fulong" />
+		<property name="parameter" value="loginWay" />
+		<property name="cookieName" value="coolinkUser" />
+	</bean>
+
+	<bean id="authenticationManager" class="org.springframework.security.providers.ProviderManager">
+		<property name="providers">
+			<list>
+				<ref local="daoAuthenticationProvider" />
+				<bean
+					class="org.springframework.security.providers.anonymous.AnonymousAuthenticationProvider">
+					<property name="key" value="fulong" />
+				</bean>
+				<bean
+					class="org.springframework.security.providers.rememberme.RememberMeAuthenticationProvider">
+					<property name="key" value="fulong" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="daoAuthenticationProvider"
+		class="org.springframework.security.providers.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="passport" />
+	</bean>
+
+	<bean id="portMapper" class="org.springframework.security.util.PortMapperImpl">
+		<property name="portMappings">
+			<map>
+				<entry key="80" value="8443" />
+			</map>
+		</property>
+	</bean>
+	<!-- 配置哪些连接使用https -->
+	<bean id="channelProcessingFilter"
+		class="org.springframework.security.securechannel.ChannelProcessingFilter">
+		<property name="channelDecisionManager" ref="channelDecisionManager" />
+		<property name="filterInvocationDefinitionSource">
+			<value><![CDATA[
+				PATTERN_TYPE_APACHE_ANT				
+				\A/acegilogin.jsp.*\Z= REQUIRES_SECURE_CHANNEL
+				\A/security\.*\Z = REQUIRES_SECURE_CHANNEL
+				\A/.*\Z = REQUIRES_INSECURE_CHANNEL
+			]]></value>
+		</property>
+	</bean>
+
+	<bean id="channelDecisionManager"
+		class="org.springframework.security.securechannel.ChannelDecisionManagerImpl">
+		<property name="channelProcessors">
+			<list>
+				<ref bean="secureChannelProcessor" />
+				<ref bean="insecureChannelProcessor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="secureChannelProcessor"
+		class="org.springframework.security.securechannel.SecureChannelProcessor" />
+	<bean id="insecureChannelProcessor"
+		class="org.springframework.security.securechannel.InsecureChannelProcessor" />
+<!-- 网站管理模块安全配置 -->	
+	<bean id="smsFilterInvocationInterceptor"
+		class="org.springframework.security.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="accessDecisionManager">
+			<bean class="com.fulong.portlet.acegi.SMSAccessDecisionManager">
+				<property name="siteFactory" ref="siteFactory" />
+				<property name="repository" ref="repository" />
+			</bean>		
+		</property>
+		<property name="objectDefinitionSource">
+			<value><![CDATA[
+                PATTERN_TYPE_APACHE_ANT
+      /site/**=IS_AUTHENTICATED_REMEMBERED
+      ]]></value>
+		</property>
+	</bean>
+	<!-- 门户引擎的安全机制 -->
+<bean id="portalAuthenticationProcessingFilter"
+		class="org.springframework.security.ui.webapp.AuthenticationProcessingFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="authenticationFailureUrl" value="/sites/portalLoginFailed.do" />
+		<property name="serverSideRedirect" value="true" />
+		<property name="defaultTargetUrl" value="/" />
+		<property name="usernameParameter" value="user-username" />
+		<property name="passwordParameter" value="user-password" />
+		<!-- 缺省的登入表单的URL地址-->
+		<property name="filterProcessesUrl" value="/security/j_spring_security_check" />
+		<property name="rememberMeServices" ref="rememberMeServices" />
+		<property name="targetUrlResolver" ref="targetUrlResolver"/>
+	</bean>
+	
+<bean id="portalExceptionTranslationFilter"
+		class="org.springframework.security.ui.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint">
+			<bean
+				class="org.springframework.security.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+				<property name="loginFormUrl" value="/portalLogin.do" />
+				<property name="forceHttps" value="false" />
+				<property name="serverSideRedirect" value="false" />
+				<property name="portMapper" ref="portMapper" />
+			</bean>
+		</property>
+		<property name="accessDeniedHandler">
+			<bean class="org.springframework.security.ui.AccessDeniedHandlerImpl">
+				<property name="errorPage" value="/portalLoginFailed.do" />
+			</bean>
+		</property>
+	</bean>	
+	
+	<bean id="targetUrlResolver" class="org.springframework.security.ui.TargetUrlResolverImpl">
+	<property name="targetUrlParameter" value="fromURL"/>	
+	</bean>	
+	<bean id="portalFilterInvocationInterceptor"
+		class="com.fulong.portlet.acegi.PortalFilterSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="accessDecisionManager">
+			<bean class="com.fulong.portlet.acegi.PortalAccessDecisionManager"/>
+		</property>
+		<property name="objectDefinitionSource">
+			<value><![CDATA[
+                PATTERN_TYPE_APACHE_ANT
+      /sites/**=IS_AUTHENTICATED_ANONYMOUSLY
+      ]]></value>
+		</property>
+	</bean>
+
+
+</beans>

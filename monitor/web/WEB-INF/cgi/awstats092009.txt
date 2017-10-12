@@ -1,0 +1,346 @@
+AWSTATS DATA FILE 6.8 (build 1.910)
+# If you remove this file, all statistics for date 200909 will be lost/reset.
+
+# Position (offset in bytes) in this file of beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1864                
+POS_TIME 2547                
+POS_VISITOR 3249                
+POS_DAY 3406                
+POS_DOMAIN 3558                
+POS_LOGIN 3789                
+POS_ROBOT 3944                
+POS_WORMS 4076                
+POS_EMAILSENDER 4207                
+POS_EMAILRECEIVER 4350                
+POS_SESSION 4426                
+POS_SIDER 4572                
+POS_FILETYPES 7498                
+POS_OS 7774                
+POS_BROWSER 7824                
+POS_SCREENSIZE 7887                
+POS_UNKNOWNREFERER 7961                
+POS_UNKNOWNREFERERBROWSER 8048                
+POS_ORIGIN 8130                
+POS_SEREFERRALS 8267                
+POS_PAGEREFS 8411                
+POS_SEARCHWORDS 10938               
+POS_KEYWORDS 11090               
+POS_MISC 2211                
+POS_ERRORS 11149               
+POS_CLUSTER 3645                
+POS_SIDER_404 11248               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20090908163553 2096 651784 89319067290
+FirstTime 20090908101415
+LastTime 20090908163553
+LastUpdate 20090908163634 2096 0 2096 0 0
+TotalVisits 2                   
+TotalUnique 1                   
+MonthHostsKnown 0                   
+MonthHostsUnknown 1                   
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 1 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 0 0 0 0 0 0
+1 0 0 0 0 0 0
+2 0 0 0 0 0 0
+3 0 0 0 0 0 0
+4 0 0 0 0 0 0
+5 0 0 0 0 0 0
+6 0 0 0 0 0 0
+7 0 0 0 0 0 0
+8 0 0 0 0 0 0
+9 0 0 0 0 0 0
+10 3 37 82696 1 1 955
+11 0 0 0 0 0 0
+12 0 0 0 0 0 0
+13 0 0 0 1 1 955
+14 226 593 3851011 2 6 6101
+15 150 871 2200392 5 13 13168
+16 113 557 1902192 2 16 15865
+17 0 0 0 0 0 0
+18 0 0 0 0 0 0
+19 0 0 0 0 0 0
+20 0 0 0 0 0 0
+21 0 0 0 0 0 0
+22 0 0 0 0 0 0
+23 0 0 0 0 0 0
+END_TIME
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 1
+127.0.0.1 492 2058 8036291 20090908163553 20090908142631 /longcon/cgi-bin/awstats.pl
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 1
+20090908 492 2058 8036291 2
+END_DAY
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 492 2058 8036291
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Session range - Number of visits
+BEGIN_SESSION 1
+0s-30s 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 62
+/longcon/cgi-bin/awstats.pl 101 3847287 1 1
+/longcon/system/probe/cntrafdetails.ajax 45 4110 0 0
+/longcon/system/probe/cnreqdetails.ajax 45 3869 0 0
+/longcon/common/style/toolbar.jsp 35 43645 0 0
+/longcon/system/toolbar.jsp 33 46284 0 0
+/longcon/awstats/left.jsp 31 196842 0 0
+/longcon/common/style/dlgbutton.htc 30 634 0 0
+/longcon/awstats/ 28 23105 0 0
+/longcon/system/probe/memory.ajax 23 325295 0 0
+/longcon/common/script/tree.jsp 23 152936 0 0
+/longcon/system/probe/logs/follow.ajax 4 0 0 0
+/longcon/system/probe/appattributes.htm 2 301484 0 0
+/longcon/process/ 1 908 0 0
+/longcon/system/probe/adm/quickcheck.htm 2 4324 0 0
+/longcon/process/visual/inc/webflow.js.jsp 1 40135 0 0
+/longcon/system/probe/status.htm 1 7739 0 0
+/longcon/system/probe/logs/follow.htm 1 6099 0 0
+/longcon/system/probe/app/jsp.htm 2 1451711 0 0
+/longcon/site/dialog.js.jsp 1 16208 0 0
+/longcon/system/probe/sql/datasourcetest.htm 2 11392 0 0
+/longcon/system/probe/wrapper.htm 1 1371 0 0
+/longcon/process/visual/process.do 1 45153 0 0
+/longcon/system/probe/app/threadstack.ajax 1 2472 0 0
+/longcon/system/probe/logs/index.htm 1 1961 0 0
+/longcon/system/probe/resources.htm 4 13996 0 0
+/longcon/cms/index.jsp 1 381 0 0
+/longcon/system/probe/attributes.htm 1 4464 0 0
+/longcon/process/left.do 1 5987 0 0
+/longcon/system/probe/app/expire.htm 1 6829 0 0
+/longcon/cms/manage/left.do 1 27908 0 0
+/longcon/system/probe/threads.htm 2 120410 0 0
+/longcon/system/probe/adm/viewcontextxml.htm 1 1540 0 0
+/longcon/common/style/contents.jsp 1 2003 0 0
+/longcon/system/probe/adm/osinfo.htm 1 5196 0 0
+/longcon/cms/manage/blank.jsp 1 467 0 0
+/longcon/common/script/portlet.jsp 1 3888 0 0
+/longcon/process/top.jsp 1 4995 0 0
+/longcon/system/probe/sessions.htm 4 27484 0 0
+/longcon/common/style/content.jsp 1 5722 0 0
+/longcon/system/probe/app/viewwebxml.htm 1 157545 0 0
+/longcon/system/index.jsp 3 2313 0 0
+/longcon/system/probe/memory.htm 2 16622 0 0
+/longcon/system/ 2 1542 1 0
+/longcon/system/probe/appfilters.htm 1 2015 0 0
+/longcon/system/probe/appinitparams.htm 1 1014 0 0
+/longcon/cms/dialog/FilterParser.js.jsp 1 1911 0 0
+/longcon/system/probe/sysprops.htm 1 8734 0 0
+/longcon/cms/manage/toolbar.jsp 1 2206 0 0
+/longcon/cms/manage/index.jsp 1 1443 0 0
+/longcon/system/probe/appservlets.htm 2 8548 0 0
+/longcon/system/probe/cluster.htm 2 2512 0 0
+/longcon/system/probe/index.htm 5 67726 0 0
+/longcon/awstats/index.jsp 1 826 0 0
+/longcon/system/probe/sysinfo.htm 3 10861 0 0
+/longcon/cms/manage/toSearch.do 1 7092 0 0
+/longcon/system/probe/appsummary.htm 1 7659 0 0
+/longcon/system/probe/charts.htm 2 15662 0 0
+/longcon/system/left.jsp 5 15965 0 0
+/longcon/system/probe/logs/ff_info.ajax 4 768 0 0
+/longcon/cms/dialog/cmsdialog.js.jsp 3 33012 0 0
+/longcon/system/probe/adm/osinfo.ajax 11 5291 0 0
+/longcon/process/bottom.html 1 314 0 0
+END_SIDER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 13
+htc 30 634 0 0
+css 59 67757 0 0
+png 1293 217576 0 0
+do 4 86140 0 0
+htm 47 2264898 0 0
+jsp 145 571182 0 0
+pl 101 3847287 0 0
+ajax 133 341805 0 0
+html 32 25869 0 0
+xml 1 1843 0 0
+js 97 550909 0 0
+jpg 3 1380 0 0
+gif 113 59011 0 0
+END_FILETYPES
+
+# OS ID - Hits
+BEGIN_OS 1
+winxp 2058
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 1
+msie7.0 2058
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 0
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 0
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 46 47
+From1 0 0
+From2 0 0
+From3 446 2011
+From4 0 0
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 0
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 44
+http://www.lixf.cn/longcon/system/probe/charts.htm 90 111
+http://www.lixf.cn/longcon/awstats/ 73 73
+http://www.lixf.cn/longcon/awstats/left.jsp 57 186
+http://www.lixf.cn/longcon/system/left.jsp 40 53
+http://job.ustb.edu.cn/longcon/awstats/ 36 36
+http://www.lixf.cn/longcon/cgi-bin/awstats.pl 25 922
+http://www.lixf.cn/longcon/system/probe/memory.htm 23 70
+http://www.lixf.cn/longcon/system/toolbar.jsp 23 175
+http://www.lixf.cn/longcon/system/probe/adm/osinfo.htm 11 19
+http://job.ustb.edu.cn/longcon/system/toolbar.jsp 10 82
+http://www.lixf.cn/longcon/cms/manage/index.jsp 4 4
+http://www.lixf.cn/longcon/system/probe/appservlets.htm 0 2
+http://job.ustb.edu.cn/longcon/system/probe/index.htm 0 23
+http://www.lixf.cn/longcon/system/probe/app/viewwebxml.htm 0 1
+http://www.lixf.cn/longcon/process/left.do 0 3
+http://www.lixf.cn/longcon/system/probe/sessions.htm 1 7
+http://www.lixf.cn/longcon/system/probe/attributes.htm 1 2
+http://www.lixf.cn/longcon/process/ 4 4
+http://www.lixf.cn/longcon/system/index.jsp 9 9
+http://www.lixf.cn/longcon/process/visual/ 0 1
+http://www.lixf.cn/longcon/system/probe/appsummary.htm 0 3
+http://www.lixf.cn/longcon/system/probe/sql/datasourcetest.htm 1 10
+http://www.lixf.cn/longcon/system/probe/logs/follow.htm 8 13
+http://www.lixf.cn/longcon/process/top.jsp 2 10
+http://job.ustb.edu.cn/longcon/cgi-bin/awstats.pl 1 20
+http://www.lixf.cn/longcon/cms/manage/toSearch.do 2 2
+http://www.lixf.cn/longcon/system/probe/sysinfo.htm 0 2
+http://www.lixf.cn/longcon/awstats/index.jsp 3 3
+http://job.ustb.edu.cn/longcon/system/left.jsp 1 13
+http://job.ustb.edu.cn/longcon/system/ 3 3
+http://www.lixf.cn/longcon/system/probe/status.htm 0 1
+http://www.lixf.cn/longcon/system/probe/threads.htm 1 2
+http://www.lixf.cn/longcon/system/ 3 3
+http://www.lixf.cn/longcon/system/probe/adm/viewcontextxml.htm 0 1
+http://job.ustb.edu.cn/longcon/awstats/left.jsp 3 50
+http://www.lixf.cn/longcon/system/probe/index.htm 0 46
+http://www.lixf.cn/longcon/process/visual/process.do 5 11
+http://www.lixf.cn/longcon/cms/manage/left.do 1 3
+http://www.lixf.cn/longcon/system/probe/app/jsp.htm 0 2
+http://www.lixf.cn/longcon/system/probe/logs/index.htm 1 1
+http://www.lixf.cn/longcon/system/probe/appattributes.htm 0 4
+http://www.lixf.cn/longcon/cms/manage/blank.jsp 1 1
+http://www.lixf.cn/longcon/cms/manage/toolbar.jsp 1 21
+http://www.lixf.cn/longcon/system/probe/resources.htm 2 3
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 0
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 0
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 2
+401 1 1137
+404 36 35907
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 8
+/longcon/xtree/xtree.js 1 http://www.lixf.cn/longcon/cms/manage/left.do
+/xtree/xtree.js 25 http://job.ustb.edu.cn/longcon/awstats/left.jsp
+/ 3 -
+/longcon/awstats/awstats.pl 3 http://job.ustb.edu.cn/longcon/awstats/left.jsp
+/longcon/system/probe/adm/ 1 http://www.lixf.cn/longcon/system/probe/adm/osinfo.htm
+/longcon/awstats/cgi-bin/awstats.pl 1 http://www.lixf.cn/longcon/awstats/
+/longcon/cgi-bin/awstats_configure.pl 1 -
+/longcon/awstats/toolbar.jsp 1 http://www.lixf.cn/longcon/awstats/
+END_SIDER_404

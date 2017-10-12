@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="valueFactory" class="com.fulong.longcon.repository.value.ValueFactoryImpl" init-method="init">
+    </bean>
+    <bean id="definitionManager" class="com.fulong.longcon.repository.definition.NodeDefinitionManagerImpl" init-method="init">
+        <property name="dataSource"><ref bean="datasource"/></property>
+        <property name="valueFactory"><ref bean="valueFactory"/></property>       
+    </bean>   
+  
+    <bean id="queryManager" class="com.fulong.longcon.repository.impl.QueryManagerImpl" init-method="init">
+    </bean>
+    <bean id="sqlQuery" class="com.fulong.longcon.repository.impl.SQLQueryCreator" init-method="init">
+    <property name="repository" ref="repository"/>
+    <property name="queryClasses">
+    <props>
+    <prop key="Oracle">com.fulong.longcon.repository.impl.OracleSQLQuery</prop>
+    <prop key="MySQL">com.fulong.longcon.repository.impl.MySQLQuery</prop>
+    <prop key="Microsoft SQL Server">com.fulong.longcon.repository.impl.SQLServerQuery</prop>
+    <prop key="PostgreSQL">com.fulong.longcon.repository.impl.PostgreSQLQuery</prop>
+        </props>
+    </property>
+    </bean>
+    <bean id="repository" class="com.fulong.longcon.repository.impl.RepositoryImpl" init-method="init">
+        <property name="valueFactory">
+            <ref bean="valueFactory"/>
+        </property>
+        <property name="cacheFactory">
+            <ref bean="cacheFactory"/>
+        </property>
+        <property name="definitionManager">
+            <ref bean="definitionManager"/>
+        </property>
+          <property name="queryManager">
+            <ref bean="queryManager"/>
+        </property>
+        <property name="dataSource">
+            <ref bean="datasource"/>
+        </property>    
+     
+    </bean>
+</beans>

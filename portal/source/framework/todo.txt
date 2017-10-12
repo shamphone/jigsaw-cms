@@ -1,0 +1,27 @@
+2007.7.3
+1.工作流transition增加“isdefault”方法，数据库增加"is_default(BOOLEAN)"字段，表明这是缺省的转移，用于支持内容库中的操作。
+2. 
+
+2007.6.29
+1.增加com.fulong.longcon.calendar的包，实现日历库
+2.实现内容库的投递功能。
+3. 纠正NodeCollection的方法签名，实现ContentCollection中继承自NodeCollection的实现。
+4. 纠正NodeAuthorization的实现
+5. 修正DictManager中的实现错误:JdbcEntryDao.deleteByParent，delete：必须级联删除。
+6. 对所有的数据库查询，如果是只读的操作，不做factory.rollback();
+7. OracleHolidaysDateDao中必须使用java.sql.Date不能使用java.sql.Timestamp；
+
+
+
+2007.6.26
+*1.改进com.fulong.longcon.dict.impl.DictManagerImpl的实现，在启动的时候加载全部数据字典。
+2.改进com.fulong.longcon.content.impl.ContentCategoryImpl,增加addPostCategory方法，支持直接建立投递内容库.
+3. com.fulong.com.content.CntentRepository接口的getRoot方法，修改成无参数
+*4.实现 com.fulong.longcon.security.NodeAuthorization、NodePermission、NodePermissionCollection
+5. content表增加（owner_id,VARCHAR(16),,内容所有者，一般指机构的ID），用于标明内容所属机构，增加Principal getOwner()方法，用来获取所在的机构，ContentCategory.createContent(Principal owner)。原来是creator，现改为owner。
+6. ContentCollection增加filterByOwner（Principal owner）、filterByProperty(String property,String value)方法。
+7. com.fulong.longcon.repository.Node类增加PropertyIterator getReferences()方法，获取所有引用这个节点的其他节点。
+8. 在Repository中增加数据库的查询过滤器。
+*9. 在com.fulong.longcon.dict包中增加分类计数器，用于计算每种类别的对象数量，实现级联计数。这个功能将在会员系统和商品中使用。增加表dict_counter(entry VARCHAR(128), type varchar(128), sumvalue number).
+*10. 数据字典增加“产品分类信息库(product-catalogs)”
+11. 增加com.fulong.longcon.ContentTask及相关的类，实现内容库的任务管理。

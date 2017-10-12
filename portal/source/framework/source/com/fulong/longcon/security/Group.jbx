@@ -1,0 +1,30 @@
+[PropertyInfo]
+administrator,com.fulong.longcon.security.PassportIdentity,false,false, , ,true,<default>
+administrator,java.security.Principal,false,false, , ,true,<default>
+allMemberCount,int,false,false, , ,true,<default>
+allMembers,com.fulong.longcon.security.MembershipIterator,false,false, , ,true,<default>
+allMemberships,com.fulong.longcon.security.MembershipCollection,false,false, , ,true,<default>
+allUsers,com.fulong.longcon.security.MembershipIterator,false,false, , ,true,<default>
+commonname,String,false,false, , ,true,<default>
+creator,com.fulong.longcon.security.User,false,false, , ,true,<default>
+defaulPoints,int,false,false, , ,true,<default>
+defaultPeriod,com.fulong.common.Duration,false,false, , ,true,<default>
+defaultPoints,int,false,false, , ,true,<default>
+description,String,false,false, , ,true,<default>
+groups,com.fulong.longcon.security.GroupCollection,false,false, , ,true,<default>
+groupType,String,false,false, , ,true,<default>
+memberCount,int,false,false, , ,true,<default>
+members,com.fulong.longcon.security.MembershipIterator,false,false, , ,true,<default>
+memberships,com.fulong.longcon.security.MembershipCollection,false,false, , ,true,<default>
+memberType,int,false,false, , ,true,<default>
+organization,com.fulong.longcon.security.Organization,false,false, , ,true,<default>
+organizations,com.fulong.longcon.security.MembershipIterator,false,false, , ,true,<default>
+parentGroup,com.fulong.longcon.security.Group,false,false, , ,true,<default>
+root,boolean,false,false, , ,true,<default>
+transferCollection,com.fulong.longcon.security.TransferCollection,false,false, , ,true,<default>
+users,com.fulong.longcon.security.MembershipIterator,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

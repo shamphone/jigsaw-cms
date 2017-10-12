@@ -1,0 +1,17 @@
+[PropertyInfo]
+age,int,false,false, , ,true,<default>
+area,com.fulong.longcon.dict.Entry,false,false, , ,true,<default>
+birthday,java.util.Date,false,false, , ,true,<default>
+birthDay,java.util.Date,false,false, , ,true,<default>
+commonname,String,false,false, , ,true,<default>
+email,String,false,false, , ,true,<default>
+gender,int,false,false, , ,true,<default>
+IP,String,false,false, , ,true,<default>
+points,int,false,false, , ,true,<default>
+username,String,false,false, , ,true,<default>
+expiringDate,java.util.Date,false,false,expiringDate,expiringDate,true,<default>
+[IconNames]
+
+
+
+

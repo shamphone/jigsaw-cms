@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="siteFactory" class="com.fulong.longcon.site.impl.SiteFactoryImpl" init-method="init">
+    <!-- 预留域名-->
+    <property name="reservedDomains">
+      <value>mail,null,member,passport,cms,root,site</value>
+    </property>
+    <!-- 最大站点数，加密，不要修改 -->
+    <property name="encMaxSiteNum">
+      <value>FeZlcewlDFw=</value>
+    </property>
+    <property name="excludes">
+      <value>admin,manager,ide,portal,components,default,root,monitor,cache,imserver,xml,resources,webdav</value>
+    </property>
+    <property name="repository">
+      <ref bean="repository"/>
+    </property>
+       
+   	<property name="resolutions">
+		<list>
+			<value>default</value>
+			<value>128*128</value>
+			<value>128*160</value>
+			<value>176*208</value>
+			<value>176*220</value>
+			<value>208*320</value>
+			<value>240*320</value>
+			<value>480*640</value>
+		</list>
+	</property>
+    <property name="channelTypeFile" value="classpath:channel.type.xml"/>
+  </bean>
+</beans>

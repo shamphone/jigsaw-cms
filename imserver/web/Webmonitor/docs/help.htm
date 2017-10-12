@@ -1,0 +1,429 @@
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html;charset=gb2312">
+<meta name=Generator content="MicrosoftWord12(filtered)">
+<title>龙驭视频会议系统使用说明</title>
+<style type="text/css">
+	body p,li {
+		font: 14px/ 150% 宋体;
+	}
+	a{
+		color:navy;
+		text-decoration:none;
+	}
+	a:hover{
+		text-decoration:underline;
+	}
+
+	.tip{
+		background-image: url('help.files/note9.png');
+		background-repeat: no-repeat;
+		padding-left: 50px;
+		height: 50px;
+		font-style: oblique;
+		color: #D2691E;
+	}
+
+	.chapter {
+		font-size: 20 px;
+		font-weight: bold;
+	}
+
+	.style2 {
+		margin-left: 40px;
+	}
+
+	.style3 {
+		font-size: large;
+		text-align: center;
+	}
+
+	.style4 {
+		font-size: small;
+	}
+	.section
+	{
+		font-size: 16 px;
+		font-weight: bold;
+	}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<div style="width: 800 px; position: relative; left: 20px; background-color: White;">
+	<p class="style3">龙驭视频会议系统使用说明<br />
+	<span class="style4">Version 2.0<br />
+	北京中科辅龙计算机技术股份有限公司</span></p>
+	<p><b>版权</b> <br />
+北京中科辅龙计算机技术股份有限公司版权所有，保留所有权利。<br/>
+Corpright Beijing Zhongke Fulong Computer Technology Co. Ltd. AllRightsReserved.</p>
+	<p><b>有限权利</b>
+	<br />未经北京中科辅龙计算机技术股份有限公司的书面认可，任何方面不得将本文档的部分或全部复制、重新制作、翻译或装载于常规媒介、电子媒介以及其他任何可供机器阅读的媒介。
+本文档所包含的内容可能会在不经通告的情况下进行更新，并且本文档的内容不作为北京中科辅龙计算机技术股份有限公司的正式承诺。北京中科辅龙计算机技术股份有限公司不对本文档所提供的内容提供任何形式的保用承诺，也不对任何方式使用本文档所造成的后果负责。</p>
+
+	<p><b>目录</b></p>
+
+	<ol>
+		<li><a href="#Gaishu">概述</a>
+		<ul>
+			<li><a href="#GuanyuShouce">关于本文档</a></li>
+			<li><a href="#HuoquBangzhu">如何获取帮助</a></li>
+			<li><a href="#GuanyuXitong">关于龙驭视频会议系统</a></li>
+			<li><a href="#XitongTexing">系统特性</a></li>
+		</ul>
+		</li>
+		<li><a href="#JibenGainian">视频会议基本概念</a>
+		<ul>
+			<li><a href="#ShipinHuiyi">视频会议</a></li>
+			<li><a href="#Jiagou">龙驭视频会议系统架构</a></li>
+		</ul>
+		<li><a href="#Anzhuang">安装龙驭视频会议系统</a>
+		<ul>
+			<li><a href="#YunxingHuanjing">运行环境</a></li>
+			<li><a href="#BushuFuwuqi">部署服务器</a></li>
+			<li><a href="#AnzhuangKehuduan">安装客户端</a></li>
+		</ul>
+		</li>
+		<li><a href="#YonghuCaozuo">用户操作说明</a>
+		<ul>
+			<li><a href="#ShezhiShiyinpin">设置视音频设备</a></li>
+			<li><a href="#Zhuce">注册用户</a></li>
+			<li><a href="#Denglu">登录服务器</a></li>
+			<li><a href="#TianjiaLianxiren">添加联系人</a></li>
+			<li><a href="#JishiHuiyi">召开即时会议</a></li>
+			<li><a href="#XianshiMoshi">显示模式</a></li>
+			<li><a href="#KaiguanShipin">打开和关闭视频显示</a></li>
+			<li><a href="#GexingTupian">设置个性图片</a></li>
+			<li><a href="#Lianxiren">联系人功能</a></li>
+			<li><a href="#Lanmu">主窗口栏目</a></li>
+			<li><a href="#Jinjie">应用进阶</a></li>
+		</ul>
+		</li>
+		<li><a href="#GuanliyuanCaozuo">管理员操作说明</a>
+		<ul>
+			<li><a href="#XitongJuese">系统角色管理</a></li>
+			<li><a href="#GonggongLianxiren">公共联系人管理</a></li>
+			<li><a href="#HuiyiMoshi">会议模式管理</a></li>
+			<li><a href="#XitongGonggao">发布系统公告</a></li>
+			<li><a href="#ZhengshiHuiyi">创建正式会议</a></li>
+		</ul>
+		</li>
+		<li><a href="#ServerManage">服务器管理</a>
+		<ul>
+			<li><a href="#ServerEntry">进入管理页面</a></li>
+			<li><a href="#ServerConfigTitle">设置网站标题</a></li>
+			<li><a href="#ServerConfigIP">设置服务器IP地址</a></li>
+			<li><a href="#ServerConfigPass">修改管理员密码</a></li>
+			<li><a href="#ServerConfigBackup">数据备份和恢复</a></li>
+			<li><a href="#ServerConfigStatus">查看和改变服务器状态</a></li>
+			<li><a href="#ServerMembersOnline">查看在线人员</a></li>
+			<li><a href="#ServerConferencesOnline">查看进行中的会议</a></li>
+		</ul>
+		</li>
+	</ol>
+
+	<p class="chapter"><a name="Gaishu" id="Gaishu">1 概述</a></p>
+
+	<p class="section"><a name="GuanyuShouce" id="GuanyuShouce">1.1 关于本文档</a></p>
+
+	<p>本文档所介绍的一切内容都是建立在您已经通过合法的途径获得北京中科辅龙计算机技术股份有限公司研发的龙驭视频会议系统并打算安装使用的基础上。通过本文档，您将了解到：</p>
+	<ol>
+		<li>如何安装龙驭视频会议系统；</li>
+		<li>如何进行人员和会议的管理；</li>
+		<li>如何召开和参加视频会议。</li>
+	</ol>
+
+	<p class="tip">本文档的内容会不定期更新，如果您需要最新版本的文档，请访问辅龙公司网站 <a href="http://www.fulong.com.cn" target="new">www.fulong.com.cn</a></p>
+
+	<p class="section"><a name="HuoquBangzhu" id="HuoquBangzhu">1.2 如何获取帮助</a></p>
+
+	<p>如果您需要任何技术支持，请联络北京中科辅龙计算机技术股份有限公司客服中心，我们的工程师随时为您服务。</p>
+	<p>以下是我们的联系方式：</p>
+	<p class="style2">
+		公司地址：北京市海淀区上地信息路28号信息大厦A座九层 <br />
+		邮政编码：100085<br />
+		网&nbsp;&nbsp;&nbsp;&nbsp;址：<a href="http://www.fulong.com.cn" target="new">www.fulong.com.cn</a><br />
+		服务电话：010-62968885<br />
+		传真电话：010-62965461<br />
+		邮件地址：<a href="mailto:longcon@fulong.com.cn">longcon@fulong.com.cn</a>
+	</p>
+	<p>注意：您所能获得的帮助将和您所购买的产品的价格、使用条款以及辅龙公司的规定有关。</p>
+
+	<p class="section"><a name="GuanyuXitong" id="GuanyuXitong">1.3 关于龙驭视频会议系统</a></p>
+	<p>龙驭视频会议系统是中科辅龙公司自主研发的音视频通讯软件。在本文档中，北京中科辅龙计算机技术股份有限公司简称“中科辅龙”或“中科辅龙公司”，龙驭视频会议系统简称“视频会议系统”。</p>
+
+	<p class="section"><a name="XitongTexing" id="XitongTexing">1.4 系统特性</a></p>
+
+	<p>作为业界优秀的软件视频会议系统，龙驭视频会议系统以其强大完善的应用功能、稳定卓越的系统性能提供给用户一个全方位、多层次、高效率的网络多媒体通讯平台。在这个平台上，用户可以轻松而高效的实现音频、视频、数据、应用等各种信息的多方交互，从而构筑一个基于网络的虚拟现实空间，以网络时代最先进的沟通方式满足用户对于远程会议、远程培训、远程咨询、协同工作等跨空间交流协作的需求。</p>
+	<p>龙驭视频会议系统的基本运行环境基于Internet，采用集中服务器和多点客户端的分布式结构，支持在部署的任意两个客户端之间进行实时交流。同时，由于系统采用了纯软件解决方案，除了普通的视音频外设如麦克风、耳机、摄像头等之外，不需要其他专门的硬件设备，从而极大的节约了成本。</p>
+	<p>龙驭视频会议系统的特色还包括：</p>
+	<ol>
+		<li>多路视音频：最多同时观看16路视频图像；</li>
+		<li>多种视频大小：系统支持多种视频格式，包括：176X144，352X288，640X480；</li>
+		<li>多种视频布局：系统提供大窗口、双窗口、4窗口、16窗口这4种视频布局模式；</li>
+		<li>屏幕共享：一方可以在本地看到另外一方计算机屏幕上的内容。屏幕上可以是包括工程图纸、演示文档在内的任何内容。屏幕共享最大支持1280*1024，32位彩色；</li>
+		<li>远程控制：一方可以远程控制另外一方的计算机，通过键盘、鼠标等操作对方计算机，完成远程协作；</li>
+		<li>文字交流：包括公聊和私聊；</li>
+		<li>文件传输：可以同时给多个用户发送文件，支持拖拽操作；</li>
+		<li>内置支持多种会议模式，方便用户灵活控制会议流程，同时用户可以根据需要定制专有的会议模式；</li>
+		<li>主席集中控制功能：系统提供的主席集中控制机制保证了会议安全、有序、可控地进行。普通用户只能观看和收听主席允许的内容。</li>
+	</ol>
+
+	<p class="chapter"><a name="JibenGainian" id="JibenGainian">2 视频会议基本概念</a></p>
+
+	<p class="section"><a name="ShipinHuiyi" id="ShipinHuiyi">2.1 视频会议</a></p>
+
+	<p>龙驭视频会议系统（LongConVideoConferenceSystem---VCS
+V2.0）是一种基于互联网平台的视频会议运行和管理系统，支持多种会议模式，通过视频、音频、文字、桌面共享等手段，为用户提供一个便捷、实用、成本低廉的会议工具，可广泛用于会议、客户服务、汇报工作、培训、联络等方面。</p>
+	<p>用户使用客户端登录服务器后即可参加会议，各种模式的会议在此举行。</p>
+
+	<p class="section"><a name="Jiagou" id="Jiagou">2.2 龙驭视频会议系统架构</a></p>
+
+	<p>龙驭视频会议系统包括会议运行系统和会议管理系统两个部分。其中，会议监控系统采用典型的3层B/S构架，管理员可以通过浏览器来访问其功能；会议运行系统采用C/S构架，用户使用客户端完成会议的召开，会议管理功能也集成在客户端，但仅供管理员使用。</p>
+	<p align="center"><img src="help.files/image003.png" /></p>
+	<ol>
+		<li>会议监控服务器：显示系统状态，在线人员情况，会议情况等等，服务器的参数维护也在这里进行。</li>
+		<li>会议服务器：负责客户端的接入和会议的运行组织；</li>
+		<li>媒体服务器：负责各种媒体信息的转发，包括视频、音频、桌面共享数据等；</li>
+		<li>客户端系统：负责会议的进行，各种模式的会议在此举行。管理员可以通过客户端进行会议的管理。</li>
+	</ol>
+
+	<p class="chapter"><a name="Anzhuang" id="Anzhuang">3 安装龙驭视频会议系统</a></p>
+
+	<p class="section">3.1 <a name="YunxingHuanjing" id="YunxingHuanjing">运行环境</a></p>
+
+	<p>龙驭视频会议系统客户端可在运行Windows操作系统的普通PC上运行，对硬件无特殊要求，如果要进行音视频的通讯，则需配备话筒、扬声器（或耳机）和摄像头。
+为了保证较好的会议质量，我们推荐使用奔腾II代以上的CPU，256M以上内存，并且安装有 Direct X8.0或以上版本的系统。</p>
+	<p>龙驭视频会议系统的服务器配置，需视您的应用范围而定，我们建议您联系我公司的技术支持人员，他们会根据你们的需要为您配置性能适宜的机器。在此，我们假设您使用的是由我公司为您配置、部署完成的视频会议服务器设备。</p>
+
+	<p class="section"><a name="BushuFuwuqi" id="BushuFuwuqi">3.2 部署服务器</a></p>
+
+	<p>龙驭视频会议系统的服务器部署，根据应用环境的区别有所不同，我们的系统支持人员会协助用户单位的系统管理员进行实施。</p>
+
+	<p class="section"><a name="AnzhuangKehuduan" id="AnzhuangKehuduan">3.3 安装客户端</a></p>
+
+	<p>首先确认用户的运行环境满足要求，向系统管理员确认龙驭视频会议系统服务器已经部署完成，请在您的浏览器中输入系统管理员提供的视频会议服务器页面地址，根据页面说明和指示下载视频会议客户端软件的安装程序。
+下载完成后，运行您刚下载的安装程序，如果您是Vista用户，并启用了“用户访问控制”，系统会在程序运行前再次征得您的同意。</p>
+
+	<p class="tip">您需要有本地管理员的权限才能够在您使用的机器上安装软件，如果您不具备相应权限，请与您单位的系统管理员联系。</p>
+
+	<p>安装程序运行后，首先出现下面的画面：</p>
+	<p align="center"><img src="help.files/image004.png" /></p>
+	<p>这里显示的是即将安装的系统的简单信息，请点击“下一步”。接下来显示的是使用许可协议（下图），</p>
+	<p align="center"><img src="help.files/image005.png" /></p>
+	<p>在您使用本软件前，您需要认可本协议。请选择“我接受本协议”，然后点击“下一步”按钮。</p>
+	<p align="center"><img src="help.files/image006.png" /></p>
+	<p>请选择龙驭视频会议系统的安装路径，默认是“C:\ProgramFiles\LongConVCS
+V2”，点击“浏览”按钮可以改变安装路径。确认安装路径后，请点击“下一步”按钮。</p>
+	<p align="center"><img src="help.files/image007.png" /></p>
+	<p>选择龙驭视频会议系统在开始菜单中文件夹的名称，确认后，请点击“下一步”按钮。</p>
+	<p align="center"><img src="help.files/image008.png" /></p>
+	<p>请根据您的使用习惯，选择是否“创建桌面快捷方式”、“创建快速启动快捷方式”以及是否让视频会议系统“登录Windows后自动运行”，确认后，点击“下一步”按钮。</p>
+	<p align="center"><img src="help.files/image009.png" /></p>
+	<p>安装程序显示您输入的各项选择信息供您确认，如果发现其中某项设置有误，可通过“上一步”按钮回退到对应的步骤进行修改，您可能要多次点击“上一步”按钮才能找到对应的步骤。在确认所有设置正确无误后，请点击“下一步”按钮。</p>
+	<p>根据您输入的信息，安装程序完成相应的文件操作和系统设置。当程序正确安装后，将会显示下面的窗口。</p>
+	<p align="center"><img src="help.files/image010.png" /></p>
+	<p>祝贺您，您马上就可以开始使用龙驭视频会议系统了！</p>
+
+	<p class="chapter"><a name="YonghuCaozuo" id="YonghuCaozuo">4 用户操作说明</a></p>
+
+	<p>在使用龙驭视频会议系统之前，请与您的系统管理员确认龙驭视频会议系统已经成功部署，并根据本文档第三章的说明完成客户端程序的安装。</p>
+
+	<p class="section"><a name="ShezhiShiyinpin" id="ShezhiShiyinpin">4.1 设置视音频设备</a></p>
+
+	<p>为了使用好视频会议系统，我们需要对进行视频会议所使用的视音频设备（耳机或音箱、话筒、摄像头等）进行一些设置。</p>
+	<p>从“工具”菜单中选择“视音频调节向导”进入视音频设备的设置。
+首先，根据系统的提示（下）确认您要使用的通讯设备正确连接并安装了必要的设备驱动程序，然后点击“下一步”按钮。
+	<p align="center"><img src="help.files/image011.png" /></p>
+	<p>接下来是扬声器的设置，扬声器指的是声音输出设备，也就是音箱或者耳机。
+您可以通过“播放测试”来确认声音输出设备工作是否正常。完成设置后，请点击“下一步”按钮。</p>
+	<p align="center"><img src="help.files/image012.png" /></p>
+	<p>然后是麦克风，也就是声音输入设备的设置，如果希望以语音的方式参与会议，您必须具有并设置好声音输入设备。 设置好麦克风后，请点击“下一步”按钮。</p>
+	<p align="center"><img src="help.files/image013.png" /></p>
+	<p>最后要设置的是摄像机——视频输入设备，通常是摄像头，您必须有摄像机设备才能将自己的视频影像传送给参加会议的其他人员，他们才能在开会时看到您，不过，没有摄像机设备，并不会影响您观看其他与会者的视频图像。</p>
+	<p align="center"><img src="help.files/image014.png" /></p>
+	<p>点击“高级属性”，可进入摄像机参数的设置界面，此界面的内容与您所使用的视频输入设备有关，下图是一个示例。</p>
+	<p align="center"><img src="help.files/image015.png" /> <img src="help.files/image016.png" /></p>
+
+	<p class="tip">您只能在未登录状态下进行视音频设备的设置，登录后，视音频设备已经在使用中，无法进行设置。</p>
+
+	<p class="section"><a name="Zhuce" id="Zhuce">4.2 注册用户</a></p>
+
+	<p>从开始里面找到LongConVCS V2程序组，选择其中的LongConVCS V2运行安装好的视频会议客户端软件。如下图所示</p>
+	<p align="center"><img src="help.files/firstrun.png" /></p>
+
+	<p>首先检查服务器是否已填写，在您初次使用时，服务器没有填写，请您选择文件菜单中的“添加服务器”来填入您所要连接的视频服务器的名字和地址。</p>
+	<p align="center"><img src="help.files/menu-addserver.png" /></p>
+	<p>如果您不知道该地址，请与您的系统管理员联系，服务器名字是方便记忆用的，您可以自己选取，或者按照管理员的要求填写。</p>
+	<p align="center"><img src="help.files/dialog-addserver.png" /></p>
+	<p>如果您的管理员已经给您分配了帐号及密码，您可以跳过本节剩余的部分。</p>
+	<p>点击“注册一个新账号”链接（见下图）。</p>
+	<p align="center"><img src="help.files/image017.png" /></p>
+	<p>在弹出的对话框中，填入相关的注册信息，如下图所示：</p>
+ 	<p align="center"><img src="help.files/image018.png" /></p>
+
+	<p class="section"><a name="Denglu" id="Denglu">4.3 登录服务器</a></p>
+
+	<p>注册成功之后，您就可以登录到视频会议服务器上了。您必须登录到服务器上，才能够与其他的用户进行沟通。
+在程序的主界面上，填入您的用户名和密码，为方便以后的使用，您可以选择让程序记住您的登录信息，以后就可以快速的登录了。</p>
+	<p align="center"><img src="help.files/image019.png" /></p>
+	<p>登录前，请再次确认设置了正确的服务器地址。 点击“登录”按钮，完成登录。</p>
+	<p class="tip">注意，如果您是在网吧或公共计算机上使用本系统，请不要让程序记录您的登录信息，否则可能造成您的帐号被盗用、通话信息被泄漏。 </p>
+
+	<p class="section"><a name="TianjiaLianxiren" id="TianjiaLianxiren">4.4 添加联系人</a></p>
+
+	<p>在您登录以后，可以加入其他使用同一服务器的成员作为自己的联系人。 要添加联系人，您需要知道所要加入的联系人在本服务器注册时使用的邮件地址。</p>
+	<p align="center"><img src="help.files/image020.png" /></p>
+	<p>如有图所示，点击主程序界面上的“添加联系人”按钮即可进入此功能。 您也可以从联系人菜单里的“查找/添加联系人”进入此功能。
+在添加联系人之前，请先选中所要使用的服务器。 然后，您将看到下面的对话框：</p>
+	<p align="center"><img src="help.files/image021.png" /></p>
+	<p>在此处填入联系人的邮件地址，点击“下一步”后，程序将按照您填入的信息寻找并显示找到的成员供您确认。
+确认无误程序找到的是您要添加的联系人之后，点击“确认”按钮，系统将发送您的请求给该成员，待其确认后，此人将出现在您的联系人列表里。以同样的方式，您可以继续添加其他联系人。
+</p>
+
+	<p class="section"><a name="JishiHuiyi" id="JishiHuiyi">4.5 召开即时会议</a></p>
+
+	<p>您可以和您的联系人直接通过即时会议进行联系，开始即时会议的方式有两种：1.在联系人的名字上点鼠标右键，选择“开始即时会议”。2.
+从“会议”菜单中选择“创建即时会议”。 如果您是从“会议”菜单中进入此功能的，程序会让您选择参加会议的人员，如下图所示：</p>
+	<p align="center"><img src="help.files/image022.png" /></p>
+	<p>选择参加会议的人员后，点击“确定”按钮，开始即时会议。
+如果某联系人未联机，您就不能和他开始即时会议，在这种情况下，您可以给他“发送留言”或者“发送电子邮件”。 </p>
+
+	<p class="section"><a name="XianshiMoshi" id="XianshiMoshi">4.6 显示模式</a></p>
+
+	<p>视频会议客户端程序提供5种显示布局：</p>
+	<ul>
+		<li>默认模式</li>
+		<li>大窗口模式</li>
+		<li>2窗口模式</li>
+		<li>4窗口模式</li>
+		<li>16窗口模式</li>
+	</ul>
+	<p>您可以在“查看”菜单的“视频布局”选项中切换这几种窗口布局。</p>
+	<p align="center"><img src="help.files/image023.png" /></p>
+	<p class="tip">在默认模式下，右键点击参会人员，在弹出菜单中选“弹出显示视频”，或双击参会人员的视频显示区域，可以弹出该用户的窗口，将该用户的窗口与会议室窗口分离显示。弹出显示的窗口，可以在右键菜单中选择改变窗口大小，是否全屏显示，是否总在最前。</p>
+	<p class="tip">当右侧的参会人员过多显示不下时，可以用右下角的上下滚动按钮，滚动显示。</p>
+	<p>另外几种模式如下图所示：</p>
+	<p align="center"><img src="help.files/models.png" /></p>
+	<p>在这几种模式下，右键点击参会人员，在弹出菜单中选“弹出显示视频”，或双击参会人员的视频显示区域，可以将该用户的窗口显示到左边的视频显示区域。如果左边的显示区域已被占满，则替换其中的第一个。
+当右侧的参会人员过多显示不下时，可以用右下角的上下滚动按钮，滚动显示。</p>
+
+	<p class="section"><a name="KaiguanShipin" id="KaiguanShipin">4.7 打开和关闭视频显示</a></p>
+
+	<p>在会议进行时，您可以打开或者关闭视频的显示。
+如果您想看到某个用户的视频图像，请用右键点击该用户，在关联菜单中选择“观看图像”。您看到的该用户的视频图像有三种可能：
+当该用户有视频输入设备并开启视频传送功能时，您看到的是该用户实时变化的视频图像。
+当该用户没有视频输入设备或未开启视频传送功能，如果他设置了“个性图片”，则您看到的将是该用户选择的一幅静止图像的画面。
+如果该用户未设置“个性图片”，您看到的将是系统缺省的人形静止图像。</p>
+
+	<p class="section"><a name="GexingTupian" id="GexingTupian">4.8 设置个性图片</a></p>
+
+	<p>如果您不希望别人看到您的实时视频图像，可以设置一个团片代替您的视频形象，在“工具”菜单中选择“设置个性图片……”。图片的规格缺省为176x144，图片文件的大小不能超过45kb</p>
+	<p align="center"><img src="help.files/seticon.png" /></p>
+
+	<p class="section"><a name="Lianxiren" id="Lianxiren">4.9 联系人功能</a></p>
+	<p>在软件的“联系人菜单中”，您可一选用添加、管理联系人以及与联系人沟通的一些功能。其中包括：</p>
+	<ul>
+		<li>查找/添加联系人：通过电子邮件地址，在注册用户中查找联系人并添加到自己的联系人列表中。</li>
+		<li>发送邮件：调用您系统中的邮件处理程序，给联系人发送电子邮件，联系人的电子邮件地址是从他在系统中的注册数据中获得的。</li>
+		<li>发送留言：通过视频会议系统给联系人留言，当联系人下次登录时，将看到您给他的留言。</li>
+		<li>查看留言：查看其他用户发送给您的留言信息。</li>
+		<li>管理我的联系人：查看联系人信息，删除联系人等。</li>
+		<li>管理我的联系人组：以分组的方式管理联系人，当您的联系人比较多时，通过分组可以更加有效的进行管理。</li>
+	</ul>
+	<p class="tip">您的联系人还包括公共联系人，公共联系人是系统数据，由管理员负责维护，您不能对公共联系人进行管理。</p>
+
+	<p class="section"><a name="Lanmu" id="Lanmu">4.10 主窗口栏目</a></p>
+	<p>为方便您的使用，主窗口将信息分为三个栏目显示，通过标签的方式呈现。通过选择不同的标签，您将看到不同类别的信息。他们是：</p>
+	<p>联系人栏目：显示您的联系人及其组织结构，其中在线的联系人排列在前并加有标记。</p>
+	<p align="center"><img src="help.files/maintab1.png" /></p>
+	<p>会议栏目：按类别显示所有与您有关的会议。分为：进行中的会议、计划中的会议和已结束的会议。</p>
+	<p align="center"><img src="help.files/maintab2.png" /></p>
+	<p>系统信息栏目：显示您的联系人留言、会议通知、系统公告等内容。</p>
+	<p align="center"><img src="help.files/maintab3.png" /></p>
+
+	<p class="section"><a name="Jinjie" id="Jinjie">4.11 应用进阶</a></p>
+	<dl>
+		<dt>同时参加多个会议</dt>
+		<dd>在视频会议系统的支持下，您就像有了分身术，可以同时参加多个会议，例如您可以一边在正式会议中参加部门的例会，
+		一边在即时会议里与客户进行商谈。或者是在跟合作伙伴谈判的同时，通过同一个会议系统，与自己的业务小组确定合作方案、谈判报价等。</dd>
+	</dl>
+	<dl>
+		<dt>多服务器支持</dt>
+		<dd>视频会议客户端可以支持多个服务器。您只需要启动一个客户端软件，就可以登录不同的服务器，您在不同的服务器上可以有不同的身份，使您的沟通更加方便灵活。</dd>
+	</dl>
+
+	<p class="chapter"><a name="GuanliyuanCaozuo" id="GuanliyuanCaozuo">5 管理员操作说明</a></p>
+
+	<p class="section">5.1 <a name="XitongJuese" id="XitongJuese">系统角色管理</a></p>
+
+	<p>系统中有四类角色:普通用户、会议管理员、系统管理员和联系人组管理员。其中，新注册的用户自动成为普通用户；联系人组管理员在公共联系人管理中管理。
+点击角色名称可以查看角色信息。 选中一个角色，点击“角色成员管理”可以为指定角色添加或删除用户。</p>
+
+	<p class="section">5.2 <a name="GongGongLianxiren" id="GongGongLianxiren">公共联系人管理</a></p>
+
+	<p>通过公共联系人管理，管理员可以方便的创建和管理机构成员的组织关系，属于相同机构的成员将自动成为相互的公共联系人。</p>
+	<p align="center"><img src="help.files/contactsmanage.png" /></p>
+	<p>您可以通过对左侧的用户树进行拖曳来改变用户和群组的层次关系，要删除用户或群组，请在欲删除的节点上点击鼠标右键，选择“删除”。</p>
+	<p class="tip">在改变了用户和群组的层次关系后，请不要进行群组的删除操作，因为删除操作时立即执行的，此时层次结构的变化尚未更新到数据库中，如果进行了删除操作，该群组将会从原来的分枝位置而不是改变后的分枝位置上被删除，这可能不是您所希望的结果。</p>
+	<p class="tip">在进行群组的层次结果改变时，要避免把某一群组经过多次拖曳后，成为他原先的后代结点的后代的情况。比如，原来市场部下面设公关部，经过移动后市场部成为公关部的下属部门，这种情况目前是不允许的。</p>
+
+	<p class="section">5.3 <a name="HuiyiMoshi" id="HuiyiMoshi">会议模式管理</a></p>
+
+	<p>会议模式描述了参加会议的不同人员的角色及对应的权限控制。系统内置了几种常用的模式，包括常规会议模式、网上培训模式、网上咨询模式和主控会议模式。
+用户也可以根据实际需要定义自己的会议模式。 对于自定义模式，用户可以进行编辑，如添加新的角色、修改角色的权限等等。</p>
+
+	<p class="section">5.4 <a name="XitongGonggao" id="XitongGonggao">发布系统公告</a></p>
+
+	<p>系统管理员可以发送系统公告，系统公告将发送给所有用户，系统管理员登录客户端后，可从“工具”菜单中选取“发布系统公告”进入该功能。</p>
+
+	<p class="section">5.5 <a name="ZhengshiHuiyi" id="ZhengshiHuiyi">创建正式会议</a></p>
+
+	<p>使用视频会议系统召开会议首先需要创建会议.成功的创建一个会议需要完成以下内容：会议基本信息，会议人员，会议资料。
+基本信息包括会议的标题、描述以及开会时间。</p>
+	<p align="center"><img src="help.files/concreate1.png" /></p>
+	<p>根据不同的会议模式，可以将参加会议的人员赋予相应的角色。其中，会议模式有以下几种选项：</p>
+	<ul>
+		<li>常规会议模式</li>
+		<li>网上培训模式</li>
+		<li>网上咨询模式</li>
+		<li>主控会议模式</li>
+	</ul>
+	<p>人员设置部分可直接选择与会人员，无需征求本人的同意。对应于选定的会议模式，您可以给参会人员分配相应的角色，操作方法是，
+首先选择您希望的会议模式，然后选择欲加入的参会人员的角色，最后在左侧的用户树中找到要加入的人员或者组织的节点，在该节点上点击鼠标右键，
+选择“加入会议”。使用界面右侧下部的删除按钮，您可以删除与会人员列表中选定的用户。此处也可以设置会议的主持人。 </p>
+	<p align="center"><img src="help.files/concreate2.png" /></p>
+	<p>在会议资料设置部分，您可以方便的上传和删除会议所需要的附加文档。</p>
+	<p align="center"><img src="help.files/concreate3.png" /></p>
+	<p>在全部设置信息填写完成后，点击对话框下方的“确定”按钮，将提交您的会议创建申请，系统会在确认数据的有效性后创建这次会议。</p>
+	<p class="chapter"><a name="ServerManage" id="ServerManage">6 服务器管理</a></p>
+
+	<p class="section">6.1 <a name="ServerEntry" id="ServerEntry">进入管理页面</a></p>
+	<p>服务器的监控管理部分以Web方式提供。首先在您的浏览器（IE，Firefox，Opera等）中输入服务器管理网站的地址：</p>
+	<p>http://&lt;服务器的IP地址&gt;/Webmanager/index.do</p>
+	<p>您将进入下面的页面。</p>
+	<p align="center"><a href="help.files/serverhome.png" target="bigpic" ><img src="help.files/serverhome-thumb.png" border="1" /></a></p>
+	<p>选择“服务器设置”，将进入下面的身份认证页面：</p>
+	<p align="center"><a href="help.files/serverlogin.png" target="bigpic" ><img src="help.files/serverlogin-thumb.png" border="1" /></a></p>
+	<p>输入视频会议系统管理员的用户名和密码，通过验证后，就进入服务器管理页面了。</p>
+
+	<p class="section">6.2 <a name="ServerConfigTitle" id="ServerConfigTitle">设置网站标题</a></p>
+	<p align="center"><a href="help.files/serverconfig1.png" target="bigpic" ><img src="help.files/serverconfig1-thumb.png" border="1" /></a></p>
+
+	<p class="section">6.3 <a name="ServerConfigIP" id="ServerConfigIP">设置服务器IP地址</a></p>
+	<p align="center"><a href="help.files/serverconfig2.png" target="bigpic" ><img src="help.files/serverconfig2-thumb.png" border="1" /></a></p>
+
+	<p class="section">6.4 <a name="ServerConfigPass" id="ServerConfigPass">修改管理员密码</a></p>
+	<p align="center"><a href="help.files/serverconfig3.png" target="bigpic" ><img src="help.files/serverconfig3-thumb.png" border="1" /></a></p>
+
+	<p class="section">6.5 <a name="ServerConfigBackup" id="ServerConfigBackup">数据备份和恢复</a></p>
+	<p align="center"><a href="help.files/serverconfig4.png" target="bigpic" ><img src="help.files/serverconfig4-thumb.png" border="1" /></a></p>
+	<p class="section">6.6 <a name="ServerConfigStatus" id="ServerConfigStatus">查看和改变服务器状态</a></p>
+	<p align="center"><a href="help.files/serverconfig5.png" target="bigpic" ><img src="help.files/serverconfig5-thumb.png" border="1" /></a></p>
+	<p class="section">6.7 <a name="ServerMembersOnline" id="ServerMembersOnline">查看在线人员</a></p>
+	<p align="center"><a href="help.files/serveronlinemember.png" target="bigpic" ><img src="help.files/serveronlinemember-thumb.png" border="1" /></a></p>
+	<p class="section">6.8 <a name="ServerConferencesOnline" id="ServerConferencesOnline">查看进行中的会议</a></p>
+	<p align="center"><a href="help.files/serverconferences.png" target="bigpic" ><img src="help.files/serverconferences-thumb.png" border="1" /></a></p>
+
+</div>
+</body>
+</html>

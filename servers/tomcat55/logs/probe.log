@@ -1,0 +1,113 @@
+11 五月 2009 17:03:53 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - setWrapper() called
+11 五月 2009 17:03:53 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Initializing servlet 'probe'
+11 五月 2009 17:03:53 [http-80-Processor25] INFO  org.springframework.core.CollectionFactory  - Commons Collections 3.x available
+11 五月 2009 17:03:53 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - FrameworkServlet 'probe': initialization started
+11 五月 2009 17:03:53 [http-80-Processor25] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/probe]  - Loading WebApplicationContext for Spring FrameworkServlet 'probe'
+11 五月 2009 17:03:53 [http-80-Processor25] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-controllers.xml]
+11 五月 2009 17:03:53 [http-80-Processor25] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-stats.xml]
+11 五月 2009 17:03:53 [http-80-Processor25] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-probe-servlet.xml]
+11 五月 2009 17:03:53 [http-80-Processor25] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-resources.xml]
+11 五月 2009 17:03:53 [http-80-Processor25] INFO  org.springframework.ui.context.support.UiApplicationContextUtils  - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@1eb717e]
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.model.stats.StatsCollection  - Stats data file not found. Empty file assumed.
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.quartz.simpl.SimpleThreadPool  - Job execution threads will use class loader of thread: http-80-Processor25
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.quartz.core.QuartzScheduler  - Quartz Scheduler v.1.5.1 created.
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.quartz.simpl.RAMJobStore  - RAMJobStore initialized.
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.quartz.impl.StdSchedulerFactory  - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.quartz.impl.StdSchedulerFactory  - Quartz scheduler version: 1.5.1
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean  - Starting Quartz scheduler now
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Using context class [org.springframework.web.context.support.XmlWebApplicationContext] for servlet 'probe'
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Unable to locate LocaleResolver with name 'localeResolver': using default [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@132b67c]
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Using ThemeResolver [org.springframework.web.servlet.theme.FixedThemeResolver@6aa95b]
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - No HandlerAdapters found in servlet 'probe': using default
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - FrameworkServlet 'probe': initialization completed in 781 ms
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Servlet 'probe' configured successfully
+11 五月 2009 17:03:54 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.beans.ContainerWrapperBean  - Using org.jstripe.tomcat.probe.Tomcat55ContainerAdaptor
+11 五月 2009 17:03:55 [http-80-Processor25] INFO  org.springframework.ui.context.support.ResourceBundleThemeSource  - Theme created: name 'theme-classic', basename [theme-classic]
+11 五月 2009 17:03:55 [http-80-Processor25] INFO  org.springframework.web.util.ExpressionEvaluationUtils  - Using JSP 2.0 ExpressionEvaluator
+11 五月 2009 17:03:55 [http-80-Processor25] INFO  org.displaytag.export.ExportViewFactory  - Initializing ExportViewFactory with type={xml}
+11 五月 2009 17:03:55 [http-80-Processor25] INFO  org.displaytag.properties.TableProperties  - LocaleResolver initialized to org.displaytag.localization.I18nSpringAdapter.
+11 五月 2009 17:03:55 [http-80-Processor25] INFO  org.displaytag.properties.TableProperties  - I18nResourceProvider initialized to org.displaytag.localization.I18nSpringAdapter.
+11 五月 2009 17:04:10 [DefaultQuartzScheduler_Worker-3] INFO  org.jstripe.tomcat.probe.model.stats.StatsCollection  - stats serialized in 110ms.
+11 五月 2009 17:05:06 [Thread-34] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/probe]  - Closing WebApplicationContext of Spring FrameworkServlet 'probe'
+11 五月 2009 17:05:06 [Thread-34] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean  - Shutting down Quartz scheduler
+11 五月 2009 17:05:06 [Thread-34] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+11 五月 2009 17:05:06 [Thread-34] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+11 五月 2009 17:05:06 [Thread-34] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+11 五月 2009 17:05:06 [Thread-34] INFO  org.jstripe.tomcat.probe.model.stats.StatsCollection  - stats serialized in 16ms.
+11 五月 2009 17:05:30 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - setWrapper() called
+11 五月 2009 17:05:30 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Initializing servlet 'probe'
+11 五月 2009 17:05:30 [http-80-Processor25] INFO  org.springframework.core.CollectionFactory  - Commons Collections 3.x available
+11 五月 2009 17:05:30 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - FrameworkServlet 'probe': initialization started
+11 五月 2009 17:05:30 [http-80-Processor25] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/probe]  - Loading WebApplicationContext for Spring FrameworkServlet 'probe'
+11 五月 2009 17:05:30 [http-80-Processor25] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-controllers.xml]
+11 五月 2009 17:05:30 [http-80-Processor25] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-stats.xml]
+11 五月 2009 17:05:30 [http-80-Processor25] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-probe-servlet.xml]
+11 五月 2009 17:05:30 [http-80-Processor25] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-resources.xml]
+11 五月 2009 17:05:30 [http-80-Processor25] INFO  org.springframework.ui.context.support.UiApplicationContextUtils  - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@8e753c]
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.model.stats.StatsCollection  - stats data read in 109ms.
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.quartz.simpl.SimpleThreadPool  - Job execution threads will use class loader of thread: http-80-Processor25
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.quartz.core.QuartzScheduler  - Quartz Scheduler v.1.5.1 created.
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.quartz.simpl.RAMJobStore  - RAMJobStore initialized.
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.quartz.impl.StdSchedulerFactory  - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.quartz.impl.StdSchedulerFactory  - Quartz scheduler version: 1.5.1
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean  - Starting Quartz scheduler now
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Using context class [org.springframework.web.context.support.XmlWebApplicationContext] for servlet 'probe'
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Unable to locate LocaleResolver with name 'localeResolver': using default [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@ba679e]
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Using ThemeResolver [org.springframework.web.servlet.theme.FixedThemeResolver@1e8b671]
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - No HandlerAdapters found in servlet 'probe': using default
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - FrameworkServlet 'probe': initialization completed in 860 ms
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Servlet 'probe' configured successfully
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.jstripe.tomcat.probe.beans.ContainerWrapperBean  - Using org.jstripe.tomcat.probe.Tomcat55ContainerAdaptor
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.springframework.ui.context.support.ResourceBundleThemeSource  - Theme created: name 'theme-classic', basename [theme-classic]
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.springframework.web.util.ExpressionEvaluationUtils  - Using JSP 2.0 ExpressionEvaluator
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.displaytag.export.ExportViewFactory  - Initializing ExportViewFactory with type={xml}
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.displaytag.properties.TableProperties  - LocaleResolver initialized to org.displaytag.localization.I18nSpringAdapter.
+11 五月 2009 17:05:31 [http-80-Processor25] INFO  org.displaytag.properties.TableProperties  - I18nResourceProvider initialized to org.displaytag.localization.I18nSpringAdapter.
+11 五月 2009 17:05:51 [Thread-34] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/probe]  - Closing WebApplicationContext of Spring FrameworkServlet 'probe'
+11 五月 2009 17:05:51 [Thread-34] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean  - Shutting down Quartz scheduler
+11 五月 2009 17:05:51 [Thread-34] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+11 五月 2009 17:05:51 [Thread-34] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+11 五月 2009 17:05:51 [Thread-34] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+11 五月 2009 17:05:51 [Thread-34] INFO  org.jstripe.tomcat.probe.model.stats.StatsCollection  - stats serialized in 47ms.
+11 五月 2009 17:07:07 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.ProbeServlet  - setWrapper() called
+11 五月 2009 17:07:07 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Initializing servlet 'probe'
+11 五月 2009 17:07:07 [http-80-Processor24] INFO  org.springframework.core.CollectionFactory  - Commons Collections 3.x available
+11 五月 2009 17:07:07 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.ProbeServlet  - FrameworkServlet 'probe': initialization started
+11 五月 2009 17:07:07 [http-80-Processor24] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/probe]  - Loading WebApplicationContext for Spring FrameworkServlet 'probe'
+11 五月 2009 17:07:07 [http-80-Processor24] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-controllers.xml]
+11 五月 2009 17:07:07 [http-80-Processor24] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-stats.xml]
+11 五月 2009 17:07:07 [http-80-Processor24] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-probe-servlet.xml]
+11 五月 2009 17:07:07 [http-80-Processor24] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from ServletContext resource [/WEB-INF/spring-resources.xml]
+11 五月 2009 17:07:07 [http-80-Processor24] INFO  org.springframework.ui.context.support.UiApplicationContextUtils  - Unable to locate ThemeSource with name 'themeSource': using default [org.springframework.ui.context.support.ResourceBundleThemeSource@1d590d]
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.model.stats.StatsCollection  - stats data read in 110ms.
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.quartz.simpl.SimpleThreadPool  - Job execution threads will use class loader of thread: http-80-Processor24
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.quartz.core.QuartzScheduler  - Quartz Scheduler v.1.5.1 created.
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.quartz.simpl.RAMJobStore  - RAMJobStore initialized.
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.quartz.impl.StdSchedulerFactory  - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.quartz.impl.StdSchedulerFactory  - Quartz scheduler version: 1.5.1
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean  - Starting Quartz scheduler now
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Using context class [org.springframework.web.context.support.XmlWebApplicationContext] for servlet 'probe'
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Unable to locate MultipartResolver with name 'multipartResolver': no multipart request handling provided
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Unable to locate LocaleResolver with name 'localeResolver': using default [org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@15004dd]
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Using ThemeResolver [org.springframework.web.servlet.theme.FixedThemeResolver@6f6068]
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.ProbeServlet  - No HandlerAdapters found in servlet 'probe': using default
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.ProbeServlet  - FrameworkServlet 'probe': initialization completed in 984 ms
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.ProbeServlet  - Servlet 'probe' configured successfully
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.jstripe.tomcat.probe.beans.ContainerWrapperBean  - Using org.jstripe.tomcat.probe.Tomcat55ContainerAdaptor
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.springframework.ui.context.support.ResourceBundleThemeSource  - Theme created: name 'theme-classic', basename [theme-classic]
+11 五月 2009 17:07:08 [http-80-Processor24] INFO  org.springframework.web.util.ExpressionEvaluationUtils  - Using JSP 2.0 ExpressionEvaluator
+11 五月 2009 17:07:10 [DefaultQuartzScheduler_Worker-7] INFO  org.jstripe.tomcat.probe.model.stats.StatsCollection  - stats serialized in 31ms.
+11 五月 2009 17:07:12 [http-80-Processor22] INFO  org.displaytag.export.ExportViewFactory  - Initializing ExportViewFactory with type={xml}
+11 五月 2009 17:07:13 [http-80-Processor22] INFO  org.displaytag.properties.TableProperties  - LocaleResolver initialized to org.displaytag.localization.I18nSpringAdapter.
+11 五月 2009 17:07:13 [http-80-Processor22] INFO  org.displaytag.properties.TableProperties  - I18nResourceProvider initialized to org.displaytag.localization.I18nSpringAdapter.
+11 五月 2009 17:07:47 [Thread-34] INFO  org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/probe]  - Closing WebApplicationContext of Spring FrameworkServlet 'probe'
+11 五月 2009 17:07:47 [Thread-34] INFO  org.springframework.scheduling.quartz.SchedulerFactoryBean  - Shutting down Quartz scheduler
+11 五月 2009 17:07:47 [Thread-34] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+11 五月 2009 17:07:47 [Thread-34] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+11 五月 2009 17:07:47 [Thread-34] INFO  org.quartz.core.QuartzScheduler  - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+11 五月 2009 17:07:47 [Thread-34] INFO  org.jstripe.tomcat.probe.model.stats.StatsCollection  - stats serialized in 31ms.

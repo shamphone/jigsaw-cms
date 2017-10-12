@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC 
+	"-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" 
+	"http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+
+<form-validation>
+	<formset>
+
+		<!-- 添加组 -->
+		<form name="/saveGroup">
+			<field property="groupName" depends="required">
+				<arg0 key="group.name" />
+			</field>
+		</form>
+
+		<!-- 修改组 -->
+		<form name="/modifyGroup">
+			<field property="groupName" depends="required">
+				<arg0 key="group.name" />
+			</field>
+		</form>
+
+		<!-- 添加用户 -->
+		<form name="/saveMember">
+			<field property="accountName" depends="required,minlength,maxlength">
+				<arg0 key="user.accountName" />
+				<arg1 key="${var:minlength}" name="minlength" resource="false" />
+				<arg2 key="${var:maxlength}" name="maxlength" resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>4</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>16</var-value>
+				</var>
+			</field>
+			<field property="password" depends="required,minlength,maxlength,twofields">
+				<msg name="twofields" key="errors.twofields" />
+				<arg0 key="user.password" />
+				<arg1 key="${var:minlength}" name="minlength" resource="false" />
+				<arg2 key="${var:maxlength}" name="maxlength" resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>6</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>16</var-value>
+				</var>
+				<var>
+					<var-name>secondProperty</var-name>
+					<var-value>confirmPassword</var-value>
+				</var>
+			</field>
+			<field property="lastName" depends="required">
+				<arg0 key="user.lastName" />
+			</field>
+			<field property="firstName" depends="required">
+				<arg0 key="user.firstName" />
+			</field>
+			<field property="email" depends="required,email">
+				<arg0 key="user.email" />
+			</field>
+		</form>
+
+		<!-- 修改用户密码 -->
+		<form name="/updateUserPassword">
+			<field property="newPassword" depends="required,minlength,maxlength,twofields">
+				<msg name="twofields" key="errors.twofields" />
+				<arg0 key="user.password" />
+				<arg1 key="${var:minlength}" name="minlength" resource="false" />
+				<arg2 key="${var:maxlength}" name="maxlength" resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>6</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>16</var-value>
+				</var>
+				<var>
+					<var-name>secondProperty</var-name>
+					<var-value>confirmPassword</var-value>
+				</var>
+			</field>
+		</form>
+
+		<!-- 发送系统公告 -->
+		<form name="/sendBulletin">
+			<field property="title" depends="required">
+				<arg0 key="bulletin.tilte" />
+			</field>
+			<field property="content" depends="required">
+				<arg0 key="bulletin.content" />
+			</field>
+		</form>
+
+		<!-- 修改管理员密码 -->
+		<form name="/updateAdminPassword">
+			<field property="newPassword" depends="required,minlength,maxlength,twofields">
+				<msg name="twofields" key="errors.twofields" />
+				<arg0 key="admin.password" />
+				<arg1 key="${var:minlength}" name="minlength" resource="false" />
+				<arg2 key="${var:maxlength}" name="maxlength" resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>6</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>16</var-value>
+				</var>
+				<var>
+					<var-name>secondProperty</var-name>
+					<var-value>confirmPassword</var-value>
+				</var>
+			</field>
+		</form>
+		
+	</formset>
+</form-validation>

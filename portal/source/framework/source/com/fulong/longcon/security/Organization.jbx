@@ -1,0 +1,17 @@
+[PropertyInfo]
+administrator,com.fulong.longcon.security.User,false,false, , ,true,<default>
+area,com.fulong.longcon.dict.Entry,false,false, , ,true,<default>
+businessDescription,String,false,false, , ,true,<default>
+description,String,false,false, , ,true,<default>
+enterpriseName,String,false,false, , ,true,<default>
+groups,com.fulong.longcon.security.GroupIterator,false,false, , ,true,<default>
+lastModifiedDate,java.util.Date,false,false, , ,true,<default>
+rootClientGroup,com.fulong.longcon.security.Group,false,false, , ,true,<default>
+rootDeparement,com.fulong.longcon.security.Group,false,false, , ,true,<default>
+rootGroups,java.util.Iterator,false,false, , ,true,<default>
+siccodes,com.fulong.longcon.dict.Entry[],false,false, , ,true,<default>
+[IconNames]
+
+
+
+

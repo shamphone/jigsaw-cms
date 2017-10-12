@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 公用的Context 配置文件 -->
+<!-- Context 配置说明：
+1. backgroundProcessorDelay：这个值代表在context及其子容器（包括所有的wrappers）上调用backgroundProcess方法的延时，以秒为单位。如果延时值非负，子容器不会被调用，也就是说子容器使用自己的处理线程。如果该值为正，会创建一个新的线程。在等待指定的时间以后，该线程在主机及其 子容器上调用backgroundProcess方法。context利用后台处理session过期，监测类的变化用于重新载入。如果没有指定，该属性的缺省值是－1，说明context依赖其所属的Host的后台处理。 
+2. className：实现的Java类名。该类必须实现org.apache.catalina.Context接口。如果没有指定，使用标准实现（在下面定义）。 
+3. cookies：如果想利用cookies来传递session identifier（需要客户端支持cookies），设为ture。否则为false，这种情况下只能依靠URL Rewriting传递session identifier。 
+4. crossContext：如果想在应用内调用ServletContext.getContext()来返回在该虚拟主机上运行的其他web application的request dispatcher,设为true。在安全性很重要的环境中，设为false，使得getContext()总是返回null。缺省值为false。 
+5. docBase：该web应用的文档基准目录（Document Base，也称为Context Root），或者是WAR文件的路径。可以使用绝对路径，也可以使用相对于context所属的Host的appBase路径。 
+6. override：如果想利用该Context元素中的设置覆盖DefaultContext中相应的设置，设为true。缺省情况下使用DefaultContext中的设置。 
+7. privileged：设为true，允许context使用container servlets，比如manager servlet。 
+8. path：web应用的context路径。catalina将每个URL的起始和context path进行比较，选择合适的web应用处理该请求。特定Host下的context path必须是惟一的。如果context path为空字符串（""），这个context是所属Host的缺省web应用,用来处理不能匹配任何context path的请求。 
+9. reloadable：如果希望Catalina监视/WEB-INF/classes/和/WEB-INF/lib下面的类是否发生变化，在发生变化的时候自动重载web application，设为true。这个特征在开发阶段很有用，但也大大增加了服务器的开销。因此，在发布以后，不推荐使用。但是，你可以使用Manager应用在必要的时候触发应用的重载。 
+10. wrapperClass：org.apache.catalina.Wrapper实现类的名称，用于该Context管理的servlets。如果没有指定，使用标准的缺省值。 
+ -->
+	<Context  reloadable="true"  crossContext="true">
+    <!-- 监视的资源，一旦这个资源被改动，则该WebApp将被重启 -->
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>	
+    <!-- 是否支持在Tomcat启动的时候加载上一次会话的缓存，开发阶段不打开，运营阶段需打开 -->
+    <!--
+    <Manager pathname="SESSIONS.ser" />
+    -->
+    <!-- 所使用的数据库，注意和server.xml中定义的保持一致。name不能改，global和GlobalResource中定义的数据库保持一致 -->
+	<ResourceLink  name="jdbc/oracle"    global="jdbc/oracle"     type="avax.sql.DataSource"/>
+	<!-- 所使用的CooLink服务，注意和server.xml中定义的保持一致。name不能改，global和GlobalResource中定义的数据库保持一致 -->	
+	<ResourceLink  name="coolink/root"    global="coolink/root"     type="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+	<!-- 缺省的Context参数，不能修改-->	
+   	<Parameter  name="contextConfigLocation" value="/WEB-INF/app-context.xml,classpath:app-config.xml" override="true"/>
+   	<!-- 缺省的Context参数，不能改-->
+   	<Parameter  name="parentContextJndiName" value="java:comp/env/coolink/root"  override="false"/>
+</Context>

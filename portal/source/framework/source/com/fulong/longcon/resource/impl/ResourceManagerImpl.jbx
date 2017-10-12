@@ -1,0 +1,16 @@
+[PropertyInfo]
+cache,com.fulong.common.cache.Cache,false,false, , ,false,<default>
+cacheFactory,com.fulong.common.cache.CacheFactory,false,false, , ,true,<default>
+dao,String,false,false, , ,true,<default>
+datasource,javax.sql.DataSource,false,false, , ,true,<default>
+nodeDef,com.fulong.longcon.repository.NodeDefinition,false,false, , ,false,<default>
+passport,com.fulong.longcon.security.SecurityManager,false,false, , ,false,<default>
+provider,com.fulong.common.dao.JdbcDaoProvider,false,false, , ,true,<default>
+repository,com.fulong.longcon.repository.Repository,false,false, , ,true,<default>
+root,com.fulong.longcon.resource.Resource,false,false, , ,false,<default>
+rootResource,com.fulong.longcon.resource.Resource,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

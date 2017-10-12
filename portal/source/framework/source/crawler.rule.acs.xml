@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 规则列表,可以定义多个规则
+    每条规则将URL地址影射到静态页面上，对于地址：
+    http://www.sme.gov.cn/web/page/browserPage.do?channelID=456&contentID=2345
+     被分解为路径/web/page/browserPage.do
+     和各种查询channelID=456和contentID=2345
+     影射到路径时，路径被按/分解并解析成{0}、{1}、{2}..如上述例子，{0}=web,{1}=page,{2}=browserPage，不包括后缀。
+     查询被按照键来分解，如{channelID},{contentID}。
+     文件路径是按照上述的分解结果组合，如/{0}/{channelID}/{contentID}.html将上述的文件影射到路径/web/456/2345.html.
+    -->
+<rules>
+	<rule>
+		<!-- 路径规则,装换如下类型的地址：
+        http://www.longcon.cn/dataView/jthygk.do?year=2006&industry=01
+        到/jthygk/2006/01.html
+        -->
+		<path-pattern>/dataView/(\S)*</path-pattern>
+		<query-key>
+			<!-- 查询字符串中必须包含的键值-->
+			<included>year</included>
+			<included>industry</included>
+			<!-- 查询字符串中不能包含的键值-->
+			<excluded>searchStandard</excluded>
+		</query-key>
+		<!--文件夹模式-->
+		<file-pattern>/{1}/{year}/{industry}.html</file-pattern>
+	</rule>
+<rule>
+		<!-- 路径规则,装换如下类型的地址：
+       http://www.longcon.cn/dataView/jthyxz.do?year=2004&industry=01&siscode=0710&searchStandard=HYXZ_A90_TB
+        到/jthyxz/2004/01/0710/HYXZ_A90_TB.html
+        -->
+		<path-pattern>/dataView/(\S)*</path-pattern>
+		<query-key>
+			<!-- 查询字符串中必须包含的键值-->
+			<included>year</included>
+			<included>siscode</included>
+			<included>industry</included>
+			<!-- 查询字符串中不能包含的键值-->
+			<included>searchStandard</included>
+		</query-key>
+		<!--文件夹模式-->
+		<file-pattern>/{1}/{year}/{industry}/{siscode}/{searchStandard}.html</file-pattern>
+	</rule>
+
+</rules>

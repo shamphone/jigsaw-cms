@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<bean id="conferenceManager" class="com.fulong.lyvc.jcr.ConferenceRepository" init-method="init">
+		<property name="repository" ref="repository" />
+		<property name="orgId" value="1000000000000" />
+	</bean>
+
+	<bean id="valueFactory" class="com.fulong.longcon.repository.value.ValueFactoryImpl"
+		init-method="init">
+	</bean>
+
+	<bean id="definitionManager"
+		class="com.fulong.longcon.repository.definition.NodeDefinitionManagerImpl"
+		init-method="init">
+		<property name="dataSource">
+			<ref bean="datasource" />
+		</property>
+		<property name="valueFactory">
+			<ref bean="valueFactory" />
+		</property>
+		<property name="dao">
+			<value>oracle2</value>
+		</property>
+	</bean>
+
+	<bean id="cacheFactory" class="com.fulong.common.cache.BasicCacheFactory">
+		<property name="config">
+			<value>cache.max.properties</value>
+		</property>
+	</bean>
+
+	<bean id="queryManagers" class="com.fulong.longcon.repository.core.InternalQueryManager"
+		init-method="init">
+	</bean>
+
+	<bean id="sqlQuery" class="com.fulong.longcon.repository.impl.SQLQueryCreator3">
+		<property name="repository" ref="repository" />
+	</bean>
+
+	<bean id="repository" class="com.fulong.longcon.repository.impl.RepositoryImpl"
+		init-method="init">
+		<property name="valueFactory">
+			<ref bean="valueFactory" />
+		</property>
+		<property name="cacheFactory">
+			<ref bean="cacheFactory" />
+		</property>
+		<property name="definitionManager">
+			<ref bean="definitionManager" />
+		</property>
+		<property name="dataSource">
+			<ref bean="datasource" />
+		</property>
+		<property name="dao">
+			<value>oracle2</value>
+		</property>
+		<property name="version">
+			<!--
+				*这个参数定义coolink系统使用的数据库版本。以方便com.fulong.longcon.repository.impl.SQLQueryCreator.createQuery选择合适的SQL构造器
+				*目前定义参数如下： *COOLINK_ORACLE_1.0 oracle数据库第一版 *COOLINK_ORACLE_1.1
+				oracle数据库第二版 *COOLINK_MYSQL_1.0 MYSQL数据库第一版 *
+			-->
+			<value>COOLINK_ORACLE_1.0</value>
+		</property>
+	</bean>
+
+	<!--
+		*dataSource:要连接的 datasource (通常我们不会定义在 server.xml)
+		*defaultAutoCommit:对于事务是否 autoCommit, 默认值为 true
+		*defaultReadOnly:对于数据库是否只能读取, 默认值为 false *driverClassName:连接数据库所用的
+		JDBC Driver Class, *maxActive:最大连接数据库连接数,设 0 为没有限制
+		*maxIdle:最大等待连接中的数量,设 0 为没有限制 *maxWait:最大等待秒数, 单位为 ms, 超过时间会丟出错误信息 设
+		-1 为没有限制 *password:登陆数据库所用的密码 *url:连接数据库的 URL *username:登陆数据库所用的帐号
+		*validationQuery:验证连接是否成功, SQL select 指令至少要返回一行
+		*removeAbandoned:是否自我中断, 默认是 false *removeAbandonedTimeout:几秒后会自我中断,
+		removeAbandoned 必须为 true *logAbandoned:是否记录中断事件, 默认为 false
+	-->
+
+	<bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="url">
+			<value>jdbc:oracle:thin:@192.168.0.81:1522:orcl</value>
+		</property>
+		<property name="username">
+			<value>gtp</value>
+		</property>
+		<property name="password">
+			<value>fulong</value>
+		</property>
+		<property name="driverClassName">
+			<value>oracle.jdbc.driver.OracleDriver</value>
+		</property>
+		<property name="maxActive">
+			<value>10</value>
+		</property>
+		<property name="maxWait">
+			<value>100</value>
+		</property>
+		<property name="maxIdle">
+			<value>10</value>
+		</property>
+		<property name="initialSize">
+			<value>10</value>
+		</property>
+		<property name="removeAbandoned">
+			<value>true</value>
+		</property>
+		<property name="removeAbandonedTimeout">
+			<value>15</value>
+		</property>
+		<property name="logAbandoned">
+			<value>true</value>
+		</property>
+	</bean>
+
+</beans>

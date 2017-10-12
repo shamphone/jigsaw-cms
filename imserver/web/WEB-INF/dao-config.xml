@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="daoFactory" class="com.fulong.lyvc.core.DAOFactoryImpl">
+		<property name="dataSource" ref="datasource" />
+		<property name="mappings">
+			<props>
+				<prop key="ConferenceMemberDAO">com.fulong.lyvc.dao.postgresql.ConferenceMemberPostgresDAO</prop>
+				<prop key="ConferenceDAO">com.fulong.lyvc.dao.postgresql.ConferencePostgresDAO</prop>
+				<prop key="ConferenceRightDAO">com.fulong.lyvc.dao.postgresql.ConferenceRightPostgresDAO</prop>
+				<prop key="ContactDefaultGroupDAO">com.fulong.lyvc.dao.postgresql.ContactDefaultGroupPostgresDAO</prop>
+				<prop key="ContactGroupDAO">com.fulong.lyvc.dao.postgresql.ContactGroupPostgresDAO</prop>
+				<prop key="ContactMemberDAO">com.fulong.lyvc.dao.postgresql.ContactMemberPostgresDAO</prop>
+				<prop key="DocumentDAO">com.fulong.lyvc.dao.postgresql.DocumentPostgresDAO</prop>
+				<prop key="GroupDAO">com.fulong.lyvc.dao.postgresql.GroupPostgresDAO</prop>
+				<prop key="ListenerDAO">com.fulong.lyvc.dao.postgresql.ListenerPostgresDAO</prop>
+				<prop key="MemberDAO">com.fulong.lyvc.dao.postgresql.MemberPostgresDAO</prop>
+				<prop key="MessageDAO">com.fulong.lyvc.dao.postgresql.MessagePostgresDAO</prop>
+				<prop key="ModeRoleDAO">com.fulong.lyvc.dao.postgresql.ModelRolePostgresDAO</prop>
+				<prop key="ModeDAO">com.fulong.lyvc.dao.postgresql.ModePostgresDAO</prop>
+				<prop key="ModeRightDAO">com.fulong.lyvc.dao.postgresql.ModeRightPostgresDAO</prop>
+				<prop key="SystemRoleDAO">com.fulong.lyvc.dao.postgresql.SystemRolePostgresDAO</prop>
+				<prop key="UserDAO">com.fulong.lyvc.dao.postgresql.UserPostgresDAO</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

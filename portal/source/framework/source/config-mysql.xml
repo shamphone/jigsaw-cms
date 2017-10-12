@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- 缓存设置，和Tomcat服务器相关：
+    1G及其以上：cache.security.max.properties
+    512m-1G:cache.security.normal.properties
+    512m以下:cache.security.min.properties
+    -->
+    <bean id="cacheFactory" class="com.fulong.common.cache.BasicCacheFactory">
+        <property name="config">
+            <value>cache.max.properties</value>
+        </property>
+    </bean>
+<bean id="datasource" class="org.springframework.jndi.JndiObjectFactoryBean">
+     <property name="jndiName">
+         <value>java:comp/env/jdbc/mysql</value>
+     </property>  
+  </bean>    
+
+
+
+    <!-- 
+    *dataSource:要连接的 datasource (通常我们不会定义在 server.xml)
+    *defaultAutoCommit:对于事务是否 autoCommit, 默认值为 true
+    *defaultReadOnly:对于数据库是否只能读取, 默认值为 false
+    *driverClassName:连接数据库所用的 JDBC Driver Class,
+    *maxActive:最大连接数据库连接数,设 0 为没有限制
+    *maxIdle:最大等待连接中的数量,设 0 为没有限制
+    *maxWait:最大等待秒数, 单位为 ms, 超过时间会丟出错误信息 设 -1 为没有限制
+    *password:登陆数据库所用的密码
+    *url:连接数据库的 URL
+    *username:登陆数据库所用的帐号
+    *validationQuery:验证连接是否成功, SQL select 指令至少要返回一行
+    *removeAbandoned:是否自我中断, 默认是 false
+    *removeAbandonedTimeout:几秒后会自我中断, removeAbandoned 必须为 true
+    *logAbandoned:是否记录中断事件, 默认为 false
+    -->
+
+    <!--bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="url">
+            <value>jdbc:oracle:thin:@192.168.0.81:1522:orcl</value>            
+        </property>
+        <property name="username">
+            <value>liulei</value>
+        </property>
+        <property name="password">
+            <value>fulong</value>
+        </property>
+        <property name="driverClassName">
+            <value>oracle.jdbc.driver.OracleDriver</value>
+        </property>
+        <property name="maxActive">
+            <value>10</value>
+        </property>
+        <property name="maxWait">
+            <value>100</value>
+        </property>
+        <property name="maxIdle">
+            <value>10</value>
+        </property>
+        <property name="initialSize">
+            <value>10</value>
+        </property>
+        <property name="removeAbandoned">
+            <value>true</value>
+        </property>
+        <property name="removeAbandonedTimeout">
+            <value>15</value>
+        </property>
+        <property name="logAbandoned">
+            <value>true</value>
+        </property>
+    </bean-->
+
+    <!-- 搜索引擎的配置 -->
+  
+  
+<import resource="repository-config2.xml"/>
+
+<bean id="acccessCounterRepository" class="com.fulong.longcon.counter.impl.AccessCounterRepositoryImpl" init-method="init">
+    <property name="dataSource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="cacheFactory">
+            <ref bean="cacheFactory"/>
+        </property>
+</bean>
+<bean id="passport" class="com.fulong.longcon.security.impl.JDBCPassportProvider" init-method="init">
+  
+    <property name="repository">
+        <ref bean="repository"/>
+    </property>
+    <property name="organization">
+        <value>1000000000000</value>
+    </property>
+    <property name="administrator">
+        <value>1000000000000</value>
+    </property>
+    <property name="passportServerURL">
+        <value>http://localhost/longcon</value>
+    </property>
+</bean>
+
+<bean id="reportManager" class="com.fulong.report.ReportManager" init-method="init">
+    <property name="dataSource"><ref bean="datasource"/></property>
+</bean>
+
+<!--
+<bean id="calendarRepository" class="com.fulong.longcon.calendar.impl.CalendarRepositoryImpl" init-method="init">
+    <property name="dataSource"><ref bean="datasource"/></property>
+    <property name="dao"><value>oracle</value></property>
+</bean>
+ -->
+    <bean id="nodeService" abstract="true" class="com.fulong.service.NodeService">
+       <property name="repository" ref="repository"/>       
+       </bean>
+<bean id="serviceManager" class="com.fulong.service.container.SpringServiceManager" init-method="init">
+ </bean>
+<bean id="variableManager" class="com.fulong.longcon.expression.impl.SpringVariableManager" init-method="init">
+ <property name="path" value="variable-config.xml"/>
+ </bean>
+<bean id="wordUtils" class="com.fulong.common.WordUtils" init-method="initialize" destroy-method="destroy">
+	<property name="dllPath86" value="jacob-1.14.3-x86.dll"/>
+	<property name="dllPath64" value="jacob-1.14.3-x64.dll"/>
+</bean>
+<bean id="chartManager" class="com.fulong.longcon.chart.ChartManager" init-method="init">
+	<property name="datasource" ref="datasource"/>
+</bean>
+
+
+<bean id="workflow" class="com.fulong.longcon.workflow.xml.XMLWorkflowService" init-method="init">
+	<property name="templateFile" value="classpath:workflow.template.xml"/>
+	<property name="applicationManager">
+		<bean class="com.fulong.service.container.ServiceApplicationManager">
+			<property name="serviceManager" ref="serviceManager"/>
+		</bean>
+	</property>
+</bean>	
+<import resource="site-config.xml"/>
+<import resource="security-config.xml"/>
+<import resource="module-config.xml"/>
+<import resource="portal-container.xml"/>
+</beans>

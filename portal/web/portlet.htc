@@ -1,0 +1,38 @@
+<PUBLIC:ATTACH EVENT="onresizestart" ONEVENT="doResize()" />
+<PUBLIC:ATTACH EVENT="onmouseover"  ONEVENT="Hilight()" />
+<PUBLIC:ATTACH EVENT="onmouseout"  ONEVENT="Restore()" />
+<script language="javascript" type="text/javascript">
+
+function doResize()
+{
+  return false;
+}
+function Hilight()
+{
+     runtimeStyle.backgroundColor  = "#c0c0c0";
+}
+
+function Restore()
+{
+     runtimeStyle.backgroundColor  = "#f0f0f0";
+}
+/*
+function doSelect(){
+    document.selection.empty() ;
+	var oRange ;
+	try
+	{
+		// Try to select the node as a control.
+		oRange = document.body.createControlRange();
+		oRange.add(element);
+	}catch(e)
+	{
+		// If failed, select it as a text range.
+		oRange = document.body.createTextRange() ;
+		oRange.moveToElementText( element ) ;
+	}
+
+	oRange.select() ;
+}
+*/
+</script>

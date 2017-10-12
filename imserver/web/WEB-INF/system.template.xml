@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<webmanager-config>
+
+	<!-- The config info of database -->
+	<database-config>
+		<serverIP>localhost</serverIP>
+		<serverPort>5432</serverPort>
+		<initialSize>5</initialSize>
+		<maxActive>100</maxActive>
+	</database-config>
+
+	<!-- The tell us where the conference server is -->
+	<!-- for example, video.fulong.com.cn -->
+	<conferenceserver-config>
+		<serverip>localhost</serverip>
+		<port>4000</port>
+	</conferenceserver-config>
+
+	<!-- The config info of mail-->
+	<mail-config>
+		<username>webtraining@fulong.com.cn
+		</username>
+		<password>fulong</password>
+		<smtphost>mail.fulong.com.cn</smtphost>
+		<account>zhangxiaopan@fulong.com.cn
+		</account>
+	</mail-config>
+
+	<!-- To tell us the copyright -->
+	<system-config>
+		<copyright>中科辅龙2005-2009</copyright>
+		<predefine-manager-account>
+			<username>lyvcadmin</username>
+			<password>123456</password>
+			<email>lyvcadmin@fulong.com.cn</email>
+		</predefine-manager-account>
+	</system-config>
+
+	<!-- User management system -->
+	<user-manage-config>
+		<!--
+			视频会议的用户通过树型结构的组来组织,在这里设置根组的ID值;
+			如果使用的是Passport会员系统,将在会员系统中创建好的根组ID写在这里:2299324263400;
+			如果使用的内置用户管理系统,这里不填,系统会自动生成根组ID
+		-->
+		<rootgroupid></rootgroupid>
+		<rootgroupname>辅龙公司</rootgroupname>
+		<rootgroupdesc>默认的组</rootgroupdesc>
+		<user-manage-builtin>true</user-manage-builtin>
+
+		<!-- Passport会员系统的Web链接地址-->
+		<passport-location>http://192.168.0.4:8080/passport
+		</passport-location>
+	</user-manage-config>
+
+</webmanager-config>
+

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="all" name="report">
+	<property environment="env" />
+	<property name="TOMCAT_DIR" location="D:/Tomcat" />
+	<property name="debuglevel" value="source,lines,vars" />
+	<property name="coolink.dist.path" location="D:/CruiseControl/projects/txsd/WEB-INF" />
+	<property name="coolink.extLib.path" location="D:/CruiseControl/projects/txsd/ext" />
+	<property name="CLASS_DIR" location="D:/CruiseControl/projects/report" />
+	<property name="msg.commit" value="ant commit" />
+	<property name="target" value="1.5" />
+	<property name="source" value="1.5" />
+	<!--classpath-->
+	<path id="Apache Tomcat v5.5 [Apache Tomcat v5.5].libraryclasspath">
+	    <fileset dir="${TOMCAT_DIR}/common/lib/">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<path id="Web App Libraries.libraryclasspath">
+		<fileset dir="${coolink.dist.path}/lib/">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<path id="Web App Libraries.extlibraryclasspath">
+		<fileset dir="${coolink.extLib.path}/">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<path id="ant.svn.classpath">
+		<fileset dir="D:/CruiseControl/apache-ant-1.7.0/lib">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	<taskdef name="svn" classname="org.tigris.subversion.svnant.SvnTask">
+		<classpath refid="ant.svn.classpath" />
+	</taskdef>
+	<path id="txsd.classpath">
+		<path refid="Web App Libraries.extlibraryclasspath" />
+		<path refid="Apache Tomcat v5.5 [Apache Tomcat v5.5].libraryclasspath" />
+		<path refid="Web App Libraries.libraryclasspath" />
+	</path>
+	<target name="clean">
+		<delete file="${CLASS_DIR}/longcon-report.jar" />
+		<delete dir="target" quiet="true" />
+		<delete dir="${CLASS_DIR}/classes" />
+	</target>
+	<target name="build-report">
+		<echo message="${ant.project.name}: ${ant.file}"/>
+		<mkdir dir="${CLASS_DIR}/classes"/>
+		<copy includeemptydirs="false" todir="${CLASS_DIR}/classes">
+			<fileset dir="${CLASS_DIR}/src" excludes="**/*.launch, **/*.java"/>
+		</copy>
+		<javac debug="true" debuglevel="${debuglevel}" destdir="${CLASS_DIR}/classes" source="${source}" target="${target}" encoding="UTF-8">
+			<src path="${CLASS_DIR}/src" />
+			<exclude name="**/.svn/**"/>
+			<classpath>
+				<path	refid="txsd.classpath"/>
+				<path location="${coolink.dist.path}/lib/longcon-framework.jar"/>
+			</classpath>
+		</javac>
+	</target>
+	<target name="test">
+		<mkdir dir="target/test-classes" />
+		<javac encoding="UTF-8" srcdir="${CLASS_DIR}/test" destdir="target/test-classes">
+			<classpath>
+				<pathelement location="${CLASS_DIR}/src/classes" />
+				<path refid="Apache Tomcat v5.5 [Apache Tomcat v5.5].libraryclasspath" />
+				<path refid="Web App Libraries.libraryclasspath" />
+			</classpath>
+		</javac>
+
+		<mkdir dir="target/test-results" />
+		<junit haltonfailure="no" printsummary="on">
+			<classpath>
+				<pathelement location="${CLASS_DIR}/src/classes" />
+				<pathelement location="${coolink.dist.path}/lib/junit.jar" />
+				<pathelement location="target/test-classes" />
+			</classpath>
+			<formatter type="brief" usefile="false" />
+			<formatter type="xml" />
+			<batchtest todir="target/test-results">
+				<fileset dir="target/test-classes" includes="**/*.class" />
+			</batchtest>
+		</junit>
+	</target>
+	<target name="jar">
+		<jar destfile="${CLASS_DIR}/longcon-report.jar" encoding="UTF-8" update="false" excludes="**/*Test*.class">
+			<fileset dir="${CLASS_DIR}/classes" />
+		</jar>
+		<copy includeemptydirs="false" todir="${coolink.dist.path}/lib">
+			<fileset file="${CLASS_DIR}/longcon-report.jar" excludes="**/*.launch, **/*.java" />
+		</copy>
+	</target>
+	<target name="update">
+		<svn username="fulong" password="fulongtech">
+			<update dir="${CLASS_DIR}" />
+		</svn>
+	</target>
+	<target name="commit">
+		<svn username="fulong" password="fulongtech">
+			<commit file="${coolink.dist.path}/lib/longcon-report.jar" message="${msg.commit}"  />
+		</svn>
+	</target>
+	<target name="all"  depends="clean,update,build-report,test,jar,commit"/>
+
+</project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="filterChainProxy" class="org.springframework.security.util.FilterChainProxy">
+		<property name="filterInvocationDefinitionSource">
+			<value><![CDATA[
+				PATTERN_TYPE_APACHE_ANT
+				/user/**=httpSessionContextIntegrationFilter,digestProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,digestExceptionTranslationFilter,imFilterInvocationInterceptor				
+				/conference/**=httpSessionContextIntegrationFilter,digestProcessingFilter,securityContextHolderAwareRequestFilter,rememberMeProcessingFilter,digestExceptionTranslationFilter,imFilterInvocationInterceptor			
+			
+			]]></value>
+		</property>
+	</bean>
+	
+
+	<bean id="imFilterInvocationInterceptor"
+		class="org.springframework.security.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="accessDecisionManager" ref="accessDecisionManager" />
+		<property name="objectDefinitionSource">
+			<value><![CDATA[
+                PATTERN_TYPE_APACHE_ANT
+      /user/**=ROLE_ADMIN
+      /conference/**=ROLE_ADMIN
+      ]]></value>
+		</property>
+	</bean>
+
+	
+
+
+
+
+</beans>

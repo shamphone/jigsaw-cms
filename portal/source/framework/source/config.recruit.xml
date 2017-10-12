@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- 缓存设置，和Tomcat服务器相关：
+    1G及其以上：cache.security.max.properties
+    512m-1G:cache.security.normal.properties
+    512m以下:cache.security.min.properties
+    -->
+    <bean id="cacheFactory" class="com.fulong.common.cache.BasicCacheFactory">
+        <property name="config">
+            <value>cache.max.properties</value>
+        </property>
+    </bean>
+    <bean id="email" class="com.fulong.common.email.impl.BasicEmailRepository" init-method="init">
+        <property name="properties">
+            <props>
+                <!-- 接收邮件服务器 -->
+                <prop key="mail.imap.host">mail.shenyang.gov.cn</prop>
+                <!-- 发送邮件服务器 -->
+                <prop key="mail.smtp.host">smtp.shenyang.gov.cn</prop>
+                <!-- 邮件服务器 -->
+                <prop key="domain">sme.gov.cn</prop>
+                <!-- 以下参数勿修改 -->
+                <prop key="mail.store.protocol">imap</prop>
+                <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.imap.connectionpoolsize">1</prop>
+                <prop key="mail.imap.timeout">25000</prop>
+                <prop key="mail.imap.appendbuffersize">1024</prop>
+                <prop key="mail.debug">false</prop>
+                <prop key="mail.imap.auth.plain.disable">true</prop>
+                <prop key="connectionTimeout">90000</prop>
+            </props>
+        </property>
+        <!-- 发送邮件的帐户。系统将使用这个帐户给其他用户发送邮件 -->
+        <property name="username">
+            <value>lig@shenyang.gov.cn</value>
+        </property>
+        <!-- 发送邮件的帐户密码 -->
+        <property name="password">
+            <value>19761126</value>
+        </property>
+        <!-- 发送邮件的帐户名称 -->
+        <property name="fromUser">
+            <value>中国中小企业网客户支持</value>
+        </property>
+    </bean>
+    <!--
+    *dataSource:要连接的 datasource (通常我们不会定义在 server.xml)
+    *defaultAutoCommit:对于事务是否 autoCommit, 默认值为 true
+    *defaultReadOnly:对于数据库是否只能读取, 默认值为 false
+    *driverClassName:连接数据库所用的 JDBC Driver Class,
+    *maxActive:最大连接数据库连接数,设 0 为没有限制
+    *maxIdle:最大等待连接中的数量,设 0 为没有限制
+    *maxWait:最大等待秒数, 单位为 ms, 超过时间会丟出错误信息 设 -1 为没有限制
+    *password:登陆数据库所用的密码
+    *url:连接数据库的 URL
+    *username:登陆数据库所用的帐号
+    *validationQuery:验证连接是否成功, SQL select 指令至少要返回一行
+    *removeAbandoned:是否自我中断, 默认是 false
+    *removeAbandonedTimeout:几秒后会自我中断, removeAbandoned 必须为 true
+    *logAbandoned:是否记录中断事件, 默认为 false
+    -->
+    <bean id="datasource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="url">
+            <value>jdbc:oracle:thin:@192.168.0.38:1521:orcl</value>
+        </property>
+        <property name="username">
+            <value>lnjyw</value>
+        </property>
+        <property name="password">
+            <value>fulong</value>
+        </property>
+        <property name="driverClassName">
+            <value>oracle.jdbc.driver.OracleDriver</value>
+        </property>
+        <property name="maxActive">
+            <value>50</value>
+        </property>
+        <property name="maxWait">
+            <value>5000</value>
+        </property>
+        <property name="maxIdle">
+            <value>100</value>
+        </property>
+        <property name="initialSize">
+            <value>15</value>
+        </property>
+
+    </bean>
+    <!-- 搜索引擎的配置 -->
+    <bean id="indexManager" class="com.fulong.longcon.repository.search.impl.LuceneIndexManager" init-method="init">
+        <!-- 目录,必须保证这个目录由足够的空间 -->
+        <property name="directoryPath"><value>d:/search</value></property>
+        <!-- 分析器,使用标准的分析器,请勿修改 -->
+        <property name="analyzerClass"><value>org.apache.lucene.analysis.standard.StandardAnalyzer</value></property>
+    </bean>
+    <bean id="indexRebulder" class="com.fulong.longcon.repository.search.impl.LuceneIndexRebuilder" init-method="init">
+        <property name="indexManager"><ref bean="indexManager"/></property>
+        <property name="threadName"><value>重建索引线程</value></property>
+    </bean>
+    <bean id="indexBuilder" class="com.fulong.longcon.repository.search.impl.ThreadIndexBuilder" init-method="init">
+        <property name="indexManager"><ref bean="indexManager"/></property>
+        <property name="threadName"><value>索引线程</value></property>
+        <property name="daemon"><value>false</value></property>
+    </bean>
+    <!--bean id="swbDBsource" class="org.apache.commons.dbcp.BasicDataSource">
+    <property name="url">
+        <value>jdbc:oracle:thin:@192.168.0.81:1521:orcl</value>
+    </property>
+    <property name="username">
+        <value>sitetrans</value>
+    </property>
+    <property name="password">
+        <value>fulong</value>
+    </property>
+    <property name="driverClassName">
+        <value>oracle.jdbc.driver.OracleDriver</value>
+    </property>
+</bean-->
+<import resource="repository-config.xml"/>
+<bean id="courseRepository" class="com.fulong.longcon.course.impl.CourseRepositoryImpl" init-method="init">
+    <property name="dataSource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="repository">
+        <ref bean="basicRepository"/>
+    </property>
+    <property name="contentRepository">
+        <ref bean="contentRepository"/>
+    </property>
+
+    <property name="dao">
+        <value>oracle</value>
+    </property>
+    <property name="cacheConfig">
+        <value>cache.normal.properties</value>
+    </property>
+    <property name="courseCatogeryScheme">
+        <value>course-category-scheme</value>
+    </property>
+    <property name="courseScheme">
+        <value>course-scheme</value>
+    </property>
+    <property name="coursewareScheme">
+        <value>courseware-scheme</value>
+    </property>
+    <property name="courseCatogeryRootID">
+        <value>course-category-root</value>
+    </property>
+    <property name="courseRootID">
+        <value>course-root</value>
+    </property>
+    <property name="coursewareRootID">
+        <value>courseware-root</value>
+    </property>
+    <property name="passport">
+        <ref bean="passport"/>
+    </property>
+    <property name="groupID">
+        <value>232677007418</value>
+    </property>
+    <property name="supplierGroupID">
+        <value>course-supplier-group</value>
+    </property>
+</bean>
+<bean id="acccessCounterRepository" class="com.fulong.longcon.counter.impl.AccessCounterRepositoryImpl" init-method="init">
+    <property name="dataSource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="dao">
+        <value>oracle</value>
+    </property>
+    <property name="cacheConfig">
+        <value>cache.normal.properties</value>
+    </property>
+</bean>
+<bean id="workflow" class="com.fulong.longcon.workflow.impl.WorkflowServiceImpl" init-method="init">
+    <property name="dataSource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="dao">
+        <value>oracle</value>
+    </property>
+</bean>
+<bean id="dictManager" class="com.fulong.longcon.dict.impl.DictManagerImpl" init-method="init">
+    <property name="dataSource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="dao">
+        <value>oracle</value>
+    </property>
+</bean>
+<bean id="passport" class="com.fulong.longcon.security.impl.JDBCPassportProvider" init-method="init">
+    <property name="dataSource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="dictionaryManager">
+        <ref bean="dictManager"/>
+    </property>
+    <property name="workflowService">
+        <ref bean="workflow"/>
+    </property>
+    <property name="cacheFactory">
+        <ref bean="cacheFactory"/>
+    </property>
+    <property name="organization">
+        <value>2326770074186</value>
+        <!--value>2326770074186</value-->
+    </property>
+    <property name="administrator">
+        <value>1000000000000</value>
+    </property>
+    <property name="repository">
+        <ref bean="basicRepository"/>
+    </property>
+    <property name="passportServerURL">
+        <value>http://localhost/longcon/passport</value>
+    </property>
+</bean>
+<bean id="affairRepository" class="com.fulong.longcon.affair.impl.AffairRepositoryImpl" init-method="init">
+    <property name="dataSource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="dao">
+        <value>oracle</value>
+    </property>
+    <property name="repository">
+        <ref bean="basicRepository"/>
+    </property>
+    <property name="workflows">
+        <ref bean="workflow"/>
+    </property>
+    <property name="passport">
+        <ref bean="passport"/>
+    </property>
+    <property name="affairScheme">
+        <value>affair-scheme</value>
+    </property>
+    <property name="affairRootID">
+        <value>affair-root</value>
+    </property>
+</bean>
+<bean id="forumService" class="com.fulong.longcon.forum.impl.ForumFactoryImpl" init-method="init">
+    <property name="datasource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="passport">
+        <ref bean="passport"/>
+    </property>
+    <property name="dao">
+        <value>oracle</value>
+    </property>
+    <property name="threadDuration">
+        <value>15</value>
+    </property>
+    <property name="cacheFactory">
+        <ref bean="cacheFactory"/>
+    </property>
+</bean>
+<!-- bean id="answers" class="com.fulong.longcon.answers.impl.AnswersFactoryImpl" init-method="init">
+    <constructor-arg ref="forumService"/>
+    <property name="passport">
+        <ref bean="passport"/>
+    </property>
+</bean -->
+<bean id="discussions" class="com.fulong.longcon.discussion.impl.DiscussionFactoryImpl">
+    <constructor-arg ref="forumService"/>
+</bean>
+<bean id="siteFactory" class="com.fulong.longcon.site.impl.SiteFactoryImpl" init-method="init">
+    <!-- 预留域名-->
+    <property name="reservedDomains">
+        <value>mail,null,member,passport,cms,root,site</value>
+    </property>
+    <!-- 最大站点数，加密，不要修改 -->
+    <property name="encMaxSiteNum">
+        <value>FeZlcewlDFw=</value>
+    </property>
+    <property name="dataSource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="dao">
+        <value>oracle</value>
+    </property>
+    <property name="passport">
+        <ref bean="passport"/>
+    </property>
+    <property name="repository">
+        <ref bean="basicRepository"/>
+    </property>
+    <property name="defaultDomain">
+        <value>.lixf.cn</value>
+    </property>
+    <property name="accessCountRep">
+        <ref bean="acccessCounterRepository"/>
+    </property>
+    <property name="channelTypeConfig">
+        <value>channel.type.xml</value>
+    </property>
+    <property name="cacheFactory">
+        <ref bean="cacheFactory"/>
+    </property>
+
+</bean>
+
+
+
+<!--<bean id="productRepository" class="com.fulong.longcon.ecommerce.impl.ProductRepositoryImpl" init-method="init">
+    <property name="contentRepository">
+        <ref bean="contentRepository"/>
+    </property>
+    <property name="dictManager">
+        <ref bean="dictManager"/>
+    </property>
+    <property name="passport">
+        <ref bean="passport"/>
+    </property>
+    <property name="proDictRootID"><value>hb-industry-category</value></property>
+    <property name="categoryID"><value>ecommerce-root</value></property>
+</bean>
+-->
+<bean id="reports" class="com.fulong.longcon.report.impl.PropertiesReportRepository" init-method="init">
+    <property name="dataSource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="file">
+        <value>report.sql.properties</value>
+    </property>
+</bean>
+<bean id="recruitRepository" class="com.fulong.longcon.recruit.impl.RecruitRepositoryImpl" init-method="init">
+    <property name="dataSource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="dao">
+        <value>oracle</value>
+    </property>
+    <property name="repository">
+        <ref bean="basicRepository"/>
+    </property>
+    <property name="contentRepository">
+        <ref bean="contentRepository"/>
+    </property>
+    <property name="dictManager">
+        <ref bean="dictManager"/>
+    </property>
+    <property name="workflows">
+        <ref bean="workflow"/>
+    </property>
+    <property name="passport">
+        <ref bean="passport"/>
+    </property>
+    <property name="resumeCategoryID">
+        <value>resumeCategoryID</value>
+    </property>
+    <property name="jobCategoryID">
+        <value>jobCategoryID</value>
+    </property>
+    <property name="recresumeCategoryID">
+        <value>re-resumeCategoryID</value>
+    </property>
+    <property name="recjobCategoryID">
+        <value>re-jobCategoryID</value>
+    </property>
+    <property name="group">
+        <value>2389906036064</value>
+    </property>
+</bean>
+<bean id="resourceManager" class="com.fulong.longcon.resource.impl.ResourceManagerImpl" init-method="init">
+    <property name="datasource">
+        <ref bean="datasource"/>
+    </property>
+    <property name="dao">
+        <value>oracle</value>
+    </property>
+    <property name="repository">
+        <ref bean="basicRepository"/>
+    </property>
+    <property name="passport">
+        <ref bean="passport"/>
+    </property>
+  <property name="cacheFactory">
+        <ref bean="cacheFactory"/>
+    </property>
+</bean>
+
+<bean id="cardManager" class="com.fulong.longcon.card.impl.CardManagerImpl" init-method="init">
+    <property name="dataSource"><ref bean="datasource"/></property>
+    <property name="dao"><value>oracle</value></property>
+</bean>
+
+
+<bean id="remoteManager" class="com.fulong.longcon.content.remote.impl.RemoteManagerImpl" init-method="init">
+    <property name="dataSource"><ref bean="datasource"/></property>
+    <property name="dao"><value>oracle</value></property>
+    <property name="contentRepository"><ref bean="contentRepository"/></property>
+</bean>
+
+<bean id="reportManager" class="com.fulong.report.ReportManager" init-method="init">
+    <property name="dataSource"><ref bean="datasource"/></property>
+</bean>
+
+<bean id="calendarRepository" class="com.fulong.longcon.calendar.impl.CalendarRepositoryImpl" init-method="init">
+    <property name="dataSource"><ref bean="datasource"/></property>
+    <property name="dao"><value>oracle</value></property>
+</bean>
+
+<import resource="security-config.xml"/>
+<import resource="module-config.xml"/>
+</beans>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+<form-validation>
+	<formset>
+	
+		<!-- 创建普通会议 -->
+		<form name="/save">
+			<field property="title" depends="required">
+				<arg0 key="conference.title" />
+			</field>
+			<field property="startTime" depends="required,date">
+				<arg0 key="conference.startTime" />
+			</field>
+			<field property="endTime" depends="required,date">
+				<arg0 key="conference.endTime" />
+			</field>
+		</form>
+		
+		<!-- 修改普通会议 -->
+		<form name="/modify">
+			<field property="title" depends="required">
+				<arg0 key="conference.title" />
+			</field>
+			<field property="startTime" depends="required,date">
+				<arg0 key="conference.startTime" />
+			</field>
+			<field property="endTime" depends="required,date">
+				<arg0 key="conference.endTime" />
+			</field>
+		</form>
+		
+		<!-- 发送会议通知 -->
+		<form name="/sendNotice">
+			<field property="title" depends="required">
+				<arg0 key="notice.title" />
+			</field>
+			<field property="content" depends="required">
+				<arg0 key="notice.content" />
+			</field>
+		</form>
+	</formset>
+</form-validation>

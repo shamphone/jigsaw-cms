@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="valueFactory" class="com.fulong.longcon.repository.value.ValueFactoryImpl" init-method="init">
+    </bean>
+    <bean id="definitionManager" class="com.fulong.longcon.repository.definition.NodeDefinitionManagerImpl" init-method="init">
+        <property name="dataSource"><ref bean="datasource"/></property>
+        <property name="valueFactory"><ref bean="valueFactory"/></property>
+        <property name="dao"><value>oracle</value></property>
+    </bean>
+  
+    <bean id="queryManagers" class="com.fulong.longcon.repository.core.InternalQueryManager" init-method="init">
+    </bean>
+    <bean id="sqlQuery" class="com.fulong.longcon.repository.impl.SQLQueryCreator">
+    <property name="repository" ref="repository"/>
+    </bean>
+    <!-- bean id="luceneQuery" class="com.fulong.longcon.repository.search.impl.LuceneQueryCreator">
+    <property name="repository" ref="repository"/>
+    <property name="indexManager" ref="indexManager"/>
+    </bean-->
+
+    <bean id="repository" class="com.fulong.longcon.repository.impl.RepositoryImpl" init-method="init">
+        <property name="valueFactory">
+            <ref bean="valueFactory"/>
+        </property>
+        <property name="cacheFactory">
+            <ref bean="cacheFactory"/>
+        </property>
+        <property name="definitionManager">
+            <ref bean="definitionManager"/>
+        </property>
+        <property name="dataSource">
+            <ref bean="datasource"/>
+        </property>
+        <property name="dao">
+            <value>oracle</value>
+        </property>
+        <property name="version">
+             <!-- 
+                *这个参数定义coolink系统使用的数据库版本。以方便com.fulong.longcon.repository.impl.SQLQueryCreator.createQuery选择合适的SQL构造器
+                *目前定义参数如下：
+                *COOLINK_ORACLE_1.0  oracle数据库第一版
+                *COOLINK_ORACLE_1.1  oracle数据库第二版
+                *COOLINK_MYSQL_1.0   MYSQL数据库第一版
+                *
+             -->         
+            <value>COOLINK_ORACLE_1.0</value>
+        </property>
+    </bean>
+</beans>

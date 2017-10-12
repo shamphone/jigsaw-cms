@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+    xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <context-param>
+        <param-name>contextName</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>com.fulong.site.IndexServlet</servlet-class>
+        <init-param>
+            <param-name>jndi</param-name>
+            <param-value>java:comp/env/coolink/root</param-value>
+        </init-param>
+        <load-on-startup>4</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/index.html</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <display-name>junit测试用例</display-name>
+    <description>&lt;这里是描述2</description>
+</web-app>

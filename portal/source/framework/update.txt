@@ -1,0 +1,12 @@
+2007.6.30 lixf
+1. 对所有库的实现增加init方法，并修改config.xml文件
+
+2007.6.27  lixf
+1. 将com.fulong.longcon.affair更新到沈阳运行的最新版本。
+
+
+2009.8.13
+QueryImpl2: filterByKeywords(),所有重载方法必须走全文检索，不用考虑日期情况。
+使用LogFactory来输入日志，而不是System.out或者System.err
+清理无用的表、存储过程和触发器
+清理无用的类

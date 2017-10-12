@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<!-- 主页 -->
+		<form-bean name="indexForm" type="com.fulong.lyvc.manage.form.IndexForm" />
+		
+		<!-- 公共联系人组 -->
+		<form-bean name="addGroupForm" type="com.fulong.lyvc.manage.form.AddGroupForm" />
+		
+		<form-bean name="editGroupForm" type="com.fulong.lyvc.manage.form.EditGroupForm" />
+		
+		<form-bean name="deleteGroupForm" type="com.fulong.lyvc.manage.form.DeleteGroupForm" />
+		
+		<form-bean name="moveGroupForm" type="com.fulong.lyvc.manage.form.MoveGroupForm" />
+		
+		<!-- 公共联系人 -->
+		<form-bean name="addMemberForm" type="com.fulong.lyvc.manage.form.AddMemberForm" />
+		
+		<form-bean name="deleteMemberForm" type="com.fulong.lyvc.manage.form.DeleteMemberForm" />
+		
+		<form-bean name="setUserPasswordForm" type="com.fulong.lyvc.manage.form.SetUserPasswordForm" />
+		
+		<form-bean name="moveMemberForm" type="com.fulong.lyvc.manage.form.MoveMemberForm" />
+		
+		<!-- 系统公告 -->
+		<form-bean name="sendBulletinForm" type="com.fulong.lyvc.manage.form.SendBulletinForm" />
+		
+		<!-- 管理员密码 -->
+		<form-bean name="setAdminPasswordForm" type="com.fulong.lyvc.manage.form.SetAdminPasswordForm" />
+		
+	</form-beans>
+
+	<global-forwards>
+		<forward name="error" path="/error.jsp" />
+	</global-forwards>
+
+	<action-mappings>
+		<!-- 主页  -->
+		<action path="/index" name="indexForm" scope="request" type="com.fulong.lyvc.manage.user.IndexAction">
+			<forward name="index" path="/index.jsp" />
+		</action>
+		
+		<!-- 添加组 -->
+		<action path="/addGroup" name="addGroupForm" input="/addGroup.jsp" scope="request" type="com.fulong.lyvc.manage.user.AddGroupAction" validate="false">
+			<forward name="success" path="/addGroup.jsp" />
+		</action>
+		
+		<action path="/saveGroup" name="addGroupForm" input="/addGroup.jsp" scope="request" type="com.fulong.lyvc.manage.user.SaveGroupAction" validate="true">
+			<forward name="success" path="/addGroupSuccess.jsp" />
+		</action>
+		
+		<!-- 修改组名称 -->
+		<action path="/editGroup" name="editGroupForm" input="/editGroup.jsp" scope="request" type="com.fulong.lyvc.manage.user.EditGroupAction" validate="false">
+			<forward name="success" path="/editGroup.jsp" />
+		</action>
+		
+		<action path="/modifyGroup" name="editGroupForm" input="/editGroup.jsp" scope="request" type="com.fulong.lyvc.manage.user.UpdateGroupAction" validate="true">
+			<forward name="success" path="/editGroupSuccess.jsp" />
+		</action>
+		
+		<!-- 删除组 -->
+		<action path="/deleteGroup" name="deleteGroupForm" input="/deleteGroup.jsp" scope="request" type="com.fulong.lyvc.manage.user.DeleteGroupAction">
+		    <forward name="success" path="/deleteGroup.jsp" />
+		</action>
+		
+		<action path="/removeGroup" name="deleteGroupForm" input="/deleteGroup.jsp" scope="request" type="com.fulong.lyvc.manage.user.RemoveGroupAction">
+			<forward name="success" path="/deleteGroupSuccess.jsp" />
+		</action>
+		
+		<!-- 移动组 -->
+		<action path="/moveGroup" name="moveGroupForm" input="/moveGroup.jsp" scope="request" type="com.fulong.lyvc.manage.user.MoveGroupAction">
+			<forward name="success" path="/moveGroup.jsp" />
+		</action>
+		
+		<action path="/shiftGroup" name="moveGroupForm" input="/moveGroup.jsp" scope="request" type="com.fulong.lyvc.manage.user.ShiftGroupAction">
+			<forward name="success" path="/moveGroupSuccess.jsp" />
+		</action>
+		
+		<!-- 添加用户 -->
+		<action path="/addMember" name="addMemberForm" input="/addMember.jsp" scope="request" type="com.fulong.lyvc.manage.user.AddMemberAction" validate="false">
+			<forward name="success" path="/addMember.jsp" />
+		</action>
+		
+		<action path="/saveMember" name="addMemberForm" input="/addMember.jsp" scope="request" type="com.fulong.lyvc.manage.user.SaveMemberAction" validate="true">
+			<forward name="success" path="/addMemberSuccess.jsp" />
+		</action>
+		
+		<!-- 修改用户密码 -->
+		<action path="/setUserPassword" name="setUserPasswordForm" input="/setUserPassword.jsp" scope="request" type="com.fulong.lyvc.manage.user.SetUserPasswordAction" validate="false">
+			<forward name="success" path="/setUserPassword.jsp" />
+		</action>
+		
+		<action path="/updateUserPassword" name="setUserPasswordForm" input="/setUserPassword.jsp" scope="request" type="com.fulong.lyvc.manage.user.UpdateUserPasswordAction" validate="true">
+			<forward name="success" path="/setUserPasswordSuccess.jsp" />
+		</action>
+		
+		<!-- 删除用户 -->
+		<action path="/deleteMember" name="deleteMemberForm" input="/deleteMember.jsp" scope="request" type="com.fulong.lyvc.manage.user.DeleteMemberAction">
+			<forward name="success" path="/deleteMember.jsp" />
+		</action>
+		
+		<action path="/removeMember" name="deleteMemberForm" input="/deleteMember.jsp" scope="request" type="com.fulong.lyvc.manage.user.RemoveMemberAction">
+			<forward name="success" path="/deleteMemberSuccess.jsp" />
+		</action>
+		
+		<!-- 移动用户 -->
+		<action path="/moveMember" name="moveMemberForm" input="/moveMember.jsp" scope="request" type="com.fulong.lyvc.manage.user.MoveMemberAction">
+			<forward name="success" path="/moveMember.jsp" />
+		</action>
+		
+		<action path="/shiftMember" name="moveMemberForm" input="/moveMember.jsp" scope="request" type="com.fulong.lyvc.manage.user.ShiftMemberAction">
+			<forward name="success" path="/moveMemberSuccess.jsp" />
+		</action>
+		
+		<!-- 发送系统公告 -->
+		<action path="/createBulletin" name="sendBulletinForm" input="/sendBulletin.jsp" scope="request" type="com.fulong.lyvc.manage.user.CreateBulletinAction" validate="false">
+			<forward name="success" path="/sendBulletin.jsp" />
+		</action>
+		
+		<action path="/sendBulletin" name="sendBulletinForm" input="/sendBulletin.jsp" scope="request" type="com.fulong.lyvc.manage.user.SendBulletinAction" validate="true">
+			<forward name="success" path="/sendBulletinSuccess.jsp" />
+		</action>
+		
+		<!-- 修改管理员密码 -->
+		<action path="/setAdminPassword" name="setAdminPasswordForm" input="/setAdminPassword.jsp" scope="request" type="com.fulong.lyvc.manage.user.SetAdminPasswordAction" validate="false">
+			<forward name="success" path="/setAdminPassword.jsp" />
+		</action>
+		
+		<action path="/updateAdminPassword" name="setAdminPasswordForm" input="/setAdminPassword.jsp" scope="request" type="com.fulong.lyvc.manage.user.UpdateAdminPasswordAction" validate="true">
+			<forward name="success" path="/setAdminPasswordSuccess.jsp" />
+		</action>
+		
+	</action-mappings>
+
+
+	<message-resources parameter="com.fulong.lyvc.manage.user.Resources" />
+
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/user-validation.xml" />
+	</plug-in>
+	
+</struts-config>

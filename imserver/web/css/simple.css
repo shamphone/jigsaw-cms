@@ -1,0 +1,16 @@
+body,td {
+	font-family: ËÎÌו, arial;
+	font-size: 12px;
+	margin:0px;
+}
+
+input,select,option {
+	font-size: 12px;
+	margin:0px;
+	border:1px solid #999999; 
+	padding-top: 2px;
+	padding-left: 2px;
+    padding-right: 2px;
+	padding-bottom: 1px;
+
+}

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+    <bean id="configuration" class="com.fulong.longcon.system.xml.XMLConfiguration" init-method="init">
+        <property name="properties">
+	<props>
+		<prop key="system.name">北京中科辅龙计算机技术股份有限公司</prop>
+		<prop key="copyright">? 2007-2010 北京中科辅龙计算机技术股份有限公司</prop>
+		<prop key="logo">/images/logo.gif</prop>   <!-- 首页logo -->
+                <prop key="loginLogo">/images/loginbg_01.gif</prop>   <!-- 登录页面logo -->
+                <prop key="banner">/common/images/banner2.gif</prop>   <!-- 登录后台页面banner -->
+                <prop key="css">/common/style/style.css</prop>   <!-- 登录后台页面css样式文件 -->
+                <prop key="css1">/common/style/style.sme.css</prop>   <!-- 登录后台页面备选css样式文件 -->
+        </props>
+        </property>
+        <property name="modules">
+            <list>
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="desktop"/>
+                    <property name="name" value="办公桌面"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/desktop"/>
+                    <property name="active" value="true"/>
+                    <property name="roles" value="ROLE_ADMIN,ROLE_ORG,ROLE_PERSONAL,ROLE_EDITOR"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="park"/>
+                    <property name="name" value="园区平台"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/shenbao/admin"/>
+                    <property name="active" value="false"/>
+                    <property name="roles" value="ROLE_ADMIN"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="rz"/>
+                    <property name="name" value="融资平台"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/rz/admin"/>
+                    <property name="active" value="false"/>
+                    <property name="roles" value="ROLE_ADMIN"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="ecommerce"/>
+                    <property name="name" value="商贸平台"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/ecommerce"/>
+                    <property name="active" value="true"/>
+                    <property name="roles" value="ROLE_ADMIN,ROLE_ORG,ROLE_EDITOR"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="recruit"/>
+                    <property name="name" value="招聘管理"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/recruit/main.jsp"/>
+                    <property name="active" value="true"/>
+                    <property name="roles" value="ROLE_ADMIN,ROLE_ORG,ROLE_EDITOR"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="cms"/>
+                    <property name="name" value="内容管理"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/cms"/>
+                    <property name="active" value="true"/>
+                    <property name="roles" value="ROLE_ADMIN,ROLE_ORG,ROLE_EDITOR"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="card"/>
+                    <property name="name" value="卡管理"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/card"/>
+                    <property name="active" value="true"/>
+                    <property name="roles" value="ROLE_ADMIN"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="site"/>
+                    <property name="name" value="网站管理"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/site"/>
+                    <property name="active" value="true"/>
+                    <property name="roles" value="ROLE_ADMIN,ROLE_ORG,ROLE_EDITOR"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="passport"/>
+                    <property name="name" value="用户管理"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/member/"/>
+                    <property name="active" value="true"/>
+                    <property name="roles" value="ROLE_ADMIN,ROLE_ORG,ROLE_EDITOR"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="training"/>
+                    <property name="name" value="课程管理"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/training/main.jsp"/>
+                    <property name="active" value="false"/>
+                    <property name="roles" value="ROLE_ADMIN,ROLE_EDITOR"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="answers"/>
+                    <property name="name" value="咨询管理"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/answers/main.jsp"/>
+                    <property name="active" value="true"/>
+                    <property name="roles" value="ROLE_ADMIN,ROLE_PERSONAL"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="discussion"/>
+                    <property name="name" value="访谈管理"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/discussion/admin"/>
+                    <property name="active" value="true"/>
+                    <property name="roles" value="ROLE_ADMIN"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="dio"/>
+                    <property name="name" value="政务管理"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/dio/admin"/>
+                    <property name="active" value="false"/>
+                    <property name="roles" value="ROLE_ADMIN"/>
+                </bean>
+
+                <bean class="com.fulong.longcon.system.xml.XMLModule">
+                    <property name="ID" value="designerweb"/>
+                    <property name="name" value="设计师网"/>
+                    <property name="position" value="header"/>
+                    <property name="URL" value="/designerweb/admin"/>
+                    <property name="active" value="false"/>
+                    <property name="roles" value="ROLE_ADMIN"/>
+                </bean>
+
+                <!-- 内容管理模块的子模块-->
+
+	</list>
+        </property>
+        </bean>
+</beans>

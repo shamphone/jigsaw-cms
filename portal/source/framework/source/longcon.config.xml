@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<longcon-framework>
+	<property>
+		<name>system.name</name>
+		<value>河北民企在线</value>
+		<description>系统名称</description>
+	</property>
+	<property>
+		<name>copyright</name>
+		<value>© 2007-2008 北京中科辅龙计算机技术股份有限公司</value>
+		<description>版权所有</description>
+	</property>
+        <modules>
+          <!--
+                <module id="user" position="personal.header">
+                        <name>个人信息</name>
+                        <url>../member/personal</url>
+                        <active>true</active>
+		</module>
+		<module id="training" position="personal.header">
+			<name>课程管理</name>
+			<url>../training/personal</url>
+			<active>true</active>
+		</module>
+		<module id="recruit" position="personal.header">
+			<name>我的求职</name>
+			<url>../recruit/personal</url>
+			<active>true</active>
+		</module>
+                <module id="org" position="org.header">
+                        <name>企业信息</name>
+                        <url>../member/org</url>
+                        <active>true</active>
+                </module>
+                <module id="recruit" position="org.header">
+                        <name>招聘管理</name>
+                        <url>../recruit/org</url>
+                        <active>true</active>
+		</module>
+		<module id="park" position="org.header">
+			<name>园区平台</name>
+			<url>../shenbao/org</url>
+			<active>true</active>
+		</module>
+		<module id="rz" position="org.header">
+			<name>融资平台</name>
+			<url>../rz/org</url>
+			<active>false</active>
+		</module>
+		<module id="credit" position="org.header">
+			<name>企业信用</name>
+			<url>../credit/org</url>
+			<active>false</active>
+                </module>
+                <module id="site" position="org.header">
+                        <name>自助建站</name>
+                        <url>../cms/org</url>
+                        <active>true</active>
+		</module>
+		<module id="ecommerce" position="org.header">
+			<name>商贸平台</name>
+			<url>../ecommerce/org</url>
+			<active>true</active>
+		</module>
+                -->
+		<module id="desktop" position="admin.header">
+			<name>办公桌面</name>
+			<url>/desktop</url>
+			<active>true</active>
+		</module>
+		<module id="park" position="admin.header">
+			<name>园区平台</name>
+			<url>/shenbao/admin</url>
+			<active>false</active>
+		</module>
+		<module id="rz" position="admin.header">
+			<name>融资平台</name>
+			<url>/rz/admin</url>
+			<active>false</active>
+		</module>
+		<module id="credit" position="admin.header">
+			<name>企业信用</name>
+			<url>/credit/admin</url>
+			<active>false</active>
+                </module>
+		<module id="ecommerce" position="admin.header">
+			<name>商贸平台</name>
+			<url>/ecommerce</url>
+			<active>true</active>
+                </module>
+                <module id="recruit" position="admin.header">
+                        <name>招聘管理</name>
+                        <url>/recruit/main.jsp</url>
+                        <active>true</active>
+		</module>
+		<module id="cms" position="admin.header">
+			<name>内容管理</name>
+			<url>/cms</url>
+			<active>true</active>
+		</module>
+		<module id="site" position="admin.header">
+			<name>网站管理</name>
+			<url>/site</url>
+			<active>true</active>
+		</module>
+		<module id="passport" position="admin.header">
+			<name>用户管理</name>
+			<url>/member/</url>
+			<active>true</active>
+                </module>
+		<module id="useradmin" position="admin.header">
+			<name>会员管理</name>
+			<url>/member/admin/user</url>
+			<active>false</active>
+                </module>
+                <module id="training" position="admin.header">
+                        <name>课程管理</name>
+                        <url>/training/main.jsp</url>
+                        <active>false</active>
+                </module>
+                <module id="answers" position="admin.header">
+                        <name>咨询管理</name>
+                        <url>/answers/main.jsp</url>
+                        <active>true</active>
+		</module>
+		<module id="discussion" position="admin.header">
+			<name>访谈管理</name>
+			<url>/discussion/admin</url>
+			<active>false</active>
+		</module>
+		<module id="orgadmin" position="admin.header">
+			<name>机构管理</name>
+			<url>/member/admin/org</url>
+			<active>false</active>
+		</module>
+		<module id="dio" position="admin.header">
+			<name>政务管理</name>
+			<url>/dio/admin</url>
+			<active>false</active>
+		</module>
+		<module id="designerweb" position="admin.header">
+			<name>设计师网</name>
+			<url>/designerweb/admin</url>
+			<active>false</active>
+		</module>
+	</modules>
+</longcon-framework>

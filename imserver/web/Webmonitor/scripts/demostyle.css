@@ -1,0 +1,85 @@
+body,td {
+	font-family: ËÎÌו, arial;
+	font-size: 12px;
+	margin:0px;
+}
+.commentgray {
+	color:666666;
+	text-decoration: line-through;
+}
+input,select,option {
+	font-size: 12px;
+	margin:0px;
+	border:1px solid #999999; 
+	padding-top: 2px;
+	padding-left: 2px;
+    padding-right: 2px;
+	padding-bottom: 1px;
+
+}
+p {line-height: 18px; margin-top:10px; margin-bottom:2px;color:#000000}
+ul {line-height: 18px; margin-top:2px; margin-bottom:2px;color:#000000; margin-left:20px;}
+.en {
+	font-family: arial, Helvetica, sans-serif; 
+	font-size: 10px;
+}
+a:link {
+	color:336600;
+	text-decoration: underline;
+}
+a:visited {
+	font-size: 12px;
+	color:336600;
+	text-decoration: underline;
+}
+a:hover {
+	color:ff9900;
+	text-decoration: underline;
+}
+a.help:link {
+	color:666666;
+	text-decoration: underline;
+}
+a.help:visited {
+	font-size: 12px;
+	color:666666;
+	text-decoration: underline;
+}
+a.help:hover {
+	color:ff9900;
+	text-decoration: underline;
+}
+a.column:link {
+	color:ffffff;
+	text-decoration: underline;
+}
+a.column:visited {
+	color:ffffff;
+	text-decoration: underline;
+}
+a.column:hover {
+	color:336600;
+	text-decoration: underline;
+}
+a.column2:link {
+	color:336600;
+	text-decoration: underline;
+}
+a.column2:visited {
+	color:336600;
+	text-decoration: underline;
+}
+a.column2:hover {
+	color:336600;
+	text-decoration: underline;
+}
+.whitebold {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.radioinput {border:0px solid #ffffff; height:15px;}
+.incp {line-height: 18px; margin-top:10px; margin-bottom:2px;color:#000000}
+.pct {line-height: 17px; margin:0px;color:#000000}
+.c60 {font-weight:bold; color:#cc6600}
+.title {line-height: 19px; color:336600; font-weight:bold; font-size:14px; margin:0px;margin-top:2px;}
+.titlebig {line-height: 19px; color:336600; font-weight:bold; font-size:22px; margin:3px;margin-top:2px;}

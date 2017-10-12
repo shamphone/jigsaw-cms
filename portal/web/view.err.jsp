@@ -1,0 +1,2 @@
+<%@page contentType="text/html; charset=UTF-8"%><%@taglib uri="/WEB-INF/fulong.tld" prefix="fulong"%><%@taglib uri="/WEB-INF/fulong-portal.tld" prefix="portlet"%><%@taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%><%@taglib uri="/WEB-INF/struts-html.tld" prefix="html"%><%@taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<font color="darkred"><bean:write name="javax.portlet.config" property="displayName(zh)"/></font>

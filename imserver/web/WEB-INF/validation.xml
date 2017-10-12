@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+<form-validation>
+	<formset>
+		<form name="registerForm">
+			<field property="username" depends="required,mask,minlength,maxlength">
+				<msg name="mask" key="errors.maskmsg" />
+				<arg0 key="registerForm.username" />
+				<arg1 name="minlength" key="${var:minlength}" resource="false" />
+				<arg2 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[a-z0-9]*$</var-value>
+				</var>
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>4</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>16</var-value>
+				</var>
+			</field>
+			<field property="password" depends="required,maxlength,minlength">
+				<arg0 key="registerForm.password" />
+				<arg1 key="${var:minlength}" name="minlength" resource="false" />
+				<arg2 key="${var:maxlength}" name="maxlength" resource="false" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>6</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>16</var-value>
+				</var>
+			</field>
+			<field property="firstname" depends="required">
+				<arg0 key="registerForm.firstname" />
+			</field>
+			<field property="lastname" depends="required">
+				<arg0 key="registerForm.lastname" />
+			</field>
+			<field property="email" depends="required">
+				<arg0 key="registerForm.email" />
+			</field>
+		</form>
+
+		<form name="userInfoEditForm">
+			<field property="firstname" depends="required">
+				<arg0 key="registerForm.firstname" />
+			</field>
+			<field property="lastname" depends="required">
+				<arg0 key="registerForm.lastname" />
+			</field>
+			<field property="email" depends="required">
+				<arg0 key="registerForm.email" />
+			</field>
+		</form>
+		<form name="BulletinForm">
+			<field property="content" depends="required">
+			</field>
+		</form>
+
+		<form name="modelAddForm">
+			<field property="name" depends="required,maxlength">
+				<arg0 key="add.name" />
+				<arg2 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>25</var-value>
+				</var>
+			</field>
+			<field property="desc" depends="required,maxlength">
+				<arg0 key="add.desc" />
+				<arg2 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>200</var-value>
+				</var>
+			</field>
+		</form>
+		<form name="groupAddForm">
+			<field property="groupName" depends="required,maxlength">
+				<arg0 key="add.name" />
+				<arg2 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>25</var-value>
+				</var>
+			</field>
+			<field property="groupDesc" depends="required,maxlength">
+				<arg0 key="add.desc" />
+				<arg2 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>200</var-value>
+				</var>
+			</field>
+		</form>
+		<form name="roleAddForm">
+			<field property="identityName" depends="required,maxlength">
+				<arg0 key="identity.add.title.name" />
+				<arg2 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>25</var-value>
+				</var>
+			</field>
+			<field property="identityDesc" depends="required,maxlength">
+				<arg0 key="identity.add.title.desc" />
+				<arg2 name="maxlength" key="${var:maxlength}" resource="false" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>200</var-value>
+				</var>
+			</field>
+		</form>
+	</formset>
+</form-validation>

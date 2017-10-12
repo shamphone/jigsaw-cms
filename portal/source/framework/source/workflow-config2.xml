@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- 定义工作流 -->
+	<bean id="simpleness" class="com.fulong.longcon.workflow.impl.ProcessDefinitionImpl">
+		<property name="name">
+			<value>信息发布工作流</value>
+		</property>
+		<property name="activityList">
+			<list>
+				<ref bean="create.content"/>
+			</list>
+		</property>
+		<property name="transitionList">
+			<list>
+				<ref bean="save.content"/>
+			</list>
+		</property>
+	</bean>
+</beans>

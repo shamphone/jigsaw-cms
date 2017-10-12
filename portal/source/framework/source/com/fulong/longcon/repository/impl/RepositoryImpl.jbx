@@ -1,0 +1,13 @@
+[PropertyInfo]
+cacheFactory,com.fulong.common.cache.CacheFactory,false,false, , ,true,<default>
+definitionManager,com.fulong.longcon.repository.NodeDefinitionManager,false,false, , ,true,<default>
+nodes,com.fulong.longcon.repository.NodeCollection,false,false, , ,true,<default>
+queryManager,com.fulong.longcon.repository.QueryManager,false,false, , ,true,<default>
+rootNode,com.fulong.longcon.repository.Node,false,false, , ,true,<default>
+services,java.util.List,false,false, , ,true,<default>
+valueFactory,com.fulong.longcon.repository.ValueFactory,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

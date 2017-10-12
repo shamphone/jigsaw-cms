@@ -1,0 +1,12 @@
+[PropertyInfo]
+attributes,java.util.Map,false,false, , ,true,<default>
+commonname,String,false,false, , ,true,<default>
+id,String,false,false, , ,true,<default>
+lastModifiedDate,java.util.Date,false,false, , ,true,<default>
+registerDate,java.util.Date,false,false, , ,true,<default>
+type,int,false,false, , ,true,<default>
+[IconNames]
+
+
+
+

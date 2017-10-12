@@ -1,0 +1,37 @@
+.editorBody {background-color: menu; border-style: none; border-top: 0px; border-bottom: 0px; border-left: 0px; border-right: 0px; margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px}
+.editorBody FIELDSET {font-size: 12px; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; width: 360px; height: 320px}
+.formTable {font-size: 10px; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; width: 350px}
+.formTable TH {font-size: 12px; font-weight: normal}
+.formTable TD {font-size: 12px}
+.formTable SELECT {width: 150px}
+.formTable SPAN {margin-right: 2px}
+formTable .input {width: 205px}
+.selectionEditor BUTTON {margin-top: 2px; margin-right: 6px}
+HR.seperator {color: #3399cc}
+UL.noprefix {list-style-type: none}
+.tips {margin-top: 10em; margin-bottom: 10em; margin-left: 10em; margin-right: 10em}
+.h2tips {color: gray; margin-top: 1em; margin-bottom: 1em; margin-left: 1em; margin-right: 1em}
+.tip {font-size: 12px; margin-top: 5em; margin-bottom: 5em; margin-left: 5em; margin-right: 5em}
+.operation {line-height: 20px; text-align: center; border-top: #c0c0c0 1px solid; margin-top: 2em; margin-bottom: 1em; margin-left: 1em; margin-right: 1em; height: 30px}
+.operation INPUT {margin-top: 5px; margin-bottom: 5px; margin-left: 5px; margin-right: 5px}
+.commonbut {margin-left: 5px; width: 55px}
+.formTitle {white-space: nowrap}
+.toolbar BUTTON {margin-left: 6px; width: 75px; height: 21px}
+.toolbar {text-align: right}
+.portletWindow {background-color: #f0f0f0; display: inline; border-color: #c0c0c0; border-style: dashed; border-top: #c0c0c0 1px dashed; border-bottom: #c0c0c0 1px dashed; border-left: #c0c0c0 1px dashed; border-right: #c0c0c0 1px dashed;}
+.portletBody {background-color: #ffffff}
+.portletHeader {font-size: 10pt; background-color: inactivecaption; padding-top: 2px; padding-left: 2px; height: 20px; cursor: pointer}
+.activeHeader {background-color: activecaption}
+.portletPreview {display: inline; border-color: #808080; border-style: dotted; border-top: #808080 1px dotted; border-bottom: #808080 1px dotted; border-left: #808080 1px dotted; border-right: #808080 1px dotted}
+#pannelSelect {background-color: menu; width: 100px; height: 360px}
+.pannelDiv {width: 100px; height: 345px}
+.stylePreviewWindow {background-color: #ffffff; border-color: buttonface; border-style: ridge; border-top: buttonface 1px ridge; border-bottom: buttonface 1px ridge; border-left: buttonface 1px ridge; border-right: buttonface 1px ridge; margin-right: 2px; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 5px; width: 120px; height: 160px}
+.portlet_title {color: #000; font-weight: bold; text-align: right; white-space: nowrap}
+SPAN.portletName {color: captiontext}
+TD.navSelectors {vertical-align: top; width: 130px}
+TD.navSelectors SELECT {width: 130px}
+TD.navTools {width: 60px}
+#staticContentEditor {background-color: white; overflow: scroll; border-color: activeborder; border-style: inset; border-top: activeborder 2px inset; border-bottom: activeborder 2px inset; border-left: activeborder 2px inset; border-right: activeborder 2px inset; width: 100%; height: 200px}
+.commonSelection {width: 155px}
+#fields {width: 155px}
+#ZL {font-family: Terminal}

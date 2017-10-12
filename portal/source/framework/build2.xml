@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="coolink-framework">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="C:/eclipse/eclipse3.4.1"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="Apache Tomcat v5.5 [Apache Tomcat v5.5].libraryclasspath">
+        <pathelement location="C:/Borland/JBuilder2005/thirdparty/apache-tomcat-5.5.27/common/lib/commons-el.jar"/>
+        <pathelement location="C:/Borland/JBuilder2005/thirdparty/apache-tomcat-5.5.27/common/lib/jasper-compiler-jdt.jar"/>
+        <pathelement location="C:/Borland/JBuilder2005/thirdparty/apache-tomcat-5.5.27/common/lib/jasper-compiler.jar"/>
+        <pathelement location="C:/Borland/JBuilder2005/thirdparty/apache-tomcat-5.5.27/common/lib/jasper-runtime.jar"/>
+        <pathelement location="C:/Borland/JBuilder2005/thirdparty/apache-tomcat-5.5.27/common/lib/jsp-api.jar"/>
+        <pathelement location="C:/Borland/JBuilder2005/thirdparty/apache-tomcat-5.5.27/common/lib/naming-factory-dbcp.jar"/>
+        <pathelement location="C:/Borland/JBuilder2005/thirdparty/apache-tomcat-5.5.27/common/lib/naming-factory.jar"/>
+        <pathelement location="C:/Borland/JBuilder2005/thirdparty/apache-tomcat-5.5.27/common/lib/naming-resources.jar"/>
+        <pathelement location="C:/Borland/JBuilder2005/thirdparty/apache-tomcat-5.5.27/common/lib/ojdbc14-fixed.jar"/>
+        <pathelement location="C:/Borland/JBuilder2005/thirdparty/apache-tomcat-5.5.27/common/lib/servlet-api.jar"/>
+    </path>
+    <path id="coolink-framework.classpath">
+        <pathelement location="classes"/>
+        <pathelement location="../../deployment/WEB-INF/lib/xmlParserAPIs.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-beanutils.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-codec-1.3.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-collections.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-dbcp-1.2.1.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-digester.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-discovery.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-fileupload-1.1.1.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-httpclient.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-io-1.2.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-lang.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-logging.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-pool-1.2.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/commons-validator.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/css-api.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/dom4j-1.1.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/htmlparser.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/informa.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/jacob.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/jakarta-oro.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/jasperreports-2.0.1.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/jaxrpc.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/jcommon-1.0.0.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/jdom.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/jfreechart-1.0.0.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/junit.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/lucene-analyzers-1.9-final.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/lucene-core-1.9-final.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/lucene-highlighter-1.9-final.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/mail.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/passport.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/portlet.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/saaj.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/spring.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/spring-mock.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/spring-security-captcha-2.0-M2.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/spring-security-core-2.0-M2.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/spring-security-taglibs-2.0-M2.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/spring-webmvc.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/spring-webmvc-struts.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/struts.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/struts-legacy.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/unittest.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/velocity-1.5.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/velocity-dvsl-1.0.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/velocity-tools-1.4.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/webharvest.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/webservice.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/wsdl4j.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/xalan.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/xercesImpl.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/xml-apis.jar"/>
+        <path refid="Apache Tomcat v5.5 [Apache Tomcat v5.5].libraryclasspath"/>
+        <pathelement location="../../deployment/WEB-INF/lib/activation.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/ant.jar"/>
+        <pathelement location="../../deployment/WEB-INF/lib/antlr.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="classes"/>
+        <copy includeemptydirs="false" todir="classes">
+            <fileset dir="source" excludes="**/*.launch, **/*.java"/>
+        </copy>
+        <copy includeemptydirs="false" todir="classes">
+            <fileset dir="test" excludes="**/*.launch, **/*.java"/>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="classes" source="${source}" target="${target}">
+            <src path="source"/>
+            <exclude name="**/*svn/**"/>
+            <exclude name="*.PPT"/>
+            <exclude name=".svn/"/>
+            <exclude name="com/.svn/"/>
+            <exclude name="com/fulong/longcon/card/"/>
+            <exclude name="com/fulong/longcon/discussion/"/>
+            <exclude name="com/fulong/longcon/ecommerce/"/>
+            <exclude name="com/fulong/longcon/forum/"/>
+            <exclude name="com/fulong/longcon/review/"/>
+            <classpath refid="coolink-framework.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="classes" source="${source}" target="${target}">
+            <src path="test"/>
+            <exclude name="**/.svn/**"/>
+            <classpath refid="coolink-framework.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>

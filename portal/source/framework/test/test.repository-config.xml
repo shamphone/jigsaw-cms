@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <bean id="valueFactory" class="com.fulong.longcon.repository.value.ValueFactoryImpl" init-method="init">
+    </bean>
+    <bean id="queryManager" class="com.fulong.longcon.repository.core.InternalQueryManager" init-method="init">
+    </bean>
+    <bean id="definitionManager" class="com.fulong.longcon.repository.definition.NodeDefinitionManagerImpl" init-method="init">
+        <property name="dataSource">
+            <ref bean="datasource"/>
+        </property>
+        <property name="valueFactory">
+            <ref bean="valueFactory"/>
+        </property>
+        <property name="dao">
+            <value>oracle</value>
+        </property>
+    </bean>
+   
+
+    <bean id="sqlQuery" class="com.fulong.longcon.repository.impl.SQLQueryCreator">
+    <property name="repository" ref="repository"/>
+    </bean>
+    
+    <bean id="repository" class="com.fulong.longcon.repository.impl.RepositoryImpl" init-method="init">
+        <property name="valueFactory">
+            <ref bean="valueFactory"/>
+        </property>
+        <property name="cacheFactory">
+            <ref bean="cacheFactory"/>
+        </property>
+        <property name="definitionManager">
+            <ref bean="definitionManager"/>
+        </property>
+    
+        <property name="dataSource">
+            <ref bean="datasource"/>
+        </property>
+        <property name="dao">
+            <value>oracle</value>
+        </property>
+     
+    </bean>
+</beans>

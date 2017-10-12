@@ -1,0 +1,5 @@
+1.awstats.conf文件覆盖程序目录中的/WEB-INF/cgi/awstats.conf
+
+2.server.xml文件覆盖tomcat目录中的/conf/server.xml
+
+3.service.bat文件覆盖tomcat目录中的/bin/service.bat
