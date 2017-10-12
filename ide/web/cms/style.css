@@ -1,0 +1,80 @@
+/* public 公用部份 */
+body,form,div,p {margin:0;padding:0;}
+body,td,select{font:12px Tahoma,Arial,宋体;}
+button {margin:0 3px;height:23px;border:0px;background:#ccc;}
+
+.td1 {font-size: 14px;line-height: 14px;}
+.danghang {COLOR: #CC3300;font-size: 12px;font-weight: bold;}
+A.danghang:link  {COLOR: #CC3300;font-size: 12px;font-weight: bold;}
+A.danghang:visited {COLOR: #CC3300;font-size: 12px;font-weight: bold;}
+A.danghang:hover {COLOR: #42B4FF;font-size: 12px;font-weight: bold;TEXT-DECORATION:none}
+.mulu {COLOR: #174f7f;font-size: 14px;font-weight: bold;}
+.shuru {COLOR: #174f7f;font-size: 12px;font-weight: bold;}
+A:link {COLOR: #1153a5;TEXT-DECORATION: none}
+A {COLOR: #1153a5;TEXT-DECORATION: none}
+A:visited {COLOR: #1153a5;TEXT-DECORATION: none}
+A:hover {COLOR: red;TEXT-DECORATION: none}
+A.dao:link {COLOR: #000000; LINE-HEIGHT: 14px ; TEXT-DECORATION: none}
+A.dao:visited {COLOR: #000000; LINE-HEIGHT: 14px ; TEXT-DECORATION:none }
+A.dao:hover {COLOR: #42B4FF; LINE-HEIGHT: 14px; TEXT-DECORATION:none}
+
+#mainFrame{width:95%}
+
+#mainTable {border-collapse:collapse;width:95%;border:1px solid #ccc;}
+#mainTable thead {font-weight:bold;background:#eee;word-wrap:normal}
+#mainTable td{height:20px;}
+
+#infoTable{border-collapse:collapse;width:95%;}
+#infoTable td{height:20px;}
+
+#headerBack{background-image:url(../images/site/to1.jpg);}
+#headerBackButtom{background-image:url(../images/site/sme1_042.gif);}
+.step {color:#2f385d;font-size:14px;font-weight:bold;}
+.stepDisabled {color:#c0c0c0;font-size:14px;font-weight:bold;}
+#congratulation{color:#2f385d;font-size:14px;}
+
+
+#leftNav {padding:10px 0 0; background-image:url(../images/site/sme_left_02.jpg);}
+#leftNavTop{background-image:url(../images/site/sme_left_11.jpg);}
+#leftNavLeft{background-image:url(../images/site/sme1_zuo1.gif);}
+#leftNavRight{background-image:url(../images/site/sme_left_18.jpg);}
+#leftNavButtom{background-image:url(../images/site/sme_left_26.jpg);}
+
+#contentTop{background-image: url(../images/site/sme1_08.gif)}
+#contentLeft{background-image: url(../images/site/sme1_14.gif)}
+#contentButtom{background-image: url(../images/site/sme1_20.gif)}
+#contentRight{background-image: url(../images/site/sme1_16.jpg)}
+
+.emphasize{COLOR: red;font-weight:bold;}
+#title01{font-weight:bold;}
+#regtable{list-style-type:none;}
+#commonul{list-style-type:none;}
+
+/* 公用表单样式 */
+.formTable{width:100%}
+.formTitle{font-size:12px;font-weight:bold;color:#3E589F;white-space:nowrap}
+.formTips{font-size:12px;color:#666;}
+.errorTips{font-size:12px;color:red;}
+.formComponent{font-size:12px;}
+.formTable select{width:200px;}
+.formTable td{vertical-align:top}
+.formTable thead tr{background-color:#f1f1f1;font-weight:bold;height:30px;}
+
+hr.seperator{color:#3399cc;}
+ul.noprefix{list-style:none;}
+.tips{margin:10em 10em 10em 10em;}
+.h2tips{margin:1em 1em 1em 1em;color:gray}
+.tip{margin:5em 5em 5em 5em;font-weight:bold;font-size:18px;}
+.operation {margin:2em 1em 1em 1em;text-align:center;height:30px;line-height:20px;border-top:1px solid #c0c0c0;}
+.operation input{ margin:5px 5px 5px 5px;}
+
+#agreement{FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN: 20px 30px 30px; LIST-STYLE-TYPE: none}
+#agreementul{list-style-type: decimal;font-size:13px;font-weight:normal;}
+
+h1 {padding-right: 0px; padding-left:25px; font-weight: bold; font-size: 18px; padding-bottom: 0px; margin: 0px; color: #e1601a; padding-top: 10px; height: 30px}
+h2 {padding-right: 0px; padding-left: 0px; font-weight: bold; font-size: 18px; padding-bottom: 0px; margin: 0px 0px 10px 18px; COLOR: #2f385d; padding-top: 10px; border-bottom: #c0c0c0 1px solid; height: 30px}
+h3 {padding-right: 0px; padding-left: 0px; font-weight: bold; font-size: 14px; padding-bottom: 0px; margin: 0px 0px 10px 18px; COLOR: #2f385d; padding-top: 10px; border-bottom: #c0c0c0 1px solid; height: 30px}
+h4 {padding-right: 0px; padding-left: 0px; font-weight: bold; font-size: 18px; padding-bottom: 0px; margin: 0px; color: #e1601a; padding-top: 10px; height: 30px}
+
+.domain{margin:4px 0px 4px 25px;list-style-image:url(../images/ymcx/ymcx_18.gif);line-height:24px;}
+

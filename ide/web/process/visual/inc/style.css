@@ -1,0 +1,55 @@
+BODY {
+    background-color: white;
+	border: none;
+	BACKGROUND-REPEAT: no-repeat;
+	
+	/* 滚动条样式 */
+	 SCROLLBAR-FACE-COLOR: #EBEEF7; 
+	 SCROLLBAR-HIGHLIGHT-COLOR: #7B92D5; 
+	 SCROLLBAR-SHADOW-COLOR: #EBEEF7; 
+	 SCROLLBAR-3DLIGHT-COLOR: #EBEEF7; 
+	 SCROLLBAR-ARROW-COLOR: #7B92D5; 
+	 SCROLLBAR-TRACK-COLOR: #DBE2F9; 
+	 SCROLLBAR-DARKSHADOW-COLOR: #7B92D5; 
+	 SCROLLBAR-BASE-COLOR: #EBEEF7 
+}
+A:active {
+	COLOR: #1f2d9a
+}
+A:visited {
+	COLOR: #1f2d9a
+}
+A:link {
+	COLOR: #1f2d9a
+}
+A:hover {
+	COLOR: #1f2d9a
+}
+A {
+	TEXT-DECORATION: none
+}
+TD {
+	FONT-SIZE: 9pt
+}
+
+.txtput {
+    width:200px;
+}
+
+.btn {
+	COLOR: #919CD0; BACKGROUND-COLOR: rgb( 252,252,254 ); FONT-SIZE: 9pt; HEIGHT: 18px; BORDER-RIGHT: 1px double; BORDER-TOP: 1px double; BORDER-LEFT: 1px double; BORDER-BOTTOM: 1px double; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif";
+}
+
+.panel_style {
+	BORDER-RIGHT: #919cd0 1px solid; BORDER-TOP: #919cd0 1px solid; BORDER-LEFT: #919cd0 1px solid; COLOR: #1f2d9a; BORDER-BOTTOM: #919cd0 1px solid
+}
+.panel_line {
+	BACKGROUND: #919cd0
+}
+button {
+	height:24px;
+	width:80px;
+  font-size:12px;
+  margin-left: 2px;
+  margin-right: 2px;
+}

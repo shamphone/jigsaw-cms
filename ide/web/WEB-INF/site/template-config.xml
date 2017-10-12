@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="createTemplateForm" type="com.fulong.site.form.TemplateForm"/>
+    <form-bean name="editTemplateForm" type="com.fulong.site.form.TemplateForm"/>
+    <form-bean name="moveTemplateForm" type="com.fulong.site.form.TemplateForm"/>
+    <form-bean name="renameTemplateForm" type="com.fulong.site.form.TemplateForm"/>
+    <form-bean name="importTemplateForm" type="com.fulong.site.form.TemplateForm"/>
+  </form-beans>
+  <global-forwards>
+    <forward name="forbidden" path="/forbidden.jsp" redirect="true"/>
+    <forward name="error" path="/error.jsp?error={0}" redirect="true"/>
+  </global-forwards>
+  <action-mappings>
+      <action path="/templateXML" type="com.fulong.site.template.TemplateXMLAction" scope="request"/>
+    <action path="/list" type="com.fulong.site.template.ListAction" scope="request">
+      <forward name="success" path="/list.jsp"/>
+    </action>
+     <action path="/selectTemplate" type="com.fulong.site.template.SelectTemplateAction" scope="request">
+      <forward name="selectNavigateTemplate" path="/navigateTemplateSelector.jsp"/>
+      <forward name="selectTemplate" path="/templateSelector.jsp"/>
+      <forward name="selectTemplateBySite" path="/templateBySiteSelector.jsp"/>
+    </action>
+     <action  name="createTemplateForm" path="/create" type="com.fulong.site.template.CreateAction" scope="request">
+      <forward name="success" path="/create.jsp"/>
+    </action>
+    <action  name="createTemplateForm"  path="/insert" type="com.fulong.site.template.InsertAction" scope="request">
+      <forward name="success" path="/insertSuccess.jsp"/>
+      <forward name="fail" path="/create.jsp"/>
+    </action>
+    <action name="editTemplateForm" path="/edit" type="com.fulong.site.template.EditAction" scope="request">
+      <forward name="success" path="/edit.jsp"/>
+    </action>
+    <action name="editTemplateForm" path="/update" type="com.fulong.site.template.UpdateAction" scope="request">
+      <forward name="success" path="/updateSuccess.jsp"/>
+    </action>
+    <action path="/delete" type="com.fulong.site.template.DeleteAction" scope="request"/>
+    <action name="renameTemplateForm" path="/rename" type="com.fulong.site.template.RenameAction" scope="request">
+      <forward name="success" path="/rename.jsp"/>
+    </action>
+    <action name="renameTemplateForm" path="/renamed" type="com.fulong.site.template.RenamedAction" scope="request">
+      <forward name="success" path="/renameSuccess.jsp"/>
+    </action>
+    <action path="/check" type="com.fulong.site.template.CheckAction" scope="request"/>
+    <action path="/doExport" type="com.fulong.site.template.DoExportAction" scope="request"/>
+    <action path="/import" type="com.fulong.site.template.ImportAction" scope="request">
+      <forward name="success" path="/import.jsp"/>
+    </action>
+    <action path="/doImport" name="importTemplateForm" type="com.fulong.site.template.DoImportAction" scope="request">
+    	<forward name="success" path="/importSuccess.jsp"></forward>
+    </action>
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.site.Common"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/site/validation.xml"/>
+  </plug-in>
+</struts-config>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+<bean id="basicCalculator" abstract="true"   class="com.fulong.longcon.expression.impl.BasicCalculator">
+  <property name="repository" ref="repository"/>
+  <property name="name" value="系统常量"/>
+</bean>
+
+<bean id="currentUser" class="com.fulong.longcon.expression.impl.CurrentUserCalculator"  parent="basicCalculator">
+<property name="name" value="当前用户"/>
+</bean>
+<bean id="currentNode" class="com.fulong.longcon.expression.impl.CurrentNodeCalculator"  parent="basicCalculator">
+<property name="name" value="当前内容"/>
+</bean>
+<bean id="siteOwner" class="com.fulong.longcon.expression.impl.SiteOwnerCalculator"  parent="basicCalculator">
+<property name="name" value="网站所有者"/>
+<property name="siteFactory" ref="siteFactory"/>
+</bean>
+<bean id="currentDate" class="com.fulong.longcon.expression.impl.CurrentDateCalculator"  parent="basicCalculator">
+<property name="name" value="当前时间"/>
+</bean>
+<bean id="yestoday" class="com.fulong.longcon.expression.impl.YestodayCalculator"  parent="basicCalculator">
+<property name="name" value="昨天"/>
+</bean>
+<bean id="today" class="com.fulong.longcon.expression.impl.TodayCalculator"  parent="basicCalculator">
+<property name="name" value="今天"/>
+</bean>
+<bean id="tomorrow" class="com.fulong.longcon.expression.impl.TomorrowCalculator"  parent="basicCalculator">
+<property name="name" value="明天"/>
+</bean>
+<bean id="thisWeekStart" class="com.fulong.longcon.expression.impl.ThisWeekStartCalculator"  parent="basicCalculator">
+<property name="name" value="本周初"/>
+</bean>
+<bean id="thisWeekEnd" class="com.fulong.longcon.expression.impl.ThisWeekEndCalculator"  parent="basicCalculator">
+<property name="name" value="本周末"/>
+</bean>
+<bean id="nextWeekEnd" class="com.fulong.longcon.expression.impl.NextWeekEndCalculator"  parent="basicCalculator">
+<property name="name" value="下周末"/>
+</bean>
+<bean id="parameter" class="com.fulong.longcon.expression.impl.ParameterCalculator"  parent="basicCalculator">
+<property name="name" value="URL参数"/>
+</bean>
+<bean id="ipAddress" class="com.fulong.longcon.expression.impl.IPCalculator"  parent="basicCalculator">
+<property name="name" value="用户的IP地址"/>
+</bean>
+<bean id="weekDateParameter" class="com.fulong.longcon.expression.impl.WeekDateParameterCalculator"  parent="basicCalculator">
+<property name="name" value="周历重复器参数"/>
+</bean>
+<bean id="monthDateParameter" class="com.fulong.longcon.expression.impl.MonthDateParameterCalculator"  parent="basicCalculator">
+<property name="name" value="月历重复器参数"/>
+</bean>
+<bean id="yearDateParameter" class="com.fulong.longcon.expression.impl.YearDateParameterCalculator"  parent="basicCalculator">
+<property name="name" value="年历重复器参数"/>
+</bean>
+</beans>

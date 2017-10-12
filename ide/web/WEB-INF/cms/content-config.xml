@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+  	<form-bean name="emptyForm" type="com.fulong.common.PagerForm"/>
+    <form-bean name="contentForm" type="com.fulong.cms.form.ContentForm"/>
+    <form-bean name="editForm" type="com.fulong.cms.form.EditForm"/>
+    <form-bean name="schemaForm" type="com.fulong.cms.form.SchemaForm" />   
+         <form-bean name="filterForm" type="com.fulong.cms.form.FilterForm" />
+  </form-beans>
+  <action-mappings>
+     <action name="editForm" path="/create" type="com.fulong.cms.content.CreateAction" scope="request">
+      <forward name="success" path="/create.jsp"/>
+    </action>    
+     <action name="editForm"  path="/save" type="com.fulong.cms.content.SaveAction" scope="request">
+      <forward name="success" path="/createSuccess.jsp?contentID={0}" redirect="true"/>
+      <forward name="failed" path="/createFailed.jsp?contentID={0}" redirect="true"/>
+    </action>    
+    
+    <action  name="editForm" path="/edit" type="com.fulong.cms.content.EditAction" scope="request">
+      <forward name="success" path="/edit.jsp"/>
+    </action>
+    
+    <!-- liulei modified 批量更新-->
+    <action  name="editForm" path="/batEdit" type="com.fulong.cms.content.BatEditAction" scope="request">
+      <forward name="success" path="/batEdit.jsp"/>
+    </action>
+    <action  name="editForm" path="/batSave" type="com.fulong.cms.content.BatSaveModifyAction" scope="request">
+      <forward name="success" path="/createSuccess.jsp?contentID={0}" redirect="true"/>
+      <forward name="failed" path="/createFailed.jsp?contentID={0}" redirect="true"/>
+    </action>
+    <!-- liulei modified end-->
+    
+   <action path="/delete" type="com.fulong.cms.content.DeleteAction" scope="request" />
+    
+    <action path="/copy" type="com.fulong.cms.content.CopyAction" scope="request" />
+    <action path="/recommend" type="com.fulong.cms.content.RecommendAction" scope="request" />
+    
+    <action path="/move" type="com.fulong.cms.content.MoveAction" scope="request" />
+    <action name="schemaForm" path="/search" scope="request" type="com.fulong.cms.content.SearchAction">
+      <forward name="success" path="/search.jsp" />
+    </action>
+      <action path="/doSearch" scope="request" type="com.fulong.cms.content.DoSearchAction">
+      <forward name="success" path="/searchContents.jsp" />
+    </action>
+      <action path="/modifyNode" type="com.fulong.cms.content.ModifyNodeAction" scope="request">
+      <forward name="success" path="/modifyNode.jsp"/>
+    </action>
+    <action path="/createNode" type="com.fulong.cms.content.CreateNodeAction" scope="request">
+      <forward name="success" path="/createNode.jsp"/>
+    </action>
+    <action name="propertyForm" path="/insertNode" type="com.fulong.cms.content.InsertNodeAction" scope="request">
+      <forward name="success" path="/updateNodeOK.jsp" />
+    </action>
+    <action name="propertyForm" path="/updateNode" type="com.fulong.cms.content.UpdateNodeAction" scope="request">
+      <forward name="success" path="/updateNodeOK.jsp" />
+    </action>
+    <action name="filterForm" path="/filterEditor" type="com.fulong.cms.content.FilterEditorAction" scope="request">
+      <forward name="success" path="/filterEditor.jsp" />
+    </action>
+    <action path="/value" type="com.fulong.cms.content.ValueAction" scope="request">
+    <forward name="success" path="/value.jsp"/>
+    </action>
+  		<action path="/childrenXML" type="com.fulong.cms.content.ChildrenXMLAction" scope="request" />
+		<action path="/searchXML" type="com.fulong.cms.content.SearchXMLAction" scope="request" />
+		<action path="/nodeXML" type="com.fulong.cms.content.NodeXMLAction" scope="request" />
+  
+    <!--action name="contentForm" path="/searchContent" type="com.fulong.cms.content.SearchContentAction" scope="request">
+      <forward name="success" path="/searchContents.jsp"/>
+    </action-->
+    <!--action name="contentForm" path="/search" type="com.fulong.cms.content.DoSearchAction" scope="request">
+      <forward name="success" path="/contents.jsp"/>
+    </action-->
+    <!-- action name="contentForm" path="/command" type="com.fulong.cms.content.CommandAction" scope="request"/-->
+    <!--action name="contentForm" path="/contents" type="com.fulong.cms.content.ContentsAction" scope="request">
+      <forward name="success" path="/contents.jsp"/>
+    </action-->
+    <!--action name="contentForm" path="/searchCont" type="com.fulong.cms.content.SearchContAction" scope="request">
+      <forward name="success" path="/searchCont.jsp"/>
+    </action-->
+    <!-- action name="contentForm" path="/doSearchCont" type="com.fulong.cms.content.DoSearchContAction" scope="request">
+      <forward name="success" path="/searchCont.jsp"/>
+    </action-->
+    <!-- 
+    <action name="contentForm" path="/selectPrincipal" type="com.fulong.cms.content.SelectPrincipalAction" scope="request">
+      <forward name="success" path="/selectPrincipal.jsp"/>
+    </action>
+    <action name="contentForm" path="/selectUser" type="com.fulong.cms.content.SelectUserAction" scope="request">
+      <forward name="success" path="/selectUser.jsp"/>
+    </action>
+    <action name="contentForm" path="/selectContents" type="com.fulong.cms.content.SelectContentsAction">
+      <forward name="success" path="/selectContents.jsp"/>
+    </action>
+    <action name="contentForm" path="/deleteContent" type="com.fulong.cms.content.DeleteContentAction" scope="request">
+      <forward name="success" path="/deleteSuccess.jsp" redirect="true"/>
+    </action>
+    <action name="contentForm" path="/auditContent" type="com.fulong.cms.content.AuditAction" scope="request">
+      <forward name="success" path="/auditSuccess.jsp" redirect="true"/>
+    </action>
+    <action name="contentForm" path="/publishContent" type="com.fulong.cms.content.PublishAction" scope="request">
+      <forward name="success" path="/publishSuccess.jsp" redirect="true"/>
+    </action>
+    <action name="contentForm" path="/stopContent" type="com.fulong.cms.content.StopAction" scope="request">
+      <forward name="success" path="/stopSuccess.jsp" redirect="true"/>
+    </action>
+    <action name="contentForm" path="/saveSendContent" type="com.fulong.cms.content.SaveSendContentAction" scope="request">
+      <forward name="success" path="/sendSuccess.jsp" redirect="true"/>
+      <forward name="failed" path="/failed.jsp"/>
+    </action>
+    <action name="contentForm" path="/saveContent" scope="request" type="com.fulong.cms.content.SaveContentAction">
+      <forward name="success" path="/createSuccess.jsp?contentID={0}" redirect="true"/>
+      <forward name="failed" path="/createContent.jsp"/>
+    </action>
+    <action name="contentForm" path="/batchEditContent" type="com.fulong.cms.content.BatchEditContentAction" scope="request">
+      <forward name="success" path="/batchEditContent.jsp"/>
+    </action>
+    <action name="contentForm" path="/batchUpdateContent" type="com.fulong.cms.content.BatchUpdateContentAction" scope="request">
+      <forward name="success" path="/batchUpdateSuccess.jsp" redirect="true"/>
+    </action>
+    <action name="contentForm" path="/updateContent" scope="request" type="com.fulong.cms.content.UpdateContentAction">
+      <forward name="success" path="/updateSuccess.jsp?categoryID={0}&amp;contentID={1}" redirect="true"/>
+      <forward name="failed" path="/editContent.jsp"/>
+    </action>
+    <action name="contentForm" path="/updateUser" scope="request" type="com.fulong.cms.content.UpdateUserAction">
+      <forward name="success" path="/updateSuccess.jsp?categoryID={0}&amp;contentID={1}" redirect="true"/>
+      <forward name="failed" path="/editUser.jsp"/>
+    </action>
+    <action name="contentForm" path="/updateDict" scope="request" type="com.fulong.cms.content.UpdateDictAction">
+      <forward name="success" path="/updateSuccess.jsp?categoryID={0}&amp;contentID={1}" redirect="true"/>
+      <forward name="failed" path="/editDict.jsp"/>
+    </action>
+    <action path="/selectGroups" scope="request" type="com.fulong.cms.content.GetGroupsAction">
+      <forward name="success" path="/groups.jsp"/>
+    </action>
+    <action name="contentForm" path="/deliver" type="com.fulong.cms.content.DeliverAction" scope="request">
+      <forward name="success" path="/deliver.jsp"/>
+    </action>
+    <action name="contentForm" path="/searchCategory" type="com.fulong.cms.content.SearchCategoryAction" scope="request">
+      <forward name="success" path="/searchCategory.jsp"/>
+    </action>
+    <action name="contentForm" path="/categoryList" type="com.fulong.cms.content.CategoryListAction" scope="request">
+      <forward name="success" path="/categoryList.jsp"/>
+    </action>
+    <action path="/recordSite" type="com.fulong.cms.content.RecordSiteAction" scope="request"/>
+    <action path="/delRecord" type="com.fulong.cms.content.DelRecordAction" scope="request"/>
+    <action name="contentForm" path="/doDeliver" type="com.fulong.cms.content.DoDeliverAction" scope="request">
+      <forward name="success" path="/delivered.jsp"/>
+    </action>
+    <action name="contentForm" path="/setFixContent" scope="request" type="com.fulong.cms.content.SetFixContentAction">
+      <forward name="success" path="/setFixContent.jsp"/>
+    </action>
+    <action name="contentForm" path="/createFixContent" scope="request" type="com.fulong.cms.content.CreateFixContentAction">
+      <forward name="success" path="/createFixContent.jsp"/>
+    </action>
+    <action name="contentForm" path="/saveFixContent" type="com.fulong.cms.content.SaveFixContentAction" scope="request">
+      <forward name="success" path="/setFixContent.do?contentId={0}" redirect="true"/>
+    </action>
+    <action name="contentForm" path="/editFixContent" scope="request" type="com.fulong.cms.content.EditFixContentAction">
+      <forward name="success" path="/editFixContent.jsp"/>
+    </action>
+    <action name="contentForm" path="/updateFixContent" scope="request" type="com.fulong.cms.content.UpdateFixContentAction">
+      <forward name="success" path="/setFixContent.do?contentId={0}" redirect="true"/>
+    </action>
+    <action name="contentForm" path="/getSubForm" scope="request" type="com.fulong.cms.content.GetSubFormAction">
+      <forward name="success" path="/getSubForm.jsp"/>
+    </action>
+    <action name="contentForm" path="/delNode" type="com.fulong.cms.content.DelNodeAction" scope="request">
+      <forward name="success" path="/setFixContent.do?contentId={0}" redirect="true"/>
+    </action>
+    <action name="contentForm" path="/upNode" type="com.fulong.cms.content.UpNodeAction" scope="request">
+      <forward name="success" path="/setFixContent.do?contentId={0}" redirect="true"/>
+    </action>
+    <action name="contentForm" path="/downNode" type="com.fulong.cms.content.DownNodeAction" scope="request">
+      <forward name="success" path="/setFixContent.do?contentId={0}" redirect="true"/>
+    </action>
+    <action path="/setOwner" type="com.fulong.cms.content.SetOwnerAction" scope="request"/>
+    <action path="/getOperator" type="com.fulong.cms.content.GetOperatorAction" scope="request"/>
+    <action path="/getCommand" type="com.fulong.cms.content.GetCommandAction" scope="request"/>
+    <action path="/checkPermission" type="com.fulong.cms.content.CheckPermissionAction" scope="request"/>
+    <action name="changePWForm" path="/updatePassword" type="com.fulong.cms.content.UpdatePasswordAction" scope="request">
+      <forward name="success" path="/passwordUpdated.jsp"/>
+      <forward name="failed" path="/changePassword.jsp"/>
+    </action>
+    <action path="/getNodeName" type="com.fulong.cms.content.GetNodeNameAction" scope="request">
+      <forward name="success" path="/getNodeName.jsp"/>
+    </action>
+    
+    
+    
+    
+     <action name="emptyForm" path="/editSave" type="com.fulong.repository.transition.SaveContentTransition" scope="request">
+            <forward name="success" path="/editSuccess.jsp?contentID={0}" redirect="true"/>
+    </action>
+    <action name="emptyForm" path="/saveSendContent" type="com.fulong.repository.transition.SaveSendContentTransition" scope="request">
+            <forward name="success" path="/sendSuccess.jsp" redirect="true"/>
+    </action>
+    <action name="emptyForm" path="/saveCopyContent" type="com.fulong.repository.transition.SaveCopyContentTransition" scope="request">
+      
+      <forward name="success" path="/copySuccess.jsp" redirect="true"/>
+    </action>
+    <action name="emptyForm" path="/saveMoveContent" type="com.fulong.repository.transition.SaveMoveContentTransition" scope="request">
+           <forward name="success" path="/moveSuccess.jsp" redirect="true"/>
+    </action>
+    
+     <action path="/recommand" type="com.fulong.cms.content.RecommandContentActivity" scope="request">
+      <forward name="success" path="/recommandContent.jsp"/>
+    </action>
+    
+    -->
+    
+    <action path="/sortNode" type="com.fulong.cms.content.SortNodeAction" scope="request"/>
+
+  </action-mappings>
+  <message-resources key="content-message" parameter="com.fulong.cms.content.Resources"/>
+  <message-resources parameter="com.fulong.cms.Common"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/cms/content-validation.xml"/>
+  </plug-in>
+</struts-config>

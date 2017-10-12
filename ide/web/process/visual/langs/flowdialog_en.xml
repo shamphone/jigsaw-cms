@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<Properties>
+<item id="tabpage1" property="innerHTML" text="Base Props" />
+<item id="tabpage2" property="innerHTML" text="Step Style" />
+<item id="tabpage3" property="innerHTML" text="Action Style" />
+<item id="tabpage4" property="innerHTML" text="Flow Props" />
+
+<item id="tabpage1_1" property="innerHTML" text="Base Properties" />
+<item id="tabpage1_2" property="innerHTML" text="Flow Id" />
+<item id="tabpage1_3" property="innerHTML" text="Flow Name" />
+<item id="tabpage1_4" property="innerHTML" text="Begin-End Step" />
+<item id="tabpage1_5" property="innerHTML" text="BeginStep Id" />
+<item id="tabpage1_6" property="innerHTML" text="EndStep Id" />
+<item id="tabpage1_7" property="innerHTML" text="BeginStep Name" />
+<item id="tabpage1_8" property="innerHTML" text="EndStep Name" />
+
+<item id="tabpage2_1" property="innerHTML" text="Step Common Style" />
+<item id="tabpage2_2" property="innerHTML" text="Main BgColor" />
+<item id="tabpage2_3" property="innerHTML" text="Second BgColor" />
+<item id="tabpage2_4" property="innerHTML" text="Text Color" />
+<item id="tabpage2_5" property="innerHTML" text="Stroke Color" />
+<item id="tabpage2_6" property="innerHTML" text="Focused Color" />
+<item id="tabpage2_7" property="innerHTML" text="Is Shadow" />
+<item id="tabpage2_8" property="innerHTML" text="yes" />
+<item id="tabpage2_9" property="innerHTML" text="no" />
+<item id="tabpage2_10" property="innerHTML" text="Shadow Color" />
+<item id="tabpage2_11" property="innerHTML" text="2D/3D View" />
+<item id="tabpage2_12" property="innerHTML" text="2D" />
+<item id="tabpage2_13" property="innerHTML" text="3D" />
+<item id="tabpage2_14" property="innerHTML" text="3D Depth" />
+<item id="tabpage2_15" property="innerHTML" text="Begin-End Step Style" />
+<item id="tabpage2_16" property="innerHTML" text="Text Color" />
+<item id="tabpage2_17" property="innerHTML" text="Stroke Color" />
+<item id="tabpage2_20" property="innerHTML" text="(invalid in 3D)" />
+<item id="tabpage2_21" property="innerHTML" text="(invalid in 3D)" />
+<item id="tabpage2_22" property="innerHTML" text="(invalid in 3D)" />
+<item id="tabpage2_23" property="innerHTML" text="(invalid in 3D)" />
+
+<item id="tabpage3_1" property="innerHTML" text="Action Style" />
+<item id="tabpage3_2" property="innerHTML" text="Stroke Color" />
+<item id="tabpage3_3" property="innerHTML" text="Text Color" />
+<item id="tabpage3_4" property="innerHTML" text="Focused Color" />
+
+<item id="tabpage4_1" property="innerHTML" text="Runs Setup" />
+<item id="tabpage4_2" property="innerHTML" text="Flow Mode" />
+<item id="tabpage4_3" property="innerHTML" text="formal" />
+<item id="tabpage4_4" property="innerHTML" text="moni" />
+<item id="tabpage4_5" property="innerHTML" text="Start Time" />
+<item id="tabpage4_6" property="innerHTML" text="End Time" />
+<item id="tabpage4_7" property="innerHTML" text="Is Monitor" />
+<item id="tabpage4_8" property="innerHTML" text="yes" />
+<item id="tabpage4_9" property="innerHTML" text="no" />
+<item id="tabpage4_10" property="innerHTML" text="Run Mode" />
+<item id="tabpage4_11" property="innerHTML" text="active" />
+<item id="tabpage4_12" property="innerHTML" text="auto" />
+<item id="tabpage4_13" property="innerHTML" text="Note Mode" />
+<item id="tabpage4_14" property="innerHTML" text="message" />
+<item id="tabpage4_15" property="innerHTML" text="email" />
+<item id="tabpage4_16" property="innerHTML" text="Active Mode" />
+<item id="tabpage4_17" property="innerHTML" text="active form" />
+<item id="tabpage4_18" property="innerHTML" text="Auto Mode" />
+<item id="tabpage4_19" property="innerHTML" text="run exe" />
+
+<item id="FlowText" property="value" text="new flow" />
+<item id="BeginStepText" property="value" text="Begin" />
+<item id="EndStepText" property="value" text="End" />
+
+<item id="btnOk" property="value" text="Confirm" />
+<item id="btnCancel" property="value" text="Cancel" />
+<item id="btnApply" property="value" text="Apply" />
+</Properties>
+</config>

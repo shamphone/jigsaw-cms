@@ -1,0 +1,11 @@
+body {margin: 0px;}
+#viewer {width: 100%; height: 100%; overflow-y: scroll;}
+
+.unselected, .selected {table-layout:fixed; font-size:9pt;}
+.unselected #td2, .selected #td2 {overflow: hidden; word-break:break-all; text-overflow:ellipsis;}
+
+.unselected td {color:#000000;}
+
+.selected td {color:#ffffff; background-color:#316AC5;}
+
+.span1 {width:60px; height:60px; margin:2px; }

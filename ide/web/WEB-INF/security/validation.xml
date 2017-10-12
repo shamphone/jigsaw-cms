@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+<form-validation>
+  <formset>
+  <!--必须是数字和字母 -->
+    <constant>
+      <constant-name>validstring</constant-name>
+      <constant-value>^([a-zA-Z0-9]{4,16})$</constant-value>
+    </constant>
+    <form name="groupForm">
+      <field property="groupname" depends="required">
+        <arg0 key="groupname"/>
+      </field>
+    </form>
+    <form name="userForm">
+      <field property="username" depends="required,mask">
+        <arg0 key="username"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${validstring}</var-value>
+        </var>
+      </field>
+      <field property="password" depends="required">
+        <arg0 key="password"/>
+      </field>
+    </form>
+  </formset>
+</form-validation>

@@ -1,0 +1,171 @@
+.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; FONT-FAMILY: "ËÎÌו"
+}
+.fontsize {
+	FONT-WEIGHT: bold; COLOR: #ff6600; TEXT-INDENT: 20px
+}
+.topnav {
+	COLOR: #ffffff; TEXT-ALIGN: center
+}
+.topnav A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.topnav A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.topnav A:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+BODY {
+	MARGIN: 0px
+}
+BODY {
+	FONT-SIZE: 12px; LINE-HEIGHT: 20px
+}
+TD {
+	FONT-SIZE: 12px; LINE-HEIGHT: 20px
+}
+TH {
+	FONT-SIZE: 12px; LINE-HEIGHT: 20px
+}
+.line {
+	BORDER-RIGHT: #859ea5 1px solid; BORDER-TOP: #859ea5 2px solid; BORDER-LEFT: #859ea5 1px solid; BORDER-BOTTOM: #859ea5 1px solid
+}
+.black {
+	TEXT-ALIGN: center
+}
+.black A:link {
+	FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: none
+}
+.black A:visited {
+	FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: none
+}
+.white {
+	TEXT-ALIGN: center
+}
+.white A:link {
+	FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.white A:visited {
+	FONT-WEIGHT: bold; COLOR: #ffffff; TEXT-DECORATION: none
+}
+.bule {
+	COLOR: #0043da
+}
+.bule A:link {
+	COLOR: #0043da; TEXT-DECORATION: none
+}
+.bule A:visited {
+	COLOR: #0043da; TEXT-DECORATION: none
+}
+.bulefont A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #0000ff; LINE-HEIGHT: 28px; TEXT-DECORATION: underline
+}
+.bulefont A:link {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #0000ff; LINE-HEIGHT: 28px; TEXT-DECORATION: underline
+}
+.bulefont A:hover {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #5d0068; LINE-HEIGHT: 28px; TEXT-DECORATION: underline
+}
+.bulefont A:visited {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #600088; LINE-HEIGHT: 28px; TEXT-DECORATION: underline
+}
+.gray {
+	COLOR: #666666
+}
+.gray A:link {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+.gray A:visited {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+.gray A:hover {
+	COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.mainfour {
+	PADDING-LEFT: 15px; COLOR: #ffffff
+}
+.mainfour A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+.mainfour A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+A:link {
+	TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+A:active {
+	TEXT-DECORATION: none
+}
+.login1 A:link {
+	FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: none
+}
+.login1 A:visited {
+	FONT-WEIGHT: bold; COLOR: #000000; TEXT-DECORATION: none
+}
+.login2 A:link {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+.login2 A:visited {
+	COLOR: #666666; TEXT-DECORATION: none
+}
+.blackbold {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #000000
+}
+.line1 {
+	BORDER-RIGHT: #ff0000 1px solid; BORDER-TOP: #ff0000 1px solid; BORDER-LEFT: #ff0000 1px solid; BORDER-BOTTOM: #ff0000 1px solid; BACKGROUND-COLOR: #fff7f0
+}
+.line2 {
+	BORDER-RIGHT: #ff0000 1px solid; BORDER-TOP: #ff0000 1px solid; BORDER-LEFT: #ff0000 1px solid; BORDER-BOTTOM: #ff0000 1px solid
+}
+.whitefont {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ffffff; TEXT-INDENT: 40px
+}
+.whitefont1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #ffffff; TEXT-INDENT: 10px
+}
+.gray1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #666666
+}
+.gray1 A:link {
+	FONT-SIZE: 14px; COLOR: #666666; TEXT-DECORATION: none
+}
+.gray1 A:visited {
+	FONT-SIZE: 14px; COLOR: #666666; TEXT-DECORATION: none
+}
+.gray1 A:hover {
+	FONT-SIZE: 14px; COLOR: #0560b5; TEXT-DECORATION: underline
+}
+.line3 {
+	BORDER-RIGHT: #bbbbbb 1px solid; BORDER-LEFT: #bbbbbb 1px solid; BORDER-TOP-STYLE: none; BORDER-BOTTOM: #bbbbbb 1px solid
+}
+.jianju {
+	MARGIN: 3px 0px 5px
+}
+.line4 {
+	BORDER-RIGHT: #ff0000 1px solid; BORDER-LEFT: #ff0000 1px solid; BORDER-TOP-STYLE: none; BORDER-BOTTOM: #ff0000 1px solid
+}
+.line5 {
+	BORDER-RIGHT: #cacaca 1px solid; BORDER-TOP: #cacaca 1px solid; BORDER-LEFT: #cacaca 1px solid; BORDER-BOTTOM: #cacaca 1px solid
+}
+.line6 {
+	BORDER-RIGHT: #84cafd 1px solid; BORDER-TOP: #84cafd 1px solid; BORDER-LEFT: #84cafd 1px solid; BORDER-BOTTOM: #84cafd 1px solid; BACKGROUND-COLOR: #f9ffff
+}
+.orange {
+	COLOR: #ff3300
+}
+.red {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #f4050b; TEXT-INDENT: 20px
+}
+.bluefont1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #006ccf; TEXT-INDENT: 24px
+}

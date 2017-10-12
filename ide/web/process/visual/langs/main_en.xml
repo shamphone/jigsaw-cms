@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<Properties>
+<item id="topText" property="innerHTML" text="Designer Preview" />
+
+<item id="treeText" property="innerHTML" text="Flow TreeView" />
+<item id="loadText" property="innerHTML" text="load from the path of 'flow/' " />
+<item id="btnNewFlow" property="title" text="Create new flow" />
+<item id="btnEditFlow" property="title" text="Edit the flow" />
+<item id="btnSaveFlow" property="title" text="Save the flow" />
+<item id="btnAbout" property="title" text="About this" />
+<item id="btnLoadFlow" property="title" text="Load the selected flow" />
+</Properties>
+<Selects>
+<select id="flowList">
+<option value="" text="Please select..." />
+<option value="software_zh.xml" text="Universal Flow of Software Development(ZH)" />
+<option value="software_en.xml" text="Universal Flow of Software Development(EN)" />
+<option value="fly.xml" text="Order airline ticket online(ZH)" />
+</select>
+</Selects>
+</config>

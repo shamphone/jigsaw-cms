@@ -1,0 +1,119 @@
+body,td,th {
+	font-size: 12px;
+}
+body {
+	overflow: scroll;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	border-width: 0px;
+	
+}
+a:hover, a:visited, a:link{
+	text-decoration:none;
+	color:#000000;
+}
+#gotobar {
+	background-color: scrollbar;
+	height: 26px;
+	text-align: right;
+}
+#oListPanel {
+	width: 100%;
+	height: expression(document.body.clientHeight-27);
+	overflow-y: scroll;
+	overflow-x: scroll;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	border-left: 1px solid buttonshadow;
+}
+
+.tableClass thead {
+	
+}
+
+.tableClass th {
+	text-align: center;
+	background-color: window;
+	font-weight: bold;
+	border-top: solid 1px buttonshadow;
+	border-bottom: solid 1px buttonshadow;
+	border-right: solid 1px buttonshadow;
+}
+
+#listTable {
+	width: 100%;
+	border: none;
+	background-color: window;
+}
+
+#listTable thead tr {
+	position: relative;
+	top: expression(offsetParent.scrollTop);
+}
+
+#listTable thead th {
+	text-align: center;
+	background-color: buttonface;
+	font-weight: bold;
+	border-top: 1px solid white;
+	border-right: 1px solid buttonshadow;
+	border-left: 1px solid window;
+	border-bottom: 2px ridge buttonface;
+	padding-left:2px;
+	padding-right:2px;	
+}
+
+#listTable tbody td {
+	text-align: left;
+	border-bottom: solid 1px buttonface;
+	border-right: solid 1px buttonface;
+	height: 16px;
+	cursor: pointer;
+	padding-left:2px;
+	padding-right:2px;
+}
+
+#listTable tbody th {
+	text-align: left;
+	border-bottom: solid 1px buttonshadow;
+	height: 16px;
+	cursor: pointer;
+	font-weight: normal;
+}
+
+#listTable input {
+	height: 20px;
+	font-size: 11px;
+}
+
+
+
+.selectedRow {
+	background-color: highlight;
+	color: window;
+}
+
+.selectedRow A {
+	color: window;
+}
+
+.selectedRow A:hover {
+	color: window;
+}
+
+.selectedRow A:visited {
+	color: window;
+}
+
+.activeRow {
+	background-color: #f1eee7;
+}
+.cell{
+	max-width:100px;
+	}
+.cell1 span{
+	width:expression(this.innerText.length>20?"200px":"auto");
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}

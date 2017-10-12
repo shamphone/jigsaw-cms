@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+  		<form-bean name="emptyForm" type="com.fulong.common.PagerForm" />
+  </form-beans>
+  <action-mappings>   
+  <action path="/left" type="com.fulong.security.LeftAction" scope="request">
+  <forward name="success" path="/left.jsp"/>
+  </action>
+  <action path="/role" type="com.fulong.security.RoleAction" scope="request">
+  <forward name="success" path="/role.jsp"/>
+  </action>
+  <action path="/users" type="com.fulong.security.UsersAction" scope="request">
+  <forward name="success" path="/users.jsp"/>
+  </action>  
+  <action path="/inheritNodesXML" scope="request" type="com.fulong.security.InheritNodesXMLAction"/>
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.oms.Common"/>
+</struts-config>

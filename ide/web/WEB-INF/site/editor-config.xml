@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans></form-beans>
+  <action-mappings>
+    <action path="/pageEditor" type="com.fulong.site.editor.PageEditorAction" scope="request">
+      <forward name="success" path="/{0}.editor.jsp"/>
+    </action>
+    <action path="/frame" type="com.fulong.site.editor.FrameAction" scope="request">
+      <forward name="success" path="/frame.jsp"/>
+    </action>
+    <action path="/editPortlet" type="com.fulong.site.editor.EditPortletAction" scope="request" >
+      <forward name="edit.success" path="/editPortlet.jsp"/>
+      <forward name="save" path="/editPortlet.jsp"/>
+      <forward name="save.success" path="/saveSuccess.jsp?portlet.window.owner={0}&amp;portlet.type={1}" redirect="true"/>
+    </action>
+    <action path="/compilePortlet" type="com.fulong.site.editor.CompilePortletAction" scope="request" >
+      <forward name="success" path="/compilePortlet.jsp?javax.portlet.page.mode=view"/>
+    </action>
+    
+    <action path="/copyClip" type="com.fulong.site.editor.CopyClipAction" scope="request"/>
+    <action path="/saveFile" type="com.fulong.site.editor.SaveFileAction" scope="request"/>
+    <action path="/leftTree" type="com.fulong.site.editor.LeftTreeAction" scope="request">
+      <forward name="success" path="/leftTree.jsp"/>
+    </action>
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.site.Common"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/site/validation.xml"/>
+  </plug-in>
+</struts-config>

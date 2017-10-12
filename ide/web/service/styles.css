@@ -1,0 +1,52 @@
+body, td, th, input
+{
+	font-size: 12px;
+}
+th
+{
+	font-weight: normal;
+}
+body
+{
+	overflow: visible;
+	padding: 6px 6px 6px 6px;
+	margin: 0px 0px 0px 0px;
+	background-color: buttonface;
+}
+form
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+#toolbar
+{
+	border-top:2px groove;
+	position:absolute;
+  	left: 105px;
+  	top: expression(document.body.clientHeight-40);
+  padding: 5px 5px 5px 5px;
+  margin-left:5px;
+  text-align: right;
+  width:100%;
+}
+#toolbar button
+{
+	height: 21px;
+	width:75px;
+	margin-left: 6px;
+}
+#pannelSelect
+{
+	height:expression(document.body.clientHeight-2);
+	width:100px;
+	background-color:menu;
+}
+.fieldPanel
+{
+	width: expression(document.body.clientWidth-110);
+	height: expression(document.body.clientHeight-40);
+	padding: 5px 5px 5px 5px;
+	text-align:left;
+	border:0px;
+}

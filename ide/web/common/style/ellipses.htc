@@ -1,0 +1,7 @@
+<attach for="element" event="onmouseover" handler="showTitle" />
+<script type="text/javascript">
+  function showTitle(){
+    if(!element.title)
+        element.title=element.innerText;
+  }
+</script>

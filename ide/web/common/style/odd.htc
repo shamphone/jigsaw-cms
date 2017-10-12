@@ -1,0 +1,12 @@
+<attach for="element" event="onreadystatechange" handler="odd" />
+<script type="text/javascript">
+function odd(){
+        var trs= element.getElementsByTagName('TR');
+        if(trs.length>1){
+          for(i =1;i<trs.length;i=i+2){
+          trs[i].className='odd';
+          }
+        }
+}
+</script>
+

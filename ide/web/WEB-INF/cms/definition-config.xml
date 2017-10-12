@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="propertyForm" type="com.fulong.cms.form.PropertyForm" />
+		<form-bean name="schemaForm" type="com.fulong.cms.form.SchemaForm" />
+		<form-bean name="categoryForm" type="com.fulong.cms.form.CategoryForm" />
+		<form-bean name="fileForm" type="com.fulong.cms.form.UploadFileForm" />
+	</form-beans>
+	<action-mappings>
+		<action name="schemaForm" path="/create" scope="request" type="com.fulong.cms.definition.CreateAction">
+			<forward name="success" path="/create.jsp" />
+		</action>
+		<action name="schemaForm" path="/insert" type="com.fulong.cms.definition.InsertAction" scope="request">
+			<forward name="success" path="/insertOK.jsp" />
+		</action>
+		<action name="schemaForm" path="/edit" scope="request" type="com.fulong.cms.definition.EditAction">
+			<forward name="success" path="/edit.jsp" />
+		</action>
+		<action name="schemaForm" path="/update" type="com.fulong.cms.definition.UpdateAction" scope="request">
+			<forward name="success" path="/insertOK.jsp" />
+		</action>
+		<action name="categoryForm" path="/copy" type="com.fulong.cms.definition.CopyAction" scope="request">
+			<forward name="success" path="/copy.jsp" />
+		</action>
+		<action name="categoryForm" path="/doCopy" type="com.fulong.cms.definition.DoCopyAction" scope="request">
+			<forward name="success" path="/copySuccess.jsp" redirect="true" />
+		</action>
+
+		<action name="categoryForm" path="/move" type="com.fulong.cms.definition.MoveAction" scope="request">
+			<forward name="success" path="/move.jsp" />
+			<forward name="transferForbid" path="/moveForbid.jsp" />
+		</action>
+		<action name="categoryForm" path="/doMove" type="com.fulong.cms.definition.DoMoveAction" scope="request">
+			<forward name="success" path="/moveSuccess.jsp" />
+		</action>
+		<action name="schemaForm" path="/doDelete" type="com.fulong.cms.definition.DoDeleteAction" scope="request">
+			<forward name="success" path="/deleteOK.jsp" />
+		</action>
+		<action name="categoryForm" path="/delete" type="com.fulong.cms.definition.DeleteAction" scope="request">
+			<exception key="cms" type="com.fulong.longcon.repository.RepositoryException" path="/../../common/error.jsp" handler="com.fulong.common.servlet.SimpleExceptionHandler"></exception>
+		</action>
+		<action name="schemaForm" path="/synDefinitions" scope="request" type="com.fulong.cms.definition.SynDefinitionsAction">
+			<forward name="success" path="/synDefinitions.jsp" />
+		</action>
+		<action name="schemaForm" path="/definitions" scope="request" type="com.fulong.cms.definition.DefinitionsAction">
+			<forward name="success" path="/definitions.jsp" />
+		</action>
+		<action path="/definitionXML" scope="request" type="com.fulong.cms.definition.DefinitionXMLAction" />
+		<action path="/inheritDefinitionsXML" scope="request" type="com.fulong.cms.definition.InheritDefinitionsXMLAction" />
+
+		<action path="/getChildNodeDefinition" type="com.fulong.cms.definition.GetChildNodeDefinitionAction" scope="request" />
+		<action path="/export" type="com.fulong.cms.definition.ExportAction" scope="request" />
+		<action path="/exportExcel" type="com.fulong.cms.definition.ExportExcelAction" scope="request" />
+		
+		<action name="fileForm" path="/importxml" type="com.fulong.cms.definition.ImportXmlAction" scope="request">
+			<forward name="success" path="/importSuccess.jsp" />
+		</action>
+		<action name="fileForm" path="/importexcel" type="com.fulong.cms.definition.ImportExcelAction" scope="request">
+			<forward name="success" path="/importSuccess.jsp" />
+		</action>
+
+		<!--
+			<action path="/index" type="com.fulong.cms.definition.IndexAction"> <forward name="success" path="/index.jsp" /> </action> <action path="/definition"
+			type="com.fulong.cms.definition.DefinitionAction"> <forward name="success" path="/definition.jsp" /> </action> <action path="/getFixProperty" type="com.fulong.cms.definition.GetFixPropertyAction">
+			<forward name="success" path="/fixProperty.jsp" /> </action> <action name="schemaForm" path="/insertNodeDefinition" type="com.fulong.cms.dialog.InsertNodeDefinitionAction" scope="request"> <forward
+			name="success" path="../dialog/insertNodeDefinitionOK.jsp" /> </action>
+		-->
+		<!--
+			<action name="schemaForm" path="/createSschema" scope="request" type="com.fulong.cms.definition.CreateSchemaAction"> <forward name="success" path="/createSchema.jsp" /> </action> <action
+			name="schemaForm" path="/insertSschema" scope="request" type="com.fulong.cms.definition.InsertSchemaAction"> <forward name="success" path="/createSuccess.jsp" redirect="true" /> <forward
+			name="failed" path="/createSchema.jsp" /> <forward name="definitionExists" path="/definitionExists.jsp" redirect="true" /> </action> <action name="schemaForm" path="/insertCompSchema"
+			scope="request" type="com.fulong.cms.definition.InsertCompSchemaAction"> <forward name="success" path="/insertOK.jsp" /> </action> <action name="schemaForm" path="/editSschema" scope="request"
+			type="com.fulong.cms.definition.EditSchemaAction"> <forward name="success" path="/editSchema.jsp" /> </action> <action name="schemaForm" path="/updateSschema" scope="request"
+			type="com.fulong.cms.definition.UpdateSchemaAction"> <forward name="success" path="/updateSuccess.jsp" redirect="true" /> </action> <action name="schemaForm" path="/deleteSschema" scope="request"
+			type="com.fulong.cms.definition.DeleteSchemaAction"> <forward name="success" path="/deleteSuccess.jsp?definitionId={0}" redirect="true" /> </action> <action path="/deleteSchemaConfirm"
+			type="com.fulong.cms.definition.DeleteSchemaConfirmAction" scope="request"> <forward name="success" path="/deleteSchemaConfirm.jsp" /> </action> <action name="schemaForm" path="/searchScheme"
+			scope="request" type="com.fulong.cms.definition.SearchSchemeAction"> <forward name="success" path="/searchScheme.jsp" /> </action> <action path="/addProperty"
+			type="com.fulong.cms.definition.AddPropertyAction"> <forward name="success" path="/addProperty.jsp" /> </action> <action name="propertyForm" path="/saveProperty" scope="request"
+			type="com.fulong.cms.definition.SavePropertyAction" validate="false"> <forward name="success" path="/createPropertiesSuccess.jsp" /> <forward name="propertyExist" path="/addProperty.jsp" />
+			<forward name="errorForFixNodeDefiniton" path="/addProperty.jsp" /> </action> <action name="propertyForm" path="/editProperty" scope="request" type="com.fulong.cms.definition.EditPropertyAction"
+			validate="false"> <forward name="success" path="/editProperty.jsp" /> </action> <action name="propertyForm" path="/updateProperty" scope="request"
+			type="com.fulong.cms.definition.UpdatePropertyAction" validate="false"> <forward name="success" path="/updatePropertiesSuccess.jsp" /> </action> <action path="/deletePropertyConfirm"
+			type="com.fulong.cms.definition.DeletePropertiesConfirmAction"> <forward name="success" path="/deletePropertiesConfirm.jsp" /> </action> <action path="/deleteProperties"
+			type="com.fulong.cms.definition.DeletePropertiesAction"> <forward name="success" path="/deletePropertiesSuccess.jsp" /> </action> <action path="/upProperty"
+			type="com.fulong.cms.definition.UpPropertyAction"> <forward name="success" path="/definition.do" redirect="true" /> </action> <action path="/downProperty"
+			type="com.fulong.cms.definition.DownPropertyAction"> <forward name="success" path="/definition.do" redirect="true" /> </action> <action path="/orderProperty"
+			type="com.fulong.cms.definition.OrderPropertyAction"> <forward name="success" path="/definition.do" redirect="true" /> </action> <action path="/searchCategory" scope="request"
+			type="com.fulong.cms.definition.SearchCategoryAction"> <forward name="success" path="/searchCategory.jsp" /> </action> <action path="/searchProperty" scope="request"
+			type="com.fulong.cms.definition.SearchPropertyAction"> <forward name="success" path="/searchProperty.jsp" /> </action>
+		-->
+	</action-mappings>
+	<message-resources null="false" parameter="com.fulong.cms.Common" />
+	<message-resources key="content-message" null="false" parameter="com.fulong.cms.Common" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/cms/definition-validation.xml" />
+	</plug-in>
+</struts-config>
+

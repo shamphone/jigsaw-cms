@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="siteForm" type="com.fulong.site.form.SiteForm"/>
+    <form-bean name="searchForm" type="com.fulong.site.form.SearchForm"/>
+    <form-bean name="createSiteForm" type="com.fulong.site.form.SiteForm"/>
+  </form-beans>
+  <global-forwards>
+    <forward name="forbidden" path="/forbidden.jsp" redirect="true" />
+    <forward name="error" path="/error.jsp?error={0}" redirect="true" />
+  </global-forwards>
+  <action-mappings>
+    <action name="searchForm" path="/sites" type="com.fulong.site.management.DoSearchAction" scope="request">
+      <forward name="success" path="/sites.jsp"/>
+    </action>
+    <action path="/delete" type="com.fulong.site.management.DeleteAction" scope="request">
+      <forward name="success" path="/deleteSuccess.jsp"/>
+    </action>
+    <action path="/start" type="com.fulong.site.management.StartAction" scope="request">
+      <forward name="success" path="/success.jsp"/>
+    </action>
+    <action path="/stop" type="com.fulong.site.management.StopAction" scope="request">
+      <forward name="success" path="/success.jsp"/>
+    </action>
+    <action path="/upgrade" type="com.fulong.site.management.UpgradeAction" scope="request">
+      <forward name="success" path="/success.jsp"/>
+    </action>
+    <action name="siteForm" path="/expandSite" type="com.fulong.site.management.ExpandSiteAction" scope="request">
+      <forward name="success" path="/siteList.do?categoryID={0}"/>
+    </action>
+    <action name="siteForm" path="/setState" type="com.fulong.site.management.SetStateAction" scope="request">
+      <forward name="success" path="/siteList.do?categoryID={0}"/>
+    </action>
+    <action name="createSiteForm" path="/create" type="com.fulong.site.management.CreateAction" scope="request">
+      <forward name="success" path="/create.jsp"/>
+    </action>
+    <action name="createSiteForm" path="/insert" type="com.fulong.site.management.InsertAction" scope="request">
+      <forward name="success" path="/insertSuccess.jsp"/>
+      <forward name="failed" path="/create.jsp"/>
+    </action>
+    <action name="siteForm" path="/edit" type="com.fulong.site.management.EditAction" scope="request">
+      <forward name="success" path="/edit.jsp"/>
+      <forward name="noSite" path="/noSite.jsp"/>
+    </action>
+    <action name="siteForm" path="/update" type="com.fulong.site.management.UpdateAction" scope="request">
+      <forward name="success" path="/updateSuccess.jsp"/>
+    </action>
+    <action name="siteForm" path="/toChangeNavigate" type="com.fulong.site.management.ToChangeNavigateAction" scope="request">
+       <forward name="success" path="/changeNavigate.jsp"></forward>
+    </action>
+    <action name="siteForm" path="/changeNavigate" type="com.fulong.site.management.ChangeNavigateAction" scope="request">
+    	<forward name="success" path="/changeNavigateSuccess.jsp"></forward>
+    </action>
+    <action path="/search" type="com.fulong.site.management.SearchAction" scope="request">
+      <forward name="success" path="/sites.jsp"/>
+    </action>
+    <action name="searchForm" path="/doSearch" type="com.fulong.site.management.DoSearchAction" scope="request">
+      <forward name="success" path="/searchResult.jsp"/>
+    </action>
+    <action path="/validateDomain" type="com.fulong.site.management.ValidateDomainAction" scope="request"/>
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.site.Common"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/site/validation.xml"/>
+  </plug-in>
+</struts-config>

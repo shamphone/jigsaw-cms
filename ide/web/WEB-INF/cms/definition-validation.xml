@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+<form-validation>
+  <formset>
+    <form name="propertyForm">
+      <field property="ID" depends="required">
+        <arg0 key="property.ID"/>
+      </field>
+      <field property="name" depends="required">
+        <arg0 key="property.name"/>
+      </field>
+      <field property="minDataNum" depends="integer">
+        <arg0 key="property.minDataNum"/>
+      </field>
+      <field property="maxDataNum" depends="integer">
+        <arg0 key="property.minDataNum"/>
+      </field>
+      <field property="minLength" depends="integer">
+        <arg0 key="property.minLength"/>
+      </field>
+      <field property="maxLength" depends="integer">
+        <arg0 key="property.maxLength"/>
+      </field>
+      <field property="minValue_int" depends="integer">
+        <arg0 key="property.minValue_int"/>
+      </field>
+      <field property="maxValue_int" depends="integer">
+        <arg0 key="property.maxValue_int"/>
+      </field>
+      <field property="minValue_double" depends="double">
+        <arg0 key="property.minValue_double"/>
+      </field>
+      <field property="maxValue_double" depends="double">
+        <arg0 key="property.maxValue_double"/>
+      </field>
+      <field property="description" depends="maxlength">
+        <arg0 key="property.description"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>600</var-value>
+        </var>
+      </field>
+    </form>
+  <form name="categoryForm">
+      <field property="identify" depends="required,maxlength,minlength">
+        <arg0 key="categoryForm.identify"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>32</var-value>
+        </var>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>2</var-value>
+        </var>
+      </field>
+      <field property="name" depends="required,maxlength,minlength">
+        <arg0 key="categoryForm.name"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>32</var-value>
+        </var>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>2</var-value>
+        </var>
+      </field>
+    </form>    
+  </formset>
+</form-validation>

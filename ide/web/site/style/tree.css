@@ -1,0 +1,196 @@
+/*
+ * CSS for Standard tree layout
+ * Copyright (C) 2005 SilverStripe Limited
+ * Feel free to use this on your websites, but please leave this message in the fies
+ * http://www.silverstripe.com/blog
+ */
+LI {
+        margin-left : 5px;
+}
+ul.tree{
+	width: auto;
+	padding-left : 0px;
+	margin-left : 5px;
+        line-height: 19px;
+        cursor: pointer;
+}
+
+ul.tree img{
+ 	border : none;
+}
+
+
+ul.tree, ul.tree ul {
+	padding-left: 0;
+}
+
+ul.tree ul {
+	margin-left: 0px;
+
+}
+ul.tree li.closed ul {
+	display: none;
+}
+ul.tree li {
+	list-style: none;
+	/*background: url(../images/i-repeater.gif) 0 0 repeat-y;*/
+	display: block;
+	width: auto;
+	/* background-color:#FFFFFF; */
+}
+
+
+
+ul.tree li.last {
+	list-style: none;
+	background-image: none;
+}
+
+
+
+/* Span-A: I/L/I glpyhs */
+ul.tree span.a {
+	/*background: url(../images/t.gif) 0 50% no-repeat;*/
+	display: block;
+}
+ul.tree span.a.last {
+	/*background: url(../images/l.gif) 0 50% no-repeat;*/
+}
+
+/* Span-B: Plus/Minus icon */
+ul.tree span.b {
+}
+ul.tree span.a.children span.b {
+	background: url(../images/minus.gif) 15px 50% no-repeat;
+	cursor: point;
+}
+ul.tree li.closed span.a.children span.b {
+	background: url(../images/plus.gif) 15px 50% no-repeat;
+	cursor: point;
+}
+
+/* Span-C: Spacing and extending tree line below the icon */
+ul.tree span.c {
+	margin-left: 30px;
+}
+ul.tree span.a.children span.c {
+	background: url(../images/i-bottom.gif) 10% 50% no-repeat;
+}
+ul.tree span.a.spanClosed span.c {
+	background-image: none;
+}
+
+
+/* Anchor tag: Page icon */
+ul.tree a.close  {
+	white-space: nowrap;
+	overflow: hidden;
+	padding: 1px 1px 1px 18px;
+      	line-height: 5px;
+	background: url(../images/page-file.png) 0 50% no-repeat;
+}
+ul.tree span.a.children a {
+	background-image: url(../images/page-file.png);
+}
+ul.tree span.a.children.spanClosed a {
+	background-image: url(../images/page-file.png);
+}
+
+/* Unformatted tree */
+ul.tree.unformatted li {
+	background-image: none;
+	padding-left: 16px;
+}
+ul.tree.unformatted li li {
+	background-image: none;
+	padding-left: 0px;
+}
+
+/*
+ * Divs, by default store vertically aligned data
+ */
+
+ul.tree li div {
+	float: right;
+	clear: right;
+	height: 1em;
+	margin-top: -26px;
+}
+/* As inside DIVs should be treated normally */
+ul.tree div a  {
+	padding: 0;
+	background-image: none;
+	min-height: auto;
+	height: auto;
+}
+
+ul.tree li A:link, ul.tree li A:hover, ul.tree li A:visited {
+	color : #111111;
+}
+
+
+ul.tree li .over{
+	background-color : pink;
+}
+ul.tree span.light{
+       font-weight:bold;
+        }
+ul.tree span a.light{
+        font-weight:bold;
+        white-space: nowrap;
+	overflow: hidden;
+	padding: 1px 1px 1px 48px;
+      	line-height: 5px;
+	background: url(../images/page-file.png) 0 50% no-repeat;
+}
+ul.tree span a.nolight{
+        white-space: nowrap;
+	overflow: hidden;
+	padding: 1px 1px 1px 48px;
+      	line-height: 5px;
+	background: url(../images/page-file.png) 0 50% no-repeat;
+}
+ul.tree a.open{
+        white-space: nowrap;
+	overflow: hidden;
+	padding: 1px 1px 1px 18px;
+	line-height: 5px;
+	background: url(../images/page-file.png) 0 50% no-repeat;
+}
+.leftgb{
+        float:left;
+        width:200px;
+        background-color:#f8f8f8;
+}
+.pannelOpen{
+        background-image:url(../images/zk.gif);
+        height:16px;
+        padding:5px 0px 0px 30px;
+}
+.pannelClose{
+        background-image:url(../images/gb.gif);
+        height:16px;
+        padding:5px 0px 0px 30px;
+}
+.leftButton{
+        float:left;
+        height:600px;
+        background-image:url(../images/1bg.gif);
+}
+.leftButton img{
+        margin-top:250px;
+	cursor: pointer;
+}
+.styleList,jspfList{
+        margin:15px 0px 15px 35px;
+}
+.styleList li{
+	list-style: none;
+        padding:2px 0 2px 22px;
+	background: url(../images/css.gif) no-repeat;
+}
+.jspfList li{
+	list-style: none;
+        padding:2px 0 2px 22px;
+	background: url(../images/jspf.gif) no-repeat;
+}

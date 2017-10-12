@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="transitionForm" type="com.fulong.process.form.TransitionForm"></form-bean>
+	</form-beans>
+	<global-forwards>
+	</global-forwards>
+	<action-mappings>
+	<action path="/left" type="com.fulong.process.LeftAction">
+		<forward name="success" path="/left.jsp"></forward>
+	</action>	
+	<action path="/process" type="com.fulong.process.visual.ProcessAction" scope="request">
+		<forward name="success" path="/process.jsp"></forward>
+	</action>
+	<action path="/flowdialog" type="com.fulong.process.visual.FlowdialogAction" scope="request">
+		<forward name="success" path="/flowdialog.jsp"></forward>
+	</action>
+	<action path="/activitydialog" type="com.fulong.process.visual.ActivitydialogAction" scope="request">
+		<forward name="success" path="/activitydialog.jsp"></forward>
+	</action>
+	<action path="/transitiondialog" type="com.fulong.process.visual.TransitiondialogAction" scope="request">
+		<forward name="success" path="/transitiondialog.jsp"></forward>
+	</action>
+	<action path="/checkVSProcess" type="com.fulong.process.visual.CheckVSProcessAction"  scope="request"/>
+	<action path="/saveVSProcess" type="com.fulong.process.visual.SaveVSProcessAction"  scope="request"/>
+	<action path="/getFilterPattern" type="com.fulong.process.visual.GetFilterPatternAction"  scope="request"/>
+	</action-mappings>
+	<message-resources null="false" parameter="com.fulong.process.Common" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/process/validator-rules.xml,/WEB-INF/process/validation.xml" />
+	</plug-in>
+</struts-config>

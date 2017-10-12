@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="createChannelForm" type="com.fulong.site.form.ChannelForm"/>
+    <form-bean name="importChannelForm" type="com.fulong.site.form.ChannelForm"/>
+    <form-bean name="channelForm" type="com.fulong.site.form.ChannelForm"/>
+    <form-bean name="permissionForm" type="com.fulong.site.form.PermissionForm"/>
+    <form-bean name="editChannelForm" type="com.fulong.site.form.ChannelForm"/>
+  </form-beans>
+  <action-mappings>
+  	<!-- 选择栏目类型 -->
+    <action path="/selectChannelType" type="com.fulong.site.channel.SelecteChannelTypeAction" scope="request" >
+      <forward name="success" path="/selectChannelType.jsp"/>
+    </action> 
+    
+    <!-- 转到创建栏目 -->
+    <action path="/create" type="com.fulong.site.channel.CreateAction" scope="request">
+      <forward name="success" path="/create.jsp"/>
+    </action>
+    <!-- 创建栏目 -->
+    <action path="/insert" type="com.fulong.site.channel.InsertAction" scope="request">
+      <forward name="success" path="/insertSuccess.jsp"/>
+    </action>
+    
+    <!-- 转到从模板页面导入创建栏目 -->
+    <action name="createChannelForm"  path="/createFromPage" type="com.fulong.site.channel.CreateFromPageAction" scope="request">
+      <forward name="success" path="/createFromPage.jsp"/>
+    </action>
+    <!-- 从模板页面导入创建栏目 -->
+    <action name="createChannelForm" path="/insertFromPage" type="com.fulong.site.channel.InsertFromPageAction" scope="request">
+      <forward name="success" path="/insertFromPageSuccess.jsp"/>
+      <forward name="failed" path="/createFromPage.jsp"/>
+    </action>
+    
+    <!-- 转到从url地址复制创建栏目 -->
+    <action name="createChannelForm"  path="/createFromURL" type="com.fulong.site.channel.CreateFromURLAction" scope="request">
+      <forward name="success" path="/createFromURL.jsp"/>
+    </action>
+    <!-- 从url地址复制创建栏目 -->
+    <action name="createChannelForm" path="/insertFromURL" type="com.fulong.site.channel.InsertFromURLAction" scope="request">
+      <forward name="success" path="/insertFromPageSuccess.jsp"/>
+      <forward name="failed" path="/createFromURL.jsp"/>
+    </action>
+    
+    <!-- 转到栏目授权-->
+    <action path="/auth" type="com.fulong.site.channel.AuthAction" scope="request">
+      <forward name="success" path="/auth.jsp"/>
+    </action>
+  	
+ 	<!-- 
+    <action name="permissionForm" path="/permission" type="com.fulong.site.channel.PermissionAction" scope="request">
+      <forward name="success" path="/permission.jsp"/>
+    </action>
+    <action name="permissionForm" path="/savePermission" type="com.fulong.site.channel.SavePermissionAction" scope="request">
+      <forward name="success" path="/permissionSuccess.jsp" redirect="true"/>
+    </action>
+    
+    <action  path="/getPermissibleChannels" type="com.fulong.site.channel.GetPermissibleChannelsAction" scope="request"/>
+    -->
+    
+    <!-- 以下为所有栏目共享配置 -->
+    <!-- 转到发布栏目 -->
+    <action path="/publish" type="com.fulong.site.channel.PublishAction" scope="request">
+      <forward name="success" path="/publish.jsp"/>
+    </action>
+    <!-- 发布栏目 -->
+    <action path="/doPublish" type="com.fulong.site.channel.DoPublishAction" scope="request">
+      <forward name="success" path="/publishSuccess.jsp"/>
+    </action>
+    
+    <!-- 转到导入模板页面 -->
+    <action name="importChannelForm" path="/import" type="com.fulong.site.channel.ImportAction" scope="request">
+      <forward name="success" path="/import.jsp"/>
+    </action>
+    <!-- 导入模板页面 -->
+    <action name="importChannelForm" path="/doImport" type="com.fulong.site.channel.DoImportAction" scope="request">
+      <forward name="success" path="/importSuccess.jsp"/>
+    </action>
+    
+  	<!-- 获取栏目源码 -->
+    <action path="/getSource" type="com.fulong.site.channel.GetSourceAction" scope="request" />
+    <!-- 保存源码 -->
+    <action path="/saveSource" type="com.fulong.site.channel.SaveSourceAction" scope="request" />
+    <!-- 保存预览源码 -->
+    <action path="/savePreviewSource" type="com.fulong.site.channel.SavePreviewSourceAction" scope="request" />
+    <!-- 保存表格重复器源码 -->
+    <action path="/saveSourceTable" type="com.fulong.site.channel.SaveSourceTableAction" scope="request" />
+    
+    <!-- 恢复 -->
+    <action path="/restore" type="com.fulong.site.channel.RestoreAction" scope="request" />
+     <!-- 删除栏目 -->
+    <action path="/delete" type="com.fulong.site.channel.DeleteAction" scope="request"/>
+     <!-- 转移 -->
+    <action name="channelForm" path="/doMove" type="com.fulong.site.channel.DoMoveAction" scope="request"/>
+     
+     <!-- 复制 -->
+    <action path="/doCopy" type="com.fulong.site.channel.DoCopyAction" scope="request"/>
+    
+    <!-- 栏目树 -->
+    <action  path="/open" type="com.fulong.site.channel.OpenChannelAction" scope="request">
+      <forward name="single" path="/openSingle.jsp"/>
+      <forward name="multi" path="/openMulti.jsp"/>
+    </action>
+    
+    <!-- 检查栏目名是否可用 -->
+    <action path="/checkChannel" type="com.fulong.site.channel.CheckChannelAction" scope="request"/>
+    
+    <!-- 获取栏目页面大小 -->
+    <action  path="/channelPageSize" type="com.fulong.site.channel.ChannelPageSizeAction" scope="request"/>
+    
+    <!-- 获取子文件夹和栏目 -->
+    <action path="/inheritChannelXML" scope="request" type="com.fulong.site.channel.InheritChannelXMLAction" />
+    <!-- 获取所有文件夹和栏目 -->
+    <action path="/allChannelsXML" scope="request" type="com.fulong.site.channel.AllChannelsXMLAction" />
+    <!-- 签入 -->
+    <action  path="/mildCheckin" type="com.fulong.site.channel.MildCheckinAction" scope="request"/>
+    <!-- 签出 -->
+    <action  path="/mildCheckout" type="com.fulong.site.channel.MildCheckoutAction" scope="request"/>
+    <!-- 强制其他用户签入栏目 -->
+    <action  path="/checkin" type="com.fulong.site.channel.CheckinAction" scope="request"/>
+    <!-- 获取栏目锁定信息 -->
+    <action  path="/getCheckoutInfo" type="com.fulong.site.channel.GetCheckoutInfoAction" scope="request"/>
+    <!-- 检查栏目是否已发布 -->
+    <action  path="/checkPublish" type="com.fulong.site.channel.CheckPublishAction" scope="request"/>
+    <!-- 更新栏目属性 -->
+    <action  path="/refreshChannel" type="com.fulong.site.channel.RefreshChannelAction" scope="request"/>
+    
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.site.Common"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/site/validation.xml"/>
+  </plug-in>
+</struts-config>

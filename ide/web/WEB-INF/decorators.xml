@@ -1,0 +1,13 @@
+<decorators defaultdir="/system/jsp/decorators">
+    <excludes>
+        <pattern>/*.xml.htm</pattern>
+        <pattern>/*.ajax*</pattern>
+        <pattern>/WEB-INF/*</pattern>
+    </excludes>
+    <decorator name="system" page="system.coolink.jsp"/>
+    <decorator name="application" page="application.coolink.jsp"/>
+    <decorator name="probe" page="/system/probe/decorator.htm">
+        <pattern>/</pattern>
+        <pattern>/*.htm</pattern>
+    </decorator>
+</decorators>

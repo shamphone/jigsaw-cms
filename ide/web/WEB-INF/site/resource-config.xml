@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="resourceForm" type="com.fulong.site.resource.form.ResourceForm"/>
+	</form-beans>
+	<global-forwards>
+		<forward name="error" path="/../common/attention.jsp"/>
+		<forward name="forbidden" path="/../common/forbidden.jsp"/>
+	</global-forwards>
+	<action-mappings>
+		<action path="/index" type="com.fulong.site.resource.IndexAction">
+			<forward name="success" path="/index.jsp?template={0}"/>
+		</action>
+		<action path="/items" type="com.fulong.site.resource.FolderItemsAction" scope="request">
+			<forward name="success" path="/items.jsp"/>
+		</action>
+		<action path="/folders" type="com.fulong.site.resource.FolderItemsAction" scope="request">
+			<forward name="success" path="/folders.jsp"/>
+		</action>
+		<action  name="resourceForm" path="/create" type="com.fulong.site.resource.CreateAction">
+			<forward name="success" path="/create.jsp"/>
+		</action>
+		<action name="resourceForm" path="/save" type="com.fulong.site.resource.SaveAction">
+			<forward name="success" path="/saveSuccess.jsp"/>
+		</action>
+		<action  name="resourceForm" path="/edit" type="com.fulong.site.resource.EditAction">
+			<forward name="success" path="/edit.jsp"/>
+		</action>
+		<action name="resourceForm" path="/update" type="com.fulong.site.resource.UpdateAction">
+			<forward name="success" path="/updateSuccess.jsp"/>
+			<forward name="failure" path="/updateFailure.jsp"/>
+		</action>
+		<action name="resourceForm" path="/cut" type="com.fulong.site.resource.CutAction">
+			<forward name="success" path="/cutSuccess.jsp" redirect="true"/>
+		</action>
+		<action name="resourceForm" path="/copy" type="com.fulong.site.resource.CopyAction">
+			<forward name="success" path="/copySuccess.jsp" redirect="true"/>
+		</action>
+		<action name="resourceForm" path="/delete" type="com.fulong.site.resource.DeleteAction" scope="request">
+			<forward name="success" path="/deleteSuccess.jsp"/>
+		</action>
+		<action name="resourceForm" path="/export" type="com.fulong.site.resource.ExportAction">
+			<forward name="success" path="/items.do?folder={0}" redirect="true"/>
+		</action>
+		<action  name="resourceForm" path="/prepareImport" type="com.fulong.site.resource.PrepareImportAction">
+			<forward name="success" path="/import.jsp"/>
+		</action>
+		<action name="resourceForm" scope="request" path="/import" type="com.fulong.site.resource.ImportAction">
+			<forward name="success" path="/importSuccess.jsp" redirect="true"/>
+			<forward name="fail" path="/import.jsp?path={0}"/>
+		</action>
+		<action name="resourceForm" scope="request" path="/upload" type="com.fulong.site.resource.UploadAction">
+			<forward name="success" path="/upload.jsp?refresh=true" redirect="true"/>
+		</action>
+                <!--对话框版本 -->
+		<action  name="resourceForm" path="/indexDlg" type="com.fulong.site.resource.FolderItemsAction">
+			<forward name="success" path="/itemsDlg.jsp"/>
+		</action>
+		<action  name="resourceForm" path="/createDlg" type="com.fulong.site.resource.CreateAction">
+			<forward name="success" path="/createDlg.jsp"/>
+		</action>
+		<action  name="resourceForm" path="/saveDlg" type="com.fulong.site.resource.SaveAction">
+			<forward name="success" path="/indexDlg.do?folder={0}" redirect="true"/>
+		</action>
+		<action  name="resourceForm" path="/editDlg" type="com.fulong.site.resource.EditAction">
+			<forward name="success" path="/editDlg.jsp"/>
+		</action>
+		<action  name="resourceForm" path="/updateDlg" type="com.fulong.site.resource.UpdateAction">
+			<forward name="success" path="/indexDlg.do?folder={0}" redirect="true"/>
+		</action>
+		<action name="resourceForm" path="/pasteDlg" type="com.fulong.site.resource.PasteAction">
+			<forward name="success" path="/indexDlg.do?folder={0}" redirect="true"/>
+		</action>
+		<action name="resourceForm" path="/deleteDlg" type="com.fulong.site.resource.DeleteAction">
+			<forward name="success" path="/indexDlg.do?folder={0}" redirect="true"/>
+		</action>
+		<action name="resourceForm" path="/exportDlg" type="com.fulong.site.resource.ExportAction">
+			<forward name="success" path="/indexDlg.do?folder={0}" redirect="true"/>
+		</action>
+		<action  name="resourceForm"  scope="request" path="/prepareImportDlg" type="com.fulong.site.resource.PrepareImportAction">
+			<forward name="success" path="/importDlg.jsp"/>
+		</action>
+                <action name="resourceForm" scope="request" path="/importDlg" type="com.fulong.site.resource.ImportAction">
+                  <forward name="success" path="/indexDlg.do?folder={0}" redirect="true"/>
+                </action>
+                
+        <!-- <action name="resourceForm" scope="request" path="/uploadLocal" type="com.fulong.site.resource.UploadLocalAction">
+			<forward name="success" path="/uploadLocal.jsp?finish=true"/>
+			<forward name="error" path="/uploadLocal.jsp?finish=false"/>
+		</action> -->
+        
+	</action-mappings>
+	<message-resources null="false" parameter="com.fulong.site.Common"/>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/site/resource-validation.xml"/>
+	</plug-in>
+</struts-config>

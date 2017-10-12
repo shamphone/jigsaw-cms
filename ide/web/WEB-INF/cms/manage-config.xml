@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="emptyForm" type="com.fulong.common.PagerForm" />
+		<form-bean name="fileForm" type="com.fulong.cms.form.UploadFileForm" />
+		<form-bean name="searchForm" type="com.fulong.cms.form.SearchNodesForm" />
+		<form-bean name="wordArtForm" type="com.fulong.cms.form.WordArtForm" />
+	</form-beans>
+	<global-forwards>
+		<forward name="login" path="/logon.jsp" />
+		<forward name="error" path="/common/attention.jsp" />
+		<forward name="forbidden" path="/common/forbidden.jsp" />
+	</global-forwards>
+	<action-mappings>
+		<action path="/left" type="com.fulong.cms.manage.LeftAction">
+			<forward name="success" path="/left.jsp" />
+		</action>
+		<action path="/welcome" forward="/blank.jsp" />
+		<action path="/toSearch" type="com.fulong.cms.manage.SearchAction">
+			<forward name="success" path="/search.jsp" />
+		</action>		
+		<action path="/search" name="searchForm" type="com.fulong.cms.manage.DoSearchAction" scope="request">
+			<forward name="success" path="/contents.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources null="false" parameter="com.fulong.cms.Common" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/site/validator-rules.xml,/WEB-INF/site/validation.xml" />
+	</plug-in>
+</struts-config>

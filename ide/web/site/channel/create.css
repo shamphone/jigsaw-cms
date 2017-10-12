@@ -1,0 +1,35 @@
+select {
+	width: 205px
+}
+
+FIELDSET {
+	font-size: 12px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	width: 360px;
+	height: 320px
+}
+input {width: 205px}
+.checkbox{width:30px;}
+.pannelDiv {
+	width: 100px;
+	height: 345px
+}
+
+#pannelSelect {
+	background-color: menu;
+	width: 100px;
+	height: 360px
+}
+
+.toolbar BUTTON {
+	margin-left: 6px;
+	width: 75px;
+	height: 21px
+}
+
+.toolbar {
+	text-align: right
+}

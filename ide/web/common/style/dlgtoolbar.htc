@@ -1,0 +1,10 @@
+<attach for="element" event="onreadystatechange" handler="buildToolbar" />
+<script type="text/javascript">
+    function buildToolbar(){
+    var spans=this.children.tags("span");
+    for(var i=0;i<spans.length;i++){
+         if((spans[i].className == null)||(spans[i].className == ""))
+          spans[i].className="DLGButton";
+      }
+    }
+</script>

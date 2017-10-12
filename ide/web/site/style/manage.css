@@ -1,0 +1,69 @@
+#oKeywords, #oBeginDate, #oEndDate {height:20px;}
+.view, .delete, .change, .search, .reset {background-repeat:no-repeat; background-position:center left; padding:4px 0px 0px 12px; border:1px ridge transparent; height:20px;}
+.view {background-image:url(../../common/images/preview16.gif);}
+.delete {background-image:url(../editor/plugins/channel/delete.gif);}
+.change {background-image:url(../editor/plugins/channel/publish.gif); padding-left:8px;}
+.search {background-image:url(../../common/images/search.gif);}
+.reset {background-image:url(../../common/images/RemoveFormat.gif); padding-left:14px;}
+.calendar {background:url(../../common/images/calendar.gif); width:25px; height:21px; border:none; margin-left:2px; cursor:pointer;}
+#gotobar {
+	background-color: scrollbar;
+	height: 26px;
+	text-align: right;
+	margin: 0px;
+}
+#oListPanel {
+	width: 100%;
+	height: expression(document.body.clientHeight-60);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	border-left: 1px solid buttonshadow;
+}
+#oListCategory {
+	width: 100%;
+	height: expression(document.body.clientHeight-27);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+	border-left: 1px solid buttonshadow;
+}
+
+.hiddenText{
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	width:130;
+}
+
+.selectedRow {
+	background-color: highlight;
+	color: window;
+}
+
+.selectedRow A {
+	color: window;
+}
+
+.selectedRow A:hover {
+	color: window;
+}
+
+.selectedRow A:visited {
+	color: window;
+}
+
+.activeRow {
+	background-color: #f1eee7;
+}
+.cell{
+	max-width:100px;
+	}
+.cell1 span{
+	width:expression(this.innerText.length>20?"200px":"auto");
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+}

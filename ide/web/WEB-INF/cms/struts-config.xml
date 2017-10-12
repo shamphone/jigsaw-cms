@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="emptyForm" type="com.fulong.common.PagerForm" />
+		<form-bean name="fileForm" type="com.fulong.cms.form.UploadFileForm" />
+		<form-bean name="searchForm" type="com.fulong.cms.form.SearchNodesForm" />
+		<form-bean name="wordArtForm" type="com.fulong.cms.form.WordArtForm" />
+	</form-beans>
+	<global-forwards>
+		<forward name="login" path="/logon.jsp" />
+		<forward name="error" path="/common/attention.jsp" />
+		<forward name="forbidden" path="/common/forbidden.jsp" />
+	</global-forwards>
+	<action-mappings>
+		<action path="/clearCache" type="com.fulong.cms.ClearCacheAction">
+			<forward name="success" path="/cache.do" />
+		</action>
+			<action path="/cache" type="com.fulong.cms.CacheAction">
+			<forward name="success" path="/cache.jsp" />
+		</action>	
+		<action path="/search" name="searchForm" type="com.fulong.cms.DoSearchAction" scope="request">
+			<forward name="success" path="/contents.jsp" />
+		</action>
+		<action path="/properties" type="com.fulong.cms.PropertiesAction" />
+		<action path="/fixProperties" type="com.fulong.cms.FixPropertiesAction" />
+		<action path="/contents" type="com.fulong.cms.ContentsAction" />
+		<!-- FCKeditor Plugin : import word -->
+		<action name="fileForm" path="/importWord" type="com.fulong.cms.editor.ImportWordAction" scope="request">
+			<forward name="success" path="/editor/success.jsp" />
+			<forward name="failed" path="/editor/failed.jsp" />
+		</action>
+		<action name="fileForm" path="/status" type="com.fulong.cms.editor.MonitorStatusAction" scope="request" />
+		<!-- FCKeditor Plugin : file manager -->
+		<action path="/fileManagerFrmDetail" type="com.fulong.cms.resource.FrmDetailAction" scope="request">
+			<forward name="success" path="/common/editor/plugins/common/filemanager/frmDetail.jsp" contextRelative="true" />
+		</action>
+		<!-- FCKeditor Plugin : word art -->
+		<action name="wordArtForm" path="/wordArt" type="com.fulong.cms.editor.WordArtAction" scope="request" />
+		<action path="/getSuggestWord" type="com.fulong.cms.GetSuggestWordAction" scope="request">
+			<forward name="success" path="/getSuggestWord.jsp" />
+		</action>
+		<action path="/addfixForPortlet" type="com.fulong.cms.AddfixForPortletAction" scope="request" />
+		<action path="/upCompositeNode" type="com.fulong.cms.UpCompositeNodeAction" scope="request" />
+		<action path="/downCompositeNode" type="com.fulong.cms.DownCompositeNodeAction" scope="request" />
+		<action path="/delFixNodes" type="com.fulong.cms.DelFixNodesAction" scope="request" />
+		<action path="/ajaxEntry" type="com.fulong.cms.AjaxEntryAction" scope="request">
+			<forward name="success" path="/" />
+		</action>
+		<action path="/ajaxEntryPortlet" type="com.fulong.cms.AjaxEntryActionPortlet" scope="request">
+			<forward name="success" path="/" />
+		</action>
+		<action path="/autoAddFilter" type="com.fulong.cms.AutoAddFilterAction" scope="request" />
+		
+		
+		<action path="/luceneSearch" type="com.fulong.cms.lucene.LuceneSearchAction" scope="request">
+			<forward name="success" path="/luceneSearch.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources null="false" parameter="com.fulong.cms.Common" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/site/validator-rules.xml,/WEB-INF/site/validation.xml" />
+	</plug-in>
+</struts-config>

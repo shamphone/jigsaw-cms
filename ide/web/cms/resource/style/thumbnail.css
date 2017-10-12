@@ -1,0 +1,15 @@
+body {margin: 0px;}
+#viewer {width: 100%; height: 100%; overflow-y: scroll;}
+
+.unselected, .selected {table-layout:fixed; font-size:9pt;}
+.unselected td, .selected td {border-width:1px; border-style:solid;}
+.unselected #td2, .selected #td2 {border:none; overflow: hidden; word-break:break-all; text-overflow:ellipsis;}
+
+.unselected {color:#000000;}
+.unselected td {border-color:#cccccc;}
+
+.selected {color:#ffffff; }
+.selected td {border-color:#316AC5;}
+.selected #td2 {background-color:#316AC5;}
+
+.span1 {width:110px; height:150px; padding:5px;}

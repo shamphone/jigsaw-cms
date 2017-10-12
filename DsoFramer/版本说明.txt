@@ -1,0 +1,9 @@
+/////////////////////////////////////////////////////
+Issued by dxHe on Jun 19,2008 Fuzhou Fujian China(Surrex China)
+Lastest version: 2.3.0.0
+Prior   version: 2.2.1.2
+/////////////////////////////////////////////////////
+
+dsoframer.ocx 2.3.0.0 Release comments:
+1、增加对OFFICE2007的支持
+2、删除2个文件：msword9.h/msword9.cpp

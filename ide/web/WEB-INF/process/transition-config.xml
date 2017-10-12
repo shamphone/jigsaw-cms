@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="transitionForm" type="com.fulong.process.form.TransitionForm"></form-bean>
+	</form-beans>
+	<global-forwards>
+	</global-forwards>
+	<action-mappings>
+		<action path="/create" type="com.fulong.process.transition.CreateAction">
+			<forward name="success" path="/create.jsp"></forward>
+		</action>
+		<action path="/edit" type="com.fulong.process.transition.EditAction">
+			<forward name="success" path="/edit.jsp"></forward>
+		</action>
+		<action name="transitionForm" path="/save" type="com.fulong.process.transition.SaveAction">
+			<forward name="success" path="/success.jsp"></forward>
+		</action>
+		<action path="/delete" type="com.fulong.process.transition.DeleteAction">
+		</action>
+	</action-mappings>
+	<message-resources null="false" parameter="com.fulong.process.Common" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/process/validator-rules.xml,/WEB-INF/process/validation.xml" />
+	</plug-in>
+</struts-config>

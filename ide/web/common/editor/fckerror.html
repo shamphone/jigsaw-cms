@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!--
+ *
+ * 用来显示错误信息的页面
+ * It automatically popups if the Debug = true in the configuration file.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta name="robots" content="noindex, nofollow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>系统发生错误</title>
+        <script type="text/javascript">
+window.onload = function()
+{
+  errorMsg.innerHTML=window.dialogArguments.errorMsg;
+  errorTitle.innerHTML=window.dialogArguments.error;
+}
+
+	</script>
+</head>
+<body style="margin: 10px" bgcolor="menu">
+	<table style="height: 100%" cellspacing="5" cellpadding="0" width="100%" border="0">
+		<tr>
+			<td style="font-weight: bold;"> <span id="errorTitle"><span></td>
+		</tr>
+		<tr>
+			<td>
+                 <div style="background-color:white;width:450px;height:400px;overflow:scroll;border:2px inset" id="errorMsg"></div>
+			</td>
+		</tr>
+		<tr>
+			<td align=center>
+<input type=button value="确认" onclick="window.close()" />
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

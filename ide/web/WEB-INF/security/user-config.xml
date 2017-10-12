@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+  		<form-bean name="emptyForm" type="com.fulong.common.PagerForm" />
+  		<form-bean name="userForm" type="com.fulong.security.form.UserForm"/>
+  </form-beans>
+  <action-mappings>   
+  <action name="userForm" path="/create" type="com.fulong.security.user.CreateAction" scope="request">
+  <forward name="success" path="/create.jsp"/>
+  </action>
+  <action name="userForm" path="/edit" type="com.fulong.security.user.EditAction" scope="request">
+  <forward name="success" path="/edit.jsp"/>
+  </action>
+  <action name="userForm" path="/save" type="com.fulong.security.user.SaveAction" scope="request">
+  <forward name="success" path="/save.jsp"/>
+  </action>
+  <action name="userForm" path="/resetPassword" type="com.fulong.security.user.ResetPasswordAction" scope="request">
+  <forward name="success" path="/resetPassword.jsp"/>
+  </action>
+  <action path="/savePassword" type="com.fulong.security.user.SavePasswordAction" scope="request" />
+  <action path="/delete" type="com.fulong.security.user.DeleteAction" scope="request" />
+  <action path="/join" type="com.fulong.security.user.JoinAction" scope="request">
+  <forward name="success" path="/join.jsp"/>
+  </action>
+  <action path="/doJoin" type="com.fulong.security.user.DoJoinAction" scope="request" />
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.security.Resources"/>
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/security/validation.xml"/>
+  </plug-in>
+</struts-config>

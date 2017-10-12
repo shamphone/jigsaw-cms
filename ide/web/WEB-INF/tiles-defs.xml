@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+  <definition name="frameset" path="/common/tiles/frameset.jsp"/>
+  <definition name="list_frame" path="/common/tiles/list_frame.jsp"/>
+  <definition name="content_frame" path="/common/tiles/content_frame.jsp"/>
+  <definition name="search_content_frame" path="/common/tiles/search_content_frame.jsp"/>
+  <definition name="openWindow_frame" path="/common/tiles/openWindow_frame.jsp"/>
+  <definition name="message_frame" path="/common/tiles/message_frame.jsp"/>
+  <definition name="left_frame" path="/common/tiles/left_frame.jsp"/>
+  <definition name="left_module" path="/common/tiles/left_module.jsp"/>
+  <definition name="definition_frame" path="/cms/definition/definition_frame.jsp"/>
+  <definition name="dialog_frame" path="/common/tiles/dialog_frame.jsp"/>
+</tiles-definitions>

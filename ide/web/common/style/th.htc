@@ -1,0 +1,24 @@
+<attach for="element" event="onreadystatechange" handler="initTH" />
+<script type="text/javascript">
+    function initTH(){
+    var ths=this.getElementsByTagName("TH");
+    for(var i=0;i<ths.length;i++){
+    autoLetterSpacing(ths[i]);
+    ths[i].style.textAlign="right";
+    }
+    }
+
+    function autoLetterSpacing(th){
+    var text = th.innerText;
+    if(text.length==2){
+       th.style.letterSpacing="25px";
+    }
+    else if(text.length==3){
+       th.style.letterSpacing="6px";
+    }
+    else{
+       th.style.letterSpacing="0px";
+    }
+    }
+</script>
+

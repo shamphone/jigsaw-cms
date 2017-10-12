@@ -1,0 +1,1 @@
+FCKLang.PageBreak   =   'page break' ;

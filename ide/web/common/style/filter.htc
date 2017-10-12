@@ -1,0 +1,47 @@
+<attach for="element" event="onreadystatechange" handler="p" />
+<script type="text/javascript">
+var jx=new Array();
+var cnt=element.tableCount;//div总数
+for (var i=0;i<cnt;i++){
+  jx[i]=element.document.getElementById("jx"+i);
+  if(i!=0){
+  jx[i].style.display="none";
+  }
+}
+//设置显示哪个层的变量
+var sL=1;
+//设置动与不动的变量
+var iS=0;
+//设定显示时间
+function p()
+{
+  var c=getTransition();
+if(iS==0)
+{
+sL=sL%cnt;
+for (var i=0;i<cnt;i++){
+  if (i==sL)
+    cs1(jx[i],'',c);
+  else
+    cs1(jx[i],'none',c);
+}
+setTimeout(p,4000);
+sL++;//以上两个时间的设置必须一样
+}
+else
+{setTimeout(p,1000);}
+}
+//显示函数
+function cs1(a,b,c){
+ if(a==null)return;
+  a.filters.revealtrans.transition=c;
+ a.filters.revealTrans.apply();
+ a.style.display=b;
+ a.filters.revealTrans.play();}
+//设定is变量
+function s(v)
+{iS=v;}
+function getTransition(){
+return Math.floor(Math.random()*23+1);
+}
+</script>

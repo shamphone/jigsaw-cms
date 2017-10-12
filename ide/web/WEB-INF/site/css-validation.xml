@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+<form-validation>
+  <formset>
+    <constant>
+      <constant-name>color</constant-name>
+      <constant-value>^(#){1}([a-fA-F0-9]){6}$|^[A-Za-z]+$|^(rgb\(\s*)[0-9]+\s*(,)\s*[0-9]+\s*(,)\s*[0-9]+\s*(\))$</constant-value>
+    </constant>
+    <constant>
+      <constant-name>size</constant-name>
+      <constant-value>^([a-zA-Z0-9]+)$</constant-value>
+    </constant>
+    <constant>
+      <constant-name>character</constant-name>
+      <constant-value>^([\u4e00-\u9fa5]+(\.css)?)$|^([a-zA-Z0-9_-]+((\.css)?))$</constant-value>
+    </constant>
+     <constant>
+      <constant-name>source</constant-name>
+      <constant-value>^((\r\n)*\s*\*?([\.#])?[a-zA-Z0-9\s]+[^\u4e00-\u9fa5]*\s*{\s*[^\u4e00-\u9fa5]*\s*}(\r\n)*)*$</constant-value>
+    </constant>
+    <constant>
+      <constant-name>rule</constant-name>
+      <constant-value>^([^\u4e00-\u9fa5]*)$</constant-value>
+      </constant>
+        <form name="cssForm">
+      <field property="cssID" depends="required,mask">
+        <arg0 key="cssForm.cssID"/>
+        <msg name="required" key="errors.required" resource="true"/>
+      <var>
+          <var-name>mask</var-name>
+          <var-value>${character}</var-value>
+     </var>
+     </field>
+     </form>
+     <form name="cssSourceForm">
+      <field property="source" depends="mask">
+        <arg0 key="cssForm.source"/>
+        <msg name="required" key="errors.required" resource="true"/>
+      <var>
+          <var-name>mask</var-name>
+          <var-value>${source}</var-value>
+     </var>
+     </field>
+   </form>
+    <form name="selectorForm">
+      <field property="selector" depends="required">
+        <arg0 key="selectorForm.selector"/>
+        <msg name="required" key="errors.required" resource="true"/>
+      </field>
+      </form>
+      <form name="cssRuleForm">
+      <field property="property(color)" depends="mask">
+        <arg0 key="cssRuleForm.property(color)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${color}</var-value>
+        </var>
+      </field>
+      <field property="ruleSource" depends="mask">
+        <arg0 key="cssRuleForm.ruleSource"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${rule}</var-value>
+        </var>
+      </field>
+      <field property="property(background-color)" depends="mask">
+        <arg0 key="cssRuleForm.property(background-color)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${color}</var-value>
+        </var>
+      </field>
+      <field property="property(border-color)" depends="mask">
+        <arg0 key="cssRuleForm.property(border-color)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${color}</var-value>
+        </var>
+      </field>
+
+      <field property="property(font-size)" depends="mask">
+        <arg0 key="cssRuleForm.property(font-size)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+
+      <field property="property(line-height)" depends="mask">
+        <arg0 key="cssRuleForm.property(line-height)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+
+      <field property="property(word-spacing)" depends="mask">
+        <arg0 key="cssRuleForm.property(word-spacing)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(letter-spacing)" depends="mask">
+        <arg0 key="cssRuleForm.property(letter-spacing)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(text-indent)" depends="mask">
+        <arg0 key="cssRuleForm.property(text-indent)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(width)" depends="mask">
+        <arg0 key="cssRuleForm.property(width)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(height)" depends="mask">
+        <arg0 key="cssRuleForm.property(height)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(margin-top)" depends="mask">
+        <arg0 key="cssRuleForm.property(margin-top)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(margin-bottom)" depends="mask">
+        <arg0 key="cssRuleForm.property(margin-bottom)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(margin-left)" depends="mask">
+        <arg0 key="cssRuleForm.property(margin-left)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(margin-right)" depends="mask">
+        <arg0 key="cssRuleForm.property(margin-right)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(padding-top)" depends="mask">
+        <arg0 key="cssRuleForm.property(padding-top)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(padding-bottom)" depends="mask">
+        <arg0 key="cssRuleForm.property(padding-bottom)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(padding-left)" depends="mask">
+        <arg0 key="cssRuleForm.property(padding-left)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(padding-right)" depends="mask">
+        <arg0 key="cssRuleForm.property(padding-right)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(top)" depends="mask">
+        <arg0 key="cssRuleForm.property(top)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(bottom)" depends="mask">
+        <arg0 key="cssRuleForm.property(bottom)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(left)" depends="mask">
+        <arg0 key="cssRuleForm.property(left)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(right)" depends="mask">
+        <arg0 key="cssRuleForm.property(right)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(z-index)" depends="mask">
+        <arg0 key="cssRuleForm.property(z-index)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(clip)" depends="mask">
+        <arg0 key="cssRuleForm.property(clip)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+      <field property="property(filter)" depends="mask">
+        <arg0 key="cssRuleForm.property(filter)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${size}</var-value>
+        </var>
+      </field>
+    </form>
+  </formset>
+</form-validation>

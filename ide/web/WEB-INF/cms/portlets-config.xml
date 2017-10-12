@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="contentForm" type="com.fulong.cms.content.form.ContentForm"/>
+  </form-beans>
+  <action-mappings>
+    <action  path="/chargein" type="com.fulong.passport.portlet.chargein.ChargeinAction"/>
+    <action  path="/addFavourite" type="com.fulong.portlet.cms.favourite.AddFavouriteAction"/>
+    <action  path="/delContent" type="com.fulong.portlet.cms.grid.DelContentAction"/>
+    <action  path="/multiDelContent" type="com.fulong.cms.MultiDelContentAction"/>
+    <action  path="/addAnswerContent" type="com.fulong.portlet.cms.repeater.AddAnswerContentAction">
+      <forward name="success" path="/../cms/portlet/repeater/addAnswerContent.jsp"/>
+    </action>
+    <action  path="/answerContent" type="com.fulong.portlet.cms.repeater.AnswerContentAction"/>
+    <action  path="/acceptContent" type="com.fulong.portlet.cms.repeater.AcceptContentAction"/>
+    <action  path="/multiAcceptContent" type="com.fulong.cms.MultiAcceptContentAction"/>
+    <action  path="/ordering" type="com.fulong.portlet.cms.ordering.OrderingAction"/>
+    <action  path="/coursewareList" type="com.fulong.cms.CoursewareListAction">
+      <forward name="success" path="/../cms/coursewareList.jsp"/>
+    </action>
+    <action  path="/view" type="com.fulong.cms.ViewAction">
+      <forward name="success" path="/../cms/view.jsp"/>
+    </action>
+    <action  path="/contentsList" type="com.fulong.cms.ContentsListAction">
+      <forward name="success" path="/../cms/contentsList.jsp"/>
+    </action>
+    <action name="contentForm" path="/editContent" type="com.fulong.cms.EditContentAction" scope="request">
+      <forward name="success" path="/../cms/editContent.jsp"/>
+    </action>
+    <action name="contentForm" path="/updateContent" type="com.fulong.cms.UpdateContentAction" scope="request">
+      <forward name="success" path="/../cms/editContent.jsp"/>
+    </action>
+    <action  path="/editMesContent" type="com.fulong.cms.EditMesContentAction">
+      <forward name="success" path="/../cms/editMesContent.jsp"/>
+    </action>
+    <action  path="/updateMesContent" type="com.fulong.cms.UpdateMesContentAction"/>
+    <action  path="/editTicketNum" type="com.fulong.cms.EditTicketNumAction">
+      <forward name="success" path="/../cms/editTicketNum.jsp"/>
+    </action>
+    <action  path="/updateTicketNum" type="com.fulong.cms.UpdateTicketNumAction"/>
+    <action path="/checkMoney" type="com.fulong.portlet.cms.onlineCoursePlay.CheckMoneyAction"/>
+    <action path="/checkPaid" type="com.fulong.portlet.cms.onlineCoursePlay.CheckPaidAction"/>
+    <!--
+    <action path="/showPaidCourse" type="com.fulong.portlet.cms.onlineCoursePlay.showPaidCourseAction">
+          <forward name="success" path="/../cms/portlet/onlineCoursePlay/test.jsp"/>
+    </action>
+   -->
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.portlet.cms.Resource"/>
+  <message-resources null="false" parameter="com.fulong.cms.Common"/>
+  <message-resources null="false" key="commResource"  parameter="com.fulong.common.Resource"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/site/validator-rules.xml,/WEB-INF/site/validation.xml"/>
+  </plug-in>
+</struts-config>

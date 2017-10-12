@@ -1,0 +1,1928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<industry>
+  <level1 name="农、林、牧、渔业" value='A'>
+    <level2 name="农业" value='01'>
+       <level3 name="谷物及其他作物的种植" value='011'>
+            <level4 name="谷物的种植" value='0111'/>
+            <level4 name="薯类的种植" value='0112'/>
+            <level4 name="油料的种植" value='0113'/>
+            <level4 name="豆类的种植" value='0114'/>
+            <level4 name="棉花的种植" value='0115'/>
+            <level4 name="麻类的种植" value='0116'/>
+            <level4 name="糖料的种植" value='0117'/>
+            <level4 name="烟草的种植" value='0118'/>
+            <level4 name="其他作物的种植" value='0119'/>
+            </level3>
+       <level3 name="蔬菜、园艺作物的种植" value='012'>
+            <level4 name="蔬菜的种植" value='0121'/>
+            <level4 name="花卉的种植" value='0122'/>
+            <level4 name="其他园艺作物的种植" value='0123'/>
+            </level3>
+       <level3 name="水果、坚果、饮料和香料作物的种植" value='013'>
+            <level4 name="水果、坚果的种植" value='0131'/>
+            <level4 name="茶及其他饮料作物的种植" value='0132'/>
+            <level4 name="香料的种植" value='0133'/>
+            </level3>
+       <level3 name="中药材的种植" value='014'>
+            <level4 name="中药材的种植" value='0140'/>
+            </level3>
+       </level2>
+    <level2 name="林业" value='02'>
+       <level3 name="林木的培育和种植" value='021'>
+            <level4 name="育种和育苗" value='0211'/>
+            <level4 name="造林" value='0212'/>
+            <level4 name="林木的抚育和管理" value='0213'/>
+            </level3>
+       <level3 name="木材和竹材的采运" value='022'>
+            <level4 name="木材的采运" value='0221'/>
+            <level4 name="竹材的采运" value='0222'/>
+            </level3>
+       <level3 name="林产品的采集" value='023'>
+            <level4 name="林产品的采集" value='0230'/>
+            </level3>
+       </level2>
+    <level2 name="畜牧业" value='03'>
+       <level3 name="牲畜的饲养" value='031'>
+            <level4 name="牲畜的饲养" value='0310'/>
+            </level3>
+       <level3 name="猪的饲养" value='032'>
+            <level4 name="猪的饲养" value='0320'/>
+            </level3>
+       <level3 name="家禽的饲养" value='033'>
+            <level4 name="家禽的饲养" value='0330'/>
+            </level3>
+       <level3 name="狩猎和捕捉动物" value='034'>
+            <level4 name="狩猎和捕捉动物" value='0340'/>
+            </level3>
+       <level3 name="其他畜牧业" value='039'>
+            <level4 name="其他畜牧业" value='0390'/>
+            </level3>
+       </level2>
+    <level2 name="渔业" value='04'>
+       <level3 name="海洋渔业" value='041'>
+            <level4 name="海水养殖" value='0411'/>
+            <level4 name="海洋捕捞" value='0412'/>
+            </level3>
+       <level3 name="内陆渔业" value='042'>
+            <level4 name="内陆养殖" value='0421'/>
+            <level4 name="内陆捕捞" value='0422'/>
+            </level3>
+       </level2>
+    <level2 name="农、林、牧、渔服务业" value='05'>
+       <level3 name="农业服务业" value='051'>
+            <level4 name="灌溉服务" value='0511'/>
+            <level4 name="农产品初加工服务" value='0512'/>
+            <level4 name="其他农业服务" value='0519'/>
+            </level3>
+       <level3 name="林业服务业" value='052'>
+            <level4 name="林业服务业" value='0520'/>
+            </level3>
+       <level3 name="畜牧服务业" value='053'>
+            <level4 name="兽医服务" value='0531'/>
+            <level4 name="其他畜牧服务" value='0539'/>
+            </level3>
+       <level3 name="渔业服务业" value='054'>
+            <level4 name="渔业服务业" value='0540'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="采矿业" value='B'>
+    <level2 name="煤炭开采和洗选业" value='06'>
+       <level3 name="烟煤和无烟煤的开采洗选" value='061'>
+            <level4 name="烟煤和无烟煤的开采洗选" value='0610'/>
+            </level3>
+       <level3 name="褐煤的开采洗选" value='062'>
+            <level4 name="褐煤的开采洗选" value='0620'/>
+            </level3>
+       <level3 name="其他煤炭采选" value='069'>
+            <level4 name="其他煤炭采选" value='0690'/>
+            </level3>
+       </level2>
+    <level2 name="石油和天然气开采" value='07'>
+       <level3 name="天然原油和天然气开采" value='071'>
+            <level4 name="天然原油和天然气开采" value='0710'/>
+            </level3>
+       <level3 name="与石油和天然气开采有关的服务活动" value='079'>
+            <level4 name="与石油和天然气开采有关的服务活动" value='0790'/>
+            </level3>
+       </level2>
+    <level2 name="黑色金属矿采选业" value='08'>
+       <level3 name="铁矿采选" value='081'>
+            <level4 name="铁矿采选" value='0810'/>
+            </level3>
+       <level3 name="其他黑色金属矿采选" value='089'>
+            <level4 name="其他黑色金属矿采选" value='0890'/>
+            </level3>
+       </level2>
+    <level2 name="有色金属矿采选业" value='09'>
+       <level3 name="常用有色金属矿采选" value='091'>
+            <level4 name="铜矿采选" value='0911'/>
+            <level4 name="铅锌矿采选" value='0912'/>
+            <level4 name="镍钴矿采选" value='0913'/>
+            <level4 name="锑矿采选" value='0914'/>
+            <level4 name="锡矿采选" value='0915'/>
+            <level4 name="铝矿采选" value='0916'/>
+            <level4 name="镁矿采选" value='0917'/>
+            <level4 name="其他常用有色金属矿采选" value='0919'/>
+            </level3>
+       <level3 name="贵金属矿采选" value='092'>
+            <level4 name="金矿采选" value='0921'/>
+            <level4 name="银矿采选" value='0922'/>
+            <level4 name="其他贵金属矿采选" value='0929'/>
+            </level3>
+       <level3 name="稀有金属矿采选" value='093'>
+            <level4 name="钨钼矿采选" value='0931'/>
+            <level4 name="稀有金属矿采选" value='0932'/>
+            <level4 name="放射性金属矿采选" value='0933'/>
+            <level4 name="其他稀有金属矿采选" value='0939'/>
+            </level3>
+       </level2>
+    <level2 name="非金属矿采选业" value='10'>
+       <level3 name="石灰石、石膏石开采" value='101'>
+            <level4 name="土砂石开采" value='1011'/>
+            <level4 name="建筑装饰用石开采" value='1012'/>
+            <level4 name="耐火土石开采" value='1013'/>
+            <level4 name="粘土及其土沙石开采" value='1019'/>
+            </level3>
+       <level3 name="化学矿采选" value='102'>
+            <level4 name="化学矿采选" value='1020'/>
+            </level3>
+       <level3 name="采盐" value='103'>
+            <level4 name="采盐" value='1030'/>
+            </level3>
+       <level3 name="石棉及其他非金属矿采选" value='109'>
+            <level4 name="石棉、云母矿采选" value='1091'/>
+            <level4 name="石墨、滑石采选" value='1092'/>
+            <level4 name="宝石、玉石采选" value='1093'/>
+            <level4 name="其他非金属矿采选" value='1099'/>
+            </level3>
+       </level2>
+    <level2 name="其他采矿业" value='11'>
+       <level3 name="其他采矿业" value='110'>
+            <level4 name="其他采矿业" value='1100'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="制造业" value='C'>
+    <level2 name="农副食品加工业" value='13'>
+       <level3 name="谷物磨制" value='131'>
+            <level4 name="谷物磨制" value='1310'/>
+            </level3>
+       <level3 name="饲料加工" value='132'>
+            <level4 name="饲料加工" value='1320'/>
+            </level3>
+       <level3 name="植物油加工" value='133'>
+            <level4 name="食用植物油加工" value='1331'/>
+            <level4 name="非食用植物油加工" value='1332'/>
+            </level3>
+       <level3 name="制糖" value='134'>
+            <level4 name="制糖" value='1340'/>
+            </level3>
+       <level3 name="屠宰及肉类加工" value='135'>
+            <level4 name="畜禽屠宰" value='1351'/>
+            <level4 name="肉制品及副产品加工" value='1352'/>
+            </level3>
+       <level3 name="水产品加工" value='136'>
+            <level4 name="水产品冷冻加工" value='1361'/>
+            <level4 name="鱼糜制品及水产品腌制加工" value='1362'/>
+            <level4 name="水产饲料制造" value='1363'/>
+            <level4 name="鱼油提取及制品的制造" value='1364'/>
+            <level4 name="其他水产品加工" value='1369'/>
+            </level3>
+       <level3 name="蔬菜、水果和坚果加工" value='137'>
+            <level4 name="蔬菜、水果和坚果加工" value='1370'/>
+            </level3>
+       <level3 name="其他农副产品加工" value='139'>
+            <level4 name="淀粉及淀粉制品的制造" value='1391'/>
+            <level4 name="豆制品制造" value='1392'/>
+            <level4 name="蛋品加工" value='1393'/>
+            <level4 name="其他未列明的农副食品加工" value='1399'/>
+            </level3>
+       </level2>
+    <level2 name="食品制造业" value='14'>
+       <level3 name="焙烤食品制造" value='141'>
+            <level4 name="糕点、面包制造" value='1411'/>
+            <level4 name="饼干及其他焙烤食品制造" value='1419'/>
+            </level3>
+       <level3 name="糖果、巧克力及蜜饯制造" value='142'>
+            <level4 name="糖果、巧克力制造" value='1421'/>
+            <level4 name="蜜饯制造" value='1422'/>
+            </level3>
+       <level3 name="方便食品制造" value='143'>
+            <level4 name="米、面制品制造" value='1431'/>
+            <level4 name="速冻食品制造" value='1432'/>
+            <level4 name="方便面及其他方便食品制造" value='1439'/>
+            </level3>
+       <level3 name="液体乳及乳制品制造" value='144'>
+            <level4 name="液体乳及乳制品制造" value='1440'/>
+            </level3>
+       <level3 name="罐头制造" value='145'>
+            <level4 name="肉、禽类罐头制造" value='1451'/>
+            <level4 name="水产品罐头制造" value='1452'/>
+            <level4 name="蔬菜、水果罐头制造" value='1453'/>
+            <level4 name="其他罐头食品制造" value='1459'/>
+            </level3>
+       <level3 name="调味品、发酵制品制造" value='146'>
+            <level4 name="味精制造" value='1461'/>
+            <level4 name="酱油、食醋及类似制品制造" value='1462'/>
+            <level4 name="其他调味品、发酵制品制造" value='1469'/>
+            </level3>
+       <level3 name="其他食品制造" value='149'>
+            <level4 name="营养、保健食品制造" value='1491'/>
+            <level4 name="冷冻饮品及食用冰制造" value='1492'/>
+            <level4 name="盐加工" value='1493'/>
+            <level4 name="食品及饲料添加剂制造" value='1494'/>
+            <level4 name="其他未列明的食品制造" value='1499'/>
+            </level3>
+       </level2>
+    <level2 name="饮料制造业" value='15'>
+       <level3 name="酒精制造" value='151'>
+            <level4 name="酒精制造" value='1510'/>
+            </level3>
+       <level3 name="酒的制造" value='152'>
+            <level4 name="白酒制造" value='1521'/>
+            <level4 name="啤酒制造" value='1522'/>
+            <level4 name="黄酒制造" value='1523'/>
+            <level4 name="葡萄酒制造" value='1524'/>
+            <level4 name="其他酒制造" value='1529'/>
+            </level3>
+       <level3 name="软饮料制造" value='153'>
+            <level4 name="碳酸饮料制造" value='1531'/>
+            <level4 name="瓶（罐）装饮用水制造" value='1532'/>
+            <level4 name="果菜汁及果菜汁饮料制造" value='1533'/>
+            <level4 name="含乳饮料和植物蛋白饮料制造" value='1534'/>
+            <level4 name="固体饮料制造" value='1535'/>
+            <level4 name="茶饮料及其他软饮料制造" value='1539'/>
+            </level3>
+       <level3 name="精制茶加工" value='154'>
+            <level4 name="精制茶加工" value='1540'/>
+            </level3>
+       </level2>
+    <level2 name="烟草制品业" value='16'>
+       <level3 name="烟叶复烤" value='161'>
+            <level4 name="烟叶复烤" value='1610'/>
+            </level3>
+       <level3 name="卷烟制造" value='162'>
+            <level4 name="卷烟制造" value='1620'/>
+            </level3>
+       <level3 name="其他烟草制品加工" value='169'>
+            <level4 name="其他烟草制品加工" value='1690'/>
+            </level3>
+       </level2>
+    <level2 name="纺织业" value='17'>
+       <level3 name="棉、化纤纺织及印染精加工" value='171'>
+            <level4 name="面、化纤纺织加工" value='1711'/>
+            <level4 name="面、化纤印染精加工" value='1712'/>
+            </level3>
+       <level3 name="毛纺织和染整精加工" value='172'>
+            <level4 name="毛条加工" value='1721'/>
+            <level4 name="毛纺织" value='1722'/>
+            <level4 name="毛染整精加工" value='1723'/>
+            </level3>
+       <level3 name="麻纺织" value='173'>
+            <level4 name="麻纺织" value='1730'/>
+            </level3>
+       <level3 name="丝绢纺织及精加工" value='174'>
+            <level4 name="缫丝加工" value='1741'/>
+            <level4 name="绢纺和丝织加工" value='1742'/>
+            <level4 name="丝印染精加工" value='1743'/>
+            </level3>
+       <level3 name="纺织制成品制造" value='175'>
+            <level4 name="棉及化纤制品制造" value='1751'/>
+            <level4 name="毛织品制造" value='1752'/>
+            <level4 name="麻制品制造" value='1753'/>
+            <level4 name="丝制品制造" value='1754'/>
+            <level4 name="绳、索、缆的制造" value='1755'/>
+            <level4 name="纺织带和帘子布制造" value='1756'/>
+            <level4 name="无纺布制造" value='1757'/>
+            <level4 name="其他纺织制成品制造" value='1759'/>
+            </level3>
+       <level3 name="针织品、编制品及其制品制造" value='176'>
+            <level4 name="棉、化纤针织品及编织品制造" value='1761'/>
+            <level4 name="毛针织品及编织品制造" value='1762'/>
+            <level4 name="丝针织品及编织品制造" value='1763'/>
+            <level4 name="其他针织品及编织品制造" value='1769'/>
+            </level3>
+       </level2>
+    <level2 name="纺织服装、鞋、帽制造业" value='18'>
+       <level3 name="纺织服装制造" value='181'>
+            <level4 name="纺织服装制造" value='1810'/>
+            </level3>
+       <level3 name="纺织面料鞋的制造" value='182'>
+            <level4 name="纺织面料鞋的制造" value='1820'/>
+            </level3>
+       <level3 name="制帽" value='183'>
+            <level4 name="制帽" value='1830'/>
+            </level3>
+       </level2>
+    <level2 name="皮革、毛皮、羽毛（绒）及其制品业" value='19'>
+       <level3 name="皮革鞣制加工" value='191'>
+            <level4 name="皮革鞣制加工" value='1910'/>
+            </level3>
+       <level3 name="皮革制品制造" value='192'>
+            <level4 name="皮鞋制造" value='1921'/>
+            <level4 name="皮革服装制造" value='1922'/>
+            <level4 name="皮箱、包（袋）制造" value='1923'/>
+            <level4 name="皮手套及皮装饰制品制造" value='1924'/>
+            <level4 name="其他皮革制品制造" value='1929'/>
+            </level3>
+       <level3 name="毛皮鞣制及制品加工" value='193'>
+            <level4 name="毛皮鞣制加工" value='1931'/>
+            <level4 name="毛皮服装加工" value='1932'/>
+            <level4 name="其他毛皮制品加工" value='1939'/>
+            </level3>
+       <level3 name="羽毛（绒）加工及制品制造" value='194'>
+            <level4 name="羽毛（绒）加工" value='1941'/>
+            <level4 name="羽毛（绒）制品加工" value='1942'/>
+            </level3>
+       </level2>
+    <level2 name="木材加工及木、竹、藤、棕、草制品业" value='20'>
+       <level3 name="锯材、木片加工" value='201'>
+            <level4 name="锯材加工" value='2011'/>
+            <level4 name="木片加工" value='2012'/>
+            </level3>
+       <level3 name="人造板制造" value='202'>
+            <level4 name="胶合板制造" value='2021'/>
+            <level4 name="纤维板制造" value='2022'/>
+            <level4 name="刨花板制造" value='2023'/>
+            <level4 name="其他人造板、材制造" value='2029'/>
+            </level3>
+       <level3 name="木制品制造" value='203'>
+            <level4 name="建筑用木料及木材组件加工" value='2031'/>
+            <level4 name="木容器制造" value='2032'/>
+            <level4 name="软木制品及其他木制品制造" value='2039'/>
+            </level3>
+       <level3 name="竹、藤、棕、草制品制造" value='204'>
+            <level4 name="竹、藤、棕、草制品制造" value='2040'/>
+            </level3>
+       </level2>
+    <level2 name="家具制造业" value='21'>
+       <level3 name="木质家具制造" value='211'>
+            <level4 name="木质家具制造" value='2110'/>
+            </level3>
+       <level3 name="竹、藤家具制造" value='212'>
+            <level4 name="竹、藤家具制造" value='2120'/>
+            </level3>
+       <level3 name="金属家具制造" value='213'>
+            <level4 name="金属家具制造" value='2130'/>
+            </level3>
+       <level3 name="塑料家具制造" value='214'>
+            <level4 name="塑料家具制造" value='2140'/>
+            </level3>
+       <level3 name="其他家具制造" value='219'>
+            <level4 name="其他家具制造" value='2190'/>
+            </level3>
+       </level2>
+    <level2 name="造纸及纸制品业" value='22'>
+       <level3 name="纸浆制造造纸" value='221'>
+            <level4 name="纸浆制造造纸" value='2210'/>
+            </level3>
+       <level3 name="机制纸及纸板制造" value='222'>
+            <level4 name="手工纸制造" value='2221'/>
+            <level4 name="加工纸制造" value='2222'/>
+            <level4 name="纸制品制造" value='2223'/>
+            </level3>
+       <level3 name="纸和纸板容器的制造" value='223'>
+            <level4 name="其他纸制品制造" value='2231'/>
+            <level4 name="印刷业和记录媒介的复制" value='2239'/>
+            </level3>
+       </level2>
+    <level2 name="印刷业和记录媒介的复制" value='23'>
+       <level3 name="印刷" value='231'>
+            <level4 name="书、报、刊印刷" value='2311'/>
+            <level4 name="本册印刷" value='2312'/>
+            <level4 name="包装装潢及其他印刷" value='2319'/>
+            </level3>
+       <level3 name="装订及其他印刷服务活动" value='232'>
+            <level4 name="装订及其他印刷服务活动" value='2320'/>
+            </level3>
+       <level3 name="记录媒介的复制" value='233'>
+            <level4 name="记录媒介的复制" value='2330'/>
+            </level3>
+       </level2>
+    <level2 name="文教体育用品制造业" value='24'>
+       <level3 name="文化用品制造" value='241'>
+            <level4 name="文具制造" value='2411'/>
+            <level4 name="笔的制造" value='2412'/>
+            <level4 name="教学用模型及教具制造" value='2413'/>
+            <level4 name="墨水、墨汁制造" value='2414'/>
+            <level4 name="其他文化用品制造" value='2419'/>
+            </level3>
+       <level3 name="体育用品制造" value='242'>
+            <level4 name="球类制造" value='2421'/>
+            <level4 name="体育器材及配件制造" value='2422'/>
+            <level4 name="训练健身器材制造" value='2423'/>
+            <level4 name="活动防护用具制造" value='2424'/>
+            <level4 name="其他体育用品制造" value='2429'/>
+            </level3>
+       <level3 name="乐器制造" value='243'>
+            <level4 name="中乐器制造" value='2431'/>
+            <level4 name="西乐器制造" value='2432'/>
+            <level4 name="电子乐器制造" value='2433'/>
+            </level3>
+       <level3 name="其他乐器及零件制造" value='244'>
+            <level4 name="其他乐器及零件制造" value='2440'/>
+            </level3>
+       <level3 name="玩具制造" value='245'>
+            <level4 name="游艺器材及娱乐用品制造" value='2451'/>
+            <level4 name="露天游乐场所游乐设备制造" value='2452'/>
+            </level3>
+       </level2>
+    <level2 name="游艺用品及室内游艺器材制造" value='25'>
+       <level3 name="石油加工、炼焦及核燃料加工业" value='251'>
+            <level4 name="原油加工及石油制品制造" value='2511'/>
+            <level4 name="人造原油生产" value='2512'/>
+            </level3>
+       <level3 name="炼焦" value='252'>
+            <level4 name="炼焦" value='2520'/>
+            </level3>
+       <level3 name="核燃料加工" value='253'>
+            <level4 name="核燃料加工" value='2530'/>
+            </level3>
+       </level2>
+    <level2 name="化学原料及化学制品制造业" value='26'>
+       <level3 name="基础化学原料制造" value='261'>
+            <level4 name="无机酸制造" value='2611'/>
+            <level4 name="无机碱制造" value='2612'/>
+            <level4 name="无机盐制造" value='2613'/>
+            <level4 name="有机化学原料制造" value='2614'/>
+            <level4 name="其他基础化学原料制造" value='2619'/>
+            </level3>
+       <level3 name="肥料制造" value='262'>
+            <level4 name="氮肥制造" value='2621'/>
+            <level4 name="磷肥制造" value='2622'/>
+            <level4 name="钾肥制造" value='2623'/>
+            <level4 name="复混肥料制造" value='2624'/>
+            <level4 name="有机肥料及微生物肥料制造" value='2625'/>
+            <level4 name="其他肥料制造" value='2629'/>
+            </level3>
+       <level3 name="农药制造" value='263'>
+            <level4 name="化学农药制造" value='2631'/>
+            <level4 name="生物农药及微生物农药制造" value='2632'/>
+            </level3>
+       <level3 name="涂料、油墨、颜料及类似产品制造" value='264'>
+            <level4 name="涂料制造" value='2641'/>
+            <level4 name="油墨及类似产品制造" value='2642'/>
+            <level4 name="颜料制造" value='2643'/>
+            <level4 name="燃料制造" value='2644'/>
+            <level4 name="密封用填料及类似产品制造" value='2645'/>
+            </level3>
+       <level3 name="合成材料制造" value='265'>
+            <level4 name="初级形态的塑料及合成树脂制造" value='2651'/>
+            <level4 name="合成橡胶制造" value='2652'/>
+            <level4 name="合成纤维单（聚合）体的制造" value='2653'/>
+            <level4 name="其他合成材料制造" value='2659'/>
+            </level3>
+       <level3 name="专用化学产品制造" value='266'>
+            <level4 name="化学试剂和助剂制造" value='2661'/>
+            <level4 name="专项化学用品制造" value='2662'/>
+            <level4 name="林产化学产品制造" value='2663'/>
+            <level4 name="炸药及火工产品制造" value='2664'/>
+            <level4 name="信息化学品制造" value='2665'/>
+            <level4 name="环境污染处理准用药剂材料制造" value='2666'/>
+            <level4 name="动物胶制造" value='2667'/>
+            <level4 name="其他专用化学产品制造" value='2669'/>
+            </level3>
+       <level3 name="日用化学产品制造" value='267'>
+            <level4 name="肥皂及合成洗涤剂制造" value='2671'/>
+            <level4 name="化妆品制造" value='2672'/>
+            <level4 name="口腔清洁用品制造" value='2673'/>
+            <level4 name="香料、香精制造" value='2674'/>
+            <level4 name="其他日用化学产品制造" value='2679'/>
+            </level3>
+       </level2>
+    <level2 name="医药制造业" value='27'>
+       <level3 name="化学药品原药制造" value='271'>
+            <level4 name="化学药品原药制造" value='2710'/>
+            </level3>
+       <level3 name="化学药品制剂制造" value='272'>
+            <level4 name="化学药品制剂制造" value='2720'/>
+            </level3>
+       <level3 name="中药饮片加工" value='273'>
+            <level4 name="中药饮片加工" value='2730'/>
+            </level3>
+       <level3 name="中成药制造" value='274'>
+            <level4 name="中成药制造" value='2740'/>
+            </level3>
+       <level3 name="兽用药品制造" value='275'>
+            <level4 name="兽用药品制造" value='2750'/>
+            </level3>
+       <level3 name="生物、生化制品的制造" value='276'>
+            <level4 name="生物、生化制品的制造" value='2760'/>
+            </level3>
+       <level3 name="卫生材料及医药用品制造" value='277'>
+            <level4 name="卫生材料及医药用品制造" value='2770'/>
+            </level3>
+       </level2>
+    <level2 name="化学纤维制造业" value='28'>
+       <level3 name="纤维素纤维原料及纤维制造" value='281'>
+            <level4 name="化纤浆粕制造" value='2811'/>
+            <level4 name="人造纤维（纤维素纤维）制造" value='2812'/>
+            </level3>
+       <level3 name="合成纤维制造" value='282'>
+            <level4 name="锦纶纤维制造" value='2821'/>
+            <level4 name="涤纶纤维制造" value='2822'/>
+            <level4 name="腈纶纤维制造" value='2823'/>
+            <level4 name="维纶纤维制造" value='2824'/>
+            <level4 name="其他合成纤维制造" value='2829'/>
+            </level3>
+       </level2>
+    <level2 name="橡胶制品业" value='29'>
+       <level3 name="轮胎制造" value='291'>
+            <level4 name="车辆、飞机及工程机械轮胎制造" value='2911'/>
+            <level4 name="力车胎制造" value='2912'/>
+            <level4 name="轮胎翻新加工" value='2913'/>
+            </level3>
+       <level3 name="橡胶板、管、带的制造" value='292'>
+            <level4 name="橡胶板、管、带的制造" value='2920'/>
+            </level3>
+       <level3 name="橡胶零件制造" value='293'>
+            <level4 name="橡胶零件制造" value='2930'/>
+            </level3>
+       <level3 name="再生橡胶制造" value='294'>
+            <level4 name="再生橡胶制造" value='2940'/>
+            </level3>
+       <level3 name="日用及医用橡胶制品制造" value='295'>
+            <level4 name="日用及医用橡胶制品制造" value='2950'/>
+            </level3>
+       <level3 name="橡胶靴鞋制造" value='296'>
+            <level4 name="橡胶靴鞋制造" value='2960'/>
+            </level3>
+       <level3 name="其他橡胶制品制造" value='299'>
+            <level4 name="其他橡胶制品制造" value='2990'/>
+            </level3>
+       </level2>
+    <level2 name="塑料制品业" value='30'>
+       <level3 name="塑料薄膜制造" value='301'>
+            <level4 name="塑料薄膜制造" value='3010'/>
+            </level3>
+       <level3 name="塑料板、管、型材的制造" value='302'>
+            <level4 name="塑料板、管、型材的制造" value='3020'/>
+            </level3>
+       <level3 name="塑料丝、绳及编织品的制造" value='303'>
+            <level4 name="塑料丝、绳及编织品的制造" value='3030'/>
+            </level3>
+       <level3 name="泡沫塑料制造" value='304'>
+            <level4 name="泡沫塑料制造" value='3040'/>
+            </level3>
+       <level3 name="塑料人造革、合成革制造" value='305'>
+            <level4 name="塑料人造革、合成革制造" value='3050'/>
+            </level3>
+       <level3 name="塑料包装箱及容器制造" value='306'>
+            <level4 name="塑料包装箱及容器制造" value='3060'/>
+            </level3>
+       <level3 name="塑料零件制造" value='307'>
+            <level4 name="塑料零件制造" value='3070'/>
+            </level3>
+       <level3 name="日用塑料制造" value='308'>
+            <level4 name="塑料鞋制造" value='3081'/>
+            <level4 name="日用塑料杂品制造" value='3082'/>
+            </level3>
+       <level3 name="其他塑料之破制造" value='309'>
+            <level4 name="其他塑料之破制造" value='3090'/>
+            </level3>
+       </level2>
+    <level2 name="非金属矿物制品制造业" value='31'>
+       <level3 name="水泥、石灰和石膏的制造" value='311'>
+            <level4 name="水泥制造" value='3111'/>
+            <level4 name="石灰和石膏制造" value='3112'/>
+            </level3>
+       <level3 name="水泥及石膏制品的制造" value='312'>
+            <level4 name="水泥制品制造" value='3121'/>
+            <level4 name="砼结构构件制造" value='3122'/>
+            <level4 name="石棉水泥制品制造" value='3123'/>
+            <level4 name="轻质建筑材料制造" value='3124'/>
+            <level4 name="其他水泥制品制造" value='3129'/>
+            </level3>
+       <level3 name="砖瓦、石材及其他建筑材料制造" value='313'>
+            <level4 name="粘土砖瓦及建筑砌块制造" value='3131'/>
+            <level4 name="建筑陶瓷制品制造" value='3132'/>
+            <level4 name="建筑用石加工" value='3133'/>
+            <level4 name="防水建筑材料制造" value='3134'/>
+            <level4 name="隔热和隔音材料制造" value='3135'/>
+            <level4 name="其他建筑材料制造" value='3139'/>
+            </level3>
+       <level3 name="玻璃及玻璃制品制造" value='314'>
+            <level4 name="平板玻璃制造" value='3141'/>
+            <level4 name="技术玻璃制品制造" value='3142'/>
+            <level4 name="光学玻璃制造" value='3143'/>
+            <level4 name="玻璃仪器制造" value='3144'/>
+            <level4 name="日用玻璃制品及玻璃包装容器制造" value='3145'/>
+            <level4 name="玻璃保温容器制造" value='3146'/>
+            <level4 name="玻璃纤维及制品制造" value='3147'/>
+            <level4 name="玻璃纤维增强塑料制品制造" value='3148'/>
+            <level4 name="其他玻璃制品制造" value='3149'/>
+            </level3>
+       <level3 name="陶瓷制作品制造" value='315'>
+            <level4 name="卫生陶瓷制品制造" value='3151'/>
+            <level4 name="特种陶瓷制品制造" value='3152'/>
+            <level4 name="日用陶瓷制品制造" value='3153'/>
+            <level4 name="园林、陈设艺术及其他陶瓷制品制造" value='3159'/>
+            </level3>
+       <level3 name="耐火材料制品制造" value='316'>
+            <level4 name="石棉制品制造" value='3161'/>
+            <level4 name="云母制品制造" value='3162'/>
+            <level4 name="耐火陶瓷制品及其他耐火材料制造" value='3169'/>
+            </level3>
+       <level3 name="石墨及其他非金属矿物制品制造" value='319'>
+            <level4 name="石墨及碳素制品制造" value='3191'/>
+            <level4 name="其他非金属矿物制品制造" value='3199'/>
+            </level3>
+       </level2>
+    <level2 name="黑色金属冶炼及压延加工" value='32'>
+       <level3 name="炼铁" value='321'>
+            <level4 name="炼铁" value='3210'/>
+            </level3>
+       <level3 name="炼钢" value='322'>
+            <level4 name="炼钢" value='3220'/>
+            </level3>
+       <level3 name="钢压延加工" value='323'>
+            <level4 name="钢压延加工" value='3230'/>
+            </level3>
+       <level3 name="铁合金冶炼" value='324'>
+            <level4 name="铁合金冶炼" value='3240'/>
+            </level3>
+       </level2>
+    <level2 name="有色金属冶炼及压延加工业" value='33'>
+       <level3 name="常用有色金属冶炼" value='331'>
+            <level4 name="铜冶炼" value='3311'/>
+            <level4 name="铅锌冶炼" value='3312'/>
+            <level4 name="镍钴冶炼" value='3313'/>
+            <level4 name="锡冶炼" value='3314'/>
+            <level4 name="锑冶炼" value='3315'/>
+            <level4 name="铝冶炼" value='3316'/>
+            <level4 name="镁冶炼" value='3317'/>
+            <level4 name="其他常用有色金属冶炼" value='3319'/>
+            </level3>
+       <level3 name="贵金属冶炼" value='332'>
+            <level4 name="金冶炼" value='3321'/>
+            <level4 name="银冶炼" value='3322'/>
+            <level4 name="其他贵金属冶炼" value='3329'/>
+            </level3>
+       <level3 name="稀有稀土金属冶炼" value='333'>
+            <level4 name="钨钼冶炼" value='3331'/>
+            <level4 name="稀土金属冶炼" value='3332'/>
+            <level4 name="其他稀有金属冶炼" value='3339'/>
+            </level3>
+       <level3 name="有色金属冶炼" value='334'>
+            <level4 name="有色金属冶炼" value='3340'/>
+            </level3>
+       <level3 name="稀有金属压延加工" value='335'>
+            <level4 name="常用有色金属压延加工" value='3351'/>
+            <level4 name="贵金属压延加工" value='3352'/>
+            <level4 name="稀有稀土金属压延加工" value='3353'/>
+            </level3>
+       </level2>
+    <level2 name="金属制品制造业" value='34'>
+       <level3 name="结构性金属制品制造" value='341'>
+            <level4 name="金属结构制造" value='3411'/>
+            <level4 name="金属门窗制造" value='3412'/>
+            </level3>
+       <level3 name="金属工具制造" value='342'>
+            <level4 name="切削工具制造" value='3421'/>
+            <level4 name="手工具制造" value='3422'/>
+            <level4 name="农用及园林用金属工具制造" value='3423'/>
+            <level4 name="刀剪及类似日用金属工具制造" value='3424'/>
+            <level4 name="其他金属工具制造" value='3429'/>
+            </level3>
+       <level3 name="集装箱及金属包装容器制造" value='343'>
+            <level4 name="集装箱制造" value='3431'/>
+            <level4 name="金属压力容器制造" value='3432'/>
+            <level4 name="金属包装容器制造" value='3433'/>
+            </level3>
+       <level3 name="金属丝绳及其制品的制造" value='344'>
+            <level4 name="金属丝绳及其制品的制造" value='3440'/>
+            </level3>
+       <level3 name="建筑、安全用金属制品制造" value='345'>
+            <level4 name="建筑、家具用金属配件制造" value='3451'/>
+            <level4 name="建筑装饰及水暖管道零件制造" value='3452'/>
+            <level4 name="安全、消防用金属制品制造" value='3453'/>
+            <level4 name="其他建筑、安全用金属制品制造" value='3459'/>
+            </level3>
+       <level3 name="金属表面处理及热处理加工" value='346'>
+            <level4 name="金属表面处理及热处理加工" value='3460'/>
+            </level3>
+       <level3 name="搪瓷制品制造" value='347'>
+            <level4 name="工业生产配套用搪瓷制品制造" value='3471'/>
+            <level4 name="搪瓷卫生洁具制造" value='3472'/>
+            <level4 name="搪瓷日用品及其他搪瓷制品制造" value='3479'/>
+            </level3>
+       <level3 name="不锈钢及类似日用金属制品制造" value='348'>
+            <level4 name="金属制厨房条理及卫生器具制造" value='3481'/>
+            <level4 name="金属制厨用器皿及餐具制造" value='3482'/>
+            <level4 name="其他日用金属制品制造" value='3489'/>
+            </level3>
+       <level3 name="其他金属制品制造" value='349'>
+            <level4 name="铸币及贵金属制实验室用品制造" value='3491'/>
+            <level4 name="其他未列明的金属制品制造" value='3499'/>
+            </level3>
+       </level2>
+    <level2 name="通用设备制造业" value='35'>
+       <level3 name="锅炉及原动机制造" value='351'>
+            <level4 name="锅炉及辅助设备制造" value='3511'/>
+            <level4 name="内燃机及配件制造" value='3512'/>
+            <level4 name="汽轮机及辅件制造" value='3513'/>
+            <level4 name="水轮机及附件制造" value='3514'/>
+            <level4 name="其他原动机制造" value='3519'/>
+            </level3>
+       <level3 name="金属加工机械制造" value='352'>
+            <level4 name="金属切削机床制造" value='3521'/>
+            <level4 name="金属成形机床制造" value='3522'/>
+            <level4 name="铸造机械制造" value='3523'/>
+            <level4 name="金属切割及焊接设备制造" value='3524'/>
+            <level4 name="机床附件制造" value='3525'/>
+            <level4 name="其他金属加工机械制造" value='3529'/>
+            </level3>
+       <level3 name="起重运输设备制造" value='353'>
+            <level4 name="起重运输设备制造" value='3530'/>
+            </level3>
+       <level3 name="泵、阀门、压缩机及类似机械的制造" value='354'>
+            <level4 name="泵及真空设备制造" value='3541'/>
+            <level4 name="气体压缩机械制造" value='3542'/>
+            <level4 name="阀门和旋塞的制造" value='3543'/>
+            <level4 name="液压和气压动力机械及元件制造" value='3544'/>
+            </level3>
+       <level3 name="轴承、齿轮、传动和驱动部件的制造" value='355'>
+            <level4 name="轴承制造" value='3551'/>
+            <level4 name="齿轮、传动和驱动部件制造" value='3552'/>
+            </level3>
+       <level3 name="烘炉、熔炉及电炉制造" value='356'>
+            <level4 name="烘炉、熔炉及电炉制造" value='3560'/>
+            </level3>
+       <level3 name="风机、衡器、包装设备等通用设备制造" value='357'>
+            <level4 name="风机、风扇制造" value='3571'/>
+            <level4 name="气体、液体分离及纯净设备制造" value='3572'/>
+            <level4 name="制冷、空调设备制造" value='3573'/>
+            <level4 name="风动和电动工具制造" value='3574'/>
+            <level4 name="喷枪及类似器具制造" value='3575'/>
+            <level4 name="包装专用设备制造" value='3576'/>
+            <level4 name="衡器制造" value='3577'/>
+            <level4 name="其他通用设备制造" value='3579'/>
+            </level3>
+       <level3 name="通用零部件制造及机械修理" value='358'>
+            <level4 name="金属密封件制造" value='3581'/>
+            <level4 name="紧固件、弹簧制造" value='3582'/>
+            <level4 name="机械零部件加工及设备修理" value='3583'/>
+            <level4 name="其他通用零部件制造" value='3589'/>
+            </level3>
+       <level3 name="金属铸、锻加工" value='359'>
+            <level4 name="钢铁铸件制造" value='3591'/>
+            <level4 name="锻件及粉末冶金制品制造" value='3592'/>
+            </level3>
+       </level2>
+    <level2 name="专用设备制造业" value='36'>
+       <level3 name="矿山、冶金、建筑专用设备制造" value='361'>
+            <level4 name="采矿、采石设备制造" value='3611'/>
+            <level4 name="石油钻采专用设备制造" value='3612'/>
+            <level4 name="建筑工程用机械制造" value='3613'/>
+            <level4 name="建筑材料生产专用机械制造" value='3614'/>
+            <level4 name="冶金专用设备制造" value='3615'/>
+            </level3>
+       <level3 name="化工、木材、非金属加工专用设备制造" value='362'>
+            <level4 name="炼油、化工生产专用设备制造" value='3621'/>
+            <level4 name="橡胶加工专用设备制造" value='3622'/>
+            <level4 name="塑料加工专用设备制造" value='3623'/>
+            <level4 name="木材加工机械制造" value='3624'/>
+            <level4 name="模具制造" value='3625'/>
+            <level4 name="其他非金属加工专用设备制造" value='3629'/>
+            </level3>
+       <level3 name="食品、饮料、烟草及饲料生产专用设备制造" value='363'>
+            <level4 name="食品、饮料、烟草工业专用设备制造" value='3631'/>
+            <level4 name="农副产品加工专用设备制造" value='3632'/>
+            <level4 name="饲料生产专用设备制造" value='3633'/>
+            </level3>
+       <level3 name="印刷、制药、日化生产专用设备制造" value='364'>
+            <level4 name="制浆和造纸专用设备制造" value='3641'/>
+            <level4 name="印刷专业设备制造" value='3642'/>
+            <level4 name="日用化工专用设备制造" value='3643'/>
+            <level4 name="制药专用设备制造" value='3644'/>
+            <level4 name="照明器具生产专用设备制造" value='3645'/>
+            <level4 name="玻璃、陶瓷和搪瓷制品生产专用设备制造" value='3646'/>
+            <level4 name="其他日用品生产专用设备制造" value='3649'/>
+            </level3>
+       <level3 name="纺织、服装和皮革工业专用设备制造" value='365'>
+            <level4 name="纺织专用设备制造" value='3651'/>
+            <level4 name="皮革、毛皮及其制品加工专用设备制造" value='3652'/>
+            <level4 name="缝纫机械制造" value='3653'/>
+            <level4 name="其他服装加工专用设备制造" value='3659'/>
+            </level3>
+       <level3 name="电子和电工机械专用设备制造" value='366'>
+            <level4 name="电子机械专用设备制造" value='3661'/>
+            <level4 name="电子工业专用设备制造" value='3662'/>
+            <level4 name="武器弹药制造" value='3663'/>
+            <level4 name="航空、航天及其他专用设备制造" value='3669'/>
+            </level3>
+       <level3 name="农、林、牧、渔专用机械制造" value='367'>
+            <level4 name="拖拉机制造" value='3671'/>
+            <level4 name="机械化农业及园艺机具制造" value='3672'/>
+            <level4 name="营林及木竹采伐机械制造" value='3673'/>
+            <level4 name="畜牧机械制造" value='3674'/>
+            <level4 name="渔业机械制造" value='3675'/>
+            <level4 name="农林牧渔机械配件制造" value='3676'/>
+            <level4 name="其他农林牧渔机械制造及机械修理" value='3679'/>
+            </level3>
+       <level3 name="医疗仪器设备及器械制造" value='368'>
+            <level4 name="医疗诊断、监护及治疗设备制造" value='3681'/>
+            <level4 name="口腔科用设备及器具制造" value='3682'/>
+            <level4 name="实验室及医用消毒设备和器具的制造" value='3683'/>
+            <level4 name="医疗、外科及兽医用器械制造" value='3684'/>
+            <level4 name="机械治疗及病房护理设备制造" value='3685'/>
+            <level4 name="假肢、人工器官及植（介）入器械制造" value='3686'/>
+            <level4 name="其他医疗设备及器械制造" value='3689'/>
+            </level3>
+       <level3 name="环保、社会公共安全及其他专用设备制造" value='369'>
+            <level4 name="环境污染防治专用设备制造" value='3691'/>
+            <level4 name="地质勘探专用设备制造" value='3692'/>
+            <level4 name="邮政专用机械及器材制造" value='3693'/>
+            <level4 name="商业、饮食、服务业专用设备制造" value='3694'/>
+            <level4 name="社会公共安全设备及器材制造" value='3695'/>
+            <level4 name="交通安全及管制专用设备制造" value='3696'/>
+            <level4 name="水资源专用机械制造" value='3697'/>
+            <level4 name="其他专用设备制造" value='3699'/>
+            </level3>
+       </level2>
+    <level2 name="交通运输设备制造业" value='37'>
+       <level3 name="铁路运输设备制造" value='371'>
+            <level4 name="铁路机车车辆及动车组制造" value='3711'/>
+            <level4 name="工矿有轨专用车辆制造" value='3712'/>
+            <level4 name="铁路机车车辆配件制造" value='3713'/>
+            <level4 name="铁路专用设备及器材、配件制造" value='3714'/>
+            <level4 name="其他铁路设备制造及设备维修" value='3719'/>
+            </level3>
+       <level3 name="汽车制造" value='372'>
+            <level4 name="汽车整车制造" value='3721'/>
+            <level4 name="改装汽车制造" value='3722'/>
+            <level4 name="电车制造" value='3723'/>
+            <level4 name="汽车车身、挂车的制造" value='3724'/>
+            <level4 name="汽车零部件及配件制造" value='3725'/>
+            <level4 name="汽车修理" value='3726'/>
+            </level3>
+       <level3 name="摩托车制造" value='373'>
+            <level4 name="摩托车整车制造" value='3731'/>
+            <level4 name="摩托车零部件及配件制造" value='3732'/>
+            </level3>
+       <level3 name="自行车制造" value='374'>
+            <level4 name="脚踏自行车及残疾人座车制造" value='3741'/>
+            <level4 name="助动自行车制造" value='3742'/>
+            </level3>
+       <level3 name="船舶及浮动装置制造" value='375'>
+            <level4 name="金属船舶制造" value='3751'/>
+            <level4 name="非金属船舶制造" value='3752'/>
+            <level4 name="娱乐船和运动 船的建造和修理" value='3753'/>
+            <level4 name="船用配套设备制造" value='3754'/>
+            <level4 name="船舶修理及拆船" value='3755'/>
+            <level4 name="航标器材及其他浮动装置的制造" value='3759'/>
+            </level3>
+       <level3 name="航空航天器制造" value='376'>
+            <level4 name="飞机制造及修理" value='3761'/>
+            <level4 name="航天器制造" value='3762'/>
+            <level4 name="其他飞行器制造" value='3769'/>
+            </level3>
+       <level3 name="交通器材及其他交通运输设备制造" value='379'>
+            <level4 name="潜水及水下救捞装备制造" value='3791'/>
+            <level4 name="交通管理用金属标志及设施制造" value='3792'/>
+            <level4 name="其他交通运输设备制造" value='3799'/>
+            </level3>
+       </level2>
+    <level2 name="电气机械及器材制造业" value='39'>
+       <level3 name="电机制造" value='391'>
+            <level4 name="发电机及发电机组制造" value='3911'/>
+            <level4 name="电动机制造" value='3912'/>
+            <level4 name="微电机及其他电机制造" value='3919'/>
+            </level3>
+       <level3 name="输配电及控制设备制造" value='392'>
+            <level4 name="变压器、整流器和电感器制造" value='3921'/>
+            <level4 name="电容器及其配套设备制造" value='3922'/>
+            <level4 name="配电开关控制设备" value='3923'/>
+            <level4 name="电力电子元器件制造" value='3924'/>
+            <level4 name="其他输配电及控制设备制造" value='3929'/>
+            </level3>
+       <level3 name="电线、电缆、光缆及电工器材制造" value='393'>
+            <level4 name="电线电缆制造" value='3931'/>
+            <level4 name="光线、光缆制造" value='3932'/>
+            <level4 name="绝缘制品制造" value='3933'/>
+            <level4 name="其他电工器材制造" value='3939'/>
+            </level3>
+       <level3 name="电池制造" value='394'>
+            <level4 name="电池制造" value='3940'/>
+            </level3>
+       <level3 name="家用电力器具制造" value='395'>
+            <level4 name="家用制冷电器具制造" value='3951'/>
+            <level4 name="家用空气调节器制造" value='3952'/>
+            <level4 name="家用通风电器具制造" value='3953'/>
+            <level4 name="家用厨房电器具制造" value='3954'/>
+            <level4 name="家用清洁卫生电器具制造" value='3955'/>
+            <level4 name="家用美容、保健电器具制造" value='3956'/>
+            <level4 name="家用电力器具专用配件制造" value='3957'/>
+            <level4 name="其他家用电器具制造" value='3959'/>
+            </level3>
+       <level3 name="非电力家用器具制造" value='396'>
+            <level4 name="燃气、太阳能及类似能源的器具制造" value='3961'/>
+            <level4 name="其他非电力家用器具制造" value='3969'/>
+            </level3>
+       <level3 name="照明器具制造" value='397'>
+            <level4 name="电光源制造" value='3971'/>
+            <level4 name="照明灯具制造" value='3972'/>
+            <level4 name="灯用电器附件及其他照明器具制造" value='3979'/>
+            </level3>
+       <level3 name="其他电气机械及器材制造" value='399'>
+            <level4 name="车辆专用照明及电气信号设备装置制造" value='3991'/>
+            <level4 name="其他未列明的电气机械制造" value='3999'/>
+            </level3>
+       </level2>
+    <level2 name="通信设备、计算机及其他电子设备制造业" value='40'>
+       <level3 name="通信设备制造" value='401'>
+            <level4 name="通信传输设备制造" value='4011'/>
+            <level4 name="通信交换设备制造" value='4012'/>
+            <level4 name="通信终端设备制造" value='4013'/>
+            <level4 name="移动通信及终端设备制造" value='4014'/>
+            <level4 name="其他通信设备制造" value='4019'/>
+            </level3>
+       <level3 name="雷达及配套设备制造" value='402'>
+            <level4 name="雷达及配套设备制造" value='4020'/>
+            </level3>
+       <level3 name="广播电视设备制造" value='403'>
+            <level4 name="广播电视节目制作及发射设备制造" value='4031'/>
+            <level4 name="广播电视接受设备及器材制造" value='4032'/>
+            <level4 name="应用电视设备及其他广播电视设备制造" value='4039'/>
+            </level3>
+       <level3 name="电子计算机制造" value='404'>
+            <level4 name="电子计算机整机制造" value='4041'/>
+            <level4 name="计算机网络设备制造" value='4042'/>
+            <level4 name="电子计算机外部设备制造" value='4043'/>
+            </level3>
+       <level3 name="电子器件制造" value='405'>
+            <level4 name="电子真空器件制造" value='4051'/>
+            <level4 name="半导体分立器件制造" value='4052'/>
+            <level4 name="集成电路制造" value='4053'/>
+            <level4 name="光电子器件及其他电子器件制造" value='4059'/>
+            </level3>
+       <level3 name="电子元件制造" value='406'>
+            <level4 name="电子元件及组件制造" value='4061'/>
+            <level4 name="印刷电路板制造" value='4062'/>
+            </level3>
+       <level3 name="家用视听设备制造" value='407'>
+            <level4 name="家用影视设备制造" value='4071'/>
+            <level4 name="家用音响设备制造" value='4072'/>
+            </level3>
+       <level3 name="其他电子设备制造" value='409'>
+            <level4 name="其他电子设备制造" value='4090'/>
+            </level3>
+       </level2>
+    <level2 name="仪器仪表及文化、办公机械制造业" value='41'>
+       <level3 name="通用仪器仪表制造" value='411'>
+            <level4 name="工业自动控制系统装置制造" value='4111'/>
+            <level4 name="电工仪器仪表制造" value='4112'/>
+            <level4 name="绘图、计算及测量仪器制造" value='4113'/>
+            <level4 name="实验分析仪器制造" value='4114'/>
+            <level4 name="试验机制造" value='4115'/>
+            <level4 name="供应用仪表及其他通用仪器制造" value='4119'/>
+            </level3>
+       <level3 name="专用仪器仪表制造" value='412'>
+            <level4 name="环境检测专用仪器仪表制造" value='4121'/>
+            <level4 name="汽车及其他用计数仪表制造" value='4122'/>
+            <level4 name="导航、气象及海洋专用仪器制造" value='4123'/>
+            <level4 name="农林牧渔专用仪器仪表制造" value='4124'/>
+            <level4 name="地址勘探和地震专用仪器制造" value='4125'/>
+            <level4 name="教学专用仪器制造" value='4126'/>
+            <level4 name="核子及核辐射测量仪器制造" value='4127'/>
+            <level4 name="电子测量仪器制造" value='4128'/>
+            <level4 name="其他专用仪器制造" value='4129'/>
+            </level3>
+       <level3 name="钟表与计时仪器制造" value='413'>
+            <level4 name="钟表与计时仪器制造" value='4130'/>
+            </level3>
+       <level3 name="光学仪器及眼镜制造" value='414'>
+            <level4 name="光学仪器制造" value='4141'/>
+            <level4 name="眼镜制造" value='4142'/>
+            </level3>
+       <level3 name="文化、办公用机械制造" value='415'>
+            <level4 name="电影机械制造" value='4151'/>
+            <level4 name="幻灯及投影设备制造" value='4152'/>
+            <level4 name="照相机及器材制造" value='4153'/>
+            <level4 name="复印和胶印设备制造" value='4154'/>
+            <level4 name="计算器及货币专用设备制造" value='4155'/>
+            <level4 name="其他文化、办公用机械制造" value='4159'/>
+            </level3>
+       <level3 name="其他仪器仪表的制造及修理" value='419'>
+            <level4 name="其他仪器仪表的制造及修理" value='4190'/>
+            </level3>
+       </level2>
+    <level2 name="工艺品及其他制造业" value='42'>
+       <level3 name="工艺美术品制造" value='421'>
+            <level4 name="雕塑工艺品制造" value='4211'/>
+            <level4 name="金属工艺品制造" value='4212'/>
+            <level4 name="漆器工艺品制造" value='4213'/>
+            <level4 name="花画工艺品制造" value='4214'/>
+            <level4 name="天然植物纤维编制工艺品制造" value='4215'/>
+            <level4 name="抽纱刺绣工艺品制造" value='4216'/>
+            <level4 name="地毯、挂毯制造" value='4217'/>
+            <level4 name="其他工艺美术品制造" value='4219'/>
+            <level4 name="珠宝首饰及有关物品的制造" value='7218'/>
+            </level3>
+       <level3 name="日用杂品制造" value='422'>
+            <level4 name="制镜及类似品加工" value='4221'/>
+            <level4 name="鬃毛加工、制刷及清扫工具的制造" value='4222'/>
+            <level4 name="其他日用杂品制造" value='4229'/>
+            </level3>
+       <level3 name="煤制品制造" value='423'>
+            <level4 name="煤制品制造" value='4230'/>
+            </level3>
+       <level3 name="核辐射加工" value='424'>
+            <level4 name="核辐射加工" value='4240'/>
+            </level3>
+       <level3 name="其他未列明的制造业" value='429'>
+            <level4 name="其他未列明的制造业" value='4290'/>
+            </level3>
+       </level2>
+    <level2 name="废弃资源和废旧材料回收加工业" value='43'>
+       <level3 name="金属废料和碎屑的加工处理" value='431'>
+            <level4 name="金属废料和碎屑的加工处理" value='4310'/>
+            </level3>
+       <level3 name="非金属废料和碎屑的加工处理" value='432'>
+            <level4 name="非金属废料和碎屑的加工处理" value='4320'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="电力、燃气及水的生产和供应业" value='D'>
+    <level2 name="电力、热力的生产和供应业" value='44'>
+       <level3 name="电力生产" value='441'>
+            <level4 name="火力发电" value='4411'/>
+            <level4 name="水力发电" value='4412'/>
+            <level4 name="核力发电" value='4413'/>
+            <level4 name="其他能源发电" value='4419'/>
+            </level3>
+       <level3 name="电力供应" value='442'>
+            <level4 name="电力供应" value='4420'/>
+            </level3>
+       <level3 name="热力生产和供应" value='443'>
+            <level4 name="热力生产和供应" value='4430'/>
+            </level3>
+       </level2>
+    <level2 name="燃气生产和供应业" value='45'>
+       <level3 name="燃气生产和供应业" value='450'>
+            <level4 name="燃气生产和供应业" value='4500'/>
+            </level3>
+       </level2>
+    <level2 name="水的生产和供应业" value='46'>
+       <level3 name="自来水的生产和供应" value='461'>
+            <level4 name="自来水的生产和供应" value='4610'/>
+            </level3>
+       <level3 name="污水处理及其再生利用" value='462'>
+            <level4 name="污水处理及其再生利用" value='4620'/>
+            </level3>
+       <level3 name="其他水的处理、利用与分配" value='469'>
+            <level4 name="其他水的处理、利用与分配" value='4690'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="建筑业" value='E'>
+    <level2 name="房屋和土木工程建筑业" value='47'>
+       <level3 name="房屋工程建筑" value='471'>
+            <level4 name="房屋工程建筑" value='4710'/>
+            </level3>
+       <level3 name="土木工程建筑" value='472'>
+            <level4 name="铁路、道路、隧道和桥梁工程建筑" value='4721'/>
+            <level4 name="水力和港口工程建筑" value='4722'/>
+            <level4 name="工矿工程建筑" value='4723'/>
+            <level4 name="架线和管道工程建筑" value='4724'/>
+            <level4 name="其他土木工程建筑" value='4729'/>
+            </level3>
+       </level2>
+    <level2 name="建筑安装业" value='48'>
+       <level3 name="建筑安装业" value='480'>
+            <level4 name="建筑安装业" value='4800'/>
+            </level3>
+       </level2>
+    <level2 name="建筑装饰业" value='49'>
+       <level3 name="建筑装饰业" value='490'>
+            <level4 name="建筑装饰业" value='4900'/>
+            </level3>
+       </level2>
+    <level2 name="其他建筑业" value='50'>
+       <level3 name="工程准备" value='501'>
+            <level4 name="工程准备" value='5010'/>
+            </level3>
+       <level3 name="提供施工设备服务" value='502'>
+            <level4 name="提供施工设备服务" value='5020'/>
+            </level3>
+       <level3 name="其他未列明的建筑活动" value='509'>
+            <level4 name="其他未列明的建筑活动" value='5090'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="交通运输、仓储和邮政业" value='F'>
+    <level2 name="铁路运输业" value='51'>
+       <level3 name="铁路旅客运输" value='511'>
+            <level4 name="铁路旅客运输" value='5110'/>
+            </level3>
+       <level3 name="铁路货物运输" value='512'>
+            <level4 name="铁路货物运输" value='5120'/>
+            </level3>
+       <level3 name="铁路运输辅助活动" value='513'>
+            <level4 name="客运火车站" value='5131'/>
+            <level4 name="货运火车站" value='5132'/>
+            <level4 name="其他铁路运输辅助活动" value='5139'/>
+            </level3>
+       </level2>
+    <level2 name="道路运输业" value='52'>
+       <level3 name="公路旅客运输" value='521'>
+            <level4 name="公路旅客运输" value='5210'/>
+            </level3>
+       <level3 name="道路货物运输" value='522'>
+            <level4 name="道路货物运输" value='5220'/>
+            </level3>
+       <level3 name="道路运输辅助活动" value='523'>
+            <level4 name="客运汽车站" value='5231'/>
+            <level4 name="公路管理与养护" value='5232'/>
+            <level4 name="其他道路运输辅助活动" value='5239'/>
+            </level3>
+       </level2>
+    <level2 name="城市公共交通业" value='53'>
+       <level3 name="公共电汽车客运" value='531'>
+            <level4 name="公共电汽车客运" value='5310'/>
+            </level3>
+       <level3 name="轨道交通" value='532'>
+            <level4 name="轨道交通" value='5320'/>
+            </level3>
+       <level3 name="出租车客运" value='533'>
+            <level4 name="出租车客运" value='5330'/>
+            </level3>
+       <level3 name="城市轮渡" value='534'>
+            <level4 name="城市轮渡" value='5340'/>
+            </level3>
+       <level3 name="其他城市公共交通" value='539'>
+            <level4 name="其他城市公共交通" value='5390'/>
+            </level3>
+       </level2>
+    <level2 name="水上运输业" value='54'>
+       <level3 name="水上旅客运输" value='541'>
+            <level4 name="远洋旅客运输" value='5411'/>
+            <level4 name="沿海旅客运输" value='5412'/>
+            <level4 name="内河旅客运输" value='5413'/>
+            </level3>
+       <level3 name="水上货物运输" value='542'>
+            <level4 name="远洋货物运输" value='5421'/>
+            <level4 name="沿海货物运输" value='5422'/>
+            <level4 name="内河货物运输" value='5423'/>
+            </level3>
+       <level3 name="水上运输辅助活动" value='543'>
+            <level4 name="客运港口" value='5431'/>
+            <level4 name="货运港口" value='5432'/>
+            <level4 name="其他水上运输辅助活动" value='5439'/>
+            </level3>
+       </level2>
+    <level2 name="航空运输业" value='55'>
+       <level3 name="航空客货运输" value='551'>
+            <level4 name="航空旅客运输" value='5511'/>
+            <level4 name="航空货物运输" value='5512'/>
+            </level3>
+       <level3 name="通用航空服务" value='552'>
+            <level4 name="通用航空服务" value='5520'/>
+            </level3>
+       <level3 name="航空运输辅助活动" value='553'>
+            <level4 name="机场" value='5531'/>
+            <level4 name="空中交通管理" value='5532'/>
+            <level4 name="其他航空运输辅助活动" value='5539'/>
+            </level3>
+       </level2>
+    <level2 name="管道运输业" value='56'>
+       <level3 name="管道运输业" value='560'>
+            <level4 name="管道运输业" value='5600'/>
+            </level3>
+       </level2>
+    <level2 name="装卸搬运和其他运输服务业" value='57'>
+       <level3 name="装卸搬运和其他运输服务业" value='571'>
+            <level4 name="装卸搬运和其他运输服务业" value='5710'/>
+            </level3>
+       <level3 name="运输代理服务" value='572'>
+            <level4 name="运输代理服务" value='5720'/>
+            </level3>
+       </level2>
+    <level2 name="仓储业" value='58'>
+       <level3 name="谷物、棉花等农产品仓储" value='581'>
+            <level4 name="谷物、棉花等农产品仓储" value='5810'/>
+            </level3>
+       <level3 name="其他仓储" value='589'>
+            <level4 name="其他仓储" value='5890'/>
+            </level3>
+       </level2>
+    <level2 name="邮政业" value='59'>
+       <level3 name="国家邮政" value='591'>
+            <level4 name="国家邮政" value='5910'/>
+            </level3>
+       <level3 name="其他寄递服务" value='599'>
+            <level4 name="其他寄递服务" value='5990'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="信息传输、计算机服务和软件业" value='G'>
+    <level2 name="电信和其他信息传输服务业" value='60'>
+       <level3 name="电信" value='601'>
+            <level4 name="固定电信服务" value='6011'/>
+            <level4 name="移动电信服务" value='6012'/>
+            <level4 name="其他电信服务" value='6019'/>
+            </level3>
+       <level3 name="互联网信息服务" value='602'>
+            <level4 name="互联网信息服务" value='6020'/>
+            </level3>
+       <level3 name="广播电视传输服务" value='603'>
+            <level4 name="有限广播电视传输服务" value='6031'/>
+            <level4 name="无限广播电视传输服务" value='6032'/>
+            </level3>
+       <level3 name="卫星传输服务" value='604'>
+            <level4 name="卫星传输服务" value='6040'/>
+            </level3>
+       </level2>
+    <level2 name="计算机服务业" value='61'>
+       <level3 name="计算机系统服务" value='611'>
+            <level4 name="计算机系统服务" value='6110'/>
+            </level3>
+       <level3 name="数据处理" value='612'>
+            <level4 name="数据处理" value='6120'/>
+            </level3>
+       <level3 name="计算机维修" value='613'>
+            <level4 name="计算机维修" value='6130'/>
+            </level3>
+       <level3 name="其他计算机服务" value='619'>
+            <level4 name="其他计算机服务" value='6190'/>
+            </level3>
+       </level2>
+    <level2 name="软件业" value='62'>
+       <level3 name="公共软件服务" value='621'>
+            <level4 name="基础软件服务" value='6211'/>
+            <level4 name="应用软件服务" value='6212'/>
+            </level3>
+       <level3 name="其他软件服务" value='629'>
+            <level4 name="其他软件服务" value='6290'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="批发和零售业" value='H'>
+    <level2 name="批发业" value='63'>
+       <level3 name="农畜产品批发" value='631'>
+            <level4 name="谷物、豆及薯类批发" value='6311'/>
+            <level4 name="种子、饲料批发" value='6312'/>
+            <level4 name="棉、麻批发" value='6313'/>
+            <level4 name="牲畜批发" value='6314'/>
+            <level4 name="其他农畜产品批发" value='6319'/>
+            </level3>
+       <level3 name="食品、饮料及烟草制品批发" value='632'>
+            <level4 name="米、面制品及食用油批发" value='6321'/>
+            <level4 name="糕点、糖果及糖批发" value='6322'/>
+            <level4 name="果品、蔬菜批发" value='6323'/>
+            <level4 name="肉、禽、蛋及水产品批发" value='6324'/>
+            <level4 name="盐及调味品批发" value='6325'/>
+            <level4 name="饮料及茶叶批发" value='6326'/>
+            <level4 name="烟草制品批发" value='6327'/>
+            <level4 name="其他食品批发" value='6329'/>
+            </level3>
+       <level3 name="纺织、服装及日用品批发" value='633'>
+            <level4 name="纺织品、针织品及原料批发" value='6331'/>
+            <level4 name="服装批发" value='6332'/>
+            <level4 name="鞋帽批发" value='6333'/>
+            <level4 name="厨房、卫生间用具及日用杂货批发" value='6334'/>
+            <level4 name="化妆品及卫生用品批发" value='6335'/>
+            <level4 name="其他日用品批发" value='6339'/>
+            </level3>
+       <level3 name="文化、体育用品及器材批发" value='634'>
+            <level4 name="文件用品批发" value='6341'/>
+            <level4 name="体育用品批发" value='6342'/>
+            <level4 name="图书批发" value='6343'/>
+            <level4 name="报刊批发" value='6344'/>
+            <level4 name="音像制品及电子出版物批发" value='6345'/>
+            <level4 name="首饰、工艺品及收藏品批发" value='6346'/>
+            <level4 name="其他文化用品批发" value='6349'/>
+            </level3>
+       <level3 name="医疗及医疗器材批发" value='635'>
+            <level4 name="西药批发" value='6351'/>
+            <level4 name="中药材及中成药批发" value='6352'/>
+            <level4 name="医药用品及器材批发" value='6353'/>
+            </level3>
+       <level3 name="矿产品、建材及化工产品批发" value='636'>
+            <level4 name="煤炭及制品批发" value='6361'/>
+            <level4 name="石油及制品批发" value='6362'/>
+            <level4 name="非金属矿及制品批发" value='6363'/>
+            <level4 name="金属及金属矿批发" value='6364'/>
+            <level4 name="建材批发" value='6365'/>
+            <level4 name="化肥批发" value='6366'/>
+            <level4 name="农药批发" value='6367'/>
+            <level4 name="农用薄膜批发" value='6368'/>
+            <level4 name="其他化工产品批发" value='6369'/>
+            </level3>
+       <level3 name="机械设备、五金交电及电子产品批发" value='637'>
+            <level4 name="农用机械批发" value='6371'/>
+            <level4 name="汽车、摩托车及零配件批发" value='6372'/>
+            <level4 name="五金、交电批发" value='6373'/>
+            <level4 name="家用电器批发" value='6374'/>
+            <level4 name="计算机、软件及辅助设备批发" value='6375'/>
+            <level4 name="通讯及广播电视设备批发" value='6376'/>
+            <level4 name="其他机械设备及电子产品批发" value='6379'/>
+            </level3>
+       <level3 name="贸易经纪与代理" value='638'>
+            <level4 name="贸易经纪与代理" value='6380'/>
+            </level3>
+       <level3 name="其他批发" value='639'>
+            <level4 name="再生物资回收与批发" value='6391'/>
+            <level4 name="其他未列明的批发" value='6399'/>
+            </level3>
+       </level2>
+    <level2 name="零售业" value='65'>
+       <level3 name="综合零售" value='651'>
+            <level4 name="百货零售" value='6511'/>
+            <level4 name="超级市场零售" value='6512'/>
+            <level4 name="其他综合零售" value='6519'/>
+            </level3>
+       <level3 name="食品、饮料及烟草制品专门零售" value='652'>
+            <level4 name="粮油零售" value='6521'/>
+            <level4 name="糕点、面包零售" value='6522'/>
+            <level4 name="果品、蔬菜零售" value='6523'/>
+            <level4 name="肉、禽、蛋及水产品零售" value='6524'/>
+            <level4 name="饮料及茶叶零售" value='6525'/>
+            <level4 name="烟草制品零售" value='6526'/>
+            <level4 name="其他食品零售" value='6529'/>
+            </level3>
+       <level3 name="纺织、服装及日用品专门零售" value='653'>
+            <level4 name="纺织品及针织品零售" value='6531'/>
+            <level4 name="服装零售" value='6532'/>
+            <level4 name="鞋帽零售" value='6533'/>
+            <level4 name="钟表、眼镜零售" value='6534'/>
+            <level4 name="化妆品及文生用品零售" value='6535'/>
+            <level4 name="其他日用品零售" value='6539'/>
+            </level3>
+       <level3 name="文化、体育用品及器材专门零售" value='654'>
+            <level4 name="文化用品零售" value='6541'/>
+            <level4 name="体育用品零售" value='6542'/>
+            <level4 name="图书零售" value='6543'/>
+            <level4 name="报刊零售" value='6544'/>
+            <level4 name="音像制品及电子出版物零售" value='6545'/>
+            <level4 name="珠宝首饰零售" value='6546'/>
+            <level4 name="工艺美术品及收藏品零售" value='6547'/>
+            <level4 name="照相器材零售" value='6548'/>
+            <level4 name="其他文化用品零售" value='6549'/>
+            </level3>
+       <level3 name="医药及医疗器械专门零售" value='655'>
+            <level4 name="药品零售" value='6551'/>
+            <level4 name="医疗用品及器材零售" value='6552'/>
+            </level3>
+       <level3 name="汽车、摩托车、燃料及零配件专门零售" value='656'>
+            <level4 name="汽车零售" value='6561'/>
+            <level4 name="汽车零配件零售" value='6562'/>
+            <level4 name="摩托车及零配件零售" value='6563'/>
+            <level4 name="机动车燃料零售" value='6564'/>
+            </level3>
+       <level3 name="家用电气及电子产品专门零售" value='657'>
+            <level4 name="家用电气零售" value='6571'/>
+            <level4 name="计算机、软件及辅助设备零售" value='6572'/>
+            <level4 name="通信设备零售" value='6573'/>
+            <level4 name="其他电子产品零售" value='6579'/>
+            </level3>
+       <level3 name="五金、家具及室内装修材料专门零售" value='658'>
+            <level4 name="五金零售" value='6581'/>
+            <level4 name="家具零售" value='6582'/>
+            <level4 name="涂料零售" value='6583'/>
+            <level4 name="其他室内装饰材料零售" value='6589'/>
+            </level3>
+       <level3 name="无店铺及其他零售" value='659'>
+            <level4 name="流动货摊零售" value='6591'/>
+            <level4 name="邮购及电子零售" value='6592'/>
+            <level4 name="生活用燃料零售" value='6593'/>
+            <level4 name="花卉零售" value='6594'/>
+            <level4 name="旧货零售" value='6595'/>
+            <level4 name="其他未列明的零售" value='6599'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="住宿和餐饮业" value='I'>
+    <level2 name="住宿业" value='66'>
+       <level3 name="旅游饭店" value='661'>
+            <level4 name="旅游饭店" value='6610'/>
+            </level3>
+       <level3 name="一般旅馆" value='662'>
+            <level4 name="一般旅馆" value='6620'/>
+            </level3>
+       <level3 name="其他住宿服务" value='669'>
+            <level4 name="其他住宿服务" value='6690'/>
+            </level3>
+       </level2>
+    <level2 name="餐饮业" value='67'>
+       <level3 name="正餐服务" value='671'>
+            <level4 name="正餐服务" value='6710'/>
+            </level3>
+       <level3 name="快餐服务" value='672'>
+            <level4 name="快餐服务" value='6720'/>
+            </level3>
+       <level3 name="饮料及冷饮服务" value='673'>
+            <level4 name="饮料及冷饮服务" value='6730'/>
+            </level3>
+       <level3 name="其他餐饮服务" value='679'>
+            <level4 name="其他餐饮服务" value='6790'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="金融业" value='J'>
+    <level2 name="银行业" value='68'>
+       <level3 name="中央银行" value='681'>
+            <level4 name="中央银行" value='6810'/>
+            </level3>
+       <level3 name="其他银行" value='689'>
+            <level4 name="其他银行" value='6890'/>
+            </level3>
+       </level2>
+    <level2 name="证券业" value='69'>
+       <level3 name="证券市场管理" value='691'>
+            <level4 name="证券市场管理" value='6910'/>
+            </level3>
+       <level3 name="证券经纪与交易" value='692'>
+            <level4 name="证券经纪与交易" value='6920'/>
+            </level3>
+       <level3 name="证券分析与咨询" value='694'>
+            <level4 name="证券分析与咨询" value='6940'/>
+            </level3>
+       </level2>
+    <level2 name="保险业" value='70'>
+       <level3 name="人寿保险" value='701'>
+            <level4 name="人寿保险" value='7010'/>
+            </level3>
+       <level3 name="非人寿保险" value='702'>
+            <level4 name="非人寿保险" value='7020'/>
+            </level3>
+       <level3 name="保险辅助服务" value='703'>
+            <level4 name="保险辅助服务" value='7030'/>
+            </level3>
+       </level2>
+    <level2 name="其他金融活动" value='71'>
+       <level3 name="金融信托与管理" value='711'>
+            <level4 name="金融信托与管理" value='7110'/>
+            </level3>
+       <level3 name="金融租赁" value='712'>
+            <level4 name="金融租赁" value='7120'/>
+            </level3>
+       <level3 name="财务公司" value='713'>
+            <level4 name="财务公司" value='7130'/>
+            </level3>
+       <level3 name="邮政储蓄" value='714'>
+            <level4 name="邮政储蓄" value='7140'/>
+            </level3>
+       <level3 name="典当" value='715'>
+            <level4 name="典当" value='7150'/>
+            </level3>
+       <level3 name="其他未列明的金融活动" value='719'>
+            <level4 name="其他未列明的金融活动" value='7190'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="房地产业" value='K'>
+    <level2 name="房地产业" value='72'>
+       <level3 name="房地产开发经营" value='721'>
+            <level4 name="房地产开发经营" value='7210'/>
+            </level3>
+       <level3 name="物业管理" value='722'>
+            <level4 name="物业管理" value='7220'/>
+            </level3>
+       <level3 name="房地产中介服务" value='723'>
+            <level4 name="房地产中介服务" value='7230'/>
+            </level3>
+       <level3 name="其他房地产活动" value='729'>
+            <level4 name="其他房地产活动" value='7290'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="租赁和商务服务业" value='L'>
+    <level2 name="租赁业" value='73'>
+       <level3 name="机械设备租赁" value='731'>
+            <level4 name="汽车租赁" value='7311'/>
+            <level4 name="农业机械租赁" value='7312'/>
+            <level4 name="建筑工程机械与设备租赁" value='7313'/>
+            <level4 name="计算机及通讯设备租赁" value='7314'/>
+            <level4 name="其他机械与设备租赁" value='7319'/>
+            </level3>
+       <level3 name="文化及日用品出租" value='732'>
+            <level4 name="图书及音像制品出租" value='7321'/>
+            <level4 name="其他文化及日用品出租" value='7329'/>
+            </level3>
+       </level2>
+    <level2 name="商务服务业" value='74'>
+       <level3 name="企业管理服务" value='741'>
+            <level4 name="企业管理机构" value='7411'/>
+            <level4 name="投机与资产管理" value='7412'/>
+            <level4 name="其他企业管理服务" value='7419'/>
+            </level3>
+       <level3 name="法律服务" value='742'>
+            <level4 name="律师及相关的法律服务" value='7421'/>
+            <level4 name="公证服务" value='7422'/>
+            <level4 name="其他法律服务" value='7429'/>
+            </level3>
+       <level3 name="咨询与调查" value='743'>
+            <level4 name="会计、审计及税务服务" value='7431'/>
+            <level4 name="市场调查" value='7432'/>
+            <level4 name="社会经济咨询" value='7433'/>
+            <level4 name="其他专业咨询" value='7439'/>
+            </level3>
+       <level3 name="广告业" value='744'>
+            <level4 name="广告业" value='7440'/>
+            </level3>
+       <level3 name="知识产权服务" value='745'>
+            <level4 name="知识产权服务" value='7450'/>
+            </level3>
+       <level3 name="职业中介服务" value='746'>
+            <level4 name="职业中介服务" value='7460'/>
+            </level3>
+       <level3 name="市场管理" value='747'>
+            <level4 name="市场管理" value='7470'/>
+            </level3>
+       <level3 name="旅行社" value='748'>
+            <level4 name="旅行社" value='7480'/>
+            </level3>
+       <level3 name="其他商务服务" value='749'>
+            <level4 name="会议及展览服务" value='7491'/>
+            <level4 name="包装服务" value='7492'/>
+            <level4 name="保安服务" value='7493'/>
+            <level4 name="办公服务" value='7494'/>
+            <level4 name="其他未列明的商务服务" value='7499'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="科研、技术服务和地质勘探业" value='M'>
+    <level2 name="研究与试验发展" value='75'>
+       <level3 name="自然科学研究与试验发展" value='751'>
+            <level4 name="自然科学研究与试验发展" value='7510'/>
+            </level3>
+       <level3 name="工程和技术研究与试验发展" value='752'>
+            <level4 name="工程和技术研究与试验发展" value='7520'/>
+            </level3>
+       <level3 name="农业科学研究与试验发展" value='753'>
+            <level4 name="农业科学研究与试验发展" value='7530'/>
+            </level3>
+       <level3 name="医学研究与试验发展" value='754'>
+            <level4 name="医学研究与试验发展" value='7540'/>
+            </level3>
+       <level3 name="社会人文科学研究与试验发展" value='755'>
+            <level4 name="社会人文科学研究与试验发展" value='7550'/>
+            </level3>
+       </level2>
+    <level2 name="专业技术服务业" value='76'>
+       <level3 name="气象服务" value='761'>
+            <level4 name="气象服务" value='7610'/>
+            </level3>
+       <level3 name="地震服务" value='762'>
+            <level4 name="地震服务" value='7620'/>
+            </level3>
+       <level3 name="海洋服务" value='763'>
+            <level4 name="海洋服务" value='7630'/>
+            </level3>
+       <level3 name="测绘服务" value='764'>
+            <level4 name="测绘服务" value='7640'/>
+            </level3>
+       <level3 name="技术检测" value='765'>
+            <level4 name="技术检测" value='7650'/>
+            </level3>
+       <level3 name="环境监测" value='766'>
+            <level4 name="环境监测" value='7660'/>
+            </level3>
+       <level3 name="工程技术与规划管理" value='767'>
+            <level4 name="工程管理服务" value='7671'/>
+            <level4 name="工程勘查设计" value='7672'/>
+            <level4 name="规划管理" value='7673'/>
+            </level3>
+       <level3 name="其他专用技术服务" value='769'>
+            <level4 name="其他专用技术服务" value='7690'/>
+            </level3>
+       </level2>
+    <level2 name="科技交流和推广服务业" value='77'>
+       <level3 name="技术推广服务" value='771'>
+            <level4 name="技术推广服务" value='7710'/>
+            </level3>
+       <level3 name="科技中介服务" value='772'>
+            <level4 name="科技中介服务" value='7720'/>
+            </level3>
+       <level3 name="其他科技服务" value='779'>
+            <level4 name="其他科技服务" value='7790'/>
+            </level3>
+       </level2>
+    <level2 name="地质勘查业" value='78'>
+       <level3 name="矿产地址勘查" value='781'>
+            <level4 name="能源矿产地质勘查" value='7811'/>
+            <level4 name="固体矿地质勘查" value='7812'/>
+            <level4 name="其他矿产地质勘查" value='7819'/>
+            </level3>
+       <level3 name="基础地质勘查" value='782'>
+            <level4 name="基础地质勘查" value='7820'/>
+            </level3>
+       <level3 name="地质勘查技术服务" value='783'>
+            <level4 name="地质勘查技术服务" value='7830'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="水利、环境和公共设施管理业" value='N'>
+    <level2 name="水利管理业" value='79'>
+       <level3 name="防洪管理" value='791'>
+            <level4 name="防洪管理" value='7910'/>
+            </level3>
+       <level3 name="水资源管理" value='792'>
+            <level4 name="水库管理" value='7921'/>
+            <level4 name="调水、引水管理" value='7922'/>
+            <level4 name="其他水利管理" value='7929'/>
+            </level3>
+       <level3 name="环境管理业" value='799'>
+            <level4 name="环境管理业" value='7990'/>
+            </level3>
+       </level2>
+    <level2 name="自然保护业" value='80'>
+       <level3 name="自然保护" value='801'>
+            <level4 name="自然保护区管理" value='8011'/>
+            <level4 name="野生动植保护" value='8012'/>
+            <level4 name="其他自然保护" value='8019'/>
+            </level3>
+       <level3 name="环境治理" value='802'>
+            <level4 name="城市市容管理" value='8021'/>
+            <level4 name="城市环境卫生管理" value='8022'/>
+            <level4 name="水污染治理" value='8023'/>
+            <level4 name="危险废物治理" value='8024'/>
+            <level4 name="其他环境治理" value='8029'/>
+            </level3>
+       </level2>
+    <level2 name="公共设施管理业" value='81'>
+       <level3 name="市政公共设施管理" value='811'>
+            <level4 name="市政公共设施管理" value='8110'/>
+            </level3>
+       <level3 name="城市绿化管理" value='812'>
+            <level4 name="城市绿化管理" value='8120'/>
+            </level3>
+       <level3 name="游览景区管理" value='813'>
+            <level4 name="风景名胜区管理" value='8131'/>
+            <level4 name="公园管理" value='8132'/>
+            <level4 name="其他旅游景区管理" value='8139'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="居民服务和其他服务业" value='O'>
+    <level2 name="居民服务业" value='82'>
+       <level3 name="家庭服务" value='821'>
+            <level4 name="家庭服务" value='8210'/>
+            </level3>
+       <level3 name="托儿所" value='822'>
+            <level4 name="托儿所" value='8220'/>
+            </level3>
+       <level3 name="洗染服务" value='823'>
+            <level4 name="洗染服务" value='8230'/>
+            </level3>
+       <level3 name="理发及美容保健服务" value='824'>
+            <level4 name="理发及美容保健服务" value='8240'/>
+            </level3>
+       <level3 name="洗浴服务" value='825'>
+            <level4 name="洗浴服务" value='8250'/>
+            </level3>
+       <level3 name="婚姻服务" value='826'>
+            <level4 name="婚姻服务" value='8260'/>
+            </level3>
+       <level3 name="殡葬服务" value='827'>
+            <level4 name="殡葬服务" value='8270'/>
+            </level3>
+       <level3 name="摄影扩印服务" value='828'>
+            <level4 name="摄影扩印服务" value='8280'/>
+            </level3>
+       <level3 name="其他居民服务" value='829'>
+            <level4 name="其他居民服务" value='8290'/>
+            </level3>
+       </level2>
+    <level2 name="其他服务业" value='83'>
+       <level3 name="修理与维护" value='831'>
+            <level4 name="汽车、摩托车维护与保养" value='8311'/>
+            <level4 name="办公设备维修" value='8312'/>
+            <level4 name="家用电器修理" value='8313'/>
+            <level4 name="其他日用品维修" value='8319'/>
+            </level3>
+       <level3 name="清洁服务" value='832'>
+            <level4 name="建筑物清洁服务" value='8321'/>
+            <level4 name="其他清洁服务" value='8329'/>
+            </level3>
+       <level3 name="其他未列明的服务" value='839'>
+            <level4 name="其他未列明的服务" value='8390'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="教育" value='P'>
+    <level2 name="教育" value='84'>
+       <level3 name="学前教育" value='841'>
+            <level4 name="学前教育" value='8410'/>
+            </level3>
+       <level3 name="初等教育" value='842'>
+            <level4 name="初等教育" value='8420'/>
+            </level3>
+       <level3 name="中等教育" value='843'>
+            <level4 name="初中教育" value='8431'/>
+            <level4 name="高中教育" value='8432'/>
+            <level4 name="中等专业教育" value='8433'/>
+            <level4 name="职业中学教育" value='8434'/>
+            <level4 name="技工学校教育" value='8435'/>
+            <level4 name="其他中等教育" value='8439'/>
+            </level3>
+       <level3 name="高等教育" value='844'>
+            <level4 name="普通高等教育" value='8441'/>
+            <level4 name="成人高等教育" value='8442'/>
+            </level3>
+       <level3 name="其他教育" value='849'>
+            <level4 name="职业技能培训" value='8491'/>
+            <level4 name="特殊教育" value='8492'/>
+            <level4 name="其他未列明的教育" value='8499'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="卫生、社会保障和社会福利业" value='Q'>
+    <level2 name="卫生" value='85'>
+       <level3 name="医院" value='851'>
+            <level4 name="综合医院" value='8511'/>
+            <level4 name="中医医院" value='8512'/>
+            <level4 name="中西医结合医院" value='8513'/>
+            <level4 name="民族医院" value='8514'/>
+            <level4 name="专科医院" value='8515'/>
+            <level4 name="疗养院" value='8516'/>
+            </level3>
+       <level3 name="卫生院及社区医疗活动" value='852'>
+            <level4 name="卫生院及社区医疗活动" value='8520'/>
+            </level3>
+       <level3 name="门诊部医疗活动" value='853'>
+            <level4 name="门诊部医疗活动" value='8530'/>
+            </level3>
+       <level3 name="计划生育技术服务活动" value='854'>
+            <level4 name="计划生育技术服务活动" value='8540'/>
+            </level3>
+       <level3 name="妇幼保健活动" value='855'>
+            <level4 name="妇幼保健活动" value='8550'/>
+            </level3>
+       <level3 name="专科疾病防治活动" value='856'>
+            <level4 name="专科疾病防治活动" value='8560'/>
+            </level3>
+       <level3 name="疾病防治控制与防疫活动" value='857'>
+            <level4 name="疾病防治控制与防疫活动" value='8570'/>
+            </level3>
+       <level3 name="其他卫生活动" value='859'>
+            <level4 name="其他卫生活动" value='8590'/>
+            </level3>
+       </level2>
+    <level2 name="社会保障业" value='86'>
+       <level3 name="社会保障业" value='860'>
+            <level4 name="社会保障业" value='8600'/>
+            </level3>
+       </level2>
+    <level2 name="社会福利业" value='87'>
+       <level3 name="提供住宿的社会福利" value='871'>
+            <level4 name="干部休养所" value='8711'/>
+            <level4 name="收养收容服务" value='8712'/>
+            </level3>
+       <level3 name="不提供住宿的社会福利" value='872'>
+            <level4 name="不提供住宿的社会福利" value='8720'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="文化、体育和娱乐业" value='R'>
+    <level2 name="新闻出版业" value='88'>
+       <level3 name="新闻业" value='881'>
+            <level4 name="新闻业" value='8810'/>
+            </level3>
+       <level3 name="出版业" value='882'>
+            <level4 name="图书出版" value='8821'/>
+            <level4 name="报纸出版" value='8822'/>
+            <level4 name="期刊出版" value='8823'/>
+            <level4 name="音像制品出版" value='8824'/>
+            <level4 name="电子出版物出版" value='8825'/>
+            <level4 name="其他出版" value='8829'/>
+            </level3>
+       </level2>
+    <level2 name="广播、电视、电影和音像业" value='89'>
+       <level3 name="广播" value='891'>
+            <level4 name="广播" value='8910'/>
+            </level3>
+       <level3 name="电视" value='892'>
+            <level4 name="电视" value='8920'/>
+            </level3>
+       <level3 name="电影" value='893'>
+            <level4 name="电影制作与发行" value='8931'/>
+            <level4 name="电影放映" value='8932'/>
+            </level3>
+       <level3 name="音像制作" value='894'>
+            <level4 name="音像制作" value='8940'/>
+            </level3>
+       </level2>
+    <level2 name="文化艺术业" value='90'>
+       <level3 name="文艺创作与表演" value='901'>
+            <level4 name="文艺创作与表演" value='9010'/>
+            </level3>
+       <level3 name="艺术表演场馆" value='902'>
+            <level4 name="艺术表演场馆" value='9020'/>
+            </level3>
+       <level3 name="图书馆与档案馆" value='903'>
+            <level4 name="图书馆" value='9031'/>
+            <level4 name="档案馆" value='9032'/>
+            </level3>
+       <level3 name="文物及文化保护" value='904'>
+            <level4 name="文物及文化保护" value='9040'/>
+            </level3>
+       <level3 name="博物馆" value='905'>
+            <level4 name="博物馆" value='9050'/>
+            </level3>
+       <level3 name="烈士陵园、纪念馆" value='906'>
+            <level4 name="烈士陵园、纪念馆" value='9060'/>
+            </level3>
+       <level3 name="群众文化活动" value='907'>
+            <level4 name="群众文化活动" value='9070'/>
+            </level3>
+       <level3 name="文化艺术经纪代理" value='908'>
+            <level4 name="文化艺术经纪代理" value='9080'/>
+            </level3>
+       <level3 name="其他文化艺术" value='909'>
+            <level4 name="其他文化艺术" value='9090'/>
+            </level3>
+       </level2>
+    <level2 name="体育" value='91'>
+       <level3 name="体育活动" value='911'>
+            <level4 name="体育活动" value='9110'/>
+            </level3>
+       <level3 name="体育场馆" value='912'>
+            <level4 name="体育场馆" value='9120'/>
+            </level3>
+       <level3 name="其他体育" value='919'>
+            <level4 name="其他体育" value='9190'/>
+            </level3>
+       </level2>
+    <level2 name="娱乐业" value='92'>
+       <level3 name="室内娱乐活动" value='921'>
+            <level4 name="室内娱乐活动" value='9210'/>
+            </level3>
+       <level3 name="游乐园" value='922'>
+            <level4 name="游乐园" value='9220'/>
+            </level3>
+       <level3 name="休闲健身娱乐活动" value='923'>
+            <level4 name="休闲健身娱乐活动" value='9230'/>
+            </level3>
+       <level3 name="其他娱乐活动" value='929'>
+            <level4 name="其他娱乐活动" value='9290'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="公共管理和社会组织" value='S'>
+    <level2 name="中国共产党机关" value='93'>
+       <level3 name="中国共产党机关" value='930'>
+            <level4 name="中国共产党机关" value='9300'/>
+            </level3>
+       </level2>
+    <level2 name="国家机构" value='94'>
+       <level3 name="国家行政机构" value='942'>
+            <level4 name="综合事务管理机构" value='9421'/>
+            <level4 name="对外事务管理机构" value='9422'/>
+            <level4 name="公共安全管理机构" value='9423'/>
+            <level4 name="社会事务管理机构" value='9424'/>
+            <level4 name="经济事务管理机构" value='9425'/>
+            <level4 name="政府事务管理机构" value='9426'/>
+            <level4 name="行政监督检查机构" value='9427'/>
+            </level3>
+       <level3 name="人民法院和人民检察院" value='943'>
+            <level4 name="人民法院" value='9431'/>
+            <level4 name="人民检察院" value='9432'/>
+            </level3>
+       <level3 name="其他国家机构" value='949'>
+            <level4 name="其他国家机构" value='9490'/>
+            </level3>
+       </level2>
+    <level2 name="人民政协和民主党派" value='95'>
+       <level3 name="人民政协" value='951'>
+            <level4 name="人民政协" value='9510'/>
+            </level3>
+       <level3 name="民主党派" value='952'>
+            <level4 name="民主党派" value='9520'/>
+            </level3>
+       </level2>
+    <level2 name="群众团体、社会团体和宗教组织" value='96'>
+       <level3 name="群众团体" value='961'>
+            <level4 name="工会" value='9611'/>
+            <level4 name="妇联" value='9612'/>
+            <level4 name="共青团" value='9613'/>
+            <level4 name="其他群众团体" value='9619'/>
+            </level3>
+       <level3 name="社会团体" value='962'>
+            <level4 name="专业性团体" value='9621'/>
+            <level4 name="行业性团体" value='9622'/>
+            <level4 name="其他社会团体" value='9629'/>
+            </level3>
+       <level3 name="宗教组织" value='963'>
+            <level4 name="宗教组织" value='9630'/>
+            </level3>
+       </level2>
+    <level2 name="基层群众自治组织" value='97'>
+       <level3 name="社区自治组织" value='971'>
+            <level4 name="社区自治组织" value='9710'/>
+            </level3>
+       <level3 name="村民自治组织" value='972'>
+            <level4 name="村民自治组织" value='9720'/>
+            </level3>
+       </level2>
+    </level1>
+  <level1 name="国际组织" value='T'>
+    <level2 name="国际组织" value='98'>
+       <level3 name="国际组织" value='980'>
+            <level4 name="国际组织" value='9800'/>
+            </level3>
+       </level2>
+    </level1>
+  </industry>

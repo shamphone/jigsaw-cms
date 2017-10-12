@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="cssForm" type="com.fulong.site.form.CSSForm"/>
+    <form-bean name="cssSourceForm" type="com.fulong.site.form.CSSForm"/>
+    <form-bean name="cssRuleForm" type="com.fulong.site.form.CSSRuleForm"/>
+    <form-bean name="selectorForm" type="com.fulong.site.form.CSSRuleForm"/>
+    <form-bean name="createChannelForm" type="com.fulong.site.form.ChannelForm"/>
+  </form-beans>
+  <global-forwards>
+    <forward contextRelative="false" name="login" path="/../logon.jsp" redirect="true"/>
+    <forward name="error" path="/../common/attention.jsp"/>
+    <forward name="forbidden" path="/../common/forbidden.jsp"/>
+  </global-forwards>
+  <action-mappings>
+    <action path="/index" scope="request" type="com.fulong.site.css.IndexAction">
+      <forward name="success" path="/index.jsp"/>
+    </action>
+    <action path="/main" scope="request" type="com.fulong.site.css.CSSListAction">
+      <forward name="success" path="/main.jsp"/>
+    </action>
+    <action path="/tree" type="com.fulong.site.css.CSSListAction">
+      <forward name="success" path="/tree.jsp"/>
+    </action>
+    <action path="/css" scope="request" type="com.fulong.site.css.CSSAction">
+      <forward name="success" path="/css.jsp"/>
+    </action>
+    <action name="cssForm" path="/CSSSource" scope="request" type="com.fulong.site.css.CSSSourceAction">
+      <forward name="success" path="/CSSSource.jsp"/>
+    </action>
+    <action name="cssSourceForm" path="/updateCSS" scope="request" type="com.fulong.site.css.UpdateCSSAction" validate="true">
+      <forward name="success" path="/css.do?id={0}" redirect="true"/>
+    </action>
+    <action name="cssRuleForm" path="/createRule" scope="request" type="com.fulong.site.css.CreateRuleAction">
+      <forward name="success" path="/addRule.jsp"/>
+    </action>
+    <action name="selectorForm" path="/saveRule" scope="request" validate="true" type="com.fulong.site.css.SaveRuleAction">
+      <forward name="success" path="/editRule.do?css={0}&amp;selector={1}" redirect="true"/>
+    </action>
+    <action name="cssRuleForm" path="/editRule" scope="request" type="com.fulong.site.css.EditRuleAction">
+      <forward name="success" path="/rule.jsp"/>
+    </action>
+    <action name="cssRuleForm" path="/updateRule" scope="request" validate="true" type="com.fulong.site.css.UpdateRuleAction">
+      <forward name="success" path="/css.do?id={0}" redirect="true"/>
+    </action>
+    <action path="/deleteRule" scope="request" type="com.fulong.site.css.DeleteRuleAction">
+      <forward name="success" path="/css.do?id={0}" redirect="true"/>
+    </action>
+    <action path="/preview" scope="request" type="com.fulong.site.css.PreviewAction">
+      <forward name="success" path="/preview.jsp"/>
+    </action>
+    <!-- 窗口版本-->
+    <action path="/indexDlg" scope="request" type="com.fulong.site.css.IndexAction">
+      <forward name="success" path="/indexDlg.jsp"/>
+    </action>
+    <action path="/deleteCSSDlg" scope="request" type="com.fulong.site.css.DeleteCSSAction">
+      <forward name="success" path="/indexDlg.do" redirect="true"/>
+    </action>
+    <action name="cssForm" path="/createCSSDlg" scope="request" type="com.fulong.site.css.CreateCSSAction">
+      <forward name="success" path="/addCSSDlg.jsp"/>
+    </action>
+    <action name="cssForm" path="/saveCSSDlg" scope="request" validate="true" type="com.fulong.site.css.SaveCSSAction">
+    </action>
+
+    <action path="/cssDlg" scope="request" type="com.fulong.site.css.CSSAction">
+      <forward name="success" path="/cssDlg.jsp"/>
+    </action>
+    <action name="cssRuleForm" path="/createRuleDlg" scope="request" type="com.fulong.site.css.CreateRuleAction">
+      <forward name="success" path="/addRuleDlg.jsp"/>
+    </action>
+    <action name="selectorForm" path="/saveRuleDlg" scope="request" validate="true" type="com.fulong.site.css.SaveRuleAction">
+      <forward name="success" path="/success.jsp?css={0}&amp;selector={1}" redirect="true"/>
+    </action>
+    <action name="cssRuleForm" path="/editRuleDlg" scope="request" type="com.fulong.site.css.EditRuleAction">
+      <forward name="success" path="/ruleDlg.jsp"/>
+    </action>
+    <action name="cssRuleForm" path="/updateRuleDlg" scope="request" validate="true" type="com.fulong.site.css.UpdateRuleAction">
+      <forward name="success" path="/success.jsp?css={0}&amp;selector={1}" redirect="true"/>
+    </action>
+    <action path="/deleteRuleDlg" scope="request" type="com.fulong.site.css.DeleteRuleAction">
+      <forward name="success" path="/cssDlg.do?id={0}" redirect="true"/>
+    </action>
+
+    <!-- 简化版本-->
+    <action name="cssForm" path="/createCSS" scope="request" type="com.fulong.site.css.CreateCSSAction">
+      <forward name="success" path="/addCSS.jsp"/>
+    </action>
+    <action name="cssForm" path="/saveCSS" scope="request" validate="true" type="com.fulong.site.css.SaveCSSAction">
+      <forward name="success" path="/createCssSuccess.jsp"/>
+    </action>
+    <action name="cssForm" path="/editCSS" scope="request" type="com.fulong.site.css.EditCSSAction">
+      <forward name="success" path="/editCSS.jsp"/>
+    </action>
+    <action name="cssForm" path="/upLoadCSS" scope="request" type="com.fulong.site.css.UploadCSSAction">
+      <forward name="success" path="/editCSS.do?path={0}" redirect="true"/>
+    </action>
+    <action name="cssForm" path="/deleteCSS" scope="request" type="com.fulong.site.css.DeleteCSSAction">
+      <forward name="success" path="/deleteCssSuccess.jsp"/>
+    </action>
+    <action path="/create" scope="request" type="com.fulong.site.css.CreateAction">
+      <forward name="success" path="/create.jsp"/>
+    </action>
+  </action-mappings>
+  <message-resources parameter="com.fulong.site.css.Resources" key="css"/>
+  <message-resources parameter="com.fulong.site.Common" null="false"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/site/css-validation.xml,/WEB-INF/site/validation.xml"/>
+  </plug-in>
+</struts-config>

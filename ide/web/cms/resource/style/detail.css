@@ -1,0 +1,17 @@
+body {margin: 0px; }
+#viewer {width: 100%; height: 100%; overflow-y: scroll;}
+
+table {width:100%; table-layout:fixed; font-size:9pt;}
+tr {height:20px;}
+
+thead tr {position:relative; top:expression(offsetParent.scrollTop); }
+thead td {background-color:#EBEADB; border:none; padding-left:10px; border-bottom:2px solid #CBC7B8;}
+.lengthColHead {padding-left:0px; padding-right:20px; text-align:right;}
+
+tbody td {padding-left:6px;overflow: hidden; white-space:nowrap; text-overflow:ellipsis;}
+.lengthCol {padding-left:0px; padding-right:6px; text-align:right;}
+
+.unselected {color:#000000;}
+.selected {color:#ffffff; background-color:#316AC5;}
+
+

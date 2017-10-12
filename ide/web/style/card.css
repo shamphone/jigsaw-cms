@@ -1,0 +1,29 @@
+/* CSS Document */
+body,td,a{font-size:12px;margin:0px; font-family:Tahoma, Arial, 宋体;}
+}
+.ctitle{line-height:18px;padding-left:20px; }
+.fontblue14px{
+	font-size:14px;
+	color:#000066;
+	font-weight:bold;
+	font-family:Tahoma, "宋体";
+	padding-left:25px;
+}
+
+a:link { font-size:12px;color:#000;text-decoration:none;}
+a:visited {font-size:12px;color:#000;text-decoration:none;}
+a:hover { font-size:12px;color:#000;text-decoration:underline;}
+input,select {font-size:12px;}
+form {margin:0px;}
+
+.enb {font-size:11px;font-weight:bold;}
+.en {font-size:11px;}
+#intro{line-height:20px;padding-left:10px;padding-right:10px;padding-bottom:15px}
+.mainArea{padding:0 0 10px 0}
+.ptitle{font-weight:bold;}
+#head2{background-image:url(../images/mp_02.gif);padding-left:20px;}
+#head3{background-image:url(../images/mp_04.gif)}
+#left1{background-image:url(../images/mp_06.gif)}
+#bottom1{background-image:url(../images/mp_19.gif)}
+#cardHeader{background-image:url(../images/mp_12.gif)}
+#cardBottom{background-image:url(../images/mp_21.gif)}

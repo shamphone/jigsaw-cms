@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<config>
+<Properties>
+<item id="topText" property="innerHTML" text="流程设计器 预览版" />
+
+<item id="treeText" property="innerHTML" text="流程导航视图" />
+<item id="loadText" property="innerHTML" text="从'flows/'目录下导入：" />
+<item id="btnNewFlow" property="title" text="创建新流程" />
+<item id="btnEditFlow" property="title" text="修改流程" />
+<item id="btnSaveFlow" property="title" text="导出流程" />
+<item id="btnAbout" property="title" text="关于" />
+<item id="btnLoadFlow" property="title" text="导入流程" />
+</Properties>
+<Selects>
+<select id="flowList">
+<option value="" text="请选择..." />
+<option value="software_zh.xml" text="软件开发一般流程(ZH)" />
+<option value="software_en.xml" text="软件开发一般流程(EN)" />
+<option value="fly.xml" text="网上机票预定流程(ZH)" />
+</select>
+</Selects>
+</config>

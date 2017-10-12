@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+<form-validation>
+  <formset>
+    <form name="processForm">
+      <field property="name" depends="required">
+        <arg0 key="process.name"/>
+      </field>
+      <field property="ID" depends="required">
+        <arg0 key="process.ID"/>
+      </field>
+    </form>
+    <form name="normalActivityForm">
+      <field property="name" depends="required">
+        <arg0 key="activity.name"/>
+      </field>
+    </form>
+    <form name="routeActivityForm">
+      <field property="name" depends="required">
+        <arg0 key="activity.name"/>
+      </field>
+    </form>
+    <form name="taskActivityForm">
+      <field property="name" depends="required">
+        <arg0 key="activity.name"/>
+      </field>
+    </form>
+    <form name="transitionForm">
+      <field property="name" depends="required">
+        <arg0 key="transition.name"/>
+      </field>
+    </form>
+  </formset>
+</form-validation>

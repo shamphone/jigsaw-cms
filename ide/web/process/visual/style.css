@@ -1,0 +1,54 @@
+html,body {
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+body,table,td,fieldset {
+	font-size: 13px;
+}
+
+v\: * {
+	behavior: url(#default#VML);
+	display: inline-block;
+}
+
+
+#VMLEditor {
+	top: 0px;
+	left:0px;
+	width: 6000px;
+	height: 5000px; 
+	background-image : url(inc/images/grid.gif);
+	background-attachment: scroll£»;
+	background-image: url(inc/images/grid.gif);
+}
+
+button {
+	height: 24px;
+	width: 80px;
+	font-size: 12px;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+#CodeEditor{
+	width:expression(document.body.clientWidth - 6);
+	height:expression(document.body.clientHeight - 6); 
+	top:0px;
+	left:0px;
+	scroll:yes;
+	position:absolute;
+	}
+
+v\:TextBox {
+	text-align: center;
+	color: black;
+	font-size: 12px;
+	font-family: ËÎÌå;
+	vertical-align: middle;
+	z-index:20£»
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}

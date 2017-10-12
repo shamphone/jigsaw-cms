@@ -1,0 +1,10 @@
+<attach for="element" event="onmouseover" handler="hilight" />
+<attach for="element" event="onmouseout" handler="restore" />
+<script type="text/javascript">
+    function hilight(){
+        this.className="DLGButton DLGButton_On_Over";
+    }
+    function restore(){
+        this.className="DLGButton";
+    }
+</script>

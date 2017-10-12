@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+  <bean id="siteFactory" class="com.fulong.longcon.site.impl.SiteFactoryImpl" init-method="init">
+    <!-- 预留域名-->
+    <property name="reservedDomains">
+      <value>mail,null,member,passport,cms,root,site</value>
+    </property>
+    <!-- 最大站点数，加密，不要修改 -->
+    <property name="encMaxSiteNum">
+      <value>FeZlcewlDFw=</value>
+    </property>
+    <property name="cacheFactory">
+      <ref bean="cacheFactory"/>
+    </property>
+    <property name="dataSource">
+      <ref bean="datasource"/>
+    </property>
+    <property name="dao">
+      <value>oracle</value>
+    </property>
+    <property name="repository">
+      <ref bean="repository"/>
+    </property>
+    <property name="passport">
+      <ref bean="passport"/>
+    </property>
+    <property name="unLockTime">
+      <value>0</value>
+    </property>
+    <property name="defaultDomain">
+      <value>.lixf.cn</value>
+    </property>        
+    <property name="accessCountRep">
+      <ref bean="acccessCounterRepository"/>
+    </property>
+    <property name="directory" value="/sites"/>
+	<property name="resolutions">
+		<list>
+			<value>default</value>
+			<value>128*128</value>
+			<value>128*160</value>
+			<value>176*208</value>
+			<value>176*220</value>
+			<value>208×320</value>
+			<value>240*320</value>
+			<value>480*640</value>
+		</list>
+	</property>
+	<property name="templateDirectory" value="/site/basic/init" />    
+    <property name="jspHeaderFile" value="/site/basic/templateHeader.jsp"/>    
+    <property name="jspWordHeaderFile" value="/site/basic/templateWordHeader.jsp"/>    
+    <property name="jspExcelHeaderFile" value="/site/basic/templateExcelHeader.jsp"/>    
+    <property name="jspPdfHeaderFile" value="/site/basic/templatePdfHeader.jsp"/>    
+    <property name="channelTypes">
+      <list>
+        <bean  class="com.fulong.longcon.site.type.IndexChannelType">
+          <property name="name" value="index"/>
+          <property name="displayName" value="栏目页"/>
+          <property name="template" value="/site/basic/init/index.jsp"/>
+        </bean>
+        <bean  class="com.fulong.longcon.site.type.ContentChannelType">
+          <property name="name" value="content"/>
+          <property name="displayName" value="内容展示页"/>
+          <property name="template" value="/site/basic/init/index.jsp"/>          
+        </bean>
+        <bean  class="com.fulong.longcon.site.type.WordChannelType">
+          <property name="name" value="word"/>
+          <property name="displayName" value="word页"/>
+          <property name="template" value="/site/basic/word.jsp"/>
+        </bean>
+        <bean  class="com.fulong.longcon.site.type.ClipChannelType">
+          <property name="name" value="clip"/>
+          <property name="displayName" value="页面片断"/>
+          <property name="template" value="/site/basic/templateHeader.jsp"/>          
+        </bean>
+        <bean  class="com.fulong.longcon.site.type.JSChannelType">
+          <property name="name" value="script"/>
+          <property name="displayName" value="脚本文件"/>
+          <property name="template" value="/site/basic/init/script/script.js"/>          
+        </bean>
+        <bean  class="com.fulong.longcon.site.type.CSSChannelType">
+          <property name="name" value="style"/>
+          <property name="displayName" value="样式文件"/>
+          <property name="template" value="/site/basic/init/style/style.css"/>          
+        </bean>
+        <bean  class="com.fulong.longcon.site.type.RSSChannelType">
+          <property name="name" value="rss"/>
+          <property name="displayName" value="rss页"/>
+          <property name="template" value="/site/basic/style/style.css"/>          
+        </bean>
+        <bean  class="com.fulong.longcon.site.type.ExcelChannelType">
+          <property name="name" value="excel"/>
+          <property name="displayName" value="excel页"/>
+          <property name="template" value="/site/basic/excel.jsp"/>
+        </bean>
+        <!-- <bean  class="com.fulong.longcon.site.type.PdfChannelType">
+          <property name="name" value="pdf"/>
+          <property name="displayName" value="pdf页"/>
+          <property name="template" value="/site/basic/pdf.jsp"/>
+        </bean>-->
+      </list>
+    </property>
+  </bean>
+</beans>

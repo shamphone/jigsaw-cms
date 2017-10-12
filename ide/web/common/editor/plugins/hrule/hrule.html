@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title>Horizontal Rule</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="noindex, nofollow" name="robots">
+    <script language="javascript" type="">
+
+      var FCKLang = window.parent.FCKLang ;
+
+      var dialog    = window.parent ;
+      var oEditor   = dialog.InnerDialogLoaded() ;
+      var FCK     = oEditor.FCK ;
+
+      window.onload = function()
+      {
+        oEditor.FCKLanguageManager.TranslatePage(document) ;
+        dialog.SetAutoSize( true ) ;
+        dialog.SetOkButton( true ) ;
+      };
+      //#### The OK button was hit.
+      function Ok()
+      {
+       var oHr = FCK.EditorDocument.createElement("Hr");
+       oHr.color = document.getElementById('hrule_Color').value;
+       oHr.size = document.getElementById('hrule_Size').value;
+       oHr.width = document.getElementById('hrule_Width').value;
+       oHr.align = document.getElementById('hrule_Align').value;
+        FCK.InsertElement(oHr);
+        return true;
+      }
+
+function SetColor(inputId, color){
+	document.getElementById(inputId).value = color + '' ;
+}
+
+function SelectHrColor(color){
+	SetColor('hrule_Color', color);
+}
+
+function SelectColor(){
+	oEditor.FCKDialog.OpenDialog('FCKDialog_Color',"", 'dialog/fck_colorselector.html', 400, 330, SelectHrColor, window);
+        return;
+}
+</script>
+<body scroll="no" style="OVERFLOW: hidden">
+ <table cellSpacing="0" cellPadding="5" border="0">
+ 	<tr>
+        <td noWrap><span fckLang="DlgHruleAlign">Align</span>:</td>
+        <td>
+          <select id="hrule_Align" style="WIDTH: 70">
+            <option fcklang="DlgHruleCenter" value="center">center</option>
+            <option fcklang="DlgHruleLeft" value="left" selected="selected">left</option>
+            <option fcklang="DlgHruleRight" value="right">right</option>
+          </Select>
+        </td>
+ 	</tr>
+        <tr>
+           <td noWrap><span fckLang="DlgHruleSize">Size</span>:</td>
+           <td>
+           <input id="hrule_Size" size="10" value="1">
+           </td>
+           <td noWrap><span fckLang="DlgHruleWidth">Width</span>:
+           <input id="hrule_Width" size="10" value="900"></td>
+        </tr>
+        <tr>
+          <td>
+          <span fcklang="DlgHruleColor">Color:</span>
+          </td>
+          <td> <input id="hrule_Color" type="text" size="10" value="#000000"> </td>
+          <td>
+          <input id="btnSelColor" onclick="SelectColor()" type="button" value="Select..." fcklang="DlgHruleBtnSelect">
+          </td>
+        </tr>
+ </table>
+</body>
+</html>

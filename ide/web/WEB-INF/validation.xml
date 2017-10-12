@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+<form-validation>
+  <global>
+    <constant>
+      <constant-name>date</constant-name>
+      <constant-value>^((((1[6-9]|[2-9]\d)\d{2})-(0?[13578]|1[02])-(0?[1-9]|[12]\d|3[01]))|(((1[6-9]|[2-9]\d)\d{2})-(0?[13456789]|1[012])-(0?[1-9]|[12]\d|30))|(((1[6-9]|[2-9]\d)\d{2})-0?2-(0?[1-9]|1\d|2[0-8]))|(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))-0?2-29-))$</constant-value>
+    </constant>
+    <constant>
+      <constant-name>validstring</constant-name>
+      <constant-value>(?!^[0-9]*$)(?!^[a-zA-Z]*$)^([a-zA-Z0-9]{6,16})$</constant-value>
+    </constant>
+    <constant>
+      <constant-name>username</constant-name>
+      <constant-value>^([a-zA-Z0-9]{3,16})$</constant-value>
+    </constant>
+    <constant>
+      <constant-name>password</constant-name>
+      <constant-value>^([a-zA-Z0-9]{3,16})$</constant-value>
+    </constant>
+  </global>
+  <formset>
+    <form name="registerForm">
+      <field property="username" depends="required,maxlength,minlength">
+        <arg0 key="username"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>16</var-value>
+        </var>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>6</var-value>
+        </var>
+      </field>
+      <field property="password" depends="required,maxlength,minlength">
+        <arg0 key="password"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>16</var-value>
+        </var>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>6</var-value>
+        </var>
+      </field>
+      <field property="commonname" depends="required,maxlength">
+        <arg0 key="registerForm.commonname"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="email" depends="email,maxlength,required">
+        <arg0 key="email"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+      <field property="enterpriseName" depends="required,maxlength">
+        <arg0 key="registerForm.enterpriseName"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+      <field property="description" depends="required,maxlength">
+        <arg0 key="registerForm.description"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>600</var-value>
+        </var>
+      </field>
+       <field property="name" depends="required">
+        <arg0 key="registerForm.name"/>
+        <msg name="required" key="errors.required" resource="true"/>
+      </field>
+       <field property="userattribute(phone)" depends="required,long">
+        <arg0 key="registerForm.userattribute(phone)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <msg name="long" key="errors.integer" resource="true"/>
+      </field>
+       <field property="userattribute(fax)" depends="required,long">
+        <arg0 key="registerForm.userattribute(fax)"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <msg name="long" key="errors.integer" resource="true"/>
+      </field>
+    </form>
+    <form name="registerSiteForm">
+      <field property="username" depends="required,maxlength,minlength,mask">
+        <arg0 key="registerSiteForm.username"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>16</var-value>
+        </var>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>3</var-value>
+        </var>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${username}</var-value>
+        </var>
+      </field>
+      <field property="password" depends="required,maxlength,minlength">
+        <arg0 key="registerSiteForm.password"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>16</var-value>
+        </var>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>3</var-value>
+        </var>
+      </field>
+      <field property="commonname" depends="required,maxlength">
+        <arg0 key="registerSiteForm.commonname"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+      <field property="email" depends="required,email,maxlength">
+        <arg0 key="registerSiteForm.email"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>30</var-value>
+        </var>
+      </field>
+      <field property="phone" depends="required,maxlength">
+        <arg0 key="registerSiteForm.phone"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>30</var-value>
+        </var>
+      </field>
+      <field property="enterpriseName" depends="required,maxlength">
+        <arg0 key="registerSiteForm.enterpriseName"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+      <field property="fax" depends="required,maxlength">
+        <arg0 key="registerSiteForm.fax"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>30</var-value>
+        </var>
+      </field>
+      <field property="address" depends="required,maxlength">
+        <arg0 key="registerSiteForm.address"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+      <field property="postcode" depends="required,integer,maxlength">
+        <arg0 key="registerSiteForm.postcode"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>10</var-value>
+        </var>
+      </field>
+      <field property="QQ" depends="integer">
+        <arg0 key="registerSiteForm.QQ"/>
+      </field>
+      <field property="area" depends="required">
+        <arg0 key="registerSiteForm.area"/>
+      </field>
+      <field property="classification" depends="required">
+        <arg0 key="registerSiteForm.level4"/>
+      </field>
+      <field property="root" depends="required">
+        <arg0 key="registerSiteForm.root"/>
+      </field>
+      <field property="displayName" depends="required,maxlength">
+        <arg0 key="registerSiteForm.displayName"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>30</var-value>
+        </var>
+      </field>
+      <!--field property="siteModel" depends="required">
+        <arg0 key="registerSiteForm.siteModel"/>
+      </field-->
+      <field property="displayName1" depends="required">
+        <arg0 key="registerSiteForm.displayName1"/>
+      </field>
+      <field property="description" depends="required,maxlength">
+        <arg0 key="registerSiteForm.description"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>600</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="userForm">
+      <field property="username" depends="required,maxlength,minlength">
+        <arg0 key="username"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>16</var-value>
+        </var>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>6</var-value>
+        </var>
+      </field>
+      <field property="password" depends="required,maxlength,minlength">
+        <arg0 key="password"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>16</var-value>
+        </var>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>6</var-value>
+        </var>
+      </field>
+      <field property="commonname" depends="required,maxlength">
+        <arg0 key="commonname"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>30</var-value>
+        </var>
+      </field>
+      <field property="email" depends="email,maxlength,required">
+        <arg0 key="email"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+    </form>
+    <form name="RXRegForm">
+      <field property="addr" depends="required">
+        <arg0 key="RXRegForm.addr"/>
+      </field>
+      <field property="postcode" depends="required">
+        <arg0 key="RXRegForm.postcode"/>
+      </field>
+      <field property="principal2" depends="required">
+        <arg0 key="RXRegForm.principal2"/>
+      </field>
+      <field property="pduty2" depends="required,integer">
+        <arg0 key="RXRegForm.pduty2"/>
+      </field>
+      <field property="loginfund" depends="required,integer">
+        <arg0 key="RXRegForm.loginfund"/>
+      </field>
+      <field property="unittype" depends="required">
+        <arg0 key="RXRegForm.unittype"/>
+      </field>
+      <field property="principal" depends="required">
+        <arg0 key="RXRegForm.principal"/>
+      </field>
+      <field property="pduty" depends="required">
+        <arg0 key="RXRegForm.pduty"/>
+      </field>
+      <field property="ptel" depends="required">
+        <arg0 key="RXRegForm.ptel"/>
+      </field>
+      <field property="pmobil" depends="required">
+        <arg0 key="RXRegForm.pmobil"/>
+      </field>
+      <field property="pemail" depends="required,email">
+        <arg0 key="RXRegForm.pemail"/>
+      </field>
+      <field property="linkman" depends="required">
+        <arg0 key="RXRegForm.linkman"/>
+      </field>
+      <field property="lduty" depends="required">
+        <arg0 key="RXRegForm.lduty"/>
+      </field>
+      <field property="ltel" depends="required">
+        <arg0 key="RXRegForm.ltel"/>
+      </field>
+      <field property="lmobil" depends="required">
+        <arg0 key="RXRegForm.lmobil"/>
+      </field>
+      <field property="lemail" depends="required,email">
+        <arg0 key="RXRegForm.lemail"/>
+      </field>
+      <field property="fax" depends="required">
+        <arg0 key="RXRegForm.fax"/>
+      </field>
+      <field property="personnum" depends="required">
+        <arg0 key="RXRegForm.personnum"/>
+      </field>
+      <!--<field property="business" depends="required">
+        <arg0 key="RXRegForm.business"/>
+      </field>-->
+      <field property="area" depends="required">
+        <arg0 key="RXRegForm.area"/>
+      </field>
+    </form>
+  </formset>
+</form-validation>

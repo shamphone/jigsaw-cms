@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="emptyForm" type="com.fulong.common.PagerForm" />
+		<form-bean name="exchangeForm" type="com.fulong.cms.form.ExchangeForm" />
+	</form-beans>
+	<global-forwards>
+		<forward name="login" path="/logon.jsp" />
+		<forward name="error" path="/common/attention.jsp" />
+		<forward name="forbidden" path="/common/forbidden.jsp" />
+	</global-forwards>
+	<action-mappings>
+		<action path="/left" type="com.fulong.cms.exchange.LeftAction">
+			<forward name="success" path="/left.jsp" />
+		</action>
+		<action path="/welcome" forward="/blank.jsp" />
+		<action path="/contents" type="com.fulong.cms.exchange.ContentAction" scope="request">
+			<forward name="success" path="/contents.jsp" />
+		</action>
+		<action path="/dialog/send" type="com.fulong.cms.exchange.SendAction" scope="request"/>
+		<action path="/dialog/receive" type="com.fulong.cms.exchange.ReceiveAction" scope="request"/>
+		<action path="/dialog/status" type="com.fulong.cms.exchange.StatusAction" scope="request"/>
+		<action name="exchangeForm" path="/dialog/create" type="com.fulong.cms.exchange.CreateAction" scope="request">
+			<forward name="success" path="/dialog/create.success.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources null="false" parameter="com.fulong.cms.Common" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+	</plug-in>
+</struts-config>

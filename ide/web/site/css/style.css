@@ -1,0 +1,47 @@
+#previewDiv{background-color:white;height:180px;width:280px;margin:10px 10px 10px 10px;overflow:hidden;}
+#cssTextDiv{background-color:white;height:80px;width:280px;margin:10px 10px 10px 10px;}
+#cssTable{width:500px;}
+#selector{width:180px;}
+.operation{text-align:right;margin:10px 10px 10px 10px;}
+.operation input{width:80px;margin:0px 3px 0px 3px;}
+DIV.pannelDiv{
+float:left;
+width:100px;
+height:345px;
+}
+#cssSelector{width:100px;}
+#styleFields{
+padding:0px 0px 0px 0px;
+margin:0px 0px 0px 0px;
+}
+#previewCSS{
+ width:320px;
+ height:300px;
+}
+#styleFields fieldset{
+margin:0px 0px 0px 0px;
+ width:320px;
+ height:250px;
+ font-size:12px;
+ padding:5px;
+}
+#styleFields select{
+width:160px;
+}
+#styleFields textarea{
+width:300px;
+height:240px;
+}
+#pannelSelect{
+height:400px;
+width:100px;
+background-color:menu;
+}
+#previewFS{
+margin:0px 0px 0px 0px;
+padding:2px 2px 2px 2px;
+height:100px;
+width:325px;
+overflow:hidden;
+background-color:white;
+}

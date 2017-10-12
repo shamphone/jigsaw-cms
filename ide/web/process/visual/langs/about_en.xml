@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<Properties>
+<item id="text1_1" property="innerHTML" text="Product Name:" />
+<item id="text1_2" property="innerHTML" text="WebFlow Designer Preview" />
+<item id="text2" property="innerHTML" text="Version Date:" />
+<item id="text3_1" property="innerHTML" text="Run Environment:" />
+<item id="text3_2" property="innerHTML" text="IE 6.0 or other Explorers base on IE kernel" />
+<item id="text3_3" property="innerHTML" text="Windows Scripts Host 5.6(load/save support)" />
+<item id="mainmsg" property="value" text="WebFlow is a project of workflow base on web server. It's compose of flow engineflow,designer,flow form and flow monitor. The main data structor is self-defining XML,what is more active and easy,diffrent from WFMC XML Schema.\n\nThe Flow Designer Preview runs well at IE 6.0 which in Windows 2000 and XP. The next version will be run in web server.\n\nMy MSN is: f15_nsm@hotmail.com. Welcome mail your bug report and advice to me.\n\n" />
+<item id="ok" property="value" text=" Close " />
+</Properties>
+</config>

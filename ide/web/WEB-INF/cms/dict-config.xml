@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="dictForm" type="com.fulong.cms.dict.form.DictForm"/>
+    <form-bean name="dictDetailsForm" type="com.fulong.cms.dict.form.DictDetailsForm"/>
+  </form-beans>
+  <action-mappings>
+    <action name="dictForm" path="/dictList" type="com.fulong.cms.dict.DictListAction" scope="request">
+      <forward name="success" path="/dictList.jsp"/>
+    </action>
+    <action name="dictForm" path="/creatDict" type="com.fulong.cms.dict.CreatDictAction" scope="request">
+      <forward name="success" path="/creatDict.jsp"/>
+    </action>
+    <action name="dictForm" path="/insertDict" type="com.fulong.cms.dict.InsertDictAction" scope="request">
+      <forward name="failed" path="/creatDict.jsp"/>
+      <!-- <forward name="success" path="/dictList.do" redirect="true"/> -->
+      <forward name="success" path="/insertSuccess.jsp" />
+    </action>
+    <action name="dictForm" path="/modifyDict" type="com.fulong.cms.dict.ModifyDictAction" scope="request">
+      <forward name="success" path="/modifyDict.jsp"/>
+    </action>
+    <action name="dictForm" path="/updateDict" type="com.fulong.cms.dict.UpdateDictAction" scope="request">
+      <!-- <forward name="success" path="/dictList.do" redirect="true"/> -->
+      <forward name="success" path="/updateSuccess.jsp" />
+    </action>
+    <action name="dictForm" path="/delDict" type="com.fulong.cms.dict.DelDictAction" scope="request">
+      <!-- <forward name="success" path="/dictList.do" redirect="true"/> -->
+      <forward name="success" path="/deleteSuccess.jsp" />
+    </action>
+    <!--  -->
+    <action name="dictForm" path="/deleteDictConfirm" type="com.fulong.cms.dict.DeleteDictConfirmAction" scope="request">
+      <forward name="success" path="/deleteDictConfirm.jsp" />
+    </action>
+    <!--  -->
+    <action name="dictForm" path="/dictDetail" type="com.fulong.cms.dict.DictDetailAction" scope="request">
+      <forward name="success" path="/dictDetail.jsp" />
+    </action>
+    <!--
+    <action path="/insertDictDetail" type="com.fulong.cms.dict.InsertDictDetailAction" scope="request"/>
+    <action path="/delDictDetail" type="com.fulong.cms.dict.DelDictDetailAction" scope="request"/>
+    <action path="/riseDictDetail" type="com.fulong.cms.dict.RiseDictDetailAction" scope="request">
+      <forward name="success" path="/dictDetail.do?dictId={0}&amp;selectedId={1}"/>
+    </action>
+    <action path="/fallDictDetail" type="com.fulong.cms.dict.FallDictDetailAction" scope="request">
+      <forward name="success" path="/dictDetail.do?dictId={0}&amp;selectedId={1}"/>
+    </action>
+    -->
+    <action path="/changeDictDetail" type="com.fulong.cms.dict.ChangeDictDetailAction" scope="request">
+      <forward name="success" path="/dictDetail.do?dictId={0}&amp;selectedId={1}" />
+    </action>
+    <action path="/upDictDetail" type="com.fulong.cms.dict.UpDictDetailAction" scope="request">
+      <forward name="success" path="/dictDetail.do?dictId={0}&amp;selectedId={1}"/>
+    </action>
+    <action path="/downDictDetail" type="com.fulong.cms.dict.DownDictDetailAction" scope="request">
+      <forward name="success" path="/dictDetail.do?dictId={0}&amp;selectedId={1}"/>
+    </action>
+    <action name="dictDetailsForm" path="/createDictDetails" type="com.fulong.cms.dict.CreateDictDetailsAction" scope="request">
+      <forward name="success" path="/createDictDetails.jsp" />
+    </action>
+    <action name="dictDetailsForm" path="/insertDictDetails" type="com.fulong.cms.dict.InsertDictDetailsAction" scope="request">
+      <forward name="success" path="/insertDictDetailsSuccess.jsp?dictId={0}&amp;selectedId={1}" redirect="true"/>
+      <forward name="failed" path="/createDictDetails.jsp"/>
+    </action>
+    <action name="dictDetailsForm" path="/editDictDetails" type="com.fulong.cms.dict.EditDictDetailsAction" scope="request">
+      <forward name="success" path="/editDictDetails.jsp" />
+    </action>
+    <action name="dictDetailsForm" path="/updateDictDetails" type="com.fulong.cms.dict.UpdateDictDetailsAction" scope="request">
+      <forward name="success" path="/updateDictDetailsSuccess.jsp?dictId={0}&amp;selectedId={1}" redirect="true"/>
+    </action>
+    <action name="dictDetailsForm" path="/deleteDictDetailsConfirm" type="com.fulong.cms.dict.DeleteDictDetailsConfirmAction" scope="request">
+      <forward name="success" path="/deleteDictDetailsConfirm.jsp" />
+    </action>
+    <action name="dictDetailsForm" path="/deleteDictDetails" type="com.fulong.cms.dict.DeleteDictDetailsAction" scope="request">
+      <forward name="success" path="/deleteDictDetailsSuccess.jsp" />
+    </action>
+  </action-mappings>
+  <message-resources key="content-message" parameter="com.fulong.cms.Common"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/cms/dict-validation.xml"/>
+  </plug-in>
+</struts-config>

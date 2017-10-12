@@ -1,0 +1,16 @@
+body {
+	padding: 5px 5px 5px 5px;
+	margin: 0px;
+	background-color: buttonface;
+}
+form{
+	padding:0px;
+	margin:0px;
+}
+body,table,th,td,fieldset {
+	font-size: 13px;
+}
+th{
+	font-weight:normal;
+	text-align:left;
+}

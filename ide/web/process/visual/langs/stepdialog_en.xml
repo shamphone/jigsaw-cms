@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+<Properties>
+<item id="tabpage1" property="innerHTML" text="Base Props" />
+<item id="tabpage2" property="innerHTML" text="VML Props" />
+<item id="tabpage3" property="innerHTML" text="Flow Props" />
+
+<item id="tabpage1_1" property="innerHTML" text="Base Properties" />
+<item id="tabpage1_2" property="innerHTML" text="Step Id" />
+<item id="tabpage1_3" property="innerHTML" text="Step Name" />
+<item id="tabpage1_4" property="innerHTML" text="Step Type" />
+<item id="tabpage1_5" property="innerHTML" text="Begin" />
+<item id="tabpage1_6" property="innerHTML" text="End" />
+<item id="tabpage1_7" property="innerHTML" text="Middle" />
+
+<item id="tabpage2_1" property="innerHTML" text="Shape Properties" />
+<item id="tabpage2_2" property="innerHTML" text="Shape Width" />
+<item id="tabpage2_3" property="innerHTML" text="Shape Height" />
+<item id="tabpage2_4" property="innerHTML" text="Shape X" />
+<item id="tabpage2_5" property="innerHTML" text="Shape Y" />
+<item id="tabpage2_6" property="innerHTML" text="Step Style" />
+<item id="tabpage2_7" property="innerHTML" text="Text Weight" />
+<item id="tabpage2_8" property="innerHTML" text="Stroke Weight" />
+
+<item id="StepText" property="value" text="new step" />
+
+<item id="btnOk" property="value" text="Confirm" />
+<item id="btnCancel" property="value" text="Cancel" />
+<item id="btnApply" property="value" text="Apply" />
+</Properties>
+</config>

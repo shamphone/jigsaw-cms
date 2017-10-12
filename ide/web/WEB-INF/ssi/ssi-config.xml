@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>  </form-beans>
+  <global-forwards>  </global-forwards>
+  <action-mappings>
+    <action path="/preLogin" type="com.fulong.ssi.PreLoginAction">
+      <forward name="success" path="/login.jsp"/>
+    </action>
+    <action path="/proxy" type="com.fulong.ssi.ProxyRender">
+      <forward name="success" path="/ajaxProxy.jsp"/>
+    </action>
+    <action path="/checkUsername" type="com.fulong.ssi.CheckUsernameAction"/>
+    <action path="/regist" type="com.fulong.ssi.SSIRegistAction"/>
+  </action-mappings>
+</struts-config>

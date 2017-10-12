@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+  		<form-bean name="emptyForm" type="com.fulong.common.PagerForm" />
+  		<form-bean name="groupForm" type="com.fulong.security.form.GroupForm"/>
+  </form-beans>
+  <action-mappings>   
+  <action name="groupForm" path="/create" type="com.fulong.security.group.CreateAction" scope="request">
+  <forward name="success" path="/create.jsp"/>
+  </action>
+  <action name="groupForm" path="/edit" type="com.fulong.security.group.EditAction" scope="request">
+  <forward name="success" path="/edit.jsp"/>
+  </action>
+    <action name="groupForm" path="/shift" type="com.fulong.security.group.ShiftAction" scope="request">
+  <forward name="success" path="/shift.jsp"/>
+  </action>
+  <action name="groupForm" path="/Insert" type="com.fulong.security.group.InsertAction" scope="request">
+  <forward name="success" path="/save.jsp"/>
+  </action>
+  <action name="groupForm" path="/Update" type="com.fulong.security.group.UpdateAction" scope="request">
+  <forward name="success" path="/save.jsp"/>
+  </action>
+  <action path="/delete" type="com.fulong.security.group.DeleteAction" scope="request" />
+  <action path="/shift" type="com.fulong.security.group.ShiftAction" scope="request">
+  <forward name="success" path="/shift.jsp"/>
+  </action>
+  <action path="/doShift" type="com.fulong.security.group.DoShiftAction" scope="request" />
+  <action path="/validateUnique" type="com.fulong.security.group.ValidateUniqueAction" scope="request" />
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.security.Resources"/>
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/security/validation.xml"/>
+  </plug-in>
+</struts-config>

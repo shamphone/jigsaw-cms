@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="siteForm" type="com.fulong.site.form.SiteForm"/>
+  </form-beans>
+  <action-mappings>
+    <action path="/index" type="com.fulong.site.IndexAction" scope="request">
+      <!-- <forward name="success" path="/editor/index.jsp?path={0}" redirect="true"/> -->
+      <forward name="success" path="/management/index.jsp"/>
+      <forward name="no.site" path="/noSite.jsp"/>
+      </action>
+    <action path="/left" type="com.fulong.site.management.LeftAction">
+      <forward name="success" path="/management/left.jsp"/>
+    </action>
+    <action path="/welcome" forward="/../common/blank.jsp"/>
+    <action name="siteForm" path="/changeTemplate" type="com.fulong.site.ChangeTemplateAction" scope="request">
+      <forward name="success" path="/changeTemplate.jsp"/>
+    </action>
+    <action name="siteForm" path="/doChange" type="com.fulong.site.DoChangeAction" scope="request">
+      <forward name="success" path="/changeTemplate.do"/>
+    </action>
+	<action path="/name" type="com.fulong.site.SiteNameAction" scope="request">    
+	  <forward name="success" path="/name.jsp"/>
+	  </action>
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.site.Common"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/site/validator-rules.xml,/WEB-INF/site/validation.xml"/>
+  </plug-in>
+</struts-config>

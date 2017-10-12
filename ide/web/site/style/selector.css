@@ -1,0 +1,40 @@
+body {
+  background-color:buttonface;
+}
+.selector {
+  margin:5px 0px 8px 15px;
+}
+.selector img{
+  margin:0 2px 0 2px;
+}
+.activeLink :hover{
+    position: relative; top:-1px; left:-1px;
+ }
+ .disabledInput{
+  background-color:buttonface;
+ }
+.main {
+  background-color:White;
+  height:430px;
+  margin:5px;
+  border: 1px solid cadetblue;
+  overflow:auto;
+}
+.button {
+  text-align:right;
+  margin:5px;
+}
+.image {
+ border: 1px solid buttonface;
+ margin:0px 5px 0px 5px;
+}
+.itemMark{
+text-align:center;
+width:90px;
+word-wrap:nowrap;
+overflow:hidden;
+}
+.itemMark span{
+
+display:block ;
+}

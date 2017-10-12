@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<config>
+<Title text=" 版权声明 " />
+<Properties>
+<item id="topic" property="innerHTML" text="[ WebFlow 许可协议 ]" />
+<item id="content" property="innerHTML" text="WebFlow 2005（预览版/个人版）属于OpenSource开源项目。您可以免费复制、分发和修改本产品，而且可以在商业开发活动中使用，但必须保留原著作权人信息，同时保证未经原著作权人许可，代码的全部或部分不得直接作为商业产品或包含于商业产品中出售，同时修改后的代码或产品也必须遵循本协议。&lt;BR&gt;&lt;BR&gt;本软件著作权人对本软件产品不提供任何形式的担保，不对任何用户因此软件所遭遇到的任何理论上的或实际上的损失承担责任，不对用户使用本软件造成的任何后果承担责任。&lt;BR&gt;&lt;BR&gt;如果您不同意以上任何一点,请立即停止使用此软件。&lt;BR&gt;&lt;BR&gt;WebFlow软件(企业版)的知识产权, 由版权人 冯春（f15_nsm@hotmail.com） 拥有。保留一切商业权利。" />
+<item id="btnCancel" property="value" text="不同意" />
+<item id="btnOk" property="value" text="同 意" />
+</Properties>
+</config>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="normalActivityForm" type="com.fulong.process.form.NormalActivityForm"></form-bean>
+		<form-bean name="routeActivityForm" type="com.fulong.process.form.RouteActivityForm"></form-bean>
+		<form-bean name="taskActivityForm" type="com.fulong.process.form.TaskActivityForm"></form-bean>
+	</form-beans>
+	<global-forwards>
+	</global-forwards>
+	<action-mappings>
+		<action path="/create" type="com.fulong.process.activity.CreateAction">
+			<forward name="3" path="/createTask.jsp"></forward>
+			<forward name="4" path="/createNormal.jsp"></forward>
+			<forward name="5" path="/createRoute.jsp"></forward>
+		</action>
+		<action path="/editNormal" type="com.fulong.process.activity.normal.EditAction">
+			<forward name="success" path="/editNormal.jsp"></forward>
+		</action>
+		<action path="/editRoute" type="com.fulong.process.activity.route.EditAction">
+			<forward name="success" path="/editRoute.jsp"></forward>
+		</action>
+		<action path="/editTask" type="com.fulong.process.activity.task.EditAction">
+			<forward name="success" path="/editTask.jsp"></forward>
+		</action>
+		<action name="normalActivityForm" path="/saveNormal" type="com.fulong.process.activity.normal.SaveAction">
+			<forward name="success" path="/success.jsp"></forward>
+		</action>
+		<action name="routeActivityForm" path="/saveRoute" type="com.fulong.process.activity.route.SaveAction">
+			<forward name="success" path="/success.jsp"></forward>
+		</action>
+		<action name="taskActivityForm" path="/saveTask" type="com.fulong.process.activity.task.SaveAction">
+			<forward name="success" path="/success.jsp"></forward>
+		</action>
+		<action path="/delete" type="com.fulong.process.activity.DeleteAction"/>
+		<action path="/fullname" type="com.fulong.process.activity.FullnameAction"/>
+	</action-mappings>
+	<message-resources null="false" parameter="com.fulong.process.Common" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/process/validator-rules.xml,/WEB-INF/process/validation.xml" />
+	</plug-in>
+</struts-config>

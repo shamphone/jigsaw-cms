@@ -1,0 +1,8 @@
+<attach for="element" event="onreadystatechange" handler="calcHeight" />
+<script type="text/javascript">
+
+function calcHeight(){
+  var h = 250;
+  element.style.height=document.documentElement.offsetHeight-h;
+}
+</script>

@@ -1,0 +1,3214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<country>
+  <province name="北京" value='北京'>
+    <city name="北京" value='北京'>
+       <county name="北京市" value='100000'/>
+         <county name="通州区" value='101100'/>
+         <county name="平谷县" value='101200'/>
+         <county name="顺义县" value='101300'/>
+         <county name="怀柔县" value='101400'/>
+         <county name="密云县" value='101500'/>
+         <county name="延庆县" value='102100'/>
+         <county name="昌平县" value='102200'/>
+         <county name="门头沟区" value='102300'/>
+         <county name="房山区" value='102400'/>
+         <county name="大兴县" value='102600'/>
+         <county name="石景山区" value='100043'/>
+         <county name="丰台区" value='100071'/>
+         <county name="海淀区" value='100080'/>
+         <county name="朝阳区" value='100020'/>
+         <county name="崇文区" value='100061'/>
+         <county name="宣武区" value='100053'/>
+         <county name="西城区" value='100032'/>
+         <county name="东城区" value='100010'/>
+         </city>
+    </province>
+  <province name="天津" value='天津'>
+    <city name="天津" value='天津'>
+       <county name="天津市" value='300000'/>
+         <county name="大港区" value='300200'/>
+         <county name="塘沽区" value='300400'/>
+         <county name="宁河县" value='301500'/>
+         <county name="静海县" value='301600'/>
+         <county name="武清县" value='301700'/>
+         <county name="宝坻县" value='301800'/>
+         <county name="蓟县" value='301900'/>
+         <county name="塘沽区" value='300450'/>
+         <county name="汉沽区" value='300480'/>
+         <county name="红桥区" value='300131'/>
+         <county name="南开区" value='300100'/>
+         <county name="河北区" value='300143'/>
+         <county name="河西区" value='300202'/>
+         <county name="河东区" value='300171'/>
+         <county name="西郊区" value='300380'/>
+         <county name="南郊区" value='300350'/>
+         <county name="东郊区" value='300300'/>
+         </city>
+    </province>
+  <province name="上海" value='上海'>
+    <city name="上海" value='上海'>
+       <county name="上海市" value='200000'/>
+         <county name="上海近郊区" value='200100'/>
+         <county name="浦东新区" value='200120'/>
+         <county name="闵行区" value='201100'/>
+         <county name="南汇县" value='201300'/>
+         <county name="奉贤县" value='201400'/>
+         <county name="金山县" value='201500'/>
+         <county name="松江县" value='201600'/>
+         <county name="青浦县" value='201700'/>
+         <county name="嘉定县" value='201800'/>
+         <county name="宝山县" value='201900'/>
+         <county name="崇明县" value='202100'/>
+         <county name="静安区" value='200040'/>
+         <county name="普陀区" value='200063'/>
+         <county name="黄浦区" value='200002'/>
+         <county name="徐汇区" value='200030'/>
+         <county name="虹口区" value='200080'/>
+         <county name="南市区" value='200011'/>
+         <county name="闸北区" value='200070'/>
+         <county name="闵行区" value='200240'/>
+         <county name="吴松区" value='200940'/>
+         <county name="杨浦区" value='200082'/>
+         <county name="卢湾区" value='200020'/>
+         <county name="长宁区" value='200050'/>
+         <county name="川沙县" value='201200'/>
+         </city>
+    </province>
+  <province name="重庆" value='重庆'>
+    <city name="重庆" value='重庆'>
+       <county name="重庆市" value='400000'/>
+         <county name="北碚区" value='400700'/>
+         <county name="万盛区" value='400800'/>
+         <county name="双桥区" value='400900'/>
+         <county name="渝北区" value='401100'/>
+         <county name="长寿县" value='401200'/>
+         <county name="巴南区" value='401300'/>
+         <county name="綦江县" value='401400'/>
+         <county name="合川县" value='401500'/>
+         <county name="永川县" value='402100'/>
+         <county name="江津市" value='402200'/>
+         <county name="大足县" value='402300'/>
+         <county name="荣昌县" value='402400'/>
+         <county name="铜梁县" value='402500'/>
+         <county name="潼南县" value='402600'/>
+         <county name="壁山县" value='402700'/>
+         <county name="万州区" value='404000'/>
+         <county name="忠县" value='404300'/>
+         <county name="云阳县" value='404500'/>
+         <county name="奉节县" value='404600'/>
+         <county name="巫山县" value='404700'/>
+         <county name="梁平县" value='405200'/>
+         <county name="开县" value='405400'/>
+         <county name="巫溪县" value='405800'/>
+         <county name="城口县" value='405900'/>
+         <county name="涪陵区" value='408000'/>
+         <county name="李渡区" value='408100'/>
+         <county name="丰都县" value='408200'/>
+         <county name="垫江县" value='408300'/>
+         <county name="南川县" value='408400'/>
+         <county name="武隆县" value='408500'/>
+         <county name="黔江区" value='409000'/>
+         <county name="石柱土家族自治县" value='409100'/>
+         <county name="彭水苗族土家族自治县" value='409600'/>
+         <county name="酉阳土家族苗族自治县" value='409800'/>
+         <county name="秀山土家族苗族自治县" value='409900'/>
+         <county name="南岸区" value='400064'/>
+         <county name="九龙坡区" value='400050'/>
+         <county name="沙坪坝区" value='400030'/>
+         <county name="江北区" value='400020'/>
+         <county name="大渡口区" value='400080'/>
+         <county name="渝中区" value='400010'/>
+         <county name="长寿区" value='401220'/>
+         </city>
+    </province>
+  <province name="云南" value='云南'>
+    <city name="临沧" value='临沧'>
+       <county name="云县" value='675800'/>
+         <county name="凤庆县" value='675900'/>
+         <county name="临沧市" value='677000'/>
+         <county name="双江拉祜族佤族布郎族傣族自治县" value='677300'/>
+         <county name="沧源佤族自治县" value='677400'/>
+         <county name="耿马傣族佤族自治县" value='677500'/>
+         <county name="永德县" value='677600'/>
+         <county name="镇康县" value='677700'/>
+         </city>
+    <city name="丽江" value='丽江'>
+       <county name="丽江市" value='674000'/>
+         <county name="玉龙纳西族自治县" value='674100'/>
+         <county name="永胜县" value='674200'/>
+         <county name="宁蒗彝族自治县" value='674300'/>
+         <county name="华坪县" value='674800'/>
+         </city>
+    <city name="保山" value='保山'>
+       <county name="保山市" value='678000'/>
+         <county name="昌宁县" value='678100'/>
+         <county name="施甸县" value='678200'/>
+         <county name="龙陵县" value='678300'/>
+         <county name="腾冲县" value='679100'/>
+         </city>
+    <city name="大理白族自治州" value='大理白族自治州'>
+       <county name="大理市" value='671000'/>
+         <county name="洱源县" value='671200'/>
+         <county name="剑川县" value='671300'/>
+         <county name="鹤庆县" value='671500'/>
+         <county name="宾川县" value='671600'/>
+         <county name="祥云县" value='672100'/>
+         <county name="巍山彝族回族自治县" value='672400'/>
+         <county name="漾濞彝族自治县" value='672500'/>
+         <county name="永平县" value='672600'/>
+         <county name="云龙县" value='672700'/>
+         <county name="弥渡县" value='675600'/>
+         <county name="南涧彝族自治县" value='675700'/>
+         </city>
+    <city name="德宏傣族景颇族自治州" value='德宏傣族景颇族自治州'>
+       <county name="潞西县" value='678400'/>
+         <county name="瑞丽县" value='678600'/>
+         <county name="陇川县" value='678700'/>
+         <county name="梁河县" value='679200'/>
+         <county name="盈江县" value='679300'/>
+         </city>
+    <city name="怒江傈僳族自治州" value='怒江傈僳族自治州'>
+       <county name="兰坪白族普米族自治县" value='671400'/>
+         <county name="泸水县" value='673200'/>
+         <county name="福贡县" value='673400'/>
+         <county name="贡山独龙族怒族自治县" value='673500'/>
+         </city>
+    <city name="思茅" value='思茅'>
+       <county name="思茅市" value='665000'/>
+         <county name="普洱哈尼族彝族自治县" value='665100'/>
+         <county name="澜沧拉祜族自治县" value='665600'/>
+         <county name="西盟佤族自治县" value='665700'/>
+         <county name="孟连傣族拉祜族佤族自治县" value='665800'/>
+         <county name="江城哈尼族彝族自治县" value='665900'/>
+         <county name="景谷傣族彝族自治县" value='666400'/>
+         <county name="景东彝族自治县" value='676200'/>
+         <county name="墨江哈尼族自治县" value='654800'/>
+         </city>
+    <city name="文山壮族苗族自治州" value='文山壮族苗族自治州'>
+       <county name="广南县" value='663300'/>
+         <county name="富宁县" value='663400'/>
+         <county name="西畴县" value='663500'/>
+         <county name="麻栗坡县" value='663600'/>
+         <county name="马关县" value='663700'/>
+         <county name="文山县" value='663000'/>
+         <county name="砚山县" value='663100'/>
+         <county name="丘北县" value='663200'/>
+         </city>
+    <city name="昆明" value='昆明'>
+       <county name="昆明市" value='650000'/>
+         <county name="安宁市" value='650300'/>
+         <county name="富民县" value='650400'/>
+         <county name="呈贡县" value='650500'/>
+         <county name="晋宁县" value='650600'/>
+         <county name="禄劝彝族苗族自治县" value='651500'/>
+         <county name="嵩明县" value='651700'/>
+         <county name="宜良县" value='652100'/>
+         <county name="石林彝族自治县" value='652200'/>
+         <county name="东川区" value='654100'/>
+         <county name="寻甸回族彝族自治县" value='655200'/>
+         </city>
+    <city name="昭通" value='昭通'>
+       <county name="巧家县" value='654600'/>
+         <county name="昭通市" value='657000'/>
+         <county name="鲁甸县" value='657100'/>
+         <county name="镇雄县" value='657200'/>
+         <county name="永善县" value='657300'/>
+         <county name="大关县" value='657400'/>
+         <county name="盐津县" value='657500'/>
+         <county name="彝良县" value='657600'/>
+         <county name="绥江县" value='657700'/>
+         <county name="水富县" value='657800'/>
+         <county name="威信县" value='657900'/>
+         </city>
+    <city name="曲靖" value='曲靖'>
+       <county name="会泽县" value='654200'/>
+         <county name="曲靖市" value='655000'/>
+         <county name="马龙县" value='655100'/>
+         <county name="宣威县" value='655400'/>
+         <county name="富源县" value='655500'/>
+         <county name="陆良县" value='655600'/>
+         <county name="师宗县" value='655700'/>
+         <county name="罗平县" value='655800'/>
+         </city>
+    <city name="楚雄彝族自治州" value='楚雄彝族自治州'>
+       <county name="楚雄市" value='675000'/>
+         <county name="双柏县" value='675100'/>
+         <county name="南华县" value='675200'/>
+         <county name="姚安县" value='675300'/>
+         <county name="大姚县" value='675400'/>
+         <county name="牟定县" value='675500'/>
+         <county name="禄丰县" value='651200'/>
+         <county name="元谋县" value='651300'/>
+         <county name="永仁县" value='651400'/>
+         <county name="武定县" value='651600'/>
+         </city>
+    <city name="玉溪" value='玉溪'>
+       <county name="易门县" value='651100'/>
+         <county name="澄江县" value='652500'/>
+         <county name="江川县" value='652600'/>
+         <county name="通海县" value='652700'/>
+         <county name="华宁县" value='652800'/>
+         <county name="玉溪市" value='653000'/>
+         <county name="红塔区" value='653100'/>
+         <county name="峨山彝族自治县" value='653200'/>
+         <county name="元江哈尼族彝族傣族自治县" value='653300'/>
+         <county name="新平彝族傣族自治县" value='653400'/>
+         </city>
+    <city name="红河哈尼族彝族自治州" value='红河哈尼族彝族自治州'>
+       <county name="弥勒县" value='652300'/>
+         <county name="泸西县" value='652400'/>
+         <county name="建水县" value='654300'/>
+         <county name="红河县" value='654400'/>
+         <county name="开远市" value='661000'/>
+         <county name="蒙自县" value='661100'/>
+         <county name="屏边苗族自治县" value='661200'/>
+         <county name="河口瑶族自治县" value='661300'/>
+         <county name="个旧市" value='661400'/>
+         <county name="金平苗族瑶族傣族自治县" value='661500'/>
+         <county name="石屏县" value='662200'/>
+         <county name="元阳县" value='662400'/>
+         <county name="绿春县" value='662500'/>
+         </city>
+    <city name="西双版纳傣族自治州" value='西双版纳傣族自治州'>
+       <county name="景洪县" value='666100'/>
+         <county name="勐海县" value='666200'/>
+         <county name="勐腊县" value='666300'/>
+         </city>
+    <city name="迪庆藏族自治州" value='迪庆藏族自治州'>
+       <county name="香格里拉县" value='674400'/>
+         <county name="德钦县" value='674500'/>
+         <county name="维西傈僳族自治县" value='674600'/>
+         </city>
+    </province>
+  <province name="内蒙古" value='内蒙古'>
+    <city name="乌兰察布" value='乌兰察布'>
+       <county name="四王子旗" value='011800'/>
+         <county name="集宁区" value='012000'/>
+         <county name="丰镇县" value='012100'/>
+         <county name="察哈尔右翼前旗" value='012200'/>
+         <county name="卓资县" value='012300'/>
+         <county name="察哈尔右翼后旗" value='012400'/>
+         <county name="化德县" value='013300'/>
+         <county name="商都县" value='013400'/>
+         <county name="察哈尔右翼中旗" value='013500'/>
+         <county name="兴和县" value='013600'/>
+         <county name="凉城县" value='013700'/>
+         </city>
+    <city name="乌海" value='乌海'>
+       <county name="乌海市" value='016000'/>
+         </city>
+    <city name="兴安盟" value='兴安盟'>
+       <county name="科尔沁右翼中旗" value='029400'/>
+         <county name="乌兰浩特市" value='137400'/>
+         <county name="科尔沁右翼前旗" value='137401'/>
+         <county name="突泉县" value='137500'/>
+         <county name="扎赉特旗" value='137600'/>
+         <county name="阿尔山市" value='137800'/>
+         </city>
+    <city name="包头" value='包头'>
+       <county name="包头市" value='014000'/>
+         <county name="土默特右旗" value='014100'/>
+         <county name="固阳县" value='014200'/>
+         </city>
+    <city name="包头市" value='包头市'>
+       <county name="达尔罕茂明安联合旗" value='014500'/>
+         </city>
+    <city name="呼伦贝尔市" value='呼伦贝尔市'>
+       <county name="海拉尔市" value='021000'/>
+         <county name="伊敏河矿区" value='021100'/>
+         <county name="鄂温克族自治旗" value='021101'/>
+         <county name="新巴尔虎左旗" value='021200'/>
+         <county name="新巴尔虎右旗" value='021300'/>
+         <county name="满洲里市" value='021400'/>
+         <county name="陈巴尔虎旗" value='021500'/>
+         <county name="牙克石市" value='022100'/>
+         <county name="额尔古纳市" value='022200'/>
+         <county name="科尔沁左翼后旗" value='028100'/>
+         <county name="库伦旗" value='028200'/>
+         <county name="奈曼旗" value='028300'/>
+         <county name="开鲁县" value='028400'/>
+         <county name="扎鲁特旗" value='029100'/>
+         <county name="霍林郭勒市" value='029200'/>
+         <county name="科尔沁左翼中旗" value='029300'/>
+         <county name="扎兰屯市" value='162650'/>
+         <county name="阿荣旗" value='162700'/>
+         <county name="莫力达瓦达斡尔族自治旗" value='162800'/>
+         <county name="鄂伦春自治旗" value='165400'/>
+         </city>
+    <city name="呼和浩特" value='呼和浩特'>
+       <county name="呼和浩特市" value='010000'/>
+         <county name="土默特左旗" value='010100'/>
+         <county name="托克托县" value='010200'/>
+         <county name="和林格尔县" value='011500'/>
+         <county name="清水河县" value='011600'/>
+         <county name="武川县" value='011700'/>
+         </city>
+    <city name="巴彦淖
+尔" value='巴彦淖
+尔'>
+       <county name="乌拉特前旗" value='014400'/>
+         <county name="巴彦淖
+尔市" value='015000'/>
+         <county name="五原县" value='015100'/>
+         <county name="磴口县" value='015200'/>
+         <county name="乌拉特中旗" value='015300'/>
+         <county name="杭锦后旗" value='015400'/>
+         <county name="乌拉特后旗" value='015500'/>
+         </city>
+    <city name="赤峰" value='赤峰'>
+       <county name="赤峰市" value='024000'/>
+         <county name="宁城县" value='024200'/>
+         <county name="敖汉旗" value='024300'/>
+         <county name="喀喇沁旗" value='024400'/>
+         <county name="翁牛特旗" value='024500'/>
+         <county name="巴林右旗" value='025100'/>
+         <county name="林西县" value='025200'/>
+         <county name="克什克腾旗" value='025300'/>
+         <county name="巴林左旗" value='025400'/>
+         <county name="阿鲁科尔沁旗" value='025500'/>
+         </city>
+    <city name="鄂尔多斯市" value='鄂尔多斯市'>
+       <county name="沙圪堵经济技术开发区" value='010400'/>
+         <county name="达拉特旗" value='014300'/>
+         <county name="鄂托克旗" value='016100'/>
+         <county name="鄂托克前旗" value='016200'/>
+         <county name="鄂尔多斯市" value='017000'/>
+         <county name="准格尔旗" value='017100'/>
+         <county name="伊金霍洛旗" value='017200'/>
+         <county name="乌审旗" value='017300'/>
+         <county name="杭锦旗" value='017400'/>
+         </city>
+    <city name="锡林郭勒盟" value='锡林郭勒盟'>
+       <county name="苏尼特右旗" value='011200'/>
+         <county name="苏尼特左旗" value='011300'/>
+         <county name="阿巴嘎旗" value='011400'/>
+         <county name="二连浩特市" value='012600'/>
+         <county name="镶黄旗" value='013200'/>
+         <county name="正镶白旗" value='013800'/>
+         <county name="锡林郭勒盟" value='026000'/>
+         <county name="锡林浩特市" value='026001'/>
+         <county name="西乌珠穆沁旗" value='026200'/>
+         <county name="东乌珠穆沁旗" value='026300'/>
+         <county name="太仆寺旗" value='027000'/>
+         <county name="正蓝旗" value='027200'/>
+         <county name="多伦县" value='027300'/>
+         </city>
+    <city name="阿拉善盟" value='阿拉善盟'>
+       <county name="额济纳旗" value='735400'/>
+         <county name="阿拉善右旗" value='737300'/>
+         <county name="阿拉善左旗" value='750300'/>
+         </city>
+    </province>
+  <province name="吉林" value='吉林'>
+    <city name="吉林" value='吉林'>
+       <county name="吉林市" value='132000'/>
+         <county name="永吉县" value='132100'/>
+         <county name="磐石市" value='132300'/>
+         <county name="桦甸市" value='132400'/>
+         <county name="蛟河市" value='132500'/>
+         <county name="舒兰市" value='132600'/>
+         </city>
+    <city name="四平" value='四平'>
+       <county name="伊通满族自治县" value='130700'/>
+         <county name="四平市" value='136000'/>
+         <county name="公主岭市" value='136100'/>
+         <county name="梨树县" value='136500'/>
+         </city>
+    <city name="延边朝鲜族自治州" value='延边朝鲜族自治州'>
+       <county name="延吉市" value='133000'/>
+         <county name="图们市" value='133100'/>
+         <county name="汪清县" value='133200'/>
+         <county name="珲春市" value='133300'/>
+         <county name="龙井市" value='133400'/>
+         <county name="和龙县" value='133500'/>
+         <county name="安图县" value='133600'/>
+         <county name="敦化市" value='133700'/>
+         </city>
+    <city name="松原市" value='松原市'>
+       <county name="扶余市" value='131200'/>
+         <county name="乾安县" value='131400'/>
+         <county name="长岭县" value='131500'/>
+         </city>
+    <city name="白城市" value='白城市'>
+       <county name="大安市" value='131300'/>
+         <county name="白城市" value='137000'/>
+         <county name="洮南市" value='137100'/>
+         <county name="通榆县" value='137200'/>
+         </city>
+    <city name="白山市" value='白山市'>
+       <county name="白山市" value='134300'/>
+         <county name="长白朝鲜族自治县" value='134400'/>
+         <county name="抚松县" value='134500'/>
+         <county name="临江市" value='134600'/>
+         <county name="江源县" value='134700'/>
+         <county name="靖宇县" value='135200'/>
+         </city>
+    <city name="辽源市" value='辽源市'>
+       <county name="辽源市" value='136200'/>
+         <county name="东丰县" value='136300'/>
+         <county name="东辽县" value='136600'/>
+         </city>
+    <city name="通化" value='通化'>
+       <county name="通化市" value='134000'/>
+         <county name="通化县" value='134100'/>
+         <county name="集安市" value='134200'/>
+         <county name="梅河口市" value='135000'/>
+         <county name="辉南县" value='135100'/>
+         <county name="柳河县" value='135300'/>
+         </city>
+    <city name="长春" value='长春'>
+       <county name="长春市" value='130000'/>
+         <county name="农安市" value='130200'/>
+         <county name="德惠市" value='130300'/>
+         <county name="榆树市" value='130400'/>
+         <county name="九台市" value='130500'/>
+         </city>
+    </province>
+  <province name="四川" value='四川'>
+    <city name="乐山" value='乐山'>
+       <county name="井研县" value='612660'/>
+         <county name="乐山市" value='614000'/>
+         <county name="夹江县" value='614100'/>
+         <county name="峨眉山市" value='614200'/>
+         <county name="峨边彝族自治县" value='614300'/>
+         <county name="犍为县" value='614400'/>
+         <county name="沐川县" value='614500'/>
+         <county name="马边彝族自治县" value='614600'/>
+         <county name="金口河区" value='614700'/>
+         <county name="五通桥区" value='614800'/>
+         <county name="沙湾区" value='614900'/>
+         </city>
+    <city name="内江" value='内江'>
+       <county name="内江市" value='641000'/>
+         <county name="东兴区" value='641100'/>
+         <county name="资中县" value='641200'/>
+         <county name="隆昌县" value='642100'/>
+         <county name="威远县" value='642400'/>
+         </city>
+    <city name="凉山" value='凉山'>
+       <county name="西昌市" value='615000'/>
+         <county name="会理县" value='615100'/>
+         <county name="会东县" value='615200'/>
+         <county name="普格县" value='615300'/>
+         <county name="宁南县" value='615400'/>
+         <county name="德昌县" value='615500'/>
+         <county name="冕宁县" value='615600'/>
+         <county name="盐源县" value='615700'/>
+         <county name="木里藏族自治县" value='615800'/>
+         <county name="昭觉县" value='616100'/>
+         <county name="金阳县" value='616200'/>
+         <county name="布拖县" value='616300'/>
+         <county name="美姑县" value='616400'/>
+         <county name="雷波县" value='616500'/>
+         <county name="越西县" value='616600'/>
+         <county name="喜德县" value='616700'/>
+         <county name="甘洛县" value='616800'/>
+         </city>
+    <city name="南充" value='南充'>
+       <county name="南充市" value='637000'/>
+         <county name="高平区" value='637100'/>
+         <county name="西充县" value='637200'/>
+         <county name="南部县" value='637300'/>
+         <county name="阆中县" value='637400'/>
+         <county name="顺庆区" value='637500'/>
+         <county name="仪陇县" value='637600'/>
+         <county name="嘉陵区" value='637900'/>
+         <county name="营山县" value='638100'/>
+         <county name="蓬安县" value='638200'/>
+         </city>
+    <city name="宜宾" value='宜宾'>
+       <county name="宜宾市" value='644000'/>
+         <county name="南溪县" value='644100'/>
+         <county name="江安县" value='644200'/>
+         <county name="长宁县" value='644300'/>
+         <county name="兴文县" value='644400'/>
+         <county name="珙县" value='644500'/>
+         <county name="宜宾县" value='644600'/>
+         <county name="高县" value='645100'/>
+         <county name="筠连县" value='645200'/>
+         <county name="屏山县" value='645300'/>
+         </city>
+    <city name="巴中地区" value='巴中地区'>
+       <county name="平昌县" value='635400'/>
+         <county name="巴中市" value='635500'/>
+         <county name="南江县" value='635600'/>
+         <county name="通江县" value='635700'/>
+         </city>
+    <city name="广元" value='广元'>
+       <county name="广元市" value='628000'/>
+         <county name="青川县" value='628100'/>
+         <county name="旺苍县" value='628200'/>
+         <county name="剑阁县" value='628300'/>
+         <county name="苍溪县" value='628400'/>
+         </city>
+    <city name="广安" value='广安'>
+       <county name="岳池县" value='638300'/>
+         <county name="武胜县" value='638400'/>
+         <county name="广安市" value='638500'/>
+         <county name="邻水县" value='638501'/>
+         <county name="华蓥市" value='638600'/>
+         </city>
+    <city name="德阳" value='德阳'>
+       <county name="德阳市" value='618000'/>
+         <county name="中江县" value='618100'/>
+         <county name="绵竹县" value='618200'/>
+         <county name="广汉县" value='618300'/>
+         <county name="什邡县" value='618400'/>
+         </city>
+    <city name="成都" value='成都'>
+       <county name="温江县" value='611130'/>
+         <county name="崇庆县" value='611230'/>
+         <county name="大邑县" value='611330'/>
+         <county name="成都市" value='610000'/>
+         <county name="龙泉驿区" value='610100'/>
+         <county name="双流县" value='610200'/>
+         <county name="青白江区" value='610300'/>
+         <county name="金堂县" value='610400'/>
+         <county name="新都县" value='610500'/>
+         <county name="温江县" value='611100'/>
+         <county name="崇州市" value='611200'/>
+         <county name="大邑县" value='611300'/>
+         <county name="新津县" value='611400'/>
+         <county name="邛崃县" value='611500'/>
+         <county name="蒲江县" value='611600'/>
+         <county name="陴县" value='611700'/>
+         <county name="都江堰市" value='611800'/>
+         <county name="彭州市" value='611900'/>
+         </city>
+    <city name="攀枝花" value='攀枝花'>
+       <county name="攀枝花市" value='617000'/>
+         <county name="盐边县" value='617100'/>
+         <county name="米易县" value='617200'/>
+         </city>
+    <city name="泸州" value='泸州'>
+       <county name="泸州市" value='646000'/>
+         <county name="泸县" value='646100'/>
+         <county name="合江县" value='646200'/>
+         <county name="纳溪区" value='646300'/>
+         <county name="叙永县" value='646400'/>
+         <county name="古蔺县" value='646500'/>
+         </city>
+    <city name="甘孜" value='甘孜'>
+       <county name="康定县" value='626000'/>
+         <county name="泸定县" value='626100'/>
+         <county name="九龙县" value='626200'/>
+         <county name="丹巴县" value='626300'/>
+         <county name="道孚县" value='626400'/>
+         <county name="炉霍县" value='626500'/>
+         <county name="色达县" value='626600'/>
+         <county name="甘孜县" value='626700'/>
+         <county name="新龙县" value='626800'/>
+         <county name="白玉县" value='627100'/>
+         <county name="德格县" value='627200'/>
+         <county name="石渠县" value='627300'/>
+         <county name="雅江县" value='627400'/>
+         <county name="理塘县" value='627500'/>
+         <county name="巴塘县" value='627600'/>
+         <county name="稻城县" value='627700'/>
+         <county name="乡城县" value='627800'/>
+         <county name="得荣县" value='627900'/>
+         </city>
+    <city name="眉山地区" value='眉山地区'>
+       <county name="眉山县" value='612100'/>
+         <county name="丹棱县" value='612200'/>
+         <county name="洪雅县" value='612300'/>
+         <county name="青神县" value='612400'/>
+         <county name="仁寿县" value='612500'/>
+         <county name="彭山县" value='612700'/>
+         </city>
+    <city name="绵阳" value='绵阳'>
+       <county name="绵阳市" value='621000'/>
+         <county name="三台县" value='621100'/>
+         <county name="盐亭县" value='621600'/>
+         <county name="江油县" value='621700'/>
+         <county name="梓潼县" value='622150'/>
+         <county name="平武县" value='622550'/>
+         <county name="安县" value='622650'/>
+         <county name="北川县" value='622750'/>
+         </city>
+    <city name="自贡" value='自贡'>
+       <county name="自贡市" value='643000'/>
+         <county name="荣县" value='643100'/>
+         <county name="富顺县" value='643200'/>
+         </city>
+    <city name="资阳" value='资阳'>
+       <county name="资阳市" value='641300'/>
+         <county name="简阳市" value='641400'/>
+         <county name="乐至县" value='641500'/>
+         <county name="安岳县" value='642300'/>
+         </city>
+    <city name="达州" value='达州'>
+       <county name="达州市" value='635000'/>
+         <county name="大竹县" value='635100'/>
+         <county name="渠县" value='635200'/>
+         <county name="宣汉县" value='636100'/>
+         <county name="开江县" value='636200'/>
+         <county name="万源县" value='636300'/>
+         </city>
+    <city name="遂宁" value='遂宁'>
+       <county name="遂宁市" value='629000'/>
+         <county name="蓬溪县" value='629100'/>
+         <county name="射洪县" value='629200'/>
+         <county name="大英县" value='629300'/>
+         </city>
+    <city name="阿坝" value='阿坝'>
+       <county name="汶川县" value='623000'/>
+         <county name="理县" value='623100'/>
+         <county name="茂县" value='623200'/>
+         <county name="松潘县" value='623300'/>
+         <county name="九寨沟县" value='623400'/>
+         <county name="黑水县" value='623500'/>
+         <county name="马尔康县" value='624000'/>
+         <county name="金川县" value='624100'/>
+         <county name="小金县" value='624200'/>
+         <county name="壤塘县" value='624300'/>
+         <county name="红原县" value='624400'/>
+         <county name="若尔盖县" value='624500'/>
+         <county name="阿坝县" value='624600'/>
+         </city>
+    <city name="雅安地区" value='雅安地区'>
+       <county name="雅安市" value='625000'/>
+         <county name="名山县" value='625100'/>
+         <county name="荥经县" value='625200'/>
+         <county name="汉源县" value='625300'/>
+         <county name="石棉县" value='625400'/>
+         <county name="天全县" value='625500'/>
+         <county name="芦山县" value='625600'/>
+         <county name="宝兴县" value='625700'/>
+         </city>
+    </province>
+  <province name="宁夏" value='宁夏'>
+    <city name="中卫" value='中卫'>
+       <county name="中卫市" value='755000'/>
+         <county name="中宁县" value='755100'/>
+         <county name="海原县" value='755200'/>
+         </city>
+    <city name="吴忠" value='吴忠'>
+       <county name="吴忠市" value='751100'/>
+         <county name="同心县" value='751300'/>
+         <county name="盐池县" value='751500'/>
+         <county name="青铜峡市" value='751600'/>
+         </city>
+    <city name="固原" value='固原'>
+       <county name="固原县" value='756000'/>
+         <county name="西吉县" value='756200'/>
+         <county name="隆德县" value='756300'/>
+         <county name="泾源县" value='756400'/>
+         <county name="彭阳县" value='756500'/>
+         </city>
+    <city name="石嘴山" value='石嘴山'>
+       <county name="石嘴山市" value='753000'/>
+         <county name="平罗县" value='753400'/>
+         </city>
+    <city name="银川" value='银川'>
+       <county name="银川市" value='750000'/>
+         <county name="永宁县" value='750100'/>
+         <county name="贺兰县" value='750200'/>
+         <county name="灵武市" value='751400'/>
+         </city>
+    </province>
+  <province name="安徽" value='安徽'>
+    <city name="六安" value='六安'>
+       <county name="寿县" value='232200'/>
+         <county name="六安市" value='237000'/>
+         <county name="霍山县" value='237200'/>
+         <county name="金寨县" value='237300'/>
+         <county name="霍丘县" value='237400'/>
+         <county name="舒城县" value='231300'/>
+         </city>
+    <city name="合肥" value='合肥'>
+       <county name="肥东县" value='231600'/>
+         <county name="合肥市" value='230000'/>
+         <county name="长丰县" value='231100'/>
+         <county name="肥西县" value='231200'/>
+         </city>
+    <city name="安庆" value='安庆'>
+       <county name="安庆市" value='246000'/>
+         <county name="怀宁县" value='246100'/>
+         <county name="望江县" value='246200'/>
+         <county name="潜山县" value='246300'/>
+         <county name="太湖县" value='246400'/>
+         <county name="宿松县" value='246500'/>
+         <county name="岳西县" value='246600'/>
+         <county name="枞阳县" value='246700'/>
+         <county name="池洲市" value='247000'/>
+         <county name="东至县" value='247200'/>
+         <county name="桐城县" value='231400'/>
+         </city>
+    <city name="宣城市" value='宣城市'>
+       <county name="宣城市" value='242000'/>
+         <county name="郎溪县" value='242100'/>
+         <county name="广德县" value='242200'/>
+         <county name="宁国县" value='242300'/>
+         <county name="泾县" value='242500'/>
+         <county name="旌德县" value='242600'/>
+         <county name="青阳县" value='242800'/>
+         <county name="石台县" value='245100'/>
+         <county name="绩溪县" value='245300'/>
+         </city>
+    <city name="宿州" value='宿州'>
+       <county name="宿州市" value='234000'/>
+         <county name="灵璧县" value='234200'/>
+         <county name="泗县" value='234300'/>
+         <county name="萧县" value='235200'/>
+         <county name="砀山县" value='235300'/>
+         </city>
+    <city name="巢湖" value='巢湖'>
+       <county name="庐江县" value='231500'/>
+         <county name="巢湖市" value='238000'/>
+         <county name="含山县" value='238100'/>
+         <county name="和县" value='238200'/>
+         <county name="无为县" value='238300'/>
+         </city>
+    <city name="淮北市" value='淮北市'>
+       <county name="淮北市" value='235000'/>
+         <county name="濉溪县" value='235100'/>
+         </city>
+    <city name="淮南" value='淮南'>
+       <county name="淮南市" value='232000'/>
+         <county name="凤台县" value='232100'/>
+         </city>
+    <city name="滁州" value='滁州'>
+       <county name="凤阳县" value='233100'/>
+         <county name="定远县" value='233200'/>
+         <county name="滁州市" value='239000'/>
+         <county name="来安县" value='239200'/>
+         <county name="天长县" value='239300'/>
+         <county name="明光市" value='239400'/>
+         <county name="全椒县" value='239500'/>
+         </city>
+    <city name="芜湖" value='芜湖'>
+       <county name="芜湖市" value='241000'/>
+         <county name="芜湖县" value='241100'/>
+         <county name="繁昌县" value='241200'/>
+         <county name="南陵县" value='242400'/>
+         </city>
+    <city name="蚌埠" value='蚌埠'>
+       <county name="蚌埠市" value='233000'/>
+         <county name="五河县" value='233300'/>
+         <county name="怀远县" value='233400'/>
+         <county name="固镇县" value='233700'/>
+         </city>
+    <city name="谯城区" value='谯城区'>
+       <county name="蒙城县" value='233500'/>
+         <county name="涡阳县" value='233600'/>
+         <county name="利辛县" value='236700'/>
+         <county name="谯城区" value='236800'/>
+         </city>
+    <city name="铜陵市" value='铜陵市'>
+       <county name="铜陵市" value='244000'/>
+         <county name="铜陵县" value='244100'/>
+         </city>
+    <city name="阜阳" value='阜阳'>
+       <county name="阜阳市（县）" value='236000'/>
+         <county name="颖上县" value='236200'/>
+         <county name="阜南县" value='236300'/>
+         <county name="临泉县" value='236400'/>
+         <county name="界首市" value='236500'/>
+         <county name="太和县" value='236600'/>
+         </city>
+    <city name="马鞍山市" value='马鞍山市'>
+       <county name="马鞍山市" value='243000'/>
+         <county name="当涂县" value='243100'/>
+         </city>
+    <city name="黄山" value='黄山'>
+       <county name="黄山市（屯溪）" value='245000'/>
+         <county name="歙县" value='245200'/>
+         <county name="休宁县" value='245400'/>
+         <county name="黟县" value='245500'/>
+         <county name="祁门县" value='245600'/>
+         <county name="黄山区" value='245700'/>
+         <county name="黄山风景区" value='245800'/>
+         </city>
+    </province>
+  <province name="山东" value='山东'>
+    <city name="东营" value='东营'>
+       <county name="东营市" value='257000'/>
+         <county name="河口区" value='257200'/>
+         <county name="广饶县" value='257300'/>
+         <county name="利津县" value='257400'/>
+         <county name="垦利县" value='257500'/>
+         </city>
+    <city name="临沂" value='临沂'>
+       <county name="平邑县" value='273300'/>
+         <county name="费县" value='273400'/>
+         <county name="临沂市" value='276000'/>
+         <county name="郯城县" value='276100'/>
+         <county name="蒙阴县" value='276200'/>
+         <county name="沂南县" value='276300'/>
+         <county name="沂水县" value='276400'/>
+         <county name="莒南县" value='276600'/>
+         <county name="临沭县" value='276700'/>
+         <county name="苍山县" value='277700'/>
+         </city>
+    <city name="威海" value='威海'>
+       <county name="威海市" value='264200'/>
+         <county name="荣成市" value='264300'/>
+         <county name="文登市" value='264400'/>
+         <county name="乳山市" value='264500'/>
+         </city>
+    <city name="德州" value='德州'>
+       <county name="齐河县" value='251100'/>
+         <county name="禹城市" value='251200'/>
+         <county name="德州市" value='253000'/>
+         <county name="平原县" value='253100'/>
+         <county name="夏津县" value='253200'/>
+         <county name="武城县" value='253300'/>
+         <county name="宁津县" value='253400'/>
+         <county name="陵县" value='253500'/>
+         <county name="乐陵市" value='253600'/>
+         <county name="庆云县" value='253700'/>
+         <county name="临淄区" value='255400'/>
+         </city>
+    <city name="日照市" value='日照市'>
+       <county name="五莲县" value='262300'/>
+         <county name="莒县" value='276500'/>
+         <county name="日照市" value='276800'/>
+         </city>
+    <city name="枣庄" value='枣庄'>
+       <county name="枣庄市" value='277100'/>
+         <county name="滕州市" value='277500'/>
+         </city>
+    <city name="泰安" value='泰安'>
+       <county name="泰安市" value='271000'/>
+         <county name="新泰市" value='271200'/>
+         <county name="宁阳县" value='271400'/>
+         <county name="东平县" value='271500'/>
+         <county name="肥城市" value='271600'/>
+         </city>
+    <city name="济南" value='济南'>
+       <county name="济南市" value='250000'/>
+         <county name="章丘市" value='250200'/>
+         <county name="长清县" value='250300'/>
+         <county name="平阴县" value='250400'/>
+         <county name="济阳县" value='251400'/>
+         <county name="商河县" value='251600'/>
+         </city>
+    <city name="济宁" value='济宁'>
+       <county name="兖州市" value='272000'/>
+         <county name="金乡县" value='272200'/>
+         <county name="鱼台县" value='272300'/>
+         <county name="嘉祥县" value='272400'/>
+         <county name="汶上县" value='272500'/>
+         <county name="梁山县" value='272600'/>
+         <county name="曲阜市" value='273100'/>
+         <county name="泗水县" value='273200'/>
+         <county name="邹城市" value='273500'/>
+         <county name="微山县" value='277600'/>
+         </city>
+    <city name="淄博" value='淄博'>
+       <county name="淄博市" value='255000'/>
+         <county name="沂源县" value='256100'/>
+         <county name="高青县" value='256300'/>
+         <county name="桓台县" value='256400'/>
+         </city>
+    <city name="滨州市" value='滨州市'>
+       <county name="惠民县" value='251700'/>
+         <county name="阳信县" value='251800'/>
+         <county name="无棣县" value='251900'/>
+         <county name="邹平县" value='256200'/>
+         <county name="博兴县" value='256500'/>
+         <county name="滨州市" value='256600'/>
+         <county name="沾化县" value='256800'/>
+         </city>
+    <city name="潍坊" value='潍坊'>
+       <county name="潍坊市" value='261000'/>
+         <county name="昌邑县" value='261300'/>
+         <county name="莱州市" value='261400'/>
+         <county name="高密县" value='261500'/>
+         <county name="安丘县" value='262100'/>
+         <county name="诸城市" value='262200'/>
+         <county name="昌乐县" value='262400'/>
+         <county name="青州市(益都)" value='262500'/>
+         <county name="临朐县" value='262600'/>
+         <county name="寿光县" value='262700'/>
+         </city>
+    <city name="烟台" value='烟台'>
+       <county name="烟台市" value='264000'/>
+         <county name="牟平区" value='264100'/>
+         <county name="海阳县" value='265100'/>
+         <county name="莱阳市" value='265200'/>
+         <county name="栖霞县" value='265300'/>
+         <county name="招远县" value='265400'/>
+         <county name="福山区" value='265500'/>
+         <county name="蓬莱县" value='265600'/>
+         <county name="龙口市" value='265700'/>
+         <county name="长岛县" value='265800'/>
+         </city>
+    <city name="聊城" value='聊城'>
+       <county name="聊城市" value='252000'/>
+         <county name="茌平县" value='252100'/>
+         <county name="东阿县" value='252200'/>
+         <county name="阳谷县" value='252300'/>
+         <county name="莘县" value='252400'/>
+         <county name="冠县" value='252500'/>
+         <county name="临清市" value='252600'/>
+         <county name="高唐县" value='252800'/>
+         </city>
+    <city name="荷泽" value='荷泽'>
+       <county name="荷泽市" value='274000'/>
+         <county name="定陶县" value='274100'/>
+         <county name="成武县" value='274200'/>
+         <county name="单县" value='274300'/>
+         <county name="曹县" value='274400'/>
+         <county name="东明县" value='274500'/>
+         <county name="鄄城县" value='274600'/>
+         <county name="郓城县" value='274700'/>
+         <county name="巨野县" value='274900'/>
+         </city>
+    <city name="莱芜市" value='莱芜市'>
+       <county name="莱芜市" value='271100'/>
+         </city>
+    <city name="青岛" value='青岛'>
+       <county name="青岛市" value='266000'/>
+         <county name="李仓区" value='266100'/>
+         <county name="即墨县" value='266200'/>
+         <county name="胶州市" value='266300'/>
+         <county name="胶南县" value='266400'/>
+         <county name="经济技术开发区" value='266500'/>
+         <county name="莱西县" value='266600'/>
+         <county name="市南区" value='266700'/>
+         <county name="四方区" value='266800'/>
+         <county name="崂山区" value='266900'/>
+         <county name="黄岛区" value='266110'/>
+         <county name="城阳区" value='266120'/>
+         <county name="平度市" value='266130'/>
+         </city>
+    </province>
+  <province name="山西" value='山西'>
+    <city name="临汾" value='临汾'>
+       <county name="霍州市" value='031400'/>
+         <county name="汾西县" value='031500'/>
+         <county name="临汾市" value='041000'/>
+         <county name="蒲县" value='041200'/>
+         <county name="隰县" value='041300'/>
+         <county name="永和县" value='041400'/>
+         <county name="襄汾县" value='041500'/>
+         <county name="洪洞县" value='041600'/>
+         <county name="乡宁县" value='042100'/>
+         <county name="吉县" value='042200'/>
+         <county name="大宁县" value='042300'/>
+         <county name="古县" value='042400'/>
+         <county name="安泽县" value='042500'/>
+         <county name="浮山县" value='042600'/>
+         <county name="侯马市" value='043000'/>
+         <county name="曲沃县" value='043400'/>
+         <county name="翼城县" value='043500'/>
+         </city>
+    <city name="吕梁地区" value='吕梁地区'>
+       <county name="交城县" value='030500'/>
+         <county name="文水县" value='032100'/>
+         <county name="汾阳县" value='032200'/>
+         <county name="孝义市" value='032300'/>
+         <county name="交口县" value='032400'/>
+         <county name="石楼县" value='032500'/>
+         <county name="离石市" value='033000'/>
+         <county name="方山县" value='033100'/>
+         <county name="临县" value='033200'/>
+         <county name="柳林县" value='033300'/>
+         <county name="中阳县" value='033400'/>
+         <county name="岚县" value='035200'/>
+         <county name="兴县" value='035300'/>
+         </city>
+    <city name="大同" value='大同'>
+       <county name="灵丘县" value='034400'/>
+         <county name="大同市" value='037000'/>
+         <county name="左云县" value='037100'/>
+         <county name="大同县" value='037300'/>
+         <county name="浑源县" value='037400'/>
+         <county name="广灵县" value='037500'/>
+         <county name="阳高县" value='038100'/>
+         <county name="天镇县" value='038200'/>
+         </city>
+    <city name="太原" value='太原'>
+       <county name="太原市" value='030000'/>
+         <county name="阳曲县" value='030100'/>
+         <county name="古交市" value='030200'/>
+         <county name="娄烦县" value='030300'/>
+         <county name="清徐县" value='030400'/>
+         </city>
+    <city name="忻州" value='忻州'>
+       <county name="忻州市" value='034000'/>
+         <county name="原平县" value='034100'/>
+         <county name="代县" value='034200'/>
+         <county name="繁峙县" value='034300'/>
+         <county name="静乐县" value='035100'/>
+         <county name="定襄县" value='035400'/>
+         <county name="五台县" value='035500'/>
+         <county name="宁武县" value='036000'/>
+         <county name="神池县" value='036100'/>
+         <county name="五寨县" value='036200'/>
+         <county name="岢岚县" value='036300'/>
+         <county name="偏关县" value='036400'/>
+         <county name="河曲县" value='036500'/>
+         <county name="保德县" value='036600'/>
+         </city>
+    <city name="晋中市" value='晋中市'>
+       <county name="榆次市" value='030600'/>
+         <county name="太谷县" value='030800'/>
+         <county name="祁县" value='030900'/>
+         <county name="平遥县" value='031100'/>
+         <county name="介休县" value='031200'/>
+         <county name="灵石县" value='031300'/>
+         <county name="寿阳县" value='031700'/>
+         <county name="榆社县" value='031800'/>
+         <county name="左权县" value='032600'/>
+         <county name="和顺县" value='032700'/>
+         </city>
+    <city name="晋城市" value='晋城市'>
+       <county name="晋城市" value='048000'/>
+         <county name="阳城县" value='048100'/>
+         <county name="沁水县" value='048200'/>
+         <county name="陵川县" value='048300'/>
+         <county name="高平县" value='048400'/>
+         </city>
+    <city name="朔州市" value='朔州市'>
+       <county name="朔州市" value='036001'/>
+         <county name="朔城区" value='036002'/>
+         <county name="右玉县" value='037200'/>
+         <county name="应县" value='037600'/>
+         <county name="怀仁县" value='038300'/>
+         <county name="山阴县" value='038400'/>
+         <county name="平鲁区" value='038600'/>
+         </city>
+    <city name="运城市" value='运城市'>
+       <county name="新绛县" value='043100'/>
+         <county name="稷山县" value='043200'/>
+         <county name="河津市" value='043300'/>
+         <county name="绛县" value='043600'/>
+         <county name="垣曲县" value='043700'/>
+         <county name="闻喜县" value='043800'/>
+         <county name="运城市" value='044000'/>
+         <county name="临猗县" value='044100'/>
+         <county name="万荣县" value='044200'/>
+         <county name="平陆县" value='044300'/>
+         <county name="夏县" value='044400'/>
+         <county name="永济市" value='044500'/>
+         <county name="芮城县" value='044600'/>
+         </city>
+    <city name="长治市" value='长治市'>
+       <county name="长治市" value='046000'/>
+         <county name="屯留县" value='046100'/>
+         <county name="襄垣县" value='046200'/>
+         <county name="武乡县" value='046300'/>
+         <county name="沁县" value='046400'/>
+         <county name="沁源县" value='046500'/>
+         <county name="长子县" value='046600'/>
+         <county name="长治县" value='047100'/>
+         <county name="壶关县" value='047300'/>
+         <county name="平顺县" value='047400'/>
+         <county name="潞城市" value='047500'/>
+         <county name="黎城县" value='047600'/>
+         </city>
+    <city name="阳泉市" value='阳泉市'>
+       <county name="阳泉市" value='045000'/>
+         <county name="孟县" value='045100'/>
+         <county name="平定县" value='045200'/>
+         </city>
+    </province>
+  <province name="广东" value='广东'>
+    <city name="东莞" value='东莞'>
+       <county name="东莞市" value='511700'/>
+         </city>
+    <city name="中山" value='中山'>
+       <county name="中山市" value='528400'/>
+         </city>
+    <city name="云浮" value='云浮'>
+       <county name="郁南县" value='527100'/>
+         <county name="罗定市" value='527200'/>
+         <county name="云浮市" value='527300'/>
+         <county name="新兴县" value='527400'/>
+         <county name="云安县" value='527500'/>
+         </city>
+    <city name="佛山" value='佛山'>
+       <county name="佛山市" value='528000'/>
+         <county name="三水区" value='528100'/>
+         <county name="南海区" value='528200'/>
+         <county name="顺德区" value='528300'/>
+         <county name="高明区" value='528500'/>
+         </city>
+    <city name="广州" value='广州'>
+       <county name="广州市" value='510000'/>
+         <county name="花都市" value='510800'/>
+         <county name="从化县" value='510900'/>
+         <county name="增城县" value='511300'/>
+         <county name="番禺县" value='511400'/>
+         </city>
+    <city name="惠州" value='惠州'>
+       <county name="龙门县" value='511200'/>
+         <county name="惠州市" value='516000'/>
+         <county name="博罗县" value='516100'/>
+         <county name="惠阳区" value='516200'/>
+         <county name="惠东县" value='516300'/>
+         </city>
+    <city name="揭阳" value='揭阳'>
+       <county name="惠来县" value='515200'/>
+         <county name="普宁市" value='515300'/>
+         <county name="揭西县" value='515400'/>
+         <county name="揭东县" value='515500'/>
+         <county name="揭阳市" value='522000'/>
+         </city>
+    <city name="梅州" value='梅州'>
+       <county name="梅州市" value='514000'/>
+         <county name="蕉岭县" value='514100'/>
+         <county name="大埔县" value='514200'/>
+         <county name="丰顺县" value='514300'/>
+         <county name="五华县" value='514400'/>
+         <county name="兴宁县" value='514500'/>
+         <county name="平远县" value='514600'/>
+         <county name="梅县" value='514700'/>
+         </city>
+    <city name="汕头" value='汕头'>
+       <county name="汕头市" value='515000'/>
+         <county name="潮阳、潮南区" value='515100'/>
+         <county name="澄海区" value='515800'/>
+         <county name="南澳县" value='515900'/>
+         </city>
+    <city name="汕尾" value='汕尾'>
+       <county name="海丰县" value='516400'/>
+         <county name="陆丰县" value='516500'/>
+         <county name="汕尾市" value='516600'/>
+         </city>
+    <city name="江门" value='江门'>
+       <county name="江门市" value='529000'/>
+         <county name="台山市" value='529200'/>
+         <county name="开平市" value='529300'/>
+         <county name="恩平市" value='529400'/>
+         <county name="鹤山市" value='529700'/>
+         </city>
+    <city name="河源" value='河源'>
+       <county name="河源市" value='517000'/>
+         <county name="连平县" value='517100'/>
+         <county name="和平县" value='517200'/>
+         <county name="龙川县" value='517300'/>
+         <county name="紫金县" value='517400'/>
+         <county name="东源县" value='517500'/>
+         </city>
+    <city name="深圳" value='深圳'>
+       <county name="深圳市" value='518000'/>
+         </city>
+    <city name="清远市" value='清远市'>
+       <county name="清远市" value='511500'/>
+         <county name="佛冈县" value='511600'/>
+         <county name="清新县" value='511800'/>
+         <county name="英德市" value='513000'/>
+         <county name="阳山县" value='513100'/>
+         <county name="连山壮族瑶族自治县" value='513200'/>
+         <county name="连南瑶族自治县" value='513300'/>
+         <county name="连州市" value='513400'/>
+         </city>
+    <city name="湛江" value='湛江'>
+       <county name="湛江市" value='524000'/>
+         <county name="徐闻县" value='524100'/>
+         <county name="雷州市" value='524200'/>
+         <county name="遂溪县" value='524300'/>
+         <county name="廉江市" value='524400'/>
+         <county name="吴川市" value='524500'/>
+         </city>
+    <city name="潮州" value='潮州'>
+       <county name="潮安县" value='515600'/>
+         <county name="饶平县" value='515700'/>
+         <county name="潮州市" value='521000'/>
+         </city>
+    <city name="珠海" value='珠海'>
+       <county name="珠海市" value='519000'/>
+         </city>
+    <city name="肇庆" value='肇庆'>
+       <county name="肇庆市" value='526000'/>
+         <county name="高要县" value='526100'/>
+         <county name="四会县" value='526200'/>
+         <county name="广宁县" value='526300'/>
+         <county name="怀集县" value='526400'/>
+         <county name="封开县" value='526500'/>
+         <county name="德庆县" value='526600'/>
+         </city>
+    <city name="茂名" value='茂名'>
+       <county name="茂名市" value='525000'/>
+         <county name="化州市" value='525100'/>
+         <county name="高州市" value='525200'/>
+         <county name="信宜市" value='525300'/>
+         <county name="电白县" value='525400'/>
+         </city>
+    <city name="阳江" value='阳江'>
+       <county name="阳江市" value='529500'/>
+         <county name="阳春市" value='529600'/>
+         <county name="阳西县" value='529800'/>
+         <county name="阳东县" value='529900'/>
+         </city>
+    <city name="韶关" value='韶关'>
+       <county name="新丰县" value='511100'/>
+         <county name="韶关市" value='512000'/>
+         <county name="曲江县" value='512100'/>
+         <county name="乐昌县" value='512200'/>
+         <county name="仁化县" value='512300'/>
+         <county name="南雄县" value='512400'/>
+         <county name="始兴县" value='512500'/>
+         <county name="翁源县" value='512600'/>
+         <county name="乳源瑶族自治县" value='512700'/>
+         </city>
+    </province>
+  <province name="广西" value='广西'>
+    <city name="北海" value='北海'>
+       <county name="北海市" value='536000'/>
+         <county name="合浦县" value='536100'/>
+         </city>
+    <city name="南宁" value='南宁'>
+       <county name="南宁市" value='530000'/>
+         <county name="武鸣县" value='530100'/>
+         <county name="邕宁县" value='530200'/>
+         <county name="横县" value='530300'/>
+         <county name="宾阳县" value='530400'/>
+         <county name="上林县" value='530500'/>
+         <county name="马山县" value='530600'/>
+         <county name="隆安县" value='532700'/>
+         </city>
+    <city name="崇左" value='崇左'>
+       <county name="扶绥县" value='532100'/>
+         <county name="崇左市" value='532200'/>
+         <county name="大新县" value='532300'/>
+         <county name="龙州县" value='532400'/>
+         <county name="宁明县" value='532500'/>
+         <county name="凭祥市" value='532600'/>
+         <county name="天等县" value='532800'/>
+         </city>
+    <city name="来宾" value='来宾'>
+       <county name="金秀瑶族自治县" value='545700'/>
+         <county name="象州县" value='545800'/>
+         <county name="武宣县" value='545900'/>
+         <county name="来宾市" value='546100'/>
+         <county name="忻城县" value='546200'/>
+         <county name="合山市" value='546500'/>
+         </city>
+    <city name="柳州" value='柳州'>
+       <county name="柳州市" value='545000'/>
+         <county name="柳江县" value='545100'/>
+         <county name="柳城县" value='545200'/>
+         <county name="融水苗族自治县" value='545300'/>
+         <county name="融安县" value='545400'/>
+         <county name="三江侗族自治县" value='545500'/>
+         <county name="鹿寨县" value='545600'/>
+         </city>
+    <city name="桂林" value='桂林'>
+       <county name="桂林市" value='541000'/>
+         <county name="临桂县" value='541100'/>
+         <county name="灵川县" value='541200'/>
+         <county name="兴安县" value='541300'/>
+         <county name="资源县" value='541400'/>
+         <county name="全州县" value='541500'/>
+         <county name="灌阳县" value='541600'/>
+         <county name="龙胜各族自治县" value='541700'/>
+         <county name="永福县" value='541800'/>
+         <county name="阳朔县" value='541900'/>
+         <county name="平乐县" value='542400'/>
+         <county name="恭城县" value='542500'/>
+         <county name="荔浦县" value='546600'/>
+         </city>
+    <city name="梧州" value='梧州'>
+       <county name="梧州市" value='543000'/>
+         <county name="苍梧县" value='543100'/>
+         <county name="岑溪县" value='543200'/>
+         <county name="藤县" value='543300'/>
+         <county name="蒙山县" value='546700'/>
+         </city>
+    <city name="河池" value='河池'>
+       <county name="都安瑶族自治县" value='530700'/>
+         <county name="大化瑶族自治县" value='530800'/>
+         <county name="宜州市" value='546300'/>
+         <county name="罗城仫佬自治县" value='546400'/>
+         <county name="河池市" value='547000'/>
+         <county name="环江毛南族自治县" value='547100'/>
+         <county name="南丹县" value='547200'/>
+         <county name="天峨县" value='547300'/>
+         <county name="东兰县" value='547400'/>
+         <county name="巴马瑶族自治县" value='547500'/>
+         <county name="凤山县" value='547600'/>
+         </city>
+    <city name="玉林" value='玉林'>
+       <county name="玉林市" value='537000'/>
+         <county name="北流县" value='537400'/>
+         <county name="容县" value='537500'/>
+         <county name="博白县" value='537600'/>
+         <county name="陆川县" value='537700'/>
+         <county name="兴业县" value='537800'/>
+         </city>
+    <city name="百色" value='百色'>
+       <county name="平果县" value='531400'/>
+         <county name="田东县" value='531500'/>
+         <county name="百色市" value='533000'/>
+         <county name="凌云县" value='533100'/>
+         <county name="乐业县" value='533200'/>
+         <county name="田林县" value='533300'/>
+         <county name="隆林各族自治县" value='533400'/>
+         <county name="西林县" value='533500'/>
+         <county name="田阳县" value='533600'/>
+         <county name="德保县" value='533700'/>
+         <county name="靖西县" value='533800'/>
+         <county name="那坡县" value='533900'/>
+         </city>
+    <city name="贵港" value='贵港'>
+       <county name="贵港市" value='537100'/>
+         <county name="桂平县" value='537200'/>
+         <county name="平南县" value='537300'/>
+         </city>
+    <city name="贺州" value='贺州'>
+       <county name="钟山县" value='542600'/>
+         <county name="富川瑶族自治县" value='542700'/>
+         <county name="贺州市" value='542800'/>
+         <county name="昭平县" value='546800'/>
+         </city>
+    <city name="钦州" value='钦州'>
+       <county name="钦州市" value='535000'/>
+         <county name="浦北县" value='535300'/>
+         <county name="灵山县" value='535400'/>
+         </city>
+    <city name="防城港" value='防城港'>
+       <county name="上思县" value='535500'/>
+         <county name="防城港市" value='538000'/>
+         <county name="东兴市" value='538100'/>
+         </city>
+    </province>
+  <province name="新疆" value='新疆'>
+    <city name="乌鲁木齐" value='乌鲁木齐'>
+       <county name="乌鲁木齐市" value='830000'/>
+         </city>
+    <city name="伊犁哈萨克自治州" value='伊犁哈萨克自治州'>
+       <county name="伊宁市" value='835000'/>
+         <county name="伊宁县" value='835100'/>
+         <county name="霍城县" value='835200'/>
+         <county name="察布查尔锡伯自治县" value='835300'/>
+         <county name="巩留县" value='835400'/>
+         <county name="特克斯县" value='835500'/>
+         <county name="昭苏县" value='835600'/>
+         <county name="尼勒克县" value='835700'/>
+         <county name="新源县" value='835800'/>
+         </city>
+    <city name="克孜勒苏柯尔克自治州" value='克孜勒苏柯尔克自治州'>
+       <county name="阿合奇县" value='843500'/>
+         <county name="阿图什市" value='845300'/>
+         <county name="乌恰县" value='845400'/>
+         <county name="阿克陶县" value='845500'/>
+         </city>
+    <city name="克拉玛依" value='克拉玛依'>
+       <county name="克拉玛依市" value='834000'/>
+         </city>
+    <city name="博尔塔拉蒙古自治州" value='博尔塔拉蒙古自治州'>
+       <county name="精河县" value='833300'/>
+         <county name="博乐市" value='833400'/>
+         <county name="温泉县" value='833500'/>
+         </city>
+    <city name="吐鲁番" value='吐鲁番'>
+       <county name="吐鲁番市" value='838000'/>
+         <county name="托克逊县" value='838100'/>
+         <county name="鄯善县" value='838200'/>
+         </city>
+    <city name="和田" value='和田'>
+       <county name="墨玉县" value='848100'/>
+         <county name="洛浦县" value='848200'/>
+         <county name="策勒县" value='848300'/>
+         <county name="于田县" value='848400'/>
+         <county name="民丰县" value='848500'/>
+         <county name="皮山县" value='845150'/>
+         <county name="和田市（县）" value='848000'/>
+         </city>
+    <city name="哈密" value='哈密'>
+       <county name="哈密市" value='839000'/>
+         <county name="巴里坤哈萨克自治县" value='839200'/>
+         <county name="伊吾县" value='839300'/>
+         </city>
+    <city name="喀什" value='喀什'>
+       <county name="巴楚县" value='843800'/>
+         <county name="喀什市" value='844000'/>
+         <county name="疏附县" value='844100'/>
+         <county name="疏勒县" value='844200'/>
+         <county name="伽师县" value='844300'/>
+         <county name="岳普湖县" value='844400'/>
+         <county name="英吉沙县" value='844500'/>
+         <county name="麦盖提县" value='844600'/>
+         <county name="莎车县" value='844700'/>
+         <county name="泽普县" value='844800'/>
+         <county name="叶城县" value='844900'/>
+         <county name="塔什库尔干塔吉克自治县" value='845200'/>
+         </city>
+    <city name="塔城地区" value='塔城地区'>
+       <county name="沙湾县" value='832100'/>
+         <county name="乌苏市" value='833000'/>
+         <county name="和布克赛尔蒙古自治县" value='834400'/>
+         <county name="托里县" value='834500'/>
+         <county name="额敏县" value='834600'/>
+         <county name="塔城市" value='834700'/>
+         <county name="裕民县" value='834800'/>
+         </city>
+    <city name="巴音郭楞蒙古自治州" value='巴音郭楞蒙古自治州'>
+       <county name="库尔勒市" value='841000'/>
+         <county name="焉耆回族自治县" value='841100'/>
+         <county name="和硕县" value='841200'/>
+         <county name="和静县" value='841300'/>
+         <county name="博湖县" value='841400'/>
+         <county name="尉犁县" value='841500'/>
+         <county name="轮台县" value='841600'/>
+         <county name="若羌县" value='841800'/>
+         <county name="且末县" value='841900'/>
+         </city>
+    <city name="昌吉回族自治州" value='昌吉回族自治州'>
+       <county name="昌吉市" value='831100'/>
+         <county name="呼图壁县" value='831200'/>
+         <county name="五家渠市" value='831300'/>
+         <county name="米泉县" value='831400'/>
+         <county name="阜康县" value='831500'/>
+         <county name="吉木萨尔县" value='831700'/>
+         <county name="奇台县" value='831800'/>
+         <county name="玛纳斯县" value='832200'/>
+         </city>
+    <city name="石河子" value='石河子'>
+       <county name="石河子市" value='832000'/>
+         </city>
+    <city name="阿克苏" value='阿克苏'>
+       <county name="库车县" value='842000'/>
+         <county name="新和县" value='842100'/>
+         <county name="沙雅县" value='842200'/>
+         <county name="拜城县" value='842300'/>
+         <county name="阿克苏市" value='843000'/>
+         <county name="温宿县" value='843100'/>
+         <county name="阿瓦提县" value='843200'/>
+         <county name="阿拉尔市" value='843300'/>
+         <county name="乌什县" value='843400'/>
+         <county name="柯坪县" value='843600'/>
+         </city>
+    <city name="阿勒泰地区" value='阿勒泰地区'>
+       <county name="富蕴县" value='836100'/>
+         <county name="青河县" value='836200'/>
+         <county name="福海县" value='836400'/>
+         <county name="阿勒泰市" value='836500'/>
+         <county name="布尔津县" value='836600'/>
+         <county name="哈巴河县" value='836700'/>
+         <county name="吉木乃县" value='836800'/>
+         </city>
+    </province>
+  <province name="新疆建设兵团" value='新疆建设兵团'>
+    <city name="新疆建设兵团" value='新疆建设兵团'>
+       <county name="新疆建设兵团" value='930000'/>
+         </city>
+    </province>
+  <province name="黑龙江" value='黑龙江'>
+    <city name="七台河市" value='七台河市'>
+       <county name="勃利县" value='154500'/>
+         <county name="七台河市" value='154600'/>
+         </city>
+    <city name="伊春市" value='伊春市'>
+       <county name="铁力市" value='152500'/>
+         <county name="伊春市" value='153000'/>
+         <county name="嘉荫县" value='153200'/>
+         </city>
+    <city name="佳木斯" value='佳木斯'>
+       <county name="佳木斯市" value='154000'/>
+         <county name="桦川县" value='154300'/>
+         <county name="桦南县" value='154400'/>
+         <county name="汤原县" value='154700'/>
+         <county name="富锦市" value='156100'/>
+         <county name="建三江" value='156300'/>
+         <county name="同江市" value='156400'/>
+         <county name="抚远县" value='156500'/>
+         </city>
+    <city name="双鸭山市" value='双鸭山市'>
+       <county name="双鸭山市" value='155100'/>
+         <county name="宝清县" value='155600'/>
+         <county name="饶河县" value='155700'/>
+         <county name="友谊县" value='155800'/>
+         <county name="集贤县" value='155900'/>
+         </city>
+    <city name="哈尔滨" value='哈尔滨'>
+       <county name="哈尔滨市" value='150000'/>
+         <county name="双城市" value='150100'/>
+         <county name="五常市" value='150200'/>
+         <county name="阿城市" value='150300'/>
+         <county name="宾县" value='150400'/>
+         <county name="尚志市" value='150600'/>
+         <county name="延寿县" value='150700'/>
+         <county name="方正县" value='150800'/>
+         <county name="通河县" value='150900'/>
+         <county name="巴彦县" value='151800'/>
+         <county name="木兰县" value='151900'/>
+         <county name="依兰县" value='154800'/>
+         </city>
+    <city name="大兴安岭" value='大兴安岭'>
+       <county name="大兴安岭" value='165000'/>
+         <county name="呼玛县" value='165100'/>
+         <county name="塔河县" value='165200'/>
+         <county name="漠河县" value='165300'/>
+         </city>
+    <city name="大庆" value='大庆'>
+       <county name="大庆市" value='163000'/>
+         <county name="杜尔伯特蒙古族自治县" value='166200'/>
+         <county name="林甸县" value='166300'/>
+         <county name="肇州县" value='166400'/>
+         <county name="肇源县" value='166500'/>
+         </city>
+    <city name="松原市" value='松原市'>
+       <county name="松原市" value='138000'/>
+         </city>
+    <city name="牡丹江" value='牡丹江'>
+       <county name="牡丹江市" value='157000'/>
+         <county name="海林市" value='157100'/>
+         <county name="东宁县" value='157200'/>
+         <county name="绥芬河市" value='157300'/>
+         <county name="宁安市" value='157400'/>
+         <county name="穆棱市" value='157500'/>
+         <county name="林口县" value='157600'/>
+         </city>
+    <city name="绥化" value='绥化'>
+       <county name="肇东市" value='151100'/>
+         <county name="安达市" value='151400'/>
+         <county name="兰西县" value='151500'/>
+         <county name="青冈县" value='151600'/>
+         <county name="明水县" value='151700'/>
+         <county name="绥化市" value='152000'/>
+         <county name="望奎县" value='152100'/>
+         <county name="绥棱县" value='152200'/>
+         <county name="海伦县" value='152300'/>
+         <county name="庆安县" value='152400'/>
+         </city>
+    <city name="鸡西市" value='鸡西市'>
+       <county name="鸡西市" value='158100'/>
+         <county name="鸡东县" value='158200'/>
+         <county name="密山市" value='158300'/>
+         <county name="虎林县" value='158400'/>
+         </city>
+    <city name="鹤岗市" value='鹤岗市'>
+       <county name="鹤岗市" value='154100'/>
+         <county name="萝北县" value='154200'/>
+         <county name="绥滨县" value='156200'/>
+         </city>
+    <city name="黑河市" value='黑河市'>
+       <county name="嫩江县" value='161400'/>
+         <county name="北安市" value='164000'/>
+         <county name="五大连池市" value='164100'/>
+         <county name="孙吴县" value='164200'/>
+         <county name="黑河市" value='164300'/>
+         <county name="逊克县" value='164400'/>
+         </city>
+    <city name="齐齐哈尔" value='齐齐哈尔'>
+       <county name="齐齐哈尔市" value='161000'/>
+         <county name="龙江县" value='161100'/>
+         <county name="富裕县" value='161200'/>
+         <county name="讷河市" value='161300'/>
+         <county name="依安县" value='161500'/>
+         <county name="克山县" value='161600'/>
+         <county name="甘南县" value='162100'/>
+         <county name="泰来县" value='162400'/>
+         <county name="拜泉县" value='164700'/>
+         <county name="克东县" value='164800'/>
+         </city>
+    </province>
+  <province name="江苏" value='江苏'>
+    <city name="南京" value='南京'>
+       <county name="南京市" value='210000'/>
+         <county name="江宁区" value='211100'/>
+         <county name="溧水县" value='211200'/>
+         <county name="高淳县" value='211300'/>
+         <county name="六合县" value='211500'/>
+         </city>
+    <city name="南通" value='南通'>
+       <county name="南通市" value='226000'/>
+         <county name="海门县" value='226100'/>
+         <county name="启东县" value='226200'/>
+         <county name="通州市" value='226300'/>
+         <county name="如东县" value='226400'/>
+         <county name="如皋县" value='226500'/>
+         <county name="海安县" value='226600'/>
+         </city>
+    <city name="宿迁市" value='宿迁市'>
+       <county name="沭阳县" value='223600'/>
+         <county name="泗阳县" value='223700'/>
+         <county name="宿迁市" value='223800'/>
+         <county name="宿豫县" value='223801'/>
+         <county name="泗洪县" value='223900'/>
+         </city>
+    <city name="常州" value='常州'>
+       <county name="常州市" value='213000'/>
+         <county name="武进区" value='213100'/>
+         <county name="金坛县" value='213200'/>
+         <county name="溧阳县" value='213300'/>
+         </city>
+    <city name="徐州" value='徐州'>
+       <county name="徐州市" value='221000'/>
+         <county name="铜山县" value='221112'/>
+         <county name="睢宁县" value='221200'/>
+         <county name="邳州市" value='221300'/>
+         <county name="新沂县" value='221400'/>
+         <county name="沛县" value='221600'/>
+         <county name="丰县" value='221700'/>
+         </city>
+    <city name="扬州" value='扬州'>
+       <county name="仪征市" value='211400'/>
+         <county name="胥浦" value='211900'/>
+         <county name="扬州市" value='225000'/>
+         <county name="江都市" value='225200'/>
+         <county name="高邮市" value='225600'/>
+         <county name="宝应县" value='225800'/>
+         </city>
+    <city name="无锡" value='无锡'>
+       <county name="无锡市" value='214000'/>
+         <county name="锡山区" value='214100'/>
+         <county name="宜兴市" value='214200'/>
+         <county name="江阴市" value='214400'/>
+         </city>
+    <city name="泰州市" value='泰州市'>
+       <county name="靖江县" value='214500'/>
+         <county name="泰州市" value='225300'/>
+         <county name="泰兴市" value='225400'/>
+         <county name="姜堰市" value='225500'/>
+         <county name="兴化市" value='225700'/>
+         </city>
+    <city name="淮安" value='淮安'>
+       <county name="金湖县" value='211600'/>
+         <county name="盱眙县" value='211700'/>
+         <county name="淮安市" value='223000'/>
+         <county name="洪泽县" value='223100'/>
+         <county name="楚州区" value='223200'/>
+         <county name="涟水县" value='223400'/>
+         </city>
+    <city name="盐城" value='盐城'>
+       <county name="盐城市" value='224000'/>
+         <county name="大丰市" value='224100'/>
+         <county name="东台市" value='224200'/>
+         <county name="射阳县" value='224300'/>
+         <county name="阜宁县" value='224400'/>
+         <county name="滨海县" value='224500'/>
+         <county name="响水县" value='224600'/>
+         <county name="建湖县" value='224700'/>
+         </city>
+    <city name="苏州" value='苏州'>
+       <county name="苏州市" value='215000'/>
+         <county name="吴中区" value='215100'/>
+         <county name="吴江县" value='215200'/>
+         <county name="昆山市" value='215300'/>
+         <county name="太仓县" value='215400'/>
+         <county name="常熟市" value='215500'/>
+         <county name="张家港市" value='215600'/>
+         </city>
+    <city name="连云港" value='连云港'>
+       <county name="连云港市" value='222000'/>
+         <county name="赣榆县" value='222100'/>
+         <county name="灌云县" value='222200'/>
+         <county name="东海县" value='222300'/>
+         <county name="灌南县" value='223500'/>
+         </city>
+    <city name="镇江" value='镇江'>
+       <county name="镇江市" value='212000'/>
+         <county name="丹徒区" value='212100'/>
+         <county name="扬中市" value='212200'/>
+         <county name="丹阳市" value='212300'/>
+         <county name="句容市" value='212400'/>
+         </city>
+    </province>
+  <province name="江西" value='江西'>
+    <city name="上饶" value='上饶'>
+       <county name="波阳县" value='333100'/>
+         <county name="婺源县" value='333200'/>
+         <county name="上饶市" value='334000'/>
+         <county name="上饶县" value='334100'/>
+         <county name="德兴县" value='334200'/>
+         <county name="横峰县" value='334300'/>
+         <county name="弋阳县" value='334400'/>
+         <county name="铅山县" value='334500'/>
+         <county name="广丰县" value='334600'/>
+         <county name="玉山县" value='334700'/>
+         <county name="余干县" value='335100'/>
+         <county name="万年县" value='335500'/>
+         </city>
+    <city name="九江" value='九江'>
+       <county name="永修县" value='330300'/>
+         <county name="德安县" value='330400'/>
+         <county name="九江市" value='332000'/>
+         <county name="九江县" value='332100'/>
+         <county name="瑞昌县" value='332200'/>
+         <county name="武宁县" value='332300'/>
+         <county name="修水县" value='332400'/>
+         <county name="湖口县" value='332500'/>
+         <county name="都昌县" value='332600'/>
+         <county name="彭泽县" value='332700'/>
+         <county name="星子县" value='332800'/>
+         </city>
+    <city name="南昌" value='南昌'>
+       <county name="南昌市" value='330000'/>
+         <county name="新建县" value='330100'/>
+         <county name="南昌县" value='330200'/>
+         <county name="安义县" value='330500'/>
+         <county name="进贤县" value='331700'/>
+         </city>
+    <city name="吉安" value='吉安'>
+       <county name="新干县" value='331300'/>
+         <county name="峡江县" value='331400'/>
+         <county name="永丰县" value='331500'/>
+         <county name="吉水县" value='331600'/>
+         <county name="吉安市" value='343000'/>
+         <county name="吉安县" value='343100'/>
+         <county name="安福县" value='343200'/>
+         <county name="永新县" value='343400'/>
+         <county name="井冈山市" value='343600'/>
+         <county name="泰和县" value='343700'/>
+         <county name="万安县" value='343800'/>
+         <county name="遂川县" value='343900'/>
+         </city>
+    <city name="宜春" value='宜春'>
+       <county name="靖安县" value='330600'/>
+         <county name="奉新县" value='330700'/>
+         <county name="高安县" value='330800'/>
+         <county name="丰城市" value='331100'/>
+         <county name="樟树市" value='331200'/>
+         <county name="宜春市" value='336000'/>
+         <county name="万载县" value='336100'/>
+         <county name="铜鼓县" value='336200'/>
+         <county name="宜丰县" value='336300'/>
+         <county name="上高县" value='336400'/>
+         </city>
+    <city name="抚州" value='抚州'>
+       <county name="东乡县" value='331800'/>
+         <county name="资溪县" value='335300'/>
+         <county name="抚州市" value='344000'/>
+         <county name="临川市" value='344100'/>
+         <county name="崇仁县" value='344200'/>
+         <county name="乐安县" value='344300'/>
+         <county name="宜黄县" value='344400'/>
+         <county name="南丰县" value='344500'/>
+         <county name="黎川县" value='344600'/>
+         <county name="南城县" value='344700'/>
+         <county name="金溪县" value='344800'/>
+         <county name="广昌县" value='344900'/>
+         </city>
+    <city name="新余市" value='新余市'>
+       <county name="新余市" value='336500'/>
+         <county name="分宜县" value='336600'/>
+         </city>
+    <city name="景德镇" value='景德镇'>
+       <county name="景德镇市" value='333000'/>
+         <county name="乐平市" value='333300'/>
+         <county name="浮梁县" value='333400'/>
+         </city>
+    <city name="萍乡" value='萍乡'>
+       <county name="萍乡市" value='337000'/>
+         <county name="莲花县" value='337100'/>
+         <county name="芦溪县" value='337200'/>
+         </city>
+    <city name="赣州" value='赣州'>
+       <county name="赣州市" value='341000'/>
+         <county name="赣县" value='341100'/>
+         <county name="上犹县" value='341200'/>
+         <county name="崇义县" value='341300'/>
+         <county name="南康县" value='341400'/>
+         <county name="大余县" value='341500'/>
+         <county name="信丰县" value='341600'/>
+         <county name="龙南县" value='341700'/>
+         <county name="全南县" value='341800'/>
+         <county name="定南县" value='341900'/>
+         <county name="安远县" value='342100'/>
+         <county name="寻乌县" value='342200'/>
+         <county name="于都县" value='342300'/>
+         <county name="兴国县" value='342400'/>
+         <county name="瑞金县" value='342500'/>
+         <county name="会昌县" value='342600'/>
+         <county name="石城县" value='342700'/>
+         <county name="宁都县" value='342800'/>
+         </city>
+    <city name="鹰潭" value='鹰潭'>
+       <county name="鹰潭市" value='335000'/>
+         <county name="余江县" value='335200'/>
+         <county name="贵溪市" value='335400'/>
+         </city>
+    </province>
+  <province name="河北" value='河北'>
+    <city name="保定" value='保定'>
+       <county name="保定市" value='071000'/>
+         <county name="清苑县" value='071100'/>
+         <county name="安国县" value='071200'/>
+         <county name="博野县" value='071300'/>
+         <county name="蠡县" value='071400'/>
+         <county name="高阳县" value='071500'/>
+         <county name="安新县" value='071600'/>
+         <county name="容城县" value='071700'/>
+         <county name="雄县" value='071800'/>
+         <county name="满城县" value='072100'/>
+         <county name="顺平县" value='072200'/>
+         <county name="唐县" value='072300'/>
+         <county name="望都县" value='072400'/>
+         <county name="徐水县" value='072500'/>
+         <county name="定兴县" value='072600'/>
+         <county name="涿州市" value='072700'/>
+         <county name="定州市" value='073000'/>
+         <county name="曲阳县" value='073100'/>
+         <county name="阜平县" value='073200'/>
+         <county name="高碑店市" value='074000'/>
+         <county name="涞水县" value='074100'/>
+         <county name="易县" value='074200'/>
+         <county name="涞源县" value='074300'/>
+         </city>
+    <city name="唐山" value='唐山'>
+       <county name="唐山市" value='063000'/>
+         <county name="唐海县" value='063200'/>
+         <county name="丰南区" value='063300'/>
+         <county name="滦南县" value='063500'/>
+         <county name="乐亭县" value='063600'/>
+         <county name="滦县" value='063700'/>
+         <county name="丰润县" value='064000'/>
+         <county name="玉田县" value='064100'/>
+         <county name="遵化市" value='064200'/>
+         <county name="迁西县" value='064300'/>
+         <county name="迁安市" value='064400'/>
+         </city>
+    <city name="廊坊" value='廊坊'>
+       <county name="廊坊市" value='065000'/>
+         <county name="三河市" value='065200'/>
+         <county name="大厂回族自治县" value='065300'/>
+         <county name="香河县" value='065400'/>
+         <county name="固安县" value='065500'/>
+         <county name="永清县" value='065600'/>
+         <county name="霸州市" value='065700'/>
+         <county name="文安县" value='065800'/>
+         <county name="大城县" value='065900'/>
+         </city>
+    <city name="张家口" value='张家口'>
+       <county name="张家口市" value='075000'/>
+         <county name="宣化县" value='075100'/>
+         <county name="怀来县" value='075400'/>
+         <county name="赤城县" value='075500'/>
+         <county name="涿鹿县" value='075600'/>
+         <county name="蔚县" value='075700'/>
+         <county name="阳原县" value='075800'/>
+         <county name="怀安县" value='076100'/>
+         <county name="万全县" value='076200'/>
+         <county name="崇礼县" value='076300'/>
+         <county name="张北县" value='076400'/>
+         <county name="沽源县" value='076500'/>
+         <county name="康保县" value='076650'/>
+         <county name="尚义县" value='076700'/>
+         <county name="怀安县" value='076150'/>
+         </city>
+    <city name="承德" value='承德'>
+       <county name="承德市（县）" value='067000'/>
+         <county name="兴隆县" value='067300'/>
+         <county name="承德县" value='067400'/>
+         <county name="平泉县" value='067500'/>
+         <county name="宽城县" value='067600'/>
+         <county name="隆化县" value='068100'/>
+         <county name="滦平县" value='068200'/>
+         <county name="丰宁满族自治县" value='068300'/>
+         <county name="围场县" value='068400'/>
+         </city>
+    <city name="沧州" value='沧州'>
+       <county name="沧州市（沧县）" value='061000'/>
+         <county name="黄骅县" value='061100'/>
+         <county name="海兴县" value='061200'/>
+         <county name="盐山县" value='061300'/>
+         <county name="孟村回族自治县" value='061400'/>
+         <county name="南皮县" value='061500'/>
+         <county name="东光县" value='061600'/>
+         <county name="吴桥县" value='061800'/>
+         <county name="泊头市" value='062100'/>
+         <county name="献县" value='062200'/>
+         <county name="肃宁县" value='062300'/>
+         <county name="河间县" value='062450'/>
+         <county name="任丘市" value='062500'/>
+         <county name="青县" value='062600'/>
+         </city>
+    <city name="石家庄" value='石家庄'>
+       <county name="石家庄市" value='050000'/>
+         <county name="矿区" value='050100'/>
+         <county name="鹿泉市" value='050200'/>
+         <county name="井陉县" value='050300'/>
+         <county name="平山县" value='050400'/>
+         <county name="灵寿县" value='050500'/>
+         <county name="行唐县" value='050600'/>
+         <county name="新乐市" value='050700'/>
+         <county name="正定县" value='050800'/>
+         <county name="元氏县" value='051100'/>
+         <county name="赞皇县" value='051200'/>
+         <county name="高邑县" value='051300'/>
+         <county name="栾城县" value='051400'/>
+         <county name="赵县" value='051500'/>
+         <county name="藁城市" value='052100'/>
+         <county name="晋州市" value='052200'/>
+         <county name="辛集市(束鹿)" value='052300'/>
+         <county name="无极县" value='052400'/>
+         <county name="深泽县" value='052500'/>
+         </city>
+    <city name="秦皇岛" value='秦皇岛'>
+       <county name="秦皇岛市" value='066000'/>
+         <county name="抚宁县" value='066300'/>
+         <county name="卢龙县" value='066400'/>
+         <county name="青龙满族自治县" value='066500'/>
+         <county name="昌黎县" value='066600'/>
+         </city>
+    <city name="衡水" value='衡水'>
+       <county name="故城县" value='253800'/>
+         <county name="衡水市" value='053000'/>
+         <county name="枣强县" value='053100'/>
+         <county name="冀州县" value='053200'/>
+         <county name="武强县" value='053300'/>
+         <county name="武邑县" value='053400'/>
+         <county name="景县" value='053500'/>
+         <county name="安平县" value='053600'/>
+         <county name="阜城县" value='053700'/>
+         <county name="深州县" value='053800'/>
+         <county name="饶阳县" value='053900'/>
+         </city>
+    <city name="邢台" value='邢台'>
+       <county name="邢台市（县）" value='054000'/>
+         <county name="沙河市" value='054100'/>
+         <county name="内丘县" value='054200'/>
+         <county name="临城县" value='054300'/>
+         <county name="南和县" value='054400'/>
+         <county name="平乡县" value='054500'/>
+         <county name="广宗县" value='054600'/>
+         <county name="威县" value='054700'/>
+         <county name="清河县" value='054800'/>
+         <county name="任县" value='055150'/>
+         <county name="巨鹿县" value='055250'/>
+         <county name="隆尧县" value='055350'/>
+         <county name="柏乡县" value='055450'/>
+         <county name="宁晋县" value='055550'/>
+         <county name="新河县" value='055650'/>
+         <county name="南宫市" value='055750'/>
+         </city>
+    <city name="邯郸" value='邯郸'>
+       <county name="邯郸市（县）" value='056000'/>
+         <county name="武安市" value='056300'/>
+         <county name="涉县" value='056400'/>
+         <county name="磁县" value='056500'/>
+         <county name="临漳县" value='056600'/>
+         <county name="成安县" value='056700'/>
+         <county name="魏县" value='056800'/>
+         <county name="大名县" value='056900'/>
+         <county name="永年县" value='057100'/>
+         <county name="曲周县" value='057200'/>
+         <county name="鸡泽县" value='057300'/>
+         <county name="邱县" value='057400'/>
+         <county name="肥乡县" value='057500'/>
+         <county name="广平县" value='057600'/>
+         <county name="馆陶县" value='057700'/>
+         </city>
+    </province>
+  <province name="河南" value='河南'>
+       <city name="济源" value='济源'>
+       <county name="济源市" value='478000'/>
+       <county name="济水街道" value='478100'/>
+       <county name="双桥街道" value='478110'/>
+       <county name="天坛街道" value='478120'/>
+       <county name="北海街道" value='478200'/>
+       <county name="克井镇" value='478300'/>
+       <county name="五龙口镇" value='478400'/>
+       <county name="梨林镇" value='478500'/>
+       <county name="轵城镇" value='478600'/>
+       <county name="承留镇" value='478700'/>
+       <county name="坡头镇" value='478800'/>
+       <county name="大峪镇" value='478900'/>
+       <county name="邵原镇" value='478130'/>
+       <county name="亚桥乡" value='478140'/>
+       <county name="思礼乡" value='478150'/>
+       <county name="王屋乡" value='478160'/>
+       <county name="下冶乡" value='478170'/>
+         </city>
+    <city name="三门峡" value='三门峡'>
+       <county name="三门峡市" value='472000'/>
+         <county name="陕县" value='472100'/>
+         <county name="卢氏县" value='472200'/>
+         <county name="义马市" value='472300'/>
+         <county name="渑池县" value='472400'/>
+         <county name="灵宝市" value='472500'/>
+         </city>
+    <city name="信阳" value='信阳'>
+       <county name="信阳市" value='464000'/>
+         <county name="信阳县" value='464100'/>
+         <county name="罗山县" value='464200'/>
+         <county name="息县" value='464300'/>
+         <county name="淮滨县" value='464400'/>
+         <county name="潢川县" value='465100'/>
+         <county name="固始县" value='465200'/>
+         <county name="商城县" value='465300'/>
+         <county name="光山县" value='465400'/>
+         <county name="新县" value='465500'/>
+         </city>
+    <city name="南阳" value='南阳'>
+       <county name="南阳市" value='473000'/>
+         <county name="方城县" value='473200'/>
+         <county name="社旗县" value='473300'/>
+         <county name="唐河县" value='473400'/>
+         <county name="新野县" value='473500'/>
+         <county name="邓州市" value='474150'/>
+         <county name="镇平县" value='474200'/>
+         <county name="内乡县" value='474300'/>
+         <county name="淅川县" value='474400'/>
+         <county name="西峡县" value='474500'/>
+         <county name="南召县" value='474600'/>
+         <county name="桐柏县" value='474700'/>
+         </city>
+    <city name="周口" value='周口'>
+       <county name="扶沟县" value='461300'/>
+         <county name="太康县" value='461400'/>
+         <county name="周口市" value='466000'/>
+         <county name="商水县" value='466100'/>
+         <county name="项城县" value='466200'/>
+         <county name="沈丘县" value='466300'/>
+         <county name="西华县" value='466600'/>
+         <county name="淮阳县" value='466700'/>
+         <county name="郸城县" value='477100'/>
+         <county name="鹿邑县" value='477200'/>
+         </city>
+    <city name="商丘" value='商丘'>
+       <county name="济源市" value='454600'/>
+         <county name="商丘市" value='476000'/>
+         <county name="柘城县" value='476200'/>
+         <county name="虞城县" value='476300'/>
+         <county name="夏邑县" value='476400'/>
+         <county name="永城县" value='476600'/>
+         <county name="宁陵县" value='476700'/>
+         <county name="民权县" value='476800'/>
+         <county name="睢县" value='476900'/>
+         </city>
+    <city name="安阳" value='安阳'>
+       <county name="安阳市" value='455000'/>
+         <county name="安阳县" value='455100'/>
+         <county name="汤阴县" value='456150'/>
+         <county name="内黄县" value='456300'/>
+         <county name="滑县" value='456400'/>
+         <county name="林州市" value='456500'/>
+         </city>
+    <city name="平顶山" value='平顶山'>
+       <county name="舞钢市" value='462500'/>
+         <county name="平顶山市" value='467000'/>
+         <county name="郏县" value='467100'/>
+         <county name="叶县" value='467200'/>
+         <county name="鲁山县" value='467300'/>
+         <county name="宝丰县" value='467400'/>
+         <county name="汝州市" value='467500'/>
+         </city>
+    <city name="开封" value='开封'>
+       <county name="开封市" value='475000'/>
+         <county name="开封县" value='475100'/>
+         <county name="杞县" value='475200'/>
+         <county name="兰考县" value='475300'/>
+         <county name="通许县" value='475400'/>
+         <county name="尉氏县" value='475500'/>
+         </city>
+    <city name="新乡" value='新乡'>
+       <county name="新乡市" value='453000'/>
+         <county name="卫辉市" value='453100'/>
+         <county name="延津县" value='453200'/>
+         <county name="封丘县" value='453300'/>
+         <county name="长垣县" value='453400'/>
+         <county name="原阳县" value='453500'/>
+         <county name="辉县市" value='453600'/>
+         <county name="新乡县" value='453700'/>
+         <county name="获嘉县" value='453800'/>
+         </city>
+    <city name="洛阳" value='洛阳'>
+       <county name="洛阳市" value='471000'/>
+         <county name="孟津县" value='471100'/>
+         <county name="汝阳县" value='471200'/>
+         <county name="伊川县" value='471300'/>
+         <county name="嵩县" value='471400'/>
+         <county name="栾川县" value='471500'/>
+         <county name="宜阳县" value='471600'/>
+         <county name="洛宁县" value='471700'/>
+         <county name="新安县" value='471800'/>
+         <county name="偃师县" value='471900'/>
+         </city>
+    <city name="漯河" value='漯河'>
+       <county name="漯河市" value='462000'/>
+         <county name="郾城县" value='462300'/>
+         <county name="舞阳县" value='462400'/>
+         <county name="临颍县" value='462600'/>
+         </city>
+    <city name="濮阳市" value='濮阳市'>
+       <county name="濮阳市" value='457000'/>
+         <county name="濮阳县" value='457100'/>
+         <county name="清丰县" value='457300'/>
+         <county name="南乐县" value='457400'/>
+         <county name="范县" value='457500'/>
+         <county name="台前县" value='457600'/>
+         </city>
+    <city name="焦作市" value='焦作市'>
+       <county name="焦作市" value='454000'/>
+         <county name="修武县" value='454300'/>
+         <county name="博爱县" value='454400'/>
+         <county name="沁阳县" value='454500'/>
+         <county name="孟州县" value='454700'/>
+         <county name="温县" value='454800'/>
+         <county name="武陟县" value='454900'/>
+         </city>
+    <city name="许昌" value='许昌'>
+       <county name="许昌市" value='461000'/>
+         <county name="许昌县" value='461100'/>
+         <county name="鄢陵县" value='461200'/>
+         <county name="长葛县" value='461500'/>
+         <county name="禹州市" value='461600'/>
+         <county name="襄城县" value='461700'/>
+         </city>
+    <city name="郑州" value='郑州'>
+       <county name="郑州市" value='450000'/>
+         <county name="荥阳县" value='450100'/>
+         <county name="新郑县" value='451100'/>
+         <county name="中牟县" value='451400'/>
+         <county name="巩义市" value='452100'/>
+         <county name="高密市" value='452300'/>
+         <county name="登封县" value='452470'/>
+         </city>
+    <city name="驻马店" value='驻马店'>
+       <county name="驻马店市" value='463000'/>
+         <county name="遂平县" value='463100'/>
+         <county name="确山县" value='463200'/>
+         <county name="汝南县" value='463300'/>
+         <county name="平舆县" value='463400'/>
+         <county name="新蔡县" value='463500'/>
+         <county name="正阳县" value='463600'/>
+         <county name="泌阳县" value='463700'/>
+         <county name="上蔡县" value='463800'/>
+         <county name="西平县" value='463900'/>
+         </city>
+    <city name="鹤壁市" value='鹤壁市'>
+       <county name="浚县" value='456200'/>
+         <county name="淇县" value='456700'/>
+         <county name="鹤壁市" value='458000'/>
+         </city>
+    </province>
+  <province name="浙江" value='浙江'>
+    <city name="丽水" value='丽水'>
+       <county name="缙云县" value='321400'/>
+         <county name="丽水市" value='323000'/>
+         <county name="遂昌县" value='323300'/>
+         <county name="松阳县" value='323400'/>
+         <county name="云和县" value='323600'/>
+         <county name="龙泉县" value='323700'/>
+         <county name="庆元县" value='323800'/>
+         <county name="青田县" value='323900'/>
+         </city>
+    <city name="台州" value='台州'>
+       <county name="临海市" value='317000'/>
+         <county name="三门县" value='317100'/>
+         <county name="天台县" value='317200'/>
+         <county name="仙居县" value='317300'/>
+         <county name="温岭县" value='317500'/>
+         <county name="玉环县" value='317600'/>
+         <county name="台州市" value='318000'/>
+         </city>
+    <city name="嘉兴" value='嘉兴'>
+       <county name="嘉兴市" value='314000'/>
+         <county name="嘉善县" value='314100'/>
+         <county name="平湖县" value='314200'/>
+         <county name="海盐县" value='314300'/>
+         <county name="海宁县" value='314400'/>
+         <county name="桐乡县" value='314500'/>
+         </city>
+    <city name="宁波" value='宁波'>
+       <county name="宁波市" value='315000'/>
+         <county name="鄞县" value='315100'/>
+         <county name="镇海区" value='315200'/>
+         <county name="慈溪市" value='315300'/>
+         <county name="余姚市" value='315400'/>
+         <county name="奉化市" value='315500'/>
+         <county name="宁海县" value='315600'/>
+         <county name="象山县" value='315700'/>
+         <county name="北仓区" value='315800'/>
+         </city>
+    <city name="杭州" value='杭州'>
+       <county name="杭州市" value='310000'/>
+         <county name="余杭区" value='311100'/>
+         <county name="萧山市" value='311200'/>
+         <county name="临安县" value='311300'/>
+         <county name="富阳市" value='311400'/>
+         <county name="桐庐县" value='311500'/>
+         <county name="建德市" value='311600'/>
+         <county name="淳安县" value='311700'/>
+         </city>
+    <city name="温州" value='温州'>
+       <county name="温州市（欧海县）" value='325000'/>
+         <county name="永嘉县" value='325100'/>
+         <county name="瑞安市" value='325200'/>
+         <county name="文成县" value='325300'/>
+         <county name="平阳县" value='325400'/>
+         <county name="泰顺县" value='325500'/>
+         <county name="乐清县" value='325600'/>
+         <county name="洞头县" value='325700'/>
+         <county name="苍南县" value='325800'/>
+         </city>
+    <city name="湖州" value='湖州'>
+       <county name="湖州市" value='313000'/>
+         <county name="长兴县" value='313100'/>
+         <county name="德清县" value='313200'/>
+         <county name="安吉县" value='313300'/>
+         </city>
+    <city name="绍兴" value='绍兴'>
+       <county name="诸暨县" value='311800'/>
+         <county name="绍兴市（县）" value='312000'/>
+         <county name="上虞县" value='312300'/>
+         <county name="嵊县" value='312400'/>
+         <county name="新昌县" value='312500'/>
+         </city>
+    <city name="舟山" value='舟山'>
+       <county name="舟山市" value='316000'/>
+         <county name="普陀区" value='316100'/>
+         <county name="岱山县" value='316200'/>
+         <county name="嵊泗县" value='202400'/>
+         </city>
+    <city name="衢州" value='衢州'>
+       <county name="衢州市（衢县）" value='324000'/>
+         <county name="江山县" value='324100'/>
+         <county name="常山县" value='324200'/>
+         <county name="开化县" value='324300'/>
+         <county name="龙游县" value='324400'/>
+         </city>
+    <city name="金华" value='金华'>
+       <county name="金华市（县）" value='321000'/>
+         <county name="兰溪市" value='321100'/>
+         <county name="武义县" value='321200'/>
+         <county name="永康县" value='321300'/>
+         <county name="义乌市" value='322000'/>
+         <county name="东阳市" value='322100'/>
+         <county name="浦江县" value='322200'/>
+         <county name="磐安县" value='322300'/>
+         </city>
+    </province>
+  <province name="海南" value='海南'>
+    <city name="三亚" value='三亚'>
+       <county name="定安县" value='571200'/>
+         <county name="文昌市" value='571300'/>
+         <county name="琼海市" value='571400'/>
+         <county name="万宁市" value='571500'/>
+         <county name="屯昌县" value='571600'/>
+         <county name="儋州市" value='571700'/>
+         <county name="临高县" value='571800'/>
+         <county name="澄迈县" value='571900'/>
+         <county name="三亚市" value='572000'/>
+         <county name="五指山市" value='572200'/>
+         <county name="保亭黎族苗族自治县" value='572300'/>
+         <county name="陵水黎族自治县" value='572400'/>
+         <county name="乐东黎族自治县" value='572500'/>
+         <county name="东方市" value='572600'/>
+         <county name="昌江黎族自治县" value='572700'/>
+         <county name="白沙黎族自治县" value='572800'/>
+         <county name="琼中黎族苗族自治县" value='572900'/>
+         <county name="西南中沙群岛" value='573100'/>
+         <county name="洋浦经济开发区" value='578000'/>
+         </city>
+    <city name="海口" value='海口'>
+       <county name="海口市" value='570000'/>
+         </city>
+    </province>
+  <province name="湖北" value='湖北'>
+    <city name="十堰" value='十堰'>
+       <county name="丹江口市" value='441900'/>
+         <county name="十堰市" value='442000'/>
+         <county name="房县" value='442100'/>
+         <county name="竹山县" value='442200'/>
+         <county name="竹溪县" value='442300'/>
+         <county name="郧县" value='442500'/>
+         <county name="郧西县" value='442600'/>
+         </city>
+    <city name="咸宁" value='咸宁'>
+       <county name="咸安区" value='437000'/>
+         <county name="咸宁市" value='437100'/>
+         <county name="嘉鱼县" value='437200'/>
+         <county name="赤壁市" value='437300'/>
+         <county name="通城县" value='437400'/>
+         <county name="崇阳县" value='437500'/>
+         <county name="通山县" value='437600'/>
+         </city>
+    <city name="孝感市" value='孝感市'>
+       <county name="孝感市" value='432100'/>
+         <county name="汉川县" value='432300'/>
+         <county name="应城市" value='432400'/>
+         <county name="云梦县" value='432500'/>
+         <county name="安陆市" value='432600'/>
+         <county name="大悟县" value='432800'/>
+         <county name="孝昌县" value='432900'/>
+         </city>
+    <city name="宜昌" value='宜昌'>
+       <county name="宜昌市" value='443000'/>
+         <county name="夷陵区" value='443100'/>
+         <county name="枝江市" value='443200'/>
+         <county name="宜都市" value='443300'/>
+         <county name="五峰土家族自治县" value='443400'/>
+         <county name="长阳土家族自治县" value='443500'/>
+         <county name="秭归县" value='443600'/>
+         <county name="兴山县" value='443700'/>
+         <county name="当阳市" value='444100'/>
+         <county name="远安县" value='444200'/>
+         </city>
+    <city name="恩施" value='恩施'>
+       <county name="巴东县" value='444300'/>
+         <county name="恩施市" value='445000'/>
+         <county name="建始县" value='445300'/>
+         <county name="利川市" value='445400'/>
+         <county name="宣恩县" value='445500'/>
+         <county name="咸丰县" value='445600'/>
+         <county name="来凤县" value='445700'/>
+         <county name="鹤峰县" value='445800'/>
+         </city>
+    <city name="武汉" value='武汉'>
+       <county name="武汉市" value='430000'/>
+         <county name="蔡甸区" value='430100'/>
+         <county name="江夏区" value='430200'/>
+         <county name="黄陵区" value='430300'/>
+         <county name="新州区" value='430400'/>
+         </city>
+    <city name="荆州市" value='荆州市'>
+       <county name="洪湖市" value='433200'/>
+         <county name="监利县" value='433300'/>
+         <county name="江陵县" value='434000'/>
+         <county name="荆州市" value='434100'/>
+         <county name="松滋县" value='434200'/>
+         <county name="公安县" value='434300'/>
+         <county name="石首市" value='434400'/>
+         </city>
+    <city name="荆门市" value='荆门市'>
+       <county name="京山县" value='431800'/>
+         <county name="钟祥县" value='431900'/>
+         <county name="荆门市" value='448000'/>
+         <county name="沙洋县" value='448200'/>
+         </city>
+    <city name="襄樊" value='襄樊'>
+       <county name="襄樊市" value='441000'/>
+         <county name="襄阳区" value='441100'/>
+         <county name="枣阳市" value='441200'/>
+         <county name="宜城市" value='441400'/>
+         <county name="南漳县" value='441500'/>
+         <county name="保康县" value='441600'/>
+         <county name="谷城县" value='441700'/>
+         <county name="老河口市" value='441800'/>
+         </city>
+    <city name="鄂州" value='鄂州'>
+       <county name="鄂州市" value='436000'/>
+         </city>
+    <city name="黄冈市" value='黄冈市'>
+       <county name="红安县" value='431500'/>
+         <county name="麻城市" value='431600'/>
+         <county name="天门市" value='431700'/>
+         <county name="广水市" value='432700'/>
+         <county name="仙桃市(沔阳)" value='433000'/>
+         <county name="潜江市" value='433100'/>
+         <county name="浠水县" value='436200'/>
+         <county name="蕲春县" value='436300'/>
+         <county name="武穴市" value='436400'/>
+         <county name="黄梅县" value='436500'/>
+         <county name="罗田县" value='436600'/>
+         <county name="英山县" value='436700'/>
+         <county name="团风县" value='436800'/>
+         <county name="黄冈市" value='438000'/>
+         <county name="随州市" value='441300'/>
+         <county name="神农架林区" value='442400'/>
+         </city>
+    <city name="黄石" value='黄石'>
+       <county name="黄石市" value='435000'/>
+         <county name="大冶市" value='435100'/>
+         <county name="阳新县" value='435200'/>
+         </city>
+    </province>
+  <province name="湖南" value='湖南'>
+    <city name="娄底" value='娄底'>
+       <county name="娄底市" value='417000'/>
+         <county name="涟源市" value='417100'/>
+         <county name="冷水江市" value='417500'/>
+         <county name="新化县" value='417600'/>
+         <county name="双峰县" value='417700'/>
+         </city>
+    <city name="岳阳" value='岳阳'>
+       <county name="平江县" value='410400'/>
+         <county name="湘阴县" value='410500'/>
+         <county name="岳阳市" value='414000'/>
+         <county name="岳阳县" value='414100'/>
+         <county name="华容县" value='414200'/>
+         <county name="临湘县" value='414300'/>
+         <county name="汨罗市" value='414400'/>
+         </city>
+    <city name="常德" value='常德'>
+       <county name="常德市" value='415000'/>
+         <county name="鼎城区" value='415100'/>
+         <county name="临澧县" value='415200'/>
+         <county name="石门县" value='415300'/>
+         <county name="津市市" value='415400'/>
+         <county name="澧县" value='415500'/>
+         <county name="安乡县" value='415600'/>
+         <county name="桃源县" value='415700'/>
+         <county name="汉寿县" value='415900'/>
+         </city>
+    <city name="张家界" value='张家界'>
+       <county name="张家界市" value='427000'/>
+         <county name="桑植县" value='427100'/>
+         <county name="慈利县" value='427200'/>
+         </city>
+    <city name="怀化" value='怀化'>
+       <county name="怀化市" value='418000'/>
+         <county name="洪江市" value='418100'/>
+         <county name="洪江区" value='418200'/>
+         <county name="会同县" value='418300'/>
+         <county name="靖州苗族侗族自治县" value='418400'/>
+         <county name="通道侗族自治县" value='418500'/>
+         <county name="芷江侗族自治县" value='419100'/>
+         <county name="新晃侗族自治县" value='419200'/>
+         <county name="溆浦县" value='419300'/>
+         <county name="麻阳苗族自治县" value='419400'/>
+         <county name="辰溪县" value='419500'/>
+         <county name="沅陵县" value='419600'/>
+         </city>
+    <city name="株洲" value='株洲'>
+       <county name="株洲市" value='412000'/>
+         <county name="株洲县" value='412100'/>
+         <county name="醴陵市" value='412200'/>
+         <county name="攸县" value='412300'/>
+         <county name="茶陵县" value='412400'/>
+         <county name="炎棱县" value='412500'/>
+         </city>
+    <city name="永州" value='永州'>
+       <county name="永州市" value='425000'/>
+         <county name="芝山区" value='425100'/>
+         <county name="双牌县" value='425200'/>
+         <county name="道县" value='425300'/>
+         <county name="江永县" value='425400'/>
+         <county name="江华瑶族自治县" value='425500'/>
+         <county name="宁远县" value='425600'/>
+         <county name="新田县" value='425700'/>
+         <county name="蓝山县" value='425800'/>
+         <county name="东安县" value='425900'/>
+         <county name="祁阳县" value='426100'/>
+         </city>
+    <city name="湘潭" value='湘潭'>
+       <county name="湘潭市" value='411100'/>
+         <county name="湘潭县" value='411200'/>
+         <county name="韶山市" value='411300'/>
+         <county name="湘乡市" value='411400'/>
+         </city>
+    <city name="湘西土家族苗族自治州" value='湘西土家族苗族自治州'>
+       <county name="吉首市" value='416000'/>
+         <county name="泸溪县" value='416100'/>
+         <county name="凤凰县" value='416200'/>
+         <county name="古丈县" value='416300'/>
+         <county name="花垣县" value='416400'/>
+         <county name="保靖县" value='416500'/>
+         <county name="永顺县" value='416700'/>
+         <county name="龙山县" value='416800'/>
+         </city>
+    <city name="益阳" value='益阳'>
+       <county name="益阳市" value='413000'/>
+         <county name="沅江市" value='413100'/>
+         <county name="南县" value='413200'/>
+         <county name="桃江县" value='413400'/>
+         <county name="安化县" value='413500'/>
+         </city>
+    <city name="衡阳" value='衡阳'>
+       <county name="衡阳市" value='421000'/>
+         <county name="衡南县" value='421100'/>
+         <county name="衡阳县" value='421200'/>
+         <county name="衡山县" value='421300'/>
+         <county name="衡东县" value='421400'/>
+         <county name="常宁县" value='421500'/>
+         <county name="祁东县" value='421600'/>
+         <county name="耒阳县" value='421800'/>
+         <county name="南岳区" value='421900'/>
+         </city>
+    <city name="邵阳" value='邵阳'>
+       <county name="邵阳市" value='422000'/>
+         <county name="邵阳县" value='422100'/>
+         <county name="隆回县" value='422200'/>
+         <county name="洞口县" value='422300'/>
+         <county name="武冈县" value='422400'/>
+         <county name="城步苗族自治县" value='422500'/>
+         <county name="绥宁县" value='422600'/>
+         <county name="邵东县" value='422800'/>
+         <county name="新邵县" value='422900'/>
+         </city>
+    <city name="郴州" value='郴州'>
+       <county name="郴州市" value='423000'/>
+         <county name="永兴县" value='423300'/>
+         <county name="资兴市" value='423400'/>
+         <county name="桂东县" value='423500'/>
+         <county name="安仁县" value='423600'/>
+         <county name="汝城县" value='424100'/>
+         <county name="宜章县" value='424200'/>
+         <county name="临武县" value='424300'/>
+         <county name="桂阳县" value='424400'/>
+         <county name="嘉禾县" value='424500'/>
+         </city>
+    <city name="长沙" value='长沙'>
+       <county name="长沙市" value='410000'/>
+         <county name="长沙县" value='410100'/>
+         <county name="望城县" value='410200'/>
+         <county name="浏阳县" value='410300'/>
+         <county name="宁乡县" value='410600'/>
+         </city>
+    </province>
+  <province name="青海" value='青海'>
+    <city name="果洛藏族自治州" value='果洛藏族自治州'>
+       <county name="玛多县" value='813500'/>
+         <county name="玛沁县" value='814000'/>
+         <county name="甘德县" value='814100'/>
+         <county name="达日县" value='814200'/>
+         <county name="班玛县" value='814300'/>
+         <county name="久治县" value='624700'/>
+         </city>
+    <city name="海东地区" value='海东地区'>
+       <county name="互助土族自治县" value='810500'/>
+         <county name="平安县" value='810600'/>
+         <county name="乐都县" value='810700'/>
+         <county name="民和回族土族自治县" value='810800'/>
+         <county name="化隆回族自治县" value='810900'/>
+         <county name="循化撒拉族自治县" value='811100'/>
+         </city>
+    <city name="海北藏族自治州" value='海北藏族自治州'>
+       <county name="门源回族自治县" value='810300'/>
+         <county name="祁连县" value='810400'/>
+         <county name="海晏县" value='812200'/>
+         <county name="刚察县" value='812300'/>
+         </city>
+    <city name="海南藏族自治州" value='海南藏族自治州'>
+       <county name="贵德县" value='811700'/>
+         <county name="龙羊峡" value='811800'/>
+         <county name="共和县" value='813000'/>
+         <county name="贵南县" value='813100'/>
+         <county name="同德县" value='813200'/>
+         <county name="兴海县" value='813300'/>
+         </city>
+    <city name="海西蒙古族藏族自治州" value='海西蒙古族藏族自治州'>
+       <county name="都兰县" value='816100'/>
+         <county name="德令哈市" value='817000'/>
+         <county name="乌兰县" value='817100'/>
+         <county name="天峻县" value='817200'/>
+         <county name="大柴旦" value='817300'/>
+         <county name="冷湖" value='817400'/>
+         <county name="茫崖" value='817500'/>
+         </city>
+    <city name="玉树藏族自治州" value='玉树藏族自治州'>
+       <county name="玉树县" value='815000'/>
+         <county name="称多县" value='815100'/>
+         <county name="囊谦县" value='815200'/>
+         <county name="杂多县" value='815300'/>
+         <county name="治多县" value='815400'/>
+         <county name="曲麻莱县" value='815500'/>
+         <county name="格尔木市" value='816000'/>
+         </city>
+    <city name="西宁" value='西宁'>
+       <county name="西宁市" value='810000'/>
+         <county name="大通回族土族自治县" value='810100'/>
+         <county name="湟中县" value='811600'/>
+         <county name="湟源县" value='812100'/>
+         </city>
+    <city name="黄南藏族自治州" value='黄南藏族自治州'>
+       <county name="尖扎县" value='811200'/>
+         <county name="同仁县" value='811300'/>
+         <county name="泽库县" value='811400'/>
+         <county name="河南蒙古族自治县" value='811500'/>
+         <county name="李家峡" value='811900'/>
+         </city>
+    </province>
+  <province name="甘肃" value='甘肃'>
+    <city name="临夏回族自治州" value='临夏回族自治州'>
+       <county name="临夏市" value='731100'/>
+         <county name="和政县" value='731200'/>
+         <county name="广河县" value='731300'/>
+         <county name="东乡族自治县" value='731400'/>
+         <county name="康乐县" value='731500'/>
+         <county name="永靖县" value='731600'/>
+         <county name="积石山保安族东乡族撒拉族自治县" value='731700'/>
+         <county name="临夏县" value='731800'/>
+         </city>
+    <city name="兰州" value='兰州'>
+       <county name="兰州市" value='730000'/>
+         <county name="榆中县" value='730100'/>
+         <county name="皋兰县" value='730200'/>
+         <county name="永登县" value='730300'/>
+         </city>
+    <city name="嘉峪关" value='嘉峪关'>
+       <county name="嘉峪关市" value='735100'/>
+         </city>
+    <city name="天水" value='天水'>
+       <county name="天水市" value='741000'/>
+         <county name="甘谷县" value='741200'/>
+         <county name="武山县" value='741300'/>
+         <county name="清水县" value='741400'/>
+         <county name="张家川回族自治县" value='741500'/>
+         <county name="秦安县" value='741600'/>
+         </city>
+    <city name="定西" value='定西'>
+       <county name="临洮县" value='730500'/>
+         <county name="安定区" value='743000'/>
+         <county name="通渭县" value='743300'/>
+         <county name="静宁县" value='743400'/>
+         <county name="陇西县" value='748100'/>
+         <county name="渭源县" value='748200'/>
+         <county name="漳县" value='748300'/>
+         <county name="岷县" value='748400'/>
+         </city>
+    <city name="平凉" value='平凉'>
+       <county name="平凉市" value='744000'/>
+         <county name="华亭县" value='744100'/>
+         <county name="崇信县" value='744200'/>
+         <county name="泾川县" value='744300'/>
+         <county name="灵台县" value='744400'/>
+         <county name="庄浪县" value='744600'/>
+         </city>
+    <city name="庆阳" value='庆阳'>
+       <county name="镇原县" value='744500'/>
+         <county name="西峰区" value='745000'/>
+         <county name="庆阳县" value='745100'/>
+         <county name="宁县" value='745200'/>
+         <county name="正宁县" value='745300'/>
+         <county name="合水县" value='745400'/>
+         <county name="华池县" value='745600'/>
+         <county name="环县" value='745700'/>
+         </city>
+    <city name="张掖" value='张掖'>
+       <county name="张掖市" value='734000'/>
+         <county name="山丹县" value='734100'/>
+         <county name="临泽县" value='734200'/>
+         <county name="高台县" value='734300'/>
+         <county name="肃南裕固族自治县" value='734400'/>
+         <county name="民乐县" value='734500'/>
+         </city>
+    <city name="武威" value='武威'>
+       <county name="武威市" value='733000'/>
+         <county name="古浪县" value='733100'/>
+         <county name="天祝藏族自治县" value='733200'/>
+         <county name="民勤县" value='733300'/>
+         </city>
+    <city name="甘南藏族自治州" value='甘南藏族自治州'>
+       <county name="舟曲县" value='746300'/>
+         <county name="甘南藏族自治州" value='747000'/>
+         <county name="夏河县" value='747100'/>
+         <county name="碌曲县" value='747200'/>
+         <county name="玛曲县" value='747300'/>
+         <county name="迭部县" value='747400'/>
+         <county name="临潭县" value='747500'/>
+         <county name="卓尼县" value='747600'/>
+         </city>
+    <city name="白银" value='白银'>
+       <county name="景泰县" value='730400'/>
+         <county name="靖远县" value='730600'/>
+         <county name="会宁县" value='730700'/>
+         <county name="白银市" value='730900'/>
+         </city>
+    <city name="酒泉" value='酒泉'>
+       <county name="酒泉市" value='735000'/>
+         <county name="玉门市" value='735200'/>
+         <county name="金塔县" value='735300'/>
+         <county name="安西县" value='736100'/>
+         <county name="敦煌市" value='736200'/>
+         <county name="肃北蒙古族自治县" value='736300'/>
+         <county name="阿克塞哈萨克族自治县" value='736400'/>
+         </city>
+    <city name="金昌" value='金昌'>
+       <county name="金昌市" value='737100'/>
+         <county name="永昌县" value='737200'/>
+         </city>
+    <city name="陇南地区" value='陇南地区'>
+       <county name="西和县" value='742100'/>
+         <county name="礼县" value='742200'/>
+         <county name="徽县" value='742300'/>
+         <county name="两当县" value='742400'/>
+         <county name="成县" value='742500'/>
+         <county name="武都县" value='746000'/>
+         <county name="文县" value='746400'/>
+         <county name="康县" value='746500'/>
+         <county name="宕昌县" value='748500'/>
+         </city>
+    </province>
+  <province name="福建" value='福建'>
+    <city name="三明" value='三明'>
+       <county name="将乐县" value='353300'/>
+         <county name="泰宁县" value='354400'/>
+         <county name="建宁县" value='354500'/>
+         <county name="三明市" value='365000'/>
+         <county name="尤溪县" value='365100'/>
+         <county name="明溪县" value='365200'/>
+         <county name="清流县" value='365300'/>
+         <county name="宁化县" value='365400'/>
+         <county name="沙县" value='365500'/>
+         <county name="永安市" value='366000'/>
+         <county name="大田县" value='366100'/>
+         </city>
+    <city name="南平" value='南平'>
+       <county name="南平市" value='353000'/>
+         <county name="建瓯市" value='353100'/>
+         <county name="顺昌县" value='353200'/>
+         <county name="浦城县" value='353400'/>
+         <county name="松溪县" value='353500'/>
+         <county name="政和县" value='353600'/>
+         <county name="邵武市" value='354000'/>
+         <county name="光泽县" value='354100'/>
+         <county name="建阳县" value='354200'/>
+         <county name="武夷山市" value='544300'/>
+         </city>
+    <city name="厦门" value='厦门'>
+       <county name="厦门市" value='361000'/>
+         </city>
+    <city name="宁德" value='宁德'>
+       <county name="宁德市" value='352100'/>
+         <county name="古田县" value='352200'/>
+         <county name="屏南县" value='352300'/>
+         <county name="福安市" value='355000'/>
+         <county name="霞浦县" value='355100'/>
+         <county name="福鼎市" value='355200'/>
+         <county name="柘荣县" value='355300'/>
+         <county name="周宁县" value='355400'/>
+         <county name="寿宁县" value='355500'/>
+         </city>
+    <city name="泉州" value='泉州'>
+       <county name="泉州市" value='362000'/>
+         <county name="惠安县" value='362100'/>
+         <county name="晋江县" value='362200'/>
+         <county name="南安县" value='362300'/>
+         <county name="安溪县" value='362400'/>
+         <county name="德化县" value='362500'/>
+         <county name="永春县" value='362600'/>
+         <county name="石狮市" value='362700'/>
+         </city>
+    <city name="漳州" value='漳州'>
+       <county name="漳州市" value='363000'/>
+         <county name="龙海市" value='363100'/>
+         <county name="漳浦县" value='363200'/>
+         <county name="云霄县" value='363300'/>
+         <county name="东山县" value='363400'/>
+         <county name="诏安县" value='363500'/>
+         <county name="南靖县" value='363600'/>
+         <county name="平和县" value='363700'/>
+         <county name="华安县" value='363800'/>
+         <county name="长泰县" value='363900'/>
+         </city>
+    <city name="福州" value='福州'>
+       <county name="福州市" value='350000'/>
+         <county name="闽侯县" value='350100'/>
+         <county name="长乐县" value='350200'/>
+         <county name="福清县" value='350300'/>
+         <county name="平潭县" value='350400'/>
+         <county name="连江县" value='350500'/>
+         <county name="罗源县" value='350600'/>
+         <county name="永泰县" value='350700'/>
+         <county name="闽清县" value='350800'/>
+         </city>
+    <city name="莆田市" value='莆田市'>
+       <county name="莆田市" value='351100'/>
+         <county name="仙游县" value='351200'/>
+         </city>
+    <city name="龙岩" value='龙岩'>
+       <county name="龙岩市" value='364000'/>
+         <county name="永定县" value='364100'/>
+         <county name="上杭县" value='364200'/>
+         <county name="武平县" value='364300'/>
+         <county name="漳平县" value='364400'/>
+         <county name="连城县" value='366200'/>
+         <county name="长汀县" value='366300'/>
+         </city>
+    </province>
+  <province name="西藏" value='西藏'>
+    <city name="山南" value='山南'>
+       <county name="贡嘎县" value='850700'/>
+         <county name="扎囊县" value='850800'/>
+         <county name="浪卡子县" value='851100'/>
+         <county name="洛扎县" value='851200'/>
+         <county name="乃东县" value='856100'/>
+         <county name="桑日县" value='856200'/>
+         <county name="曲松县" value='856300'/>
+         <county name="加查县" value='856400'/>
+         <county name="隆子县" value='856600'/>
+         <county name="错那县" value='856700'/>
+         <county name="琼结县" value='856800'/>
+         <county name="措美县" value='856900'/>
+         </city>
+    <city name="拉萨" value='拉萨'>
+       <county name="拉萨市" value='850000'/>
+         <county name="达孜县" value='850100'/>
+         <county name="墨竹工卡县" value='850200'/>
+         <county name="曲水县" value='850600'/>
+         <county name="尼木县" value='851300'/>
+         <county name="堆龙德庆县" value='851400'/>
+         <county name="当雄县" value='851500'/>
+         <county name="林周县" value='851600'/>
+         </city>
+    <city name="日喀则" value='日喀则'>
+       <county name="日喀则地区" value='857000'/>
+         <county name="南木林县" value='857100'/>
+         <county name="仁布县" value='857200'/>
+         <county name="白朗县" value='857300'/>
+         <county name="江孜县" value='857400'/>
+         <county name="康马县" value='857500'/>
+         <county name="亚东县" value='857600'/>
+         <county name="岗巴县" value='857700'/>
+         <county name="萨迦县" value='857800'/>
+         <county name="定结县" value='857900'/>
+         <county name="拉孜县" value='858100'/>
+         <county name="定日县" value='858200'/>
+         <county name="聂拉木县" value='858300'/>
+         <county name="昂仁县" value='858500'/>
+         <county name="萨嘎县" value='858600'/>
+         <county name="吉隆县" value='858700'/>
+         <county name="仲巴县" value='858800'/>
+         <county name="谢通门县" value='858900'/>
+         </city>
+    <city name="昌都" value='昌都'>
+       <county name="昌都县" value='854000'/>
+         <county name="江达县" value='854100'/>
+         <county name="贡觉县" value='854200'/>
+         <county name="察雅县" value='854300'/>
+         <county name="左贡县" value='854400'/>
+         <county name="芒康县" value='854500'/>
+         <county name="八宿县" value='854600'/>
+         <county name="洛隆县" value='855400'/>
+         <county name="边坝县" value='855500'/>
+         <county name="类乌齐县" value='855600'/>
+         <county name="丁青县" value='855700'/>
+         </city>
+    <city name="林芝" value='林芝'>
+       <county name="林芝县" value='860100'/>
+         <county name="工布江达县" value='860200'/>
+         <county name="波密县" value='860300'/>
+         <county name="朗县" value='860400'/>
+         <county name="米林县" value='860500'/>
+         <county name="察隅县" value='860600'/>
+         <county name="墨脱县" value='860700'/>
+         </city>
+    <city name="那曲" value='那曲'>
+       <county name="那曲县" value='852000'/>
+         <county name="巴青县" value='852100'/>
+         <county name="索县" value='852200'/>
+         <county name="比如县" value='852300'/>
+         <county name="嘉黎县" value='852400'/>
+         <county name="班戈县" value='852500'/>
+         <county name="尼玛县" value='852600'/>
+         <county name="申扎县" value='853100'/>
+         <county name="安多县" value='853400'/>
+         <county name="聂荣县" value='853500'/>
+         </city>
+    <city name="阿里" value='阿里'>
+       <county name="革吉县" value='859100'/>
+         <county name="改则县" value='859200'/>
+         <county name="措勤县" value='859300'/>
+         <county name="噶尔县" value='859400'/>
+         <county name="普兰县" value='859500'/>
+         <county name="札达县" value='859600'/>
+         <county name="日土县" value='859700'/>
+         </city>
+    </province>
+  <province name="贵州" value='贵州'>
+    <city name="六盘水" value='六盘水'>
+       <county name="六盘水市" value='553000'/>
+         <county name="水城县" value='553001'/>
+         <county name="六枝特区" value='553400'/>
+         <county name="盘县特区" value='561600'/>
+         </city>
+    <city name="安顺地区" value='安顺地区'>
+       <county name="紫云苗族布依族自治县" value='550800'/>
+         <county name="安顺市" value='561000'/>
+         <county name="平坝县" value='561100'/>
+         <county name="镇宁布依族苗族自治县" value='561200'/>
+         <county name="关岭布依族苗族自治县" value='561300'/>
+         <county name="普定县" value='562100'/>
+         </city>
+    <city name="毕节地区" value='毕节地区'>
+       <county name="黔西县" value='551500'/>
+         <county name="大方县" value='551600'/>
+         <county name="毕节市" value='551700'/>
+         <county name="金沙县" value='551800'/>
+         <county name="织金县" value='552100'/>
+         <county name="威宁彝族回族苗族自治县" value='553100'/>
+         <county name="赫章县" value='553200'/>
+         <county name="纳雍县" value='553300'/>
+         </city>
+    <city name="贵阳" value='贵阳'>
+       <county name="贵阳市" value='550000'/>
+         <county name="修文县" value='550200'/>
+         <county name="开阳县" value='550300'/>
+         <county name="息峰县" value='551100'/>
+         <county name="清镇市" value='551400'/>
+         </city>
+    <city name="遵义" value='遵义'>
+       <county name="遵义市" value='563000'/>
+         <county name="遵义县" value='563100'/>
+         <county name="桐梓县" value='563200'/>
+         <county name="绥阳县" value='563300'/>
+         <county name="正安县" value='563400'/>
+         <county name="道真仡佬族苗族自治县" value='563500'/>
+         <county name="湄潭县" value='564100'/>
+         <county name="凤冈县" value='564200'/>
+         <county name="务川仡佬族苗族自治县" value='564300'/>
+         <county name="余庆县" value='564400'/>
+         <county name="仁怀市" value='564500'/>
+         <county name="习水县" value='564600'/>
+         <county name="赤水市" value='564700'/>
+         </city>
+    <city name="铜仁地区" value='铜仁地区'>
+       <county name="玉屏侗族自治县" value='554000'/>
+         <county name="松桃苗族自治县" value='554100'/>
+         <county name="万山特区" value='554200'/>
+         <county name="铜仁市" value='554300'/>
+         <county name="江口县" value='554400'/>
+         <county name="石阡县" value='555100'/>
+         <county name="印江土家族苗族自治县" value='555200'/>
+         <county name="思南县" value='565100'/>
+         <county name="德江县" value='565200'/>
+         <county name="沿河土家族自治县" value='565300'/>
+         </city>
+    <city name="黔东南苗族侗族自治州" value='黔东南苗族侗族自治州'>
+       <county name="凯里市" value='556000'/>
+         <county name="黄平县" value='556100'/>
+         <county name="施秉县" value='556200'/>
+         <county name="台江县" value='556300'/>
+         <county name="剑河县" value='556400'/>
+         <county name="三穗县" value='556500'/>
+         <county name="天柱县" value='556600'/>
+         <county name="锦屏县" value='556700'/>
+         <county name="雷山县" value='557100'/>
+         <county name="榕江县" value='557200'/>
+         <county name="黎平县" value='557300'/>
+         <county name="从江县" value='557400'/>
+         <county name="丹寨县" value='557500'/>
+         <county name="麻江县" value='557600'/>
+         <county name="镇远县" value='557700'/>
+         <county name="岑巩县" value='557800'/>
+         </city>
+    <city name="黔南布依族苗族自治州" value='黔南布依族苗族自治州'>
+       <county name="罗甸县" value='550100'/>
+         <county name="瓮安县" value='550400'/>
+         <county name="福泉县" value='550500'/>
+         <county name="惠水县" value='550600'/>
+         <county name="长顺县" value='550700'/>
+         <county name="龙里县" value='551200'/>
+         <county name="贵定县" value='551300'/>
+         <county name="都匀市" value='558000'/>
+         <county name="三都水族自治县" value='558100'/>
+         <county name="独山县" value='558200'/>
+         <county name="平塘县" value='558300'/>
+         <county name="荔波县" value='558400'/>
+         </city>
+    <city name="黔西南布依族苗族自治州" value='黔西南布依族苗族自治州'>
+       <county name="册亨县" value='552200'/>
+         <county name="望谟县" value='552300'/>
+         <county name="安龙县" value='552400'/>
+         <county name="晴隆县" value='561400'/>
+         <county name="普安县" value='561500'/>
+         <county name="贞丰县" value='562200'/>
+         <county name="兴仁县" value='562300'/>
+         <county name="兴义市" value='562400'/>
+         </city>
+    </province>
+  <province name="辽宁" value='辽宁'>
+    <city name="丹东" value='丹东'>
+       <county name="丹东市" value='118000'/>
+         <county name="凤城满族自治县" value='118100'/>
+         <county name="宽甸县" value='118200'/>
+         <county name="东港市" value='118300'/>
+         </city>
+    <city name="大连" value='大连'>
+       <county name="大连市" value='116000'/>
+         <county name="金州区" value='116100'/>
+         <county name="普兰店市" value='116200'/>
+         <county name="瓦房店市" value='116300'/>
+         <county name="庄河县" value='116400'/>
+         <county name="长海县" value='116500'/>
+         <county name="大连市经济技术开发区" value='116600'/>
+         </city>
+    <city name="抚顺" value='抚顺'>
+       <county name="抚顺市" value='113000'/>
+         <county name="抚顺县" value='113100'/>
+         <county name="新宾满族自治县" value='113200'/>
+         <county name="清原满族自治州" value='113300'/>
+         </city>
+    <city name="朝阳" value='朝阳'>
+       <county name="朝阳市（县）" value='122000'/>
+         <county name="北票市" value='122100'/>
+         <county name="喀喇沁左翼蒙古族自治县" value='122300'/>
+         <county name="建平县" value='122400'/>
+         <county name="凌源县" value='122500'/>
+         </city>
+    <city name="本溪" value='本溪'>
+       <county name="本溪市" value='117000'/>
+         <county name="本溪满族自治县" value='117100'/>
+         <county name="桓仁满族自治县" value='117200'/>
+         </city>
+    <city name="沈阳" value='沈阳'>
+       <county name="沈阳市" value='110000'/>
+         <county name="辽中县" value='110200'/>
+         <county name="新民县" value='110300'/>
+         <county name="法库县" value='110400'/>
+         <county name="康平县" value='110500'/>
+         </city>
+    <city name="盘锦" value='盘锦'>
+       <county name="盘锦市" value='124000'/>
+         <county name="盘山县" value='124100'/>
+         <county name="大洼县" value='124200'/>
+         </city>
+    <city name="营口" value='营口'>
+       <county name="营口市" value='115000'/>
+         <county name="大石桥市" value='115100'/>
+         <county name="盖州市" value='115200'/>
+         </city>
+    <city name="葫芦岛市" value='葫芦岛市'>
+       <county name="葫芦岛市" value='125000'/>
+         <county name="兴城市" value='125100'/>
+         <county name="绥中县" value='125200'/>
+         <county name="建昌县" value='125300'/>
+         </city>
+    <city name="辽阳" value='辽阳'>
+       <county name="辽阳市" value='111000'/>
+         <county name="辽阳县" value='111200'/>
+         <county name="灯塔县" value='111300'/>
+         </city>
+    <city name="铁岭" value='铁岭'>
+       <county name="铁岭市" value='112000'/>
+         <county name="开原市" value='112300'/>
+         <county name="西丰县" value='112400'/>
+         <county name="昌图县" value='112500'/>
+         <county name="铁岭县" value='112600'/>
+         <county name="调兵山市" value='112700'/>
+         </city>
+    <city name="锦州" value='锦州'>
+       <county name="锦州市" value='121000'/>
+         <county name="义县" value='121100'/>
+         <county name="凌海市" value='121200'/>
+         <county name="北宁市" value='121300'/>
+         <county name="黑山县" value='121400'/>
+         </city>
+    <city name="阜新" value='阜新'>
+       <county name="阜新市" value='123000'/>
+         <county name="阜新蒙古族自治县" value='123100'/>
+         <county name="彰武县" value='123200'/>
+         </city>
+    <city name="鞍山" value='鞍山'>
+       <county name="鞍山市" value='114000'/>
+         <county name="台安县" value='114100'/>
+         <county name="海城市" value='114200'/>
+         <county name="岫岩满族自治县" value='114300'/>
+         </city>
+    </province>
+  <province name="陕西" value='陕西'>
+    <city name="咸阳" value='咸阳'>
+       <county name="淳化县" value='711200'/>
+         <county name="旬邑县" value='711300'/>
+         <county name="咸阳市" value='712000'/>
+         <county name="武功县" value='712200'/>
+         <county name="兴平市" value='713100'/>
+         <county name="礼泉县" value='713200'/>
+         <county name="乾县" value='713300'/>
+         <county name="永寿县" value='713400'/>
+         <county name="彬县" value='713500'/>
+         <county name="长武县" value='713600'/>
+         <county name="泾阳县" value='713700'/>
+         <county name="三原县" value='713800'/>
+         </city>
+    <city name="商洛" value='商洛'>
+       <county name="柞水县" value='711400'/>
+         <county name="镇安县" value='711500'/>
+         <county name="商州市" value='726000'/>
+         <county name="洛南县" value='726100'/>
+         <county name="丹凤县" value='726200'/>
+         <county name="商南县" value='726300'/>
+         <county name="山阳县" value='726400'/>
+         </city>
+    <city name="安康" value='安康'>
+       <county name="宁陕县" value='711600'/>
+         <county name="安康市" value='725000'/>
+         <county name="汉阴县" value='725100'/>
+         <county name="石泉县" value='725200'/>
+         <county name="紫阳县" value='725300'/>
+         <county name="岚皋县" value='725400'/>
+         <county name="平利县" value='725500'/>
+         <county name="镇坪县" value='725600'/>
+         <county name="旬阳县" value='725700'/>
+         <county name="白河县" value='725800'/>
+         </city>
+    <city name="宝鸡" value='宝鸡'>
+       <county name="宝鸡市" value='721000'/>
+         <county name="千阳县" value='721100'/>
+         <county name="陇县" value='721200'/>
+         <county name="陈仓区" value='721300'/>
+         <county name="凤翔县" value='721400'/>
+         <county name="麟游县" value='721500'/>
+         <county name="太白县" value='721600'/>
+         <county name="凤县" value='721700'/>
+         <county name="扶风县" value='722200'/>
+         <county name="眉县" value='722300'/>
+         <county name="岐山县" value='722400'/>
+         </city>
+    <city name="延安" value='延安'>
+       <county name="黄龙县" value='715700'/>
+         <county name="延安市" value='716000'/>
+         <county name="甘泉县" value='716100'/>
+         <county name="宜川县" value='716200'/>
+         <county name="延长县" value='717100'/>
+         <county name="延川县" value='717200'/>
+         <county name="子长县" value='717300'/>
+         <county name="安塞县" value='717400'/>
+         <county name="志丹县" value='717500'/>
+         <county name="吴旗县" value='717600'/>
+         <county name="黄陵县" value='727300'/>
+         <county name="洛川县" value='727400'/>
+         <county name="富县" value='727500'/>
+         </city>
+    <city name="榆林" value='榆林'>
+       <county name="绥德县" value='718000'/>
+         <county name="米脂县" value='718100'/>
+         <county name="吴堡县" value='718200'/>
+         <county name="清涧县" value='718300'/>
+         <county name="子洲县" value='718400'/>
+         <county name="靖边县" value='718500'/>
+         <county name="定边县" value='718600'/>
+         <county name="榆林市" value='719000'/>
+         <county name="横山县" value='719100'/>
+         <county name="佳县" value='719200'/>
+         <county name="神木县" value='719300'/>
+         <county name="府谷县" value='719400'/>
+         </city>
+    <city name="汉中" value='汉中'>
+       <county name="汉中市" value='723000'/>
+         <county name="南郑县" value='723100'/>
+         <county name="城固县" value='723200'/>
+         <county name="洋县" value='723300'/>
+         <county name="佛坪县" value='723400'/>
+         <county name="西乡县" value='723500'/>
+         <county name="镇巴县" value='723600'/>
+         <county name="留坝县" value='724100'/>
+         <county name="勉县" value='724200'/>
+         <county name="略阳县" value='724300'/>
+         <county name="宁强县" value='724400'/>
+         </city>
+    <city name="渭南" value='渭南'>
+       <county name="富平县" value='711700'/>
+         <county name="渭南市" value='714000'/>
+         <county name="华县" value='714100'/>
+         <county name="华阴县" value='714200'/>
+         <county name="潼关县" value='714300'/>
+         <county name="大荔县" value='715100'/>
+         <county name="澄城县" value='715200'/>
+         <county name="合阳县" value='715300'/>
+         <county name="韩城市" value='715400'/>
+         <county name="蒲城县" value='715500'/>
+         <county name="白水县" value='715600'/>
+         </city>
+    <city name="西安" value='西安'>
+       <county name="西安市" value='710000'/>
+         <county name="长安区" value='710100'/>
+         <county name="高陵县" value='710200'/>
+         <county name="户县" value='710300'/>
+         <county name="周至县" value='710400'/>
+         <county name="蓝田县" value='710500'/>
+         <county name="临潼区" value='710600'/>
+         <county name="杨陵区" value='712100'/>
+         </city>
+    <city name="铜川" value='铜川'>
+       <county name="铜川市" value='727000'/>
+         <county name="耀州区" value='727100'/>
+         <county name="宜君县" value='727200'/>
+         </city>
+    </province>
+  <province name="澳门" value='澳门'>
+    <city name="澳门" value='澳门'>
+       <county name="澳门" value='0002'/>
+         </city>
+    </province>
+  <province name="香港" value='香港'>
+    <city name="香港" value='香港'>
+       <county name="香港" value='0001'/>
+         </city>
+    </province>
+  <province name="未知" value='未知'>
+    <city name="未知" value='未知'>
+       <county name="未知" value='999999'/>
+         </city>
+    </province>
+  </country>

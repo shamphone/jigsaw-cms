@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="D:/Longcon/WebMaster/txsd/deployment/WEB-INF/lib/longcon-cms.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/site/archive.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="/coolink-framework/source/META-INF/MANIFEST.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="false" exportJavaFiles="false" exportOutputFolder="true">
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.form"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.taglib"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.template"/>
+        <javaElement handleIdentifier="=site/src&lt;com"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.management"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.stat"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.script"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.editor"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.resource.form"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.channel"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.category"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.css"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.script.form"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong.site.resource"/>
+        <javaElement handleIdentifier="=site/src&lt;com.fulong"/>
+    </selectedElements>
+    <fatjar builder="org.eclipse.jdt.ui.plain_jar_builder" launchConfig=""/>
+</jardesc>

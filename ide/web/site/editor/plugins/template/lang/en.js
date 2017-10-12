@@ -1,0 +1,1 @@
+FCKLang.ManageTemplateTitle = "Template Management";

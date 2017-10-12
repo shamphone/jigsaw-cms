@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="GBK"?>
+<config>
+<Title text=" Product Rights " />
+<Properties>
+<item id="topic" property="innerHTML" text="[ WebFlow Permit License ]" />
+<item id="content" property="innerHTML" text="WebFlow 2005(Preview) is a Open-Source project under GPL,so permit copy,send and edit the source codes for non-business purpose.And the Codes after be updated or copied also observe WPL(WebFlow Permit License) and must save all rights information.&lt;BR&gt;&lt;BR&gt;If you don't agree this,please exit and don't use the software.&lt;BR&gt;&lt;BR&gt;This Software's Intellectual Property Rights be owned by FengChun(f15_nsm@hotmail.com).&lt;BR&gt;&lt;BR&gt;All Buiness Rights Reserved." />
+<item id="btnCancel" property="value" text="Don't Agree" />
+<item id="btnOk" property="value" text="Agree It" />
+</Properties>
+</config>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="fileForm" type="com.fulong.editor.UploadFileForm"/>
+    <form-bean name="siteForm" type="com.fulong.site.form.SiteForm"/>
+    <form-bean name="wordArtForm" type="com.fulong.editor.WordArtForm"/>
+    <form-bean name="contentForm" type="com.fulong.cms.form.ContentForm"/>
+  </form-beans>
+  <action-mappings>
+    <action path="/lookupFile" type="com.fulong.portal.editor.LookupFileAction" scope="request">
+      <forward name="success" path="/textEditor/upload/lookup.jsp"/>
+    </action>
+    <action path="/logout" type="com.fulong.common.LogoutAction">
+      <forward name="success" path="/logout.jsp" />
+    </action>
+    <action path="/redirect" type="com.fulong.common.RedirectAction"/>
+  
+    <action path="/delSiteConfirm" type="com.fulong.cms.share.DelSiteConfirmAction" scope="request">
+      <set-property property="name" value="确认删除远程站点"/>
+      <forward name="success" path="/cms/share/delSiteConfirm.jsp"/>
+    </action>
+
+    <action path="/setDownloadLog" type="com.fulong.cms.share.SetDownloadLogAction" scope="request"/>
+    <action path="/download" type="com.fulong.cms.share.DownAction" scope="request">
+      <forward name="success" path="/../cms/share/download.jsp"/>
+    </action>
+    <action path="/getParentNode" type="com.fulong.cms.content.GetParentNodeAction" scope="request">
+      <forward name="success" path="/../cms/content/getParentNode.jsp"/>
+    </action>
+
+    <action name="contentForm" path="/deleteContent" type="com.fulong.cms.content.AjaxDeleteContentAction"/>
+    <action path="/sendOK" type="com.fulong.cms.share.SendOKAction"/>
+    <action name="contentForm" path="/sendError" type="com.fulong.cms.share.SendErrorAction"/>
+    <action forward="/editor/simpleEditor.jsp" path="/editor/simpleEditor"/>
+
+    <action path="/getRemoteHTML" type="com.fulong.cms.share.GetRemoteHTMLAction" scope="request"/>
+    <action path="/getCategoryName" type="com.fulong.cms.share.GetCategoryNameAction" scope="request"/>
+    <action path="/getContentName" type="com.fulong.cms.share.GetContentNameAction" scope="request"/>
+    <action path="/getAttribute" type="com.fulong.cms.GetAttributeAction" scope="request"/>
+    <action path="/randomGif" type="com.fulong.common.RandomGifAction" scope="request"/>
+
+
+<!-- 下面三个方法兼容以前的代码 推荐用validateUnique-->
+    <action path="/validateCard" type="com.fulong.passport.ValidateCardAction"/>
+    <action path="/validateUsername" type="com.fulong.passport.ValidateUsernameAction"/>
+    <action path="/validateOrgName" type="com.fulong.passport.ValidateOrgNameAction"/>
+
+    <action path="/validateUnique" type="com.fulong.cms.ValidateUniqueAction"/>
+    <action path="/validatePropertyValue" type="com.fulong.cms.ValidatePropertyValueAction"/>
+    <action path="/ValidateCanSetProperty" type="com.fulong.cms.ValidateCanSetPropertyAction"/>
+
+    <action path="/contentsToXML" type="com.fulong.cms.contentsToXMLAction"/>
+    <action name="siteForm" path="/templateSelect" type="com.fulong.site.TemplateSelectAction" scope="request">
+      <forward name="success" path="/templateSelect.jsp"/>
+    </action>
+    <action path="/validateInheritance" type="com.fulong.cms.ValidateInheritanceAction"/>
+    <action name="siteForm" path="/fileUpload" type="com.fulong.cms.FileUploadAction" scope="request">
+    	<forward name="success" path="/../cms/resource/fileUpload.jsp"/>
+    </action>
+    <action path="/downloadDoc" type="com.fulong.site.DownloadDocAction" scope="request"/>
+    <action path="/feedback" type="com.fulong.cms.FeedbackAction" scope="request"/>
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.cms.Common" />
+  <message-resources key="webEditor" parameter="com.fulong.editor.WebEditor"/>
+</struts-config>

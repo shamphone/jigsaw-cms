@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+<form-validation>
+  <formset>
+    <constant>
+      <constant-name>idtoken</constant-name>
+      <constant-value>([a-zA-Z]+)((\w)+)</constant-value>
+    </constant>
+    <form name="repositoryForm">
+      <field property="ID" depends="required,mask">
+        <arg0 key="repository.ID"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${idtoken}</var-value>
+        </var>
+      </field>
+      <field property="name" depends="required">
+        <arg0 key="repository.name"/>
+        <msg name="required" key="errors.required" resource="true"/>
+      </field>
+    </form>
+    <form name="propertyForm">
+      <field property="name" depends="required">
+        <arg0 key="property.name"/>
+        <msg name="required" key="errors.required" resource="true"/>
+      </field>
+      <field property="ID" depends="required,mask">
+        <arg0 key="property.ID"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${idtoken}</var-value>
+        </var>
+      </field>
+      <field property="type" depends="required">
+        <arg0 key="property.type"/>
+        <msg name="required" key="errors.required" resource="true"/>
+      </field>
+    </form>
+    <form name="imageLinkForm">
+      <field property="linkImage" depends="required">
+        <arg0 key="imageLinkForm.linkImage"/>
+      </field>
+    </form>
+    <form name="rssForm">
+      <field property="title" depends="required">
+        <arg0 key="rss.title"/>
+        <msg name="required" key="errors.required" resource="true"/>
+      </field>
+      <field property="ID" depends="required,mask">
+        <arg0 key="rss.ID"/>
+        <msg name="required" key="errors.required" resource="true"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${idtoken}</var-value>
+        </var>
+      </field>
+    </form>
+  </formset>
+</form-validation>

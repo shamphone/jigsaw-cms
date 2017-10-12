@@ -1,0 +1,10 @@
+<attach for="element" event="onclick" handler="toggleShow" />
+<script type="text/javascript">
+  function toggleShow(){
+    var oTR=element.parentElement;
+    for(var i=1;i<oTR.parentElement.rows.length;i+=2){
+      oTR.parentElement.rows[i].style.display="none";
+    }
+    oTR.nextSibling.style.display="";
+  }
+</script>

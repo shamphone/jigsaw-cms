@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+  <bean id="commandManager" class="com.fulong.repository.command.BaseCommandManager">
+    <property name="commands">
+      <list>
+        <bean class="com.fulong.repository.command.EditDictCommand">
+          <property name="ID" value="editDict"/>
+          <property name="name" value="修改"/>
+          <property name="multiple" value="false"/>
+          <property name="propertis" value="child"/>
+          <property name="forward" value="editDict.jsp"/>
+          <property name="defaultDisabled" value="true"/>
+          <property name="transitions">
+             <bean class="com.fulong.repository.transition.SaveDictTransition">
+               </bean>
+            </property>
+        </bean>
+        <bean class="com.fulong.repository.command.EditContentCommand">
+          <property name="ID" value="edit"/>
+          <property name="name" value="修改"/>
+          <property name="multiple" value="false"/>
+          <property name="propertis" value="expiryTime"/>
+          <property name="forward" value="editContent.jsp"/>
+          <property name="defaultDisabled" value="true"/>
+        </bean>
+        <bean class="com.fulong.repository.command.EditUserCommand">
+          <property name="ID" value="editUser"/>
+          <property name="name" value="修改"/>
+          <property name="multiple" value="false"/>
+          <property name="propertis" value="user-password"/>
+          <property name="forward" value="editUser.jsp"/>
+          <property name="defaultDisabled" value="true"/>
+        </bean>
+        <bean class="com.fulong.repository.command.CreateDictCommand">
+          <property name="ID" value="createDict"/>
+          <property name="name" value="创建"/>
+          <property name="multiple" value="true"/>
+          <property name="propertis" value="child"/>
+          <property name="forward" value="editDict.jsp"/>
+          <property name="defaultDisabled" value="false"/>
+        </bean>
+        <bean class="com.fulong.repository.command.CreateContentCommand">
+          <property name="ID" value="create"/>
+          <property name="name" value="创建"/>
+          <property name="multiple" value="true"/>
+          <property name="propertis" value="expiryTime"/>
+          <property name="forward" value="editContent.jsp"/>
+          <property name="defaultDisabled" value="false"/>
+        </bean>
+        <bean class="com.fulong.repository.command.CreateUserCommand">
+          <property name="ID" value="createUser"/>
+          <property name="name" value="创建"/>
+          <property name="multiple" value="true"/>
+          <property name="propertis" value="user-password"/>
+          <property name="forward" value="editUser.jsp"/>
+          <property name="defaultDisabled" value="false"/>
+        </bean>
+        <bean class="com.fulong.repository.command.DeleteContentConfirmCommand">
+          <property name="ID" value="delete"/>
+          <property name="name" value="删除"/>
+          <property name="multiple" value="true"/>
+          <property name="propertis" value=""/>
+          <property name="forward" value="deleteContentConfirm.jsp"/>
+          <property name="defaultDisabled" value="true"/>
+        </bean>
+        <bean class="com.fulong.repository.command.SendContentCommand">
+          <property name="ID" value="send"/>
+          <property name="name" value="推荐"/>
+          <property name="multiple" value="true"/>
+          <property name="propertis" value=""/>
+          <property name="forward" value="sendContent.jsp"/>
+          <property name="defaultDisabled" value="true"/>
+        </bean>
+        <bean class="com.fulong.repository.command.CopyContentCommand">
+          <property name="ID" value="copy"/>
+          <property name="name" value="复制"/>
+          <property name="multiple" value="true"/>
+          <property name="propertis" value=""/>
+          <property name="forward" value="copyContent.jsp"/>
+          <property name="defaultDisabled" value="true"/>
+        </bean>
+        <bean class="com.fulong.repository.command.MoveContentCommand">
+          <property name="ID" value="move"/>
+          <property name="name" value="移动"/>
+          <property name="multiple" value="true"/>
+          <property name="propertis" value=""/>
+          <property name="forward" value="moveContent.jsp"/>
+          <property name="defaultDisabled" value="true"/>
+        </bean>
+        <bean class="com.fulong.repository.command.PreviewContentCommand">
+          <property name="ID" value="preview"/>
+          <property name="name" value="预览"/>
+          <property name="multiple" value="false"/>
+          <property name="propertis" value=""/>
+          <property name="forward" value="previewContent.jsp"/>
+          <property name="defaultDisabled" value="true"/>
+        </bean>
+        <bean class="com.fulong.repository.command.ChangePasswordCommand">
+          <property name="ID" value="password"/>
+          <property name="name" value="修改密码"/>
+          <property name="multiple" value="false"/>
+          <property name="propertis" value="user-password"/>
+          <property name="forward" value="changePassword.jsp"/>
+          <property name="defaultDisabled" value="true"/>
+        </bean>
+        <bean class="com.fulong.repository.command.SearchContentCommand">
+          <property name="ID" value="search"/>
+          <property name="name" value="搜索"/>
+          <property name="multiple" value="true"/>
+          <property name="propertis" value=""/>
+          <property name="forward" value="searchCont.jsp"/>
+          <property name="defaultDisabled" value="false"/>
+        </bean>
+      </list>
+</property>
+  </bean>
+</beans>

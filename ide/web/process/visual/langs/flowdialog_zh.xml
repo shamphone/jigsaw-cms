@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="GBK"?>
+<config>
+<Properties>
+<item id="tabpage1" property="innerHTML" text="基本属性" />
+<item id="tabpage2" property="innerHTML" text="步骤样式" />
+<item id="tabpage3" property="innerHTML" text="动作样式" />
+<item id="tabpage4" property="innerHTML" text="工作流属性" />
+
+<item id="tabpage1_1" property="innerHTML" text="基本属性" />
+<item id="tabpage1_2" property="innerHTML" text="流程编号" />
+<item id="tabpage1_3" property="innerHTML" text="流程名称" />
+<item id="tabpage1_4" property="innerHTML" text="开始与结束" />
+<item id="tabpage1_5" property="innerHTML" text="开始步骤编号" />
+<item id="tabpage1_6" property="innerHTML" text="结束步骤编号" />
+<item id="tabpage1_7" property="innerHTML" text="开始步骤名称" />
+<item id="tabpage1_8" property="innerHTML" text="结束步骤名称" />
+
+<item id="tabpage2_1" property="innerHTML" text="步骤通用样式" />
+<item id="tabpage2_2" property="innerHTML" text="主色调" />
+<item id="tabpage2_3" property="innerHTML" text="渲染色" />
+<item id="tabpage2_4" property="innerHTML" text="文本色" />
+<item id="tabpage2_5" property="innerHTML" text="边框色" />
+<item id="tabpage2_6" property="innerHTML" text="选中色" />
+<item id="tabpage2_7" property="innerHTML" text="有无阴影" />
+<item id="tabpage2_8" property="innerHTML" text="有阴影" />
+<item id="tabpage2_9" property="innerHTML" text="无阴影" />
+<item id="tabpage2_10" property="innerHTML" text="阴影色" />
+<item id="tabpage2_11" property="innerHTML" text="2D/3D视角" />
+<item id="tabpage2_12" property="innerHTML" text="2D" />
+<item id="tabpage2_13" property="innerHTML" text="3D" />
+<item id="tabpage2_14" property="innerHTML" text="3D深度" />
+<item id="tabpage2_15" property="innerHTML" text="起止步骤样式" />
+<item id="tabpage2_16" property="innerHTML" text="文本色" />
+<item id="tabpage2_17" property="innerHTML" text="边框色" />
+<item id="tabpage2_20" property="innerHTML" text="（3D时无效）" />
+<item id="tabpage2_21" property="innerHTML" text="（3D时无效）" />
+<item id="tabpage2_22" property="innerHTML" text="（3D时无效）" />
+<item id="tabpage2_23" property="innerHTML" text="（3D时无效）" />
+
+<item id="tabpage3_1" property="innerHTML" text="动作样式" />
+<item id="tabpage3_2" property="innerHTML" text="线段色" />
+<item id="tabpage3_3" property="innerHTML" text="文本色" />
+<item id="tabpage3_4" property="innerHTML" text="选中色" />
+
+<item id="tabpage4_1" property="innerHTML" text="运行设定" />
+<item id="tabpage4_2" property="innerHTML" text="流转模式" />
+<item id="tabpage4_3" property="innerHTML" text="正式流转" />
+<item id="tabpage4_4" property="innerHTML" text="模拟流转" />
+<item id="tabpage4_5" property="innerHTML" text="开始时间" />
+<item id="tabpage4_6" property="innerHTML" text="结束时间" />
+<item id="tabpage4_7" property="innerHTML" text="是否监控" />
+<item id="tabpage4_8" property="innerHTML" text="可监控" />
+<item id="tabpage4_9" property="innerHTML" text="不可监控" />
+<item id="tabpage4_10" property="innerHTML" text="运行模式" />
+<item id="tabpage4_11" property="innerHTML" text="人机交互" />
+<item id="tabpage4_12" property="innerHTML" text="自动运行" />
+<item id="tabpage4_13" property="innerHTML" text="通知模式" />
+<item id="tabpage4_14" property="innerHTML" text="内部消息" />
+<item id="tabpage4_15" property="innerHTML" text="外部邮件" />
+<item id="tabpage4_16" property="innerHTML" text="人机交互模式" />
+<item id="tabpage4_17" property="innerHTML" text="交互表单" />
+<item id="tabpage4_18" property="innerHTML" text="自动运行模式" />
+<item id="tabpage4_19" property="innerHTML" text="运行程序" />
+
+<item id="FlowText" property="value" text="新流程" />
+<item id="BeginStepText" property="value" text="开 始" />
+<item id="EndStepText" property="value" text="结 束" />
+
+<item id="btnOk" property="value" text="确 定" />
+<item id="btnCancel" property="value" text="取 消" />
+<item id="btnApply" property="value" text="应 用" />
+</Properties>
+</config>

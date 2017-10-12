@@ -1,0 +1,633 @@
+<?xml version="1.0"?>
+<articles>
+	<article identifier="xtree" type="widget" name="xTree" version="1.17" template="standard-article.wal">
+		<licenses>
+			<license identifier="asl2">Apache Software License 2.0</license>
+		</licenses>
+		<compatibility>
+			<compatible browser="any" />
+		</compatibility>
+		<description>
+			Tree control with object based JavaScript API.
+		</description>
+		<authors>
+			<author identifier="emil">Emil A Eklund</author>
+		</authors>
+		<sections>
+
+<section filename="index.html" title="History &amp; Introduction" output="standard">
+<p>
+	<span class="date">(2006-05-26)</span> Changed license to Apache Software License 2.0.<br />
+	<span class="date">(2003-03-16)</span> Version 1.17 - Added target property.<br />
+	<span class="date">(2003-02-15)</span> Version 1.16 - The selected node can now be distinguished even when the tree control loses focus.<br />
+	<span class="date">(2002-10-29)</span> Version 1.15 - This version is based on 1.13 and fixes the bugs 1.14 were supposed to fix.<br />
+	<span class="date">(2002-10-23)</span> Version 1.14 - Minor fix for a case where the plus icon used wrong image.<br />
+	<span class="date">(2002-08-20)</span> Version 1.13 - Added <code>usePersistence</code> flag to allow disable the usage of cookies.<br />
+	<span class="date">(2002-06-13)</span> Version 1.12 - Various bug fixes.<br />
+	<span class="date">(2002-01-27)</span> Version 1.11 - Bug fixes and improved mozilla support.<br />
+	<span class="date">(2001-09-23)</span> Version 1.1 - New features included keyboard navigation (ie) and the ability to add and remove nodes dynamically and some other small tweaks and fixes.<br />
+	<span class="date">(2001-03-18)</span> Added getSelected and get/setBehavior that can make it behave more like the windows explorer<br />(check usage for more information about it).<br />
+	<span class="date">(2001-01-10)</span> Original Version Posted.
+</p>
+<p>
+	An object based tree widget with persistence using cookies that works in ie5 and mozilla.
+</p>
+<h2>History</h2>
+<p>
+	Among the first things I created with DHTML was a tree view, that was over four years ago
+	(spring 1997), since then a lot has happened in the browser market, and also with my skills in
+	JavaScript and DHTML. Today I give you the third version of this tree view widget. The idea
+	behind it is the same as in the first version, to emulate the tree widget found in many modern
+	graphical operation environments, such as Microsoft Windows, and so is the basic idea of how to
+	accomplish this, to toggle the display property of elements depending on the expanded state of
+	their parents. However the similarities stop there. Another thing I can mention from a
+	historical point of view is that this is the first complex script that I have created that
+	works under two different browsers without the use of browser detection, the same code is
+	actually used for ie5 and mozilla. :o)
+</p>
+<h2>Introduction</h2>
+<p>
+	This new version is based on objects, so you do not create the actual html code for the tree
+	yourself, you create an object (the tree's root folder) and then you add child items to this.
+	Once you're done adding items the actual html code is generated and inserted into the page.
+	This makes it very easy to create and update the content of the tree (or to dynamically
+	generate it). If you've seen Erik's new xMenu you will notice that it's working in similar
+	way.
+</p>
+<h3>Persistence</h3>
+<p>
+	This script also features persistence using per session cookies. So now if you go to a page
+	using this tree widget, expand a few folders and then leave the page again (by following a
+	link or by typing a new url manually) it will store the state of each folder in a cookie so
+	when you go back to the page it will remember what folders you last had opened and open them
+	for you. This could be very useful if you use this for site navigation etc.
+</p>
+<h3>Limitations</h3>
+<p>
+	The persistence functionality is using the node creation order to remember the state of each node,
+	this works fine for static trees, but not for dynamic ones since adding and/or deleting
+	nodes will change the original order numbering.
+</p>
+</section>
+
+
+<section filename="usage.html" title="Usage" output="standard">
+<p>
+	This tree widget is based on objects and all html code is generated from a js structure. To create a tree
+	you won't have to write a single line of html however you will have to learn how to to create the tree and
+	treeItem objects.
+</p>
+<h2>Usage</h2>
+<p>
+	The tree(s) needs to be create during the initial load phase of the page. This is accomplished by creating a
+	<code>WebFXTree</code> object and then add <code>WebFXTreeItem</code>s to it. Once all items has been added
+	<code>document.write</code> is used to generate the html code and insert it into the page.
+</p>
+<img src="article-images/tree1.png" align="left" />
+<pre style="margin-left: 82px;">
+	var tree = new WebFXTree('Root');
+	tree.add(new WebFXTreeItem('Tree Item 1'));
+	tree.add(new WebFXTreeItem('Tree Item 2'));
+	tree.add(new WebFXTreeItem('Tree Item 3'));
+	document.write(tree);
+</pre>
+<h3>Folders</h3>
+<p>
+	A folder is created by adding a new tree item to a already created tree item. However since we need to keep
+	a reference to this tree item object (so that we can add tree items to it, and make it a folder) we cannot
+	create the new object inside the add method. So instead we first create the new tree item object and then
+	we add it to the tree.
+</p>
+<img src="article-images/tree2.png" align="left" />
+<pre style="margin-left: 82px;">
+	var tree = new WebFXTree('Root');
+	<font color="teal">/* Add tree item to tree */</font>
+	tree.add(new WebFXTreeItem('1'));
+	<font color="teal">/* Create a new folder and add it to tree */</font>
+	var folder = new WebFXTreeItem('2')
+	tree.add(folder);
+	<font color="teal">/* Add tree items to folder */</font>
+	folder.add(new WebFXTreeItem('2.1'));
+	folder.add(new WebFXTreeItem('2.2'));
+	folder.add(new WebFXTreeItem('2.3'));
+	<font color="teal">/* Add another tree item to tree */</font>
+	tree.add(new WebFXTreeItem('3'));
+	document.write(tree);
+</pre>
+<h3>Explorer behavior</h3>
+<p>
+	Since I first published this tree control I've been getting a lot of requesters about making it contain
+	only folders. So I added a setBehavior method to it. The example below is an exact copy of the one above,
+	with the one exception that this uses <code>tree.setBehavior('explorer');</code>
+</p>
+<img src="article-images/tree3.png" align="left" />
+<pre style="margin-left: 82px;">
+	var tree = new WebFXTree('Root');
+	<font color="teal">/* Change the behavior of the tree */</font>
+	tree.setBehavior('explorer');
+	<font color="teal">/* Add tree item to tree */</font>
+	tree.add(new WebFXTreeItem('1'));
+	<font color="teal">/* Create a new folder and add it to tree */</font>
+	var folder = new WebFXTreeItem('2')
+	tree.add(folder);
+	<font color="teal">/* Add tree items to folder */</font>
+	folder.add(new WebFXTreeItem('2.1'));
+	folder.add(new WebFXTreeItem('2.2'));
+	folder.add(new WebFXTreeItem('2.3'));
+	<font color="teal">/* Add another tree item to tree */</font>
+	tree.add(new WebFXTreeItem('3'));
+	document.write(tree);
+</pre>
+<h3>Custom Icons</h3>
+<p>
+	Some times you might want to combine the two styles, or make some of the folders/items have a different
+	icon than the default. To achieve that set the <code>object.icon</code> property to an uri, or to a javascript
+	variable containing one. To change the open icons for folders use <code>object.openIcon</code>.
+</p>
+<img src="article-images/tree4.png" align="left" />
+<pre style="margin-left: 82px;">
+	var tree = new WebFXTree('Root');
+	tree.setBehavior('explorer');
+	tree.icon = 'http://webfx.eae.net/images/notepad.gif';
+	tree.add(new WebFXTreeItem('1'));
+	var folder = new WebFXTreeItem('2')
+	tree.add(folder);
+	var t21 = new WebFXTreeItem('2.1');
+	<font color="teal">/* Change the icon */</font>
+	t21.icon = webFXTreeConfig.fileIcon;
+	folder.add(t21);
+	var t22 = new WebFXTreeItem('2.2');
+	<font color="teal">/* Change the icon */</font>
+	t22.icon = webFXTreeConfig.fileIcon;
+	folder.add(t22);
+	var t23 = new WebFXTreeItem('2.3');
+	<font color="teal">/* Change the icon */</font>
+	t23.icon = webFXTreeConfig.fileIcon;
+	folder.add(t23);
+	tree.add(new WebFXTreeItem('3'));
+	document.write(tree);
+</pre>
+</section>
+
+
+<section filename="api.html" title="API" output="standard">
+<h2>WebFXTreeAbstractNode</h2>
+
+<p>
+  Abstract object with common functions and methods shared by WebFXTree and WebFXTreeItem.
+  The two of those inherites from this object.
+</p>
+
+<h3>Constructor</h3>
+
+<p>Abstract object - no instances of it should be created</p>
+
+<h3>Properties</h3>
+
+<table>
+<thead><tr>
+	<td>Name</td>
+	<td>Type</td>
+	<td>Description</td>
+</tr></thead>
+<tbody>
+<tr>
+	<td>id</td>
+	<td>Number</td>
+	<td>Read only property that can be used to find the related HTMLElement. It can also be
+		used the other way around. If you know the id of the HTMLElement you can get the JS
+		object by looking in the <code>webFXTreeHandler.all</code> collection.</td>
+</tr>
+<tr>
+	<td>text</td>
+	<td>String</td>
+	<td>The text label for the node.</td>
+</tr>
+<tr>
+	<td>action</td>
+	<td>String</td>
+	<td>The action (uri) associated with the node.</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>Boolean</td>
+	<td>Read only. Boolean property that tells if the node is expanded or collapsed (will always return false if there are no child nodes).</td>
+</tr>
+<tr>
+	<td>icon</td>
+	<td>String</td>
+	<td>Image file to use as icon. Uses default if not specified.</td>
+</tr>
+<tr>
+	<td>openIcon</td>
+	<td>String</td>
+	<td>Image file to use as the open icon (if child nodes only). Uses default if not specified.</td>
+</tr>
+<tr>
+	<td>parentNode</td>
+	<td>Reference</td>
+	<td>A reference to the parent node.</td>
+</tr>
+<tr>
+	<td>childNodes</td>
+	<td>Array</td>
+	<td>Collection of references to all child nodes.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Methods</h3>
+
+<table>
+<thead><tr>
+	<td>Name</td>
+	<td>Returns</td>
+	<td>Description</td>
+</tr></thead>
+<tbody>
+<tr>
+	<td>add(oNode, [bNoIdent])</td>
+	<td>Reference</td>
+	<td>
+	  Adds a tree item to the current item. This method takes two argument, the first
+	  is the WebFXTreeItem object to add and the second is an optional boolean value,
+	  that if specified and set to true will prevent the tree from executing the indent
+	  method automatically once the node has been added. This parameter has no effect
+	  on calls to the add method before the tree is rendered, but settings this flag
+	  when adding nodes after the tree has been rendered will greatly reduce the time
+	  needed to complete the operation, this can be quite useful while adding more
+	  than one node at a time, but requires that the indent method is manually executed
+		on the top most node affected by the changes afterwards.
+		Returns a reference to the added node.</td>
+</tr>
+<tr>
+	<td>indent()</td>
+	<td>Void</td>
+	<td>Redraws the traces between nodes and makes sure the tree is properly layed out.</td>
+</tr>
+<tr>
+	<td>toggle()</td>
+	<td>Void</td>
+	<td>Toggles the expand/collapse.</td>
+</tr>
+<tr>
+	<td>expand()</td>
+	<td>Void</td>
+	<td>Expands the tree item.</td>
+</tr>
+<tr>
+	<td>collapse()</td>
+	<td>Void</td>
+	<td>Collapses the tree item.</td>
+</tr>
+<tr>
+	<td>expandAll()</td>
+	<td>Void</td>
+	<td>Expands the tree item and all sub items recursively.</td>
+</tr>
+<tr>
+	<td>collapseAll()</td>
+	<td>Void</td>
+	<td>Collapses the tree root and all sub items recursively.</td>
+</tr>
+<tr>
+	<td>expandChildren()</td>
+	<td>Void</td>
+	<td>Expands all sub items recursively (same as executing expandAll and the collapse).</td>
+</tr>
+<tr>
+	<td>collapseChildren()</td>
+	<td>Void</td>
+	<td>Collapses all sub items recursively (same as executing collapseAll and the expand).</td>
+</tr>
+<tr>
+	<td>getNextSibling()</td>
+	<td>Reference</td>
+	<td>Returns a reference to the next sibling.</td>
+</tr>
+<tr>
+	<td><nobr>getPreviousSibling()</nobr></td>
+	<td>Reference</td>
+	<td>Returns a reference to the previous sibling.</td>
+</tr>
+<tr>
+	<td>toString()</td>
+	<td>String</td>
+	<td>Genereates the HTML string needed to render the tree item.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>WebFXTree</h2>
+
+<p>
+  The WebFXTree object is used to create the actual tree root that can later be populated with tree items.
+  All properties and methods from the WebFXTreeAbstractNode are inherited.
+</p>
+
+<h3>Constructor</h3>
+
+<pre>new WebFXTree([text], [action], [behavior])</pre>
+
+<table>
+<thead><tr>
+	<td>Name</td>
+	<td>Type</td>
+	<td>Description</td>
+</tr></thead>
+<tbody>
+<tr>
+	<td>text</td>
+	<td>String</td>
+	<td>Optional. The text label for the tree root.</td>
+</tr>
+<tr>
+	<td>action</td>
+	<td>String</td>
+	<td>Optional. The action (uri) associated with the tree root.</td>
+</tr>
+<tr>
+	<td>behavior</td>
+	<td>String</td>
+	<td>Optional. Name of the behavior to use, check the setBehavior() method for details.</td>
+</tr>
+<tr>
+	<td>icon</td>
+	<td>String</td>
+	<td>Optional. Image to use as the icon.</td>
+</tr>
+<tr>
+	<td>openIcon</td>
+	<td>String</td>
+	<td>Optional. Image to use as the open icon.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Properties</h3>
+
+<table>
+<thead><tr>
+	<td>Name</td>
+	<td>Type</td>
+	<td>Description</td>
+</tr></thead>
+<tbody>
+<tr>
+	<td>rendered</td>
+	<td>Boolean</td>
+	<td>Flag that indicates whatever or no the tree has been generated and rendered.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Methods</h3>
+
+<table>
+<thead><tr>
+	<td>Name</td>
+	<td>Returns</td>
+	<td>Description</td>
+</tr></thead>
+<tbody>
+<tr>
+	<td>getSelected()</td>
+	<td>Reference</td>
+	<td>Returns the id of the selected object, if any.</td>
+</tr>
+<tr>
+	<td><nobr>setBehavior(sBehavior)</nobr></td>
+	<td>Void</td>
+	<td>
+		Has to be specified before the tree is created and can be used to change the way the tree behaves,
+		possible values are <i>classic</i> (default) and <i>explorer</i>. Check the usage page for more
+		information about this.
+	</td>
+</tr>
+<tr>
+	<td>getBehavior()</td>
+	<td>String</td>
+	<td>Returns the name of the behavior used.</td>
+</tr>
+</tbody>
+</table>
+
+<h2>WebFXTreeItem</h2>
+
+<p>
+  Used to create tree items, can be added (uisng the add method) to a WebFXTree or to another
+  WebFXTreeItem object.
+  All properties and methods from the WebFXTreeAbstractNode are inherited.
+</p>
+
+<h3>Constructor</h3>
+
+<pre>new WebFXTreeItem([text], [action], [parent], [icon], [openIcon])</pre>
+
+<table>
+<thead><tr>
+	<td>Name</td>
+	<td>Type</td>
+	<td>Description</td>
+</tr></thead>
+<tbody>
+<tr>
+	<td>text</td>
+	<td>String</td>
+	<td>Optional. The text label for the tree item.</td>
+</tr>
+<tr>
+	<td>action</td>
+	<td>String</td>
+	<td>Optional. The action (uri) associated with the tree item.</td>
+</tr>
+<tr>
+	<td>parent</td>
+	<td>Reference</td>
+	<td>Optional. Reference to an object to witch the node should be added.</td>
+</tr>
+<tr>
+	<td>icon</td>
+	<td>String</td>
+	<td>Optional. Image to use as the icon.</td>
+</tr>
+<tr>
+	<td>openIcon</td>
+	<td>String</td>
+	<td>Optional. Image to use as the open icon.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Properties</h3>
+
+<table>
+<thead><tr>
+	<td>Name</td>
+	<td>Type</td>
+	<td>Description</td>
+</tr></thead>
+<tbody>
+<tr>
+	<td colspan="3">None but the inherited ones</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Methods</h3>
+
+<table>
+<thead><tr>
+	<td>Name</td>
+	<td>Returns</td>
+	<td>Description</td>
+</tr></thead>
+<tbody>
+<tr>
+	<td>getFirst()</td>
+	<td>Reference</td>
+	<td>Returns a reference to the first child node, if any.</td>
+</tr>
+<tr>
+	<td>getLast()</td>
+	<td>Reference</td>
+	<td>Returns a reference to the last child node, if any.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+<section filename="implementation.html" title="Implementation" output="standard">
+<p>
+	A tree widget is basically a bunch of collapsible containers, when you open a node
+	all it's child nodes becomes visible, and when you close it they're hidden. The basic
+	idea is that simple however there are a few things that makes it a bit more complicated.
+	Below you'll find information about parts of the implementation of this tree widget,
+	how the generated code looks like and how a few of the methods work. This is not
+	something you need to read and understand in order to use this widget, however if
+	you're interested in how this was made and how it works you might find this helpful.
+</p>
+<h2>Generated Code</h2>
+<p>
+	As described earlier the tree widget uses an object hierarchy implementation to simplify the creation of trees,
+	however since the browser cannot understand that object hierarchy we are required to convert it into something
+	that the browser can render, in this case guess what we're using? Yeah you where right, our old buddy html.
+	Below is the generated html code for a small tree with only three items. Further down this document you'll find
+	the same code but split up and described.
+</p>
+<pre>
+	&lt;div id="webfx-tree-object-0" ondblclick="webFXTreeHandler.toggle(this);" class="webfx-tree-item"&gt;
+		&lt;img id="webfx-tree-object-0-icon" src="images/openfoldericon.png" onclick="webFXTreeHandler.select(this);"&gt;
+		&lt;a href="javascript:void(0);" id="webfx-tree-object-0-anchor"&gt;Root&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div id="webfx-tree-object-0-cont" class="webfx-tree-container" style="display: block;"&gt;
+		&lt;div id="webfx-tree-object-1" class="webfx-tree-item"&gt;
+			&lt;img id="webfx-tree-object-1-plus" src="images/L.png"&gt;
+			&lt;img id="webfx-tree-object-1-icon" src="images/new.png" onclick="webFXTreeHandler.select(this);"&gt;
+			&lt;a href="javascript:void(0);" id="webfx-tree-object-1-anchor"&gt;1&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div id="webfx-tree-object-2" class="webfx-tree-item"&gt;
+			&lt;img id="webfx-tree-object-2-plus" src="images/L.png"&gt;
+			&lt;img id="webfx-tree-object-2-icon" src="images/new.png" onclick="webFXTreeHandler.select(this);"&gt;
+			&lt;a href="javascript:void(0);" id="webfx-tree-object-2-anchor"&gt;2&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div id="webfx-tree-object-3" class="webfx-tree-item"&gt;
+			&lt;img id="webfx-tree-object-3-plus" src="images/L.png"&gt;
+			&lt;img id="webfx-tree-object-3-icon" src="images/new.png" onclick="webFXTreeHandler.select(this);"&gt;
+			&lt;a href="javascript:void(0);" id="webfx-tree-object-3-anchor"&gt;3&lt;/a&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+</pre>
+<h3>WebFXTree Object</h3>
+<p>
+	The code below is what is generated from the WebFXTree Object (it will however also contain the code from all tree items
+	but to increase the readability that code has been removed).
+</p>
+<pre>
+	&lt;div id="webfx-tree-object-0" ondblclick="webFXTreeHandler.toggle(this);" class="webfx-tree-item"&gt;
+		&lt;img id="webfx-tree-object-0-icon" src="images/openfoldericon.png" onclick="webFXTreeHandler.select(this);"&gt;
+		&lt;a href="javascript:void(0);" id="webfx-tree-object-0-anchor"&gt;Root&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div id="webfx-tree-object-0-cont" class="webfx-tree-container" style="display: block;"&gt;
+		<font color="teal">&lt;!-- This is where the Tree Item's will be inserted --&gt;</font>
+	&lt;/div&gt;
+</pre>
+<p>
+	The first div contains the top level icon and label while the secund div is the container that will house the tree items.
+	When the first div is double clicked the display property of the secund one will be toggled.
+</p>
+<h3>WebFXTreeItem</h3>
+<p>
+	The code below is what is generated from a singel WebFXTreeItem Object.
+</p>
+<pre>
+	&lt;div id="webfx-tree-object-1" class="webfx-tree-item"&gt;
+		&lt;img id="webfx-tree-object-1-plus" src="images/L.png"&gt;
+		&lt;img id="webfx-tree-object-1-icon" src="images/new.png" onclick="webFXTreeHandler.select(this);"&gt;
+		&lt;a href="javascript:void(0);" id="webfx-tree-object-1-anchor"&gt;1&lt;/a&gt;
+	&lt;/div&gt;
+</pre>				
+<p>
+	As you can see the code generated by each WebFXTreeItem looks pretty much the same as the one for the WebFXTree object, the
+	main difference is the extra image(s) that the tree items has (the plus/minus and track icons). Also note that the code
+	shown above is from a tree item without children. If the tree item has children an extra div to contain those will be added
+	(much like the secund div generated by the WebFXTree Object).
+</p>
+<h2>Expanding/Collapsing</h2>
+<p>
+	The most important methods for this widget are expand and collapse. Here I'll try to describe how those works. As the html
+	code above showed <code>webFXTreeHandler.toggle(this);</code> is executed once a tree item is clicked. The tree handler
+	then uses an internal reference, <code>webFXTreeHandler.all</code> to look up the object for the clicked tree item. Once
+	the object has been found it executes the <code>toggle()</code> method on that
+	object.
+</p>
+<p>
+	Below is the code for the toggle method and as you can see all it does is to check whatever or not the item is currently
+	expanded or collapsed, and then calls the appropriated method (expand if it's collapsed or collapse if it's expanded).
+</p>
+<pre>
+	WebFXTreeItem.prototype.toggle = function () {
+		if (this.open) { this.collapse(); }
+		else { this.expand(); }
+	}
+</pre>
+<p>
+	Since the expand and collapse methods works pretty much the same I'll only describe one of them, the expand method.
+</p>
+<pre>
+	WebFXTreeItem.prototype.expand = function () {
+		if (!this._subItems.length > 0) { return; }
+		document.getElementById(this.id + '-cont').style.display = 'block';
+		document.getElementById(this.id + '-icon').src = openFolderIcon;
+		document.getElementById(this.id + '-plus').src = this.minusIcon;
+		this.open = true;
+		setCookie(this.id.substr(18,this.id.length - 18), '1');
+	}
+</pre>
+<p>
+	The first line of code checks to see if there are any children, since it doesn't do any good to expand it unless
+	there are. The next line is the most important one and does the expanding by changing the display mode of the div
+	containing all children to block. The next two lines changes the icon and the plus/minus sign, then the <code>open</code>
+	property is changed to reflect the expanded/collpased state and finally it sets a cookie (used to keep track of what's
+	expanded or not so that the tree can be restored to it's previous state the next time you visit the site).
+</p>
+</section>
+
+
+<section filename="demo.html" title="Demo" output="link" />
+
+
+	</sections>
+		<files>
+			<file type="archive" version="1.17" filename="/download/xtree117.zip" />
+			<file type="archive" version="1.16" filename="/download/xtree116.zip" />
+			<file type="archive" version="1.15" filename="/download/xtree115.zip" />
+			<file type="archive" version="1.14" filename="/download/xtree114.zip" />
+			<file type="archive" version="1.13" filename="/download/xtree113.zip" />
+			<file type="archive" version="1.12" filename="/download/xtree112.zip" />
+			<file type="archive" version="1.11" filename="/download/xtree111.zip" />
+			<file type="misc" filename="webfxcheckboxtreeitem.js">Checkbox tree item implementation</file>
+		</files>
+	</article>
+</articles>

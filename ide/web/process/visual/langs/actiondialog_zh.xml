@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="GBK"?>
+<config>
+<Properties>
+<item id="tabpage1" property="innerHTML" text="基本属性" />
+<item id="tabpage2" property="innerHTML" text="图表属性" />
+<item id="tabpage3" property="innerHTML" text="工作流属性" />
+
+<item id="tabpage1_1" property="innerHTML" text="基本属性" />
+<item id="tabpage1_2" property="innerHTML" text="动作编号" />
+<item id="tabpage1_3" property="innerHTML" text="动作名称" />
+<item id="tabpage1_4" property="innerHTML" text="线段类型" />
+<item id="tabpage1_5" property="innerHTML" text="折线" />
+<item id="tabpage1_6" property="innerHTML" text="直线" />
+<item id="tabpage1_7" property="innerHTML" text="起始步骤" />
+<item id="tabpage1_8" property="innerHTML" text="目的步骤" />
+
+<item id="tabpage2_1" property="innerHTML" text="动作样式" />
+<item id="tabpage2_2" property="innerHTML" text="开始箭头" />
+<item id="tabpage2_3" property="innerHTML" text="结束箭头" />
+<item id="tabpage2_4" property="innerHTML" text="线条粗细" />
+
+<item id="ActionText" property="value" text="新动作" />
+
+<item id="btnOk" property="value" text="确 定" />
+<item id="btnCancel" property="value" text="取 消" />
+<item id="btnApply" property="value" text="应 用" />
+</Properties>
+
+<Selects>
+<select id="From">
+<option value="" text="请选择..." />
+</select>
+<select id="To">
+<option value="" text="请选择..." />
+</select>
+</Selects>
+</config>

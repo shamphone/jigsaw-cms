@@ -1,0 +1,12 @@
+[PropertyInfo]
+constant,String,false,false,constant,constant,true,<default>
+operation,String,false,false,operation,operation,true,<default>
+property,String,false,false,property,property,true,<default>
+reference,String,false,false,reference,reference,true,<default>
+sysVariant,String,false,false,sysVariant,sysVariant,true,<default>
+valueType,int,false,false,valueType,valueType,true,<default>
+[IconNames]
+
+
+
+

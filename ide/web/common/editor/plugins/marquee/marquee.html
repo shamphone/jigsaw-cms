@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title>Marquee</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="noindex, nofollow" name="robots">
+    <script language="javascript" type="">
+
+
+      var dialog    = window.parent ;
+      var oEditor   = dialog.InnerDialogLoaded() ;
+      var FCK     = oEditor.FCK ;
+
+      window.onload = function()
+      {
+        oEditor.FCKLanguageManager.TranslatePage(document) ;
+        dialog.SetAutoSize( true ) ;
+        dialog.SetOkButton( true ) ;
+      };
+      //#### The OK button was hit.
+      function Ok()
+      {
+     //   var vmarBgColor;
+        var vmarToInsert;
+        var vmarText = document.getElementById('mar_InText').value;
+        var vmarDir = document.getElementById('mar_Direction').value;
+        var vmarSpd = document.getElementById('mar_Speed').value;
+        var vmarBehavior = document.getElementById('mar_Behavior').value;
+        var vmarDelay = document.getElementById('mar_Delay').value;
+        var vmarHeight = document.getElementById('mar_Height').value;
+        var vmarWidth = document.getElementById('mar_Width').value;
+        var vmarLoop = document.getElementById('mar_Loop').value;
+ /*************************************insertHTML*****************************************************/
+
+       function checkbox()
+        {
+          if (mar_OnMSTP.checked) return  " onmouseover= this.stop()" + " onmouseout = this.start()";
+          else return  " ";
+        }
+        var vmarOnMSTP = checkbox();
+        vmarToInsert = "<marquee DIRECTION="+vmarDir+" HEIGHT="+vmarHeight+" WIDTH="+vmarWidth+" scrollamount="+vmarSpd
+        +" loop="+vmarLoop+" behavior="+vmarBehavior+" scrolldelay="+vmarDelay+vmarOnMSTP+">"+vmarText;
+        FCK.InsertHtml(vmarToInsert);
+
+/*************************************insertHTML*****************************************************/
+/*************************************InsertMarquee****************************************************************/
+/*
+       // alert(vmarText + vmarDir + vmarSpd + vmarBehavior + vmarDelay + vmarHeight + vmarWidth + vmarLoop);
+        var marId = "mar"+Math.round((new Date()).getTime()*Math.random());
+	FCK.EditorDocument.selection.createRange().execCommand("InsertMarquee", null , marId);
+        var oMar = FCK.EditorDocument.getElementById(marId);
+
+//       var oMar = FCK.EditorDocument.createElement("marquee");
+//        var range = new FCKDomRange( FCK.EditorWindow ) ;
+//      range.MoveToSelection() ;
+//       range.InsertNode(oMar);
+
+        oMar.innerHTML = vmarText;
+	oMar.scrollAmount = vmarSpd;
+        oMar.direction = vmarDir;
+        oMar.behavior = vmarBehavior;
+        oMar.scrollDelay = vmarDelay;
+        oMar.height = vmarHeight;
+        oMar.width = vmarWidth;
+        oMar.loop = vmarLoop;
+
+        if (document.getElementById("mar_OnMSTP").checked)
+        {
+          oMar.onmouseover="this.stop()";
+          oMar.onmouseout="this.start()";
+        }
+        FCK.InsertElement(oMar);
+*/
+/***************InsertMarquee*****************************************************************/
+        return true;
+      }
+    </script>
+  </head>
+  <body scroll="no" style="OVERFLOW: hidden">
+     <table cellSpacing="0" cellPadding="5" border="0">
+       <tr>
+        <td noWrap><span fckLang="DlgMarInput">InputText</span>:</td>
+        <td colspan="3">
+         <input id="mar_InText" size="55" value="">
+        </td>
+        </tr>
+        <tr>
+          <td nowrap="nowrap"><span fcklang="DlgMarDirection">Direction</span>:</td>
+          <td nowrap="nowrap">
+            <select id="mar_Direction" style="WIDTH: 70">
+              <option fcklang="DlgDirectionUp" value="up">up</option>
+              <option fcklang="DlgDirectionDown" value="down" >down</option>
+              <option fcklang="DlgDirectionLeft" value="left" selected="true">left</option>
+              <option fcklang="DlgDirectionRight" value="right">right</option>
+            </select>
+          </td>
+          <td nowrap="nowrap"><span fcklang="DlgMarSpeed">Speed</span>:</td>
+          <td nowrap="nowrap"><input id="mar_Speed" size="5" value="10"></td>
+      </tr>
+      <tr>
+        <td nowrap="nowrap"><span fcklang="DlgMarBehavior">Behavior</span>:</td>
+        <td>
+          <select id="mar_Behavior" style="WIDTH: 70">
+            <option fcklang="DlgMarScroll" value="scroll">scroll</option>
+            <option fcklang="DlgMarSlide" value="slide">silde</option>
+            <option fcklang="DlgMarAlternate" value="alternate">alternate</option>
+          </Select>
+        </td>
+        <td noWrap><span fckLang="DlgMarDelay">Delay</span>:</td>
+        <td>
+         <input id="mar_Delay" size="5" value="85">
+        </td>
+      </tr>
+      <tr>
+        <td noWrap><span fckLang="DlgMarArea">Area</span>:</td>
+      </tr>
+      <tr>
+        <td noWrap><span fckLang="DlgMarHeight">Height</span>:</td>
+        <td>
+          <input id="mar_Height" size="5" value="18">
+        </td>
+        <td noWrap><span fckLang="DlgMarWidth">Width</span>:</td>
+        <td>
+          <input id="mar_Width" size="5" value="980">
+      </tr>
+      <tr>
+        <td noWrap><span fckLang="DlgMarLoop">Loop</span>:</td>
+        <td>
+        <input id="mar_Loop" size="5" value="1">
+        </td>
+        <td noWrap><span fckLang="DlgMarOnMouseStop">On Mouse Stop</span>:</td>
+        <td>
+          <input type="checkbox" id="mar_OnMSTP" checked="checked">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK"?>
+<config>
+<Properties>
+<item id="text1_1" property="innerHTML" text="产品名称：" />
+<item id="text1_2" property="innerHTML" text="WebFlow Designer 预览版" />
+<item id="text2" property="innerHTML" text="版本日期：" />
+<item id="text3_1" property="innerHTML" text="运行环境：" />
+<item id="text3_2" property="innerHTML" text="IE 6.0或基于IE内核的浏览器（运行必需）" />
+<item id="text3_3" property="innerHTML" text="Windows Scripts Host 5.6（支持导入导出）" />
+<item id="mainmsg" property="value" text="WebFlow是一款运行于Web Server上的工作流产品，包括工作流引擎（服务器端）、设计工具（客户端）、模板、监控与模拟等组件。其流程主要数据结构采用自行定制的XML格式，简单高效，目前暂不考虑兼容WFMC的繁杂XML标准。\n\n本预览版是WebFlow的流程设计工具（Designer），在Window 2000及XP的IE6.0下运行测试良好。下一个版本将是WebServer上的运行版。（注意：请不要直接解压在有中文字符的路径下如桌面上，可能会发生WSH在导入导出时寻找不到中文路径的问题）\n\n使用中如有问题或建议请发送：f15_nsm@hotmail.com  谢谢使用！\n\n" />
+<item id="ok" property="value" text=" 确 定 " />
+</Properties>
+</config>

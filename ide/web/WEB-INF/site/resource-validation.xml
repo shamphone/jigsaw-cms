@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+<form-validation>
+  <formset>
+    <constant>
+      <constant-name>zip</constant-name>
+      <constant-value>(\.zip)$</constant-value>
+    </constant>
+    <constant>
+      <constant-name>file</constant-name>
+      <constant-value>^([a-zA-Z]:\\)</constant-value>
+    </constant>
+    <form name="resourceForm">
+      <field property="zip" depends="mask">
+        <arg0 key="uploadForm.zip"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${zip}</var-value>
+        </var>
+      </field>
+      <field property="file[0]" depends="mask">
+        <arg0 key="uploadForm.file[0]"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${file}</var-value>
+        </var>
+      </field>
+      <field property="file[1]" depends="mask">
+        <arg0 key="uploadForm.file[1]"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${file}</var-value>
+        </var>
+      </field>
+      <field property="file[2]" depends="mask">
+        <arg0 key="uploadForm.file[2]"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${file}</var-value>
+        </var>
+      </field>
+      <field property="file[3]" depends="mask">
+        <arg0 key="uploadForm.file[3]"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${file}</var-value>
+        </var>
+      </field>
+      <field property="file[4]" depends="mask">
+        <arg0 key="uploadForm.file[4]"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${file}</var-value>
+        </var>
+      </field>
+      <field property="file[5]" depends="mask">
+        <arg0 key="uploadForm.file[5]"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${file}</var-value>
+        </var>
+      </field>
+      <field property="file[6]" depends="mask">
+        <arg0 key="uploadForm.file[6]"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${file}</var-value>
+        </var>
+      </field>
+      <field property="file[7]" depends="mask">
+        <arg0 key="uploadForm.file[7]"/>
+        <var>
+          <var-name>mask</var-name>
+          <var-value>${file}</var-value>
+        </var>
+      </field>
+    </form>
+  </formset>
+</form-validation>

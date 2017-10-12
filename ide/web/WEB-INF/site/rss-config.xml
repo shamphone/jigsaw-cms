@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="createRSSForm" type="com.fulong.site.form.RSSForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/create" type="com.fulong.site.rss.CreateAction" scope="request">
+			<forward name="success" path="/create.jsp" />
+		</action>
+		<action path="/insert" name="createRSSForm" type="com.fulong.site.rss.InsertAction" scope="request">
+			<forward name="success" path="/createSuccess.jsp" />
+		</action>
+		<action path="/toProperty" type="com.fulong.site.rss.ToPropertyAction" scope="request">
+			<forward contextRelative="true" name="success" path="/site/editor/plugins/rss/property.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources null="false" parameter="com.fulong.site.Common" />
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/site/validation.xml" />
+	</plug-in>
+</struts-config>

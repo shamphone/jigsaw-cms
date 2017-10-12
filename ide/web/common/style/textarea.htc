@@ -1,0 +1,9 @@
+<attach for="element" event="onkeyup" handler="autoSize" />
+<script type="text/javascript">
+    function autoSize(){
+        while(element.scrollTop!=0){
+          element.rows=element.rows+1;
+        }
+    }
+</script>
+

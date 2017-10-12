@@ -1,0 +1,17 @@
+FCKLang.NewChannelBtn         = "Create New Channel";
+FCKLang.NewChannelTitle       = "Create New Channel";
+FCKLang.PublishChannelBtn     = "Publish Channel";
+FCKLang.PublishChannelTitle   = "Publish Channel";
+FCKLang.RestoreChannelBtn     = "Restore Channel";
+FCKLang.RestoreChannelTitle   = "Restore Channel";
+FCKLang.DeleteChannelBtn      =  "Delete Channel";
+FCKLang.DeleteChannelTitle    =  "Delete Channel";
+FCKLang.MoveChannelBtn        =  "Move Channel";
+FCKLang.MoveChannelTitle      =  "Move Channel";
+FCKLang.MoveChannelDlgTitle   =   "Move Channel";
+FCKLang.ImportHTMLBtn         =  "Import HTML";
+FCKLang.ImportHTMLTitle       =  "Import HTML";
+FCKLang.EditChannelBtn        =  "Edit Channel";
+FCKLang.EditChannelTitle      =  "Edit Channel";
+FCKLang.SaveChannelBtn        =  "Save Channel";
+FCKLang.SaveChannelTitle      =  "Save Channel";

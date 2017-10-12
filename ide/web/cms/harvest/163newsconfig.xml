@@ -1,0 +1,54 @@
+
+<config charset="gb2312">    
+    <var-def name="startUrl">http://news.163.com/domestic/</var-def>
+    
+    <file action="write" path="163news.xml" charset="UTF-8">
+        <template>
+            <![CDATA[<articles>]]><!-- 这一行可以在文件开头写东西-->
+        </template>
+        
+        <loop item="articleUrl" index="i">
+            <!-- collects URLs of all articles from the front page -->
+            <list>
+                <xpath expression="//div[@class='area clearfix areabg3']//h3/a[1]/@href">
+                    <html-to-xml>
+                        <http url="${startUrl}"/>
+                    </html-to-xml>
+                </xpath>
+                <xpath expression="//div[@class='area clearfix areabg3']//ul[@class='textList1']//a/@href">
+                    <html-to-xml>
+                        <http url="${startUrl}"/>
+                    </html-to-xml>
+                </xpath>
+            </list>
+            
+            <!-- downloads each article and extract data from it -->
+            <body>
+                <xquery>
+                    <xq-param name="doc">
+                        <html-to-xml>
+                            <http url="${sys.fullUrl(startUrl, articleUrl)}?&amp;pagewanted=print"/>
+                        </html-to-xml>
+                    </xq-param>
+                    <xq-expression><![CDATA[
+                        declare variable $doc as node() external;
+                        let $title := data($doc//title)
+                        let $text := data($doc//div[@id="endText"]/p)
+                            return
+                                <article>
+                                    <title>
+                                    	{data($title)}
+                                    </title>
+                                    <content>
+                                    	{data($text)}
+                                    </content>
+                                </article>
+                    ]]></xq-expression>
+                </xquery>
+            </body>
+        </loop>
+        
+        <![CDATA[ </articles> ]]>
+    </file>
+    
+</config>

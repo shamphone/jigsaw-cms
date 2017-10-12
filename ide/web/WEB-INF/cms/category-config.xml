@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="categoryForm" type="com.fulong.cms.category.form.CategoryForm"/>
+    <form-bean name="categoryForm1" type="com.fulong.cms.category.form.CategoryForm"/>
+    <form-bean name="searchPrincipalForm" type="com.fulong.cms.category.form.SearchPrincipalForm"/>
+  </form-beans>
+  <action-mappings>
+    <action name="categoryForm" path="/categoryList" type="com.fulong.cms.category.CategoryListAction" scope="request">
+      <forward name="success" path="/categoryList.jsp"/>
+    </action>
+    <action name="categoryForm" path="/creatCategory" type="com.fulong.cms.category.CreatCategoryAction" scope="request">
+      <forward name="success" path="/creatCategory.jsp"/>
+    </action>
+    <action name="categoryForm" path="/insertCategory" type="com.fulong.cms.category.InsertCategoryAction" scope="request">
+      <!--forward name="success" path="/categoryList.do?categoryID={0}" redirect="true"/-->
+      <forward name="success" path="/createSuccess.jsp" redirect="true"/>
+      <forward name="failed" path="/creatCategory.do?categoryID={0}"/>
+    </action>
+    <action name="categoryForm" path="/modifyCategory" type="com.fulong.cms.category.ModifyCategoryAction" scope="request">
+      <forward name="success" path="/modifyCategory.jsp"/>
+    </action>
+    <action name="categoryForm" path="/updateCategory" type="com.fulong.cms.category.UpdateCategoryAction" scope="request">
+      <forward name="success" path="/updateSuccess.jsp" redirect="true"/>
+      <!--forward name="success" path="/categoryList.do?categoryID={0}" redirect="true"/-->
+    </action>
+    <action path="/deleteCategoryConfirm" type="com.fulong.cms.category.DeleteCategoryConfirmAction" scope="request">
+      <forward name="success" path="/deleteCategoryConfirm.jsp"/>
+      <forward name="deleteForbid" path="/deleteForbid.jsp" redirect="true"/>
+    </action>
+    <action name="categoryForm" path="/deleteCategory" type="com.fulong.cms.category.DeleteCategoryAction" scope="request">
+      <forward name="success" path="/deleteSuccess.jsp" redirect="true"/>
+      <forward name="deleteForbid" path="/deleteForbid.jsp?status={0}" redirect="true"/>
+    </action>
+   
+
+    <action name="categoryForm" path="/authorization" type="com.fulong.cms.category.AuthorizationAction" scope="request">
+      <forward name="success" path="/authorization.jsp"/>
+    </action>
+    <action name="categoryForm" path="/editAuth" type="com.fulong.cms.category.EditAuthAction" scope="request">
+      <forward name="success" path="/editAuthorization.jsp"/>
+    </action>
+    <action name="categoryForm" path="/updateAuth" type="com.fulong.cms.category.UpdateAuthAction" scope="request">
+      <forward name="success" path="/updateAuthSuccess.jsp?categoryID={0}" redirect="true"/>
+    </action>
+    <action name="categoryForm" path="/categoryQuota" type="com.fulong.cms.category.CategoryQuotaAction" scope="request">
+      <forward name="success" path="/categoryQuota.jsp"/>
+    </action>
+    <!--Edit Quota -->
+    <action name="categoryForm" path="/gotoEditQuota" type="com.fulong.cms.category.GotoEditQuotaAction" scope="request">
+      <forward name="success" path="/editQuota.jsp" />
+    </action>
+    <!--转入插入配额页面-->
+    <action name="categoryForm" path="/gotoInsertQuota" type="com.fulong.cms.category.GotoInsertQuotaAction" scope="request">
+      <forward name="success" path="/insertQuota.jsp"/>
+    </action>
+    <!--转入删除配额页面-->
+    <action name="categoryForm" path="/gotoDelQuota" type="com.fulong.cms.category.GotoDelQuotaAction" scope="request">
+      <forward name="success" path="/delQuota.jsp"/>
+    </action>
+    <action name="categoryForm" path="/view" type="com.fulong.cms.category.ViewAction" scope="request">
+      <forward name="success" path="/view.jsp"/>
+    </action>
+    <action name="categoryForm" path="/saveView" type="com.fulong.cms.category.SaveViewAction" scope="request">
+      <forward name="success" path="/view.do?categoryID={0}" redirect="true"/>
+    </action>
+    <action name="categoryForm" path="/definition" type="com.fulong.cms.category.DefinitionAction" scope="request">
+      <forward name="success" path="cms/definition/definition.jsp"/>
+    </action>
+    <action name="searchPrincipalForm" path="/searchUser" type="com.fulong.cms.category.SearchUserAction" scope="request">
+      <forward name="success" path="/searchUser.jsp"/>
+    </action>
+    <action name="searchPrincipalForm" path="/doSearchUser" type="com.fulong.cms.category.DoSearchUserAction" scope="request">
+      <forward name="success" path="/searchUser.jsp"/>
+    </action>
+    <action name="searchPrincipalForm" path="/searchOrg" type="com.fulong.cms.category.SearchOrgAction" scope="request">
+      <forward name="success" path="/searchOrg.jsp"/>
+    </action>
+    <action name="searchPrincipalForm" path="/doSearchOrg" type="com.fulong.cms.category.DoSearchOrgAction" scope="request">
+      <forward name="success" path="/searchOrg.jsp"/>
+    </action>
+    <action name="searchPrincipalForm" path="/searchGroup" type="com.fulong.cms.category.SearchGroupAction" scope="request">
+      <forward name="success" path="/searchGroup.jsp"/>
+    </action>
+    <action name="searchPrincipalForm" path="/doSearchGroup" type="com.fulong.cms.category.DoSearchGroupAction" scope="request">
+      <forward name="success" path="/searchGroup.jsp"/>
+    </action>
+    <!-- 插入配额-->
+    <action name="categoryForm" path="/insertQuota" type="com.fulong.cms.category.InsertQuotaAction" scope="request">
+      <forward name="success" path="/updateQuotaSuccess.jsp?categoryID={0}" redirect="true"/>
+      <forward name="failure" path="/updateQuotaFailure.jsp"/>
+    </action>
+    <action name="categoryForm" path="/delQuota" type="com.fulong.cms.category.DelQuotaAction" scope="request">
+      <forward name="success" path="/updateQuotaSuccess.jsp?categoryID={0}" redirect="true"/>
+    </action>
+    <action path="/saveAuthorization" type="com.fulong.cms.category.SaveAuthorizationAction" scope="request"/>
+    <action path="/delAuthorization" type="com.fulong.cms.category.DelAuthorizationAction" scope="request"/>
+    <action path="/setExtend" type="com.fulong.cms.category.SetExtendAction" scope="request">
+      <forward name="success" path="/authorization.do?categoryID={0}" redirect="true"/>
+    </action>
+    <action path="/insertShare" type="com.fulong.cms.category.InsertShareAction" scope="request"/>
+    <action path="/delShare" type="com.fulong.cms.category.DelShareAction" scope="request"/>
+    <action path="/viewWorkFlow" type="com.fulong.cms.category.ViewWorkFlowAction" scope="request">
+      <forward name="success" path="/viewWorkFlow.jsp"/>
+    </action>
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.cms.Common"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/cms/category-validation.xml"/>
+  </plug-in>
+</struts-config>

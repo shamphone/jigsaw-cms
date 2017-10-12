@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title>Paragraph Properties</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="noindex, nofollow" name="robots">
+    <script language="javascript" type="">
+      var ValueOfStyle = function() { }
+      ValueOfStyle.prototype =
+      {
+        num : NaN,
+        unit : "px",
+
+        setNum : function(iNum)
+        {
+          this.num = parseFloat(iNum);
+        },
+
+        getNum : function()
+        {
+          return isNaN(this.num) ? "" : this.num;
+        },
+
+        setUnit : function(sUnit)
+        {
+          if (sUnit)
+            this.unit = sUnit;
+        },
+
+        getUnit : function()
+        {
+          return this.unit;
+        },
+
+        equals : function(obj)
+        {
+          var result = false;
+          if (obj!=null && obj.num==this.num && obj.unit == this.unit)
+            result = true;
+          return result;
+        },
+
+        isNull : function()
+        {
+          return isNaN(this.num);
+        },
+
+        toString : function()
+        {
+          return isNaN(this.num) ? "" : this.num.toString() + this.unit;
+        },
+
+        clear : function()
+        {
+          this.num = NaN;
+          this.unit = "px";
+        }
+      }
+
+      var dialog    = window.parent ;
+      var oEditor   = dialog.InnerDialogLoaded() ;
+      var FCK     = oEditor.FCK ;
+      var FCKConfig = oEditor.FCKConfig ;
+      var FCKTools = oEditor.FCKTools ;
+
+      var Styles = new Array();
+
+      window.onload = function()
+      {
+        oEditor.FCKLanguageManager.TranslatePage(document) ;
+        LoadSelection();
+        dialog.SetAutoSize( true ) ;
+        dialog.SetOkButton( true ) ;
+      };
+
+      function LoadSelection()
+      {
+        //dialog.Selection.EnsureSelection();//for IE
+        var range = new oEditor.FCKDomRange( FCK.EditorWindow ) ;
+        range.MoveToSelection() ;
+        var bookmark = range.CreateBookmark() ;
+        var iterator = new oEditor.FCKDomRangeIterator( range ) ;
+        var block ;
+        var i = 0;
+        while ( ( block = iterator.GetNextParagraph() ) )
+          Styles[Styles.length] = block.style ;
+
+        range.MoveToBookmark( bookmark ) ;
+        range.Select() ;
+
+        var vosMarginTopUnit;
+        var vosMarginBottomUnit;
+        var vosMarginLeftUnit;
+        var vosMarginRightUnit;
+        var vosLineHeightUnit;
+        var vosTextIndentUnit;
+        var vosLetterSpacingUnit;
+
+        for (i = 0; i < Styles.length; i++)
+        {
+          if (i == 0)
+          {
+              var tmpVos = getValueOfStyle(Styles[i].marginTop);
+              vosMarginTopUnit = new ValueOfStyle();
+              vosMarginTopUnit.setNum(tmpVos.getNum());
+              vosMarginTopUnit.setUnit(tmpVos.getUnit());
+
+              tmpVos = getValueOfStyle(Styles[i].marginBottom);
+              vosMarginBottomUnit = new ValueOfStyle();
+              vosMarginBottomUnit.setNum(tmpVos.getNum());
+              vosMarginBottomUnit.setUnit(tmpVos.getUnit());
+
+              tmpVos = getValueOfStyle(Styles[i].marginLeft);
+              vosMarginLeftUnit = new ValueOfStyle();
+              vosMarginLeftUnit.setNum(tmpVos.getNum());
+              vosMarginLeftUnit.setUnit(tmpVos.getUnit());
+
+              tmpVos = getValueOfStyle(Styles[i].marginRight);
+              vosMarginRightUnit = new ValueOfStyle();
+              vosMarginRightUnit.setNum(tmpVos.getNum());
+              vosMarginRightUnit.setUnit(tmpVos.getUnit());
+
+              tmpVos = getValueOfStyle(Styles[i].lineHeight);
+              vosLineHeightUnit = new ValueOfStyle();
+              vosLineHeightUnit.setNum(tmpVos.getNum());
+              vosLineHeightUnit.setUnit(tmpVos.getUnit());
+
+              tmpVos = getValueOfStyle(Styles[i].textIndent);
+              vosTextIndentUnit = new ValueOfStyle();
+              vosTextIndentUnit.setNum(tmpVos.getNum());
+              vosTextIndentUnit.setUnit(tmpVos.getUnit());
+
+              tmpVos = getValueOfStyle(Styles[i].letterSpacing);
+              vosLetterSpacingUnit = new ValueOfStyle();
+              vosLetterSpacingUnit.setNum(tmpVos.getNum());
+              vosLetterSpacingUnit.setUnit(tmpVos.getUnit());
+          }
+          else
+          {
+              if (!vosMarginTopUnit.equals(getValueOfStyle(Styles[i].marginTop)))
+                  vosMarginTopUnit.clear();
+
+              if (!vosMarginBottomUnit.equals(getValueOfStyle(Styles[i].marginBottom)))
+                  vosMarginBottomUnit.clear();
+
+              if (!vosMarginLeftUnit.equals(getValueOfStyle(Styles[i].marginLeft)))
+                  vosMarginLeftUnit.clear();
+
+              if (!vosMarginRightUnit.equals(getValueOfStyle(Styles[i].marginRight)))
+                  vosMarginRightUnit.clear();
+
+              if (!vosLineHeightUnit.equals(getValueOfStyle(Styles[i].lineHeight)))
+                  vosLineHeightUnit.clear();
+
+              if (!vosTextIndentUnit.equals(getValueOfStyle(Styles[i].textIndent)))
+                  vosTextIndentUnit.clear();
+
+              if (!vosLetterSpacingUnit.equals(getValueOfStyle(Styles[i].letterSpacing)))
+                  vosLetterSpacingUnit.clear();
+          }
+        }
+        if (!vosMarginTopUnit.isNull())
+        {
+          document.getElementById('d_margintop').value = vosMarginTopUnit.getNum();
+          document.getElementById('d_margintop_unit').value = vosMarginTopUnit.getUnit();
+        }
+        if (!vosMarginBottomUnit.isNull())
+        {
+          document.getElementById('d_marginbottom').value = vosMarginBottomUnit.getNum();
+          document.getElementById('d_marginbottom_unit').value = vosMarginBottomUnit.getUnit();
+        }
+        if (!vosMarginLeftUnit.isNull())
+        {
+          document.getElementById('d_marginleft').value = vosMarginLeftUnit.getNum();
+          document.getElementById('d_marginleft_unit').value = vosMarginLeftUnit.getUnit();
+        }
+        if (!vosMarginRightUnit.isNull())
+        {
+          document.getElementById('d_marginright').value = vosMarginRightUnit.getNum();
+          document.getElementById('d_marginright_unit').value = vosMarginRightUnit.getUnit();
+        }
+        if (!vosLineHeightUnit.isNull())
+        {
+          document.getElementById('d_lineheight').value = vosLineHeightUnit.getNum();
+          document.getElementById('d_lineheight_unit').value = vosLineHeightUnit.getUnit();
+        }
+        if (!vosTextIndentUnit.isNull())
+        {
+          document.getElementById('d_textindent').value = vosTextIndentUnit.getNum();
+          document.getElementById('d_textindent_unit').value = vosTextIndentUnit.getUnit();
+        }
+        if (!vosLetterSpacingUnit.isNull())
+        {
+          document.getElementById('d_letterspacing').value = vosLetterSpacingUnit.getNum();
+          document.getElementById('d_letterspacing_unit').value = vosLetterSpacingUnit.getUnit();
+        }
+      }
+
+      //#### The OK button was hit.
+      function Ok()
+      {
+        var vosMarginTopUnit = new ValueOfStyle();
+        var vosMarginBottomUnit = new ValueOfStyle();
+        var vosMarginLeftUnit = new ValueOfStyle();
+        var vosMarginRightUnit = new ValueOfStyle();
+        var vosLineHeightUnit = new ValueOfStyle();
+        var vosTextIndentUnit = new ValueOfStyle();
+        var vosLetterSpacingUnit = new ValueOfStyle();
+
+        vosMarginTopUnit.setNum(document.getElementById('d_margintop').value);
+        vosMarginBottomUnit.setNum(document.getElementById('d_marginbottom').value);
+        vosMarginLeftUnit.setNum(document.getElementById('d_marginleft').value);
+        vosMarginRightUnit.setNum(document.getElementById('d_marginright').value);
+        vosLineHeightUnit.setNum(document.getElementById('d_lineheight').value);
+        vosTextIndentUnit.setNum(document.getElementById('d_textindent').value);
+        vosLetterSpacingUnit.setNum(document.getElementById('d_letterspacing').value);
+
+        vosMarginTopUnit.setUnit(document.getElementById('d_margintop_unit').value);
+        vosMarginBottomUnit.setUnit(document.getElementById('d_marginbottom_unit').value);
+        vosMarginLeftUnit.setUnit(document.getElementById('d_marginleft_unit').value);
+        vosMarginRightUnit.setUnit(document.getElementById('d_marginright_unit').value);
+        vosLineHeightUnit.setUnit(document.getElementById('d_lineheight_unit').value);
+        vosTextIndentUnit.setUnit(document.getElementById('d_textindent_unit').value);
+        vosLetterSpacingUnit.setUnit(document.getElementById('d_letterspacing_unit').value);
+
+        oEditor.FCKUndo.SaveUndoStep() ;
+        for ( i = 0; i < Styles.length; i = i + 1)
+        {
+          Styles[i].marginTop = vosMarginTopUnit.toString();
+          Styles[i].marginBottom = vosMarginBottomUnit.toString();
+          Styles[i].marginLeft = vosMarginLeftUnit.toString();
+          Styles[i].marginRight = vosMarginRightUnit.toString();
+          Styles[i].lineHeight = vosLineHeightUnit.toString();
+          Styles[i].textIndent = vosTextIndentUnit.toString();
+          Styles[i].letterSpacing = vosLetterSpacingUnit.toString();
+        }
+        return true;
+      }
+
+      function getValueOfStyle(str)
+      {
+        var vos = new ValueOfStyle();
+        var rgExp =/^([0-9]+)(px|em|ex|%|in|cm|mm|pt|pc)?$/;
+        var arr = rgExp.exec(str);
+        if (arr)
+        {
+          vos.setNum(arr[1]);
+          vos.setUnit(arr[2]);
+        }
+        return vos;
+      }
+    </script>
+  </head>
+  <body scroll="no" style="OVERFLOW: hidden">
+    <table cellSpacing="0" cellPadding="5" border="0">
+      <tr>
+        <td noWrap><span fckLang="DlgPraMarginTop">MarginTop</span>:</td>
+        <td>
+          <input id="d_margintop" size="2" value="">
+          <select id="d_margintop_unit">
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="ex">ex</option>
+            <option value="%">%</option>
+            <option value="in">in</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option value="pc">pc</option>
+          </select>
+        </td>
+        <td noWrap><span fckLang="DlgPraMarginBottom">MarginBottom</span>:</td>
+        <td>
+          <input id="d_marginbottom" size="2" value="">
+          <select id="d_marginbottom_unit">
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="ex">ex</option>
+            <option value="%">%</option>
+            <option value="in">in</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option value="pc">pc</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td noWrap><span fckLang="DlgPraMarginLeft">MarginLeft</span>:</td>
+        <td>
+          <input id="d_marginleft" size="2" value="">
+          <select id="d_marginleft_unit">
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="ex">ex</option>
+            <option value="%">%</option>
+            <option value="in">in</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option value="pc">pc</option>
+          </select>
+        </td>
+        <td noWrap><span fckLang="DlgPraMarginRight">MarginRight</span>:</td>
+        <td>
+          <input id="d_marginright" size="2" value="">
+          <select id="d_marginright_unit">
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="ex">ex</option>
+            <option value="%">%</option>
+            <option value="in">in</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option value="pc">pc</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td noWrap><span fckLang="DlgPraWordSpacing">WordSpacing</span>:</td>
+        <td>
+          <input id="d_letterspacing" size="2" value="">
+          <select id="d_letterspacing_unit">
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="ex">ex</option>
+            <option value="%">%</option>
+            <option value="in">in</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option value="pc">pc</option>
+          </select>
+        </td>
+        <td noWrap><span fckLang="DlgPraLineHeight">LineHeight</span>:</td>
+        <td>
+          <input id="d_lineheight" size="2" value="">
+          <select id="d_lineheight_unit">
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="ex">ex</option>
+            <option value="%">%</option>
+            <option value="in">in</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option value="pc">pc</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td noWrap><span fckLang=DlgPraTextIndent>TextIndent</span>:</td>
+        <td>
+          <input id="d_textindent" size="2" value="">
+          <select id="d_textindent_unit">
+            <option value="px">px</option>
+            <option value="em">em</option>
+            <option value="ex">ex</option>
+            <option value="%">%</option>
+            <option value="in">in</option>
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+            <option value="pt">pt</option>
+            <option value="pc">pc</option>
+          </select>
+        </td>
+        <td noWrap></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>

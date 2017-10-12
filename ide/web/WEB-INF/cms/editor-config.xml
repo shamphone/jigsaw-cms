@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <form-beans>
+    <form-bean name="emptyForm" type="com.fulong.common.PagerForm"/>
+    <form-bean name="fileForm" type="com.fulong.cms.form.UploadFileForm"/>
+    <form-bean name="wordArtForm" type="com.fulong.cms.form.WordArtForm"/>
+  </form-beans>
+  <global-forwards>
+    <forward name="login" path="/logon.jsp"/>
+    <forward name="error" path="/common/attention.jsp"/>
+    <forward name="forbidden" path="/common/forbidden.jsp"/>
+  </global-forwards>
+  <action-mappings>
+    <action name="fileForm" path="/importWord" type="com.fulong.cms.editor.ImportWordAction" scope="request">
+    <forward name="success" path="/success.jsp"></forward>
+    <forward name="failed" path="/failed.jsp"></forward>
+    </action>
+    <action  path="/status" type="com.fulong.cms.editor.StatusAction" scope="request"/>    
+    <!-- FCKeditor Plugin : file manager -->
+    <action path="/fileManagerFrmDetail" type="com.fulong.editor.common.filemanager.FrmDetailAction" scope="request">
+      <forward name="success" path="/common/editor/plugins/common/filemanager/frmDetail.jsp" contextRelative="true"/>
+    </action>
+    <!-- FCKeditor Plugin : upload file -->
+    <action name="fileForm" path="/uploadNonFresh" type="com.fulong.editor.UploadNonFreshAction" scope="request" />
+    
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.cms.editor.Resources"/>
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/site/validator-rules.xml,/WEB-INF/site/validation.xml"/>
+  </plug-in>
+</struts-config>

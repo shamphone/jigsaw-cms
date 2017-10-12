@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+  <form-beans>
+    <form-bean name="propertyForm" type="com.fulong.cms.form.PropertyForm" />
+    <form-bean name="schemaForm" type="com.fulong.cms.form.SchemaForm" />
+  </form-beans>
+  <action-mappings>
+    <action path="/allProperties" scope="request" type="com.fulong.cms.property.AllPropertiesAction">
+      <forward name="success" path="/allProperties.jsp" />
+    </action>
+    <action path="/properties" scope="request" type="com.fulong.cms.property.PropertiesAction">
+      <forward name="success" path="/properties.jsp" />
+    </action>
+    <action name="propertyForm" path="/create" scope="request" type="com.fulong.cms.property.CreateAction">
+      <forward name="success" path="/create.jsp" />
+    </action>
+    <action name="propertyForm" path="/insert" type="com.fulong.cms.property.InsertAction" scope="request">
+      <forward name="propertyExist" path="/exists.jsp" />
+      <forward name="success" path="/insertOK.jsp" />
+    </action>
+    <action name="propertyForm" path="/edit" scope="request" type="com.fulong.cms.property.EditAction">
+      <forward name="success" path="/edit.jsp" />
+    </action>
+    <action name="propertyForm" path="/update" type="com.fulong.cms.property.UpdateAction" scope="request">
+      <forward name="success" path="/insertOK.jsp" />
+    </action>
+    <action name="propertyForm" path="/delete" type="com.fulong.cms.property.DeleteAction" scope="request">
+      <forward name="success" path="/deleteOK.jsp" />
+    </action>
+    <action path="/reference" type="com.fulong.cms.property.ReferenceAction" scope="request"/>
+    <action path="/name" type="com.fulong.cms.property.NameAction" scope="request"/>
+    
+    <!-- 
+    <action path="/getPropertTree" scope="request" type="com.fulong.cms.property.GetPropertTreeAction">
+      <forward name="success" path="/getPropertTree.jsp" />
+    </action>
+    <action name="filterForm" path="/filterEditor" type="com.fulong.cms.property.FilterEditorAction" scope="request">
+      <forward name="success" path="/filterEditor.jsp" />
+    </action>
+     -->
+  </action-mappings>
+  <message-resources null="false" parameter="com.fulong.cms.Common" />
+  <message-resources key="content-message" null="false" parameter="com.fulong.cms.Common" />
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+    <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/cms/property-validation.xml" />
+  </plug-in>
+</struts-config>
+

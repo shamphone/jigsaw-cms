@@ -1,0 +1,10 @@
+<attach for="element" event="onresize" handler="order" />
+<script type="text/javascript">
+function order(){
+        var trs= element.getElementsByTagName('TR');
+        var order=1;
+        for(i =0;i<trs.length;i++){
+           trs[i].cells[0].innerText=order++;
+        }
+}
+</script>

@@ -1,0 +1,78 @@
+BODY,DIV,TD,TH,SPAN{
+    font-size: 13px;	
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif, songti;
+    }
+BODY {
+    line-height: 20px;
+    color: #000000;
+    text-decoration: none;
+    padding:0 0 0 0;
+    margin:0 0 0 0;
+    overflow:none;
+
+}
+#mainBody {
+    width:100%;
+    padding: 0px;
+    margin:0px;  
+}
+h3 {
+    color: #003366;
+    background: inherit;
+    font-size: 95%;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 10px 0 10px 0;
+}
+#listTable thead tr{position:relative; top:expression(offsetParent.scrollTop); }
+#listTable thead th {
+	text-align: center;
+	background-color: buttonface;
+	font-weight: bold;
+	border-top: 1px solid white;
+	border-right:1px  solid buttonshadow;
+	border-left:1px  solid window;
+        border-bottom:2px  ridge buttonface;
+	}
+#listTable tbody td{
+	border-bottom: solid 1px buttonface;
+	border-right: solid 1px buttonface;
+    height:16px;
+	cursor:pointer;
+	padding:0px 2px 0px 2px;
+}
+#listTable tbody th{text-align: left;border-bottom: solid 1px buttonshadow;height:16px;cursor:pointer;font-weight:normal;}
+
+#listTable input{height:20px;font-size:11px;}
+
+#listTable tfoot tr{
+  position: relative; 
+      overflow-x: hidden;
+      top: expression(parentNode.parentNode.offsetHeight >=offsetParent.offsetHeight ? 0 - parentNode.parentNode.offsetHeight + offsetParent.offsetHeight + offsetParent.scrollTop : 0);
+      }
+}
+#listTable tfoot td{
+	text-align: right;
+	background-color: buttonface;
+	border-top: solid 1px slategray;
+}
+#listTable input{
+ 	height:16px;
+}
+
+#listTable a:link, #listTable a:active, #listTable a:visited {
+    color: #4f6b72;
+    text-decoration: none;
+    border-bottom: 1px dashed #4f6b72;
+}
+
+.selected {
+    background-color: highlight;
+    color:#fff;
+}
+.hilighted {
+    background-color: #f1f1f1;
+}
+
+

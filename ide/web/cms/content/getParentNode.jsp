@@ -1,0 +1,1 @@
+<%@ page contentType="text/html; charset=UTF-8" %><%@taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%><%@taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%><logic:present name="parentNode"><bean:write name="parentNode" property="ID" ignore="true"/></logic:present>

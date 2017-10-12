@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+<form-validation>
+  <formset>
+    <constant>
+      <constant-name>date</constant-name>
+      <constant-value>^((((1[6-9]|[2-9]\d)\d{2})-(0?[13578]|1[02])-(0?[1-9]|[12]\d|3[01]))|(((1[6-9]|[2-9]\d)\d{2})-(0?[13456789]|1[012])-(0?[1-9]|[12]\d|30))|(((1[6-9]|[2-9]\d)\d{2})-0?2-(0?[1-9]|1\d|2[0-8]))|(((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))-0?2-29-))$</constant-value>
+    </constant>
+    <constant>
+      <constant-name>username</constant-name>
+      <constant-value>^([a-zA-Z0-9]{4,16})$</constant-value>
+    </constant>
+    <constant>
+      <constant-name>password</constant-name>
+      <constant-value>^([a-zA-Z0-9]{4,16})$</constant-value>
+    </constant>
+    <form name="categoryForm">
+      <field property="name" depends="required,maxlength,minlength">
+        <arg0 key="categoryForm.name"/>
+        <arg1 key="${var:maxlength}" name="maxlength" resource="false"/>
+        <arg1 key="${var:minlength}" name="minlength" resource="false"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>32</var-value>
+        </var>
+        <var>
+          <var-name>minlength</var-name>
+          <var-value>2</var-value>
+        </var>
+      </field>
+      <field property="workflow" depends="required">
+        <arg0 key="categoryForm.workflow"/>
+      </field>
+    </form>
+  
+  </formset>
+</form-validation>

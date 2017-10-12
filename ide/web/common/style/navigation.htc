@@ -1,0 +1,9 @@
+<attach for="element" event="onreadystatechange" handler="odd" />
+<script type="text/javascript">
+function odd(){
+        var spans= element.getElementsByTagName('SPAN');
+        var last=spans[spans.length-1];
+        if(last) last.style.fontWeight='bold';
+}
+</script>
+

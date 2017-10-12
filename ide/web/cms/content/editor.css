@@ -1,0 +1,79 @@
+body,td,th {
+	font-size: 12px;
+}
+
+body {
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: 5px 5px 5px 5px;
+	margin: 0px 0px 0px 0px;
+	border: 3px solid buttonshadow;
+}
+h1{
+	font-size:14px;
+	text-align:left;
+	color:darkred;
+	margin:5px 5px 5px 5px;
+	}
+form {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+a {
+	font-size: 12px;
+	color: #000000;
+}
+
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #666666;
+	text-decoration: none;
+}
+#contentEditor{
+	border-collapse:collapse;
+	}
+#contentEditor ul {
+	list-style-type: none
+}
+
+#contentEditor .fileComponent {
+	width: 500px;
+}
+
+#contentEditor .textComponent {
+	width: 500px;
+}
+
+#contentEditor th {
+	width: 200px;
+	background-color:#f0f0f0;
+}
+
+.operation {
+	margin-top: 5px;
+	text-align: center;
+}
+
+.operation button {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.operation img {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.btnValues{
+	font-size:10px;
+}
