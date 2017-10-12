@@ -1,0 +1,2 @@
+insert into NODE_DEFINITION (PKID, DELETE_MARK, DESCRIPTION, IS_SYSTEM, SUPER_ID, CREATE_TIME, NAME)
+values ('site-scheme', '0', 'ÍøÕ¾´ó¸Ù', '1', 'no-properties-scheme', to_date('09-06-2010 14:13:20', 'dd-mm-yyyy hh24:mi:ss'), 'ÍøÕ¾¿â');
