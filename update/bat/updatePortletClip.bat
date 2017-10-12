@@ -1,0 +1,1 @@
+java -classpath G:\apache-tomcat-5.5.28\common\lib\*;G:\workspace\coolink\studio\update\classes;G:\workspace\coolink\studio\update\classes;G:\apache-tomcat-5.5.28\common\classes; com.fulong.update.portlet.PortletUpdater G:\workspace\coolink\studio\enterprise G:\workspace\coolink\studio\ecommerce G:\workspace\coolink\studio\group

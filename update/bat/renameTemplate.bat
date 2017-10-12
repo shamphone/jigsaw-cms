@@ -1,0 +1,1 @@
+java -cp G:\apache-tomcat-5.5.28\common\lib\*;G:\workspace\coolink\studio\update\classes; com.fulong.update.RenameTemplate G:\workspace\coolink\studio\template002 ecommerce

@@ -1,0 +1,1 @@
+java -cp java -cp G:\apache-tomcat-5.5.28\common\lib\*;G:\workspace\coolink\studio\update\classes;G:\workspace\coolink\studio\update\classes;G:\apache-tomcat-5.5.28\common\classes; com.fulong.update.wenju.ReplaceWenjuTitle G:\workspace\coolink\studio\ecommerce 
